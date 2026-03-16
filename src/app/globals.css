@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #FF00FF;
+  --color-secondary: #8B5CF6;
+  --color-bg-dark: #0A0A0A;
+  --color-bg-dark-end: #1A1A2E;
+  --color-bg-light: #FAFAFA;
+  --color-glass-bg: rgba(255, 255, 255, 0.05);
+  --color-glass-border: rgba(255, 255, 255, 0.12);
+  --color-white: #FFFFFF;
+  --color-muted: rgba(255, 255, 255, 0.6);
+
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg-dark);
+  color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: var(--color-glass-bg);
+  border: 1px solid var(--color-glass-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+@supports not (backdrop-filter: blur(16px)) {
+  .glass {
+    background: rgba(20, 20, 40, 0.85);
+  }
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #FF00FF, #8B5CF6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient button */
+.btn-primary {
+  background: linear-gradient(135deg, #FF00FF, #8B5CF6);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 0, 255, 0.3);
+}
+
+/* Scroll snap for manifesto */
+.scroll-snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.scroll-snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo strip animation */
+@keyframes scroll-logos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.logo-scroll {
+  animation: scroll-logos 30s linear infinite;
+}
+
+.logo-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Dark gradient background */
+.bg-dark-gradient {
+  background: linear-gradient(180deg, var(--color-bg-dark) 0%, var(--color-bg-dark-end) 100%);
+}
+
+/* Hero gradient overlay */
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.85) 0%, rgba(26, 26, 46, 0.7) 50%, rgba(139, 92, 246, 0.2) 100%);
+}
+
+/* Section divider gradient */
+.divider-gradient {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-glass-border), transparent);
+}
+
+/* Masonry grid for portfolio */
+.masonry-grid {
+  columns: 1;
+  column-gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .masonry-grid {
+    columns: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    columns: 3;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 16px;
+}
+
+/* FAQ accordion */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-content.open {
+  max-height: 500px;
+}
