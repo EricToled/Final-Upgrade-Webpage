@@ -1,0 +1,144 @@
+513c513,514
+< Rule 18 - The 10 questions of the standard questionnaire
+---
+> Rule 18 - The base questionnaire (16 questions)
+> The standard questionnaire collects 16 base questions, coded Q1 to Q16. Two are conditional within the base set: Q11 is shown only when Q10 = "Regreso después de una pausa", and the Embarazo option in Q12 is shown only when Q2 = Mujer. The weight-loss optionals (Q17 to Q19) are defined in Rule 19. Question copy is production Spanish (MX); type descriptors are engineering notes. All pre-filled answers remain editable.
+515c516
+< Question
+---
+> Question (ES MX)
+517,567c518,524
+< Options
+< P1-Goal
+< (lQUe te
+< trae a
+< Single-select,
+< Empezar a moverme ·( Salud y
+< Sports World?)
+< required
+< P2-
+< Composition
+< ( l Vas a ent renarSingle-select, solo o con tu required familia?)
+< bienestar) • Tonificar • ( Ganar fuerza)· Bajar de peso •
+< Recuperarme de pausa o lesion
+< P3-Level
+< Solo yo • Yo + pareja ·(Yo + hijos en Fi tKidz )· Toda lafamilia
+< Solo mis hijos en FitKidz
+< ( lCual es tuSingle-select,
+< ni vel?)required
+< Principiante • Intermedio • Avanzado ·( Regreso despues de
+< pausa)
+< P4-
+< Movement type
+< (lQue tipo de movimiento te gusta mas?)
+< Multi-select,max(Movimiento tranquilo y
+< 2consciente)·(Cardio sostenido sin sal tos)·( Cardio in ten so con
+< sal tos)·( Levan tarpesas y entrenar fuerza)·(Deportes
+< acuaticos) • No ten go p refe rencia
+< PS-Format
+< (lC6mo prefieresSingle-select,
+< entrenar?)required
+< En clase con grupo • ( Par mi cuenta)· Con personal trainer
+< Mezcla
+< P6-
+< Frequency
+< (lcuantas veces a lasemana piensas entrenar?)
+< Single-select,•
+< required
+< 1-2 veces • 3-4veces
+< Todos lasdias
+< 5 o mas
+< P7-
+< Schedule
+< (lQue horario teMulti-select,max
+< funciona?)2
+< Antes de 7 AM • Mariana (7-12) Mediodia (12-3) • Tarde ( 3-7) Noche ( despues de 7) •( Fines de
+< semana)
+< Ce rcade mi casa • ( Ce rcade mi
+< trabajo)· Ambos • No me importa
+< PS-
+< Geography intent
+< (lBuscas el gimnasio cerca de tucasa ode tu trabajo?)
+---
+> Options / Field
+> Q1
+> Nombre completo
+> Text, required
+> Campo de texto libre
+> Q2
+> Género
+569,583c526,583
+< Code
+< Question
+< Type
+< Options
+< P9 - Specific geography
+< lD6nde queda?
+< Open text with SEPOMEXautocomplete
+< Neighborhood, state, ZIP
+< P10-Health
+< (Friendly version of
+< Multi-select,
+< Several health-condition options
+< thePAR-Q)
+< default [ nothing
+< relevant]
+---
+> Hombre · Mujer · Prefiero no mencionarlo
+> Q3
+> ¿Qué quieres sentir al salir del club?
+> Single-select, required
+> Descargar tensión y salir con energía · Llenarme de energía, listo para el día · Recuperar fuerza para mi día a día · Sentirme más seguro de mí mismo · Relajarme y bajarle al estrés
+> Q4
+> ¿Qué buscas?
+> Multi-select, max 2, required
+> Bajar de peso · Mejorar mi estética corporal · Ganar fuerza · Mejorar condición y aguante · Recuperarme de una lesión o dolor
+> Q5
+> ¿Qué ritmo va contigo?
+> Single-select, required
+> Intenso, que me rete · Moderado y constante · Suave/controlado
+> Q6
+> ¿Dónde prefieres entrenar?
+> Single-select, required
+> En piso / área seca · En la alberca · Ambas · Lo que mi entrenador recomiende
+> Q7
+> ¿En qué horario prefieres entrenar?
+> Multi-select, required
+> Temprano (5:00–8:00) · Media mañana (8:00–11:00) · Mediodía (11:00–14:00) · Primera tarde (14:00–17:00) · Tarde (17:00–20:00) · Noche (20:00–22:00)
+> Q8
+> ¿Qué días prefieres entrenar?
+> Multi-select, required
+> L · M · X · J · V · S · D
+> Q9
+> ¿Cuál es tu nivel de entrenamiento?
+> Single-select, required
+> Principiante · Intermedio · Avanzado
+> Q10
+> ¿Vienes de otro gimnasio?
+> Single-select, required
+> Sí, vengo de otro gimnasio · Nunca he ido a un gimnasio · Regreso después de una pausa
+> Q11
+> ¿Qué tan larga fue la pausa?
+> Single-select, conditional (visible if Q10 = Regreso después de una pausa)
+> Menos de 3 meses · Entre 3 y 12 meses · Más de un año
+> Q12
+> ¿Tienes alguna condición médica?
+> Multi-select, required
+> Ninguna · Lesión o dolor articular/muscular · Condición cardiovascular o de presión · Embarazo (visible solo si Q2 = Mujer) · Otra, la comento en el club
+> Q13
+> ¿Prefieres entrenar solo o acompañado?
+> Single-select, required
+> Solo/Sola, a mi ritmo · Acompañado/Acompañada, en clases o grupo · Me da igual
+> Q14
+> ¿Con quién nos visitas en el club?
+> Single-select, required
+> Solo/Sola, es mi momento · Con mi amigo/a · Con mi pareja · Yo y mis hijos · La familia completa
+> Q15
+> ¿Buscas el gimnasio cerca de tu casa o de tu trabajo?
+> Single-select, required
+> Cerca de mi casa · Cerca de mi trabajo · Ambos · No me importa
+> Q16
+> ¿Dónde queda?
+> Two fields, exactly one required (XOR)
+> Campo A: Código postal (5 dígitos numéricos) · Campo B: Colonia (texto libre). Al menos uno debe estar presente; ambos es aceptable.
+> Gender concordance (applies to Q13 and Q14): if Q2 = Mujer, render the feminine forms (Sola, Acompañada); if Q2 = Hombre or Prefiero no mencionarlo, render the masculine forms (Solo, Acompañado) as the default.
