@@ -1,0 +1,4 @@
+735c735
+< When the user has completed the questionnaire, they always have a club identified - the questionnaire questions that identify the club are part of the 10 mandatory questions.
+---
+> When the user has completed the questionnaire, they always have a club identified - the questionnaire questions that identify the club (Q15 and Q16) are part of the 16 base questions. The number of visible questions depends on the path: 16 base questions (Path A), 17 when the pause follow-up Q11 is active (Path B), 19 with the weight-loss optionals Q17 to Q19 (Path C), or 20 with both the pause follow-up and the weight-loss optionals (Path D).
