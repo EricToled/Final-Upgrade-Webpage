@@ -1,0 +1,12 @@
+1093c1093
+< Behavior: the system does not prompt repeatedly. The user lands on Home with the (Tu Club ideal) flow opened in capture mode (PS+ P9 manual entry). A non-intrusive notice explains that
+---
+> Behavior: the system does not prompt repeatedly. The user lands on Home with the (Tu Club ideal) flow opened in capture mode (Q15+ Q16 manual entry). A non-intrusive notice explains that
+1102c1102
+< Behavior: P9 falls back to a free-text input with looser validation. The user can submit a neighborhood or city name typed by hand. The system later normalizes the input server-side.
+---
+> Behavior: Q16 falls back to a free-text input with looser validation. The user can submit a neighborhood or city name typed by hand. The system later normalizes the input server-side.
+1126c1126
+< Behavior: see Rule 17. Pl wins over P9 wins over P4. For this example, the user lands on the ( Bajar de peso) hub with P9 pre-filled to(Polanco). P4 is not pre-filled (goal-driven landing overrides class-driven landing).
+---
+> Behavior: see Rule 17. Q4 (goal) wins over Q16 (location) wins over the class-driven goal pre-mark. For this example, the user lands on the (Bajar de peso) hub with Q16 pre-filled to (Polanco). The class-driven goal pre-mark is not applied (goal-driven landing overrides class-driven landing).
