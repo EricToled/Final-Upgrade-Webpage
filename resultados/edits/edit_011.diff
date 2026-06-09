@@ -1,0 +1,978 @@
+761,799c761,801
+< body[845]	Part 5 -Per-Page Behavior Matrices
+< body[846]	Each matrix crosses the user state with the contextual menu and the questionnaire. Matrices assume the global rules from Part 4 are already applied. The header (Rules 1-2) and the BES widget (Rule 3) are always visible and are not repeated in each matrix.
+< body[848]	5.1-Home
+< body[850]	StateQuestionnaireContextual menu
+< body[854]	No questionnaire· no inferred location • pure brand search
+< body[856]	No questionnaire· no inferred location • search with goal
+< body[858]	No questionnaire· with inferred location
+< body[861]	Questionnaire complete (always outside the flow on home)
+< body[862]	10 standard questions (12 if weight loss)
+< body[865]	10 questions, P1 pre-filled and editable (12 if weight loss)
+< body[868]	10 questions, PS and P9 pre-filled and editable (12 if weight loss)
+< body[870]	Already complete
+< body[872]/txbx[0]/p[0]	Tu Club ideal ·( Disena tu
+< body[873]	experiencia]·(Agenda tu visita guiada]
+< body[874]/txbx[0]/p[0]	Tu Club ideal ·( Disena tu
+< body[875]	experiencia]·(Agenda tu visita guiada]
+< body[876]	Tu Club ideal ·( Disena tu experiencia]·(Agenda tu visita guiada]
+< body[877]/txbx[0]/p[0]	Volver a tu experiencia ideal
+< body[877]/txbx[0]/p[1]	Tu Club ideal ·( Agenda tu
+< body[878]	visita guiada]
+< body[884]	- Individual club
+< body[885]	By landing on a specific club page, the club is already identified. PB and P9 are omitted from the questionnaire.
+< body[887]	StateQuestionnaireContextual menu
+< body[887]/txbx[0]/p[0]	Disefia tu experiencia
+< body[891]	No questionnaire·single-club city
+< body[892]	8 standard questions
+< body[893]	(10 if weight loss)
+< body[895]	visita guiada]
+< body[898]	·(Agenda tu
+< body[904]	No questionnaire·city with up to3clubs
+< body[907]	No questionnaire • city with morethan3clubs (( CIUDAD-ZMVM))
+< body[908]	Complete, inside the flow
+< body[911]	Complete, outside the flow· single-club city
+< body[912]	Complete, outside the flow • city with up to 3 clubs
+< body[915]	Complete, outside the flow • city with more than 3 clubs
+< body[920]	- Amenity
+< body[921]	State
+< body[922]	8 standard questions
+< body[923]	(10 if weight loss)
+---
+> body[845]	Rule 38 - Individual-training pre-fill and result behavior when the user trains alone
+> body[846]	The site offers two top-level individual-training experiences, entrenamiento-con-pesas-individual and entrenamiento-aerobico-individual, each with four subgroups derived from current ACSM consensus (see Part 3, Individual-training subgroup taxonomy). When the user lands on any page within these two trees, Q13 pre-marks "Solo, a mi ritmo" (rendered "Sola" if Q2 = Mujer), and Q4 pre-marks the goal that corresponds to the subgroup landed on, per the mapping in Rule 20.
+> body[847]	When Q13 = "Solo, a mi ritmo" (or "Sola, a mi ritmo") in the final answer, the user's Experiencia Ideal result page does not recommend group classes. Instead it recommends: (1) the individual weight-training subgroup or subgroups that match Q4 per the table in Part 3, Individual-training subgroup taxonomy; (2) the individual aerobic-training subgroup or subgroups that match Q4 per the same table. If Q4 contains two selections, the recommended set is the union of both rows, deduplicated.
+> body[848]	The class catalog is suppressed for this user state. The contextual menu (Rules 22-31) reflects this: where it would normally show "Clases recomendadas", it instead shows "Tu rutina individual".
+> body[849]	Part 5 -Per-Page Behavior Matrices
+> body[850]	Each matrix crosses the user state with the contextual menu and the questionnaire. Matrices assume the global rules from Part 4 are already applied. The header (Rules 1-2) and the BES widget (Rule 3) are always visible and are not repeated in each matrix.
+> body[852]	5.1-Home
+> body[854]	StateQuestionnaireContextual menu
+> body[858]	No questionnaire· no inferred location • pure brand search
+> body[860]	No questionnaire· no inferred location • search with goal
+> body[862]	No questionnaire· with inferred location
+> body[865]	Questionnaire complete (always outside the flow on home)
+> body[866]	10 standard questions (12 if weight loss)
+> body[869]	10 questions, P1 pre-filled and editable (12 if weight loss)
+> body[872]	10 questions, PS and P9 pre-filled and editable (12 if weight loss)
+> body[874]	Already complete
+> body[876]/txbx[0]/p[0]	Tu Club ideal ·( Disena tu
+> body[877]	experiencia]·(Agenda tu visita guiada]
+> body[878]/txbx[0]/p[0]	Tu Club ideal ·( Disena tu
+> body[879]	experiencia]·(Agenda tu visita guiada]
+> body[880]	Tu Club ideal ·( Disena tu experiencia]·(Agenda tu visita guiada]
+> body[881]/txbx[0]/p[0]	Volver a tu experiencia ideal
+> body[881]/txbx[0]/p[1]	Tu Club ideal ·( Agenda tu
+> body[882]	visita guiada]
+> body[888]	- Individual club
+> body[889]	By landing on a specific club page, the club is already identified. PB and P9 are omitted from the questionnaire.
+> body[891]	StateQuestionnaireContextual menu
+> body[891]/txbx[0]/p[0]	Disefia tu experiencia
+> body[895]	No questionnaire·single-club city
+> body[896]	8 standard questions
+> body[897]	(10 if weight loss)
+> body[899]	visita guiada]
+> body[902]	·(Agenda tu
+> body[908]	No questionnaire·city with up to3clubs
+> body[911]	No questionnaire • city with morethan3clubs (( CIUDAD-ZMVM))
+> body[912]	Complete, inside the flow
+> body[915]	Complete, outside the flow· single-club city
+> body[916]	Complete, outside the flow • city with up to 3 clubs
+> body[919]	Complete, outside the flow • city with more than 3 clubs
+> body[924]	- Amenity
+> body[925]	State
+802,804c804,807
+< body[930]	Already complete
+< body[933]	Already complete
+< body[936]	Already complete
+---
+> body[930]	8 standard questions
+> body[931]	(10 if weight loss)
+> body[934]	Already complete
+> body[937]	Already complete
+806,935c809,938
+< body[949]	Questionnaire
+< body[951]/txbx[0]/p[0]	Otros clubes en tu ciudad ·(Disefia
+< body[952]	tu experiencia]·[Agenda tu visita guiada]
+< body[953]/txbx[0]/p[0]	Otros clubes en elarea ·(Disefia tu
+< body[954]	experiencia]·[Agenda tu visita guiada]
+< body[955]/txbx[0]/p[0]	Volver a tu experiencia ideal·
+< body[955]/txbx[0]/p[1]	Agenda tuvisita guiada
+< body[955]/txbx[1]/p[0]	Volver a tu experiencia ideal·
+< body[955]/txbx[1]/p[1]	Agenda tu visita guiada
+< body[955]/txbx[2]/p[0]	Volver a tu experiencia ideal· Otros clubes en tu ciudad ·(Agenda
+< body[958]	tu visita guiada]
+< body[960]	Volver a tu experiencia ideal· Otros clubes en elarea •[Agenda tu visita guiada]
+< body[966]	Contextual menu
+< body[972]	No questionnaire • no club selected • no inferred location
+< body[974]	No questionnaire • no club selected • with inferred location
+< body[976]	No questionnaire· with club selected
+< body[977]	10 standard questions (12 if weight loss)
+< body[980]	10 questions, PS and P9 pre-filled and editable (12 if weight loss)
+< body[982]	10 standard questions (12 if weight loss)
+< body[984]/txbx[0]/p[0]	Tu Club ideal • ( Disefia tu
+< body[985]	experiencia]·[Agenda tu visita
+< body[986]	guiada]
+< body[987]/txbx[0]/p[0]	Tu Club ideal •[ Disefia tu
+< body[988]	experiencia]·[Agenda tu visita
+< body[991]	guiada]
+< body[991]/txbx[0]/p[0]	Disefia tu experiencia
+< body[991]/txbx[0]/p[1]	Agenda tuvisita guiada
+< body[996]	StateQuestionnaireContextual menu
+< body[1000]	Complete, inside the flow
+< body[1005]	Complete, outside the flow
+< body[1006]	Already complete
+< body[1011]	Already complete
+< body[1014]	(Volver a tu experiencia ideal]·(Agenda tu visita guiada]
+< body[1016]	(Volver a tu experiencia ideal]·(Agenda tu visita guiada]
+< body[1021]	- Premium Les Mills class
+< body[1022]	Landing on a class pre-fills P4 (movement type) with the class's discipline. The user can confirm or change.
+< table@body[1024]/r[0]/c[0]	State
+< table@body[1024]/r[0]/c[1]	Questionnaire
+< table@body[1024]/r[0]/c[2]	Contextual menu
+< table@body[1024]/r[2]/c[0]	No questionnaire· no club
+< table@body[1024]/r[2]/c[1]	10 questions, P4 pre-filled and
+< table@body[1024]/r[2]/c[2]	Tu Club ideal •( Disena tu
+< table@body[1024]/r[3]/c[0]	selected • no inferred
+< table@body[1024]/r[3]/c[1]	editable (12 if weight loss)
+< table@body[1024]/r[3]/c[2]	experiencia]·(Agenda tu
+< table@body[1024]/r[4]/c[0]	location
+< table@body[1024]/r[4]/c[2]	visita guiada]
+< table@body[1024]/r[6]/c[0]	No questionnaire·no club
+< table@body[1024]/r[6]/c[1]	10 questions, P4, PB and P9 pre-
+< table@body[1024]/r[6]/c[2]	Tu Club ideal •( Disena tu
+< table@body[1024]/r[7]/c[0]	selected· with inferred location
+< table@body[1024]/r[7]/c[1]	filled and editable (12 if weight loss)
+< table@body[1024]/r[7]/c[2]	experiencia]·(Agenda tu visita guiada]
+< table@body[1024]/r[8]/c[0]	No questionnaire·with club
+< table@body[1024]/r[8]/c[1]	10 questions, P4 pre-filled and
+< table@body[1024]/r[8]/c[2]	Disena tu experiencia
+< table@body[1024]/r[9]/c[0]	selected
+< table@body[1024]/r[9]/c[1]	editable (12 if weight loss)
+< table@body[1024]/r[9]/c[2]	Agenda tu visita guiada
+< table@body[1024]/r[11]/c[0]	Complete, inside the flow
+< table@body[1024]/r[11]/c[1]	Already complete
+< table@body[1024]/r[11]/c[2]	(Volver a tu experiencia
+< table@body[1024]/r[12]/c[2]	ideal]·(Agenda tu visita
+< table@body[1024]/r[13]/c[2]	guiada]
+< table@body[1024]/r[15]/c[0]	Complete, outside the flow
+< table@body[1024]/r[15]/c[1]	Already complete
+< table@body[1024]/r[15]/c[2]	(Volver a tu experiencia
+< table@body[1024]/r[16]/c[2]	ideal]·( Agenda tu visita
+< body[1025]	guiada]
+< body[1029]	- Regular class
+< body[1030]	Behavior identical to Premium Les Mills class.
+< body[1032]	StateQuestionnaireContextual menu
+< body[1036]	No questionnaire·no club selected • no inferred location
+< body[1038]	No questionnaire·no club selected· with inferred location
+< body[1040]	No questionnaire·with club selected
+< body[1042]	Complete, inside the flow
+< body[1047]	Complete, outside the flow
+< body[1048]	10 questions, P4 pre-filled and editable (12 if weight loss)
+< body[1051]	10 questions, P4, PB and P9 pre-filled and editable (12 if weight loss)
+< body[1053]	10 questions, P4 pre-filled and editable (12 if weight loss)
+< body[1055]	Already complete
+< body[1060]	Already complete
+< body[1062]/txbx[0]/p[0]	Tu Club ideal •( Disena tu
+< body[1063]	experiencia]·(Agenda tu visita guiada]
+< body[1064]/txbx[0]/p[0]	Tu Club ideal •( Disena tu
+< body[1065]	experiencia]·(Agenda tu visita guiada]
+< body[1066]/txbx[0]/p[0]	Disena tu experiencia • Agenda tu visita guiada
+< body[1068]	(Volver a tu experiencia ideal]·(Agenda tu visita guiada]
+< body[1070]	(volver a tu experiencia ideal]·(Agenda tu visita guiada]
+< body[1076]	- FitKidz
+< body[1077]	FitKidz has special behavior: when the user has no club identified, the system forces them through the Tu Club ideal flow before showing class-specific content. Once they have a club, the Clases FitKidz disponibles button appears with the club's schedule. Landing on FitKidz
+< body[1078]	pre-fills P2 (composition) with family or. The user can confirm or change.
+< body[1078]/txbx[0]/p[0]	kids
+< body[1080]	StateQuestionnaireContextual menu
+< body[1080]/txbx[0]/p[0]	Tu Club ideal
+< body[1084]	No questionnaire·
+< body[1085]	The system forces the
+< body[1086]	flow before•
+< body[1088]	no club selected • no inferred location
+< body[1088]/txbx[0]/p[0]	Tu C1 u b idea1
+< body[1090]	No questionnaire· no club selected • with inferred location
+< body[1091]	showing FitKidz content. If the user invokes[ Disena
+< body[1092]	tu expe riencia1it is10 questions with P2 pre-
+< body[1093]	filled and editable (12 if weight loss).
+< body[1095]	The system surfaces up to 3 proposed clubs per the geographic rules, each with its 3 buttons ([ Conoce elclub)· Agenda una visi ta guiada • [Clases FitKidz disponibles para tu
+< body[1096]	f amil ia) with schedules). If the user invokes Disena tu experiencia, it is10 questions with P2, PB and P9 pre-filled and editable (12 if weight loss).
+< body[1097]	[Disena tu experiencia) •[ Agenda tuvisita guiada)
+< body[1098]	• [Disena tu experiencia) •[ Agenda tuvisita guiada)
+< body[1098]/txbx[0]/p[0]	Tu Club ideal
+< body[1104]	No questionnaire·The system surfaces up to 3 proposed clubs per the with club selectedgeographic rules. If the user invokes [ Disena tu
+< body[1106]	expe riencia ), it is10 questions with P2 pre-filled and editable (12 if weight loss).
+< body[1110]	Complete, insideAlready complete. The system shows the clubs and the flow FitKidz classes that match the plan, with schedules.
+< body[1116]	Complete, outsideAlready complete. the flow
+< body[1118]/txbx[0]/p[0]	Tu Club ideal •
+< body[1119]	[clases FitKidz
+< body[1120]	d ispon ibles) •[ Disena tu experiencia)· [Agenda tu visita guiada)
+< body[1122]	[volver a tu experiencia ideal)· [Clases FitKidz disponibles) •[ Agenda tuvisita guiada)
+< body[1124]	[Volver a tu experiencia ideal)· [Clases FitKidz disponibles) •[ Agenda tuvisita guiada)
+< body[1130]	- Goal hub
+< body[1131]	Applies to all 5 hubs (first steps, health and wellness, tone, build strength, rehabilitation). Landing pre-fills P1 with the hub's goal. If the goal is rehabilitation, the questionnaire includes a health-disclaimer modal before the result.
+< body[1133]	StateQuestionnaireContextual menu
+< body[1137]	No questionnaire· no club selected • no inferred location
+< body[1140]	No questionnaire· no club selected· with inferred location
+< body[1143]	No questionnaire· with club selected
+< body[1146]	Complete, inside the flow
+< body[1149]	Complete, outside the flow
+< body[1150]	10 questions with P1 pre-filled and editable (12 if user switches to weight loss)
+< body[1153]	10 questions with P1, P8 and P9 pre-filled and editable (12 if user switches to weight loss)
+< body[1156]	10 questions with P1 pre-filled and editable (12 if user switches to weight loss)
+< body[1158]	Already complete
+---
+> body[944]	Already complete
+> body[953]	Questionnaire
+> body[955]/txbx[0]/p[0]	Otros clubes en tu ciudad ·(Disefia
+> body[956]	tu experiencia]·[Agenda tu visita guiada]
+> body[957]/txbx[0]/p[0]	Otros clubes en elarea ·(Disefia tu
+> body[958]	experiencia]·[Agenda tu visita guiada]
+> body[959]/txbx[0]/p[0]	Volver a tu experiencia ideal·
+> body[959]/txbx[0]/p[1]	Agenda tuvisita guiada
+> body[959]/txbx[1]/p[0]	Volver a tu experiencia ideal·
+> body[959]/txbx[1]/p[1]	Agenda tu visita guiada
+> body[959]/txbx[2]/p[0]	Volver a tu experiencia ideal· Otros clubes en tu ciudad ·(Agenda
+> body[962]	tu visita guiada]
+> body[964]	Volver a tu experiencia ideal· Otros clubes en elarea •[Agenda tu visita guiada]
+> body[970]	Contextual menu
+> body[976]	No questionnaire • no club selected • no inferred location
+> body[978]	No questionnaire • no club selected • with inferred location
+> body[980]	No questionnaire· with club selected
+> body[981]	10 standard questions (12 if weight loss)
+> body[984]	10 questions, PS and P9 pre-filled and editable (12 if weight loss)
+> body[986]	10 standard questions (12 if weight loss)
+> body[988]/txbx[0]/p[0]	Tu Club ideal • ( Disefia tu
+> body[989]	experiencia]·[Agenda tu visita
+> body[990]	guiada]
+> body[991]/txbx[0]/p[0]	Tu Club ideal •[ Disefia tu
+> body[992]	experiencia]·[Agenda tu visita
+> body[995]	guiada]
+> body[995]/txbx[0]/p[0]	Disefia tu experiencia
+> body[995]/txbx[0]/p[1]	Agenda tuvisita guiada
+> body[1000]	StateQuestionnaireContextual menu
+> body[1004]	Complete, inside the flow
+> body[1009]	Complete, outside the flow
+> body[1010]	Already complete
+> body[1015]	Already complete
+> body[1018]	(Volver a tu experiencia ideal]·(Agenda tu visita guiada]
+> body[1020]	(Volver a tu experiencia ideal]·(Agenda tu visita guiada]
+> body[1025]	- Premium Les Mills class
+> body[1026]	Landing on a class pre-fills P4 (movement type) with the class's discipline. The user can confirm or change.
+> table@body[1028]/r[0]/c[0]	State
+> table@body[1028]/r[0]/c[1]	Questionnaire
+> table@body[1028]/r[0]/c[2]	Contextual menu
+> table@body[1028]/r[2]/c[0]	No questionnaire· no club
+> table@body[1028]/r[2]/c[1]	10 questions, P4 pre-filled and
+> table@body[1028]/r[2]/c[2]	Tu Club ideal •( Disena tu
+> table@body[1028]/r[3]/c[0]	selected • no inferred
+> table@body[1028]/r[3]/c[1]	editable (12 if weight loss)
+> table@body[1028]/r[3]/c[2]	experiencia]·(Agenda tu
+> table@body[1028]/r[4]/c[0]	location
+> table@body[1028]/r[4]/c[2]	visita guiada]
+> table@body[1028]/r[6]/c[0]	No questionnaire·no club
+> table@body[1028]/r[6]/c[1]	10 questions, P4, PB and P9 pre-
+> table@body[1028]/r[6]/c[2]	Tu Club ideal •( Disena tu
+> table@body[1028]/r[7]/c[0]	selected· with inferred location
+> table@body[1028]/r[7]/c[1]	filled and editable (12 if weight loss)
+> table@body[1028]/r[7]/c[2]	experiencia]·(Agenda tu visita guiada]
+> table@body[1028]/r[8]/c[0]	No questionnaire·with club
+> table@body[1028]/r[8]/c[1]	10 questions, P4 pre-filled and
+> table@body[1028]/r[8]/c[2]	Disena tu experiencia
+> table@body[1028]/r[9]/c[0]	selected
+> table@body[1028]/r[9]/c[1]	editable (12 if weight loss)
+> table@body[1028]/r[9]/c[2]	Agenda tu visita guiada
+> table@body[1028]/r[11]/c[0]	Complete, inside the flow
+> table@body[1028]/r[11]/c[1]	Already complete
+> table@body[1028]/r[11]/c[2]	(Volver a tu experiencia
+> table@body[1028]/r[12]/c[2]	ideal]·(Agenda tu visita
+> table@body[1028]/r[13]/c[2]	guiada]
+> table@body[1028]/r[15]/c[0]	Complete, outside the flow
+> table@body[1028]/r[15]/c[1]	Already complete
+> table@body[1028]/r[15]/c[2]	(Volver a tu experiencia
+> table@body[1028]/r[16]/c[2]	ideal]·( Agenda tu visita
+> body[1029]	guiada]
+> body[1033]	- Regular class
+> body[1034]	Behavior identical to Premium Les Mills class.
+> body[1036]	StateQuestionnaireContextual menu
+> body[1040]	No questionnaire·no club selected • no inferred location
+> body[1042]	No questionnaire·no club selected· with inferred location
+> body[1044]	No questionnaire·with club selected
+> body[1046]	Complete, inside the flow
+> body[1051]	Complete, outside the flow
+> body[1052]	10 questions, P4 pre-filled and editable (12 if weight loss)
+> body[1055]	10 questions, P4, PB and P9 pre-filled and editable (12 if weight loss)
+> body[1057]	10 questions, P4 pre-filled and editable (12 if weight loss)
+> body[1059]	Already complete
+> body[1064]	Already complete
+> body[1066]/txbx[0]/p[0]	Tu Club ideal •( Disena tu
+> body[1067]	experiencia]·(Agenda tu visita guiada]
+> body[1068]/txbx[0]/p[0]	Tu Club ideal •( Disena tu
+> body[1069]	experiencia]·(Agenda tu visita guiada]
+> body[1070]/txbx[0]/p[0]	Disena tu experiencia • Agenda tu visita guiada
+> body[1072]	(Volver a tu experiencia ideal]·(Agenda tu visita guiada]
+> body[1074]	(volver a tu experiencia ideal]·(Agenda tu visita guiada]
+> body[1080]	- FitKidz
+> body[1081]	FitKidz has special behavior: when the user has no club identified, the system forces them through the Tu Club ideal flow before showing class-specific content. Once they have a club, the Clases FitKidz disponibles button appears with the club's schedule. Landing on FitKidz
+> body[1082]	pre-fills P2 (composition) with family or. The user can confirm or change.
+> body[1082]/txbx[0]/p[0]	kids
+> body[1084]	StateQuestionnaireContextual menu
+> body[1084]/txbx[0]/p[0]	Tu Club ideal
+> body[1088]	No questionnaire·
+> body[1089]	The system forces the
+> body[1090]	flow before•
+> body[1092]	no club selected • no inferred location
+> body[1092]/txbx[0]/p[0]	Tu C1 u b idea1
+> body[1094]	No questionnaire· no club selected • with inferred location
+> body[1095]	showing FitKidz content. If the user invokes[ Disena
+> body[1096]	tu expe riencia1it is10 questions with P2 pre-
+> body[1097]	filled and editable (12 if weight loss).
+> body[1099]	The system surfaces up to 3 proposed clubs per the geographic rules, each with its 3 buttons ([ Conoce elclub)· Agenda una visi ta guiada • [Clases FitKidz disponibles para tu
+> body[1100]	f amil ia) with schedules). If the user invokes Disena tu experiencia, it is10 questions with P2, PB and P9 pre-filled and editable (12 if weight loss).
+> body[1101]	[Disena tu experiencia) •[ Agenda tuvisita guiada)
+> body[1102]	• [Disena tu experiencia) •[ Agenda tuvisita guiada)
+> body[1102]/txbx[0]/p[0]	Tu Club ideal
+> body[1108]	No questionnaire·The system surfaces up to 3 proposed clubs per the with club selectedgeographic rules. If the user invokes [ Disena tu
+> body[1110]	expe riencia ), it is10 questions with P2 pre-filled and editable (12 if weight loss).
+> body[1114]	Complete, insideAlready complete. The system shows the clubs and the flow FitKidz classes that match the plan, with schedules.
+> body[1120]	Complete, outsideAlready complete. the flow
+> body[1122]/txbx[0]/p[0]	Tu Club ideal •
+> body[1123]	[clases FitKidz
+> body[1124]	d ispon ibles) •[ Disena tu experiencia)· [Agenda tu visita guiada)
+> body[1126]	[volver a tu experiencia ideal)· [Clases FitKidz disponibles) •[ Agenda tuvisita guiada)
+> body[1128]	[Volver a tu experiencia ideal)· [Clases FitKidz disponibles) •[ Agenda tuvisita guiada)
+> body[1134]	- Goal hub
+> body[1135]	Applies to all 5 hubs (first steps, health and wellness, tone, build strength, rehabilitation). Landing pre-fills P1 with the hub's goal. If the goal is rehabilitation, the questionnaire includes a health-disclaimer modal before the result.
+> body[1137]	StateQuestionnaireContextual menu
+> body[1141]	No questionnaire· no club selected • no inferred location
+> body[1144]	No questionnaire· no club selected· with inferred location
+> body[1147]	No questionnaire· with club selected
+> body[1150]	Complete, inside the flow
+> body[1153]	Complete, outside the flow
+> body[1154]	10 questions with P1 pre-filled and editable (12 if user switches to weight loss)
+> body[1157]	10 questions with P1, P8 and P9 pre-filled and editable (12 if user switches to weight loss)
+> body[1160]	10 questions with P1 pre-filled and editable (12 if user switches to weight loss)
+937,1247c940,1251
+< body[1164]/txbx[0]/p[0]	Tu Club ideal ·( Articulos o
+< body[1165]	informaci6n util) (if any)·( Disefia
+< body[1166]	tu experiencia)·(Agenda tu visita guiada)
+< body[1167]/txbx[0]/p[0]	Tu Club ideal ·( Articulos o
+< body[1168]	info rmaci6n util) (if any)·( Disefia
+< body[1169]	tu experiencia)·(Agenda tu visita guiada)
+< body[1170]	Of
+< body[1170]/txbx[0]/p[0]	Articulos o informaci6n util
+< body[1170]/txbx[0]/p[1]	any)· Disefia tu experiencia • Agenda tuvisita guiada
+< body[1174]/txbx[0]/p[0]	Volver a tu experiencia ideal· Articulos o informaci6n util (W
+< body[1174]/txbx[0]/p[1]	any)· Agenda tu visi ta guiada
+< body[1183]	5.8-
+< body[1183]/txbx[0]/p[0]	Bajar de peso
+< body[1184]	Landing pre-fills Pl =
+< body[1185]	hub (YMYL)
+< body[1187]	, which automatically activates the 12-question variant. A
+< body[1187]/txbx[0]/p[0]	Volver a tu experiencia ideal
+< body[1187]/txbx[0]/p[1]	Articulos o informaci6n util Of any)· Agenda tu visi ta guiada
+< body[1187]/txbx[1]/p[0]	Baja r de peso
+< body[1189]	health-disclaimer modal appears before the result. This page always has Journal articles tagged
+< body[1190]	with bajar-de-peso, so thebutton always appears.
+< body[1190]/txbx[0]/p[0]	Articulos o informaci6n util
+< body[1192]	StateQuestionnaireContextual menu
+< body[1196]	No questionnaire • no club selected • no inferred location
+< body[1199]	No questionnaire • no club selected • with inferred location
+< body[1202]	No questionnaire· with club selected
+< body[1205]	Complete, inside the flow
+< body[1206]	12 questions with Pl pre-filled and editable
+< body[1210]	12 questions with Pl, PS and P9 pre-filled and editable
+< body[1213]	12 questions with Pl pre-filled and editable
+< body[1216]	Already complete
+< body[1218]/txbx[0]/p[0]	Tu Club ideal ·(Articulos o
+< body[1219]	info rmaci6n util]•( Disena tu experiencia]·(Agenda tu visita guiada]
+< body[1220]/txbx[0]/p[0]	Tu Club ideal ·(Articulos o
+< body[1221]	informaci6n util]•( Disena tu experiencia]·(Agenda tu visi ta guiada)
+< body[1222]/txbx[0]/p[0]	Articulos o informaci6n util • Disena tu experiencia ·[Agenda tu
+< body[1223]	visita guiada)
+< body[1230]	Complete, outside the flowAlready complete
+< body[1230]/txbx[0]/p[0]	Volver a tu experiencia ideal· Articulos o informaci6n util •
+< body[1230]/txbx[0]/p[1]	Agenda tu visita guiada
+< body[1230]/txbx[1]/p[0]	Volver a tu experiencia ideal· Articulos o informaci6n util •
+< body[1230]/txbx[1]/p[1]	Agenda tuvisita guiada
+< body[1236]	- Personal Training
+< body[1237]	Landing pre-fills PS= Con personal trainer. Theuser can confirm or change.
+< body[1239]	StateQuestionnaireContextual menu
+< body[1243]	No questionnaire·no club selected • no inferred location
+< body[1246]	No questionnaire·no club selected· with inferred location
+< body[1249]	No questionnaire·with club selected
+< body[1252]	Complete, inside the flow
+< body[1255]	Complete, outside the flow
+< body[1256]	10 questions with PS pre-filled and editable (12 if weight loss)
+< body[1259]	10 questions with PS, P8 and P9 pre-filled and editable (12 if weight loss)
+< body[1262]	10 questions with PS pre-filled and editable (12 if weight loss)
+< body[1264]	Already complete
+< body[1269]	Already complete
+< body[1271]/txbx[0]/p[0]	Tu Club ideal ·[Articulos o
+< body[1272]	informaci6n util] (ifany) ·[Disena tu experiencia ]·[ Agenda tu visi ta guiada]
+< body[1273]/txbx[0]/p[0]	Tu Club ideal •[Articulos o
+< body[1274]	info rmaci6n util] (if any)·[ Disena tu experiencia ]·[ Agenda tu visi ta guiada]
+< body[1275]	(if
+< body[1275]/txbx[0]/p[0]	Articulos o informaci6n util
+< body[1275]/txbx[0]/p[1]	any)· Disena tu experiencia Agenda tu visita guiada
+< body[1279]/txbx[0]/p[0]	Volver a tu experiencia ideal· Articulos o informaci6n util (if
+< body[1279]/txbx[0]/p[1]	any)· Agenda tu visi ta guiada
+< body[1286]	- Memberships
+< body[1286]/txbx[0]/p[0]	Volver a tu experiencia ideal Articulos o informaci6n util (if
+< body[1286]/txbx[0]/p[1]	any)· Agenda tu visi ta guiada
+< body[1287]	Landing on memberships does not allow inferring questionnaire variables. Per Rule 22, the page does not include online checkout- conversion goes through Agenda tuvisi ta guiada.
+< body[1289]	StateQuestionnaireContextual menu
+< body[1293]	No questionnaire·no club selected • no inferred location
+< body[1295]	No questionnaire·no club selected· with inferred location
+< body[1297]	No questionnaire·with club selected
+< body[1299]	Complete, inside the flow
+< body[1304]	Complete, outside the flow
+< body[1305]	10 standard questions (12 if weight loss)
+< body[1308]	10 questions with P8 and P9 pre-filled and editable (12 if weight loss)
+< body[1310]	10 standard questions (12 if weight loss)
+< body[1312]	Already complete
+< body[1317]	Already complete
+< body[1318]	Tu Club ideal •( Disena tu experiencia]·( Agenda tu visita guiada]
+< body[1319]	Tu Club ideal •( Disena tu experiencia]·( Agenda tu visita guiada]
+< body[1320]/txbx[0]/p[0]	Disena tu experiencia Agenda tu visita guiada
+< body[1322]	(Volver a tu experiencia ideal]·(Agenda tu visi ta guiada]
+< body[1324]	(volver a tu experiencia ideal]·(Agenda tu visi ta guiada]
+< body[1330]	- Journal article
+< body[1331]	Landing on an article does not allow inferring questionnaire variables.
+< body[1333]	StateQuestionnaireContextual menu
+< body[1337]	No questionnaire· no club selected • no inferred location
+< body[1339]	No questionnaire· no club selected· with inferred location
+< body[1341]	No questionnaire· with club selected
+< body[1343]	Complete, inside the flow
+< body[1347]	Complete, outside the flow
+< body[1348]	10 standard questions (12 if weight loss)
+< body[1351]	10 questions with P8 and P9 pre-filled and editable (12 if weight loss)
+< body[1353]	10 standard questions (12 if weight loss)
+< body[1355]	Already complete
+< body[1360]	Already complete
+< body[1362]/txbx[0]/p[0]	Tu Club ideal •( Disena tu
+< body[1363]	experiencia]·( Agenda tu visita guiada]
+< body[1364]/txbx[0]/p[0]	Tu Club ideal •( Disena tu
+< body[1365]	experiencia]·( Agenda tu visita guiada]
+< body[1366]/txbx[0]/p[0]	Disena tu experiencia Agenda tu visita guiada
+< body[1368]	(Volver a tu experiencia ideal]·( Agenda tu visi ta guiada]
+< body[1370]	(volver a tu experiencia ideal]·(Agenda tu visi ta guiada]
+< body[1376]	- BES (when reached via thefallback URL)
+< body[1376]/txbx[0]/p[0]	/bes
+< body[1377]	BES is normally reached via the global widget (Rule 3), which overlays the current page. The
+< body[1378]	dedicated URLexists as a fallback for non-JavaScript users and as a deep-linkable
+< body[1378]/txbx[0]/p[0]	/bes
+< body[1379]	destination. When reached via /bes, thepage is server-rendered with the same chat interface as a non-floating layout.
+< body[1380]	StateBehavior
+< body[1382]	No questionnaireThe assistant answers questions. If(BES) detects a personalization intent, it offers to open the questionnaire; the user decides. Always-available action: "Hablar con un asesor humano" (Talk to a human advisor).
+< body[1386]	Complete, inside the flow
+< body[1389]	The assistant answers while keeping the plan context. ( Vol ve r a tu expe riencia ideal]is always visible.
+< body[1389]/txbx[0]/p[0]	Volver a tu experiencia ideal
+< body[1395]	Complete, outside the flow
+< body[1396]	Theassistantrespondsfreely. visible.
+< body[1397]	isalways
+< body[1405]	Part 6 -Edge Cases & Error States
+< body[1406]	This part documents what the site does when the happy path fails. Every behavior described here must be implemented and verified before launch.
+< body[1407]	6.1 - Geolocation permission denied or unavailable
+< body[1408]	Trigger: the browser denies the geolocation permission prompt, or the user is on a device or network that does not return a coordinate.
+< body[1409]	Behavior: the system does not prompt repeatedly. The user lands on Home with the (Tu Club ideal) flow opened in capture mode (PS+ P9 manual entry). A non-intrusive notice explains that
+< body[1410]	the user can enter their location manually or browse the full club list at.
+< body[1410]/txbx[0]/p[0]	/ clubes/
+< body[1412]	- External search inferred a location not in the 49-club roster
+< body[1413]	Trigger: the user searches(no Sports World club exists in Tijuana).
+< body[1413]/txbx[0]/p[0]	gimnasio Tijuana
+< body[1415]	Behavior: the user lands on Home, not on a club page. A neutral notice (( No tenemos club en Tijuana)) and a fallback offers to search for the closest club by manual ZIP entry, or browse the full club list. The system does not auto-pick a far club.
+< body[1416]	- SEPOMEX autocomplete service unavailable
+< body[1417]	Trigger: the SEPOMEX endpoint is down or the user's network blocks it.
+< body[1418]	Behavior: P9 falls back to a free-text input with looser validation. The user can submit a neighborhood or city name typed by hand. The system later normalizes the input server-side.
+< body[1419]	- Form validation errors Behavior:
+< body[1420]	Errors appear inline immediately under the offending field, in Spanish (Mexico), with the same tone and typography as the rest of the site.
+< body[1421]	No error blocks the user from editing other fields.
+< body[1422]	On submission of a form with errors, the page scrolls to the first error and places focus on it for keyboard and screen-reader users.
+< body[1425]	- User abandons the questionnaire mid-flow
+< body[1426]	Behavior: partial questionnaire state is preserved in
+< body[1426]/txbx[0]/p[0]	localSto rage
+< body[1428]	after the user has explicitly
+< body[1430]	accepted the privacy notice (Rule 36). When the user returns, the questionnaire offers to resume from the last answered question. If the user has not accepted the privacy notice, no state is preserved.
+< body[1431]	- Health disclaimer rejected
+< body[1433]	Trigger: in the (Bajar de peso)flow (or rehabilitation hub), the user is shown the health-disclaimer modal and declines.
+< body[1434]	Behavior: the user does not receive the personalized weight-loss plan. They receive a non-clinical generic plan instead, with a clear explanation that personalized recommendations require accepting the disclaimer. No data is captured beyond what the user has already entered.
+< body[1435]	- BES asked an out-of-scope question
+< body[1436]	Trigger: the user asks BES for medical diagnosis, billing changes that require human handling, or a service the site does not offer.
+< body[1437]	Behavior: BES redirects to the relevant hub or offers (Hablar con un asesor humano ). It never fabricates an answer. Out-of-scope categories include deep health questions, account-level financial actions, and any commitment about future pricing or promotions.
+< body[1438]	- Club catalog or booking API unavailable
+< body[1439]	Trigger: the upstream booking API is down, or the club-catalog endpoint times out.
+< body[1440]	Behavior:
+< body[1441]	Live data per club (Rule 12) -operating hours, phone, email, class catalog, schedule - defaults to the last successfully cached values.
+< body[1442]	A visible notice on the affected pages explains that schedules may be outdated and asks the user to confirm by phone.
+< body[1443]	The (Agenda tu visi ta guiada) button remains operational but in a degraded mode that captures the lead and contacts the user back manually within one business day, instead of offering a real-time slot.
+< body[1445]	- Search query has multiple competing inferences
+< body[1446]	Trigger: the user searches (yoga Polanco bajar de peso) (a class+ a location+ a goal).
+< body[1447]	Behavior: see Rule 17. Pl wins over P9 wins over P4. For this example, the user lands on the ( Bajar de peso) hub with P9 pre-filled to(Polanco). P4 is not pre-filled (goal-driven landing overrides class-driven landing).
+< body[1448]	- Stale plan returning user
+< body[1449]	Covered by Rule 34. After 60 days, the user is shown a non-blocking refresh prompt.
+< body[1451]	- JavaScript disabled or older browser
+< body[1452]	Behavior: the site degrades gracefully. Server-rendered content is fully readable. The drawer becomes a static link list. The questionnaire and BES are unavailable in their interactive form, but their entry points show a graceful notice and direct the user to (Agenda tu visi ta guiada),
+< body[1454]	which works server-side. The alternative.
+< body[1454]/txbx[0]/p[0]	/bes
+< body[1455]	fallback URL provides a server-rendered chat-like
+< body[1457]	- Slow connection or data-saver mode
+< body[1458]	Behavior: hero videos use a poster image fallback. Below-the-fold images use•
+< body[1458]/txbx[0]/p[0]	loading= 11 lazy 11
+< body[1459]	The site uses progressive enhancement so that the first meaningful paint is text and image, not a
+< body[1460]	blocking video. Animation respects themedia query.
+< body[1460]/txbx[0]/p[0]	prefers-reduced-motion
+< body[1462]	- Empty result set on amenity or club lists
+< body[1463]	Trigger: the user filters amenity X by city Y, and no club in city Y has amenity X.
+< body[1464]	Behavior: the empty state is not silent. A short message explains that the combination has no match, and offers two options: (a) the closest club that has the amenity, regardless of city, and (b) the closest amenity to the user's city, regardless of club.
+< body[1467]	Appendix A -Privacy & Data Handling
+< body[1468]	Rule 36 - User data and privacy
+< body[1469]	The site captures personal data at four moments: questionnaire, plan-delivery sign-up, visit booking, and BES conversation.
+< body[1470]	At every capture point, the user must see the privacy notice and give explicit consent before any data is stored. Compliance with the Mexican LFPDPPP (Ley Federal de Protecci6n de Datos Personales en Posesi6n de los Particulares) is mandatory.
+< body[1471]	Data is stored in the client's system, not in separate web-side systems.
+< body[1472]	Health data (weight, height, medical conditions, medication use) requires additional, specific consent.
+< body[1473]	WhatsApp reminder consent (Rule 3.2) is captured separately from the general privacy consent, with explicit opt-in.
+< body[1474]	The user can request deletion of their data at any time, and the request is honored within the timeframes set by the applicable regulation.
+< body[1478]	Appendix B -Out-of-Scope Pages
+< body[1479]	Rule 37 - Pages explicitly out of scope
+< body[1480]	To prevent confusion, the following pages do not exist on the site and are explicitly out of scope:
+< body[1482]	Help Center with article cluster. Operational FAQs (cancel, freeze, switch club) are handled by BES. Articles on exercise or nutrition live in the Journal.
+< body[1483]	A page for each FitKidz activity. All 34 activities live within the FitKidz hub, organized by age range, discipline, and club availability per Rule 30. There is no individual page per activity.
+< body[1484]	A page per trainer. Personal Training has one page, with no individual trainer profiles.
+< body[1485]	Studio Polanco or any other boutique studio as a separate entity. They do not exist as a sub-brand on the site.
+< body[1486]	Online membership checkout. Per Rule 22, the site does not sell memberships
+< body[1487]	transactionally; conversion is via.
+< body[1487]/txbx[0]/p[0]	Agenda tu visi ta guiada
+< body[1491]	Appendix C -Glossary
+< body[1492]	The glossary lists every term and code used in this specification.Terms not in this list should not appear in the production site copy or in supporting partner documents without prior addition here.
+< body[1494]	TermMeaning
+< body[1500]	(Agenda tu visita guiada]
+< body[1501]	Book your guided visit. The site's primary conversion action. Header version:.
+< body[1505]	The Sports World conversational AI assistant. Full user-facing name: Preguntale a BES -tuasistente Sports World . Text-first, with voice as an optional input/output mode. Implemented as a global
+< body[1505]/txbx[0]/p[0]	Agenda tuvisi ta
+< body[1506]	floating widget (Rule 3) withas a fallback URL.
+< body[1506]/txbx[0]/p[0]	/bes
+< body[1506]/txbx[1]/p[0]	Bajar de peso
+< body[1506]/txbx[2]/p[0]	Brand positioning
+< body[1508]	Weight loss. Activates the 12-question variant of the questionnaire (Rule 19). Page classified as YMYL (Rule 14).
+< body[1511]	The site brand: Premium fitness. TheFitKidzsub-brand:(Premium family fitness]. See Part 1.
+< body[1513]	City where Sports World has only one club.
+< body[1515]	City where Sports World has 2 or 3 clubs.
+< body[1517]	Mexico City Metropolitan Area (CDMX and Estado de Mexico), where Sports World has 32 clubs (more than 3). Subject to special geographic rules in Rule 24.
+< body[1520]	Way of navigating the site through the menus (header, ( Tu Spa rts
+< body[1522]	World] drawer, internal links), without going through the questionnaire or BES.
+< body[1524]	Set of buttons that appear as primary actions inside a page's body content, not in the header. Changes by page and by user state (Rule 25).
+< body[1526]	Schema.org markup type used on every adult class page.
+< body[1528]	Mexican professional license number. Required visible on YMYL pages for the medical reviewer (Rule 14).
+< body[1534]	(Disena tu experiencia]
+< body[1534]/txbx[0]/p[0]	Course
+< body[1534]/txbx[1]/p[0]	Cedula profesional
+< body[1537]	(External-search inference]
+< body[1538]	Design your experience. The 10-question (or 12-question for weight loss) questionnaire that captures user information to build a personalized plan.
+< body[1540]	When the system deduces information about the user (goal, location) from the words the user typed into the search engine before reaching the site.
+< body[1542]/txbx[0]/p[0]	CIUDAD-1
+< body[1542]/txbx[1]/p[0]	CIUDAD-P0C0S
+< body[1542]/txbx[2]/p[0]	CIUDAD-ZMVM
+< body[1542]/txbx[3]/p[0]	Classic navigation
+< body[1542]/txbx[4]/p[0]	Contextual menu
+< body[1544]	Schema.org structured-data markup for pages with FAQs.
+< body[1544]/txbx[0]/p[0]	FAQPage
+< body[1547]	TermMeaning
+< body[1547]/txbx[0]/p[0]	FitKidz
+< body[1547]/txbx[1]/p[0]	GLP-1
+< body[1549]	Sports World's children's program with 34 activities organized by age and discipline. Not every club has FitKidz.
+< body[1551]	Family of medications for diabetes and weight loss (Ozempic, Wegovy, Mounjaro, and similar). Sensitive information; users taking them require special handling in their plan.
+< body[1553]	Schema.org structured-data markup type used on every club page,
+< body[1554]	alongside.
+< body[1554]/txbx[0]/p[0]	HealthClub
+< body[1554]/txbx[1]/p[0]	LocalBusiness
+< body[1554]/txbx[2]/p[0]	Hover
+< body[1556]	The action of placing the mouse cursor over an element without clicking. Desktop only - does not apply on mobile.
+< body[1558]	Top-level page on a topic that aggregates related content (memberships hub, FitKidz hub, amenity hubs, goal hubs).
+< body[1560]	The club identified by the system as the best fit for the user, either because the user picked it explicitly, because the external search identified it, or because questionnaire questions PS and P9 led to it.
+< body[1562]	Location the system deduces without the user providing it explicitly,
+< body[1564]	generally from the external search (e.g., Polanco).
+< body[1564]/txbx[0]/p[0]	Inferred location
+< body[1564]/txbx[1]/p[0]	gym Polanco
+< body[1565]	infers location=
+< body[1569]	Ley Federal de Protecci6n de Datos Personales en Posesi6n de los Particulares - Mexico's federal personal-data protection law. Mandatory compliance for any personal-data capture on the site (Rule 36).
+< body[1569]/txbx[0]/p[0]	LFPDPPP
+< body[1569]/txbx[1]/p[0]	LocalBusiness
+< body[1569]/txbx[2]/p[0]	MedicalWebPage
+< body[1571]	Schema.org structured-data markup type for physical businesses. Sports World uses it on each club page so the clubs surface correctly in search results and Maps.
+< body[1573]	Schema.org structured-data markup type for medical-content pages. Sports World uses it on the Bajar de peso hub to indicate that the content has professional sign-off (Rule 13).
+< body[1577]	(Membership pages do nothave checkout]
+< body[1578]/txbx[0]/p[0]	Mobile-first
+< body[1579]	Per Rule 22. Conversion path is Agenda tu visi ta guiada, not online purchase.
+< body[1581]	Methodology declared in Part 2. Mandatory across all design and engineering decisions.
+< body[1583]/txbx[0]/p[0]	Ideal club
+< body[1586]	TermMeaning
+< body[1586]/txbx[0]/p[0]	Movement type
+< body[1588]	The 6 categories of P4: calm and conscious movement, sustained cardio without jumps, intense cardio with jumps, weights and strength training, water sports, no preference.
+< body[1590]	Questions of the questionnaire, numbered. P1 is goal; P9 is specific geography.
+< body[1593]	[P10-WL, Pll-WL, P12- Questions added or replaced in the weight-loss variant. WL stands for
+< body[1594]	�weight loss.
+< body[1594]/txbx[0]/p[0]	Pl, P2, P3, ...
+< body[1594]/txbx[1]/p[0]	PAR-Q
+< body[1596]	Standard medical questionnaire used before starting physical activity. P10 is a friendly, simplified version of the PAR-Q.
+< body[1598]	Button with moderately rounded corners (capsule-style), not fully circular. The premium-design standard for the conversion action.
+< body[1600]	When a questionnaire question appears with a suggested answer based on information the system already has. The user can confirm or change.
+< body[1602]	The site's brand positioning. See Part 1.
+< body[1608]	(Premium family fitness]
+< body[1608]/txbx[0]/p[0]	Premium fitness
+< body[1608]/txbx[1]/p[0]	Preguntale a BES
+< body[1609]	The FitKidz sub-brand positioning. Family framing is exclusive to FitKidz pages.
+< body[1611]	Ask BES. The header entry point to the BES global widget.
+< body[1619]	(Questionnaire complete, inside the flow)
+< body[1621]	(Questionnaire complete, outside the flow)
+< body[1622]/txbx[0]/p[0]	Schema markup
+< body[1623]	The user completed the questionnaire and is currently navigating within the active flow of their personalized plan.
+< body[1626]	The user completed the questionnaire previously but is now navigating freely, no longer inside the active plan flow.
+< body[1629]	Markup system embedded in web-page code that helps search engines understand the content. Improves how the site surfaces in search results. See Rule 13.
+< body[1631]/txbx[0]/p[0]	Pill button
+< body[1631]/txbx[1]/p[0]	Pre-filling
+< body[1633]	Mexico's postal service. SEPOMEX autocomplete lets the user type a ZIP code and automatically receive the corresponding neighborhood, city, and state.
+< body[1633]/txbx[0]/p[0]	SEPOMEX
+< body[1636]	TermMeaning
+< body[1636]/txbx[0]/p[0]	Stale plan
+< body[1636]/txbx[1]/p[0]	Sticky
+< body[1636]/txbx[2]/p[0]	Tu Club ideal
+< body[1636]/txbx[3]/p[0]	Tu Sports World
+< body[1636]/txbx[4]/p[0]	WCAG 2.2 AA
+< body[1636]/txbx[5]/p[0]	Weight-loss variant
+< body[1638]	A questionnaire-complete plan generated more than 60 days ago. Triggers a non-blocking refresh prompt (Rule 34).
+< body[1640]	Behavior of an element that stays pinned to a fixed screen position when the user scrolls. The site header is sticky.
+< body[1642]	Label attached to a Journal article to associate it with relevant pages on the site (Rule 29).
+< body[1644]	Touching an element on a touch screen. The mobile equivalent of clicking.
+< body[1646]	Button and concept that helps the user identify the Sports World club that best fits their location and needs (Rule 23).
+< body[1648]	Name of the side drawer on the site, containing the 8 main hubs of classic navigation (Rule 4).
+< body[1650]	Web Content Accessibility Guidelines, version 2.2, level AA. Mandatory for every page on this site (Rule 35).
+< body[1652]	Version of the questionnaire that activates when the user answers P1 = Baja r de peso .12 questions in total, includes a health-disclaimer modal before the result, and captures the user's physical data (weight, height, age).
+< body[1654]	Your Money or Your Life - Google search-quality terminology for content that could affect a user's health or finances. Sports World's [ Bajar de peso )hub, rehabilitation hub, and some Journal articles are YMYL. Triggers Rule 14.
+< body[1656]	Zona Metropolitana del Valle de Mexico (Mexico City Metropolitan Area). Comprises CDMX and the conurbated municipalities ofEstado de Mexico. Sports World has 32 clubs in this region.
+< body[1660]	Appendix D -Code Reference
+< body[1660]/txbx[0]/p[0]	YMYL
+< body[1660]/txbx[1]/p[0]	ZMVM
+< body[1661]	This appendix collects every code used in the specification, in one place, for quick lookup.
+< body[1662]	Page types. 11 in scope (numbered 1-11), see Section 3.1. BES is implemented as a global widget (Rule 3).
+< body[1663]	Questionnaire codes.
+< body[1665]	Q1 (name), Q2 (gender), Q3 (emotion), Q4 (goal), Q5 (pace), Q6 (setting), Q7 (time), Q8 (days), Q9 (level), Q10 (gym history), Q11 (pause length, conditional on Q10), Q12 (medical, with conditional Embarazo option when Q2 = Mujer), Q13 (companion self, gender-concordant), Q14 (companion visit, gender-concordant), Q15 (geography intent), Q16 (location, XOR código postal / colonia).
+< body[1666]	Weight-loss optionals, visible when Q4 includes Bajar de peso, add Q17 (current health), Q18 (physical data), Q19 (change goal). The legacy P-series (P1 to P10) and its weight-loss variant (P10-WL, P11-WL, P12-WL) are retired permanently per the code-immutability principle and are not reassigned.
+< body[1668]	Cityclassificationcodes. CIUDAD-1, CIUDAD-POCOS,.See Rule 24.
+< body[1668]/txbx[0]/p[0]	CIUDAD-ZMVM
+< body[1669]	Article tag codes. All lowercase, hyphenated. See Rule 29 for the full list.
+< body[1670]	Rules. Rule 1 to Rule 37, with sub-rules 3.1 and 3.2. All numbered globally.
+< body[1671]	Code immutability principle. None of the codes above are reassigned if an element is removed or replaced. Removed codes are retired permanently. New codes are added at the end of the relevant series.
+< body[1674]	End of UX Specification v4.2. Confidential.
+---
+> body[1166]	Already complete
+> body[1168]/txbx[0]/p[0]	Tu Club ideal ·( Articulos o
+> body[1169]	informaci6n util) (if any)·( Disefia
+> body[1170]	tu experiencia)·(Agenda tu visita guiada)
+> body[1171]/txbx[0]/p[0]	Tu Club ideal ·( Articulos o
+> body[1172]	info rmaci6n util) (if any)·( Disefia
+> body[1173]	tu experiencia)·(Agenda tu visita guiada)
+> body[1174]	Of
+> body[1174]/txbx[0]/p[0]	Articulos o informaci6n util
+> body[1174]/txbx[0]/p[1]	any)· Disefia tu experiencia • Agenda tuvisita guiada
+> body[1178]/txbx[0]/p[0]	Volver a tu experiencia ideal· Articulos o informaci6n util (W
+> body[1178]/txbx[0]/p[1]	any)· Agenda tu visi ta guiada
+> body[1187]	5.8-
+> body[1187]/txbx[0]/p[0]	Bajar de peso
+> body[1188]	Landing pre-fills Pl =
+> body[1189]	hub (YMYL)
+> body[1191]	, which automatically activates the 12-question variant. A
+> body[1191]/txbx[0]/p[0]	Volver a tu experiencia ideal
+> body[1191]/txbx[0]/p[1]	Articulos o informaci6n util Of any)· Agenda tu visi ta guiada
+> body[1191]/txbx[1]/p[0]	Baja r de peso
+> body[1193]	health-disclaimer modal appears before the result. This page always has Journal articles tagged
+> body[1194]	with bajar-de-peso, so thebutton always appears.
+> body[1194]/txbx[0]/p[0]	Articulos o informaci6n util
+> body[1196]	StateQuestionnaireContextual menu
+> body[1200]	No questionnaire • no club selected • no inferred location
+> body[1203]	No questionnaire • no club selected • with inferred location
+> body[1206]	No questionnaire· with club selected
+> body[1209]	Complete, inside the flow
+> body[1210]	12 questions with Pl pre-filled and editable
+> body[1214]	12 questions with Pl, PS and P9 pre-filled and editable
+> body[1217]	12 questions with Pl pre-filled and editable
+> body[1220]	Already complete
+> body[1222]/txbx[0]/p[0]	Tu Club ideal ·(Articulos o
+> body[1223]	info rmaci6n util]•( Disena tu experiencia]·(Agenda tu visita guiada]
+> body[1224]/txbx[0]/p[0]	Tu Club ideal ·(Articulos o
+> body[1225]	informaci6n util]•( Disena tu experiencia]·(Agenda tu visi ta guiada)
+> body[1226]/txbx[0]/p[0]	Articulos o informaci6n util • Disena tu experiencia ·[Agenda tu
+> body[1227]	visita guiada)
+> body[1234]	Complete, outside the flowAlready complete
+> body[1234]/txbx[0]/p[0]	Volver a tu experiencia ideal· Articulos o informaci6n util •
+> body[1234]/txbx[0]/p[1]	Agenda tu visita guiada
+> body[1234]/txbx[1]/p[0]	Volver a tu experiencia ideal· Articulos o informaci6n util •
+> body[1234]/txbx[1]/p[1]	Agenda tuvisita guiada
+> body[1240]	- Personal Training
+> body[1241]	Landing pre-fills PS= Con personal trainer. Theuser can confirm or change.
+> body[1243]	StateQuestionnaireContextual menu
+> body[1247]	No questionnaire·no club selected • no inferred location
+> body[1250]	No questionnaire·no club selected· with inferred location
+> body[1253]	No questionnaire·with club selected
+> body[1256]	Complete, inside the flow
+> body[1259]	Complete, outside the flow
+> body[1260]	10 questions with PS pre-filled and editable (12 if weight loss)
+> body[1263]	10 questions with PS, P8 and P9 pre-filled and editable (12 if weight loss)
+> body[1266]	10 questions with PS pre-filled and editable (12 if weight loss)
+> body[1268]	Already complete
+> body[1273]	Already complete
+> body[1275]/txbx[0]/p[0]	Tu Club ideal ·[Articulos o
+> body[1276]	informaci6n util] (ifany) ·[Disena tu experiencia ]·[ Agenda tu visi ta guiada]
+> body[1277]/txbx[0]/p[0]	Tu Club ideal •[Articulos o
+> body[1278]	info rmaci6n util] (if any)·[ Disena tu experiencia ]·[ Agenda tu visi ta guiada]
+> body[1279]	(if
+> body[1279]/txbx[0]/p[0]	Articulos o informaci6n util
+> body[1279]/txbx[0]/p[1]	any)· Disena tu experiencia Agenda tu visita guiada
+> body[1283]/txbx[0]/p[0]	Volver a tu experiencia ideal· Articulos o informaci6n util (if
+> body[1283]/txbx[0]/p[1]	any)· Agenda tu visi ta guiada
+> body[1290]	- Memberships
+> body[1290]/txbx[0]/p[0]	Volver a tu experiencia ideal Articulos o informaci6n util (if
+> body[1290]/txbx[0]/p[1]	any)· Agenda tu visi ta guiada
+> body[1291]	Landing on memberships does not allow inferring questionnaire variables. Per Rule 22, the page does not include online checkout- conversion goes through Agenda tuvisi ta guiada.
+> body[1293]	StateQuestionnaireContextual menu
+> body[1297]	No questionnaire·no club selected • no inferred location
+> body[1299]	No questionnaire·no club selected· with inferred location
+> body[1301]	No questionnaire·with club selected
+> body[1303]	Complete, inside the flow
+> body[1308]	Complete, outside the flow
+> body[1309]	10 standard questions (12 if weight loss)
+> body[1312]	10 questions with P8 and P9 pre-filled and editable (12 if weight loss)
+> body[1314]	10 standard questions (12 if weight loss)
+> body[1316]	Already complete
+> body[1321]	Already complete
+> body[1322]	Tu Club ideal •( Disena tu experiencia]·( Agenda tu visita guiada]
+> body[1323]	Tu Club ideal •( Disena tu experiencia]·( Agenda tu visita guiada]
+> body[1324]/txbx[0]/p[0]	Disena tu experiencia Agenda tu visita guiada
+> body[1326]	(Volver a tu experiencia ideal]·(Agenda tu visi ta guiada]
+> body[1328]	(volver a tu experiencia ideal]·(Agenda tu visi ta guiada]
+> body[1334]	- Journal article
+> body[1335]	Landing on an article does not allow inferring questionnaire variables.
+> body[1337]	StateQuestionnaireContextual menu
+> body[1341]	No questionnaire· no club selected • no inferred location
+> body[1343]	No questionnaire· no club selected· with inferred location
+> body[1345]	No questionnaire· with club selected
+> body[1347]	Complete, inside the flow
+> body[1351]	Complete, outside the flow
+> body[1352]	10 standard questions (12 if weight loss)
+> body[1355]	10 questions with P8 and P9 pre-filled and editable (12 if weight loss)
+> body[1357]	10 standard questions (12 if weight loss)
+> body[1359]	Already complete
+> body[1364]	Already complete
+> body[1366]/txbx[0]/p[0]	Tu Club ideal •( Disena tu
+> body[1367]	experiencia]·( Agenda tu visita guiada]
+> body[1368]/txbx[0]/p[0]	Tu Club ideal •( Disena tu
+> body[1369]	experiencia]·( Agenda tu visita guiada]
+> body[1370]/txbx[0]/p[0]	Disena tu experiencia Agenda tu visita guiada
+> body[1372]	(Volver a tu experiencia ideal]·( Agenda tu visi ta guiada]
+> body[1374]	(volver a tu experiencia ideal]·(Agenda tu visi ta guiada]
+> body[1380]	- BES (when reached via thefallback URL)
+> body[1380]/txbx[0]/p[0]	/bes
+> body[1381]	BES is normally reached via the global widget (Rule 3), which overlays the current page. The
+> body[1382]	dedicated URLexists as a fallback for non-JavaScript users and as a deep-linkable
+> body[1382]/txbx[0]/p[0]	/bes
+> body[1383]	destination. When reached via /bes, thepage is server-rendered with the same chat interface as a non-floating layout.
+> body[1384]	StateBehavior
+> body[1386]	No questionnaireThe assistant answers questions. If(BES) detects a personalization intent, it offers to open the questionnaire; the user decides. Always-available action: "Hablar con un asesor humano" (Talk to a human advisor).
+> body[1390]	Complete, inside the flow
+> body[1393]	The assistant answers while keeping the plan context. ( Vol ve r a tu expe riencia ideal]is always visible.
+> body[1393]/txbx[0]/p[0]	Volver a tu experiencia ideal
+> body[1399]	Complete, outside the flow
+> body[1400]	Theassistantrespondsfreely. visible.
+> body[1401]	isalways
+> body[1409]	Part 6 -Edge Cases & Error States
+> body[1410]	This part documents what the site does when the happy path fails. Every behavior described here must be implemented and verified before launch.
+> body[1411]	6.1 - Geolocation permission denied or unavailable
+> body[1412]	Trigger: the browser denies the geolocation permission prompt, or the user is on a device or network that does not return a coordinate.
+> body[1413]	Behavior: the system does not prompt repeatedly. The user lands on Home with the (Tu Club ideal) flow opened in capture mode (PS+ P9 manual entry). A non-intrusive notice explains that
+> body[1414]	the user can enter their location manually or browse the full club list at.
+> body[1414]/txbx[0]/p[0]	/ clubes/
+> body[1416]	- External search inferred a location not in the 49-club roster
+> body[1417]	Trigger: the user searches(no Sports World club exists in Tijuana).
+> body[1417]/txbx[0]/p[0]	gimnasio Tijuana
+> body[1419]	Behavior: the user lands on Home, not on a club page. A neutral notice (( No tenemos club en Tijuana)) and a fallback offers to search for the closest club by manual ZIP entry, or browse the full club list. The system does not auto-pick a far club.
+> body[1420]	- SEPOMEX autocomplete service unavailable
+> body[1421]	Trigger: the SEPOMEX endpoint is down or the user's network blocks it.
+> body[1422]	Behavior: P9 falls back to a free-text input with looser validation. The user can submit a neighborhood or city name typed by hand. The system later normalizes the input server-side.
+> body[1423]	- Form validation errors Behavior:
+> body[1424]	Errors appear inline immediately under the offending field, in Spanish (Mexico), with the same tone and typography as the rest of the site.
+> body[1425]	No error blocks the user from editing other fields.
+> body[1426]	On submission of a form with errors, the page scrolls to the first error and places focus on it for keyboard and screen-reader users.
+> body[1429]	- User abandons the questionnaire mid-flow
+> body[1430]	Behavior: partial questionnaire state is preserved in
+> body[1430]/txbx[0]/p[0]	localSto rage
+> body[1432]	after the user has explicitly
+> body[1434]	accepted the privacy notice (Rule 36). When the user returns, the questionnaire offers to resume from the last answered question. If the user has not accepted the privacy notice, no state is preserved.
+> body[1435]	- Health disclaimer rejected
+> body[1437]	Trigger: in the (Bajar de peso)flow (or rehabilitation hub), the user is shown the health-disclaimer modal and declines.
+> body[1438]	Behavior: the user does not receive the personalized weight-loss plan. They receive a non-clinical generic plan instead, with a clear explanation that personalized recommendations require accepting the disclaimer. No data is captured beyond what the user has already entered.
+> body[1439]	- BES asked an out-of-scope question
+> body[1440]	Trigger: the user asks BES for medical diagnosis, billing changes that require human handling, or a service the site does not offer.
+> body[1441]	Behavior: BES redirects to the relevant hub or offers (Hablar con un asesor humano ). It never fabricates an answer. Out-of-scope categories include deep health questions, account-level financial actions, and any commitment about future pricing or promotions.
+> body[1442]	- Club catalog or booking API unavailable
+> body[1443]	Trigger: the upstream booking API is down, or the club-catalog endpoint times out.
+> body[1444]	Behavior:
+> body[1445]	Live data per club (Rule 12) -operating hours, phone, email, class catalog, schedule - defaults to the last successfully cached values.
+> body[1446]	A visible notice on the affected pages explains that schedules may be outdated and asks the user to confirm by phone.
+> body[1447]	The (Agenda tu visi ta guiada) button remains operational but in a degraded mode that captures the lead and contacts the user back manually within one business day, instead of offering a real-time slot.
+> body[1449]	- Search query has multiple competing inferences
+> body[1450]	Trigger: the user searches (yoga Polanco bajar de peso) (a class+ a location+ a goal).
+> body[1451]	Behavior: see Rule 17. Pl wins over P9 wins over P4. For this example, the user lands on the ( Bajar de peso) hub with P9 pre-filled to(Polanco). P4 is not pre-filled (goal-driven landing overrides class-driven landing).
+> body[1452]	- Stale plan returning user
+> body[1453]	Covered by Rule 34. After 60 days, the user is shown a non-blocking refresh prompt.
+> body[1455]	- JavaScript disabled or older browser
+> body[1456]	Behavior: the site degrades gracefully. Server-rendered content is fully readable. The drawer becomes a static link list. The questionnaire and BES are unavailable in their interactive form, but their entry points show a graceful notice and direct the user to (Agenda tu visi ta guiada),
+> body[1458]	which works server-side. The alternative.
+> body[1458]/txbx[0]/p[0]	/bes
+> body[1459]	fallback URL provides a server-rendered chat-like
+> body[1461]	- Slow connection or data-saver mode
+> body[1462]	Behavior: hero videos use a poster image fallback. Below-the-fold images use•
+> body[1462]/txbx[0]/p[0]	loading= 11 lazy 11
+> body[1463]	The site uses progressive enhancement so that the first meaningful paint is text and image, not a
+> body[1464]	blocking video. Animation respects themedia query.
+> body[1464]/txbx[0]/p[0]	prefers-reduced-motion
+> body[1466]	- Empty result set on amenity or club lists
+> body[1467]	Trigger: the user filters amenity X by city Y, and no club in city Y has amenity X.
+> body[1468]	Behavior: the empty state is not silent. A short message explains that the combination has no match, and offers two options: (a) the closest club that has the amenity, regardless of city, and (b) the closest amenity to the user's city, regardless of club.
+> body[1471]	Appendix A -Privacy & Data Handling
+> body[1472]	Rule 36 - User data and privacy
+> body[1473]	The site captures personal data at four moments: questionnaire, plan-delivery sign-up, visit booking, and BES conversation.
+> body[1474]	At every capture point, the user must see the privacy notice and give explicit consent before any data is stored. Compliance with the Mexican LFPDPPP (Ley Federal de Protecci6n de Datos Personales en Posesi6n de los Particulares) is mandatory.
+> body[1475]	Data is stored in the client's system, not in separate web-side systems.
+> body[1476]	Health data (weight, height, medical conditions, medication use) requires additional, specific consent.
+> body[1477]	WhatsApp reminder consent (Rule 3.2) is captured separately from the general privacy consent, with explicit opt-in.
+> body[1478]	The user can request deletion of their data at any time, and the request is honored within the timeframes set by the applicable regulation.
+> body[1482]	Appendix B -Out-of-Scope Pages
+> body[1483]	Rule 37 - Pages explicitly out of scope
+> body[1484]	To prevent confusion, the following pages do not exist on the site and are explicitly out of scope:
+> body[1486]	Help Center with article cluster. Operational FAQs (cancel, freeze, switch club) are handled by BES. Articles on exercise or nutrition live in the Journal.
+> body[1487]	A page for each FitKidz activity. All 34 activities live within the FitKidz hub, organized by age range, discipline, and club availability per Rule 30. There is no individual page per activity.
+> body[1488]	A page per trainer. Personal Training has one page, with no individual trainer profiles.
+> body[1489]	Studio Polanco or any other boutique studio as a separate entity. They do not exist as a sub-brand on the site.
+> body[1490]	Online membership checkout. Per Rule 22, the site does not sell memberships
+> body[1491]	transactionally; conversion is via.
+> body[1491]/txbx[0]/p[0]	Agenda tu visi ta guiada
+> body[1495]	Appendix C -Glossary
+> body[1496]	The glossary lists every term and code used in this specification.Terms not in this list should not appear in the production site copy or in supporting partner documents without prior addition here.
+> body[1498]	TermMeaning
+> body[1504]	(Agenda tu visita guiada]
+> body[1505]	Book your guided visit. The site's primary conversion action. Header version:.
+> body[1509]	The Sports World conversational AI assistant. Full user-facing name: Preguntale a BES -tuasistente Sports World . Text-first, with voice as an optional input/output mode. Implemented as a global
+> body[1509]/txbx[0]/p[0]	Agenda tuvisi ta
+> body[1510]	floating widget (Rule 3) withas a fallback URL.
+> body[1510]/txbx[0]/p[0]	/bes
+> body[1510]/txbx[1]/p[0]	Bajar de peso
+> body[1510]/txbx[2]/p[0]	Brand positioning
+> body[1512]	Weight loss. Activates the 12-question variant of the questionnaire (Rule 19). Page classified as YMYL (Rule 14).
+> body[1515]	The site brand: Premium fitness. TheFitKidzsub-brand:(Premium family fitness]. See Part 1.
+> body[1517]	City where Sports World has only one club.
+> body[1519]	City where Sports World has 2 or 3 clubs.
+> body[1521]	Mexico City Metropolitan Area (CDMX and Estado de Mexico), where Sports World has 32 clubs (more than 3). Subject to special geographic rules in Rule 24.
+> body[1524]	Way of navigating the site through the menus (header, ( Tu Spa rts
+> body[1526]	World] drawer, internal links), without going through the questionnaire or BES.
+> body[1528]	Set of buttons that appear as primary actions inside a page's body content, not in the header. Changes by page and by user state (Rule 25).
+> body[1530]	Schema.org markup type used on every adult class page.
+> body[1532]	Mexican professional license number. Required visible on YMYL pages for the medical reviewer (Rule 14).
+> body[1538]	(Disena tu experiencia]
+> body[1538]/txbx[0]/p[0]	Course
+> body[1538]/txbx[1]/p[0]	Cedula profesional
+> body[1541]	(External-search inference]
+> body[1542]	Design your experience. The 10-question (or 12-question for weight loss) questionnaire that captures user information to build a personalized plan.
+> body[1544]	When the system deduces information about the user (goal, location) from the words the user typed into the search engine before reaching the site.
+> body[1546]/txbx[0]/p[0]	CIUDAD-1
+> body[1546]/txbx[1]/p[0]	CIUDAD-P0C0S
+> body[1546]/txbx[2]/p[0]	CIUDAD-ZMVM
+> body[1546]/txbx[3]/p[0]	Classic navigation
+> body[1546]/txbx[4]/p[0]	Contextual menu
+> body[1548]	Schema.org structured-data markup for pages with FAQs.
+> body[1548]/txbx[0]/p[0]	FAQPage
+> body[1551]	TermMeaning
+> body[1551]/txbx[0]/p[0]	FitKidz
+> body[1551]/txbx[1]/p[0]	GLP-1
+> body[1553]	Sports World's children's program with 34 activities organized by age and discipline. Not every club has FitKidz.
+> body[1555]	Family of medications for diabetes and weight loss (Ozempic, Wegovy, Mounjaro, and similar). Sensitive information; users taking them require special handling in their plan.
+> body[1557]	Schema.org structured-data markup type used on every club page,
+> body[1558]	alongside.
+> body[1558]/txbx[0]/p[0]	HealthClub
+> body[1558]/txbx[1]/p[0]	LocalBusiness
+> body[1558]/txbx[2]/p[0]	Hover
+> body[1560]	The action of placing the mouse cursor over an element without clicking. Desktop only - does not apply on mobile.
+> body[1562]	Top-level page on a topic that aggregates related content (memberships hub, FitKidz hub, amenity hubs, goal hubs).
+> body[1564]	The club identified by the system as the best fit for the user, either because the user picked it explicitly, because the external search identified it, or because questionnaire questions PS and P9 led to it.
+> body[1566]	Location the system deduces without the user providing it explicitly,
+> body[1568]	generally from the external search (e.g., Polanco).
+> body[1568]/txbx[0]/p[0]	Inferred location
+> body[1568]/txbx[1]/p[0]	gym Polanco
+> body[1569]	infers location=
+> body[1573]	Ley Federal de Protecci6n de Datos Personales en Posesi6n de los Particulares - Mexico's federal personal-data protection law. Mandatory compliance for any personal-data capture on the site (Rule 36).
+> body[1573]/txbx[0]/p[0]	LFPDPPP
+> body[1573]/txbx[1]/p[0]	LocalBusiness
+> body[1573]/txbx[2]/p[0]	MedicalWebPage
+> body[1575]	Schema.org structured-data markup type for physical businesses. Sports World uses it on each club page so the clubs surface correctly in search results and Maps.
+> body[1577]	Schema.org structured-data markup type for medical-content pages. Sports World uses it on the Bajar de peso hub to indicate that the content has professional sign-off (Rule 13).
+> body[1581]	(Membership pages do nothave checkout]
+> body[1582]/txbx[0]/p[0]	Mobile-first
+> body[1583]	Per Rule 22. Conversion path is Agenda tu visi ta guiada, not online purchase.
+> body[1585]	Methodology declared in Part 2. Mandatory across all design and engineering decisions.
+> body[1587]/txbx[0]/p[0]	Ideal club
+> body[1590]	TermMeaning
+> body[1590]/txbx[0]/p[0]	Movement type
+> body[1592]	The 6 categories of P4: calm and conscious movement, sustained cardio without jumps, intense cardio with jumps, weights and strength training, water sports, no preference.
+> body[1594]	Questions of the questionnaire, numbered. P1 is goal; P9 is specific geography.
+> body[1597]	[P10-WL, Pll-WL, P12- Questions added or replaced in the weight-loss variant. WL stands for
+> body[1598]	�weight loss.
+> body[1598]/txbx[0]/p[0]	Pl, P2, P3, ...
+> body[1598]/txbx[1]/p[0]	PAR-Q
+> body[1600]	Standard medical questionnaire used before starting physical activity. P10 is a friendly, simplified version of the PAR-Q.
+> body[1602]	Button with moderately rounded corners (capsule-style), not fully circular. The premium-design standard for the conversion action.
+> body[1604]	When a questionnaire question appears with a suggested answer based on information the system already has. The user can confirm or change.
+> body[1606]	The site's brand positioning. See Part 1.
+> body[1612]	(Premium family fitness]
+> body[1612]/txbx[0]/p[0]	Premium fitness
+> body[1612]/txbx[1]/p[0]	Preguntale a BES
+> body[1613]	The FitKidz sub-brand positioning. Family framing is exclusive to FitKidz pages.
+> body[1615]	Ask BES. The header entry point to the BES global widget.
+> body[1623]	(Questionnaire complete, inside the flow)
+> body[1625]	(Questionnaire complete, outside the flow)
+> body[1626]/txbx[0]/p[0]	Schema markup
+> body[1627]	The user completed the questionnaire and is currently navigating within the active flow of their personalized plan.
+> body[1630]	The user completed the questionnaire previously but is now navigating freely, no longer inside the active plan flow.
+> body[1633]	Markup system embedded in web-page code that helps search engines understand the content. Improves how the site surfaces in search results. See Rule 13.
+> body[1635]/txbx[0]/p[0]	Pill button
+> body[1635]/txbx[1]/p[0]	Pre-filling
+> body[1637]	Mexico's postal service. SEPOMEX autocomplete lets the user type a ZIP code and automatically receive the corresponding neighborhood, city, and state.
+> body[1637]/txbx[0]/p[0]	SEPOMEX
+> body[1640]	TermMeaning
+> body[1640]/txbx[0]/p[0]	Stale plan
+> body[1640]/txbx[1]/p[0]	Sticky
+> body[1640]/txbx[2]/p[0]	Tu Club ideal
+> body[1640]/txbx[3]/p[0]	Tu Sports World
+> body[1640]/txbx[4]/p[0]	WCAG 2.2 AA
+> body[1640]/txbx[5]/p[0]	Weight-loss variant
+> body[1642]	A questionnaire-complete plan generated more than 60 days ago. Triggers a non-blocking refresh prompt (Rule 34).
+> body[1644]	Behavior of an element that stays pinned to a fixed screen position when the user scrolls. The site header is sticky.
+> body[1646]	Label attached to a Journal article to associate it with relevant pages on the site (Rule 29).
+> body[1648]	Touching an element on a touch screen. The mobile equivalent of clicking.
+> body[1650]	Button and concept that helps the user identify the Sports World club that best fits their location and needs (Rule 23).
+> body[1652]	Name of the side drawer on the site, containing the 8 main hubs of classic navigation (Rule 4).
+> body[1654]	Web Content Accessibility Guidelines, version 2.2, level AA. Mandatory for every page on this site (Rule 35).
+> body[1656]	Version of the questionnaire that activates when the user answers P1 = Baja r de peso .12 questions in total, includes a health-disclaimer modal before the result, and captures the user's physical data (weight, height, age).
+> body[1658]	Your Money or Your Life - Google search-quality terminology for content that could affect a user's health or finances. Sports World's [ Bajar de peso )hub, rehabilitation hub, and some Journal articles are YMYL. Triggers Rule 14.
+> body[1660]	Zona Metropolitana del Valle de Mexico (Mexico City Metropolitan Area). Comprises CDMX and the conurbated municipalities ofEstado de Mexico. Sports World has 32 clubs in this region.
+> body[1664]	Appendix D -Code Reference
+> body[1664]/txbx[0]/p[0]	YMYL
+> body[1664]/txbx[1]/p[0]	ZMVM
+> body[1665]	This appendix collects every code used in the specification, in one place, for quick lookup.
+> body[1666]	Page types. 11 in scope (numbered 1-11), see Section 3.1. BES is implemented as a global widget (Rule 3).
+> body[1667]	Questionnaire codes.
+> body[1669]	Q1 (name), Q2 (gender), Q3 (emotion), Q4 (goal), Q5 (pace), Q6 (setting), Q7 (time), Q8 (days), Q9 (level), Q10 (gym history), Q11 (pause length, conditional on Q10), Q12 (medical, with conditional Embarazo option when Q2 = Mujer), Q13 (companion self, gender-concordant), Q14 (companion visit, gender-concordant), Q15 (geography intent), Q16 (location, XOR código postal / colonia).
+> body[1670]	Weight-loss optionals, visible when Q4 includes Bajar de peso, add Q17 (current health), Q18 (physical data), Q19 (change goal). The legacy P-series (P1 to P10) and its weight-loss variant (P10-WL, P11-WL, P12-WL) are retired permanently per the code-immutability principle and are not reassigned.
+> body[1672]	Cityclassificationcodes. CIUDAD-1, CIUDAD-POCOS,.See Rule 24.
+> body[1672]/txbx[0]/p[0]	CIUDAD-ZMVM
+> body[1673]	Article tag codes. All lowercase, hyphenated. See Rule 29 for the full list.
+> body[1674]	Rules. Rule 1 to Rule 37, with sub-rules 3.1 and 3.2. All numbered globally.
+> body[1675]	Code immutability principle. None of the codes above are reassigned if an element is removed or replaced. Removed codes are retired permanently. New codes are added at the end of the relevant series.
+> body[1678]	End of UX Specification v4.2. Confidential.
