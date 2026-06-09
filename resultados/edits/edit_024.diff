@@ -1,0 +1,6 @@
+118,119c118,119
+< 0+number;(-wL) suffix for weight-loss
+< P1, P2, P9, P10-WL, P11-WL,P12-WL
+---
+> Q+number
+> Q1, Q4, Q12, Q16, Q17, Q18, Q19
