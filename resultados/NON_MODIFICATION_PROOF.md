@@ -66,3 +66,23 @@ Part 1 (all), Appendix A, Appendix B, Part 4 Rules 1-15 (Rules 2,3,3.1,3.2,9,10,
 
 ## Unauthorized changes detected
 **NONE** — every changed/added section maps to an authorized edit.
+
+---
+
+## Addendum — edits 025-030 (spec compliance completion)
+
+A post-delivery compliance audit against the master prompt found that the original Phase 5 plan (E01-E17) under-scoped spec §5.2-§5.6, §6, §7 and §8: only Rule 38 had been authored, and Appendices E/F, the §8 cardio presentation, the experiencia-ideal matrix and the Appendix D additions were absent. Edits 025-030 add the missing content as pure insertions:
+
+- 025 — Part 4: Rules 39-43 (verbatim, spec §5.2-5.6).
+- 026 — Part 5: experiencia-ideal result-page matrix with block flags; Block 2 cardio user-facing mapping (§8); Block 1 presentation rules.
+- 027 — Part 6: five new edge cases (§9).
+- 028 — Appendix E: Brand Voice and Tone (§6).
+- 029 — Appendix F: Experiencia Ideal HTML reference template (§7).
+- 030 — Appendix D: block flags, subgroup IDs, suppression reason codes, class-card slot IDs; rule-range refs Rule 1-38 -> Rule 1-43.
+
+Re-verification against the immutable baseline (resultados/01_UX_Specification_v4_1.ORIGINAL.docx):
+- Shared sections still byte-identical: **60** (unchanged from pre-addition state — the insertions altered zero pre-existing sections).
+- Newly added sections: 40. Shared changed: 28 (all from the original authorized edits 001-024). "Removed" 3 = the legacy Rule 18/19/21 headings rewritten in edits 005/006/008 (authorized, not §10-protected).
+- All §10 strictly-protected sections (Part 1, Part 2, Appendix A, Appendix B, Rules 1-15 text, Rules 22-37 text) remain hash-identical to baseline.
+
+CONCLUSION: spec §3-§9 content is now fully present; §10 non-modification guarantee is preserved.

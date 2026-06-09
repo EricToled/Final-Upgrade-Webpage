@@ -51,3 +51,15 @@ New: Q1 Name, Q2 Gender, Q3 Emotion.
 ## New top-level pages (as class pages)
 - entrenamiento-con-pesas-individual → Fuerza, Hipertrofia, Potencia, Resistencia muscular (ACSM Position Stand 2026, DOI 10.1249/MSS.0000000000003897)
 - entrenamiento-aerobico-individual → LISS, MICT, HIIT, SIT (ACSM/ESSA Joint Statement 2024)
+
+## Compliance completion (edits 025-030)
+
+Added the spec sections that were missing from the initial v4.2 build:
+- Rules 39-43 (combined plan structure, class selection algorithm, replacement UI, Club Ideal card, other-clubs re-evaluation).
+- Part 5: experiencia-ideal result-page matrix (block_1_on/block_2_on/block_3_on); Block 2 cardio user-facing mapping; Block 1 presentation rules.
+- Part 6: five edge cases (aquatic-without-pool, dual Q12 contraindication, replacement outside Q4, club change with no viable Block 3, all-blocks-suppressed advisor handoff).
+- Appendix E: Brand Voice and Tone guide.
+- Appendix F: Experiencia Ideal HTML reference template (verbatim HTML/CSS).
+- Appendix D: block flags, subgroup IDs, suppression reason codes, class-card slot IDs; rule range bumped to Rule 1-43.
+
+Non-modification (§10) preserved: 60 baseline sections remain byte-identical.
