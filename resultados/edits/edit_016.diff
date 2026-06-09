@@ -1,0 +1,33 @@
+1172c1172
+< Weight loss. Activates the 12-question variant of the questionnaire (Rule 19). Page classified as YMYL (Rule 14).
+---
+> Weight loss. Activates the weight-loss optionals Q17 to Q19 (Rule 19). Page classified as YMYL (Rule 14).
+1186c1186
+< Design your experience. The 10-question (or 12-question for weight loss) questionnaire that captures user information to build a personalized plan.
+---
+> Design your experience. The 16-question base questionnaire (19 with the weight-loss optionals) that captures user information to build a personalized plan.
+1226,1228c1226,1228
+< The 6 categories of P4: calm and conscious movement, sustained cardio without jumps, intense cardio with jumps, weights and strength training, water sports, no preference.
+< Questions of the questionnaire, numbered. P1 is goal; P9 is specific geography.
+< [P10-WL, Pll-WL, P12- Questions added or replaced in the weight-loss variant. WL stands for
+---
+> Movement type. In v4.1 this was P4 with six categories. In v4.2 movement preference is captured through Q5 (pace) and Q6 (setting), and detailed training style is expressed through the individual-training subgroups (Part 3).
+> Questions of the questionnaire, numbered Q1 to Q19. Q4 is goal; Q16 is location.
+> Q17, Q18, Q19. The optional questions shown on the weight-loss path (Rule 19); they replace the legacy P10-WL, P11-WL and P12-WL.
+1232c1232
+< Standard medical questionnaire used before starting physical activity. P10 is a friendly, simplified version of the PAR-Q.
+---
+> Standard medical questionnaire used before starting physical activity. Q12 is a friendly, simplified version of the PAR-Q.
+1265c1265
+< Version of the questionnaire that activates when the user answers P1 = Baja r de peso .12 questions in total, includes a health-disclaimer modal before the result, and captures the user's physical data (weight, height, age).
+---
+> Version of the questionnaire that activates when the user answers Q4 = Bajar de peso. 19 questions in total (the base 16 plus the weight-loss optionals Q17 to Q19); includes a health-disclaimer modal before the result.
+1267a1268,1275
+> LISS — Low-Intensity Steady State. Aerobic individual-training subgroup; sustained low-intensity cardio (Part 3, Individual-training subgroup taxonomy).
+> MICT — Moderate-Intensity Continuous Training. Aerobic individual-training subgroup; sustained moderate cardio.
+> HIIT — High-Intensity Interval Training. Aerobic individual-training subgroup; high-intensity work intervals.
+> SIT — Sprint Interval Training. Aerobic individual-training subgroup; all-out sprint efforts.
+> Individual-training subgroup. A subpage under entrenamiento-con-pesas-individual (Fuerza, Hipertrofia, Potencia, Resistencia muscular) or entrenamiento-aerobico-individual (LISS, MICT, HIIT, SIT). See Part 3 and Rule 38.
+> Gender concordance. Rendering of feminine or masculine option forms in Q13 and Q14, driven by Q2.
+> XOR (Q16). Exactly one of Código postal or Colonia is required; supplying both is acceptable.
+> Estética corporal hub. Goal hub renamed from Tonificar (Rule 20).
