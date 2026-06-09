@@ -1,0 +1,31 @@
+nodo_id,nombre,nivel,padre,descripcion
+T0,UX Specification SWM,1,,Root
+T1,Document meta,2,T0,"Document control, revision history, audience, language notes"
+T2,Project fundamentals,2,T0,"Part 1: audience, business objectives, brand positioning, success measures"
+T3,Conventions,2,T0,"Part 2: methodology, code conventions, language, matrix reading, scope boundary"
+T4,Information Architecture,2,T0,Part 3: page inventory and page-type detail
+T4.1,Individual-training subgroup taxonomy (NEW),3,T4,New IA subsection for pesas/aeróbico individual subgroups
+T5,Header & global widgets,2,T0,"Rules 1,2,5,6,7 header/drawer/scroll"
+T6,BES voice agent,2,T0,Rule 3/3.1/3.2 BES widget and WhatsApp scope
+T7,Brand & editorial,2,T0,"Rules 9,10 editorial rules and cross-linking"
+T8,Site data & schema,2,T0,"Rules 11,12,13 schema; Rule 14 YMYL content rules"
+T9,Acquisition & search routing (Rules 16-17),2,T0,External search inference + precedence; uses question codes
+T10,Questionnaire — questions & options (Rules 18-19),2,T0,"Question copy, types, option lists; base + WL variant"
+T11,Questionnaire — pre-fill by landing (Rule 20),2,T0,Per-landing pre-fill/inference behavior
+T12,Questionnaire — goal selection logic (Rule 21),2,T0,Dual-goal / multi-select rules
+T13,Questionnaire — conditional logic & validation,2,T0,"Conditional visibility (Q11, embarazo, WL), XOR/field validation"
+T14,Questionnaire — gender concordance,2,T0,Feminine/masculine forms for Q13/Q14 driven by Q2
+T15,Questionnaire — state machine & counts (Rule 32),2,T0,User state wrt questionnaire; visible-question counts/paths
+T16,"Contextual menu & buttons by state (Rules 22-31,33)",2,T0,Menu/buttons driven by questionnaire state
+T17,Membership & conversion,2,T0,"Conversion CTAs, clubs surfacing (Rules 22-25 area)"
+T18,System-wide behavior (Rules 34-35),2,T0,"Stale-plan refresh, accessibility floor"
+T19,Per-page behavior matrices (Part 5),2,T0,Per-page rendering/schema/behavior matrices
+T20,Edge cases & error states (Part 6),2,T0,"Edge cases incl. abandon mid-flow, health disclaimer"
+T21,Privacy & data (Appendix A / Rule 36),2,T0,Privacy and data handling
+T22,Out-of-scope pages (Appendix B / Rule 37),2,T0,Explicitly out-of-scope pages
+T23,Glossary (Appendix C),2,T0,Glossary terms
+T24,Code reference (Appendix D),2,T0,Code systems; questionnaire-codes subsection
+T24.1,Questionnaire codes subsection,3,T24,P-code/Q-code definitions
+T25,Individual-training subgroups content (NEW spec),2,T0,ACSM pesas/aeróbico subgroup prescriptions/equipment/etc.
+T26,Q4→subgroup mapping & Rule 38 (NEW),2,T0,"Goal→subgroup map, union rule, alone-result behavior"
+T27,YMYL health disclaimer (questionnaire),2,T0,Weight-loss YMYL modal/medical reviewer
