@@ -1,0 +1,63 @@
+604,623c604,644
+< When the user lands on a specific page, the system pre-fills the questions it can already infer from the landing. The user can confirm or change any pre-filled answer - the questions are not skipped.
+< Landing page Individual club Amenity
+< Premium or regular
+< class
+< Bajar de peso
+< Pre-filled questions
+< PS and P9 omitted entirely; the club already identifies geography None (landing on an amenity does not infer variables)
+< P4 (the class discipline pre-marks the movement type)
+< Bajar de peso
+< Con personal trainer
+< FitKidzP2 (composition is pre-filled withor)
+< family
+< kids
+< Goal hubPl (the hub's goal)
+< hubPl=(automaticallyactivatesthe12-questionvariant)
+< Personal TrainingPS=
+< MembershipsNone
+< JournalNone
+< HomeNone from landing, but Pl or P9 may be inferred from the external search per Rule16
+< In addition: if the user arrived via an external search with a specific location, P8 and P9 are pre-filled with the inferred location on any page where they apply.
+---
+> When the user lands on a specific page, the system pre-fills the questions it can already infer from the landing. Every pre-filled answer remains editable.
+> Landing page
+> Pre-filled / inferred
+> Behavior
+> Home
+> None from landing. Q3, Q4 or Q15 may be inferred from the external search query per Rule 16.
+> If the external search includes a location, Q15 and Q16 are pre-filled.
+> Individual club page
+> Q15 and Q16 omitted entirely.
+> The count drops by 2 for this entry path.
+> Amenity hub
+> None.
+> Premium or regular class hub
+> Q4 pre-marks the movement-aligned goal.
+> The class-to-goal map lives in the content layer, not in this specification.
+> FitKidz
+> Q14 pre-fills "Yo y mis hijos".
+> Goal hub — Primeros Pasos
+> Q9 pre-marks "Principiante".
+> Goal hub — Salud y Bienestar
+> Q4 pre-marks "Mejorar condición y aguante".
+> Goal hub — Estética corporal
+> Q4 pre-marks "Mejorar mi estética corporal".
+> Renamed from Tonificar.
+> Goal hub — Ganar Fuerza
+> Q4 pre-marks "Ganar fuerza".
+> Goal hub — Rehabilitación
+> Q4 pre-marks "Recuperarme de una lesión o dolor".
+> YMYL hub — Bajar de peso
+> Q4 pre-marks "Bajar de peso", which activates Q17 to Q19.
+> Personal Training
+> Q13 pre-marks "Acompañado/Acompañada".
+> Memberships, Journal
+> None.
+> entrenamiento-con-pesas-individual (and subpages)
+> Q13 pre-marks "Solo, a mi ritmo" (or "Sola" if Q2 = Mujer). Subpages pre-mark Q4: Fuerza → "Ganar fuerza"; Hipertrofia → "Mejorar mi estética corporal"; Potencia → "Ganar fuerza"; Resistencia muscular → "Mejorar condición y aguante".
+> New.
+> entrenamiento-aerobico-individual (and subpages)
+> Q13 pre-marks "Solo, a mi ritmo" (or "Sola" if Q2 = Mujer). Subpages pre-mark Q4: LISS → no pre-mark; MICT → "Mejorar condición y aguante"; HIIT → "Mejorar mi estética corporal"; SIT → "Mejorar condición y aguante".
+> New.
+> Pre-fill is always editable by the user.
