@@ -1,0 +1,8 @@
+16c16
+< Part 4 - Global Rules (Rule 1 to Rule 35). Behavior that applies across the entire site.
+---
+> Part 4 - Global Rules (Rule 1 to Rule 38). Behavior that applies across the entire site.
+60c60
+< ZMVM1 P10-WL ) are kept in Spanish because they map directly to implementation identifiers and
+---
+> ZMVM1 Q17 ) are kept in Spanish because they map directly to implementation identifiers and
