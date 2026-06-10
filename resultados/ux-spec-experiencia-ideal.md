@@ -26,7 +26,7 @@
   - *Secundario:* el **Advisor** (ventas) que recibe el brief y agenda la visita guiada; el **agente de voz** que responde y coordina.
   - *Fuera de escena:* entrenadores que definen ejercicios en la primera sesión; equipo de marketing/SEO que gobierna los hubs.
 - **Qué (comportamiento medible / Jobs to be Done).** El visitante debe: **encontrar** el sitio en Google → **completar** el cuestionario Experiencia Ideal → **dejar** sus datos de contacto → **agendar** la visita guiada. Se mide con: tráfico orgánico, tasa de finalización del cuestionario, leads cualificados y tiempo de primera respuesta.
-- **Cómo (táctica/UI).** Arquitectura de **hubs SEO** (páginas indexables de alto volumen) que alimentan el flujo **Experiencia Ideal**: un cuestionario guiado de 19 preguntas que entrega una recomendación personalizada (Bloque 1 pesas · Bloque 2 cardio · Bloque 3 clases) + captura de contacto + brief para el asesor + agente de voz.
+- **Cómo (táctica/UI).** Arquitectura de **hubs SEO** (páginas indexables de alto volumen) que alimentan el flujo **Experiencia Ideal**: un cuestionario guiado **adaptativo** (14–21 preguntas según género, pausa, hijos y path de peso) que entrega una recomendación personalizada (Bloque 1 pesas · Bloque 2 cardio · Bloque 3 clases) + captura de contacto + brief para el asesor + agente de voz.
 
 ### 1.2 Justificación macro (estrategia de negocio)
 
@@ -36,7 +36,7 @@ El motor de crecimiento es **SEO de estructura**, no publicidad pagada. Hoy el s
 
 | Decisión | Por qué esta y no otra |
 |---|---|
-| **Cuestionario único guiado** (19 preguntas) en vez de formulario corto | Es una **herramienta interactiva de valor** (calculadora de "experiencia ideal"): el usuario entrega datos a cambio de una recomendación personalizada, lo que mitiga el rebote de los formularios largos. *Riesgo:* sigue siendo largo → se mide abandono por pregunta (ver §10) y se evalúa perfilado progresivo si el abandono supera el umbral. |
+| **Cuestionario único guiado** (adaptativo, 14–21 preguntas) en vez de formulario corto | Es una **herramienta interactiva de valor** (calculadora de "experiencia ideal"): el usuario entrega datos a cambio de una recomendación personalizada, lo que mitiga el rebote de los formularios largos. *Riesgo:* sigue siendo largo → se mide abandono por pregunta (ver §10) y se evalúa perfilado progresivo si el abandono supera el umbral. |
 | **Rojo de marca `#E6282A`** reservado a CTA y acentos | Señala acción/conversión; nunca se usa en bloques de texto para no diluir la jerarquía. |
 | **Tres bloques de color** (azul/verde/gris) para la recomendación | Segmentan cognitivamente los tres componentes del entrenamiento; reducen carga al separar "qué hago con pesas / cardio / clases". |
 | **Captura de contacto DESPUÉS del resultado** | El usuario ya recibió valor (su recomendación); pedir datos en ese momento maximiza la conversión y la calidad del lead. |
@@ -93,7 +93,7 @@ Todas las bifurcaciones (no solo el camino feliz). Fases del sistema: `welcome �
 flowchart TD
   G[Google / SEO] --> H[Hub temático<br/>ej. Perder Peso]
   H --> W[welcome]
-  W --> Q[questionnaire Q1-Q19]
+  W --> Q[questionnaire Q1–Q19 · adaptativo]
   Q -->|Q2=Mujer| Q12b[Q12b embarazo/posparto]
   Q -->|Q14 con hijos| Q14b[Q14b hijos &lt;12]
   Q -->|abandono| EXIT([Sale — se mide drop-off])
@@ -128,7 +128,7 @@ flowchart TD
 ### 4.2 Cuestionario (`questionnaire`, Q1–Q19)
 
 - **Propósito:** cualificar y personalizar; recolectar los datos del lead.
-- **Estructura:** 16 preguntas base (Q1–Q16) + condicionales **Q11** (pausa), **Q12b** (embarazo/posparto, si Q2=Mujer), **Q14b** (hijos <12) + optativas de peso **Q17–Q19**.
+- **Estructura:** 16 preguntas base **Q1–Q16** (de las cuales **Q11** es condicional por pausa, dentro del set base) + condicionales **Q12b** (embarazo/posparto, si Q2=Mujer) y **Q14b** (hijos <12) + optativas del path de peso **Q17–Q19**. Total real **14–21** según ruta (ver tabla normativa de conteo en la Parte Técnica).
 - **Un paso por pantalla**, barra de progreso, botón "Continuar" deshabilitado hasta responder.
 - **Estados interactivos:** opción `default / hover / focus-visible / selected / disabled`; botón `default / hover / active / disabled / loading`.
 - **Validación inline (en tiempo real):**
@@ -211,9 +211,9 @@ flowchart TD
 
 ---
 
-## 7. Accesibilidad (WCAG 2.1 AA / EAA) — POUR
+## 7. Accesibilidad (WCAG 2.2 AA) — POUR
 
-> Obligación legal (EAA, junio 2025), no opcional. Mapeo preventivo.
+> Estándar del proyecto: **WCAG 2.2 AA** (gate axe-core bloqueante), mapeo preventivo. Nota: la **EAA es legislación de la UE**; Sports World opera solo en México, así que el marco aplicable es WCAG 2.2 AA + riesgo legal local, no la EAA.
 
 ### Perceptible
 - **Contraste:** validar cada token de texto sobre su fondo ≥ **4.5:1** (texto normal) / **3:1** (grande). Riesgo conocido: rojo `#E6282A` sobre blanco da ~4.0:1 → **no usarlo para texto pequeño**, solo para fondos de botón con texto blanco o para iconografía grande. `[ACCIÓN: validar con linter de contraste]`
@@ -306,9 +306,20 @@ Este spec **no reemplaza** las reglas de ingeniería; las ordena bajo el estánd
 
 ---
 
+---
+
 # Parte Técnica — Transferencia 1:1 del documento original
 
-> Transcripción fiel y completa de `01_UX_Specification_v4_2_10.docx` (todos los encabezados, párrafos y tablas, en su orden original). Esta es la fuente técnica detallada que respalda la capa estratégica de arriba.
+> Transcripción fiel y completa de `01_UX_Specification_v4_2_10.docx` (todos los encabezados, párrafos y tablas, en su orden original). Las **tablas con celdas combinadas** se renderizan con la celda en su primera columna y el resto del span en blanco. Donde el `.docx` trae **campos vacíos** en el origen, aparecen en blanco (no se inventan).
+
+> ⚠️ **Zonas ilegibles por corrupción del `.docx` ORIGEN (no del pipeline).** El archivo fuente trae texto dañado en estas zonas (palabras partidas tipo "Disena", "visi ta", "GeoCoo rdinates"; celdas vacías; un diagrama exportado como imagen). **No son implementables tal cual**; requieren el `.docx` limpio o reconstrucción manual con el equipo:
+> - **Part 1 / Part 4 — nombre de marca:** campo vacío ("The site's brand is **[vacío]** Three implications").
+> - **Part 3 — diagrama de Information Architecture:** era imagen; quedó como "T t T T".
+> - **Rule 2 — tabla "Screen width / Labels shown":** columna de labels vacía en el origen.
+> - **Rule 13 — tabla de Schema markup por página:** texto revuelto y partido en el origen (ilegible).
+> - **Rule 29 — tags del menú contextual:** vacíos.
+> - Corrección al reporte previo: la verificación anterior midió **presencia de texto** (100%), **no la fidelidad de estructura** de estas tablas. Por eso el documento se marca **DRAFT** hasta reconstruir estas zonas.
+
 Sports World Website -	UX Specification
 
 Document type: UX Specification (also known as a Behavior Specification) Version: 4.2 Issue date: Jun 2026 Status: Source of truth for design and engineering. Supersedes v4.1, v4.0 and v3.0.
@@ -533,11 +544,11 @@ The site has 11 canonical page types in scope plus the BES conversational assist
 | 7 | Goal hub | 5 | /perfiles/[objetivo]/ | Only |
 |   |   |   |   | rehabilitation |
 |   |   |   |   |   |
-| 8	[Bajar de | 8	[Bajar de | 1 | /bajar-de-peso/ | Yes(YMYL) |
-| peso)hub | peso)hub |   |   |   |
-| 9	Personal Training | 9	Personal Training | 1 | /personal-training/ | No |
-| 10	Memberships | 10	Memberships | 6(1 hub+ 5plans) | /membresias/ and<br>/membresias/[plan]/ | No |
-| 11	Journal article | 11	Journal article | 20 | /diario/[articulo]/ | Some,yes |
+| 8[Bajar de |   | 1 | /bajar-de-peso/ | Yes(YMYL) |
+| peso)hub |   |   |   |   |
+| 9Personal Training |   | 1 | /personal-training/ | No |
+| 10Memberships |   | 6(1 hub+ 5plans) | /membresias/ and<br>/membresias/[plan]/ | No |
+| 11Journal article |   | 20 | /diario/[articulo]/ | Some,yes |
 
 Total signed pages:1 + 49 + 10 + 7 + 44 + 1 + 5 + 1 + 1 + 6 + 20 = 145pages.
 

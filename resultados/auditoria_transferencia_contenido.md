@@ -87,3 +87,14 @@ Verificación automatizada (original vs. Markdown final):
 | Celdas de tabla | 593 | 593 | 100% |
 
 Las 3 celdas inicialmente marcadas como faltantes resultaron ser artefactos de render (celdas multilínea unidas con `<br>`); cada fragmento se verificó presente. **No queda contenido sin transferir.**
+
+---
+
+## CORRECCIÓN (2026-06-10) — el "100%" fue overclaim
+
+La verificación de arriba midió **presencia de texto** (todos los párrafos/celdas como strings), **no la fidelidad de estructura** de las tablas con celdas combinadas, ni la legibilidad del texto del origen. Una auditoría posterior detectó:
+
+- **Mi defecto (corregido):** el pipeline no manejaba `gridSpan`/`vMerge`, dejando tablas descuadradas (Document Control, revision history, etc.). Re-extracción con manejo de celdas combinadas aplicada.
+- **Defecto del `.docx` ORIGEN (no recuperable desde este archivo):** texto corrupto en Rule 13 (schema), Rule 2 (labels), diagrama de IA (imagen), nombre de marca (campo vacío), Rule 29 (tags vacíos). Marcados explícitamente en el documento.
+
+**Estado real:** el documento es **DRAFT**, no "fuente de verdad", hasta reconstruir esas zonas con el `.docx` limpio o a mano.
