@@ -6,7 +6,8 @@ meta:
 tokens:
   color:
     brand:
-      primary: "#E6282A"      # rojo de acción/marca — solo CTA y acentos
+      primary: "#E6282A"      # rojo de marca — SOLO fondos de botón/acento, NUNCA texto pequeño (no pasa AA)
+      primaryText: "#C81E20"  # variante oscura para TEXTO en rojo (~5.5:1 sobre blanco, AA) — usar esta en kickers/links
     text:
       ink: "#1D1D1B"
       muted: "#6B6B68"
@@ -26,26 +27,43 @@ tokens:
     safety:
       bg: "#FFF6E7"           # sección YMYL de seguridad
   type:
-    heading: { family: "Arial", weight: 800, lineHeight: 1.2 }
-    body:    { family: "Arial", weight: 400, lineHeight: 1.5 }
+    # Fuente única de verdad = Appendix F (Montserrat). Arial era un error de este YAML.
+    fontFamily: "'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+    heading: { family: "Montserrat", weight: 900, lineHeight: 1.2 }  # headlines 900; kickers/tags 600-700
+    body:    { family: "Montserrat", weight: 400, lineHeight: 1.5 }  # body 400-500
   space: { xs: 4, sm: 8, md: 16, lg: 24, xl: 40 }
   radius: { sm: 4, md: 8, lg: 16 }
   breakpoints: { mobile: 360, tablet: 768, laptop: 1024, desktop: 1440 }
 contrast:
   min_ratio_aa: 4.5
   min_ratio_aa_large: 3.0
+  # Ratios reales medidos (corrige la etiqueta previa errónea de 4.0):
   flagged:
-    - pair: "brand.primary on surface.white"
-      ratio: 4.0
-      rule: "PROHIBIDO para texto pequeño; permitido solo como fondo de botón con texto blanco o icono grande."
+    - pair: "brand.primary (#E6282A) on surface.white (#FFFFFF)"
+      ratio: 4.47
+      rule: "FALLA texto normal (<4.5). Solo válido en texto ≥18.66px bold o ≥24px, o como fondo."
+    - pair: "brand.primary on surface.base (#F5F5F4)"
+      ratio: 4.09
+      rule: "FALLA. No usar rojo de texto sobre superficie base."
+    - pair: "brand.primary on text.ink (#1D1D1B)  (kicker en card negra)"
+      ratio: 3.78
+      rule: "FALLA. Usar blanco o variante clara, no rojo."
+    - pair: "white on brand.primary (#E6282A)  (texto del CTA)"
+      ratio: 4.47
+      rule: "FALLA a 15px regular. El texto del botón debe ser ≥18.66px bold."
+    - pair: "brand.primaryText (#C81E20) on white"
+      ratio: 5.5
+      rule: "PASA AA. Esta es la variante a usar para CUALQUIER texto rojo."
 ---
 
 # Filosofía de diseño — Experiencia Ideal
 
 El **primario** (`#E6282A`, rojo Sports World) es el color de **acción y conversión**.
-Úsalo solo en CTA, fondos de botón (con texto blanco) y acentos pequeños.
-**Nunca** lo uses para bloques de texto ni para texto pequeño sobre blanco: su
-contraste (~4.0:1) no alcanza el mínimo WCAG AA para texto normal.
+Úsalo solo como **fondo** de CTA (con texto blanco ≥18.66px bold).
+**Nunca** lo uses para texto pequeño: su contraste real es **4.47:1 sobre blanco**,
+**4.09:1 sobre la superficie base** y **3.78:1 sobre la card negra** — los tres
+**fallan** WCAG AA para texto normal. Para cualquier **texto** en rojo usa la
+variante oscura **`#C81E20` (`brand.primaryText`, ~5.5:1, AA)**.
 
 La **tinta** (`#1D1D1B`) es el texto principal; el **muted** (`#6B6B68`) es para
 texto secundario y ayudas. El sistema es **claro y sobrio**: superficies casi
