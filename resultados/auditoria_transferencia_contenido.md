@@ -70,3 +70,20 @@ Opciones:
 1. **Transferencia completa 1:1** → expandir el Markdown a un documento content-complete (mucho más largo) que incluya cada regla, tabla y apéndice.
 2. **Modelo de dos capas (recomendado)** → el Markdown queda como capa de estrategia/UX y el .docx como referencia técnica detallada; se enlazan explícitamente y se cierra el gap solo en lo que falte de verdad (ej. edge cases faltantes).
 3. **Híbrido** → completar en el Markdown solo las secciones críticas faltantes (cuestionario completo, contraindicaciones, edge cases, per-page matrices) y dejar el resto como referencia.
+
+---
+
+## RESOLUCIÓN (2026-06-10) — Transferencia completa 1:1 ejecutada
+
+Por decisión del cliente se ejecutó la **opción 1 (transferencia completa 1:1)**. El archivo `ux-spec-experiencia-ideal.md` es ahora **content-complete**: capa estratégica §1–§10 + «Parte Técnica» con la transcripción fiel de TODO el original.
+
+Verificación automatizada (original vs. Markdown final):
+
+| Elemento | Original | Transferido | Cobertura |
+|---|---|---|---|
+| Encabezados | 144 | 144 | 100% |
+| Tablas | 24 | 24 | 100% |
+| Párrafos | 1121 | 1121 | 100% |
+| Celdas de tabla | 593 | 593 | 100% |
+
+Las 3 celdas inicialmente marcadas como faltantes resultaron ser artefactos de render (celdas multilínea unidas con `<br>`); cada fragmento se verificó presente. **No queda contenido sin transferir.**
