@@ -1238,7 +1238,7 @@ When a user runs a search engine query related to Sports World, the site must ta
 |   | gym1(GLP-1 ozempic |   |
 |   | gimnasio) |   |
 |   |   |   |
-| Rehabilitation | (rehabilitaci6n rodilla | Rehabilitation hub |
+| Rehabilitation | (rehabilitación rodilla | Rehabilitation hub |
 |   | gym1 ejercicio post lesion |   |
 | Children/ family | gimnasio para ninos, | FitKidz |
 |   | actividades familia, |   |
@@ -1616,7 +1616,7 @@ Complete, outside the flow
 
 Volver a tu experiencia ideal • specific buttons
 
-util) (if any tagged articles exist)· page-specific buttons
+útil) (if any tagged articles exist)· page-specific buttons
 
 ·page-
 
@@ -1756,9 +1756,9 @@ visita  guiada]
 
 ·(Agenda tu
 
-No questionnaire·city with up to3clubs
+No questionnaire·city with up to 3 clubs
 
-No questionnaire • city with morethan3clubs (( CIUDAD-ZMVM))
+No questionnaire • city with more than 3 clubs (( CIUDAD-ZMVM))
 
 Complete, inside the flow
 
@@ -1973,7 +1973,7 @@ información útil) (if any)·( Disefia
 
 tu experiencia)·(Agenda tu visita guiada)
 
-info rmaci6n  util) (if any)·( Disefia
+info rmación  útil) (if any)·( Disefia
 
 tu experiencia)·(Agenda tu visita guiada)
 
@@ -2009,7 +2009,7 @@ Complete, inside the flow
 
 Already complete
 
-info rmaci6n util]•( Diseña tu experiencia]·(Agenda tu visita guiada]
+info rmación útil]•( Diseña tu experiencia]·(Agenda tu visita guiada]
 
 información útil]•( Diseña tu experiencia]·(Agenda tu visita guiada)
 
@@ -2046,7 +2046,7 @@ Already complete
 
 información útil] (ifany) ·[Diseña tu experiencia ]·[ Agenda tu visita guiada]
 
-info rmaci6n util] (if any)·[ Diseña tu experiencia ]·[ Agenda tu visita guiada]
+info rmación útil] (if any)·[ Diseña tu experiencia ]·[ Agenda tu visita guiada]
 
 (if
 
@@ -2343,7 +2343,7 @@ Trigger: block_1_on, block_2_on and block_3_on are all false (Rule 39). Behavior
 
 The site captures personal data at four moments: questionnaire, plan-delivery sign-up, visit booking, and BES conversation.
 
-- At every capture point, the user must see the privacy notice and give explicit consent before any data is stored. Compliance with the Mexican LFPDPPP (Ley Federal de Protecci6n de Datos Personales en Posesi6n de los Particulares) is mandatory.
+- At every capture point, the user must see the privacy notice and give explicit consent before any data is stored. Compliance with the Mexican LFPDPPP (Ley Federal de Protección de Datos Personales en Posesión de los Particulares) is mandatory.
 - Data is stored in the client's system, not in separate web-side systems.
 - Health data (weight, height, medical conditions, medication use) requires additional, specific consent.
 - WhatsApp reminder consent (Rule 3.2) is captured separately from the general privacy consent, with explicit opt-in.
@@ -2434,7 +2434,7 @@ generally from the external search (e.g., Polanco).
 
 infers location=
 
-Ley Federal de Protecci6n de Datos Personales en Posesi6n de los Particulares - Mexico's federal personal-data protection law. Mandatory compliance for any personal-data capture on the site (Rule 36).
+Ley Federal de Protección de Datos Personales en Posesión de los Particulares - Mexico's federal personal-data protection law. Mandatory compliance for any personal-data capture on the site (Rule 36).
 
 Schema.org structured-data markup type for physical businesses. Sports World uses it on each club page so the clubs surface correctly in search results and Maps.
 
