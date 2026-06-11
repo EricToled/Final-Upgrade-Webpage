@@ -910,7 +910,7 @@ The three header items (Disena tu experiencia), ( Preguntale a BES), and (Agenda
 
 ##### Rule 7 -  Header scroll behavior
 
-The header stays pinned to the top of the screen as the user scrolls. Its height does not change. Its background is solid (with subtle transparency and blur for a premium feel), unchanged across scroll positions.
+The header stays pinned to the top of the screen as the user scrolls. Its height does not change. Its background is solid (subtle transparency and blur for a premium feel: background opacity 0.85, backdrop-blur 8px), unchanged across scroll positions.
 
 
 ##### Brand and editorial
@@ -1223,7 +1223,7 @@ GLP-1 (Ozempic, Wegovy, Mounjaro): no classes are filtered. The research-based c
 
 "Otra, la comento en el club" (Q12) and "Otro tratamiento médico para peso" (Q17): open-ended responses trigger an asesor-review soft message: "Mencionaste una condición o tratamiento médico. Tu plan de clases grupales ya excluye las clases contraindicadas, y tu Asesor ajusta los protocolos de pesas y cardio individual en la visita guiada según tu criterio clínico."
 
-Research basis. The matrix is built from a research v2 protocol (7 search queries, 1 verbatim fetch from Les Mills official 2026, 16 verbatim quotes from 9 professional sources: ACOG Committee Opinion 2020, Les Mills official, ASMBS/PMC6147093, ACSM, Cleveland Clinic, NASM, Mount Sinai, Heart Foundation NZ, Obesity Action Coalition). Epistemic labels: [QUOTED] for Les Mills classes covered by official pregnancy modifications; [DERIVED] for non-Les Mills classes classified by dominant movement category; [INFERRED] for subgroups and aquatic blocks from physiological principles. Full audit: research_contraindicaciones_audit.md. Sports-medicine MD validation is recommended before production YMYL deployment (see open dependencies).
+Research basis. The matrix is built from a research v2 protocol (7 search queries, 1 verbatim fetch from Les Mills official 2026, 16 verbatim quotes from 9 professional sources: ACOG Committee Opinion 2020, Les Mills official, ASMBS/PMC6147093, ACSM, Cleveland Clinic, NASM, Mount Sinai, Heart Foundation NZ, Obesity Action Coalition). Epistemic labels: [QUOTED] for Les Mills classes covered by official pregnancy modifications; [DERIVED] for non-Les Mills classes classified by dominant movement category; [INFERRED] for subgroups and aquatic blocks from physiological principles. Full audit: research_contraindicaciones_audit.md. Sports-medicine MD validation is **required (blocking gate)** before production YMYL deployment (see open dependencies).
 
 
 ##### User acquisition and routing
@@ -1376,7 +1376,7 @@ When the user lands on a specific page, the system pre-fills the questions it ca
 | Home | None from landing. Q3, Q4 or Q15 may be inferred from the external search query per Rule 16. | If the external search includes a location, Q15 and Q16 are pre-filled. |
 | Individual club page | Q15 and Q16 omitted entirely. | The count drops by 2 for this entry path. |
 | Amenity hub | None. |   |
-| Premium or regular class hub | Q4 pre-marks the movement-aligned goal. | The class-to-goal map lives in the content layer, not in this specification. |
+| Premium or regular class hub | Q4 pre-marks the movement-aligned goal. | The class-to-goal map is the Block 3 fichas table (perfil por objetivo Q4) under Rule 14b — see «Fichas de clases grupales (Block 3)». |
 | FitKidz | Q14 pre-fills "Yo y mis hijos". |   |
 | Goal hub — Primeros Pasos | Q9 pre-marks "Principiante". |   |
 | Goal hub — Salud y Bienestar | Q4 pre-marks "Mejorar mi salud cardiovascular". |   |
@@ -1719,7 +1719,7 @@ Graceful degradation: if any of contents 1 to 4 cannot be resolved (geocoding fa
 
 ##### Rule 43 -  Other clubs in the user's area and class re-evaluation on club change
 
-The Club Ideal card "Ver otros clubes cerca de ti" action opens a panel listing additional Sports World clubs within a configurable radius (default 15 km) of the user's Q16 location, sorted by driving distance ascending. Panel entries show club name, distance in minutes, full address, and a single-line summary of distinguishing amenities.
+The Club Ideal card "Ver otros clubes cerca de ti" action opens a panel listing additional Sports World clubs within a radius configurable by Product in site config (default 15 km) of the user's Q16 location, sorted by driving distance ascending. Panel entries show club name, distance in minutes, full address, and a single-line summary of distinguishing amenities.
 
 When the user selects a different club: (1) the Club Ideal card updates with the new name, distance, address, intent line and features; (2) Block 3 is re-evaluated with the new club's catalog - the Rule 40 algorithm executes again, top_2, tambien_encajan and resto are recomputed, and the LLM is re-invoked for the new top classes' benefit IDs, match reasons and connector strings; (3) Blocks 1 and 2 are NOT re-evaluated, as they are subgroup-based, not club-dependent; (4) the change persists in session and in CRM with a flag indicating a manual override.
 
@@ -2272,7 +2272,7 @@ accepted the privacy notice (Rule 36). When the user returns, the questionnaire 
 
 Trigger: in the (Bajar de peso) flow, the user is shown the health-disclaimer modal and declines.
 
-Behavior: the user does not receive the personalized weight-loss plan. They receive a non-clinical generic plan instead, with a clear explanation that personalized recommendations require accepting the disclaimer. No data is captured beyond what the user has already entered.
+Behavior: the user does not receive the personalized weight-loss plan. They receive a non-clinical generic experience instead (names the three blocks generically, without intensities, durations or medical content; the Asesor validates in the visit), with a clear explanation that personalized recommendations require accepting the disclaimer. No data is captured beyond what the user has already entered.
 
 
 ##### - BES asked an out-of-scope question
@@ -2291,7 +2291,7 @@ Trigger: the upstream booking API is down, or the club-catalog endpoint times ou
 
 - Live data per club (Rule 12) -	operating hours, phone, email, class catalog, schedule - defaults to the last successfully cached values.
 - A visible notice on the affected pages explains that schedules may be outdated and asks the user to confirm by phone.
-- The (Agenda tu visi ta guiada) button remains operational but in a degraded mode that captures the lead and contacts the user back manually within one business day, instead of offering a real-time slot.
+- The (Agenda tu visi ta guiada) button remains operational but in a degraded mode that captures the lead and contacts the user back manually within one business day (owner: club Asesor/recepción), instead of offering a real-time slot.
 
 ##### - Search query has multiple competing inferences
 
