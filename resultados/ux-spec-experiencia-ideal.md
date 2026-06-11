@@ -717,16 +717,57 @@ Cautions: No apto para principiantes ni intermedios sin base · contraindicado e
 ##### Q4 goal to subgroup mapping (Rule 38)
 
 
-| Q4 goal | Block 1 — Pesas individual subgroup | Block 2 — Cardio individual (machine · duration) |
+| Q4 goal | Block 1 — Fuerza y desarrollo muscular (nombre oficial · detalle) | Block 2 — Cardio y resistencia (nombre oficial · máquina · duración) |
 | --- | --- | --- |
-| Bajar de peso | Cuerpo completo con peso moderado | Caminadora, bicicleta o elíptica · 35 a 45 min |
-| Mejorar mi estética corporal y definición muscular | Definición muscular por zonas | Caminadora, bicicleta o elíptica · 25 a 35 min |
-| Aumentar masa muscular | Crecimiento muscular con carga creciente | Caminadora suave o bicicleta · 15 a 25 min |
-| Mejorar mi desempeño atlético | Fuerza explosiva y velocidad | Bicicleta, remo o caminadora · 30 a 40 min |
-| Mejorar mi salud cardiovascular | Mantenimiento de fuerza general | Caminadora, bicicleta, elíptica o remo · 35 a 45 min |
-| Recuperarme de una lesión o dolor crónico | Pesas guiadas con énfasis en técnica controlada | Bicicleta reclinada, elíptica o caminadora muy suave · 15 a 25 min |
+| Bajar de peso | **Fuerza integral con pesas** (cuerpo completo, peso moderado) | **Cardio continuo moderado** · caminadora/bici/elíptica · 35–45 min |
+| Mejorar mi estética corporal y definición muscular | **Rutina por grupos musculares** (definición por zonas) | **Cardio moderado con intervalos** · caminadora/bici/elíptica · 25–35 min |
+| Aumentar masa muscular | **Desarrollo muscular progresivo** (carga creciente) | **Cardio ligero de mantenimiento** · caminadora suave/bici · 15–25 min |
+| Mejorar mi desempeño atlético | **Potencia y velocidad** (fuerza explosiva) | **Intervalos intensos 4×4** · bici/remo/caminadora · 30–40 min |
+| Mejorar mi salud cardiovascular | **Fuerza de mantenimiento** (fuerza general) | **Base aeróbica 80/20** · caminadora/bici/elíptica/remo · 35–45 min |
+| Recuperarme de una lesión o dolor crónico | **Fuerza guiada en máquinas** (técnica controlada) | **Recuperación activa de bajo impacto** · bici reclinada/elíptica/caminadora muy suave · 15–25 min |
 
 If Q4 has two selections (allowed up to two), the recommended set is the union of both rows, deduplicated.
+
+
+##### Catálogo oficial — Programas de entrenamiento individual (3 bloques · 18 sub-clases)
+
+Catálogo oficial del cliente. Tres familias de entrenamiento individual; cada una con 6 sub-clases. Se entregan en Block 1 (fuerza), Block 2 (cardio) y un **nuevo Block acuático** (gated por Q6).
+
+**Bloque 1 — Fuerza y desarrollo muscular** (Block 1, mapeo Q4 arriba):
+
+| Sub-clase | Objetivo Q4 | Fuente mapeo |
+| --- | --- | --- |
+| Fuerza integral con pesas | Bajar de peso | clínico (detalle existente) |
+| Rutina por grupos musculares | Mejorar mi estética corporal y definición muscular | clínico |
+| Desarrollo muscular progresivo | Aumentar masa muscular | clínico |
+| Potencia y velocidad | Mejorar mi desempeño atlético | clínico |
+| Fuerza de mantenimiento | Mejorar mi salud cardiovascular | clínico |
+| Fuerza guiada en máquinas | Recuperarme de una lesión o dolor crónico | clínico |
+
+**Bloque 2 — Cardio y resistencia** (Block 2, mapeo Q4 arriba; ajuste fino por Q5 ritmo y Q9 nivel):
+
+| Sub-clase | Perfil (Q4 · Q9) | Fuente mapeo |
+| --- | --- | --- |
+| Cardio continuo moderado | Bajar de peso · principiante/intermedio | inferido |
+| Cardio moderado con intervalos | Estética · intermedio | inferido |
+| Cardio ligero de mantenimiento | Masa muscular / recuperación · cualquier nivel | inferido |
+| Intervalos intensos 4×4 | Desempeño atlético · avanzado (sin contraindicación cardiovascular) | inferido |
+| Base aeróbica 80/20 | Salud cardiovascular · intermedio/avanzado | inferido |
+| Recuperación activa de bajo impacto | Recuperación de lesión · cualquier nivel | inferido |
+
+**Bloque acuático — Entrenamiento acuático** (NUEVO; se activa cuando Q6 = "En la alberca" o "Ambas" y el club resuelto tiene alberca; ver Rule 39 / edge case alberca):
+
+| Sub-clase | Perfil (Q4, acuático) | Fuente mapeo |
+| --- | --- | --- |
+| Nado continuo moderado | Bajar de peso / salud cardiovascular | inferido |
+| Fuerza acuática con equipo | Estética / masa muscular | inferido |
+| Trote acuático por intervalos | Desempeño atlético / cardio | inferido |
+| Potencia y velocidad acuática | Desempeño atlético | inferido |
+| Fuerza combinada: agua y gimnasio | Q6 = "Ambas" (combina seco + agua) | inferido |
+| Movilidad y recuperación acuática | Recuperarme de una lesión o dolor crónico | inferido |
+
+> **Pendiente de confirmación (cliente):** los mapeos `inferido` de Bloque 2 y del Bloque acuático son propuesta por nombre/intensidad; el Bloque 1 ya estaba mapeado. El Bloque acuático introduce dependencia con Q6 — al elegir "En la alberca" el plan se arma con estas sub-clases en vez del Block 2 seco; con "Ambas" puede combinar (Fuerza combinada: agua y gimnasio).
+
 
 
 ## Part 4 -	Global Rules
