@@ -641,7 +641,7 @@ Representative exercises: Circuitos con bandas (full body), sentadillas al aire 
 
 Primary benefits: Aguante muscular local · tono general sin hipertrofia significativa · base neuromuscular para principiantes antes de cargar más peso · joint-friendly para regresos después de pausa · rehabilitación de lesiones leves · mejora de la postura y de los estabilizadores · acondicionamiento metabólico ligero.
 
-Ideal user profile: Principiantes absolutos · usuarios que regresan después de una pausa larga (Q11) · rehabilitación de lesión leve o dolor articular (Q12) · adultos mayores · personas con meta Mejorar condición y aguante o Recuperarme de una lesión o dolor.
+Ideal user profile: Principiantes absolutos · usuarios que regresan después de una pausa larga (Q11) · rehabilitación de lesión leve o dolor articular (Q12) · adultos mayores · personas con meta Mejorar mi salud cardiovascular o Recuperarme de una lesión o dolor.
 
 Cautions: Verificar técnica básica antes de subir volumen · si hay dolor agudo, derivar a Personal Training supervisado en lugar de individual · embarazadas deben consultar antes de empezar.
 
@@ -676,7 +676,7 @@ Representative exercises: Trote sostenido 5–7 km/h · bicicleta estática mode
 
 Primary benefits: Bajar de peso (sostiene déficit calórico con bajo daño muscular) · mejora de salud cardiovascular y reducción de presión arterial · mejora del perfil lipídico y glucosa en ayunas · mejora moderada de VO₂max · base aeróbica para construir HIIT después · salud mental · sustento de adherencia a largo plazo · estándar de prescripción ACSM más antiguo y mejor validado para población general. Duración: 20–60 min por sesión.
 
-Ideal user profile: Cualquier nivel · meta Bajar de peso · meta Mejorar condición y aguante · usuarios sin tiempo para HIIT pero con tolerancia a sesiones más largas · transición desde LISS a HIIT.
+Ideal user profile: Cualquier nivel · meta Bajar de peso · meta Mejorar mi salud cardiovascular · usuarios sin tiempo para HIIT pero con tolerancia a sesiones más largas · transición desde LISS a HIIT.
 
 Cautions: Riesgo articular acumulado en caminadora a alto kilometraje semanal (rotar con bicicleta o elíptica) · no es lo más eficiente en tiempo si solo se busca VO₂max (ahí HIIT gana).
 
@@ -692,7 +692,7 @@ Representative exercises: Caminadora 30 s sprint / 30 s caminata x 10–15 ronda
 
 Primary benefits: Mejora de VO₂max significativamente mayor que MICT por minuto invertido · oxidación de grasa elevada post-ejercicio (EPOC) · mejora de la sensibilidad a la insulina superior a MICT en algunos estudios · recomposición corporal (estética + reducción de grasa) · mejor adherencia que MICT en perfiles con poco tiempo · acondicionamiento metabólico mixto aeróbico-anaeróbico.
 
-Ideal user profile: Nivel Intermedio o Avanzado · meta Mejorar mi estética corporal · meta Mejorar condición y aguante · usuarios con tiempo limitado pero base aeróbica suficiente · combinación con Hipertrofia en planes de recomposición.
+Ideal user profile: Nivel Intermedio o Avanzado · meta Mejorar mi estética corporal · meta Mejorar mi salud cardiovascular · usuarios con tiempo limitado pero base aeróbica suficiente · combinación con Hipertrofia en planes de recomposición.
 
 Cautions: Requiere base aeróbica previa (mínimo 4–6 semanas de MICT o LISS antes) · contraindicación en condición cardiovascular no estabilizada (Q12) · no apto para principiantes absolutos · espaciar 48 h entre sesiones HIIT por demanda de recuperación · no recomendado durante embarazo a menos que la usuaria ya entrenara HIIT antes y con clearance médico.
 
@@ -708,7 +708,7 @@ Representative exercises: Protocolo Wingate clásico — 30 s all-out air bike /
 
 Primary benefits: Máxima mejora de VO₂max documentada por minuto · mayor capacidad anaeróbica glucolítica · gasto calórico alto en tiempo muy corto · mejora del poder máximo · efecto EPOC pronunciado · sirve para deportistas que necesitan capacidad anaeróbica. Duración: 10–25 min total con recuperación completa entre rondas.
 
-Ideal user profile: Nivel Avanzado · base aeróbica sólida (mínimo 3 meses de MICT o HIIT previos) · deportistas · meta Mejorar condición y aguante en su forma más extrema · sin contraindicación cardiovascular.
+Ideal user profile: Nivel Avanzado · base aeróbica sólida (mínimo 3 meses de MICT o HIIT previos) · deportistas · meta Mejorar mi salud cardiovascular en su forma más extrema · sin contraindicación cardiovascular.
 
 Cautions: No apto para principiantes ni intermedios sin base · contraindicado en condición cardiovascular (Q12) · contraindicado durante embarazo · alto riesgo de lesión muscular sin calentamiento adecuado · espaciar mínimo 72 h entre sesiones SIT · monitorear signos de sobreentrenamiento (insomnio, fatiga crónica, frecuencia cardiaca elevada en reposo).
 
@@ -1191,22 +1191,22 @@ When the user lands on a specific page, the system pre-fills the questions it ca
 | Premium or regular class hub | Q4 pre-marks the movement-aligned goal. | The class-to-goal map lives in the content layer, not in this specification. |
 | FitKidz | Q14 pre-fills "Yo y mis hijos". |   |
 | Goal hub — Primeros Pasos | Q9 pre-marks "Principiante". |   |
-| Goal hub — Salud y Bienestar | Q4 pre-marks "Mejorar condición y aguante". |   |
+| Goal hub — Salud y Bienestar | Q4 pre-marks "Mejorar mi salud cardiovascular". |   |
 | Goal hub — Estética corporal | Q4 pre-marks "Mejorar mi estética corporal". | Renamed from Tonificar. |
-| Goal hub — Ganar Fuerza | Q4 pre-marks "Ganar fuerza". |   |
+| Goal hub — Ganar Fuerza | Q4 pre-marks "Mejorar mi desempeño atlético". |   |
 | Goal hub — Rehabilitación | Q4 pre-marks "Recuperarme de una lesión o dolor". |   |
 | YMYL hub — Bajar de peso | Q4 pre-marks "Bajar de peso", which activates Q17 to Q19. |   |
 | Personal Training | Q13 pre-marks "Acompañado/Acompañada". |   |
 | Memberships, Journal | None. |   |
-| entrenamiento-con-pesas-individual (and subpages) | Q13 pre-marks "Solo, a mi ritmo" (or "Sola" if Q2 = Mujer). Subpages pre-mark Q4: Fuerza → "Ganar fuerza"; Hipertrofia → "Mejorar mi estética corporal"; Potencia → "Ganar fuerza"; Resistencia muscular → "Mejorar condición y aguante". | New. |
-| entrenamiento-aerobico-individual (and subpages) | Q13 pre-marks "Solo, a mi ritmo" (or "Sola" if Q2 = Mujer). Subpages pre-mark Q4: LISS → no pre-mark; MICT → "Mejorar condición y aguante"; HIIT → "Mejorar mi estética corporal"; SIT → "Mejorar condición y aguante". | New. |
+| entrenamiento-con-pesas-individual (and subpages) | Q13 pre-marks "Solo, a mi ritmo" (or "Sola" if Q2 = Mujer). Subpages pre-mark Q4: Fuerza → "Mejorar mi desempeño atlético"; Hipertrofia → "Mejorar mi estética corporal"; Potencia → "Mejorar mi desempeño atlético"; Resistencia muscular → "Mejorar mi salud cardiovascular". | New. |
+| entrenamiento-aerobico-individual (and subpages) | Q13 pre-marks "Solo, a mi ritmo" (or "Sola" if Q2 = Mujer). Subpages pre-mark Q4: LISS → no pre-mark; MICT → "Mejorar mi salud cardiovascular"; HIIT → "Mejorar mi estética corporal"; SIT → "Mejorar mi salud cardiovascular". | New. |
 
 Pre-fill is always editable by the user.
 
 
 ##### Rule 21 - Goal selection allows up to two goals
 
-Q4 (goal) is always multi-select with a maximum of two goals. The user may choose one or two of the five goal options, in any combination. There is no longer a weight-loss-specific exception: the former single-select-unless-weight-loss behavior of legacy P1 is retired. When two goals are selected, the result page and the individual-training recommendations use the union of both goals' mappings, deduplicated, per Rule 38 and Part 3, Individual-training subgroup taxonomy.
+Q4 (goal) is always multi-select with a maximum of two goals. The user may choose one or two of the six goal options, in any combination. There is no longer a weight-loss-specific exception: the former single-select-unless-weight-loss behavior of legacy P1 is retired. When two goals are selected, the result page and the individual-training recommendations use the union of both goals' mappings, deduplicated, per Rule 38 and Part 3, Individual-training subgroup taxonomy.
 
 
 ##### Membership and conversion
@@ -1971,7 +1971,7 @@ Individual weight-training page (class page type). Per Rule 38, Q13 pre-marks So
 | Complete, inside the flow | Already complete | Volver a tu experiencia ideal · Tu rutina individual · Agenda tu visita guiada |
 | Complete, outside the flow | Already complete | Volver a tu experiencia ideal · Tu rutina individual · Agenda tu visita guiada |
 
-Subpage Q4 pre-mark (Rule 20): Fuerza pre-marks Ganar fuerza; Hipertrofia pre-marks Mejorar mi estética corporal; Potencia pre-marks Ganar fuerza; Resistencia muscular pre-marks Mejorar condición y aguante.
+Subpage Q4 pre-mark (Rule 20): Fuerza pre-marks Mejorar mi desempeño atlético; Hipertrofia pre-marks Mejorar mi estética corporal; Potencia pre-marks Mejorar mi desempeño atlético; Resistencia muscular pre-marks Mejorar mi salud cardiovascular.
 
 
 ##### entrenamiento-aerobico-individual (and subpages)
@@ -1985,7 +1985,7 @@ Individual aerobic-training page (class page type). Per Rule 38, Q13 pre-marks S
 | Complete, inside the flow | Already complete | Volver a tu experiencia ideal · Tu rutina individual · Agenda tu visita guiada |
 | Complete, outside the flow | Already complete | Volver a tu experiencia ideal · Tu rutina individual · Agenda tu visita guiada |
 
-Subpage Q4 pre-mark (Rule 20): LISS no pre-mark; MICT pre-marks Mejorar condición y aguante; HIIT pre-marks Mejorar mi estética corporal; SIT pre-marks Mejorar condición y aguante.
+Subpage Q4 pre-mark (Rule 20): LISS no pre-mark; MICT pre-marks Mejorar mi salud cardiovascular; HIIT pre-marks Mejorar mi estética corporal; SIT pre-marks Mejorar mi salud cardiovascular.
 
 
 ##### experiencia-ideal -  the Experiencia Ideal result page
@@ -2016,7 +2016,7 @@ The Block 2 card does NOT use the technical ACSM names (LISS, MICT, HIIT, SIT) i
 | Mejorar mi salud cardiovascular | Caminadora, bicicleta, elíptica o remo | 35 a 45 min · ritmo conversacional 3-4 días + 1 día con intervalos al máximo · sesión principal del día | Tu motor cardiovascular es la prioridad. Varios días a ritmo conversacional construyen la base; un día con intervalos eleva el techo. Esta combinación es la que más reduce mortalidad. |
 | Recuperarme de una lesión o dolor crónico | Bicicleta reclinada, elíptica o caminadora muy suave | 15 a 25 min · ritmo conversacional muy ligero · antes de pesas como activación, o sesión corta | Cardio de bajo impacto que activa la circulación y las articulaciones sin sumar carga a la zona lesionada. Tu entrenador adapta la intensidad según tu evolución. |
 
-The machine list is a recommendation, not a constraint; the user can substitute any equivalent machine in the club. The timing instruction is always relative to the primary Q4 goal; when Q4 has two selections, use the more restrictive guidance (priority for the goal that demands more recovery: rehabilitación, ganar fuerza, estética, bajar de peso, condición). Group HIIT classes with an instructor (any catalog entry whose name includes HIIT, Spinning HIIT, Cycle HIIT, and similar) go exclusively to Block 3, never to Block 2.
+The machine list is a recommendation, not a constraint; the user can substitute any equivalent machine in the club. The timing instruction is always relative to the primary Q4 goal; when Q4 has two selections, use the more restrictive guidance (priority for the goal that demands more recovery: Recuperarme de una lesión o dolor crónico, Aumentar masa muscular, Mejorar mi desempeño atlético, Mejorar mi estética corporal, Bajar de peso, Mejorar mi salud cardiovascular). Group HIIT classes with an instructor (any catalog entry whose name includes HIIT, Spinning HIIT, Cycle HIIT, and similar) go exclusively to Block 3, never to Block 2.
 
 
 ##### Block 1 -  Pesas individual user-facing presentation
