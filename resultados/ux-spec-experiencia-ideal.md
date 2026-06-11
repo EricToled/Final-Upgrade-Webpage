@@ -768,6 +768,40 @@ Catálogo oficial del cliente. Tres familias de entrenamiento individual; cada u
 
 > **Pendiente de confirmación (cliente):** los mapeos `inferido` de Bloque 2 y del Bloque acuático son propuesta por nombre/intensidad; el Bloque 1 ya estaba mapeado. El Bloque acuático introduce dependencia con Q6 — al elegir "En la alberca" el plan se arma con estas sub-clases en vez del Block 2 seco; con "Ambas" puede combinar (Fuerza combinada: agua y gimnasio).
 
+##### Flujo de aplicación del cuestionario — Experiencia Ideal + resumen del lead (conforme a `sw_experiencia_ideal_demo_v6_FINAL.jsx`)
+
+> **Regla de precedencia (cliente):** donde el demo contradiga los catálogos acordados (**51 clases**, **cuestionario oficial**) **prevalece lo acordado** y se ajusta el flujo. Contradicciones ya resueltas a favor de lo acordado: catálogo = **51 clases** (NO 56 — `DANZA AEREA`, `FLYBOARD`, `INTERVAL`, `FULL BODY`, `GIMNASIA DE GRUPOS`, `ACUAEROBICS` quedan fuera); **Q18** = peso actual · estatura · **cintura** (no "edad"). Mapeo de nombres crudos del demo → canónicos: `FUN TRAC`→FUNTRAC · `KINETICS BALL`→KINETIC BALL · `SH BAM`→SH'BAM · `JAZZ 90`→JAZZ · `GRIT DEMO`→GRIT · `TRAINT BOOST DEMO`→TRAINT BOOST · `HAWAIANO`→RITMOS LATINOS · `FIT Y DANCE`→FIT DANCE · `ACUAZUMBA`→AQUA ZUMBA.
+
+**1. Flujo del cuestionario (`getQuestions`).** 15 base + 6 condicionales (ver tabla normativa). Disparadores: Q11 si Q10 = "Regreso después de una pausa"; Q12b si Q2 = "Mujer"; Q14b si Q14 ∈ {"Yo y mis hijos","La familia completa"}; Q17/Q18/Q19 si Q4 incluye "Bajar de peso". Conjugación de género en Q3, Q13, Q14 cuando Q2 = Mujer.
+
+**2. Resolución de bloques (`resolveBlocks`, Q6-aware).** Objetivo primario = primer Q4 seleccionado.
+- **Q6 = "En la alberca"** → si el club tiene Alberca: Block 1 y Block 2 usan las **variantes acuáticas**; si no tiene alberca: bloques secos + nota "este club no tiene alberca; revisa otros clubes cerca".
+- **Q6 = "Ambas"** → Block 1 seco; Block 2 seco + alternativa acuática si el club tiene alberca.
+- **Q6 = "Lo que mi entrenador recomiende"** → bloques secos; el entrenador decide piso/alberca en la 1ª sesión.
+- **Q6 = "En piso / área seca"** → bloques secos.
+- **Block 3 (clases grupales)** se muestra solo si Q13 ≠ "Solo/Sola, a mi ritmo" (si entrena solo → Block 3 OFF; el menú renombra "Clases recomendadas" → "Tu rutina individual").
+
+**3. Block 1 (Fuerza) y Block 2 (Cardio): mapeo Q4 → subgrupo + protocolo** = las 3 familias oficiales (ver «Catálogo oficial» arriba). El demo aporta `protocol` y `why` por objetivo; variantes acuáticas (Q6 = alberca) en `AQUATIC_BLOCK_1/2`.
+
+**4. Ranking de clases grupales (`rankClasses`) — sobre las 51 canónicas:**
+1. Solo clases que el **club ofrece** (catálogo por club).
+2. **Filtro Q6**: "En la alberca" → solo acuáticas; "En piso" → solo secas.
+3. **Filtro Q9 nivel**: la clase debe incluir el nivel del usuario.
+4. **Filtro duro de contraindicaciones** (Q12, Q12b, Q17 → claves l/c/e/p/b): excluye clases contraindicadas (matriz de 51).
+5. **Score por Q4** (`profiles`): top3 = +3, apto = +1, **no apto = se descarta** ese objetivo (si es "no apto" en cualquier Q4 elegido, queda fuera). Multi-Q4 acumula.
+6. Orden por score desc + alfabético → **top 2** + "también encajan" (3–5).
+
+**5. Llamada única al LLM (`callClaude`) — produce el reporte del cliente Y el brief del asesor** (1 sola llamada, Claude Sonnet, `max_tokens` 2000). System-prompt: prohíbe "plan" (usar "tu experiencia ideal"/"rutina"), códigos Qn y jerga técnica; reglas YMYL (no diagnosticar/prescribir; el asesor valida con criterio clínico). Defense-in-depth: `stripQCodes` recursivo borra cualquier Qn que el LLM filtre.
+
+Claves JSON exactas:
+- **Reporte del cliente:** `hook` (≤30 pal., conecta con Q3) · `plan_argument` (≤45, sin "plan", cierra en personalización) · `intent_line` (≤18, refleja Q13/Q14) · `infrastructure_argument` (≤55, cita 49 clubes + clasificación por objetivo + club) · `class_1_connector` / `class_2_connector` (≤15 c/u, "Porque mencionaste que…", solo si Block 3).
+- **Resumen del lead (asesor):** `validation_questions` (**exactamente 5**, ≤18 c/u) · `visit_route` (**4 pasos**: Conectar con su objetivo · Tour enfocado · Resolver bloqueador · Cerrar con siguiente paso) · `proposal` {`main` ≤35, `complement` ≤30} · `closing_priorities` (**exactamente 3**, ≤12 c/u) · `closing_script` (≤60, 1ª persona asesor→lead).
+
+**6. Banderas que priorizan el brief** (derivadas de respuestas): `fromOtherGym`, `hasMedical` (+ trimestre si embarazo, tiempo en tratamiento si GLP-1), `wantsAquatic` (comodidad real en agua), `isFamily`+`hasKids` (servicios/ FitKidz para hijos), `isPrincipiante` (primer ingreso), `fromPause` (motivo y duración).
+
+**7. Contexto médico (`medicalContext`)** se inyecta al prompt cuando `hasMedical`: lista condiciones; embarazo/posparto (clases de impacto ya filtradas); GLP-1 (priorizar fuerza para preservar masa muscular); bariátrica; recordatorio de que el filtro grupal ya excluye contraindicadas y el asesor ajusta protocolos individuales con criterio clínico.
+
+
 
 
 ## Part 4 -	Global Rules
