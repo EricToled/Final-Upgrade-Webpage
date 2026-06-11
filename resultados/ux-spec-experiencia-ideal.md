@@ -406,23 +406,11 @@ The site serves three primary user types, in priority order:
 
 The site is rebuilt to fix three measurable problems with the previous site:
 
-Problem	Cause	Solution in the new site
-
-The site appears in less than 1%	No dedicated
-
-of "gym for losing weight"	 weight-loss page searches	existed
-
-The site ranks outside the top	Class pages were 100 results for "yoga near me"	 not optimized
-
-hub at( /bajar-de-peso/ )with YMYL-compliant content and medical sign-off
-
-One dedicated page per class (51 adult classes+ the FitKidz hub absorbing 34 children's activities) with structured markup
-
-Searches like "gym near me" land on the homepage instead of the closest club
-
-The previous site did not detect location
-
-The new site detects location and routes to the closest club (Rule 15)
+| Problem | Cause | Solution in the new site |
+| --- | --- | --- |
+| The site appears in less than 1% of "gym for losing weight" searches | No dedicated weight-loss page existed | Hub at /bajar-de-peso/ with YMYL-compliant content and medical sign-off |
+| The site ranks outside the top 100 results for "yoga near me" | Class pages were not optimized | One dedicated page per class (51 adult classes + the FitKidz hub absorbing 34 children's activities) with structured markup |
+| Searches like "gym near me" land on the homepage instead of the closest club | The previous site did not detect location | The new site detects location and routes to the closest club (Rule 15) |
 
 
 ##### Brand positioning
@@ -437,23 +425,13 @@ The FitKidz sub-brand is **premium family fitness**.
 
 ##### Success measures
 
-Measure
-
-Organic traffic visibility on "bajar de peso" cluster
-
-Target
-
-Top 10 in target queries within 90 days oflaunch
-
-Measure	Target
-
-"Gym near me" ➔ closest club routing accuracy	100% of geolocated sessions routed to the closest open club
-
-Class-page organic visibility	Top 50 for the 51 adult classes within 90 days
-
-Core Web Vitals on mobile p75	LCP < 2.5 s, INP < 200 ms, CLS < 0.1
-
-Accessibility	WCAG 2.2 AA on every page
+| Measure | Target |
+| --- | --- |
+| Organic traffic visibility on "bajar de peso" cluster | Top 10 in target queries within 90 days of launch |
+| "Gym near me" → closest club routing accuracy | 100% of geolocated sessions routed to the closest open club |
+| Class-page organic visibility | Top 50 for the 51 adult classes within 90 days |
+| Core Web Vitals on mobile p75 | LCP < 2.5 s, INP < 200 ms, CLS < 0.1 |
+| Accessibility | WCAG 2.2 AA on every page |
 
 
 ### Part 2 -	Conventions
@@ -553,8 +531,7 @@ delivered as a separate workstream with its own specification; this document cov
 - The 10 amenity hubs are: pool, INTENZ (functional training zone), FitKidz, boxing ring, climbing wall, courts, sauna and steam room, showers and locker rooms, cafe, and parking.
 - "FitKidz" appears both as a page type (the parent hub) and as one of the 10 amenities. The FitKidz hub is the fully-built page; the FitKidz amenity entry is a pointer that links to it.
 - The FitKidz hub absorbs all 34 children's activities. Children's activities do not have individual pages; they are organized within the hub by age range, discipline type, and club availability.
-- Architecture diagram (text representation)
-T	t	T	T
+- Architecture diagram: *(diagrama visual — entregable de diseño Semana 1; el «Page inventory» de arriba es el contenido autoritativo)*
 
 The diagram above is a textual approximation. The design team produces the formal IA diagram as a Week-1 deliverable. Anti-orphan rule: every page must be reachable from at least two other pages. The cross-linking matrix is enforced by Rule 10.
 
@@ -799,7 +776,7 @@ The header is fixed to the top of the screen on every page. It contains five ele
 
 - Sports World logo -  always returns to the home page on click.
 - Tu Sports World (Your Sports World) - opens a side drawer with the 8 main hubs of the site (Rule 4).
-- Disefia tu experiencia (Design your experience) - opens the questionnaire (Rules 18-21).
+- Diseña tu experiencia (Design your experience) - opens the questionnaire (Rules 18-21).
 - Pregúntale a BES (Ask BES) -	opens the BES global widget (Rule 3).
 - Agenda tu visita (Book your visit) -	red pill button leading to the guided-visit booking flow (Rule 6).
 Items 2, 3, and 4 are three parallel paths through the site. They share equal hierarchy: the user picks whichever they prefer. Item 5 is the only conversion action and is treated visually differently.
