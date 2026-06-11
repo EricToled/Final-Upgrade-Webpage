@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# webapp build intermediates (regenerable; deliverable is content.json)
+webapp/_batch_*.json
+webapp/_trans_*.json
+webapp/_sections_raw.json
