@@ -142,11 +142,11 @@ RESTRICCIONES YMYL: si el lead tiene condición médica, embarazo/posparto, o tr
 
 | Q3 selection | Approved hook example |
 | --- | --- |
-| Descargar tensión y salir con energía | El cansancio bueno no es el del día acumulado. Es el que llega después de un entrenamiento que tu cuerpo necesitaba. |
-| Llenarme de energía, listo para el día | Lo que entrenas en la mañana define cómo llegas al resto del día. No es magia, es bioquímica sostenida. |
-| Recuperar fuerza para mi día a día | Volver a sentirte capaz no se trata de fuerza máxima. Se trata de constancia, calibrada a tu punto de partida. |
-| Sentirme más seguro / segura de mí mismo | La confianza no llega de golpe. Se construye en cada repetición sostenida y en cada semana que sostienes tu Experiencia Ideal. |
-| Relajarme y bajarle al estrés | El estrés que cargas se descarga en algún lado. Mejor que sea en una sesión planeada, no en el cuerpo. |
+| Desconectado/a del trabajo y la rutina | El día se queda en la puerta. Lo que entrenas aquí es tuyo, y el cuerpo lo agradece cuando sales. |
+| Renovado/a y de buen ánimo | La energía no se finge: se construye con movimiento. Entrenar temprano cambia cómo llegas al resto del día. |
+| Confiado/a en que mi cuerpo no me va a fallar | La confianza en tu cuerpo se gana con constancia, calibrada a tu punto de partida. No es fuerza máxima: es base sostenida. |
+| Más a gusto conmigo mismo/a | Sentirte mejor contigo no llega de golpe. Se construye en cada sesión sostenida y en cada semana que vuelves. |
+| Parte de una comunidad saludable | Entrenar acompañado sostiene la constancia. En el club hay gente en el mismo camino, a tu ritmo, sin competir. |
 
 LLM variations are allowed if they match tone (calm, sober, adult), length (30 words or fewer), structure (truth plus connection to the plan) and the vocabulary rules above.
 
