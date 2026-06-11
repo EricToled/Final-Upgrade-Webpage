@@ -475,19 +475,11 @@ The specification uses several immutable identifier systems. Once assigned, a co
 
 | Code system | Format | Examples | Meaning |
 | --- | --- | --- | --- |
-| Pagetype | numeric, 1-11 | Page type 2 = Individual | Eleven canonical page types in |
-|   |   | club | the 145-page scope. BES is a |
-|   |   |   | global widget (Rule 3). |
-| Question | Q+number | Q1, Q4, Q12, Q16, Q17, Q18, Q19 | Questionnaire questions. |
-|   | variant |   |   |
-|   |   |   |   |
-| City | CIUDAD- +tag | CIUDAD-1 ,(CIUDAD- | Number of clubs in the user's |
-| classification |   | POCOS1 CIUDAD-ZMVM | city. |
-|   |   |   |   |
+| Pagetype | numeric, 1-11 | Page type 2 = Individual club | Eleven canonical page types in the 145-page scope. BES is a global widget (Rule 3). |
+| Question | Q+number (+variant) | Q1, Q4, Q12, Q16, Q17, Q18, Q19 | Questionnaire questions. |
+| City classification | CIUDAD- +tag | CIUDAD-1, POCOS, CIUDAD-ZMVM | Number of clubs in the user's city. |
 | Rule | Rule + number | Rule 7, Rule 25 | Global rules in Part 4. |
-| Article tag | lowercase, | bajar-de-peso, | Content tags for the Journal |
-|   | hyphenated | clase-spinning, | cross-linking system (Rule 29). |
-|   |   | amenidad-alberca |   |
+| Article tag | lowercase, hyphenated | bajar-de-peso, clase-spinning, amenidad-alberca | Content tags for the Journal cross-linking system (Rule 29). |
 
 
 ##### Language conventions
@@ -531,25 +523,19 @@ The following subjects are intentionally out of scope of this specification.They
 
 The site has 11 canonical page types in scope plus the BES conversational assistant, which is implemented as a global floating widget rather than a destination page.
 
-#	Pagetype	Count	URL pattern	Health-sensitive (YMYL)
-
-
-| 1 | Home | 1 | 0 | No |
+| # | Page type | Count | URL pattern | Health-sensitive (YMYL) |
 | --- | --- | --- | --- | --- |
+| 1 | Home | 1 | / | No |
 | 2 | Individual club | 49 | /clubes/[club]/ | No |
 | 3 | Amenity | 10 | /amenidades/[amenidad]/ | No |
-| 4 | Premium Les | 7 | /clases/signature/[clase]/ | No |
-|   | Millsclass |   |   |   |
+| 4 | Premium Les Mills class | 7 | /clases/signature/[clase]/ | No |
 | 5 | Regular class | 44 | /clases/[clase]/ | No |
 | 6 | FitKidz | 1 | /fitkidz/ | No |
-| 7 | Goal hub | 5 | /perfiles/[objetivo]/ | Only |
-|   |   |   |   | rehabilitation |
-|   |   |   |   |   |
-| 8[Bajar de |   | 1 | /bajar-de-peso/ | Yes(YMYL) |
-| peso)hub |   |   |   |   |
-| 9Personal Training |   | 1 | /personal-training/ | No |
-| 10Memberships |   | 6(1 hub+ 5plans) | /membresias/ and<br>/membresias/[plan]/ | No |
-| 11Journal article |   | 20 | /diario/[articulo]/ | Some,yes |
+| 7 | Goal hub | 5 | /perfiles/[objetivo]/ | Only rehabilitation |
+| 8 | Bajar de peso hub | 1 | /bajar-de-peso/ | Yes (YMYL) |
+| 9 | Personal Training | 1 | /personal-training/ | No |
+| 10 | Memberships | 6 (1 hub + 5 plans) | /membresias/ and /membresias/[plan]/ | No |
+| 11 | Journal article | 20 | /diario/[articulo]/ | Some, yes |
 
 Total signed pages:1 + 49 + 10 + 7 + 44 + 1 + 5 + 1 + 1 + 6 + 20 = 145pages.
 
@@ -1216,56 +1202,19 @@ When a user runs a search engine query related to Sports World, the site must ta
 
 | Query type | Examples | Landing page |
 | --- | --- | --- |
-|   |   |   |
-| Pure brand search | sports world,( sports world<br>mexico) | Home |
-| Brand + specific | sports world polanco, | The specific club's page |
-| location | sports world antara |   |
-| Gym near me | gimnasio cerca de mi, | Closest club via geolocation. If location |
-|   | gimnasio polanco | cannot be detected, lands on Home with the |
-|   |   | club-search flow already open. |
-|   |   |   |
-| Amenity+location | alberca cdmx ,(yoga estudio | Theamenityhub |
-|   |   |   |
-|   | polanco) |   |
-| Specific class | body pump , spinning cdmx , | That class's page |
-|   | pilates reformer |   |
-|   |   |   |
-| Personal goal | estética corporal ,( ganar masa | Corresponding goal hub |
-|   | muscular1(primeros pasos en |   |
-|   | el gym) |   |
-|   |   |   |
-| Weight loss | bajar de peso,( perder peso | Bajar de peso hub |
-|   | gym1(GLP-1 ozempic |   |
-|   | gimnasio) |   |
-|   |   |   |
-| Rehabilitation | (rehabilitación rodilla | Rehabilitation hub |
-|   | gym1 ejercicio post lesion |   |
-| Children/ family | gimnasio para ninos, | FitKidz |
-|   | actividades familia, |   |
-|   | FitKidz |   |
-| Personal Training | entrenador personal, | Personal Training |
-|   | personal trainer cdmx |   |
-| Pricing and | precio sports world, | Memberships hub |
-| memberships | uniclub vs allclub |   |
-| Fitness information | calorias spinning, | Journal article on the topic |
-
-(diferencia body pump vs  combat)
-
-Query type
-
-Sports World specific information
-
-Cancellations, freezes, support
-
-Examples
-
-horario polanco,[alberca en antara)
-
-Landing page
-
-Home with the BES widget opened
-
-,	Home with the BES widget opened
+| Pure brand search | sports world, sports world mexico | Home |
+| Brand + specific location | sports world polanco, sports world antara | The specific club's page |
+| Gym near me | gimnasio cerca de mi, gimnasio polanco | Closest club via geolocation; if location cannot be detected, lands on Home with the club-search flow open |
+| Amenity + location | alberca cdmx, yoga estudio polanco | The amenity hub |
+| Specific class | body pump, spinning cdmx, pilates reformer | That class's page |
+| Personal goal | estética corporal, ganar masa muscular, primeros pasos en el gym | Corresponding goal hub |
+| Weight loss | bajar de peso, perder peso gym, GLP-1 ozempic gimnasio | Bajar de peso hub |
+| Rehabilitation | rehabilitación rodilla gym, ejercicio post lesión | Rehabilitation hub |
+| Children / family | gimnasio para niños, actividades familia, FitKidz | FitKidz |
+| Personal Training | entrenador personal, personal trainer cdmx | Personal Training |
+| Pricing and memberships | precio sports world, uniclub vs allclub | Memberships hub |
+| Fitness information | calorias spinning, diferencia body pump vs combat | Journal article on the topic |
+| Sports World specific information / cancellations, freezes, support | horario polanco, alberca en antara | Home with the BES widget opened |
 
 
 ##### Rule 16 -  Inferring information from the external search query
@@ -1839,26 +1788,13 @@ Already complete
 Landing on a class pre-marks Q4 (the movement-aligned goal) from the class's discipline. The user can confirm or change.
 
 
-| State | Questionnaire | Contextual menu |   |
-| --- | --- | --- | --- |
-|   |   |   |   |
-| No questionnaire· no club | 16 questions, Q4 pre-filled and | Tu Club ideal •( Diseña tu |   |
-| selected • no inferred | editable (19 if weight loss) | experiencia]·(Agenda tu |   |
-| location |   | visita guiada] |   |
-|   |   |   |   |
-| No questionnaire·no club | 16 questions, Q4, Q15 and Q16 pre- | Tu Club ideal •( Diseña tu |   |
-| selected· with inferred location | filled and editable (19 if weight loss) | experiencia]·(Agenda tu  visita guiada] |   |
-| No questionnaire·with club | 16 questions, Q4 pre-filled and | Diseña tu experiencia |   |
-| selected | editable (19 if weight loss) | Agenda tu visita guiada |   |
-|   |   |   |   |
-| Complete, inside the flow | Already complete | (Volver a tu experiencia |   |
-|   |   | ideal]·(Agenda tu visita |   |
-|   |   | guiada] |   |
-|   |   |   |   |
-| Complete, outside the flow | Already complete | (Volver a tu experiencia |   |
-|   |   | ideal]·( Agenda tu visita |   |
-
-guiada]
+| State | Questionnaire | Contextual menu |
+| --- | --- | --- |
+| No questionnaire · no club selected · no inferred location | 15 questions, Q4 pre-filled and editable (18 if weight loss) | Tu Club ideal • Diseña tu experiencia · Agenda tu visita guiada |
+| No questionnaire · no club selected · with inferred location | 15 questions, Q4, Q15 and Q16 pre-filled and editable (18 if weight loss) | Tu Club ideal • Diseña tu experiencia · Agenda tu visita guiada |
+| No questionnaire · with club selected | 15 questions, Q4 pre-filled and editable (18 if weight loss) | Diseña tu experiencia · Agenda tu visita guiada |
+| Complete, inside the flow | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
+| Complete, outside the flow | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
 
 
 ##### - Regular class
@@ -2454,7 +2390,7 @@ Questions of the questionnaire, numbered Q1 to Q19. Q4 is goal; Q16 is location.
 
 Q17, Q18, Q19. The optional questions shown on the weight-loss path (Rule 19); they replace the legacy P10-WL, P11-WL and P12-WL.
 
-�	weight loss.
+ weight loss.
 
 Standard medical questionnaire used before starting physical activity. Q12 is a friendly, simplified version of the PAR-Q.
 
