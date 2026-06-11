@@ -277,22 +277,9 @@ flowchart TD
 
 > Cifras marcadas `[SUPUESTO]` son de referencia; reemplazar con datos reales de analítica.
 
-### 10.2 Lead scoring y enrutamiento (propuesta — `[SUPUESTO, validar pesos]`)
+### 10.2 Lead scoring y enrutamiento
 
-| Señal (respuesta) | Puntos | 
-|---|---|
-| Completa contacto + agenda | +40 |
-| Q4 = Bajar de peso / Masa muscular (alta intención) | +20 |
-| Q10 = Viene de otro gimnasio | +15 |
-| Q19 objetivo de cambio definido | +10 |
-| Q9 = Avanzado / Intermedio | +5 |
-| Solo curioseó, sin agenda | +0 |
-
-| Puntaje | Enrutamiento |
-|---|---|
-| ≥ 60 | **Lead caliente → asesor + agente de voz al instante** |
-| 30–59 | Agenda estándar + recordatorio |
-| < 30 | Nurturing por correo / retargeting |
+Reubicado a `anexo-ingenieria-crm.md` (audit R14: lógica de CRM/ventas sin comportamiento de UI, pesos `[SUPUESTO]`).
 
 ### 10.3 Perfilado progresivo (recomendación)
 
@@ -554,139 +541,7 @@ User-facing Block 1 subgroup names follow the six accessible labels mapped from 
 Two top-level individual-training pages are added as class pages (they fall under the class page type and do not change the eleven canonical page-type count): entrenamiento-con-pesas-individual and entrenamiento-aerobico-individual. Each maps to six subgroups (one per Q4 goal; official names in «Catálogo oficial — Programas de entrenamiento individual»), grounded in ACSM consensus. A third, aquatic block (Entrenamiento acuático) activates when Q6 = "En la alberca"/"Ambas" and the resolved club has a pool. The weight-training subgroups follow the ACSM Position Stand 2026 (Currier BS, D'Souza AC, Singh MAF, et al. "Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews." Medicine & Science in Sports & Exercise 2026. DOI: 10.1249/MSS.0000000000003897). The aerobic subgroups follow the ACSM/ESSA Joint Expert Statement 2024 ("Physical Activity and Exercise Intensity Terminology." Journal of Science and Medicine in Sport 2024). Pre-fill and result behavior for these pages is governed by Rule 38.
 
 
-##### entrenamiento-con-pesas-individual (ACSM Position Stand 2026)
-
-Fuerza — URL slug: /entrenamiento-con-pesas-individual/fuerza
-
-Tagline (ES MX): Mover más peso, con técnica sólida.
-
-Prescription: Carga ≥80% 1RM · 2–3 series por ejercicio · 1–5 repeticiones · 2–5 min de descanso entre series · 2–3 sesiones por semana · ejercicios compuestos al inicio de la sesión, rango de movimiento completo.
-
-Equipment: Pesas libres: barras olímpicas con discos, mancuernas de carga media-alta, kettlebells. Soporte: racks de potencia, bancas de press (planas, inclinadas y declinadas). Máquinas: Smith machine (para press y sentadilla con seguridad), hack squat, prensa de pierna pesada. Accesorios: cinturones de levantamiento, muñequeras, magnesio.
-
-Representative exercises: Sentadilla con barra, peso muerto convencional, peso muerto sumo, press de banca, press militar (de pie), dominadas con peso adicional, remo con barra, hip thrust pesado.
-
-Primary benefits: Aumento de fuerza máxima absoluta · incremento de densidad mineral ósea · base neuromuscular para el desarrollo de potencia · mejor postura y fuerza funcional para actividades de la vida diaria · prevención de sarcopenia.
-
-Ideal user profile: Nivel Intermedio o Avanzado · personas que ya dominan la técnica de los compuestos básicos · objetivos de fuerza pura, rendimiento atlético o desarrollo de base de potencia.
-
-Cautions: Principiantes deben pasar primero por Hipertrofia o Resistencia muscular para construir técnica · contraindicado con lesión articular activa o condiciones cardiovasculares no estabilizadas · requiere supervisión inicial.
-
-Hipertrofia — URL slug: /entrenamiento-con-pesas-individual/hipertrofia
-
-Tagline (ES MX): Más músculo, menos grasa, mejor figura.
-
-Prescription: Volumen semanal ≈10 series por grupo muscular · rango de carga amplio (60–85% 1RM funciona) · 6–15 repeticiones · 60–90 s de descanso entre series · 2–4 sesiones por semana · prioridad al volumen total semanal sobre el detalle del rango de carga.
-
-Equipment: Pesas libres: mancuernas de rango completo, barras EZ, kettlebells. Máquinas selectorizadas: prensa de pierna, leg curl, leg extension, jalón al pecho, remo sentado, press de hombros, máquina pec deck. Cables y poleas: torre de cable con manijas intercambiables. Bandas: para sobrecarga acomodada en posiciones acortadas. Bancas regulables.
-
-Representative exercises: Sentadilla goblet, prensa de pierna, hip thrust, curl de bíceps (mancuerna y cable), elevaciones laterales, jalón al pecho, cruces en polea, extensiones de tríceps, leg curl, leg extension, remo sentado en cable, press de hombros con mancuernas.
-
-Primary benefits: Aumento de masa muscular (área de sección transversal) · recomposición corporal · mejora de estética corporal (definición y volumen) · mejora de la sensibilidad a la insulina · mantenimiento de masa magra durante déficit calórico (clave para Bajar de peso).
-
-Ideal user profile: Cualquier nivel · meta principal Mejorar mi estética corporal o Bajar de peso · personas que buscan recomposición · transición desde principiante hacia entrenamientos más exigentes.
-
-Cautions: Volumen alto requiere recuperación adecuada · principiantes deben empezar con cargas conservadoras y técnica antes de buscar volumen.
-
-Potencia — URL slug: /entrenamiento-con-pesas-individual/potencia
-
-Tagline (ES MX): Fuerza que se mueve rápido.
-
-Prescription: Carga moderada 30–70% 1RM · 3–6 repeticiones · intención concéntrica de máxima velocidad · 2–5 min de descanso entre series · 2–3 sesiones por semana · ejercicios explosivos al inicio de la sesión cuando el sistema nervioso está fresco.
-
-Equipment: Pesas libres: barras olímpicas, mancuernas de mango ancho, kettlebells de peso variable. Implementos balísticos: balones medicinales (slam balls), wall balls. Plyo boxes (cajas pliométricas de varias alturas). Bandas y cadenas (resistencia acomodada para el clean y el press). Plataformas de levantamiento (con tarima absorbente). Air bike opcional para acondicionamiento anaeróbico complementario.
-
-Representative exercises: Power clean, push press, kettlebell swing (americano y ruso), sentadilla con salto (jump squat), lanzamiento de balón medicinal contra pared, box jump, broad jump, push-press, snatch desde el bloque.
-
-Primary benefits: Mejora de la tasa de producción de fuerza · rendimiento deportivo (sprint, salto, cambios de dirección) · prevención de caídas y recuperación neuromuscular en adultos mayores cuando se prescribe con cargas conservadoras · mejora de la coordinación intermuscular.
-
-Ideal user profile: Nivel Intermedio o Avanzado · base previa de fuerza · deportistas o personas con metas de rendimiento atlético · adultos mayores bajo supervisión específica.
-
-Cautions: Requiere técnica supervisada · contraindicado con lesión articular aguda · no recomendado como primer contacto con pesas · cargas más bajas y volumen reducido en presencia de hipertensión no controlada.
-
-Resistencia muscular — URL slug: /entrenamiento-con-pesas-individual/resistencia-muscular
-
-Tagline (ES MX): Aguante para hacer más, durante más tiempo.
-
-Prescription: Carga ligera <60% 1RM · 15–25+ repeticiones por serie · 30–60 s de descanso · 2–4 sesiones por semana · volumen total alto · circuitos y supersets aceptables.
-
-Equipment: Bandas elásticas de resistencia (loops y tubos con manijas). Peso corporal y suspensión: TRX, anillas, barras de dominadas. Mancuernas ligeras (1–10 kg) y kettlebells ligeros. Implementos de calistenia: pelotas suizas, BOSU, discos de deslizamiento. Cuerdas de batalla (battle ropes) para variedad de circuito.
-
-Representative exercises: Circuitos con bandas (full body), sentadillas al aire de alto volumen, planchas (estáticas y dinámicas), TRX rows, walking lunges, step-ups, push-ups, peso corporal en circuito (burpees suaves, mountain climbers), kettlebell complex ligero, escaladores.
-
-Primary benefits: Aguante muscular local · tono general sin hipertrofia significativa · base neuromuscular para principiantes antes de cargar más peso · joint-friendly para regresos después de pausa · rehabilitación de lesiones leves · mejora de la postura y de los estabilizadores · acondicionamiento metabólico ligero.
-
-Ideal user profile: Principiantes absolutos · usuarios que regresan después de una pausa larga (Q11) · rehabilitación de lesión leve o dolor articular (Q12) · adultos mayores · personas con meta Mejorar mi salud cardiovascular o Recuperarme de una lesión o dolor.
-
-Cautions: Verificar técnica básica antes de subir volumen · si hay dolor agudo, derivar a Personal Training supervisado en lugar de individual · embarazadas deben consultar antes de empezar.
-
-
-##### entrenamiento-aerobico-individual (ACSM/ESSA Joint Statement 2024)
-
-LISS — Low-Intensity Steady State — URL slug: /entrenamiento-aerobico-individual/liss
-
-Tagline (ES MX): Movimiento sostenido, sin estrés ni impacto.
-
-Prescription: Intensidad <60% VO₂max o <60–65% HRmax · RPE 9–12 en escala de 6–20 de Borg (esfuerzo ligero a moderado-bajo) · ritmo conversacional · 30–60+ min por sesión · 3–6 sesiones por semana, incluyendo días de recuperación activa.
-
-Equipment: Caminadora a velocidad de caminata (3–5 km/h, inclinación 0–3%). Bicicleta estática con resistencia mínima. Elíptica con resistencia mínima. Natación a ritmo lento (estilo libre suave o de espalda). Aqua walking en alberca poco profunda. Bicicleta recumbente para personas con limitación lumbar.
-
-Representative exercises: Caminata sostenida a paso natural · bicicleta estática suave 50–60 RPM · elíptica con baja resistencia · natación lenta 25 m a la vez con descansos · caminata en alberca · recovery walks al aire libre.
-
-Primary benefits: Base aeróbica para principiantes · recuperación activa entre sesiones intensas · manejo de estrés y salud mental · baja demanda articular (joint-friendly) · ideal para rehabilitación cardiaca de fase I-II · favorece la oxidación de grasa como sustrato dominante · acondicionamiento cardiovascular básico. Duración: 30–60+ min por sesión.
-
-Ideal user profile: Principiantes absolutos · rehabilitación post-lesión o post-cirugía · adultos mayores · días de recuperación activa para usuarios de cualquier nivel · personas con condición cardiovascular estabilizada bajo prescripción médica · meta Recuperarme de una lesión o dolor.
-
-Cautions: Si hay condición cardiaca, requiere clearance médico previo (la opción se marca en Q12) · embarazo es seguro pero con monitoreo de RPE.
-
-MICT — Moderate-Intensity Continuous Training — URL slug: /entrenamiento-aerobico-individual/mict
-
-Tagline (ES MX): El cardio sostenido que produce resultados.
-
-Prescription: Intensidad 60–85% VO₂max o ~50–70% HRR (heart rate reserve) · RPE 12–14 en Borg 6–20 (esfuerzo moderado: puedes hablar, no cantar) · 20–60 min por sesión · 3–5 sesiones por semana · acumulación mínima 150 min/semana de moderado (recomendación ACSM general).
-
-Equipment: Caminadora para trote o jog (6–10 km/h, inclinación variable). Bicicleta estática y bicicleta spin a resistencia media (60–80 RPM). Elíptica con resistencia media y zancada amplia. Remo ergómetro (Concept2 o equivalente) a ritmo constante 20–28 SPM. Stair climber o stair stepper a ritmo moderado. Natación sostenida (estilo libre, dorso o pecho).
-
-Representative exercises: Trote sostenido 5–7 km/h · bicicleta estática moderada · remo continuo 500 m a paso constante x 5–8 repeticiones con descanso corto · natación 30–45 min · elíptica moderada · stair stepper a ritmo conversacional.
-
-Primary benefits: Bajar de peso (sostiene déficit calórico con bajo daño muscular) · mejora de salud cardiovascular y reducción de presión arterial · mejora del perfil lipídico y glucosa en ayunas · mejora moderada de VO₂max · base aeróbica para construir HIIT después · salud mental · sustento de adherencia a largo plazo · estándar de prescripción ACSM más antiguo y mejor validado para población general. Duración: 20–60 min por sesión.
-
-Ideal user profile: Cualquier nivel · meta Bajar de peso · meta Mejorar mi salud cardiovascular · usuarios sin tiempo para HIIT pero con tolerancia a sesiones más largas · transición desde LISS a HIIT.
-
-Cautions: Riesgo articular acumulado en caminadora a alto kilometraje semanal (rotar con bicicleta o elíptica) · no es lo más eficiente en tiempo si solo se busca VO₂max (ahí HIIT gana).
-
-HIIT — High-Intensity Interval Training — URL slug: /entrenamiento-aerobico-individual/hiit
-
-Tagline (ES MX): Máximo resultado en mínimo tiempo.
-
-Prescription: Intervalos a >85–90% pico VO₂ (o ≥80% HRmax) · duración del intervalo de trabajo 30 s – 4 min · recuperación activa o pasiva de duración igual o mayor · 4–10 rondas · sesión total 15–30 min incluyendo calentamiento y enfriamiento · 2–3 sesiones por semana (máximo, no más por demanda de recuperación).
-
-Equipment: Caminadora con capacidad de cambio rápido de velocidad e inclinación (intervalos a 12–18 km/h o sprints en cuesta). Spin bike o bicicleta estática con resistencia rápida-ajustable. Air bike (assault bike), particularmente efectiva por su resistencia inercial creciente y engagement de tren superior e inferior. Remo ergómetro (intervalos de 500 m o de 1 min). Elíptica con resistencia alta-ajustable. Stair climber para intervalos de cuesta.
-
-Representative exercises: Caminadora 30 s sprint / 30 s caminata x 10–15 rondas · bicicleta protocolo 4×4 min al 85–95% HRmax con 3 min de recuperación activa · remo Tabata 20 s on / 10 s off x 8 rondas · air bike 30 s all-out / 30 s recovery x 8 rondas · cuestas en cinta 1 min al 8–10% / 1 min plano de recuperación.
-
-Primary benefits: Mejora de VO₂max significativamente mayor que MICT por minuto invertido · oxidación de grasa elevada post-ejercicio (EPOC) · mejora de la sensibilidad a la insulina superior a MICT en algunos estudios · recomposición corporal (estética + reducción de grasa) · mejor adherencia que MICT en perfiles con poco tiempo · acondicionamiento metabólico mixto aeróbico-anaeróbico.
-
-Ideal user profile: Nivel Intermedio o Avanzado · meta Mejorar mi estética corporal · meta Mejorar mi salud cardiovascular · usuarios con tiempo limitado pero base aeróbica suficiente · combinación con Hipertrofia en planes de recomposición.
-
-Cautions: Requiere base aeróbica previa (mínimo 4–6 semanas de MICT o LISS antes) · contraindicación en condición cardiovascular no estabilizada (Q12) · no apto para principiantes absolutos · espaciar 48 h entre sesiones HIIT por demanda de recuperación · no recomendado durante embarazo a menos que la usuaria ya entrenara HIIT antes y con clearance médico.
-
-SIT — Sprint Interval Training — URL slug: /entrenamiento-aerobico-individual/sit
-
-Tagline (ES MX): Esfuerzos máximos, recuperación completa.
-
-Prescription: Esfuerzos all-out (≥100% VO₂max, supramáximos) · duración del intervalo 10–30 s · recuperación completa pasiva o activa muy ligera de 2–4 min · 4–8 rondas · sesión total 15–25 min incluyendo calentamiento y enfriamiento extensos · 1–2 sesiones por semana máximo (demanda muy alta).
-
-Equipment: Air bike (assault bike), equipo de elección por engagement total y resistencia que escala con el esfuerzo, sin requerir frenado manual. Spin bike de alta inercia (Wattbike o similar). Caminadora con capacidad de sprint (>20 km/h) o sprints en cuesta empinada. Remo ergómetro para intervalos all-out de 100–250 m. Pista o calle exterior para sprints lineales (si el club tiene acceso).
-
-Representative exercises: Protocolo Wingate clásico — 30 s all-out air bike / 4 min recuperación pasiva x 4–6 rondas · sprints de 10–15 s al 100% / 90 s recuperación x 6–10 rondas · remo all-out 250 m / 3 min recuperación x 4–6 rondas · sprints lineales 60–100 m con caminata de regreso.
-
-Primary benefits: Máxima mejora de VO₂max documentada por minuto · mayor capacidad anaeróbica glucolítica · gasto calórico alto en tiempo muy corto · mejora del poder máximo · efecto EPOC pronunciado · sirve para deportistas que necesitan capacidad anaeróbica. Duración: 10–25 min total con recuperación completa entre rondas.
-
-Ideal user profile: Nivel Avanzado · base aeróbica sólida (mínimo 3 meses de MICT o HIIT previos) · deportistas · meta Mejorar mi salud cardiovascular en su forma más extrema · sin contraindicación cardiovascular.
-
-Cautions: No apto para principiantes ni intermedios sin base · contraindicado en condición cardiovascular (Q12) · contraindicado durante embarazo · alto riesgo de lesión muscular sin calentamiento adecuado · espaciar mínimo 72 h entre sesiones SIT · monitorear signos de sobreentrenamiento (insomnio, fatiga crónica, frecuencia cardiaca elevada en reposo).
-
+Las **prescripciones técnicas ACSM por subgrupo** (series, repeticiones, %1RM, descansos, equipo, DOIs) viven en `anexo-clinico.md` §2 (owner: validación MD; audit R6 — el propio texto admite "not shown to the user" y el scope boundary de Part 2 las excluye del behavior spec).
 
 ##### Q4 goal to subgroup mapping (Rule 38)
 
@@ -703,44 +558,9 @@ Cautions: No apto para principiantes ni intermedios sin base · contraindicado e
 If Q4 has two selections (allowed up to two), the recommended set is the union of both rows, deduplicated.
 
 
-##### Catálogo oficial — Programas de entrenamiento individual (3 bloques · 18 sub-clases)
+##### Catálogo oficial — Programas de entrenamiento individual
 
-Catálogo oficial del cliente. Tres familias de entrenamiento individual; cada una con 6 sub-clases. Se entregan en Block 1 (fuerza), Block 2 (cardio) y un **nuevo Block acuático** (gated por Q6).
-
-**Bloque 1 — Fuerza y desarrollo muscular** (Block 1, mapeo Q4 arriba):
-
-| Sub-clase | Objetivo Q4 | Fuente mapeo |
-| --- | --- | --- |
-| Fuerza integral con pesas | Bajar de peso | clínico (detalle existente) |
-| Rutina por grupos musculares | Mejorar mi estética corporal y definición muscular | clínico |
-| Desarrollo muscular progresivo | Aumentar masa muscular | clínico |
-| Potencia y velocidad | Mejorar mi desempeño atlético | clínico |
-| Fuerza de mantenimiento | Mejorar mi salud cardiovascular | clínico |
-| Fuerza guiada en máquinas | Recuperarme de una lesión o dolor crónico | clínico |
-
-**Bloque 2 — Cardio y resistencia** (Block 2, mapeo Q4 arriba; ajuste fino por Q5 ritmo y Q9 nivel):
-
-| Sub-clase | Perfil (Q4 · Q9) | Fuente mapeo |
-| --- | --- | --- |
-| Cardio continuo moderado | Bajar de peso · principiante/intermedio | inferido |
-| Cardio moderado con intervalos | Estética · intermedio | inferido |
-| Cardio ligero de mantenimiento | Masa muscular / recuperación · cualquier nivel | inferido |
-| Intervalos intensos 4×4 | Desempeño atlético · avanzado (sin contraindicación cardiovascular) | inferido |
-| Base aeróbica 80/20 | Salud cardiovascular · intermedio/avanzado | inferido |
-| Recuperación activa de bajo impacto | Recuperación de lesión · cualquier nivel | inferido |
-
-**Bloque acuático — Entrenamiento acuático** (NUEVO; se activa cuando Q6 = "En la alberca" o "Ambas" y el club resuelto tiene alberca; ver Rule 39 / edge case alberca):
-
-| Sub-clase | Perfil (Q4, acuático) | Fuente mapeo |
-| --- | --- | --- |
-| Nado continuo moderado | Bajar de peso / salud cardiovascular | inferido |
-| Fuerza acuática con equipo | Estética / masa muscular | inferido |
-| Trote acuático por intervalos | Desempeño atlético / cardio | inferido |
-| Potencia y velocidad acuática | Desempeño atlético | inferido |
-| Fuerza combinada: agua y gimnasio | Q6 = "Ambas" (combina seco + agua) | inferido |
-| Movilidad y recuperación acuática | Recuperarme de una lesión o dolor crónico | inferido |
-
-> **Pendiente de confirmación (cliente):** los mapeos `inferido` de Bloque 2 y del Bloque acuático son propuesta por nombre/intensidad; el Bloque 1 ya estaba mapeado. El Bloque acuático introduce dependencia con Q6 — al elegir "En la alberca" el plan se arma con estas sub-clases en vez del Block 2 seco; con "Ambas" puede combinar (Fuerza combinada: agua y gimnasio).
+Tres familias oficiales (Fuerza y desarrollo muscular · Cardio y resistencia · Entrenamiento acuático), 6 sub-clases cada una, mapeadas a los 6 objetivos Q4. El detalle completo (tablas de mapeo y estados `clínico`/`inferido`) vive en `anexo-clinico.md` §3 (audit R9 — datos pendientes de confirmación del cliente). El bloque acuático se activa cuando Q6 = "En la alberca"/"Ambas" y el club resuelto tiene alberca (Rule 39).
 
 ##### Flujo de aplicación del cuestionario — Experiencia Ideal + resumen del lead (conforme a `sw_experiencia_ideal_demo_v6_FINAL.jsx`)
 
@@ -765,7 +585,7 @@ Catálogo oficial del cliente. Tres familias de entrenamiento individual; cada u
 5. **Score por Q4** (`profiles`): top3 = +3, apto = +1, **no apto = descarta la clase**. Multi-Q4 acumula. **Nota (C8):** el algoritmo canónico es Rule 40 (añade desempates Q3 +2, Q5 +1, Q7 +1/+0.5); esta implementación del demo debe extenderse para igualarlo.
 6. Orden por score desc + alfabético → **top 2** + "también encajan" (3–5).
 
-**5. Llamada única al LLM (`callClaude`) — produce el reporte del cliente Y el brief del asesor** (1 sola llamada, Claude Sonnet, `max_tokens` 2000). System-prompt: prohíbe "plan" (usar "tu experiencia ideal"/"rutina"), códigos Qn y jerga técnica; reglas YMYL (no diagnosticar/prescribir; el asesor valida con criterio clínico). Defense-in-depth: `stripQCodes` recursivo borra cualquier Qn que el LLM filtre.
+**5. Llamada única al LLM (`callClaude`) — produce el reporte del cliente Y el brief del asesor** (1 sola llamada; modelo y parámetros en `anexo-ingenieria-crm.md` R12). System-prompt: prohíbe "plan" (usar "tu experiencia ideal"/"rutina"), códigos Qn y jerga técnica; reglas YMYL (no diagnosticar/prescribir; el asesor valida con criterio clínico). Defense-in-depth: `stripQCodes` recursivo borra cualquier Qn que el LLM filtre.
 
 Claves JSON exactas:
 - **Reporte del cliente:** `hook` (≤30 pal., conecta con Q3) · `plan_argument` (≤45, sin "plan", cierra en personalización) · `intent_line` (≤18, refleja Q13/Q14) · `infrastructure_argument` (≤55, cita 49 clubes + clasificación por objetivo + club) · `class_1_connector` / `class_2_connector` (≤15 c/u, "Porque mencionaste que…", solo si Block 3).
@@ -1011,144 +831,7 @@ Matriz de contraindicaciones reorganizada por beneficio sobre el catálogo canó
 
 
 
-Catálogo canónico **51 clases** (49 secas + 2 acuáticas: AQUA ZUMBA, SWIM TRAINERS — ⚠️ audit D1/D2: en la matriz de programación por club actual SOLO AQUA ZUMBA tiene asignación; SWIM TRAINERS y otras 5 oficiales sin datos de disponibilidad, ver «Preguntas abiertas al cliente»), reorganizado por **beneficio** (grupo) y **contraindicación**. Columnas: **l** lesión · **c** cond_cardiovascular (condición médica Q12 — NO confundir con el objetivo Q4 "Mejorar mi salud cardiovascular": CYCLING/INDBIKE son ★ para el objetivo y ● para la condición; audit M5) · **e** embarazo · **p** posparto · **b** bariátrica. **●** = contraindicada. **Fuente:** `clínico` = decisión original del cliente (matriz previa); `inferido` = derivado por tipo de movimiento (este pase), **PENDIENTE de validación médica (MD) antes de producción** por ser YMYL.
-
-> Conteos de clases contraindicadas (catálogo de 51): **lesión 21 · cardiovascular 16 · embarazo 38 · posparto 34 · bariátrica 20**. (Suben respecto a 17/14/21/21/16 porque se completaron las clases antes no listadas; los nuevos valores son mayormente `inferido` y requieren ratificación médica.)
-
-**Fuerza, core y tonificación (8)**
-
-| Clase | l | c | e | p | b | Fuente |
-| --- | :-: | :-: | :-: | :-: | :-: | --- |
-| BODY PUMP | | | ● | ● | ● | inferido |
-| CORE | | | ● | ● | ● | clínico |
-| CX WORX | | | ● | ● | ● | clínico |
-| FUNTRAC | | | ● | ● | ● | clínico |
-| KINETIC CHAIN | ● | ● | ● | ● | ● | clínico |
-| KINETIC PUMP | | | ● | ● | ● | inferido |
-| TONE | | | ● | ● | | inferido |
-| TOTAL BARRE | | | ● | ● | ● | inferido |
-
-**Cardio, combate, cycling y step (12)**
-
-| Clase | l | c | e | p | b | Fuente |
-| --- | :-: | :-: | :-: | :-: | :-: | --- |
-| BODY ATTACK | ● | ● | ● | ● | ● | clínico |
-| BODY COMBAT | ● | ● | ● | ● | ● | clínico |
-| BODY STEP | ● | | | ● | | clínico |
-| CYCLING | | ● | | | | inferido |
-| INDBIKE | | ● | | | | inferido |
-| POWER CYCLING | | ● | | | | clínico |
-| POWER JUMP | ● | ● | ● | ● | ● | clínico |
-| RACE WALKER | | ● | | | | inferido |
-| RPM | | ● | | | | clínico |
-| STEP | ● | | | ● | | clínico |
-| STRONG NATION | ● | ● | ● | ● | ● | clínico |
-| ZUMBA STEP | ● | | ● | ● | ● | clínico |
-
-**Mente-cuerpo, yoga, pilates y stretch (13)**
-
-| Clase | l | c | e | p | b | Fuente |
-| --- | :-: | :-: | :-: | :-: | :-: | --- |
-| AEROYOGA | ● | ● | ● | ● | ● | clínico |
-| ASHTANGA YOGA | | | ● | | | clínico |
-| BALL PILATES | | | ● | ● | ● | inferido |
-| BODY BALANCE | | | ● | | | inferido |
-| HATHA YOGA | | | ● | | | inferido |
-| KINETIC BALL | | | ● | ● | | inferido |
-| MAT PILATES | | | ● | ● | ● | inferido |
-| NATURAL MOTION | | | ● | | | inferido |
-| REFORMER PILATES | | | ● | ● | ● | inferido |
-| STRETCH | | | | | | inferido |
-| TAI CHI | | | | | | inferido |
-| VINYASA YOGA | | | ● | | | inferido |
-| YOGA RESTAURATIVA | | | | | | inferido |
-
-**Baile (14)**
-
-| Clase | l | c | e | p | b | Fuente |
-| --- | :-: | :-: | :-: | :-: | :-: | --- |
-| AERO DANCE | ● | | ● | ● | | inferido |
-| AQUA ZUMBA | | | | | | inferido |
-| BAILE DE SALÓN | | | | | | inferido |
-| BELLY DANCE | | | ● | | | clínico |
-| BODY JAM | ● | | ● | ● | | inferido |
-| FIT DANCE | ● | | ● | ● | | inferido |
-| JAZZ | ● | | ● | ● | | clínico |
-| POUND | | | ● | ● | | inferido |
-| RITMOS LATINOS | ● | | ● | ● | | inferido |
-| SENSUAL DANCE | | | ● | ● | | inferido |
-| SH'BAM | ● | ● | ● | ● | ● | clínico |
-| URBAN DANCE | ● | | ● | ● | | clínico |
-| ZUMBA FITNESS | ● | | ● | ● | | inferido |
-| ZUMBA TONING | ● | | ● | ● | | inferido |
-
-**Alta intensidad, atletismo y acuática (4)**
-
-| Clase | l | c | e | p | b | Fuente |
-| --- | :-: | :-: | :-: | :-: | :-: | --- |
-| ALPHA TRAINER | ● | ● | ● | ● | ● | clínico |
-| GRIT | ● | ● | ● | ● | ● | clínico |
-| SWIM TRAINERS | | ● | | | | inferido |
-| TRAINT BOOST | ● | ● | ● | ● | ● | clínico |
-
-**Fichas de clases grupales (Block 3) — perfil por objetivo Q4 + nivel.** Leyenda: ★ top (prioridad) · ✓ apto · — no apto (se descarta para ese objetivo). Nivel: P/I/A. 💧 acuática. Mapeado del demo a las 51 canónicas (nombres crudos del demo reconciliados; 6 no-canónicas descartadas).
-
-| Clase | Nivel | Bajar peso | Estética/def. | Masa | Desempeño | Cardiovascular | Lesión |
-| --- | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| AERO DANCE | PI | ✓ | ✓ | — | — | ✓ | — |
-| AEROYOGA | PIA | — | ✓ | — | — | ✓ | ✓ |
-| ALPHA TRAINER | IA | ✓ | ✓ | ★ | ★ | ✓ | — |
-| AQUA ZUMBA 💧 | PI | ✓ | ✓ | — | — | ✓ | ✓ |
-| ASHTANGA YOGA | IA | — | ✓ | — | ✓ | ✓ | — |
-| BAILE DE SALÓN | PI | — | — | — | — | ✓ | ✓ |
-| BALL PILATES | PIA | — | ✓ | — | — | ✓ | ✓ |
-| BELLY DANCE | PI | ✓ | ✓ | — | — | ✓ | — |
-| BODY ATTACK | IA | ✓ | ✓ | — | ★ | ✓ | — |
-| BODY BALANCE | PIA | — | ✓ | — | — | ✓ | ✓ |
-| BODY COMBAT | PIA | ★ | ✓ | — | ✓ | ★ | — |
-| BODY JAM | IA | ✓ | ✓ | — | ✓ | ✓ | — |
-| BODY PUMP | PIA | ★ | ★ | ★ | ✓ | ✓ | — |
-| BODY STEP | IA | ✓ | ✓ | — | ✓ | ✓ | — |
-| CORE | PIA | ✓ | ✓ | ✓ | ✓ | — | — |
-| CX WORX | PIA | ✓ | ★ | ✓ | ✓ | — | — |
-| CYCLING | PIA | ✓ | ✓ | — | ✓ | ★ | ✓ |
-| FIT DANCE | PI | ✓ | ✓ | — | — | ✓ | — |
-| FUNTRAC | PIA | ✓ | ✓ | ✓ | ✓ | ✓ | — |
-| GRIT | A | ✓ | ✓ | ✓ | ★ | ✓ | — |
-| HATHA YOGA | PIA | — | ✓ | — | — | ✓ | ★ |
-| INDBIKE | PIA | ★ | ✓ | — | ✓ | ★ | ✓ |
-| JAZZ | IA | — | ✓ | — | — | ✓ | — |
-| KINETIC BALL | PIA | — | ✓ | — | — | ✓ | ✓ |
-| KINETIC CHAIN | IA | ✓ | ✓ | ★ | ✓ | — | — |
-| KINETIC PUMP | PIA | ✓ | ★ | ✓ | ✓ | ✓ | — |
-| MAT PILATES | PIA | — | ✓ | — | — | ✓ | ★ |
-| NATURAL MOTION | PIA | — | ✓ | — | ✓ | ✓ | ✓ |
-| POUND | PI | ✓ | ✓ | — | — | ✓ | — |
-| POWER CYCLING | IA | ✓ | ✓ | — | ✓ | ✓ | — |
-| POWER JUMP | IA | ✓ | ✓ | — | ✓ | ✓ | — |
-| RACE WALKER | PI | ✓ | ✓ | — | — | ✓ | ✓ |
-| REFORMER PILATES | PIA | — | ✓ | — | — | ✓ | ✓ |
-| RITMOS LATINOS | PI | ✓ | ✓ | — | — | ✓ | — |
-| RPM | IA | ✓ | ✓ | — | ✓ | ✓ | — |
-| SENSUAL DANCE | PI | — | ✓ | — | — | ✓ | — |
-| SH'BAM | PIA | ✓ | ✓ | — | ✓ | ✓ | — |
-| STEP | PIA | ✓ | ✓ | — | — | ✓ | — |
-| STRETCH | PIA | — | — | — | — | — | ✓ |
-| STRONG NATION | IA | ✓ | ✓ | — | ✓ | ✓ | — |
-| SWIM TRAINERS 💧 | PIA | ✓ | ✓ | — | ✓ | ✓ | ★ |
-| TAI CHI | PIA | — | — | — | — | ✓ | ✓ |
-| TONE | PIA | ✓ | ✓ | ✓ | — | ✓ | — |
-| TOTAL BARRE | PIA | ✓ | ✓ | ✓ | — | ✓ | — |
-| TRAINT BOOST | IA | ✓ | ✓ | ✓ | ✓ | ✓ | — |
-| URBAN DANCE | IA | ✓ | ✓ | — | ✓ | ✓ | — |
-| VINYASA YOGA | IA | ✓ | ✓ | — | ✓ | ✓ | — |
-| YOGA RESTAURATIVA | PIA | — | — | — | — | — | ✓ |
-| ZUMBA FITNESS | PI | ✓ | ✓ | — | — | ✓ | — |
-| ZUMBA STEP | PI | ✓ | ✓ | — | — | ✓ | — |
-| ZUMBA TONING | PI | ✓ | ✓ | — | — | ✓ | — |
-
-
-
+**Contrato del filtro (permanece aquí):** 5 claves de condición — l (lesión), c (cond_cardiovascular), e (embarazo), p (posparto), b (bariátrica) — mapeadas desde Q12/Q12b/Q17; exclusión dura ANTES del ranking (Rule 40 paso 5); las clases excluidas jamás se nombran al usuario. **Los datos** (matriz de 51 clases por beneficio×contraindicación + fichas de perfil por objetivo Q4) viven en `anexo-clinico.md` §1 como única fuente, bajo gate de validación MD bloqueante (audit R7–R8).
 
 ##### Out of the matrix — contextual messaging only (no class filtered)
 
@@ -1156,7 +839,7 @@ GLP-1 (Ozempic, Wegovy, Mounjaro): no classes are filtered. The research-based c
 
 "Otra, la comento en el club" (Q12) and "Otro tratamiento médico para peso" (Q17): open-ended responses trigger an asesor-review soft message: "Mencionaste una condición o tratamiento médico. Tu selección de clases grupales ya excluye las clases contraindicadas, y tu Asesor ajusta los protocolos de pesas y cardio individual en la visita guiada según tu criterio clínico."
 
-Research basis. The matrix is built from a research v2 protocol (7 search queries, 1 verbatim fetch from Les Mills official 2026, 16 verbatim quotes from 9 professional sources: ACOG Committee Opinion 2020, Les Mills official, ASMBS/PMC6147093, ACSM, Cleveland Clinic, NASM, Mount Sinai, Heart Foundation NZ, Obesity Action Coalition). Epistemic labels: [QUOTED] for Les Mills classes covered by official pregnancy modifications; [DERIVED] for non-Les Mills classes classified by dominant movement category; [INFERRED] for subgroups and aquatic blocks from physiological principles. Full audit: research_contraindicaciones_audit.md. Sports-medicine MD validation is **required (blocking gate)** before production YMYL deployment (see open dependencies).
+Research basis: ver `research_contraindicaciones_audit.md` (protocolo v2, 9 fuentes profesionales, etiquetas epistémicas [QUOTED]/[DERIVED]/[INFERRED]) — audit R3. Sports-medicine MD validation is **required (blocking gate)** before production YMYL deployment (see open dependencies).
 
 
 ##### User acquisition and routing
@@ -2033,100 +1716,9 @@ Rules. Rule 1 to Rule 43, with sub-rules 3.1 and 3.2. All numbered globally.
 Code immutability principle. None of the codes above are reassigned if an element is removed or replaced. Removed codes are retired permanently. New codes are added at the end of the relevant series.
 
 
-### Appendix E - Brand Voice and Tone
+### Appendix E - Brand Voice and Tone (contrato)
 
-This guide governs all LLM-generated copy on the Experiencia Ideal result page - hooks, plan arguments, intent lines, connectors and infrastructure arguments - and is referenced by Rules 38 to 43. Question copy, option text and the examples below are production Spanish (MX).
-
-
-##### Brand voice in one sentence
-
-Sports World habla como un entrenador adulto: directo, cercano, sin promesas vacías ni paternalismo. Trata a quien escucha como una persona capaz que está tomando una decisión importante, no como un cliente que necesita ser convencido con superlativos.
-
-
-##### Governing principles
-
-Verdad sobre motivación inflada: decimos lo que el plan logra realmente, no lo que el usuario quiere escuchar. Segunda persona (tú), nunca usted ni "nosotros, los expertos". Frases cortas; un párrafo nunca pasa de 60 palabras. Verbos de acción concretos: construir, sostener, mejorar, recuperar, consolidar, ajustar, mantener. Cero exclamaciones, cero anglicismos, cero promesas en kilos, tallas, plazos o métricas clínicas inventadas.
-
-
-##### Approved vocabulary
-
-construir · sostener · consolidar · mantener · recuperar · ajustar · combinar · clarificar · ritmo · constancia · consistencia · decisión · momento · forma · figura · fuerza · aguante · base · repetición · semana · sesión · objetivo · resultado · trabajo · entrenamiento · crecimiento muscular · ritmo conversacional · intervalos al máximo · intervalos cortos al máximo · técnica controlada · fuerza sostenida en posturas · conciencia corporal · saltos explosivos · cuerpo completo · centro del cuerpo · patrones de movimiento · pérdida de grasa.
-
-
-##### Forbidden vocabulary
-
-Clichés de gimnasio: "show up", "aparecer", "transformación", "mejor versión de ti", "deja de poner excusas", "el primer paso es lo más difícil", "atrévete". Anglicismos: "journey", "lifestyle", "fitness journey", "mindset", "wellness path", "workout", "core", "lean", "fit". Paternalismo: "no te preocupes", "es normal sentir...", "todos empezamos así", "tú puedes". Cursilería: "tu sueño te espera", "atrévete a ser tú", "el primer paso de un gran viaje". Clínica falsa: "quema X calorías", "pierde X kilos", "tonifica en X semanas". Jerga técnica (prohibida en todo copy de cara al usuario o al asesor): hipertrofia · Zone 2 · Zone 1-2 · HIIT · VO2max · plyometría · pliométrica · RPE · 1RM · FCmax · déficit calórico · canibalizar (el músculo) · sustrato · concéntrica · control motor · rate of force · propiocepción · isométrica · sobrecarga progresiva · modalidades aeróbicas. En su lugar usar lenguaje accesible: "crecimiento muscular", "ritmo conversacional", "intervalos al máximo", "técnica controlada", "fuerza sostenida en posturas", "conciencia corporal".
-
-
-##### Five rules of redaction
-
-1. Presente y futuro próximo; evita el condicional (podrías, lograrías) salvo en YMYL por compliance. 2. Cita la decisión del usuario, no su deseo: "Elegiste entrenar cinco días" antes que "Quieres bajar de peso". 3. Cada afirmación con un ancla verificable en lo que dijo en el cuestionario. 4. Nunca cierres con signo de exclamación; si la frase necesita una para funcionar, está mal escrita. 5. Entre dos versiones, la más corta.
-
-
-##### LLM system-prompt prohibitions (verbatim)
-
-PROHIBIDO ABSOLUTO: (a) la palabra "plan" en el copy DE CARA AL USUARIO — al entregable nos referimos SIEMPRE como "Experiencia Ideal" (o "tu Experiencia Ideal"); "plan" solo es válido en identificadores internos de código/schema (p. ej. plan_argument) y nunca en texto visible; (b) cualquier código tipo Q1, Q2, Q3, Q4 — son nombres internos del cuestionario y jamás aparecen en el copy, refiérete a cada cosa por su nombre humano; (c) JERGA TÉCNICA: hipertrofia, Zone 2, HIIT, VO2max, plyometría, pliométrica, RPE, 1RM, FCmax, déficit calórico, canibalizar músculo, sustrato, concéntrica, control motor, rate of force, propiocepción, isométrica, sobrecarga progresiva, modalidades aeróbicas. Usa lenguaje accesible: "crecimiento muscular", "ritmo conversacional", "intervalos al máximo", "técnica controlada", "fuerza sostenida en posturas", "conciencia corporal".
-
-RESTRICCIONES YMYL: si el lead tiene condición médica, embarazo/posparto, o tratamiento médico, NO diagnostiques, NO recomiendes intensidades específicas, NO sugieras que el lead "puede hacer todo" — siempre menciona que el asesor valida con criterio clínico en la visita guiada.
-
-
-##### Hook templates by Q3 (approved few-shot examples)
-
-
-| Q3 selection | Approved hook example |
-| --- | --- |
-| Desconectado/a del trabajo y la rutina | El día se queda en la puerta. Lo que entrenas aquí es tuyo, y el cuerpo lo agradece cuando sales. |
-| Renovado/a y de buen ánimo | La energía no se finge: se construye con movimiento. Cada sesión cambia cómo llegas al resto de tu día. |
-| Confiado/a en que mi cuerpo no me va a fallar | La confianza en tu cuerpo se gana con constancia, calibrada a tu punto de partida. No es fuerza máxima: es base sostenida. |
-| Más a gusto conmigo mismo/a | Sentirte mejor contigo no llega de golpe. Se construye en cada sesión sostenida y en cada semana que vuelves. |
-| Parte de una comunidad saludable | Entrenar acompañado sostiene la constancia. En el club hay gente en el mismo camino, a tu ritmo, sin competir. |
-
-LLM variations are allowed if they match tone (calm, sober, adult), length (30 words or fewer), structure (truth plus connection to the plan) and the vocabulary rules above.
-
-
-##### Before / after pairs
-
-
-| Wrong | Right |
-| --- | --- |
-| ¡Bienvenida, Sofía! Estamos emocionados de acompañarte en este journey. | Sofía, esta es tu Experiencia Ideal. |
-| Tu mejor versión te está esperando. | Lo que buscas tiene un camino claro. Este es el tuyo. |
-| ¡Quema hasta 600 calorías por sesión! | Sesión de 45 min que sostiene gasto energético. |
-| Esta clase te ayudará a tonificar y sentirte increíble. | Trabaja glúteo, abdomen y pierna en formato grupal. |
-| Recuerda: lo importante es solo empezar. | Tu Experiencia Ideal está lista. La decisión es tuya. |
-| ¡No te rindas, sigue intentándolo! | Si pausas una semana, tu Experiencia Ideal te espera. La retomas donde estabas. |
-
-
-##### LLM connector rules (15 words or fewer, Block 3 cards)
-
-The conector_personal is the only zone where the LLM has prose-generation freedom in Block 3 class cards. It must cite literally one of the user's questionnaire answers; begin with "Porque mencionaste que...", "Considerando que...", "Para tu caso de..." or "Sabiendo que..."; engage syntactically with the next sentence (ficha verbatim); and never introduce new factual information. Valid: "Porque mencionaste que buscas mejorar tu estética corporal,"; "Considerando que prefieres entrenar acompañada en grupo,"; "Para tu objetivo de ganar fuerza con un ritmo moderado,". Invalid: "¡Esto es perfecto para ti!"; "Sabemos que las mujeres como tú buscan..."; "Este plan quemará grasa rápidamente".
-
-
-##### LLM intent-line rules (18 words or fewer, Club Ideal card per Rule 42)
-
-
-| Q13 | Q14 | Intent line template |
-| --- | --- | --- |
-| Solo/Sola, a mi ritmo | Solo/Sola | Tu espacio para entrenar a tu propio ritmo, lejos del ruido del día. |
-| Solo/Sola, a mi ritmo | Con mi amigo/a | Tu Experiencia Ideal es individual; tu amigo/a tiene la suya, en el mismo club. |
-| Solo/Sola, a mi ritmo | Con mi pareja / La familia completa | Tu rutina personal en un club donde tu familia también encuentra lo suyo. |
-| Solo/Sola, a mi ritmo | Yo y mis hijos | Tu rutina a tu ritmo mientras tus hijos tienen FitKidz en el mismo club. |
-| Acompañado/a, en clases o grupo | Solo/Sola | Tu momento sola, con la opción de clases en grupo cuando lo decidas. |
-| Acompañado/a, en clases o grupo | Con mi amigo/a | Entrenar acompañada de tu amigo/a en las clases que escogiste. |
-| Acompañado/a, en clases o grupo | Con mi pareja | Clases y rutina con tu pareja, en el mismo horario. |
-| Acompañado/a, en clases o grupo | Yo y mis hijos / La familia completa | Tu rutina en grupo mientras tus hijos tienen FitKidz en el mismo club. |
-| Me da igual | (any) | LLM omits the intent line and renders the features list directly. |
-
-
-##### Plan-argument rules (hero paragraph)
-
-The hero plan argument explains why the combined plan is most powerful for the user's Q4. It is 1 to 2 sentences, 45 words or fewer; names the three blocks explicitly using their user-facing labels (Rutina por grupos musculares / Caminadora o bicicleta / clases by name), not abstract "ejercicios"; closes affirming personalization - "No es una experiencia genérica: es la combinación que tus respuestas pidieron" (or an approved variant); and uses no superlatives (el mejor, la única forma, lo más efectivo).
-
-
-##### Infrastructure-argument rules
-
-The infrastructure paragraph states what makes Sports World structurally suited to deliver the plan. It is 1 to 2 sentences, 55 words or fewer; cites at least one verifiable differentiator (49 clubs across 13 states, the proprietary class-to-objective classification, infrastructure consistency across all clubs); names the user's specific club and references which of the plan's classes are programmed there in the user's Q7 schedule; never compares directly to named competitors; and never claims what cannot be verified.
-
+El Brand Voice Guide completo (vocabularios aprobado/prohibido, 5 reglas de redacción, prohibiciones verbatim del system prompt — incluida "plan" → "Experiencia Ideal" —, hooks por Q3, before/after, reglas de conectores ≤15 palabras, intent-lines ≤18, plan-argument ≤45, infrastructure ≤55) vive en `anexo-contenido-prompts.md` como única copia (audit R10–R11; la duplicación previa causó drift C13). **Contrato que permanece aquí:** las únicas zonas de generación libre del LLM son hook, plan_argument, intent_line, infrastructure_argument y los 2 conectores de clase, cada una con su límite de palabras; todo hecho factual viene del backend/fichas; lint de vocabulario prohibido obligatorio sobre la salida (F9).
 
 ### Appendix F - Experiencia Ideal HTML Reference Template
 
@@ -2531,7 +2123,7 @@ Severity drives style: warn = red ⚠ + black text; info = gray middot + gray te
 
 ### Appendix H - Single LLM Call — Schema and YMYL-Aware Prompt
 
-One LLM call fires when the questionnaire completes and returns BOTH the client copy and the asesor-brief content. There are NOT separate calls. max_tokens = 2000. The same call populates result.llm with all keys below.
+One LLM call fires when the questionnaire completes and returns BOTH the client copy and the asesor-brief content. There are NOT separate calls. (Modelo y parámetros: `anexo-ingenieria-crm.md` R12.) The same call populates result.llm with all keys below.
 
 
 ##### Output JSON schema (single call)
