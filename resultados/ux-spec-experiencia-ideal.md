@@ -2396,7 +2396,7 @@ Verdad sobre motivación inflada: decimos lo que el plan logra realmente, no lo 
 
 ##### Approved vocabulary
 
-construir · sostener · consolidar · mantener · recuperar · ajustar · combinar · clarificar · ritmo · constancia · consistencia · plan · decisión · momento · forma · figura · fuerza · aguante · base · repetición · semana · sesión · objetivo · resultado · trabajo · entrenamiento. · crecimiento muscular · ritmo conversacional · intervalos al máximo · intervalos cortos al máximo · técnica controlada · fuerza sostenida en posturas · conciencia corporal · saltos explosivos · cuerpo completo · centro del cuerpo · patrones de movimiento · pérdida de grasa.
+construir · sostener · consolidar · mantener · recuperar · ajustar · combinar · clarificar · ritmo · constancia · consistencia · decisión · momento · forma · figura · fuerza · aguante · base · repetición · semana · sesión · objetivo · resultado · trabajo · entrenamiento. · crecimiento muscular · ritmo conversacional · intervalos al máximo · intervalos cortos al máximo · técnica controlada · fuerza sostenida en posturas · conciencia corporal · saltos explosivos · cuerpo completo · centro del cuerpo · patrones de movimiento · pérdida de grasa.
 
 
 ##### Forbidden vocabulary
@@ -2411,7 +2411,7 @@ Clichés de gimnasio: "show up", "aparecer", "transformación", "mejor versión 
 
 ##### LLM system-prompt prohibitions (verbatim)
 
-PROHIBIDO ABSOLUTO: (a) la palabra "plan" en cualquier forma; (b) cualquier código tipo Q1, Q2, Q3, Q4 — son nombres internos del cuestionario y jamás aparecen en el copy, refiérete a cada cosa por su nombre humano; (c) JERGA TÉCNICA: hipertrofia, Zone 2, HIIT, VO2max, plyometría, pliométrica, RPE, 1RM, FCmax, déficit calórico, canibalizar músculo, sustrato, concéntrica, control motor, rate of force, propiocepción, isométrica, sobrecarga progresiva, modalidades aeróbicas. Usa lenguaje accesible: "crecimiento muscular", "ritmo conversacional", "intervalos al máximo", "técnica controlada", "fuerza sostenida en posturas", "conciencia corporal".
+PROHIBIDO ABSOLUTO: (a) la palabra "plan" en el copy DE CARA AL USUARIO — al entregable nos referimos SIEMPRE como "Experiencia Ideal" (o "tu Experiencia Ideal"); "plan" solo es válido en identificadores internos de código/schema (p. ej. plan_argument) y nunca en texto visible; (b) cualquier código tipo Q1, Q2, Q3, Q4 — son nombres internos del cuestionario y jamás aparecen en el copy, refiérete a cada cosa por su nombre humano; (c) JERGA TÉCNICA: hipertrofia, Zone 2, HIIT, VO2max, plyometría, pliométrica, RPE, 1RM, FCmax, déficit calórico, canibalizar músculo, sustrato, concéntrica, control motor, rate of force, propiocepción, isométrica, sobrecarga progresiva, modalidades aeróbicas. Usa lenguaje accesible: "crecimiento muscular", "ritmo conversacional", "intervalos al máximo", "técnica controlada", "fuerza sostenida en posturas", "conciencia corporal".
 
 RESTRICCIONES YMYL: si el lead tiene condición médica, embarazo/posparto, o tratamiento médico, NO diagnostiques, NO recomiendes intensidades específicas, NO sugieras que el lead "puede hacer todo" — siempre menciona que el advisor valida con criterio clínico en la visita guiada.
 
@@ -2424,7 +2424,7 @@ RESTRICCIONES YMYL: si el lead tiene condición médica, embarazo/posparto, o tr
 | Descargar tensión y salir con energía | El cansancio bueno no es el del día acumulado. Es el que llega después de un entrenamiento que tu cuerpo necesitaba. |
 | Llenarme de energía, listo para el día | Lo que entrenas en la mañana define cómo llegas al resto del día. No es magia, es bioquímica sostenida. |
 | Recuperar fuerza para mi día a día | Volver a sentirte capaz no se trata de fuerza máxima. Se trata de constancia, calibrada a tu punto de partida. |
-| Sentirme más seguro / segura de mí mismo | La confianza no llega de golpe. Se construye en cada repetición sostenida y en cada semana que mantienes el plan. |
+| Sentirme más seguro / segura de mí mismo | La confianza no llega de golpe. Se construye en cada repetición sostenida y en cada semana que sostienes tu Experiencia Ideal. |
 | Relajarme y bajarle al estrés | El estrés que cargas se descarga en algún lado. Mejor que sea en una sesión planeada, no en el cuerpo. |
 
 LLM variations are allowed if they match tone (calm, sober, adult), length (30 words or fewer), structure (truth plus connection to the plan) and the vocabulary rules above.
@@ -2435,12 +2435,12 @@ LLM variations are allowed if they match tone (calm, sober, adult), length (30 w
 
 | Wrong | Right |
 | --- | --- |
-| ¡Bienvenida, Sofía! Estamos emocionados de acompañarte en este journey. | Sofía, este es tu plan. |
+| ¡Bienvenida, Sofía! Estamos emocionados de acompañarte en este journey. | Sofía, esta es tu Experiencia Ideal. |
 | Tu mejor versión te está esperando. | Lo que buscas tiene un camino claro. Este es el tuyo. |
 | ¡Quema hasta 600 calorías por sesión! | Sesión de 45 min que sostiene gasto energético. |
 | Esta clase te ayudará a tonificar y sentirte increíble. | Trabaja glúteo, abdomen y pierna en formato grupal. |
-| Recuerda: lo importante es solo empezar. | El plan está hecho. La decisión es tuya. |
-| ¡No te rindas, sigue intentándolo! | Si pausas una semana, el plan te espera. Lo retomas donde estabas. |
+| Recuerda: lo importante es solo empezar. | Tu Experiencia Ideal está lista. La decisión es tuya. |
+| ¡No te rindas, sigue intentándolo! | Si pausas una semana, tu Experiencia Ideal te espera. La retomas donde estabas. |
 
 
 ##### LLM connector rules (15 words or fewer, Block 3 cards)
@@ -2454,7 +2454,7 @@ The conector_personal is the only zone where the LLM has prose-generation freedo
 | Q13 | Q14 | Intent line template |
 | --- | --- | --- |
 | Solo/Sola, a mi ritmo | Solo/Sola, es mi momento | Tu espacio para entrenar a tu propio ritmo, lejos del ruido del día. |
-| Solo/Sola, a mi ritmo | Con mi amigo/a | Tu plan es individual; tu amigo/a tiene el suyo, en el mismo club. |
+| Solo/Sola, a mi ritmo | Con mi amigo/a | Tu Experiencia Ideal es individual; tu amigo/a tiene la suya, en el mismo club. |
 | Solo/Sola, a mi ritmo | Con mi pareja / La familia completa | Tu rutina personal en un club donde tu familia también encuentra lo suyo. |
 | Acompañado/a, en clases o grupo | Solo/Sola, es mi momento | Tu momento sola, con la opción de clases en grupo cuando lo decidas. |
 | Acompañado/a, en clases o grupo | Con mi amigo/a | Entrenar acompañada de tu amigo/a en las clases que escogiste. |
@@ -2465,7 +2465,7 @@ The conector_personal is the only zone where the LLM has prose-generation freedo
 
 ##### Plan-argument rules (hero paragraph)
 
-The hero plan argument explains why the combined plan is most powerful for the user's Q4. It is 1 to 2 sentences, 45 words or fewer; names the three blocks explicitly using their user-facing labels (Hipertrofia / Caminadora o bicicleta / clases by name), not abstract "ejercicios"; closes affirming personalization - "No es un plan genérico: es la combinación que tus respuestas pidieron" (or an approved variant); and uses no superlatives (el mejor, la única forma, lo más efectivo).
+The hero plan argument explains why the combined plan is most powerful for the user's Q4. It is 1 to 2 sentences, 45 words or fewer; names the three blocks explicitly using their user-facing labels (Hipertrofia / Caminadora o bicicleta / clases by name), not abstract "ejercicios"; closes affirming personalization - "No es una experiencia genérica: es la combinación que tus respuestas pidieron" (or an approved variant); and uses no superlatives (el mejor, la única forma, lo más efectivo).
 
 
 ##### Infrastructure-argument rules
@@ -2635,7 +2635,7 @@ body { font-family:'Montserrat',sans-serif; color:var(--black); background:var(-
 
 <p class="hero__kicker">Tu experiencia ideal</p>
 
-<h1 class="hero__name">{user_first_name}, este es tu plan.</h1>
+<h1 class="hero__name">{user_first_name}, esta es tu Experiencia Ideal.</h1>
 
 <p class="hero__hook">{LLM_hook · per Appendix E}</p>
 
