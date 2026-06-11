@@ -371,7 +371,7 @@ Rules are numbered globally so they can be referenced unambiguously.
 | 4.0 | May 2026 | Restructured to industry UX Specification format. Added Project Fundamentals, Conventions, Edge Cases & Error States. Tightened glossary. |
 | 4.1 | May | Strict-adherence revision applying industry best practices (UXmatters / NN/G / |
 |   | 2026 | Atlassian). Corrected brand positioning to Premium fitness (with( Premium |
-|   |   | f ami1 y fitness ]only on FitKidz). Declared mobile-first as the methodology. |
+|   |   | family fitness ]only on FitKidz). Declared mobile-first as the methodology. |
 |   |   | Restructured BES as a global floating widget with /bes as fallback URL, not a destination page. Added BES + WhatsApp reminder behavior with consent. Added |
 |   |   | explicit membership-no-checkout rule. Enumerated the 4 live data points per club. |
 |   |   | Adopted YMYL as canonical term. Refined cross-linking, schema markup, FitKidz IA, |
@@ -814,7 +814,7 @@ The header is fixed to the top of the screen on every page. It contains five ele
 - Sports World logo -  always returns to the home page on click.
 - Tu Sports World (Your Sports World) - opens a side drawer with the 8 main hubs of the site (Rule 4).
 - Disefia tu experiencia (Design your experience) - opens the questionnaire (Rules 18-21).
-- Preguntale a BES (Ask BES) -	opens the BES global widget (Rule 3).
+- Pregúntale a BES (Ask BES) -	opens the BES global widget (Rule 3).
 - Agenda tu visita (Book your visit) -	red pill button leading to the guided-visit booking flow (Rule 6).
 Items 2, 3, and 4 are three parallel paths through the site. They share equal hierarchy: the user picks whichever they prefer. Item 5 is the only conversion action and is treated visually differently.
 
@@ -886,7 +886,7 @@ On hover (desktop) or tap (mobile) over(Tu Sports World1 a side drawer slides in
 - Diario (Journal - editorial articles).
 The drawer is a 560-pixel wide panel on desktop and full screen on mobile. It includes a footer with social links and a privacy notice.
 
-The three header items (Disena tu experiencia), ( Preguntale a BES), and (Agenda tu visi ta) are not in the side drawer. Each piece of navigation lives in exactly one place to avoid duplication.
+The three header items (Diseña tu experiencia), ( Pregúntale a BES), and (Agenda tu visita) are not in the side drawer. Each piece of navigation lives in exactly one place to avoid duplication.
 
 
 ##### Rule 5 - Side drawer behavior
@@ -1300,7 +1300,7 @@ Q4 (goal) > Q16 (location) > class-driven goal pre-mark (the movement-aligned go
 
 Concretely: for the example query, the user lands on the Bajar de peso hub (Q4 wins) with Q16 pre-filled to Polanco. The class-driven goal pre-mark is not applied because the goal-driven landing overrides the class-driven landing.
 
-- The (Diseiia  tu  experiencia) questionnaire
+- The (Diseiia  tu experiencia) questionnaire
 
 #### Rule 18 - The base questionnaire (16 questions)
 
@@ -1384,7 +1384,7 @@ Rule 22 -  Membership pages do not have checkout
 
 The 6 membership pages (1 hub+ 5 plans) display each plan's description, what is included, what is not, the price, the fine print, and a comparison. They do not include a transactional checkout.
 
-The conversion path from a membership page is Agenda tu visi ta guiada, which captures the lead and routes it to the call center or to the relevant club for a guided in-person visit. The actual sale of the membership happens in person at the club or by phone with the call center, not on the site.
+The conversion path from a membership page is Agenda tu visita guiada, which captures the lead and routes it to the call center or to the relevant club for a guided in-person visit. The actual sale of the membership happens in person at the club or by phone with the call center, not on the site.
 
 Rule 23 - The
 
@@ -1395,7 +1395,7 @@ button appears in the contextual menu when:
 
 - The user is on a page that is not an individual club page, and
 - The user is not inside their ideal-experience flow.
-On individual club pages, Tu  Club  ideal  does not appear because the user is already at a club.
+On individual club pages, Tu Club  ideal  does not appear because the user is already at a club.
 
 Instead, 0tros clubes en tu ciudad (Other clubs in your city) or (Other clubs in the area) may appear, depending on Rule 24.
 
@@ -1501,12 +1501,12 @@ button (Rule 6); both lead to the
 
 ##### Rule 27-	appears when the questionnaire is incomplete
 
-As long as the user has not completed the questionnaire, Disena  tu  experiencia appears in the contextual menu of every page. The system needs to capture the questionnaire variables and remind the user that this option is available. Once the questionnaire is complete, [ Disena tu experiencia)stops appearing in the contextual menu (the button stays in the header per Rule 1, but it does not duplicate inside the body).
+As long as the user has not completed the questionnaire, Diseña tu experiencia appears in the contextual menu of every page. The system needs to capture the questionnaire variables and remind the user that this option is available. Once the questionnaire is complete, [ Diseña tu experiencia)stops appearing in the contextual menu (the button stays in the header per Rule 1, but it does not duplicate inside the body).
 
 
 ##### Rule 28-	appears when the questionnaire is complete
 
-Once the user has completed the questionnaire, Volver a tu experiencia ideal (Back to your ideal experience) appears in the contextual menu. It replaces the Disena tu experiencia button. It takes the user back to their personalized plan output.
+Once the user has completed the questionnaire, Volver a tu experiencia ideal (Back to your ideal experience) appears in the contextual menu. It replaces the Diseña tu experiencia button. It takes the user back to their personalized plan output.
 
 Rule 29-	-  when it appears
 
@@ -1514,7 +1514,7 @@ Each Journal article carries one or more tags that associate it with relevant pa
 
 •	•
 
-When a user lands on a page and at least one Journal article exists with a tag matching that page, the contextual menu shows the Articulos o informaci6n util button, which expands to display the relevant articles. If no articles are tagged for that page, the button does not appear.
+When a user lands on a page and at least one Journal article exists with a tag matching that page, the contextual menu shows the Artículos o información útil button, which expands to display the relevant articles. If no articles are tagged for that page, the button does not appear.
 
 
 ##### Rule 30 -  FitKidz-specific buttons
@@ -1608,7 +1608,7 @@ Questionnaire state
 
 Global contextual-menu buttons
 
-No questionnaire		Tu Club ideal (where applicable)· Disena tu experiencia ·[ Agenda tu visita guiada)· Articulos  o  informaci6n  util (ifanytaggedarticles exist) • page-specific buttons
+No questionnaire		Tu Club ideal (where applicable)· Diseña tu experiencia ·[ Agenda tu visita guiada)· Artículos o información útil (ifanytaggedarticles exist) • page-specific buttons
 
 Complete, inside the flow
 
@@ -1735,7 +1735,7 @@ experiencia]·(Agenda tu visita guiada]
 
 experiencia]·(Agenda tu visita guiada]
 
-Tu Club ideal ·( Disena tu experiencia]·(Agenda tu visita guiada]
+Tu Club ideal ·( Diseña tu experiencia]·(Agenda tu visita guiada]
 
 visita  guiada]
 
@@ -1829,9 +1829,9 @@ Already complete
 
 Already complete
 
-(Volver a tu experiencia  ideal]·(Agenda tu visita  guiada]
+(Volver a tu experiencia ideal]·(Agenda tu visita  guiada]
 
-(Volver a tu experiencia  ideal]·(Agenda tu visita  guiada]
+(Volver a tu experiencia ideal]·(Agenda tu visita  guiada]
 
 
 ##### -  Premium Les Mills class
@@ -1842,13 +1842,13 @@ Landing on a class pre-marks Q4 (the movement-aligned goal) from the class's dis
 | State | Questionnaire | Contextual menu |   |
 | --- | --- | --- | --- |
 |   |   |   |   |
-| No questionnaire· no club | 16 questions, Q4 pre-filled and | Tu Club ideal •( Disena tu |   |
+| No questionnaire· no club | 16 questions, Q4 pre-filled and | Tu Club ideal •( Diseña tu |   |
 | selected • no inferred | editable (19 if weight loss) | experiencia]·(Agenda tu |   |
 | location |   | visita guiada] |   |
 |   |   |   |   |
-| No questionnaire·no club | 16 questions, Q4, Q15 and Q16 pre- | Tu Club ideal •( Disena tu |   |
+| No questionnaire·no club | 16 questions, Q4, Q15 and Q16 pre- | Tu Club ideal •( Diseña tu |   |
 | selected· with inferred location | filled and editable (19 if weight loss) | experiencia]·(Agenda tu  visita guiada] |   |
-| No questionnaire·with club | 16 questions, Q4 pre-filled and | Disena tu experiencia |   |
+| No questionnaire·with club | 16 questions, Q4 pre-filled and | Diseña tu experiencia |   |
 | selected | editable (19 if weight loss) | Agenda tu visita guiada |   |
 |   |   |   |   |
 | Complete, inside the flow | Already complete | (Volver a tu experiencia |   |
@@ -1896,7 +1896,7 @@ experiencia]·(Agenda tu visita guiada]
 (volver a tu experiencia ideal]·(Agenda tu visita guiada]
 
 - -  FitKidz
-FitKidz has special behavior: when the user has no club identified, the system forces them through the Tu  Club ideal flow before showing class-specific content. Once they have a club, the Clases FitKidz disponibles button appears with the club's schedule. Landing on FitKidz
+FitKidz has special behavior: when the user has no club identified, the system forces them through the Tu Club ideal flow before showing class-specific content. Once they have a club, the Clases FitKidz disponibles button appears with the club's schedule. Landing on FitKidz
 
 Landing pre-fills Q14 (companion) with the family option. The user can confirm or change.
 
@@ -1912,21 +1912,21 @@ no club selected • no inferred location
 
 No questionnaire· no club selected • with inferred location
 
-showing FitKidz content. If the user invokes[ Disena
+showing FitKidz content. If the user invokes[ Diseña
 
 tu experiencia, it is 16 questions with Q14 pre-
 
 filled and editable (19 if weight loss).
 
-The system surfaces up to 3 proposed clubs per the geographic rules, each with its 3 buttons ([ Conoce el	club)· Agenda una visi ta guiada • [Clases FitKidz disponibles  para tu
+The system surfaces up to 3 proposed clubs per the geographic rules, each with its 3 buttons ([ Conoce el	club)· Agenda una visita guiada • [Clases FitKidz disponibles  para tu
 
-familia) with schedules). If the user invokes Disena tu experiencia, it is 16 questions with Q14, Q15 and Q16 pre-filled and editable (19 if weight loss).
+familia) with schedules). If the user invokes Diseña tu experiencia, it is 16 questions with Q14, Q15 and Q16 pre-filled and editable (19 if weight loss).
 
-[Disena tu experiencia) •[ Agenda tu	visita guiada)
+[Diseña tu experiencia) •[ Agenda tu	visita guiada)
 
-• [Disena tu experiencia) •[ Agenda tu	visita guiada)
+• [Diseña tu experiencia) •[ Agenda tu	visita guiada)
 
-No questionnaire·	The system surfaces up to 3 proposed clubs per the with club selected	geographic rules. If the user invokes [ Disena tu
+No questionnaire·	The system surfaces up to 3 proposed clubs per the with club selected	geographic rules. If the user invokes [ Diseña tu
 
 experiencia), it is 16 questions with Q14 pre-filled and editable (19 if weight loss).
 
@@ -1936,7 +1936,7 @@ Complete, outside	Already complete. the flow
 
 [clases  FitKidz
 
-d ispon ibles) •[ Disena tu experiencia)· [Agenda tu visita guiada)
+d ispon ibles) •[ Diseña tu experiencia)· [Agenda tu visita guiada)
 
 [volver a tu experiencia ideal)· [Clases FitKidz disponibles) •[ Agenda tu	visita guiada)
 
@@ -1969,7 +1969,7 @@ Already complete
 
 Already complete
 
-informaci6n  util) (if any)·( Disefia
+información útil) (if any)·( Disefia
 
 tu experiencia)·(Agenda tu visita guiada)
 
@@ -2009,9 +2009,9 @@ Complete, inside the flow
 
 Already complete
 
-info rmaci6n util]•( Disena tu experiencia]·(Agenda tu visita guiada]
+info rmaci6n util]•( Diseña tu experiencia]·(Agenda tu visita guiada]
 
-informaci6n util]•( Disena tu experiencia]·(Agenda tu visi ta guiada)
+información útil]•( Diseña tu experiencia]·(Agenda tu visita guiada)
 
 visita  guiada)
 
@@ -2044,14 +2044,14 @@ Already complete
 
 Already complete
 
-informaci6n util] (ifany) ·[Disena tu experiencia ]·[ Agenda tu visi ta guiada]
+información útil] (ifany) ·[Diseña tu experiencia ]·[ Agenda tu visita guiada]
 
-info rmaci6n util] (if any)·[ Disena tu experiencia ]·[ Agenda tu visi ta guiada]
+info rmaci6n util] (if any)·[ Diseña tu experiencia ]·[ Agenda tu visita guiada]
 
 (if
 
 - -  Memberships
-Landing on memberships does not allow inferring questionnaire variables. Per Rule 22, the page does not include online checkout- conversion goes through Agenda tu	visi ta  guiada.
+Landing on memberships does not allow inferring questionnaire variables. Per Rule 22, the page does not include online checkout- conversion goes through Agenda tu	visita  guiada.
 
 State	Questionnaire	Contextual menu
 
@@ -2075,13 +2075,13 @@ Already complete
 
 Already complete
 
-Tu Club ideal •( Disena tu experiencia]·( Agenda tu visita guiada]
+Tu Club ideal •( Diseña tu experiencia]·( Agenda tu visita guiada]
 
-Tu Club ideal •( Disena tu experiencia]·( Agenda tu visita guiada]
+Tu Club ideal •( Diseña tu experiencia]·( Agenda tu visita guiada]
 
-(Volver a tu experiencia ideal]·(Agenda tu visi ta guiada]
+(Volver a tu experiencia ideal]·(Agenda tu visita guiada]
 
-(volver a tu experiencia ideal]·(Agenda tu visi ta guiada]
+(volver a tu experiencia ideal]·(Agenda tu visita guiada]
 
 
 ##### - Journal article
@@ -2114,9 +2114,9 @@ experiencia]·( Agenda tu visita guiada]
 
 experiencia]·( Agenda tu visita guiada]
 
-(Volver a tu experiencia ideal]·( Agenda tu visi ta guiada]
+(Volver a tu experiencia ideal]·( Agenda tu visita guiada]
 
-(volver a tu experiencia ideal]·(Agenda tu visi ta guiada]
+(volver a tu experiencia ideal]·(Agenda tu visita guiada]
 
 
 ##### -  BES (when reached via the	fallback URL)
@@ -2149,7 +2149,7 @@ Individual weight-training page (class page type). Per Rule 38, Q13 pre-marks So
 
 | State | Questionnaire | Contextual menu |
 | --- | --- | --- |
-| No questionnaire | 16 questions, Q13 pre-marked Solo/Sola and Q4 pre-marked per subpage, both editable (19 if weight loss) | Tu rutina individual · Disena tu experiencia · Agenda tu visita guiada |
+| No questionnaire | 16 questions, Q13 pre-marked Solo/Sola and Q4 pre-marked per subpage, both editable (19 if weight loss) | Tu rutina individual · Diseña tu experiencia · Agenda tu visita guiada |
 | Complete, inside the flow | Already complete | Volver a tu experiencia ideal · Tu rutina individual · Agenda tu visita guiada |
 | Complete, outside the flow | Already complete | Volver a tu experiencia ideal · Tu rutina individual · Agenda tu visita guiada |
 
@@ -2163,7 +2163,7 @@ Individual aerobic-training page (class page type). Per Rule 38, Q13 pre-marks S
 
 | State | Questionnaire | Contextual menu |
 | --- | --- | --- |
-| No questionnaire | 16 questions, Q13 pre-marked Solo/Sola and Q4 pre-marked per subpage, both editable (19 if weight loss) | Tu rutina individual · Disena tu experiencia · Agenda tu visita guiada |
+| No questionnaire | 16 questions, Q13 pre-marked Solo/Sola and Q4 pre-marked per subpage, both editable (19 if weight loss) | Tu rutina individual · Diseña tu experiencia · Agenda tu visita guiada |
 | Complete, inside the flow | Already complete | Volver a tu experiencia ideal · Tu rutina individual · Agenda tu visita guiada |
 | Complete, outside the flow | Already complete | Volver a tu experiencia ideal · Tu rutina individual · Agenda tu visita guiada |
 
@@ -2215,7 +2215,7 @@ This part documents what the site does when the happy path fails. Every behavior
 
 Trigger: the browser denies the geolocation permission prompt, or the user is on a device or network that does not return a coordinate.
 
-Behavior: the system does not prompt repeatedly. The user lands on Home with the (Tu  Club ideal) flow opened in capture mode (Q15+ Q16 manual entry). A non-intrusive notice explains that
+Behavior: the system does not prompt repeatedly. The user lands on Home with the (Tu Club ideal) flow opened in capture mode (Q15+ Q16 manual entry). A non-intrusive notice explains that
 
 the user can enter their location manually or browse the full club list at	.
 
@@ -2272,7 +2272,7 @@ Trigger: the upstream booking API is down, or the club-catalog endpoint times ou
 
 - Live data per club (Rule 12) -	operating hours, phone, email, class catalog, schedule - defaults to the last successfully cached values.
 - A visible notice on the affected pages explains that schedules may be outdated and asks the user to confirm by phone.
-- The (Agenda tu visi ta guiada) button remains operational but in a degraded mode that captures the lead and contacts the user back manually within one business day (owner: club Asesor/recepción), instead of offering a real-time slot.
+- The (Agenda tu visita guiada) button remains operational but in a degraded mode that captures the lead and contacts the user back manually within one business day (owner: club Asesor/recepción), instead of offering a real-time slot.
 
 ##### - Search query has multiple competing inferences
 
@@ -2288,7 +2288,7 @@ Covered by Rule 34. After 60 days, the user is shown a non-blocking refresh prom
 
 ##### -  JavaScript disabled or older browser
 
-Behavior: the site degrades gracefully. Server-rendered content is fully readable. The drawer becomes a static link list. The questionnaire and BES are unavailable in their interactive form, but their entry points show a graceful notice and direct the user to (Agenda tu  visi ta guiada),
+Behavior: the site degrades gracefully. Server-rendered content is fully readable. The drawer becomes a static link list. The questionnaire and BES are unavailable in their interactive form, but their entry points show a graceful notice and direct the user to (Agenda tu  visita guiada),
 
 which works server-side. The alternative.
 
@@ -2378,7 +2378,7 @@ Term	Meaning
 
 Book your guided visit. The site's primary conversion action. Header version:	.
 
-The Sports World conversational AI assistant. Full user-facing name: Preguntale a BES -	tu	asistente Sports World . Text-first, with voice as an optional input/output mode. Implemented as a global
+The Sports World conversational AI assistant. Full user-facing name: Pregúntale a BES -	tu	asistente Sports World . Text-first, with voice as an optional input/output mode. Implemented as a global
 
 floating widget (Rule 3) with	as a fallback URL.
 
@@ -2402,7 +2402,7 @@ Schema.org markup type used on every adult class page.
 
 Mexican professional license number. Required visible on YMYL pages for the medical reviewer (Rule 14).
 
-(Disena tu experiencia]
+(Diseña tu experiencia]
 
 (External-search inference]
 
@@ -2442,7 +2442,7 @@ Schema.org structured-data markup type for medical-content pages. Sports World u
 
 (Membership pages do not	have checkout]
 
-Per Rule 22. Conversion path is Agenda tu visi ta guiada, not online purchase.
+Per Rule 22. Conversion path is Agenda tu visita guiada, not online purchase.
 
 Methodology declared in Part 2. Mandatory across all design and engineering decisions.
 
