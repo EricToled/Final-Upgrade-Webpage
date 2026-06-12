@@ -134,6 +134,8 @@
 
 ## 1. Design rationale
 
+Why this site exists, for whom, and why each design decision is what it is.
+
 ### 1.1 Reasoning chain (Why → Who → What → How)
 
 - **Why (SMART goal).** Double the site's organic traffic: go from **80,000 to 160,000 monthly visits in 3 months**, making the site far more findable on Google through an SEO strategy applied to a **new hub-and-pagination structure**. Example lever: a **"perder peso" (weight loss) hub** captures one of the highest-volume searches in Mexico and, on its own, has the potential to double traffic.
@@ -660,6 +662,8 @@ Each subsection follows the same order: purpose · behavior · content · states
 
 ### 5.1 Global header
 
+The fixed header present on every page and its responsive behavior.
+
 #### Desktop structure (Rule 1)
 
 The header is fixed to the top of the screen on every page. It contains five elements, from left to right:
@@ -698,6 +702,8 @@ The header stays pinned to the top of the screen as the user scrolls. Its height
 
 ### 5.2 «Tu Sports World» side panel
 
+The navigation panel that gathers the site's 8 main hubs.
+
 #### Contents (Rule 4)
 
 On hover (desktop) or tap (mobile) over «Tu Sports World», a side panel slides in from the right with the site's 8 main hubs:
@@ -726,6 +732,8 @@ The three header items — «Diseña tu experiencia», «Pregúntale a BES» and
 
 ### 5.3 BES — global conversational assistant
 
+The chat widget present on every page and what it can and cannot do.
+
 #### Global widget (Rule 3)
 
 BES («Pregúntale a BES — tu asistente Sports World») is a **global floating widget** present on every one of the 155 pages. It is not a destination page.
@@ -752,6 +760,8 @@ BES is delivered as a separate project with its own specification; this document
 - Out of scope. BES does not use WhatsApp for sales, account changes, or any other communication category.
 
 ### 5.4 Contextual menu (recommendations, not menus)
+
+The action buttons that appear inside each page's body depending on the user's state.
 
 #### What the contextual menu is (Rule 25)
 
@@ -878,6 +888,8 @@ If the new club's catalog cannot produce a viable Block 3 set, the system displa
 
 ### 5.8 Class pages
 
+Behavior of the premium Les Mills class pages and the regular class pages.
+
 #### Premium Les Mills class — matrix
 
 Landing on a class pre-marks Q4 (the movement-aligned goal) from the class's discipline. The user can confirm or change.
@@ -917,6 +929,8 @@ Applies to all 5 hubs (Primeros Pasos, Salud y Bienestar, Estética corporal, Ga
 | Complete, inside / outside the flow | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
 
 ### 5.10 FitKidz
+
+The children's hub and its specific buttons once the user has an identified club.
 
 #### Specific buttons (Rule 30)
 
@@ -1546,6 +1560,8 @@ These questions BLOCK the medical gate (F11) and must be resolved with Sports Wo
 
 ## 12. Metrics and experimentation
 
+The indicators that measure the site's success and how it is experimented on to improve them.
+
 ### 12.1 KPIs
 
 | Metric | Starting point | Target (3 months) | Type |
@@ -1781,6 +1797,7 @@ Both pages split into Página 1 and Página 2 with a digital "Página 2" separat
 
 > ⚠️ **Earlier reference.** The authoritative definition of the result page is the «Visual architecture (client view)» table above (4 px red bar, 4 summary cards, pink CTA banner, blue/green/gray blocks #EEF5FF/#EDF8F1/#F3F4F6, club + family, amber safety section), implemented by the reference prototype. The HTML below is an older compact reference: it retains value as base semantics/CSS, but wherever it differs from that table, **the table wins**. The block colors must be added to `:root`.
 
+```html
 <!DOCTYPE html>
 
 <html lang="es-MX">
@@ -2030,6 +2047,7 @@ body { font-family:'Montserrat',sans-serif; color:var(--black); background:var(-
 </body>
 
 </html>
+```
 
 ## Appendix G — Asesor brief
 
@@ -2077,31 +2095,21 @@ One LLM call fires when the questionnaire completes and returns BOTH the client 
 
 > These keys match the reference prototype's implementation (`callClaude`). The **full flow** (resolveBlocks, rankClasses, flags, `stripQCodes`) is in §4.5. The official catalogs (51 classes; Q1–Q19 questionnaire) are normative.
 
+```json
 {
-
 "hook": "máx 30 palabras, 1-2 frases",
-
 "plan_argument": "máx 45 palabras, por qué la combinación encaja, cierra con personalización",
-
 "intent_line": "máx 18 palabras, modo de acompañamiento + contexto de visita",
-
 "infrastructure_argument": "máx 55 palabras, SW como red de 49 clubes + club específico",
-
 "class_1_connector": "máx 15 palabras, empieza con 'Porque mencionaste que', cita respuesta — OMITIDO si no hay clases",
-
 "class_2_connector": "máx 15 palabras, distinto del 1 — OMITIDO si no hay clases",
-
 "validation_questions": ["exactamente 5 strings, máx 18 palabras c/u"],
-
 "visit_route": [{"title":"string","description":"máx 18 palabras"}, "... (exactamente 4 objetos)"],
-
 "proposal": {"main":"máx 35 palabras","complement":"máx 30 palabras"},
-
 "closing_priorities": ["exactamente 3 strings, máx 12 palabras c/u"],
-
 "closing_script": "máx 60 palabras, primera persona del asesor al lead"
-
 }
+```
 
 ### Adaptive context
 

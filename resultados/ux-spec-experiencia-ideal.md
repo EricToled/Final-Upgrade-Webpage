@@ -136,6 +136,8 @@
 
 ## 1. Racionalidad del diseño
 
+Por qué existe este sitio, para quién, y por qué cada decisión de diseño es la que es.
+
 ### 1.1 Cadena de razonamiento (Por qué → Quién → Qué → Cómo)
 
 - **Por qué (meta SMART).** Duplicar el tráfico orgánico del sitio: pasar de **80,000 a 160,000 visitas mensuales en 3 meses**, haciendo el sitio mucho más encontrable en Google mediante una estrategia SEO aplicada a una **nueva estructura de hubs y paginación**. Palanca de ejemplo: un **hub de "perder peso"** captura una de las búsquedas de mayor volumen en México y, por sí solo, tiene potencial de duplicar el tráfico.
@@ -656,6 +658,8 @@ Cada subsección sigue el mismo orden: propósito · comportamiento · contenido
 
 ### 5.1 Header global
 
+El encabezado fijo presente en todas las páginas y su comportamiento responsivo.
+
 #### Estructura desktop (Rule 1)
 
 El header está fijo en la parte superior de la pantalla en todas las páginas. Contiene cinco elementos, de izquierda a derecha:
@@ -694,6 +698,8 @@ El header permanece anclado en la parte superior de la pantalla mientras el usua
 
 ### 5.2 Panel lateral «Tu Sports World»
 
+El panel de navegación que reúne los 8 hubs principales del sitio.
+
 #### Contenido (Rule 4)
 
 Al pasar el cursor (desktop) o tocar (móvil) «Tu Sports World», un panel lateral se desliza desde la derecha con los 8 hubs principales del sitio:
@@ -722,6 +728,8 @@ Los tres elementos del header — «Diseña tu experiencia», «Pregúntale a BE
 
 ### 5.3 BES — asistente conversacional global
 
+El widget de chat presente en todas las páginas y lo que puede y no puede hacer.
+
 #### Widget global (Rule 3)
 
 BES («Pregúntale a BES — tu asistente Sports World») es un **widget global flotante** presente en cada una de las 155 páginas. No es una página de destino.
@@ -748,6 +756,8 @@ BES se entrega como proyecto aparte con su propia especificación; este document
 - Fuera de alcance. BES no usa WhatsApp para ventas, cambios de cuenta ni ninguna otra categoría de comunicación.
 
 ### 5.4 Menú contextual (recomendaciones, no menús)
+
+Los botones de acción que aparecen dentro del cuerpo de cada página según el estado del usuario.
 
 #### Qué es el menú contextual (Rule 25)
 
@@ -875,6 +885,8 @@ Si el catálogo del nuevo club no puede producir un conjunto viable para el Bloq
 
 ### 5.8 Páginas de clase
 
+Comportamiento de las páginas de las clases Les Mills premium y de las clases regulares.
+
 #### Clase premium Les Mills — matriz
 
 Aterrizar en una clase premarca Q4 (el objetivo alineado con el movimiento) a partir de la disciplina de la clase. El usuario puede confirmar o cambiar.
@@ -914,6 +926,8 @@ Aplica a los 5 hubs (Primeros Pasos, Salud y Bienestar, Estética corporal, Gana
 | Completo, dentro / fuera del flujo | Ya completo | Volver a tu experiencia ideal · Agenda tu visita guiada |
 
 ### 5.10 FitKidz
+
+El hub infantil y sus botones específicos cuando el usuario tiene un club identificado.
 
 #### Botones específicos (Rule 30)
 
@@ -1545,6 +1559,8 @@ Estas preguntas BLOQUEAN el gate médico (F11) y deben resolverse con Sports Wor
 
 ## 12. Métricas y experimentación
 
+Los indicadores con los que se mide el éxito del sitio y cómo se experimenta para mejorarlos.
+
 ### 12.1 KPIs
 
 | Métrica | Punto de partida | Meta (3 meses) | Tipo |
@@ -1780,6 +1796,7 @@ Ambas páginas se dividen en Página 1 y Página 2 con un separador digital "Pá
 
 > ⚠️ **Referencia anterior.** La definición autoritativa de la página de resultado es la tabla «Arquitectura visual (vista del cliente)» de arriba (barra roja de 4 px, 4 tarjetas resumen, banner CTA rosa, bloques azul/verde/gris #EEF5FF/#EDF8F1/#F3F4F6, club + familia, sección de seguridad ámbar), implementada por el prototipo de referencia. El HTML siguiente es una referencia compacta más antigua: vale como semántica y CSS base, pero donde difiera de esa tabla, **gana la tabla**. Los colores de bloque deben añadirse al `:root`.
 
+```html
 <!DOCTYPE html>
 
 <html lang="es-MX">
@@ -2029,6 +2046,7 @@ body { font-family:'Montserrat',sans-serif; color:var(--black); background:var(-
 </body>
 
 </html>
+```
 
 ## Apéndice G — Brief del Asesor
 
@@ -2076,31 +2094,21 @@ Una sola llamada al LLM se dispara cuando se completa el cuestionario y devuelve
 
 > Estas claves coinciden con la implementación del prototipo de referencia (`callClaude`). El **flujo completo** (resolveBlocks, rankClasses, banderas, `stripQCodes`) está en §4.5. Los catálogos oficiales (51 clases; cuestionario Q1–Q19) son normativos.
 
+```json
 {
-
 "hook": "máx 30 palabras, 1-2 frases",
-
 "plan_argument": "máx 45 palabras, por qué la combinación encaja, cierra con personalización",
-
 "intent_line": "máx 18 palabras, modo de acompañamiento + contexto de visita",
-
 "infrastructure_argument": "máx 55 palabras, SW como red de 49 clubes + club específico",
-
 "class_1_connector": "máx 15 palabras, empieza con 'Porque mencionaste que', cita respuesta — OMITIDO si no hay clases",
-
 "class_2_connector": "máx 15 palabras, distinto del 1 — OMITIDO si no hay clases",
-
 "validation_questions": ["exactamente 5 strings, máx 18 palabras c/u"],
-
 "visit_route": [{"title":"string","description":"máx 18 palabras"}, "... (exactamente 4 objetos)"],
-
 "proposal": {"main":"máx 35 palabras","complement":"máx 30 palabras"},
-
 "closing_priorities": ["exactamente 3 strings, máx 12 palabras c/u"],
-
 "closing_script": "máx 60 palabras, primera persona del asesor al lead"
-
 }
+```
 
 ### Contexto adaptativo
 
