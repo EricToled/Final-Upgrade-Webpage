@@ -6,7 +6,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 raw = json.load(open(os.path.join(HERE, '_sections_raw.json'), encoding='utf-8'))
 
 trans = {}
-for f in sorted(glob.glob(os.path.join(HERE, '_trans_*.json'))):
+# merge order: _trans_* first, then _ptrans_* (incremental patches); later files win
+files = sorted(glob.glob(os.path.join(HERE, '_trans_*.json'))) + \
+        sorted(glob.glob(os.path.join(HERE, '_ptrans_*.json')))
+for f in files:
     for o in json.load(open(f, encoding='utf-8')):
         trans[o['id']] = o
 

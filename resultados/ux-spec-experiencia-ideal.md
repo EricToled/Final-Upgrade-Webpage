@@ -47,47 +47,66 @@ El motor de crecimiento es **SEO de estructura**, no publicidad pagada. Hoy el s
 
 ## 2. Personas y Customer Journey
 
-> Audiencia y comportamiento del documento `Consumer Journey — Sports World` (research del cliente), **adaptados a la estructura y al flujo acordados de este spec** (cuestionario Q1–Q19, 6 objetivos Q4, fases `welcome→…→briefing`, 11 tipos de página de Part 3). Donde el journey usa marcos propios (funnel de 8 fases, "10 preguntas", Help Center, member portal, app), **prevalece lo acordado**; del journey se toman los **arquetipos**, las **4 puertas de entrada** y los **insights accionables**.
+> Los arquetipos vienen del research del cliente (`Consumer Journey — Sports World`); aquí se expresan sobre la **maquinaria real del sitio**, porque para eso existe: las **145 páginas firmadas** (Part 3) son la red que captura sus búsquedas en Google (de ahí sale el 80,000→160,000), **«Diseña tu experiencia»** (Q1–Q19) es el instrumento que los convierte en lead cualificado, y el **brief del Asesor** (Appendix G) es lo que el negocio recibe a cambio. Donde el research usa marcos propios (funnel de 8 fases, "10 preguntas", Help Center, member portal), **prevalece lo acordado**.
 
 ### 2.1 Personas
 
-Los dos arquetipos CORE son **quién** es el usuario (segmentación por contexto de vida); el **objetivo Q4** que eligen en el cuestionario es **qué** buscan. Los dos ejes conviven: un mismo arquetipo puede elegir distintos Q4.
+Los arquetipos son **quién** llega (qué teclean en Google y por cuál de las 145 páginas entran); el objetivo **Q4** que marcan es **qué** buscan. Cada persona se especifica como recorrido por el sistema real: búsqueda → routing (Rule 15) → pre-fills (Rule 16/20) → cuestionario → resultado → brief.
 
-**P1 — Family Wellbeing Manager ("Family CWO") · CORE Prioridad 1 · dueño del LTV (3x–4x la membresía individual).**
-35–50 años · NSE AB/C+ · 1–2 hijos de 4–12 · zonas de alta densidad (Del Valle, Polanco, Satélite, Interlomas, Pedregal). JTBD: *"que el club me devuelva tiempo"* — entrenar mientras los hijos están seguros en FitKidz, sin coordinar tres ubicaciones.
-- **Puerta de entrada típica (Rule 16/20):** búsqueda local con foco en hijos ("gym con alberca para niños en [zona]", "natación niños cerca de [escuela]") → aterriza en página de **club** o de **amenidad** (FitKidz/alberca).
-- **Señales típicas en el cuestionario:** Q4 = Bajar de peso · Mejorar mi salud cardiovascular · Recuperarme de una lesión; Q6 suele incluir alberca; Q14 = "Yo y mis hijos" (→ Q14b).
-- **Lo que la Experiencia Ideal debe lograr:** resaltar FitKidz + alberca del club resuelto y un brief que no re-pregunte la logística familiar. Bloqueo absoluto: cualquier señal de inseguridad infantil. Decisión lenta (1–3 semanas; consulta a la pareja).
+**P1 — Family Wellbeing Manager ("Family CWO") · CORE Prioridad 1 · dueña del LTV (3x–4x la membresía individual).**
+35–50 años · NSE AB/C+ · 1–2 hijos de 4–12 · Del Valle, Polanco, Satélite, Interlomas, Pedregal. JTBD: *"que el club me devuelva tiempo"* — entrenar mientras los hijos están seguros en FitKidz, sin coordinar tres ubicaciones.
+
+| Etapa | Qué hace ella | Qué hace el sistema (regla aplicable) |
+| --- | --- | --- |
+| **Busca** | "natación para niños Satélite", "gimnasio para niños cerca de mí" | Routing de búsqueda (Rule 15): niños/familia → **/fitkidz/**; amenidad+ubicación → **/amenidades/alberca/**; si la búsqueda trae ubicación, Q15/Q16 quedan inferidas (Rule 16) |
+| **Aterriza** | Revisa el hub FitKidz (actividades por edad, disciplina y club) o la página del club | Aterrizar en FitKidz **pre-llena Q14 = "Yo y mis hijos"** (Rule 20) → Q14b ya viene armada; aterrizar en **/clubes/[club]/** omite Q15/Q16 (el conteo baja en 2). «Diseña tu experiencia» espera en header y menú contextual sin bloquear la lectura (Rule 27) |
+| **Responde** | Q2 = Mujer → aparece **Q12b** (embarazo/posparto); Q4 típico = Bajar de peso o Salud cardiovascular; Q6 con alberca; Q14b = Sí. Si marca Bajar de peso: **Q17–Q19** (tratamientos GLP-1/bariátrica, peso/estatura/cintura, objetivo de cambio) | `resolveBlocks` (Rule 39): variantes acuáticas de Bloque 1/2 **solo si el club resuelto tiene alberca**; si no, bloques secos + "este club no tiene alberca; revisa otros clubes cerca". En el path de peso, modal YMYL con firma del revisor médico **antes** del resultado (Rule 19) |
+| **Recibe** | Su Experiencia Ideal: "Fuerza integral con pesas" + "Cardio continuo moderado 35–45 min" + top 2 clases del **catálogo real de su club** ya filtradas por contraindicaciones (Q12/Q12b/Q17 → claves l/c/e/p/b) | Card **Club Ideal** (Rule 42: solo datos verificables del backend, nunca inventados); `infrastructure_argument` ≤55 palabras citando el club concreto; sección FitKidz **Estado A** (chips con nombres de clase) o **Estado B** en los 10 clubes sin nombres ("Tu Asesor te compartirá las actividades para tus hijos") |
+| **Decide** (1–3 semanas, consulta a la pareja) | Vuelve al sitio a re-revisar y enseñárselo a su pareja | **Rule 28**: completado el cuestionario, el menú cambia a «Volver a tu experiencia ideal» — regresa a su resultado sin repetir nada. BES responde dudas 24/7 (<1 min) |
+| **Visita** | Visita guiada **con los hijos** | El brief llega marcado con **isFamily + hasKids**; la `visit_route` de 4 pasos incluye resolver la logística de los niños; las 5 `validation_questions` **no re-preguntan** lo capturado en Q14/Q14b. Bloqueo absoluto: cualquier señal de inseguridad infantil |
 
 **P2 — Urban Hybrid Executive ("Third Spacer") · CORE Prioridad 2 · justifica el precio premium.**
 28–45 años · profesional híbrido/remoto · vive o trabaja cerca de un club legacy (Antara, Reforma, Polanco, Santa Fe, Interlomas). JTBD: un **tercer espacio** para romper el día, entrenar y bañarse en condiciones premium.
-- **Puerta de entrada típica:** búsqueda hiperlocal o por amenidad ("gym con vapor en Polanco", "club con coworking") → aterriza en página de **club** o de **amenidad**.
-- **Señales típicas en el cuestionario:** Q4 = Mejorar mi desempeño atlético · Aumentar masa muscular · Mejorar mi estética corporal; Q7 temprano o post-trabajo.
-- **Lo que la Experiencia Ideal debe lograr:** confirmación rápida (agente de voz/WhatsApp), énfasis en amenidades (vapor/sauna/coworking) y multiclub. Decisión más rápida; revisa 5–15 reseñas del club antes de decidir.
 
-**P3 — Asesor (secundaria, interna).** Recibe el brief con banderas y convierte la visita sin re-preguntar lo ya respondido (Appendix G).
-**P4 — Agente de voz / BES (secundaria, sistema).** Atiende 24/7, agenda y transfiere a humano.
+| Etapa | Qué hace él | Qué hace el sistema (regla aplicable) |
+| --- | --- | --- |
+| **Busca** | "gym con vapor Polanco", "gimnasio cerca de mí", "body pump cdmx" | Rule 15: amenidad+ubicación → **/amenidades/sauna-y-vapor/**; "cerca de mí" → club más próximo por geolocalización; clase → **/clases/signature/body-pump/**. Buscar una amenidad **no** infiere preferencia de entrenamiento (Rule 16): su cualificación ocurre íntegra en el cuestionario |
+| **Aterriza** | Hace el **review-check** del club: fotos reales, horarios, clases, reseñas | La página de club muestra el catálogo real del club; aterrizar ahí omite Q15/Q16 (Rule 20). Aterrizar en una página de clase pre-marca el Q4 alineado a esa clase (mapa = fichas Block 3) |
+| **Responde** | Q4 = Aumentar masa muscular o Desempeño atlético; Q7 = Temprano (5:00–8:00) y/o Noche (20:00–22:00); Q10 = "Sí, vengo de otro gimnasio"; a veces Q13 = "Solo, a mi ritmo" | Q13 = Solo → **Bloque 3 OFF** y el menú renombra "Clases recomendadas" → "Tu rutina individual" (Rule 38); Q10 levanta el flag `fromOtherGym` para el brief |
+| **Recibe** | Bloque 1 nombrado por su objetivo: **"Desarrollo muscular progresivo"** (masa) o **"Potencia y velocidad"** (desempeño) + **"Intervalos intensos 4×4"** de cardio — sin jerga (nunca "hipertrofia" ni "HIIT") | `infrastructure_argument` cita los **49 clubes y el acceso multiclub** + las amenidades premium del club resuelto (vapor/sauna); las clases del Bloque 3 respetan su Q7 (desempate de horario en Rule 40) |
+| **Decide** (rápido; revisa 5–15 reseñas) | Agenda en el momento | Fase `schedule` con **confirmación en tiempo real** (API del cliente); BES/WhatsApp confirman en <1 min — exactamente la fricción que lo hace desistir en la competencia |
+| **Visita** | Tour corto, enfocado, sin venta lenta | Brief con `fromOtherGym`: el Asesor abre con lo que le faltaba en su gimnasio anterior; las 3 `closing_priorities` apuntan a cierre en la misma visita |
 
-### 2.2 Customer Journey — el flujo Experiencia Ideal (de Google a la visita guiada)
+**P3 — Asesor (interna).** No diseña la experiencia: la **consume**. Recibe el brief de Appendix G — exactamente **5 `validation_questions`** (≤18 palabras c/u), **`visit_route` de 4 pasos** (Conectar con su objetivo · Tour enfocado · Resolver bloqueador · Cerrar con siguiente paso), `proposal` (main + complement), **3 `closing_priorities`** y un `closing_script` ≤60 palabras en primera persona. Su métrica: convertir la visita **sin re-preguntar ninguna de las 15–21 respuestas** — la consistencia entre los 49 clubes depende de que todos trabajen sobre el mismo brief.
+**P4 — BES (agente conversacional, sistema).** Widget global flotante en las 145 páginas (Rule 3), con URL de fallback para usuarios sin JavaScript. Absorbe lo que el sitio deliberadamente no publica como página (cancelaciones, congelamientos, soporte — Rule 37) y confirma citas. Es la palanca de la meta terciaria: **primera respuesta <1 min, 24/7**.
 
-El journey de este spec es el **flujo on-site acordado**, no el funnel de 8 fases del sector. Ambos arquetipos recorren las **mismas fases**; las divergencias son tácticas (qué se enfatiza).
+### 2.2 Customer Journey — el embudo que conecta las tres metas
+
+Cada fase del journey tiene un instrumento concreto en este spec y sirve a una meta medible de §10:
+
+| Fase | Instrumento concreto | Meta que sirve |
+| --- | --- | --- |
+| **Descubrir** | Las 145 páginas indexables (Part 3): 49 clubes · 51 clases (7 Les Mills signature + 44 regulares) · 5 hubs de objetivo (`/perfiles/…`) · hub `/bajar-de-peso/` (YMYL) · 10 amenidades · FitKidz · Personal Training · 6 de membresías · 20 artículos del diario · Home | **80,000 → 160,000 visitas/mes** (la superficie indexable ES la palanca) |
+| **Cualificar** | «Diseña tu experiencia» (Q1–Q19 adaptativo) con pre-fills por aterrizaje (Rule 20) e inferencia de búsqueda (Rule 16): cada puerta de entrada acorta el cuestionario | **2x leads cualificados** — el lead llega con 15–21 variables, no con un nombre y un teléfono |
+| **Convertir** | `result` (la recomendación es el "pago" por los datos) → `contact_capture` (apellido + celular 10 dígitos + correo) → `schedule` (API en tiempo real) | **2x leads cualificados** (calidad + volumen) |
+| **Cerrar** | `briefing` → brief del Asesor (Appendix G) + BES 24/7 | **Primera respuesta <1 min** |
 
 ```mermaid
 journey
  title Experiencia Ideal — de la búsqueda a la visita guiada
- section Descubrir (SEO · 4 puertas)
+ section Descubrir (SEO · 145 páginas)
  Busca local en Google: 3: CWO, Executive
- Aterriza en hub/club/amenidad (pre-fill Rule 20): 4: CWO, Executive
- section Cualificar (Experiencia Ideal)
- Invitación no bloqueante al cuestionario (1x sesión): 3: CWO, Executive
+ Aterriza en club/amenidad/hub (pre-fill Rule 20): 4: CWO, Executive
+ section Cualificar (Diseña tu experiencia)
+ Invitación no bloqueante (Rule 27): 3: CWO, Executive
  Responde Q1-Q19 adaptativo: 3: CWO, Executive
- Recibe recomendación personalizada: 5: CWO, Executive
+ Recibe su Experiencia Ideal (3 bloques + Club Ideal): 5: CWO, Executive
  section Convertir
- Deja datos de contacto: 4: CWO, Executive
+ Deja apellido + celular + correo: 4: CWO, Executive
  Agenda la visita (confirmacion en tiempo real): 5: CWO, Executive
  section Cerrar (humano)
- Asesor recibe el brief y atiende: 5: Asesor
- Agente de voz confirma la cita: 5: BES
+ Asesor atiende con el brief (sin re-preguntar): 5: Asesor
+ BES confirma la cita en menos de 1 min: 5: BES
 ```
 
 Las fases técnicas exactas (welcome · questionnaire · loading · result · contact_capture · schedule · briefing · error) y todas las bifurcaciones están en **§3** y **§4**.
@@ -98,10 +117,10 @@ Cada insight del research se conecta con una regla/sección **ya acordada** (no 
 
 | Insight del journey | Dónde se atiende en el spec |
 | --- | --- |
-| Las 4 puertas de entrada revelan intención | Pre-fill por aterrizaje (Rule 16/20); el hub SEO de "perder peso" es la puerta de objetivo |
-| Invitación no bloqueante, 1×/sesión, persistente como botón | Comportamiento de invocación del cuestionario (Rule 27) |
-| El review-check del club específico decide la conversión | Página de club (Part 3) con fotos reales, horarios, clases, reseñas y amenidades; Club Ideal (Rule 42) |
-| Consistencia del asesor entre 49 clubes + confirmación rápida | Brief del asesor (Appendix G) + agenda en tiempo real (fase `schedule`, API del cliente) |
+| Las puertas de entrada revelan intención | Pre-fill por aterrizaje (Rule 20) + inferencia de búsqueda (Rule 16); el hub `/bajar-de-peso/` es la puerta de mayor volumen y pre-marca Q4 (activa Q17–Q19) |
+| Invitación no bloqueante, persistente como botón | «Diseña tu experiencia» en header (Rule 1) y menú contextual mientras el cuestionario esté incompleto (Rule 27); al completarlo cambia a «Volver a tu experiencia ideal» (Rule 28) |
+| El review-check del club específico decide la conversión | Página de club (Part 3) con fotos reales, horarios, clases, reseñas y amenidades; card Club Ideal con datos verificables (Rule 42) |
+| Consistencia del asesor entre 49 clubes + confirmación rápida | Brief único (Appendix G) generado en la misma llamada LLM que el reporte; agenda en tiempo real (fase `schedule`, API del cliente) |
 | Meseta silenciosa (sem. 4–6) y regreso tras ausencia = mayor churn | **Fuera del alcance del sitio** (retención/CRM post-venta); se anota como dependencia, no se diseña aquí |
 | Benchmarks: NPS 47.3 · retención 66.4% · 50% churn a 6 meses (sector) | Contexto de §10; el sitio impacta **captación**, no la retención post-venta |
 
@@ -115,7 +134,7 @@ Todas las bifurcaciones (no solo el camino feliz). Fases del sistema: `welcome �
 
 ```mermaid
 flowchart TD
- G[Google / SEO] --> H[Hub temático<br/>ej. Perder Peso]
+ G[Google / SEO] --> H[Hub temático<br/>ej. /bajar-de-peso/]
  H --> W[welcome]
  W --> Q[questionnaire Q1–Q19 · adaptativo]
  Q -->|Q10=pausa| Q11n[Q11 duración de la pausa]
@@ -140,11 +159,11 @@ flowchart TD
 
 ## 4. Especificación por Pantalla / Componente
 
-### 4.1 Hub temático SEO (ej. `/perder-peso`)
+### 4.1 Hub temático SEO (ej. `/bajar-de-peso/`)
 
-- **Propósito:** captar tráfico orgánico de alta intención y enrutarlo a Experiencia Ideal.
+- **Propósito:** captar tráfico orgánico de alta intención y enrutarlo a «Diseña tu experiencia». En el caso de `/bajar-de-peso/`, el aterrizaje pre-marca Q4 = Bajar de peso (Rule 20), lo que activa Q17–Q19 y el modal YMYL antes del resultado.
 - **Layout y dimensiones:** grid de 12 columnas; contenedor máx. 1200px; padding 16px móvil / 24px desktop; breakpoints 360 / 768 / 1024 / 1440px.
-- **Contenido SEO (mínimo por hub):** H1 con la keyword principal; 600–900 palabras de texto útil; FAQ con `schema.org/FAQPage`; enlaces internos a clubes y clases relacionadas; CTA "Descubre tu experiencia ideal".
+- **Contenido SEO (mínimo por hub):** H1 con la keyword principal; 600–900 palabras de texto útil; FAQ con `schema.org/FAQPage`; enlaces internos a clubes y clases relacionadas; CTA «Diseña tu experiencia» (nombre oficial del botón, Rule 1/27).
 - **Metadatos:** `<title>` ≤ 60 car., `meta description` ≤ 155 car., canonical, Open Graph; `lang="es-MX"`.
 - **Paginación:** listados de clubes/clases con `rel=next/prev` lógico y URLs limpias `/clubes/cdmx/pagina-2`; evita contenido duplicado con canonical.
 - **CTA principal:** botón rojo `#E6282A` → inicia `welcome`.
@@ -311,7 +330,7 @@ El cuestionario único es un riesgo de abandono. **Instrumentar drop-off por pre
 
 ### 10.4 A/B testing
 
-**No priorizado por ahora** (decisión de negocio). Cuando se active, marcar como variables: titular del hub, copy del CTA ("Agenda tu visita" vs "Descubre tu experiencia ideal"), e imagen hero. Construir estos componentes desde ya como **slots intercambiables** para no rehacer.
+**No priorizado por ahora** (decisión de negocio). Cuando se active, marcar como variables: titular del hub, copy del CTA («Diseña tu experiencia» vs «Agenda tu visita guiada» como CTA primario del hub), e imagen hero. Construir estos componentes desde ya como **slots intercambiables** para no rehacer.
 
 ---
 
