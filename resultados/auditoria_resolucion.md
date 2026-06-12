@@ -22,7 +22,7 @@ Cierre de **todos** los hallazgos de la auditoría + conformación al cuestionar
 | M1 | Q1 = "¿Cómo te llamas?" / placeholder "Tu nombre completo" (cuestionario oficial) |
 | M2 | Q16 = OR (no XOR) + autocompletado SEPOMEX; helper oficial "Llena uno: código postal o colonia." |
 | M3 | Catálogo = **51 clases**; matriz reorganizada por beneficio + contraindicación; nombres alineados; 3 no-canónicas eliminadas; perfiles Q4 migrados |
-| M4 | +2 páginas de entrenamiento individual: **no** cambian los 11 tipos de página canónicos; conteo documentado (si excede 145, es change-request firmado) |
+| M4 | **Resuelto por precedencia del cliente (2026-06-12):** los acuerdos sobre los documentos prevalecen sobre los entregables del contrato. Las 2 páginas de entrenamiento individual **+ 8 subpáginas de subgrupo** (Rule 20/38) son **páginas firmadas autoritativas** → **tipo de página canónico 12**; total **155** (no 145). Prevalece sobre la cifra limitativa del contrato; el convenio modificatorio es trámite, no condición |
 | M5 | Rule 39: Block 1 OFF por alberca **solo si** el club tiene alberca |
 | M6 | "Optionals" Q17–Q19 aclaradas: condicionales del path de peso, obligatorias dentro de él |
 | M7 | "Advisor" → **"Asesor"** en todo el copy (Rule 9 preservada como anti-patrón) |
@@ -48,7 +48,7 @@ Validación médica YMYL → **bloqueante** (no "recomendada") · "premium blur"
 | X2 (cross-channel WhatsApp/iPad) | **Pendiente** — no-negociable según decisión #16; falta documentar reanudación cross-canal |
 | X3 (URLs firmadas) | **Pendiente** — alinear slugs del spec con la arquitectura firmada (`/blog/`, `/perfiles/...`) |
 | X4/M9 (KPI 3 vs 6 meses) | Resuelto por cliente: 3 meses |
-| X6/M4 (145 páginas) | Documentado; desviación = CR firmado |
+| X6/M4 (páginas firmadas) | **Resuelto:** 155 páginas (145 contractuales + 10 de entrenamiento individual). El spec prevalece sobre la cifra del contrato (regla de precedencia del cliente); convenio modificatorio = trámite |
 | X7 (Estética/Tonificar) | Resuelto (hub renombrado) |
 | X8 (rangos de peso) | Resuelto por cuestionario oficial (1-3/3-6/6-10/10-15/+15) |
 

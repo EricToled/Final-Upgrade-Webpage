@@ -74,11 +74,11 @@ El motor de crecimiento es **SEO de estructura**, no publicidad pagada. Hoy el s
 
 ## 2. Personas y Customer Journey
 
-> Los arquetipos vienen del research del cliente (`Consumer Journey — Sports World`); aquí se expresan sobre la **maquinaria real del sitio**, porque para eso existe: las **145 páginas firmadas** (Part 3) son la red que captura sus búsquedas en Google (de ahí sale el 80,000→160,000), **«Diseña tu experiencia»** (Q1–Q19) es el instrumento que los convierte en lead cualificado, y el **brief del Asesor** (Appendix G) es lo que el negocio recibe a cambio. Donde el research usa marcos propios (funnel de 8 fases, "10 preguntas", Help Center, member portal), **prevalece lo acordado**.
+> Los arquetipos vienen del research del cliente (`Consumer Journey — Sports World`); aquí se expresan sobre la **maquinaria real del sitio**, porque para eso existe: las **155 páginas firmadas** (Part 3) son la red que captura sus búsquedas en Google (de ahí sale el 80,000→160,000), **«Diseña tu experiencia»** (Q1–Q19) es el instrumento que los convierte en lead cualificado, y el **brief del Asesor** (Appendix G) es lo que el negocio recibe a cambio. Donde el research usa marcos propios (funnel de 8 fases, "10 preguntas", Help Center, member portal), **prevalece lo acordado**.
 
 ### 2.1 Personas
 
-Los arquetipos son **quién** llega (qué teclean en Google y por cuál de las 145 páginas entran); el objetivo **Q4** que marcan es **qué** buscan. Cada persona se especifica como recorrido por el sistema real: búsqueda → routing (Rule 15) → pre-fills (Rule 16/20) → cuestionario → resultado → brief.
+Los arquetipos son **quién** llega (qué teclean en Google y por cuál de las 155 páginas entran); el objetivo **Q4** que marcan es **qué** buscan. Cada persona se especifica como recorrido por el sistema real: búsqueda → routing (Rule 15) → pre-fills (Rule 16/20) → cuestionario → resultado → brief.
 
 **P1 — Family Wellbeing Manager ("Family CWO") · CORE Prioridad 1 · dueña del LTV (3x–4x la membresía individual).**
 35–50 años · NSE AB/C+ · 1–2 hijos de 4–12 · Del Valle, Polanco, Satélite, Interlomas, Pedregal. JTBD: *"que el club me devuelva tiempo"* — entrenar mientras los hijos están seguros en FitKidz, sin coordinar tres ubicaciones.
@@ -105,7 +105,7 @@ Los arquetipos son **quién** llega (qué teclean en Google y por cuál de las 1
 | **Visita** | Tour corto, enfocado, sin venta lenta | Brief con `fromOtherGym`: el Asesor abre con lo que le faltaba en su gimnasio anterior; las 3 `closing_priorities` apuntan a cierre en la misma visita |
 
 **P3 — Asesor (interna).** No diseña la experiencia: la **consume**. Recibe el brief de Appendix G — exactamente **5 `validation_questions`** (≤18 palabras c/u), **`visit_route` de 4 pasos** (Conectar con su objetivo · Tour enfocado · Resolver bloqueador · Cerrar con siguiente paso), `proposal` (main + complement), **3 `closing_priorities`** y un `closing_script` ≤60 palabras en primera persona. Su métrica: convertir la visita **sin re-preguntar ninguna de las 15–21 respuestas** — la consistencia entre los 49 clubes depende de que todos trabajen sobre el mismo brief.
-**P4 — BES (agente conversacional, sistema).** Widget global flotante en las 145 páginas (Rule 3), con URL de fallback para usuarios sin JavaScript. Absorbe lo que el sitio deliberadamente no publica como página (cancelaciones, congelamientos, soporte — Rule 37) y confirma citas. Es la palanca de la meta terciaria: **primera respuesta <1 min, 24/7**.
+**P4 — BES (agente conversacional, sistema).** Widget global flotante en las 155 páginas (Rule 3), con URL de fallback para usuarios sin JavaScript. Absorbe lo que el sitio deliberadamente no publica como página (cancelaciones, congelamientos, soporte — Rule 37) y confirma citas. Es la palanca de la meta terciaria: **primera respuesta <1 min, 24/7**.
 
 ### 2.2 Customer Journey — el embudo que conecta las tres metas
 
@@ -113,7 +113,7 @@ Cada fase del journey tiene un instrumento concreto en este spec y sirve a una m
 
 | Fase | Instrumento concreto | Meta que sirve |
 | --- | --- | --- |
-| **Descubrir** | Las 145 páginas indexables (Part 3): 49 clubes · 51 clases (7 Les Mills signature + 44 regulares) · 5 hubs de objetivo (`/perfiles/…`) · hub `/bajar-de-peso/` (YMYL) · 10 amenidades · FitKidz · Personal Training · 6 de membresías · 20 artículos del diario · Home | **80,000 → 160,000 visitas/mes** (la superficie indexable ES la palanca) |
+| **Descubrir** | Las 155 páginas indexables (Part 3): 49 clubes · 51 clases (7 Les Mills signature + 44 regulares) · 5 hubs de objetivo (`/perfiles/…`) · hub `/bajar-de-peso/` (YMYL) · 10 amenidades · FitKidz · Personal Training · 10 de entrenamiento individual · 6 de membresías · 20 artículos del diario · Home | **80,000 → 160,000 visitas/mes** (la superficie indexable ES la palanca) |
 | **Cualificar** | «Diseña tu experiencia» (Q1–Q19 adaptativo) con pre-fills por aterrizaje (Rule 20) e inferencia de búsqueda (Rule 16): cada puerta de entrada acorta el cuestionario | **2x leads cualificados** — el lead llega con 15–21 variables, no con un nombre y un teléfono |
 | **Convertir** | `result` (la recomendación es el "pago" por los datos) → `contact_capture` (apellido + celular 10 dígitos + correo) → `schedule` (API en tiempo real) | **2x leads cualificados** (calidad + volumen) |
 | **Cerrar** | `briefing` → brief del Asesor (Appendix G) + BES 24/7 | **Primera respuesta <1 min** |
@@ -121,7 +121,7 @@ Cada fase del journey tiene un instrumento concreto en este spec y sirve a una m
 ```mermaid
 journey
  title Experiencia Ideal — de la búsqueda a la visita guiada
- section Descubrir (SEO · 145 páginas)
+ section Descubrir (SEO · 155 páginas)
  Busca local en Google: 3: CWO, Executive
  Aterriza en club/amenidad/hub (pre-fill Rule 20): 4: CWO, Executive
  section Cualificar (Diseña tu experiencia)
@@ -376,7 +376,7 @@ Estas preguntas BLOQUEAN el gate médico (F11) y deben resolverse con Sports Wor
 | D5 🟡 | 6 columnas no oficiales en la matriz sin destino: BEAT N BIKE (2), INTRINITY (1), BOX 1 (2), INICIACIÓN TKD (3), ECROSS (3), FÚTBOL (3). ¿Incorporar con ficha+contraindicaciones o excluir? | Catálogo |
 | D6 🟡 | Confirmar 3 mapeos SUPUESTOS: AE YOGA→AEROYOGA (2 clubes) · HATHA YOGA 90→HATHA YOGA (4) · VINYASA YOGA 90→VINYASA YOGA (6) | Catálogo |
 | D7 🟠 | FitKidz: la matriz trae 21 actividades infantiles; **el contrato firma 34** (Anexo Dos I.1, nivel 06) → el número correcto es 34; el cliente debe completar las 13 columnas faltantes de la matriz | Rule 11 / Rule 30 |
-| D8 🟠 | 4 de los 10 amenity hubs sin fuente de datos: sauna/vapor, regaderas/lockers, café, estacionamiento. ¿De dónde salen? | 145 páginas firmadas |
+| D8 🟠 | 4 de los 10 amenity hubs sin fuente de datos: sauna/vapor, regaderas/lockers, café, estacionamiento. ¿De dónde salen? | 155 páginas firmadas |
 | F10 🟡 | kids_classes de los 10 clubes State-B (pregunta rastreada con Gabriela) | FitKidz Estado B |
 | F14 ✅ | **Resuelto por contrato** (Anexo Dos I.2.h): schema de páginas de clase = **Course** (Rule 13 actualizada); Event por sesión queda como complemento opcional de ingeniería | SEO |
 
@@ -523,7 +523,7 @@ The specification uses several immutable identifier systems. Once assigned, a co
 
 | Code system | Format | Examples | Meaning |
 | --- | --- | --- | --- |
-| Pagetype | numeric, 1-11 | Page type 2 = Individual club | Eleven canonical page types in the 145-page scope. BES is a global widget (Rule 3). |
+| Pagetype | numeric, 1-12 | Page type 2 = Individual club | Twelve canonical page types in the 155-page scope. BES is a global widget (Rule 3). |
 | Question | Q+number (+variant) | Q1, Q4, Q12, Q16, Q17, Q18, Q19 | Questionnaire questions. |
 | City classification | CIUDAD- +tag | CIUDAD-1, POCOS, CIUDAD-ZMVM | Number of clubs in the user's city. |
 | Rule | Rule + number | Rule 7, Rule 25 | Global rules in Part 4. |
@@ -569,7 +569,7 @@ The following subjects are intentionally out of scope of this specification.They
 
 ##### Page inventory
 
-The site has 11 canonical page types in scope plus the BES conversational assistant, which is implemented as a global floating widget rather than a destination page.
+The site has 12 canonical page types in scope plus the BES conversational assistant, which is implemented as a global floating widget rather than a destination page.
 
 | # | Page type | Count | URL pattern | Health-sensitive (YMYL) |
 | --- | --- | --- | --- | --- |
@@ -584,8 +584,11 @@ The site has 11 canonical page types in scope plus the BES conversational assist
 | 9 | Personal Training | 1 | /personal-training/ | No |
 | 10 | Memberships | 6 (1 hub + 5 plans) | /membresias/ and /membresias/[plan]/ | No |
 | 11 | Journal article | 20 | /diario/[articulo]/ | Some, yes |
+| 12 | Individual-training page | 10 (2 parent + 8 subgroup subpages) | /entrenamiento-con-pesas-individual/[subgrupo] · /entrenamiento-aerobico-individual/[subgrupo] | No |
 
-Total signed pages:1 + 49 + 10 + 7 + 44 + 1 + 5 + 1 + 1 + 6 + 20 = 145pages.
+Total signed pages: 1 + 49 + 10 + 7 + 44 + 1 + 5 + 1 + 1 + 6 + 20 + 10 = **155 pages**.
+
+> **Precedence (client rule).** What is agreed in these documents has higher authority than any other document, **including the contract deliverables**. The contract (Anexo Dos I.1) fixes a limitative architecture of **145** pages; the **2 individual-training pages + 8 subgroup subpages** the spec adds (audit M4, Rule 20/38) are **authoritative signed pages**, raising the total to **155**. This figure prevails over the contract figure; the increase is formalized via a contract amendment (convenio modificatorio) as a mere formality, without conditioning the spec scope.
 
 BES. The conversational assistant is a global floating widget present on every page (Rule 3). It
 
@@ -610,7 +613,7 @@ The diagram above is a textual approximation. The design team produces the forma
 
 User-facing Block 1 subgroup names follow the six accessible labels mapped from the user's primary Q4 goal (see the Q4-to-subgroup mapping in this section): Cuerpo completo con peso moderado, Definición muscular por zonas, Crecimiento muscular con carga creciente, Fuerza explosiva y velocidad, Mantenimiento de fuerza general, Pesas guiadas con énfasis en técnica controlada. The ACSM prescription, equipment and citation detail that follows is the internal protocol reference and is not shown to the user; the technical names (Fuerza, Hipertrofia, Potencia, Resistencia muscular, LISS, MICT, HIIT, SIT) live only in fichas, subpage URLs and backend identifiers.
 
-Two top-level individual-training pages are added as class pages (they fall under the class page type and do not change the eleven canonical page-type count): entrenamiento-con-pesas-individual and entrenamiento-aerobico-individual. Each maps to six subgroups (one per Q4 goal; official names in «Catálogo oficial — Programas de entrenamiento individual»), grounded in ACSM consensus. A third, aquatic block (Entrenamiento acuático) activates when Q6 = "En la alberca"/"Ambas" and the resolved club has a pool. The weight-training subgroups follow the ACSM Position Stand 2026 (Currier BS, D'Souza AC, Singh MAF, et al. "Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews." Medicine & Science in Sports & Exercise 2026. DOI: 10.1249/MSS.0000000000003897). The aerobic subgroups follow the ACSM/ESSA Joint Expert Statement 2024 ("Physical Activity and Exercise Intensity Terminology." Journal of Science and Medicine in Sport 2024). Pre-fill and result behavior for these pages is governed by Rule 38.
+Two top-level individual-training pages — entrenamiento-con-pesas-individual and entrenamiento-aerobico-individual — plus their 8 subgroup subpages (Rule 20) are **canonical page type 12** in the inventory above. Per the client precedence rule, these are authoritative signed pages and raise the total to 155 (superseding the contract's 145 figure). Each maps to six subgroups (one per Q4 goal; official names in «Catálogo oficial — Programas de entrenamiento individual»), grounded in ACSM consensus. A third, aquatic block (Entrenamiento acuático) activates when Q6 = "En la alberca"/"Ambas" and the resolved club has a pool. The weight-training subgroups follow the ACSM Position Stand 2026 (Currier BS, D'Souza AC, Singh MAF, et al. "Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews." Medicine & Science in Sports & Exercise 2026. DOI: 10.1249/MSS.0000000000003897). The aerobic subgroups follow the ACSM/ESSA Joint Expert Statement 2024 ("Physical Activity and Exercise Intensity Terminology." Journal of Science and Medicine in Sport 2024). Pre-fill and result behavior for these pages is governed by Rule 38.
 
 
 Las **prescripciones técnicas ACSM por subgrupo** (series, repeticiones, %1RM, descansos, equipo, DOIs) viven en `anexo-clinico.md` §2 (owner: validación MD; audit R6 — el propio texto admite "not shown to the user" y el scope boundary de Part 2 las excluye del behavior spec).
@@ -833,7 +836,7 @@ Each page must link to its related pages. No orphan pages.
 | Amenity hubs | 10 |
 | Membership plans | 5 (plus the hub) |
 | Initial Journal articles | 20 |
-| Total signed pages (Workstream B scope) | 145 |
+| Total signed pages (Workstream B scope) | 155 (145 contractuales + 10 de entrenamiento individual, audit M4 — precedencia del spec) |
 
 
 ##### Rule 12 - Live data per club
@@ -854,7 +857,7 @@ Each page type carries the corresponding structured data so search engines can u
 | Page type | Required schema.org types |
 | --- | --- |
 | Club pages | HealthClub + OpeningHoursSpecification (one entry per day per club) + GeoCoordinates (latitude, longitude verified) |
-| Class pages (premium and regular) | **Course** (tipo contractual — Anexo Dos I.2.h del contrato y Appendix C; resuelve F14. Los horarios por club pueden complementarse con Event por sesión programada, decisión de ingeniería) |
+| Class pages (premium and regular) | **Course** (contractual type — Anexo Dos I.2.h and Appendix C; resolves F14. Per-club schedules may be complemented with Event per scheduled session, an engineering decision) |
 | Bajar de peso hub | MedicalWebPage + the medical reviewer with credentials (name and cédula profesional) |
 | Goal hubs and any page with FAQs | FAQPage |
 | Journal articles | Article (author with credentials when applicable) |
@@ -1234,21 +1237,15 @@ Navigation: "← Volver" returns to the result phase; "Continuar" is red when al
 
 ##### Rule 33 - Summary of which buttons appear in each state
 
-Questionnaire state
+> **Reconstructed table** (corrupted zone in the source `.docx`). Each page's contextual menu is a function of **three axes**, not the club alone: (1) the **questionnaire state** (Rule 32), (2) the **page the user arrives from / page type** (the per-page matrices in Part 5 + landing inference, Rule 16/20), and (3) the **resolved club** (Rule 24/42: single-club city, =<3 clubs, >3 clubs, or with inferred location). The table below resolves axis (1); axes (2) and (3) determine the *page-specific buttons* and whether "Tu Club ideal" appears, per each Part 5 matrix.
 
-Global contextual-menu buttons
+| Questionnaire state (Rule 32) | Contextual-menu buttons |
+| --- | --- |
+| **No questionnaire** | "Tu Club ideal" (when axis 3 applies: >3 clubs or inferred location) - "Diseña tu experiencia" (Rule 27) - "Agenda tu visita guiada" - "Articulos o informacion util" (if tagged articles exist) - page-specific buttons (axis 2) |
+| **Complete, inside the flow** (reached this page via a button from their result, e.g. "Ver tu club") | Page-specific buttons (axis 2). "Diseña tu experiencia" is not offered (already complete) and "Volver a tu experiencia ideal" is not duplicated: the user is already navigating inside their experience |
+| **Complete, outside the flow** (completed earlier but arrived via external search or internal navigation) | "Volver a tu experiencia ideal" (Rule 28, replaces "Diseña tu experiencia") - "Articulos o informacion util" (if any) - page-specific buttons (axis 2) |
 
-No questionnaire Tu Club ideal (where applicable)· Diseña tu experiencia ·[ Agenda tu visita guiada)· Artículos o información útil (ifanytaggedarticles exist) • page-specific buttons
-
-Complete, inside the flow
-
-Complete, outside the flow
-
-Volver a tu experiencia ideal • specific buttons
-
-útil) (if any tagged articles exist)· page-specific buttons
-
-·page-
+Cross-cutting rule: "Agenda tu visita guiada" (conversion) and "Pregúntale a BES" are always in the header (Rule 1) and are not duplicated in the body (Rule 7). "Diseña tu experiencia" / "Volver a tu experiencia ideal" live in exactly one place at a time per state (Rule 27/28).
 
 
 ##### System-wide behavior Rule 34 - Stale-plan refresh
