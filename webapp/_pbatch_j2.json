@@ -1,0 +1,30 @@
+[
+ {
+  "id": "2-personas-y-customer-journey",
+  "src_lang": "es",
+  "tgt_lang": "en",
+  "title": "2. Personas y Customer Journey",
+  "body": "> Audiencia y comportamiento del documento `Consumer Journey — Sports World` (research del cliente), **adaptados a la estructura y al flujo acordados de este spec** (cuestionario Q1–Q19, 6 objetivos Q4, fases `welcome→…→briefing`, 11 tipos de página de Part 3). Donde el journey usa marcos propios (funnel de 8 fases, \"10 preguntas\", Help Center, member portal, app), **prevalece lo acordado**; del journey se toman los **arquetipos**, las **4 puertas de entrada** y los **insights accionables**."
+ },
+ {
+  "id": "2-1-personas",
+  "src_lang": "es",
+  "tgt_lang": "en",
+  "title": "2.1 Personas",
+  "body": "Los dos arquetipos CORE son **quién** es el usuario (segmentación por contexto de vida); el **objetivo Q4** que eligen en el cuestionario es **qué** buscan. Los dos ejes conviven: un mismo arquetipo puede elegir distintos Q4.\n\n**P1 — Family Wellbeing Manager (\"Family CWO\") · CORE Prioridad 1 · dueño del LTV (3x–4x la membresía individual).**\n35–50 años · NSE AB/C+ · 1–2 hijos de 4–12 · zonas de alta densidad (Del Valle, Polanco, Satélite, Interlomas, Pedregal). JTBD: *\"que el club me devuelva tiempo\"* — entrenar mientras los hijos están seguros en FitKidz, sin coordinar tres ubicaciones.\n- **Puerta de entrada típica (Rule 16/20):** búsqueda local con foco en hijos (\"gym con alberca para niños en [zona]\", \"natación niños cerca de [escuela]\") → aterriza en página de **club** o de **amenidad** (FitKidz/alberca).\n- **Señales típicas en el cuestionario:** Q4 = Bajar de peso · Mejorar mi salud cardiovascular · Recuperarme de una lesión; Q6 suele incluir alberca; Q14 = \"Yo y mis hijos\" (→ Q14b).\n- **Lo que la Experiencia Ideal debe lograr:** resaltar FitKidz + alberca del club resuelto y un brief que no re-pregunte la logística familiar. Bloqueo absoluto: cualquier señal de inseguridad infantil. Decisión lenta (1–3 semanas; consulta a la pareja).\n\n**P2 — Urban Hybrid Executive (\"Third Spacer\") · CORE Prioridad 2 · justifica el precio premium.**\n28–45 años · profesional híbrido/remoto · vive o trabaja cerca de un club legacy (Antara, Reforma, Polanco, Santa Fe, Interlomas). JTBD: un **tercer espacio** para romper el día, entrenar y bañarse en condiciones premium.\n- **Puerta de entrada típica:** búsqueda hiperlocal o por amenidad (\"gym con vapor en Polanco\", \"club con coworking\") → aterriza en página de **club** o de **amenidad**.\n- **Señales típicas en el cuestionario:** Q4 = Mejorar mi desempeño atlético · Aumentar masa muscular · Mejorar mi estética corporal; Q7 temprano o post-trabajo.\n- **Lo que la Experiencia Ideal debe lograr:** confirmación rápida (agente de voz/WhatsApp), énfasis en amenidades (vapor/sauna/coworking) y multiclub. Decisión más rápida; revisa 5–15 reseñas del club antes de decidir.\n\n**P3 — Asesor (secundaria, interna).** Recibe el brief con banderas y convierte la visita sin re-preguntar lo ya respondido (Appendix G).\n**P4 — Agente de voz / BES (secundaria, sistema).** Atiende 24/7, agenda y transfiere a humano."
+ },
+ {
+  "id": "2-2-customer-journey-el-flujo-experiencia-ideal-de-google-a-",
+  "src_lang": "es",
+  "tgt_lang": "en",
+  "title": "2.2 Customer Journey — el flujo Experiencia Ideal (de Google a la visita guiada)",
+  "body": "El journey de este spec es el **flujo on-site acordado**, no el funnel de 8 fases del sector. Ambos arquetipos recorren las **mismas fases**; las divergencias son tácticas (qué se enfatiza).\n\n```mermaid\njourney\n title Experiencia Ideal — de la búsqueda a la visita guiada\n section Descubrir (SEO · 4 puertas)\n Busca local en Google: 3: CWO, Executive\n Aterriza en hub/club/amenidad (pre-fill Rule 20): 4: CWO, Executive\n section Cualificar (Experiencia Ideal)\n Invitación no bloqueante al cuestionario (1x sesión): 3: CWO, Executive\n Responde Q1-Q19 adaptativo: 3: CWO, Executive\n Recibe recomendación personalizada: 5: CWO, Executive\n section Convertir\n Deja datos de contacto: 4: CWO, Executive\n Agenda la visita (confirmacion en tiempo real): 5: CWO, Executive\n section Cerrar (humano)\n Asesor recibe el brief y atiende: 5: Asesor\n Agente de voz confirma la cita: 5: BES\n```\n\nLas fases técnicas exactas (welcome · questionnaire · loading · result · contact_capture · schedule · briefing · error) y todas las bifurcaciones están en **§3** y **§4**."
+ },
+ {
+  "id": "2-3-insights-del-consumer-journey-que-informan-el-dise-o",
+  "src_lang": "es",
+  "tgt_lang": "en",
+  "title": "2.3 Insights del consumer journey que informan el diseño",
+  "body": "Cada insight del research se conecta con una regla/sección **ya acordada** (no introduce un marco nuevo):\n\n| Insight del journey | Dónde se atiende en el spec |\n| --- | --- |\n| Las 4 puertas de entrada revelan intención | Pre-fill por aterrizaje (Rule 16/20); el hub SEO de \"perder peso\" es la puerta de objetivo |\n| Invitación no bloqueante, 1×/sesión, persistente como botón | Comportamiento de invocación del cuestionario (Rule 27) |\n| El review-check del club específico decide la conversión | Página de club (Part 3) con fotos reales, horarios, clases, reseñas y amenidades; Club Ideal (Rule 42) |\n| Consistencia del asesor entre 49 clubes + confirmación rápida | Brief del asesor (Appendix G) + agenda en tiempo real (fase `schedule`, API del cliente) |\n| Meseta silenciosa (sem. 4–6) y regreso tras ausencia = mayor churn | **Fuera del alcance del sitio** (retención/CRM post-venta); se anota como dependencia, no se diseña aquí |\n| Benchmarks: NPS 47.3 · retención 66.4% · 50% churn a 6 meses (sector) | Contexto de §10; el sitio impacta **captación**, no la retención post-venta |\n\n> **Precedencia.** El journey describe \"10 preguntas, 1 minuto\" y artefactos de otra workstream (Help Center, app, member portal). Prevalece lo acordado: **cuestionario oficial 15+6 (Rule 18)**; Help Center fuera de alcance (Rule 37 — lo cubre BES); app/portal son workstreams aparte. La meta de tiempo de completado se mide contra el instrumento oficial (riesgo de abandono, §10.3).\n\n---"
+ }
+]
