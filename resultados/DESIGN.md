@@ -78,6 +78,39 @@ El **ámbar de seguridad** (`#FFF6E7`) marca la sección sensible (condiciones
 médicas, embarazo, tratamientos). Siempre acompañado de icono "!" y texto:
 la información de seguridad **no se comunica solo con color**.
 
+---
+
+## Alcance: qué define este documento y qué decide el equipo de diseño
+
+Este documento **no impone el diseño gráfico**. La creación de las opciones visuales —layouts a alta fidelidad, sistema de componentes, retícula, tratamiento fotográfico, iconografía, micro-interacciones— es **entregable del equipo de desarrollo/diseño** (Anexo Dos I.3.a: instructivo visual, hoja de estilos y sistema de diseño construidos a partir de los activos de marca del cliente).
+
+| El UX spec **sí** define (vinculante) | El equipo de diseño **decide** (crea las opciones) |
+| --- | --- |
+| Comportamiento, flujos, estados y contenido de cada pantalla | La composición visual concreta de cada pantalla |
+| **Tokens** que son restricciones reales: color de marca (`#E6282A` de los activos del cliente) y los **mínimos de contraste WCAG 2.2 AA** | Escala tipográfica fina, jerarquía visual, densidad, retícula y espaciado dentro de los tokens |
+| Estructura de información (p. ej. resultado = 3 bloques + Club Ideal + sección de seguridad) | Cómo se ven esos bloques: tarjetas, listas, acordeones, etc. |
+| El **copy** verbatim y la voz de marca | Composición, fotografía e ilustración |
+| Los **lineamientos de estilo premium** (abajo) como vara de aprobación | Las propuestas que cumplen esos lineamientos |
+
+> Por eso, todo lo "visual" que aparece en el spec (la *arquitectura visual v6* por pantalla y el **Appendix F HTML/CSS**) es **referencia ilustrativa NO vinculante**, derivada del demo, para comunicar intención y semántica — **no** un diseño a copiar. Lo vinculante es: tokens (marca + accesibilidad) + estructura de contenido + estos lineamientos premium.
+
+## Lineamientos de estilo premium (la vara que buscamos)
+
+El estilo objetivo es **"fitness premium"**: confianza, claridad y aire — más cerca de una revista editorial o de una marca de hospitalidad de lujo que de un gimnasio de catálogo. Estos lineamientos son la referencia contra la cual se aprueban las propuestas de diseño:
+
+1. **Editorial, no catálogo.** El resultado es un *documento personalizado*, no una lista de precios. Composición con jerarquía clara, foco en una idea por sección, y mucho espacio en blanco que comunica calma y exclusividad. El vacío es premium.
+2. **La fotografía manda.** Imágenes reales, humanas y aspiracionales (luz cuidada, instalaciones reales del club). Nunca stock genérico ni saturado. Formatos AVIF/WebP, responsivas (Anexo Dos I.3.g). La foto vende el "tercer espacio"; el texto lo confirma.
+3. **El rojo es un bisturí, no un marcador.** `#E6282A` se reserva para la **acción de conversión** (un CTA dominante por vista). Su escasez es lo que lo hace premium; si está en todas partes, deja de significar "haz clic aquí".
+4. **Tipografía con confianza.** Montserrat: títulos en 900 con peso y contraste alto; cuerpo en 400 con interlineado generoso (1.5). Jerarquía marcada por **tamaño y peso**, no por colores. Titulares grandes y seguros; cuerpo legible y tranquilo.
+5. **Superficies tranquilas, un solo acento.** Fondos casi blancos, tinta `#1D1D1B`, bordes sutiles. Un acento (el rojo) y nada más compitiendo. La sobriedad es señal de calidad.
+6. **Señales de confianza visibles.** Lo premium también es *prueba*: fotos reales del club, horarios reales, reseñas, amenidades, y la firma médica con cédula en contenido YMYL. El diseño debe darles peso visual, no esconderlos.
+7. **Movimiento con propósito.** Micro-interacciones sutiles (transiciones suaves, feedback al tocar), nunca decorativas ni llamativas. Respetar `prefers-reduced-motion`. Las 12 animaciones cortas y el video del hub de peso (Anexo Dos I.3.j/k) refuerzan, no distraen.
+8. **La accesibilidad ES parte de lo premium.** WCAG 2.2 AA es el piso, no un extra: contraste, foco visible, objetivos táctiles ≥44px, "no solo color". Un producto premium no excluye a nadie.
+9. **Consistencia en 49 clubes y 155 páginas.** El sistema de plantillas garantiza que cada club se sienta del mismo nivel. Premium = coherencia; la dispersión visual se lee como descuido.
+10. **Densidad correcta por dispositivo.** Mobile-first (breakpoints 360/768/1024/1440 de los tokens): en móvil, una columna respirada; al crecer, se gana aire y composición, no se amontona.
+
+> Cómo se usa: el equipo de diseño presenta **opciones** (Aprobación 1, Anexo Dos I.4); se aprueban las que cumplan estos 10 puntos + los tokens. El UX spec no preselecciona una de ellas.
+
 ## Reglas para agentes de IA
 
 - Antes de generar UI, valida cada par texto/fondo contra `contrast.min_ratio_aa`
@@ -101,7 +134,7 @@ La duplicación previa de Appendix E/F en este archivo causó drift entre docume
 | Contenido | Vive en |
 | --- | --- |
 | Brand Voice Guide completo (vocabularios, reglas, hooks, prohibiciones del prompt) | `anexo-contenido-prompts.md` |
-| Arquitectura visual v6 de la página de resultado (AUTORITATIVA) + HTML/CSS de referencia legado | `ux-spec-experiencia-ideal.md`, Appendix F |
+| Arquitectura visual v6 de la página de resultado (estructura de contenido autoritativa; HTML/CSS = referencia **ilustrativa no vinculante**, ver «Alcance» arriba) | `ux-spec-experiencia-ideal.md`, Appendix F |
 | Matriz de contraindicaciones + fichas + 18 sub-clases | `anexo-clinico.md` (gate MD) |
 | Parámetros LLM, sanitización, lead scoring | `anexo-ingenieria-crm.md` |
 | Comportamiento (reglas, matrices, edge cases, flujo) | `ux-spec-experiencia-ideal.md` |

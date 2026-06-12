@@ -210,10 +210,11 @@ flowchart TD
 ### 4.3 Result — Experiencia Ideal (`result`)
 
 - **Purpose:** deliver the personalized recommendation (the "value" in exchange for the data).
-- **Visual architecture:** red 4px top bar `#E6282A`; 4 summary cards (goal, level, schedule, who they train with); pink CTA banner `#FFF4F4`/border `#F3B9BC`; 3 block cards (01 blue `#EEF5FF` · 02 green `#EDF8F1` · 03 gray `#F3F4F6`); amber safety section `#FFF6E7` with contextual copy; fixed legal note.
-- **Block 1 (weights):** one of **6 accessible names** based on goal Q4; never lists equipment ("Tu entrenador define los ejercicios y el peso en la primera sesión").
-- **Block 2 (cardio):** machine + duration + pace in plain language ("ritmo conversacional", not "Zone 2").
-- **Block 3 (classes):** top 2 recommended classes after the contraindication filter, or Personal Training as the alternative.
+- **Content structure (binding):** the page presents, in this order, the **elements** that must exist — header with hook (Q3) and an argument that names the 3 blocks; **summary cards** (goal, level, schedule, who they train with); **Club Ideal card** (Rule 42); **3 blocks** (01 weights · 02 cardio · 03 classes); **safety section** (YMYL) when applicable; legal note. *What* appears and *what* it says is binding.
+- **Visual treatment (the design team decides):** *how* those elements look —whether cards, lists or accordions; spacing, grid, hierarchy— is a design-team deliverable, within the tokens and the **premium style guidelines** (`DESIGN.md`). The demo uses a v6 architecture (red bar, cards, banner, soft color blocks, amber section): it is an **illustrative reference, not an imposed design**.
+- **Block 1 (weights):** one of **6 accessible names** per Q4 goal; never lists equipment ("Your trainer defines the exercises and the weight in the first session").
+- **Block 2 (cardio):** machine + duration + pace in plain language ("conversational pace", not "Zone 2").
+- **Block 3 (classes):** top 2 recommended classes after the contraindication filter, or Personal Training as an alternative.
 - **Non-functional requirement:** render with fallback data if the LLM returns invalid JSON (graceful degradation, no blank screen).
 
 ### 4.4 Contact capture (`contact_capture`)
@@ -262,8 +263,10 @@ flowchart TD
 
 ## 6. Design System and Tokens
 
-- **Style guide:** see `DESIGN.md` (tokens + rules for AI agents).
-- **Tokens (DTCG/JSON):** palette extracted from the demo (not invented):
+> **Scope (design ownership).** This section defines **constraints** (brand tokens + accessibility minimums) and the **premium style guidelines**, not the final graphic design. Creating the visual options (hi-fi layouts, components, grid, photography, micro-interactions) is a **deliverable of the development/design team** (Anexo Dos I.3.a). The **premium style guidelines** —the approval bar— live in `DESIGN.md`. Everything "visual" that appears in this spec (per-screen visual architecture, Appendix F HTML/CSS) is a **non-binding illustrative reference** derived from the demo.
+
+- **Style guide and premium guidelines:** see `DESIGN.md` (scope, premium style guidelines, tokens + rules for AI agents).
+- **Tokens (DTCG/JSON):** palette from the **client's brand assets** (not invented). They are constraints, not design proposals:
 
 | Role | Token | Value |
 |---|---|---|
@@ -280,8 +283,6 @@ flowchart TD
 | Safety (YMYL) | `color.safety.bg` | `#FFF6E7` |
 
 - **Reused components/patterns:** block card, summary card, chip/pill, CTA banner, safety section, field with inline validation, progress bar.
-
----
 
 ## 7. Accessibility (WCAG 2.2 AA) — POUR
 
@@ -1656,7 +1657,7 @@ The glossary lists every term and code used in this specification.Terms not in t
 
 This appendix collects every code used in the specification, in one place, for quick lookup.
 
-Page types. 11 in scope (numbered 1-11), see Section 3.1. BES is implemented as a global widget (Rule 3).
+Page types. 12 in scope (numbered 1-12), see Section 3.1. BES is implemented as a global widget (Rule 3).
 
 ##### Questionnaire codes.
 
@@ -1696,7 +1697,9 @@ The complete Brand Voice Guide (approved/forbidden vocabularies, 5 writing rules
 
 ### Appendix F - Experiencia Ideal HTML Reference Template
 
-This is the authoritative shape of the rendered Experiencia Ideal report for the happy-path user (Sofía: Mujer, Intermedio, Estética corporal, Q6 = Ambas, Q13 = Acompañada, club Polanco). Slot tokens in braces are placeholders; their data sources are documented in the experiencia-ideal matrix in Part 5. Only the hook, plan argument, intent line, infrastructure argument and per-class connectors are LLM-generated, each governed by Appendix E; all other content is sourced from the backend or fichas.
+> **Scope (non-binding visual reference).** This appendix is an **illustrative reference** for **content structure, slots and semantics** — it is **not** the prescribed graphic design. Creating the visual design options (hi-fi layout, components, grid, type scale, photography, micro-interactions) is the **design/development team's deliverable** (Anexo Dos I.3.a), guided by the **premium style guidelines** in `DESIGN.md`. What is binding here is *which* content blocks exist and *what* they say; *how* they look is the design team's to design. The HTML/CSS below is legacy reference from the demo.
+
+This is the authoritative **content shape** of the rendered Experiencia Ideal report for the happy-path user (Sofía: Mujer, Intermedio, Estética corporal, Q6 = Ambas, Q13 = Acompañada, club Polanco). Slot tokens in braces are placeholders; their data sources are documented in the experiencia-ideal matrix in Part 5. Only the hook, plan argument, intent line, infrastructure argument and per-class connectors are LLM-generated, each governed by Appendix E; all other content is sourced from the backend or fichas.
 
 ##### Visual structure (happy path)
 

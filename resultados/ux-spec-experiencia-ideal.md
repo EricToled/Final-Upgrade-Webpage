@@ -214,7 +214,8 @@ flowchart TD
 ### 4.3 Resultado — Experiencia Ideal (`result`)
 
 - **Propósito:** entregar la recomendación personalizada (el "valor" a cambio de los datos).
-- **Arquitectura visual:** barra superior roja 4px `#E6282A`; 4 tarjetas resumen (objetivo, nivel, horario, con quién entrena); banner CTA rosa `#FFF4F4`/borde `#F3B9BC`; 3 tarjetas de bloque (01 azul `#EEF5FF` · 02 verde `#EDF8F1` · 03 gris `#F3F4F6`); sección de seguridad ámbar `#FFF6E7` con copy contextual; nota legal fija.
+- **Estructura de contenido (vinculante):** la página presenta, en este orden, los **elementos** que deben existir — encabezado con hook (Q3) y argumento que nombra los 3 bloques; **tarjetas resumen** (objetivo, nivel, horario, con quién entrena); **card Club Ideal** (Rule 42); **3 bloques** (01 pesas · 02 cardio · 03 clases); **sección de seguridad** (YMYL) cuando aplica; nota legal. *Qué* aparece y *qué* dice es vinculante.
+- **Tratamiento visual (lo decide el equipo de diseño):** *cómo* se ven esos elementos —si son tarjetas, listas o acordeones; espaciado, retícula, jerarquía— es entregable del equipo de diseño, dentro de los tokens y los **lineamientos de estilo premium** (`DESIGN.md`). El demo usa una arquitectura v6 (barra roja, tarjetas, banner, bloques de color suaves, sección ámbar): es **referencia ilustrativa, no diseño impuesto**.
 - **Bloque 1 (pesas):** uno de **6 nombres accesibles** según objetivo Q4; nunca lista equipo ("Tu entrenador define los ejercicios y el peso en la primera sesión").
 - **Bloque 2 (cardio):** máquina + duración + ritmo en lenguaje llano ("ritmo conversacional", no "Zone 2").
 - **Bloque 3 (clases):** top 2 clases recomendadas tras el filtro de contraindicaciones, o Personal Training como alternativa.
@@ -266,8 +267,10 @@ flowchart TD
 
 ## 6. Sistema de Diseño y Tokens
 
-- **Guía de estilo:** ver `DESIGN.md` (tokens + reglas para agentes de IA).
-- **Tokens (DTCG/JSON):** paleta extraída del demo (no inventada):
+> **Alcance (propiedad del diseño).** Esta sección define **restricciones** (tokens de marca + mínimos de accesibilidad) y los **lineamientos de estilo premium**, no el diseño gráfico final. La creación de las opciones visuales (layouts a alta fidelidad, componentes, retícula, fotografía, micro-interacciones) es **entregable del equipo de desarrollo/diseño** (Anexo Dos I.3.a). Los **lineamientos de estilo premium** —la vara de aprobación— viven en `DESIGN.md`. Todo lo "visual" que aparezca en este spec (arquitectura visual por pantalla, Appendix F HTML/CSS) es **referencia ilustrativa no vinculante** derivada del demo.
+
+- **Guía de estilo y lineamientos premium:** ver `DESIGN.md` (alcance, lineamientos de estilo premium, tokens + reglas para agentes de IA).
+- **Tokens (DTCG/JSON):** paleta de los **activos de marca del cliente** (no inventada). Son restricciones, no propuestas de diseño:
 
 | Rol | Token | Valor |
 |---|---|---|
@@ -1749,7 +1752,7 @@ The glossary lists every term and code used in this specification.Terms not in t
 
 This appendix collects every code used in the specification, in one place, for quick lookup.
 
-Page types. 11 in scope (numbered 1-11), see Section 3.1. BES is implemented as a global widget (Rule 3).
+Page types. 12 in scope (numbered 1-12), see Section 3.1. BES is implemented as a global widget (Rule 3).
 
 
 ##### Questionnaire codes.
@@ -1791,7 +1794,9 @@ El Brand Voice Guide completo (vocabularios aprobado/prohibido, 5 reglas de reda
 
 ### Appendix F - Experiencia Ideal HTML Reference Template
 
-This is the authoritative shape of the rendered Experiencia Ideal report for the happy-path user (Sofía: Mujer, Intermedio, Estética corporal, Q6 = Ambas, Q13 = Acompañada, club Polanco). Slot tokens in braces are placeholders; their data sources are documented in the experiencia-ideal matrix in Part 5. Only the hook, plan argument, intent line, infrastructure argument and per-class connectors are LLM-generated, each governed by Appendix E; all other content is sourced from the backend or fichas.
+> **Scope (non-binding visual reference).** This appendix is an **illustrative reference** for **content structure, slots and semantics** — it is **not** the prescribed graphic design. Creating the visual design options (hi-fi layout, components, grid, type scale, photography, micro-interactions) is the **design/development team's deliverable** (Anexo Dos I.3.a), guided by the **premium style guidelines** in `DESIGN.md`. What is binding here is *which* content blocks exist and *what* they say; *how* they look is the design team's to design. The HTML/CSS below is legacy reference from the demo.
+
+This is the authoritative **content shape** of the rendered Experiencia Ideal report for the happy-path user (Sofía: Mujer, Intermedio, Estética corporal, Q6 = Ambas, Q13 = Acompañada, club Polanco). Slot tokens in braces are placeholders; their data sources are documented in the experiencia-ideal matrix in Part 5. Only the hook, plan argument, intent line, infrastructure argument and per-class connectors are LLM-generated, each governed by Appendix E; all other content is sourced from the backend or fichas.
 
 
 ##### Visual structure (happy path)
