@@ -350,7 +350,7 @@ El diagrama anterior es una aproximación textual. El equipo de diseño produce 
 
 ### 3.3 Entrenamiento individual: taxonomía de subgrupos
 
-Los nombres de subgrupo del Block 1 visibles para el usuario siguen las seis etiquetas accesibles mapeadas desde el objetivo primario Q4 del usuario (ver el mapeo Q4→subgrupo en esta sección): Cuerpo completo con peso moderado, Definición muscular por zonas, Crecimiento muscular con carga creciente, Fuerza explosiva y velocidad, Mantenimiento de fuerza general, Pesas guiadas con énfasis en técnica controlada. La prescripción ACSM, el equipo y el detalle de citas que sigue son la referencia de protocolo interno y no se muestran al usuario; los nombres técnicos (Fuerza, Hipertrofia, Potencia, Resistencia muscular, LISS, MICT, HIIT, SIT) viven solo en fichas, URLs de subpáginas e identificadores de backend.
+Los nombres del Bloque 1 visibles para el usuario son los **seis nombres oficiales del Catálogo**, mapeados desde el objetivo Q4 primario (tabla de mapeo abajo): **Fuerza integral con pesas** (cuerpo completo, peso moderado) · **Rutina por grupos musculares** (definición por zonas) · **Desarrollo muscular progresivo** (carga creciente) · **Potencia y velocidad** (fuerza explosiva) · **Fuerza de mantenimiento** (fuerza general) · **Fuerza guiada en máquinas** (técnica controlada). La prescripción ACSM, el equipo y el detalle de citas que sigue son la referencia de protocolo interno y no se muestran al usuario; los nombres técnicos (Fuerza, Hipertrofia, Potencia, Resistencia muscular, LISS, MICT, HIIT, SIT) viven solo en fichas, URLs de subpáginas e identificadores de backend.
 
 Dos páginas de nivel superior de entrenamiento individual — entrenamiento-con-pesas-individual y entrenamiento-aerobico-individual — más sus 8 subpáginas de subgrupo (Rule 20) son el **tipo de página canónico 12** del inventario de arriba. Forman parte del alcance firmado de 155 páginas. Cada una mapea a seis subgrupos (uno por objetivo Q4; nombres oficiales en «Catálogo oficial — Programas de entrenamiento individual»), fundamentados en el consenso ACSM. Un tercer bloque, acuático (Entrenamiento acuático), se activa cuando Q6 = "En la alberca"/"Ambas" y el club resuelto tiene alberca. Los subgrupos de pesas siguen el ACSM Position Stand 2026 (Currier BS, D'Souza AC, Singh MAF, et al. "Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews." Medicine & Science in Sports & Exercise 2026. DOI: 10.1249/MSS.0000000000003897). Los subgrupos aeróbicos siguen el ACSM/ESSA Joint Expert Statement 2024 ("Physical Activity and Exercise Intensity Terminology." Journal of Science and Medicine in Sport 2024). El comportamiento de pre-fill y resultado de estas páginas se rige por Rule 38.
 
@@ -547,7 +547,7 @@ Para construir el menú contextual de cada página, el sistema clasifica al usua
 | Completo, dentro del flujo | El usuario completó el cuestionario y llegó a esta página haciendo clic en un botón desde su plan personalizado (p. ej., "Ver tu club" desde la pantalla de resultado). |
 | Completo, fuera del flujo | El usuario completó el cuestionario previamente pero llegó a esta página por una vía distinta (búsqueda externa, navegación interna, etc.). |
 
-Cuando el usuario ha completado el cuestionario, siempre tiene un club identificado - las preguntas del cuestionario que identifican el club (Q15 y Q16) forman parte de las 15 preguntas base. Conteo de preguntas visibles por path (base 15 más condicionales): 15 sin condicionales; +1 si Q11 (pausa); +1 si Q12b (Q2 = Mujer); +1 si Q14b (hijos <12); +3 si Q17–Q19 (Q4 incluye Bajar de peso). Rango 15–21. Ver la tabla normativa de conteo abajo.
+Cuando el usuario ha completado el cuestionario, siempre tiene un club identificado - las preguntas del cuestionario que identifican el club (Q15 y Q16) forman parte de las 15 preguntas base. Conteo de preguntas visibles por path (base 15 más condicionales): 15 sin condicionales; +1 si Q11 (pausa); +1 si Q12b (Q2 ≠ Hombre); +1 si Q14b (hijos <12); +3 si Q17–Q19 (Q4 incluye Bajar de peso). Rango 15–21. Ver la tabla normativa de conteo abajo.
 
 > **Tabla normativa de conteo de preguntas:**
 
@@ -555,7 +555,7 @@ Cuando el usuario ha completado el cuestionario, siempre tiene un club identific
 | --- | --- | :-: |
 | Base — siempre visible | Q1–Q10, Q12, Q13, Q14, Q15, Q16 | **15** |
 | Q10 = "Regreso después de una pausa" | + Q11 | +1 |
-| Q2 = Mujer | + Q12b | +1 |
+| Q2 ≠ Hombre (incluye "Prefiero no mencionarlo") | + Q12b | +1 |
 | Q14 ∈ {"Yo y mis hijos", "La familia completa"} | + Q14b | +1 |
 | Q4 incluye "Bajar de peso" | + Q17, Q18, Q19 | +3 |
 | **Mínimo** (sin condicionales) | | **15** |
@@ -1026,19 +1026,19 @@ Normalmente se llega a BES mediante el widget global (Rule 3), que se superpone 
 ### 5.16 Cuestionario «Diseña tu experiencia»
 
 - **Propósito:** cualificar y personalizar; recolectar los datos del lead.
-- **Estructura (cuestionario oficial):** **15 preguntas base** siempre visibles (Q1–Q10, Q12, Q13, Q14, Q15, Q16) + **6 condicionales**: **Q11** (si Q10=pausa), **Q12b** (si Q2=Mujer), **Q14b** (hijos <12) y **Q17–Q19** (si Q4 incluye Bajar de peso). Total real **15–21** según ruta (ver la tabla normativa de conteo en §4.1).
+- **Estructura (cuestionario oficial):** **15 preguntas base** siempre visibles (Q1–Q10, Q12, Q13, Q14, Q15, Q16) + **6 condicionales**: **Q11** (si Q10=pausa), **Q12b** (si Q2 ≠ Hombre), **Q14b** (si Q14 incluye hijos) y **Q17–Q19** (si Q4 incluye Bajar de peso). Total real **15–21** según ruta (ver la tabla normativa de conteo en §4.1).
 - **Un paso por pantalla**, barra de progreso, botón "Continuar" deshabilitado hasta responder.
 - **Estados interactivos:** opción `default / hover / focus-visible / selected / disabled`; botón `default / hover / active / disabled / loading`.
 - **Validación inline (en tiempo real):**
  - Q1 Nombre: requerido, ≥ 2 caracteres.
  - Q8 días / Q7 horarios: multiselección, ≥ 1.
- - Q16 CP **o** zona (XOR): CP = 5 dígitos numéricos.
+ - Q16 CP **o** colonia (OR — al menos uno; ambos es aceptable): CP = 5 dígitos numéricos.
 - **Contenido (UX writing):** preguntas en español MX, voz activa, sin jerga. Concordancia de género si Q2=Mujer (Q3, Q13, Q14).
 - **Requisito no funcional:** transición entre preguntas < 100 ms; estado persistido en cliente para no perder respuestas al recargar (solo tras aceptar el aviso de privacidad, ver edge case 6.5).
 
 #### Cuestionario base: 15 + 6 condicionales (Rule 18)
 
-Per the official questionnaire, there are 15 base questions always shown (Q1–Q10, Q12, Q13, Q14, Q15, Q16) plus six conditional questions: Q11 (only if Q10 = "Regreso después de una pausa"), Q12b (only if Q2 = Mujer), Q14b (only if Q14 = "Yo y mis hijos" or "La familia completa"), and the weight-loss conditionals Q17, Q18, Q19 (only if Q4 includes "Bajar de peso", see Rule 19). Visible count ranges 15–21 (normative table below). Pregnancy is not an option inside Q12 — captured separately in Q12b. Question copy is production Spanish (MX); type descriptors are engineering notes. All pre-filled answers remain editable.
+Per the official questionnaire, there are 15 base questions always shown (Q1–Q10, Q12, Q13, Q14, Q15, Q16) plus six conditional questions: Q11 (only if Q10 = "Regreso después de una pausa"), Q12b (visible unless Q2 = Hombre — includes "Prefiero no mencionarlo", with neutral phrasing), Q14b (only if Q14 = "Yo y mis hijos" or "La familia completa"), and the weight-loss conditionals Q17, Q18, Q19 (only if Q4 includes "Bajar de peso", see Rule 19). Visible count ranges 15–21 (normative table below). Pregnancy is not an option inside Q12 — captured separately in Q12b. Question copy is production Spanish (MX); type descriptors are engineering notes. All pre-filled answers remain editable.
 
 
 | Code | Question (ES MX) | Type | Options / Field |
@@ -1124,7 +1124,7 @@ Supresión del Bloque 2 (Aeróbico): una condición cardiovascular no estabiliza
 
 Supresión del Bloque 3 (Clases): Q13 = "Solo, a mi ritmo" (o "Sola, a mi ritmo") lo pone OFF, según Rule 38. En caso contrario ON, con selección según Rule 40 y presentación según Rule 41.
 
-Casos especiales de Q6: "Ambas" deja los Bloques 1 y 2 ambos ON, y el bloque aeróbico puede preferir la variante acuática cuando el club tiene alberca; "Lo que mi entrenador recomiende" deja ambos ON con el entorno decidido en la primera sesión; "En piso / área seca" deja ambos ON sin preferencia acuática; "En la alberca" pone el Bloque 1 OFF y el Bloque 2 solo en variante acuática.
+Casos especiales de Q6: "Ambas" deja los Bloques 1 y 2 ambos ON, y el bloque aeróbico puede preferir la variante acuática cuando el club tiene alberca; "Lo que mi entrenador recomiende" deja ambos ON con el entorno decidido en la primera sesión; "En piso / área seca" deja ambos ON sin preferencia acuática; "En la alberca" mantiene los Bloques 1 y 2 ON en su variante acuática cuando el club resuelto tiene alberca (ver el párrafo del Bloque 1 arriba: Q6 nunca suprime el Bloque 1); sin alberca, ambos en seco con la nota correspondiente.
 
 El sistema devuelve las banderas block_1_on, block_2_on y block_3_on. El frontend renderiza solo los bloques cuya bandera es true. Si los tres quedaran suprimidos, el sistema lanza un error y dirige al usuario a un asesor humano.
 
@@ -1191,7 +1191,7 @@ Matriz de estados. Sin cuestionario: la página no es alcanzable; el usuario es 
 
 #### Bloque 1 (pesas) — presentación al usuario
 
-El Bloque 1 muestra el nombre de subgrupo de cara al usuario seleccionado a partir del objetivo Q4 primario del usuario — una de las seis etiquetas accesibles del mapeo de Q4 a subgrupo: Cuerpo completo con peso moderado, Definición muscular por zonas, Crecimiento muscular con carga creciente, Fuerza explosiva y velocidad, Mantenimiento de fuerza general, Pesas guiadas con énfasis en técnica controlada. La razón del bloque explica en lenguaje sencillo el beneficio ligado a Q4. El Bloque 1 nunca lista equipamiento en el copy de cara al usuario: la selección del equipamiento es decisión del entrenador en la primera sesión, y la razón termina con "Tu entrenador define los ejercicios y el peso en la primera sesión" (o una variante aprobada).
+El Bloque 1 muestra el nombre de subgrupo de cara al usuario seleccionado a partir del objetivo Q4 primario del usuario — uno de los seis nombres oficiales del Catálogo según el mapeo Q4→subgrupo (§3.3): Fuerza integral con pesas, Rutina por grupos musculares, Desarrollo muscular progresivo, Potencia y velocidad, Fuerza de mantenimiento, Fuerza guiada en máquinas. La razón del bloque explica en lenguaje sencillo el beneficio ligado a Q4. El Bloque 1 nunca lista equipamiento en el copy de cara al usuario: la selección del equipamiento es decisión del entrenador en la primera sesión, y la razón termina con "Tu entrenador define los ejercicios y el peso en la primera sesión" (o una variante aprobada).
 
 #### Bloque 2 (cardio) — presentación al usuario
 
@@ -1651,7 +1651,7 @@ Este apéndice reúne todos los códigos usados en la especificación, en un sol
 
 Tipos de página. 12 en alcance (numerados 1-12), ver Sección 3.1. BES se implementa como un widget global (Rule 3).
 
-- Q1 (nombre), Q2 (género), Q3 (emoción), Q4 (objetivo), Q5 (ritmo), Q6 (entorno), Q7 (tiempo), Q8 (días), Q9 (nivel), Q10 (historial de gimnasio), Q11 (duración de la pausa, condicional a Q10), Q12 (médica; embarazo/posparto NO está dentro de Q12 — se captura por separado en Q12b cuando Q2 = Mujer), Q13 (acompañamiento propio, con concordancia de género), Q14 (acompañamiento en la visita, con concordancia de género), Q15 (intención geográfica), Q16 (ubicación, XOR código postal / colonia).
+- Q1 (nombre), Q2 (género), Q3 (emoción), Q4 (objetivo), Q5 (ritmo), Q6 (entorno), Q7 (tiempo), Q8 (días), Q9 (nivel), Q10 (historial de gimnasio), Q11 (duración de la pausa, condicional a Q10), Q12 (médica; embarazo/posparto NO está dentro de Q12 — se captura por separado en Q12b cuando Q2 ≠ Hombre), Q13 (acompañamiento propio, con concordancia de género), Q14 (acompañamiento en la visita, con concordancia de género), Q15 (intención geográfica), Q16 (ubicación, OR: al menos uno de código postal / colonia).
 - Las opcionales de pérdida de peso, visibles cuando Q4 incluye Bajar de peso, agregan Q17 (salud actual), Q18 (datos físicos), Q19 (objetivo de cambio). La serie P legada (P1 a P10) y su variante de pérdida de peso (P10-WL, P11-WL, P12-WL) quedan retiradas permanentemente conforme al principio de inmutabilidad de códigos y no se reasignan.
 Códigosdeclasificacióndeciudad. CIUDAD-1, CIUDAD-POCOS, .Ver Rule 24.
 
@@ -1665,7 +1665,7 @@ Códigos de razón de supresión. SUP-Q6-ALBERCA, SUP-Q12-CONTRA, SUP-Q13-SOLO, 
 
 IDs de slots de tarjetas de clase. top_2, tambien_encajan, resto, beneficios_seleccionados, razon_de_match_id, conector_personal. Particiones de selección del Bloque 3 y slots de LLM por tarjeta (Rules 40 y 41).
 
-Sub-códigos condicionales del cuestionario. Q12b (embarazo/posparto, condicional a Q2 = Mujer) y Q14b (hijos menores de 12 años, condicional a Q14 = "Yo y mis hijos" o "La familia completa"). No se reasignan.
+Sub-códigos condicionales del cuestionario. Q12b (embarazo/posparto, condicional a Q2 ≠ Hombre) y Q14b (hijos menores de 12 años, condicional a Q14 = "Yo y mis hijos" o "La familia completa"). No se reasignan.
 
 Claves de condiciones de contraindicación. lesion, cardiovascular, embarazo, posparto, bariatrica. Mapeadas desde Q12, Q12b y Q17; alimentan el filtro duro de Rule 14b.
 

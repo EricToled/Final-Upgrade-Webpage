@@ -350,7 +350,7 @@ The diagram above is a textual approximation. The design team produces the forma
 
 ### 3.3 Individual training: subgroup taxonomy
 
-User-facing Block 1 subgroup names follow the six accessible labels mapped from the user's primary Q4 goal (see the Q4-to-subgroup mapping in this section): Cuerpo completo con peso moderado, Definición muscular por zonas, Crecimiento muscular con carga creciente, Fuerza explosiva y velocidad, Mantenimiento de fuerza general, Pesas guiadas con énfasis en técnica controlada. The ACSM prescription, equipment and citation detail that follows is the internal protocol reference and is not shown to the user; the technical names (Fuerza, Hipertrofia, Potencia, Resistencia muscular, LISS, MICT, HIIT, SIT) live only in fichas, subpage URLs and backend identifiers.
+User-facing Block 1 names are the **six official Catalog names**, mapped from the primary Q4 goal (mapping table below): **Fuerza integral con pesas** (full body, moderate load) · **Rutina por grupos musculares** (definition by zones) · **Desarrollo muscular progresivo** (progressive load) · **Potencia y velocidad** (explosive strength) · **Fuerza de mantenimiento** (general strength) · **Fuerza guiada en máquinas** (controlled technique). The ACSM prescription, equipment and citation detail that follows is the internal protocol reference and is not shown to the user; the technical names (Fuerza, Hipertrofia, Potencia, Resistencia muscular, LISS, MICT, HIIT, SIT) live only in fichas, subpage URLs and backend identifiers.
 
 Two top-level individual-training pages — entrenamiento-con-pesas-individual and entrenamiento-aerobico-individual — plus their 8 subgroup subpages (Rule 20) are **canonical page type 12** in the inventory above. They are part of the signed 155-page scope. Each maps to six subgroups (one per Q4 goal; official names in «Catálogo oficial — Programas de entrenamiento individual»), grounded in ACSM consensus. A third, aquatic block (Entrenamiento acuático) activates when Q6 = "En la alberca"/"Ambas" and the resolved club has a pool. The weight-training subgroups follow the ACSM Position Stand 2026 (Currier BS, D'Souza AC, Singh MAF, et al. "Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews." Medicine & Science in Sports & Exercise 2026. DOI: 10.1249/MSS.0000000000003897). The aerobic subgroups follow the ACSM/ESSA Joint Expert Statement 2024 ("Physical Activity and Exercise Intensity Terminology." Journal of Science and Medicine in Sport 2024). Pre-fill and result behavior for these pages is governed by Rule 38.
 
@@ -547,7 +547,7 @@ To build the contextual menu of each page, the system classifies the user into o
 | Complete, inside the flow | The user completed the questionnaire and reached this page by clicking a button from their personalized plan (e.g., "View your club" from the result screen). |
 | Complete, outside the flow | The user completed the questionnaire previously but reached this page through a different path (external search, internal navigation, etc.). |
 
-When the user has completed the questionnaire, they always have a club identified - the questionnaire questions that identify the club (Q15 and Q16) are part of the 15 base questions. Visible-question count by path (base 15 plus conditionals): 15 with no conditionals; +1 if Q11 (pause); +1 if Q12b (Q2 = Mujer); +1 if Q14b (children <12); +3 if Q17–Q19 (Q4 includes Bajar de peso). Range 15–21. See the normative count table below.
+When the user has completed the questionnaire, they always have a club identified - the questionnaire questions that identify the club (Q15 and Q16) are part of the 15 base questions. Visible-question count by path (base 15 plus conditionals): 15 with no conditionals; +1 if Q11 (pause); +1 if Q12b (Q2 ≠ Hombre); +1 if Q14b (children <12); +3 if Q17–Q19 (Q4 includes Bajar de peso). Range 15–21. See the normative count table below.
 
 > **Normative question-count table:**
 
@@ -555,7 +555,7 @@ When the user has completed the questionnaire, they always have a club identifie
 | --- | --- | :-: |
 | Base — always visible | Q1–Q10, Q12, Q13, Q14, Q15, Q16 | **15** |
 | Q10 = "Regreso después de una pausa" | + Q11 | +1 |
-| Q2 = Mujer | + Q12b | +1 |
+| Q2 ≠ Hombre (includes "Prefiero no mencionarlo") | + Q12b | +1 |
 | Q14 ∈ {"Yo y mis hijos", "La familia completa"} | + Q14b | +1 |
 | Q4 incluye "Bajar de peso" | + Q17, Q18, Q19 | +3 |
 | **Minimum** (no conditionals) | | **15** |
@@ -1029,19 +1029,19 @@ BES is normally reached via the global widget (Rule 3), which overlays the curre
 ### 5.16 «Diseña tu experiencia» questionnaire
 
 - **Purpose:** qualify and personalize; collect the lead's data.
-- **Structure (official questionnaire):** **15 base questions** always visible (Q1–Q10, Q12, Q13, Q14, Q15, Q16) + **6 conditionals**: **Q11** (if Q10=pausa), **Q12b** (if Q2=Mujer), **Q14b** (children <12), and **Q17–Q19** (if Q4 includes Bajar de peso). Actual total **15–21** depending on the path (see the normative count table in §4.1).
+- **Structure (official questionnaire):** **15 base questions** always visible (Q1–Q10, Q12, Q13, Q14, Q15, Q16) + **6 conditionals**: **Q11** (if Q10=pausa), **Q12b** (if Q2 ≠ Hombre), **Q14b** (if Q14 includes children), and **Q17–Q19** (if Q4 includes Bajar de peso). Actual total **15–21** depending on the path (see the normative count table in §4.1).
 - **One step per screen**, progress bar, "Continuar" button disabled until answered.
 - **Interactive states:** option `default / hover / focus-visible / selected / disabled`; button `default / hover / active / disabled / loading`.
 - **Inline (real-time) validation:**
  - Q1 Name: required, ≥ 2 characters.
  - Q8 days / Q7 schedules: multi-select, ≥ 1.
- - Q16 ZIP code **or** zone (XOR): ZIP = 5 numeric digits.
+ - Q16 ZIP code **or** neighborhood (OR — at least one; both is acceptable): ZIP = 5 numeric digits.
 - **Content (UX writing):** questions in Mexican Spanish, active voice, no jargon. Gender agreement if Q2=Mujer (Q3, Q13, Q14).
 - **Non-functional requirement:** transition between questions < 100 ms; state persisted on the client so answers are not lost on reload (only after accepting the privacy notice, see edge case 6.5).
 
 #### Base questionnaire: 15 + 6 conditionals (Rule 18)
 
-Per the official questionnaire, there are 15 base questions always shown (Q1–Q10, Q12, Q13, Q14, Q15, Q16) plus six conditional questions: Q11 (only if Q10 = "Regreso después de una pausa"), Q12b (only if Q2 = Mujer), Q14b (only if Q14 = "Yo y mis hijos" or "La familia completa"), and the weight-loss conditionals Q17, Q18, Q19 (only if Q4 includes "Bajar de peso", see Rule 19). Visible count ranges 15–21 (normative table below). Pregnancy is not an option inside Q12 — captured separately in Q12b. Question copy is production Spanish (MX); type descriptors are engineering notes. All pre-filled answers remain editable.
+Per the official questionnaire, there are 15 base questions always shown (Q1–Q10, Q12, Q13, Q14, Q15, Q16) plus six conditional questions: Q11 (only if Q10 = "Regreso después de una pausa"), Q12b (visible unless Q2 = Hombre — includes "Prefiero no mencionarlo", with neutral phrasing), Q14b (only if Q14 = "Yo y mis hijos" or "La familia completa"), and the weight-loss conditionals Q17, Q18, Q19 (only if Q4 includes "Bajar de peso", see Rule 19). Visible count ranges 15–21 (normative table below). Pregnancy is not an option inside Q12 — captured separately in Q12b. Question copy is production Spanish (MX); type descriptors are engineering notes. All pre-filled answers remain editable.
 
 
 | Code | Question (ES MX) | Type | Options / Field |
@@ -1100,9 +1100,9 @@ Q4 (goal) is always multi-select with a maximum of two goals. The user may choos
 
 Every user who completes the questionnaire receives a combined personalized plan composed of three structured blocks, presented in this order:
 
-1. Entrenamiento con pesas individual - one of the six official subgroups (Part 3, Catálogo oficial).
+1. Entrenamiento con pesas individual - one of the six official subgroups (§3.3, Catálogo oficial).
 
-2. Entrenamiento aeróbico individual - one of the six official subgroups (Part 3, Catálogo oficial), with user-facing presentation per §5 (machine, duration, and when relative to pesas), not the technical ACSM name.
+2. Entrenamiento aeróbico individual - one of the six official subgroups (§3.3, Catálogo oficial), with user-facing presentation per §5 (machine, duration, and when relative to pesas), not the technical ACSM name.
 
 > **Bridge table — technical protocol (ACSM fichas) ↔ official name:**
 >
@@ -1127,7 +1127,7 @@ Block 2 (Aeróbico) suppression: a Q12 unstabilized cardiovascular condition wit
 
 Block 3 (Clases) suppression: Q13 = "Solo, a mi ritmo" (or "Sola, a mi ritmo") sets it OFF, per Rule 38. Otherwise ON, with selection per Rule 40 and presentation per Rule 41.
 
-Q6 special cases: "Ambas" leaves Blocks 1 and 2 both ON, and the aerobic block may prefer aquatic when the club has a pool; "Lo que mi entrenador recomiende" leaves both ON with the setting decided in the first session; "En piso / área seca" leaves both ON with no aquatic preference; "En la alberca" sets Block 1 OFF and Block 2 aquatic-only.
+Q6 special cases: "Ambas" leaves Blocks 1 and 2 both ON, and the aerobic block may prefer aquatic when the club has a pool; "Lo que mi entrenador recomiende" leaves both ON with the setting decided in the first session; "En piso / área seca" leaves both ON with no aquatic preference; "En la alberca" keeps Blocks 1 and 2 ON in their aquatic variant when the resolved club has a pool (see the Block 1 paragraph above: Q6 never suppresses Block 1); without a pool, both render dry with the corresponding note.
 
 The system returns flags block_1_on, block_2_on and block_3_on. The frontend renders only blocks whose flag is true. If all three would be suppressed, the system raises an error and routes the user to a human asesor.
 
@@ -1194,7 +1194,7 @@ State matrix. No questionnaire: the page is not reachable; the user is routed to
 
 #### Block 1 (weights) — user-facing presentation
 
-Block 1 shows the user-facing subgroup name selected from the user's primary Q4 goal — one of the six accessible labels in the Q4-to-subgroup mapping: Cuerpo completo con peso moderado, Definición muscular por zonas, Crecimiento muscular con carga creciente, Fuerza explosiva y velocidad, Mantenimiento de fuerza general, Pesas guiadas con énfasis en técnica controlada. The block reason explains the benefit tied to Q4 in plain language. Block 1 never lists equipment in user-facing copy: equipment selection is the trainer's decision in the first session, and the reason ends with "Tu entrenador define los ejercicios y el peso en la primera sesión" (or an approved variant).
+Block 1 shows the user-facing subgroup name selected from the user's primary Q4 goal — one of the six official Catalog names per the Q4→subgroup mapping (§3.3): Fuerza integral con pesas, Rutina por grupos musculares, Desarrollo muscular progresivo, Potencia y velocidad, Fuerza de mantenimiento, Fuerza guiada en máquinas. The block reason explains the benefit tied to Q4 in plain language. Block 1 never lists equipment in user-facing copy: equipment selection is the trainer's decision in the first session, and the reason ends with "Tu entrenador define los ejercicios y el peso en la primera sesión" (or an approved variant).
 
 #### Block 2 (cardio) — user-facing presentation
 
@@ -1652,7 +1652,7 @@ This appendix collects every code used in the specification, in one place, for q
 
 Page types. 12 in scope (numbered 1-12), see Section 3.1. BES is implemented as a global widget (Rule 3).
 
-- Q1 (name), Q2 (gender), Q3 (emotion), Q4 (goal), Q5 (pace), Q6 (setting), Q7 (time), Q8 (days), Q9 (level), Q10 (gym history), Q11 (pause length, conditional on Q10), Q12 (medical; pregnancy/postpartum is NOT inside Q12 — captured separately in Q12b when Q2 = Mujer), Q13 (companion self, gender-concordant), Q14 (companion visit, gender-concordant), Q15 (geography intent), Q16 (location, XOR código postal / colonia).
+- Q1 (name), Q2 (gender), Q3 (emotion), Q4 (goal), Q5 (pace), Q6 (setting), Q7 (time), Q8 (days), Q9 (level), Q10 (gym history), Q11 (pause length, conditional on Q10), Q12 (medical; pregnancy/postpartum is NOT inside Q12 — captured separately in Q12b when Q2 ≠ Hombre), Q13 (companion self, gender-concordant), Q14 (companion visit, gender-concordant), Q15 (geography intent), Q16 (location, OR: at least one of código postal / colonia).
 - Weight-loss optionals, visible when Q4 includes Bajar de peso, add Q17 (current health), Q18 (physical data), Q19 (change goal). The legacy P-series (P1 to P10) and its weight-loss variant (P10-WL, P11-WL, P12-WL) are retired permanently per the code-immutability principle and are not reassigned.
 City classification codes: CIUDAD-UNO, CIUDAD-POCOS, CIUDAD-ZMVM. See Rule 24.
 
@@ -1666,7 +1666,7 @@ Suppression reason codes. SUP-Q6-ALBERCA, SUP-Q12-CONTRA, SUP-Q13-SOLO, SUP-CARD
 
 Class-card slot IDs. top_2, tambien_encajan, resto, beneficios_seleccionados, razon_de_match_id, conector_personal. Block 3 selection partitions and per-card LLM slots (Rules 40 and 41).
 
-Conditional questionnaire sub-codes. Q12b (pregnancy/postpartum, conditional on Q2 = Mujer) and Q14b (children under 12, conditional on Q14 = "Yo y mis hijos" or "La familia completa"). Not reassigned.
+Conditional questionnaire sub-codes. Q12b (pregnancy/postpartum, conditional on Q2 ≠ Hombre) and Q14b (children under 12, conditional on Q14 = "Yo y mis hijos" or "La familia completa"). Not reassigned.
 
 Contraindication condition keys. lesion, cardiovascular, embarazo, posparto, bariatrica. Mapped from Q12, Q12b and Q17; drive the Rule 14b hard filter.
 
