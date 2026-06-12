@@ -1,16 +1,106 @@
-# UX Spec — Experiencia Ideal (captación de leads + SEO) · Sports World
+# UX Spec — Experiencia Ideal · Sports World
 
 | Campo | Valor |
 |---|---|
-| Versión | v1.0 (derivada y corregida de 01_UX_Specification_v4_2_10.docx) |
-| Fecha | 2026-06-10 |
+| Versión | v5.0 |
+| Fecha | 2026-06-12 |
 | Autores | Producto · Diseño · Ingeniería · QA (coautoría pendiente de firma) |
 | Estado | En revisión |
-| Stack de salida | **Next.js + React + TypeScript + Tailwind**, renderizado SSR/ISR, CMS desacoplado (firmado: Anexo Dos I.3.b del contrato) |
-| Herramienta de handoff | `[POR DEFINIR — enlazar Figma inspect / Zeplin]` |
-| Fuente única de verdad (datos/reglas) | sw_experiencia_ideal_demo_v6_FINAL.jsx + este documento |
+| Stack de salida | Next.js + React + TypeScript + Tailwind · SSR/ISR · CMS desacoplado |
+| Herramienta de handoff | `[POR DEFINIR — enlazar Figma inspect]` |
+| Documentos del paquete | `DESIGN.md` (tokens + lineamientos premium) · `anexo-clinico.md` · `anexo-contenido-prompts.md` · `anexo-ingenieria-crm.md` |
 
-> **Nota de método.** Documento **content-complete**: combina la capa estratégica/UX del estándar `ux-spec` (§1–§10) con la **transferencia 1:1** de TODO el documento técnico original (Parts 1–6 + Appendices A–H: 144 secciones y 24 tablas, ver «Parte Técnica»). Nada del original queda fuera; la capa estratégica añade racionalidad, personas, journey, tokens, accesibilidad POUR, conversión, criterios de aceptación y métricas.
+> **Cómo leer este documento.** Las secciones 1–12 siguen el orden estándar de un spec UX: del porqué (negocio) al qué (arquitectura, flujos, pantallas) y al cómo se verifica (edge cases, accesibilidad, aceptación, métricas). Las reglas conservan su número estable (`Rule N`) para referencia cruzada con el código y los anexos; el **Apéndice G** indexa cada regla con su sección. El copy de interfaz citado entre comillas es verbatim y en es-MX.
+
+## Índice
+
+- **Resumen ejecutivo**
+- **1. Racionalidad del diseño**
+  - 1.1 Cadena de razonamiento (Por qué → Quién → Qué → Cómo)
+  - 1.2 Justificación macro (estrategia de negocio)
+  - 1.3 Justificación micro (decisiones puntuales)
+  - 1.4 Audiencia, marca e idioma
+- **2. Personas y customer journey**
+  - 2.1 Personas
+  - 2.2 Customer journey — el embudo que conecta las tres metas
+  - 2.3 Insights del research que informan el diseño
+- **3. Arquitectura de información y SEO**
+  - 3.1 Inventario de páginas
+  - 3.2 Detalle por tipo de página
+  - 3.3 Entrenamiento individual: taxonomía de subgrupos
+  - 3.4 Datos confirmados del sitio (Rule 11)
+  - 3.5 Datos vivos por club (Rule 12)
+  - 3.6 Cross-linking obligatorio entre páginas (Rule 10)
+  - 3.7 Marcado estructurado schema.org (Rule 13)
+  - 3.8 Ruteo de búsqueda externa (Rule 15)
+  - 3.9 Convenciones
+- **4. Flujos, estados y personalización**
+  - 4.1 Estado del usuario respecto al cuestionario (Rule 32)
+  - 4.2 Inferencia desde la búsqueda externa (Rule 16)
+  - 4.3 Precedencia entre inferencias en conflicto (Rule 17)
+  - 4.4 Pre-llenado por página de aterrizaje (Rule 20)
+  - 4.5 Pipeline de la aplicación (cuestionario → resultado → brief)
+  - 4.6 Refresco de experiencia obsoleta (Rule 34)
+- **5. Especificación por pantalla y componente**
+  - 5.1 Header global
+  - 5.2 Panel lateral «Tu Sports World»
+  - 5.3 BES — asistente conversacional global
+  - 5.4 Menú contextual (recomendaciones, no menús)
+  - 5.5 Hub temático SEO (ej. `/bajar-de-peso/`)
+  - 5.6 Home — matriz de comportamiento
+  - 5.7 Página individual de club — matriz de comportamiento
+  - 5.8 Páginas de clase
+  - 5.9 Hubs de objetivo — matriz
+  - 5.10 FitKidz
+  - 5.11 Personal Training — matriz
+  - 5.12 Diario (Journal) — matriz
+  - 5.13 Membresías (Rule 22 — sin checkout)
+  - 5.14 Páginas de entrenamiento individual
+  - 5.15 BES vía URL de fallback — matriz
+  - 5.16 Cuestionario «Diseña tu experiencia»
+  - 5.17 Resultado — la página Experiencia Ideal
+  - 5.18 Captura de contacto (Rule 32b)
+  - 5.19 Agenda y brief del Asesor
+- **6. Matriz de edge cases y estados condicionales**
+  - 6.1 Geolocalización denegada o no disponible
+  - 6.2 La búsqueda infiere una ubicación sin club
+  - 6.3 SEPOMEX (autocompletado de CP) no disponible
+  - 6.4 Errores de validación de formularios
+  - 6.5 Abandono del cuestionario a medio flujo
+  - 6.6 Aviso de salud rechazado
+  - 6.7 BES recibe una pregunta fuera de alcance
+  - 6.8 API de catálogo o reservas no disponible
+  - 6.9 Búsqueda con inferencias en conflicto
+  - 6.10 Usuario recurrente con experiencia obsoleta
+  - 6.11 JavaScript desactivado o navegador antiguo
+  - 6.12 Conexión lenta o ahorro de datos
+  - 6.13 Listas vacías de amenidades o clubes
+  - 6.14 Preferencia acuática pero el club ideal no tiene alberca
+  - 6.15 Q12 suprime Bloque 1 y Bloque 2 a la vez
+  - 6.16 Reemplazo de clase fuera de compatibilidad Q4
+  - 6.17 Cambio de club sin set viable de Bloque 3
+  - 6.18 Los tres bloques suprimidos
+- **7. Sistema de diseño, tokens y redacción**
+  - 7.1 Marca y posicionamiento editorial (Rule 8)
+  - 7.2 Reglas editoriales para todo el copy (Rule 9)
+- **8. Accesibilidad (WCAG 2.2 AA)**
+- **9. Privacidad y manejo de datos (Rule 36)**
+- **10. Handoff y sincronización**
+  - 10.1 Insumos pendientes del cliente
+- **11. Criterios de aceptación**
+- **12. Métricas y experimentación**
+  - 12.1 KPIs
+  - 12.2 Lead scoring y enrutamiento
+  - 12.3 Perfilado progresivo (recomendación)
+  - 12.4 A/B testing
+- **Apéndice B — Páginas explícitamente fuera de alcance (Rule 37)**
+- **Apéndice C — Glosario**
+- **Apéndice D — Referencia de códigos**
+- **Apéndice F — Plantilla de referencia de la página de resultado**
+- **Apéndice G — Brief del Asesor**
+- **Apéndice H — Llamada única al LLM: esquema y prompt YMYL**
+- **Apéndice — Índice de reglas**
+- **Control del documento**
 
 ---
 
@@ -19,7 +109,7 @@
 **Los problemas que motivan el rediseño** (documentados como objetivos firmados):
 
 1. El sitio aparece en menos del 1% de las búsquedas "gym para bajar de peso" → hub **`/bajar-de-peso/`** con contenido YMYL y firma médica visible (cédula profesional, Rule 14).
-2. Queda fuera del top 100 en búsquedas como "yoga cerca de mí" → **una página dedicada por clase**: 51 adultas (7 Les Mills + 44 regulares) + hub FitKidz con 34 infantiles (Part 3).
+2. Queda fuera del top 100 en búsquedas como "yoga cerca de mí" → **una página dedicada por clase**: 51 adultas (7 Les Mills + 44 regulares) + hub FitKidz con 34 infantiles (§3).
 3. "Gym near me" aterriza en home en lugar del club más cercano → detección de ubicación y **ruteo al club más cercano** (tabla de routing, Rule 15).
 4. *(Operacional)* El usuario llena un formulario y pasan días sin contacto del asesor → **BES 24/7** resuelve dudas operativas en el momento (Rule 3); el Asesor humano entra cuando aporta valor real. Primera respuesta <1 min.
 
@@ -35,13 +125,15 @@
 
 **BES** no es un FAQ: es el knowledge hub completo del club con capacidad de acción en el chat (precios, promos, horarios, schedule de clases, membresías, agendar la visita), por texto o voz. Lo sensible **no lo ejecuta directo**: cancelaciones, congelamientos y reembolsos se capturan, abren ticket en CRM y conectan con el Asesor (Rule 3.1). Recordatorios de visita por WhatsApp a 24 h y 2 h (Rule 3.2).
 
-**El cierre de valor: la guía del Asesor.** Cada lead llega al club con el brief de Appendix G — **5 preguntas de validación**, **ruta de visita de 4 pasos** (conectar con su objetivo · tour enfocado · resolver el bloqueador · cerrar con siguiente paso), propuesta principal + complemento, **3 prioridades de cierre** y un guion de cierre ≤60 palabras — priorizado por banderas (familia/hijos, condición médica, viene de otro gimnasio, principiante, regreso de pausa). El Asesor convierte **sin re-preguntar nada** de lo que el usuario ya respondió: ése es el valor real para los 49 equipos de venta.
+**El cierre de valor: la guía del Asesor.** Cada lead llega al club con el brief de Apéndice G — **5 preguntas de validación**, **ruta de visita de 4 pasos** (conectar con su objetivo · tour enfocado · resolver el bloqueador · cerrar con siguiente paso), propuesta principal + complemento, **3 prioridades de cierre** y un guion de cierre ≤60 palabras — priorizado por banderas (familia/hijos, condición médica, viene de otro gimnasio, principiante, regreso de pausa). El Asesor convierte **sin re-preguntar nada** de lo que el usuario ya respondió: ése es el valor real para los 49 equipos de venta.
 
 **Metas firmadas:** duplicar el tráfico orgánico (**80,000 → 160,000 visitas/mes en 3 meses**) · **2x leads cualificados** · primera respuesta **<1 min, 24/7**.
 
 ---
 
-## 1. Racionalidad del Diseño (Design Rationale)
+---
+
+## 1. Racionalidad del diseño
 
 ### 1.1 Cadena de razonamiento (Por qué → Quién → Qué → Cómo)
 
@@ -59,11 +151,31 @@
 
 El motor de crecimiento es **SEO de estructura**, no publicidad pagada. Hoy el sitio recibe 80,000 visitas/mes; el techo está limitado por la **arquitectura de información**: pocas páginas indexables apuntando a búsquedas de alto volumen. La nueva estructura crea **hubs temáticos** (perder peso, masa muscular, salud cardiovascular, etc.) y **páginas paginadas** de clubes/clases, multiplicando la superficie indexable y la relevancia. Cada hub es a la vez una **puerta de entrada SEO** y el inicio del **embudo de conversión** (Experiencia Ideal). Así, el mismo cambio estructural sirve a las tres metas: más tráfico, más leads cualificados y respuesta más rápida.
 
+#### Objetivos de negocio
+
+El sitio se reconstruye para corregir tres problemas medibles del sitio anterior:
+
+| Problema | Causa | Solución en el nuevo sitio |
+| --- | --- | --- |
+| El sitio aparece en menos del 1% de las búsquedas de "gym for losing weight" | No existía una página dedicada a bajar de peso | Hub en /bajar-de-peso/ con contenido conforme a YMYL y aprobación médica |
+| El sitio queda fuera del top 100 de resultados para "yoga near me" | Las páginas de clase no estaban optimizadas | Una página dedicada por clase (51 clases para adultos + el hub de FitKidz, que absorbe 34 actividades infantiles) con marcado estructurado |
+| Búsquedas como "gym near me" aterrizan en el homepage en lugar del club más cercano | El sitio anterior no detectaba la ubicación | El nuevo sitio detecta la ubicación y enruta al club más cercano (Rule 15) |
+
+#### Medidas de éxito
+
+| Medida | Meta |
+| --- | --- |
+| Visibilidad de tráfico orgánico en el clúster "bajar de peso" | Top 10 en las consultas objetivo dentro de los 90 días posteriores al lanzamiento |
+| Precisión del enrutamiento "gym near me" → club más cercano | 100% de las sesiones geolocalizadas enrutadas al club abierto más cercano |
+| Visibilidad orgánica de las páginas de clase | Top 50 para las 51 clases para adultos dentro de 90 días |
+| Core Web Vitals en mobile p75 | LCP < 2.5 s, INP < 200 ms, CLS < 0.1 |
+| Accesibilidad | WCAG 2.2 AA en todas las páginas |
+
 ### 1.3 Justificación micro (decisiones puntuales)
 
 | Decisión | Por qué esta y no otra |
 |---|---|
-| **Cuestionario único guiado** (adaptativo, 15–21 preguntas) en vez de formulario corto | Es una **herramienta interactiva de valor** (calculadora de "experiencia ideal"): el usuario entrega datos a cambio de una recomendación personalizada, lo que mitiga el rebote de los formularios largos. *Riesgo:* sigue siendo largo → se mide abandono por pregunta (ver §10) y se evalúa perfilado progresivo si el abandono supera el umbral. |
+| **Cuestionario único guiado** (adaptativo, 15–21 preguntas) en vez de formulario corto | Es una **herramienta interactiva de valor** (calculadora de "experiencia ideal"): el usuario entrega datos a cambio de una recomendación personalizada, lo que mitiga el rebote de los formularios largos. *Riesgo:* sigue siendo largo → se mide abandono por pregunta (ver §12) y se evalúa perfilado progresivo si el abandono supera el umbral. |
 | **Rojo de marca `#E6282A`** reservado a CTA y acentos | Señala acción/conversión; nunca se usa en bloques de texto para no diluir la jerarquía. |
 | **Tres bloques de color** (azul/verde/gris) para la recomendación | Segmentan cognitivamente los tres componentes del entrenamiento; reducen carga al separar "qué hago con pesas / cardio / clases". |
 | **Captura de contacto DESPUÉS del resultado** | El usuario ya recibió valor (su recomendación); pedir datos en ese momento maximiza la conversión y la calidad del lead. |
@@ -72,9 +184,35 @@ El motor de crecimiento es **SEO de estructura**, no publicidad pagada. Hoy el s
 
 ---
 
-## 2. Personas y Customer Journey
+### 1.4 Audiencia, marca e idioma
 
-> Los arquetipos vienen del research del cliente (`Consumer Journey — Sports World`); aquí se expresan sobre la **maquinaria real del sitio**, porque para eso existe: las **155 páginas firmadas** (Part 3) son la red que captura sus búsquedas en Google (de ahí sale el 80,000→160,000), **«Diseña tu experiencia»** (Q1–Q19) es el instrumento que los convierte en lead cualificado, y el **brief del Asesor** (Appendix G) es lo que el negocio recibe a cambio. Donde el research usa marcos propios (funnel de 8 fases, "10 preguntas", Help Center, member portal), **prevalece lo acordado**.
+El sitio atiende a tres tipos de usuario primarios, en orden de prioridad:
+
+- Prospectos de membresía que investigan un gimnasio - guiados por la intención, a menudo llegan desde búsqueda externa ("gimnasio Polanco", "bajar de peso gym", "yoga estudio").
+- Miembros existentes que realizan tareas de autoservicio - consultar horarios, ubicar amenidades, preguntar al asistente conversacional sobre horarios, cancelaciones o congelamientos.
+- Padres y tomadores de decisión de la familia que investigan el programa infantil (FitKidz) - comportamiento de búsqueda exploratorio más que específico por nombre de clase.
+
+La marca del sitio es **premium fitness**. Tres implicaciones:
+
+La submarca FitKidz es **premium family fitness**.
+
+- Tipografía cuidada, espaciado generoso, fotografía editorial.
+- Lenguaje directo y mesurado. Sin entusiasmo forzado, sin signos de exclamación, sin copy de marketing todo en mayúsculas, sin titulares de pregunta-anzuelo.
+- El encuadre familiar aplica únicamente en las páginas de FitKidz. En todo lo demás el encuadre es individual o personalizado. El resto del sitio le habla a un usuario a la vez, no a "la familia".
+
+El sitio web de Sports World se entrega en español (México) a los usuarios finales. A lo largo de esta especificación, los nombres de botones y demás labels de UI de producción se mantienen en su forma en español, con una glosa en inglés entre paréntesis en la primera mención. La prosa descriptiva que los rodea está en inglés
+
+para servir a un equipo de producción multilingüe. Los códigos internos de sistema (como CIUDAD-1, ( CIUDAD-
+
+ZMVM1 Q17 ) se mantienen en español porque mapean directamente a identificadores de implementación y
+
+deben permanecer idénticos en el código, el copy del CMS y los archivos de diseño.
+
+---
+
+## 2. Personas y customer journey
+
+> Los arquetipos vienen del research del cliente (`Consumer Journey — Sports World`); aquí se expresan sobre la **maquinaria real del sitio**, porque para eso existe: las **155 páginas firmadas** (§3) son la red que captura sus búsquedas en Google (de ahí sale el 80,000→160,000), **«Diseña tu experiencia»** (Q1–Q19) es el instrumento que los convierte en lead cualificado, y el **brief del Asesor** (Apéndice G) es lo que el negocio recibe a cambio. Donde el research usa marcos propios (funnel de 8 fases, "10 preguntas", Help Center, member portal), este spec usa sus estructuras normativas: cuestionario Q1–Q19, fases del flujo y tipos de página de la §3.
 
 ### 2.1 Personas
 
@@ -104,19 +242,19 @@ Los arquetipos son **quién** llega (qué teclean en Google y por cuál de las 1
 | **Decide** (rápido; revisa 5–15 reseñas) | Agenda en el momento | Fase `schedule` con **confirmación en tiempo real** (API del cliente); BES/WhatsApp confirman en <1 min — exactamente la fricción que lo hace desistir en la competencia |
 | **Visita** | Tour corto, enfocado, sin venta lenta | Brief con `fromOtherGym`: el Asesor abre con lo que le faltaba en su gimnasio anterior; las 3 `closing_priorities` apuntan a cierre en la misma visita |
 
-**P3 — Asesor (interna).** No diseña la experiencia: la **consume**. Recibe el brief de Appendix G — exactamente **5 `validation_questions`** (≤18 palabras c/u), **`visit_route` de 4 pasos** (Conectar con su objetivo · Tour enfocado · Resolver bloqueador · Cerrar con siguiente paso), `proposal` (main + complement), **3 `closing_priorities`** y un `closing_script` ≤60 palabras en primera persona. Su métrica: convertir la visita **sin re-preguntar ninguna de las 15–21 respuestas** — la consistencia entre los 49 clubes depende de que todos trabajen sobre el mismo brief.
+**P3 — Asesor (interna).** No diseña la experiencia: la **consume**. Recibe el brief de Apéndice G — exactamente **5 `validation_questions`** (≤18 palabras c/u), **`visit_route` de 4 pasos** (Conectar con su objetivo · Tour enfocado · Resolver bloqueador · Cerrar con siguiente paso), `proposal` (main + complement), **3 `closing_priorities`** y un `closing_script` ≤60 palabras en primera persona. Su métrica: convertir la visita **sin re-preguntar ninguna de las 15–21 respuestas** — la consistencia entre los 49 clubes depende de que todos trabajen sobre el mismo brief.
 **P4 — BES (agente conversacional, sistema).** Widget global flotante en las 155 páginas (Rule 3), con URL de fallback para usuarios sin JavaScript. Absorbe lo que el sitio deliberadamente no publica como página (cancelaciones, congelamientos, soporte — Rule 37) y confirma citas. Es la palanca de la meta terciaria: **primera respuesta <1 min, 24/7**.
 
-### 2.2 Customer Journey — el embudo que conecta las tres metas
+### 2.2 Customer journey — el embudo que conecta las tres metas
 
 Cada fase del journey tiene un instrumento concreto en este spec y sirve a una meta medible de §10:
 
 | Fase | Instrumento concreto | Meta que sirve |
 | --- | --- | --- |
-| **Descubrir** | Las 155 páginas indexables (Part 3): 49 clubes · 51 clases (7 Les Mills signature + 44 regulares) · 5 hubs de objetivo (`/perfiles/…`) · hub `/bajar-de-peso/` (YMYL) · 10 amenidades · FitKidz · Personal Training · 10 de entrenamiento individual · 6 de membresías · 20 artículos del diario · Home | **80,000 → 160,000 visitas/mes** (la superficie indexable ES la palanca) |
+| **Descubrir** | Las 155 páginas indexables (§3): 49 clubes · 51 clases (7 Les Mills signature + 44 regulares) · 5 hubs de objetivo (`/perfiles/…`) · hub `/bajar-de-peso/` (YMYL) · 10 amenidades · FitKidz · Personal Training · 10 de entrenamiento individual · 6 de membresías · 20 artículos del diario · Home | **80,000 → 160,000 visitas/mes** (la superficie indexable ES la palanca) |
 | **Cualificar** | «Diseña tu experiencia» (Q1–Q19 adaptativo) con pre-fills por aterrizaje (Rule 20) e inferencia de búsqueda (Rule 16): cada puerta de entrada acorta el cuestionario | **2x leads cualificados** — el lead llega con 15–21 variables, no con un nombre y un teléfono |
 | **Convertir** | `result` (la recomendación es el "pago" por los datos) → `contact_capture` (apellido + celular 10 dígitos + correo) → `schedule` (API en tiempo real) | **2x leads cualificados** (calidad + volumen) |
-| **Cerrar** | `briefing` → brief del Asesor (Appendix G) + BES 24/7 | **Primera respuesta <1 min** |
+| **Cerrar** | `briefing` → brief del Asesor (Apéndice G) + BES 24/7 | **Primera respuesta <1 min** |
 
 ```mermaid
 journey
@@ -136,9 +274,9 @@ journey
  BES confirma la cita en menos de 1 min: 5: BES
 ```
 
-Las fases técnicas exactas (welcome · questionnaire · loading · result · contact_capture · schedule · briefing · error) y todas las bifurcaciones están en **§3** y **§4**.
+Las fases técnicas exactas (welcome · questionnaire · loading · result · contact_capture · schedule · briefing · error) y todas las bifurcaciones están en **§4** y **§5**.
 
-### 2.3 Insights del consumer journey que informan el diseño
+### 2.3 Insights del research que informan el diseño
 
 Cada insight del research se conecta con una regla/sección **ya acordada** (no introduce un marco nuevo):
 
@@ -146,16 +284,218 @@ Cada insight del research se conecta con una regla/sección **ya acordada** (no 
 | --- | --- |
 | Las puertas de entrada revelan intención | Pre-fill por aterrizaje (Rule 20) + inferencia de búsqueda (Rule 16); el hub `/bajar-de-peso/` es la puerta de mayor volumen y pre-marca Q4 (activa Q17–Q19) |
 | Invitación no bloqueante, persistente como botón | «Diseña tu experiencia» en header (Rule 1) y menú contextual mientras el cuestionario esté incompleto (Rule 27); al completarlo cambia a «Volver a tu experiencia ideal» (Rule 28) |
-| El review-check del club específico decide la conversión | Página de club (Part 3) con fotos reales, horarios, clases, reseñas y amenidades; card Club Ideal con datos verificables (Rule 42) |
-| Consistencia del asesor entre 49 clubes + confirmación rápida | Brief único (Appendix G) generado en la misma llamada LLM que el reporte; agenda en tiempo real (fase `schedule`, API del cliente) |
+| El review-check del club específico decide la conversión | Página de club (§3) con fotos reales, horarios, clases, reseñas y amenidades; card Club Ideal con datos verificables (Rule 42) |
+| Consistencia del asesor entre 49 clubes + confirmación rápida | Brief único (Apéndice G) generado en la misma llamada LLM que el reporte; agenda en tiempo real (fase `schedule`, API del cliente) |
 | Meseta silenciosa (sem. 4–6) y regreso tras ausencia = mayor churn | **Fuera del alcance del sitio** (retención/CRM post-venta); se anota como dependencia, no se diseña aquí |
-| Benchmarks: NPS 47.3 · retención 66.4% · 50% churn a 6 meses (sector) | Contexto de §10; el sitio impacta **captación**, no la retención post-venta |
+| Benchmarks: NPS 47.3 · retención 66.4% · 50% churn a 6 meses (sector) | Contexto de §12; el sitio impacta **captación**, no la retención post-venta |
 
-> **Precedencia.** El journey describe "10 preguntas, 1 minuto" y artefactos de otra workstream (Help Center, app, member portal). Prevalece lo acordado: **cuestionario oficial 15+6 (Rule 18)**; Help Center fuera de alcance (Rule 37 — lo cubre BES); app/portal son workstreams aparte. La meta de tiempo de completado se mide contra el instrumento oficial (riesgo de abandono, §10.3).
+> **Nota de alcance.** El research describe "10 preguntas, 1 minuto" y artefactos de otros proyectos (Help Center, app, member portal). El instrumento normativo es el **cuestionario oficial de 15+6 (Rule 18)**; el Help Center está fuera de alcance (Rule 37 — lo cubre BES); app y portal son proyectos aparte. La meta de tiempo de completado se mide contra el instrumento oficial (riesgo de abandono, §12.3).
 
 ---
 
-## 3. Flujos y Diagrama de Transición
+---
+
+## 3. Arquitectura de información y SEO
+
+La superficie indexable es la palanca del objetivo de tráfico: 155 páginas en 12 tipos, cada una con propósito de búsqueda propio, datos vivos del club y marcado estructurado.
+
+### 3.1 Inventario de páginas
+
+El sitio tiene 12 tipos de página canónicos en alcance, más el asistente conversacional BES, implementado como widget global flotante y no como página de destino.
+
+| # | Tipo de página | Cantidad | Patrón de URL | Sensible a la salud (YMYL) |
+| --- | --- | --- | --- | --- |
+| 1 | Inicio | 1 | / | No |
+| 2 | Club individual | 49 | /clubes/[club]/ | No |
+| 3 | Amenidad | 10 | /amenidades/[amenidad]/ | No |
+| 4 | Clase Premium Les Mills | 7 | /clases/signature/[clase]/ | No |
+| 5 | Clase regular | 44 | /clases/[clase]/ | No |
+| 6 | FitKidz | 1 | /fitkidz/ | No |
+| 7 | Hub de objetivo | 5 | /perfiles/[objetivo]/ | Solo rehabilitación |
+| 8 | Hub Bajar de peso | 1 | /bajar-de-peso/ | Sí (YMYL) |
+| 9 | Personal Training | 1 | /personal-training/ | No |
+| 10 | Membresías | 6 (1 hub + 5 planes) | /membresias/ y /membresias/[plan]/ | No |
+| 11 | Artículo del diario | 20 | /diario/[articulo]/ | Algunos, sí |
+| 12 | Página de entrenamiento individual | 10 (2 padre + 8 subpáginas de subgrupo) | /entrenamiento-con-pesas-individual/[subgrupo] · /entrenamiento-aerobico-individual/[subgrupo] | No |
+
+Total de páginas firmadas: 1 + 49 + 10 + 7 + 44 + 1 + 5 + 1 + 1 + 6 + 20 + 10 = **155 páginas**.
+
+> **Precedencia (regla del cliente).** Lo acordado en estos documentos tiene mayor autoridad que cualquier otro documento, **incluidos los entregables del contrato**. El contrato (Anexo Dos I.1) fija una arquitectura limitativa de **145** páginas; las **2 páginas de entrenamiento individual + 8 subpáginas de subgrupo** que el spec agrega son **páginas firmadas autoritativas**, elevando el total a **155**. Esta cifra prevalece sobre la del contrato; la ampliación se formaliza mediante convenio modificatorio como mero trámite, sin condicionar el alcance del spec.
+
+BES. El asistente conversacional es un widget global flotante presente en cada página (Rule 3). También expone una URL de fallback para usuarios sin JavaScript y para deep-linking. BES se entrega como un workstream aparte con su propia especificación; este documento cubre solo sus puntos de integración e interfaces de comportamiento con el resto del sitio.
+
+### 3.2 Detalle por tipo de página
+
+- Los 5 hubs de objetivo son: primeros pasos, salud y bienestar, estética corporal, ganar fuerza, rehabilitación.
+- Los 5 planes de membresía son: UniClub, AllClub, Black Pass, Pink Plan y la Promo de 21 días.
+- Los 10 hubs de amenidades son: alberca, INTENZ (zona de entrenamiento funcional), FitKidz, ring de box, muro de escalada, canchas, sauna y vapor, regaderas y vestidores, cafetería y estacionamiento.
+- «FitKidz» aparece tanto como tipo de página (el hub padre) como una de las 10 amenidades. El hub de FitKidz es la página completamente construida; la entrada de FitKidz como amenidad es un apuntador que enlaza a ella.
+- El hub de FitKidz absorbe las 34 actividades infantiles. Las actividades infantiles no tienen páginas individuales; se organizan dentro del hub por rango de edad, tipo de disciplina y disponibilidad por club.
+- Diagrama de arquitectura: *(diagrama visual — entregable de diseño Semana 1; el «Page inventory» de arriba es el contenido autoritativo)*
+
+El diagrama anterior es una aproximación textual. El equipo de diseño produce el diagrama formal de IA como entregable de la Semana 1. Regla anti-huérfanos: toda página debe ser alcanzable desde al menos otras dos páginas. La matriz de enlaces cruzados se aplica mediante la Rule 10.
+
+### 3.3 Entrenamiento individual: taxonomía de subgrupos
+
+Los nombres de subgrupo del Block 1 visibles para el usuario siguen las seis etiquetas accesibles mapeadas desde el objetivo primario Q4 del usuario (ver el mapeo Q4→subgrupo en esta sección): Cuerpo completo con peso moderado, Definición muscular por zonas, Crecimiento muscular con carga creciente, Fuerza explosiva y velocidad, Mantenimiento de fuerza general, Pesas guiadas con énfasis en técnica controlada. La prescripción ACSM, el equipo y el detalle de citas que sigue son la referencia de protocolo interno y no se muestran al usuario; los nombres técnicos (Fuerza, Hipertrofia, Potencia, Resistencia muscular, LISS, MICT, HIIT, SIT) viven solo en fichas, URLs de subpáginas e identificadores de backend.
+
+Dos páginas de nivel superior de entrenamiento individual — entrenamiento-con-pesas-individual y entrenamiento-aerobico-individual — más sus 8 subpáginas de subgrupo (Rule 20) son el **tipo de página canónico 12** del inventario de arriba. Forman parte del alcance firmado de 155 páginas. Cada una mapea a seis subgrupos (uno por objetivo Q4; nombres oficiales en «Catálogo oficial — Programas de entrenamiento individual»), fundamentados en el consenso ACSM. Un tercer bloque, acuático (Entrenamiento acuático), se activa cuando Q6 = "En la alberca"/"Ambas" y el club resuelto tiene alberca. Los subgrupos de pesas siguen el ACSM Position Stand 2026 (Currier BS, D'Souza AC, Singh MAF, et al. "Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews." Medicine & Science in Sports & Exercise 2026. DOI: 10.1249/MSS.0000000000003897). Los subgrupos aeróbicos siguen el ACSM/ESSA Joint Expert Statement 2024 ("Physical Activity and Exercise Intensity Terminology." Journal of Science and Medicine in Sport 2024). El comportamiento de pre-fill y resultado de estas páginas se rige por Rule 38.
+
+
+Las **prescripciones técnicas ACSM por subgrupo** (series, repeticiones, %1RM, descansos, equipo, DOIs) viven en `anexo-clinico.md` §2 (referencia de protocolo interno bajo validación médica; no se muestra al usuario).
+
+#### Mapeo objetivo Q4 → subgrupo (Rule 38)
+
+| Q4 goal | Block 1 — Fuerza y desarrollo muscular (nombre oficial · detalle) | Block 2 — Cardio y resistencia (nombre oficial · máquina · duración) |
+| --- | --- | --- |
+| Bajar de peso | **Fuerza integral con pesas** (cuerpo completo, peso moderado) | **Cardio continuo moderado** · caminadora/bici/elíptica · 35–45 min |
+| Mejorar mi estética corporal y definición muscular | **Rutina por grupos musculares** (definición por zonas) | **Cardio moderado con intervalos** · caminadora/bici/elíptica · 25–35 min |
+| Aumentar masa muscular | **Desarrollo muscular progresivo** (carga creciente) | **Cardio ligero de mantenimiento** · caminadora suave/bici · 15–25 min |
+| Mejorar mi desempeño atlético | **Potencia y velocidad** (fuerza explosiva) | **Intervalos intensos 4×4** · bici/remo/caminadora · 30–40 min |
+| Mejorar mi salud cardiovascular | **Fuerza de mantenimiento** (fuerza general) | **Base aeróbica 80/20** · caminadora/bici/elíptica/remo · 35–45 min |
+| Recuperarme de una lesión o dolor crónico | **Fuerza guiada en máquinas** (técnica controlada) | **Recuperación activa de bajo impacto** · bici reclinada/elíptica/caminadora muy suave · 15–25 min |
+
+If Q4 has two selections (allowed up to two), the recommended set is the union of both rows, deduplicated.
+
+#### Catálogo oficial — programas de entrenamiento individual
+
+Tres familias oficiales (Fuerza y desarrollo muscular · Cardio y resistencia · Entrenamiento acuático), 6 sub-clases cada una, mapeadas a los 6 objetivos Q4. El detalle completo (tablas de mapeo y estados `clínico`/`inferido`) vive en `anexo-clinico.md` §3. El bloque acuático se activa cuando Q6 = "En la alberca"/"Ambas" y el club resuelto tiene alberca (Rule 39).
+
+### 3.4 Datos confirmados del sitio (Rule 11)
+
+| Concepto | Valor |
+| --- | --- |
+| Clubes totales | 49 |
+| Estados con clubes | 13 |
+| Clubes en la Zona Metropolitana de la Ciudad de México (CDMX + Estado de México) | 32 |
+| Clubes fuera de esa zona | 17 (repartidos en 11 estados) |
+| Clases para adultos | 51 (7 Premium Les Mills + 44 regulares) |
+| Actividades infantiles FitKidz | 34 |
+| Hubs de objetivo | 5 |
+| Hubs de amenidades | 10 |
+| Planes de membresía | 5 (más el hub) |
+| Artículos iniciales del Journal | 20 |
+| Páginas firmadas totales (alcance del Workstream B) | 155 |
+
+### 3.5 Datos vivos por club (Rule 12)
+
+Cada página individual de club (tipo de página 2) muestra los siguientes cuatro datos extraídos en vivo de la API del cliente:
+
+- Horarios de operación por día de la semana.
+- Teléfono y correo electrónico del club.
+- Catálogo de clases: cuáles de las 51 clases para adultos y cuáles actividades de FitKidz se ofrecen en este club específico.
+- Horario de clases - por clase, por día, con horarios.
+Si la API no está disponible, la página recurre al último valor cacheado con éxito, con un aviso visible; ver Edge Case 6.8.
+
+### 3.6 Cross-linking obligatorio entre páginas (Rule 10)
+
+Cada página debe enlazar a sus páginas relacionadas. Sin páginas huérfanas.
+
+). Los titulares son directos
+
+
+| Desde | Hacia | Dirección |
+| --- | --- | --- |
+| Cada página de club | Cada amenidad que ofrece | Bidireccional |
+| Cada página de amenidad | Cada club que la ofrece | Bidireccional |
+| Cada página de clase | Cada club donde se ofrece la clase | Bidireccional |
+| Cada artículo del | Al menos un hub relacionado, y al menos un club si | Unidireccional (artículo➔hub/club) |
+| Journal | existe relevancia geográfica | |
+| Página de Personal Training | Cada uno de los 5 hubs de objetivo | Bidireccional |
+| Cada hub de objetivo | Página de Personal Training | Bidireccional (contraparte de |
+| | | la anterior) |
+
+### 3.7 Marcado estructurado schema.org (Rule 13)
+
+Cada tipo de página lleva los datos estructurados correspondientes para que los motores de búsqueda puedan entender su contenido:
+
+| Tipo de página | Tipos schema.org requeridos |
+| --- | --- |
+| Páginas de club | HealthClub + OpeningHoursSpecification (una entrada por día por club) + GeoCoordinates (latitud, longitud verificadas) |
+| Páginas de clase (premium y regulares) | **Course**. Los horarios por club pueden complementarse con `Event` por sesión programada (decisión de ingeniería). |
+| Hub Bajar de peso | MedicalWebPage + el revisor médico con credenciales (nombre y cédula profesional) |
+| Hubs de objetivo y cualquier página con FAQs | FAQPage |
+| Artículos del Journal | Article (autor con credenciales cuando aplique) |
+| Todas las páginas (excepto home) | BreadcrumbList |
+
+Todo el marcado debe validar en Google Rich Results Test antes de publicar.
+
+Todos los datos estructurados deben validar contra el Rich Results Test de Google antes de su publicación.
+
+### 3.8 Ruteo de búsqueda externa (Rule 15)
+
+Rule 15 - Mapeo de consultas de búsqueda a páginas
+
+Cuando un usuario realiza una consulta en un motor de búsqueda relacionada con Sports World, el sitio debe llevarlo a la página que mejor responda esa consulta.
+
+
+| Tipo de consulta | Ejemplos | Página de aterrizaje |
+| --- | --- | --- |
+| Búsqueda pura de marca | sports world, sports world mexico | Home |
+| Marca + ubicación específica | sports world polanco, sports world antara | La página del club específico |
+| Gimnasio cerca de mí | gimnasio cerca de mi, gimnasio polanco | El club más cercano vía geolocalización; si no se puede detectar la ubicación, aterriza en Home con el flujo de búsqueda de club abierto |
+| Amenidad + ubicación | alberca cdmx, yoga estudio polanco | El hub de la amenidad |
+| Clase específica | body pump, spinning cdmx, pilates reformer | La página de esa clase |
+| Objetivo personal | estética corporal, ganar masa muscular, primeros pasos en el gym | El hub del objetivo correspondiente |
+| Pérdida de peso | bajar de peso, perder peso gym, GLP-1 ozempic gimnasio | Hub Bajar de peso |
+| Rehabilitación | rehabilitación rodilla gym, ejercicio post lesión | Hub de Rehabilitación |
+| Niños / familia | gimnasio para niños, actividades familia, FitKidz | FitKidz |
+| Personal Training | entrenador personal, personal trainer cdmx | Personal Training |
+| Precios y membresías | precio sports world, uniclub vs allclub | Hub de membresías |
+| Información de fitness | calorias spinning, diferencia body pump vs combat | Artículo del Journal sobre el tema |
+| Información específica de Sports World / cancelaciones, congelamientos, soporte | horario polanco, alberca en antara | Home con el widget BES abierto |
+
+### 3.9 Convenciones
+
+El sitio se diseña y se construye mobile-first como metodología, no como un responsive de último momento. Cada layout, interacción y regla de esta especificación debe implementarse partiendo del viewport móvil y mejorándose progresivamente hacia arriba. El ÚNICO sistema de breakpoints es el de los tokens (DESIGN.md): mobile 360 · tablet 768 · laptop 1024 · desktop 1440. Lo contrario —diseñar para desktop y "hacerlo responsive" después— es no conforme.
+
+Donde esta especificación describe un comportamiento exclusivo de desktop (como las interacciones de la Rule
+
+5), la regla es explícita sobre su alcance de viewport. El equivalente móvil siempre se especifica.
+
+La especificación utiliza varios sistemas de identificadores inmutables. Una vez asignado, un código nunca cambia de significado y nunca se reutiliza para un elemento distinto. Si un elemento se elimina del sitio, su código se retira de forma permanente y no se reasigna.
+
+
+| Sistema de códigos | Formato | Ejemplos | Significado |
+| --- | --- | --- | --- |
+| Pagetype | numérico, 1-12 | Page type 2 = Club individual | Doce tipos de página canónicos en el alcance de 155 páginas. BES es un widget global (Rule 3). |
+| Question | Q+número (+variante) | Q1, Q4, Q12, Q16, Q17, Q18, Q19 | Preguntas del cuestionario. |
+| City classification | CIUDAD- +etiqueta | CIUDAD-UNO, CIUDAD-POCOS, CIUDAD-ZMVM | Número de clubes en la ciudad del usuario. |
+| Rule | Rule + número | Rule 7, Rule 25 | Reglas globales del sitio; el índice de reglas (al final) mapea cada una a su sección. |
+| Article tag | minúsculas, con guiones | bajar-de-peso, clase-spinning, amenidad-alberca | Etiquetas de contenido para el sistema de cross-linking del Journal (Rule 29). |
+
+- Strings de UI del usuario final: español (México). Imperativo de segunda persona familiar para los CTAs
+( Visi ta un club , no Visi te un club ). Vocabulario del español de México ( checar , platicar , Aqui empieza todo - no el peninsular Aqui comienza todo ). Sin calcos del inglés.
+
+- Prosa de la especificación: español; edición paralela en inglés en `resultados/en/`.
+- Códigos internos de sistema: español, nunca se traducen.
+
+Cada matriz por página de §5 tiene tres columnas:
+
+- Estado - combinación de dos factores: (a) si el usuario completó el cuestionario, y (b) si el usuario tiene un club identificado.
+- Cuestionario - el número de preguntas presentadas después del pre-llenado. Si una pregunta se omite por completo (el caso especial de Club Individual para Q15 y Q16), no cuenta. Si una pregunta está pre-llenada pero es editable, sigue contando como pregunta visible.
+- Menú contextual - los botones que aparecen en el contenido del cuerpo de la página para ese estado. Los botones del header (siempre visibles según las Rules 1-2) y el widget BES (siempre visible según la Rule 3) no se repiten en cada matriz.
+El botón contextual aparece en las matrices solo en las páginas
+
+donde razonablemente se espera que existan artículos etiquetados (el hub, los hubs de objetivo,
+
+Personal Training). En las demás páginas el botón aparece igualmente de forma dinámica cuando hay artículos etiquetados coincidentes, pero no se documenta en la matriz porque es variable.
+
+#### Límite de alcance: lo que este documento no cubre
+
+Los siguientes temas quedan intencionalmente fuera del alcance de esta especificación. Se rigen por otros documentos dirigidos al partner.
+
+- Reglas de producción visual (qué fotografías usar, lineamientos de imágenes generadas con IA, shot lists de video, políticas de imágenes de empleados, metas de volumen de assets) - viven en el brief del partner, Sección 6.
+- Decisiones de stack técnico (framework, CMS, hosting, observabilidad, tooling de performance) - viven en el brief del partner, Sección 5.
+- Dirección creativa de los assets de marca (selección tipográfica, paleta de color, logotipo, referencias de mood)
+- viven en el paquete de assets de marca entregado al partner en la Semana 1.
+
+- Proceso del proyecto (gates de aprobación, calendario de entregables, capacidades del proveedor, términos comerciales) - viven en el brief del partner.
+- Reglas de producción de contenido (scoring anti-contenido-duplicado, detalles del registro del español-MX más allá de los CTAs, criterios de selección de artículos del Journal) - viven en el brief del workstream de contenido.
+
+---
+
+## 4. Flujos, estados y personalización
 
 Todas las bifurcaciones (no solo el camino feliz). Fases del sistema: `welcome · questionnaire · loading · result · contact_capture · schedule · briefing · error`.
 
@@ -180,471 +520,89 @@ flowchart TD
  L -.timeout.-> ERR
 ```
 
-**Filtro de seguridad (YMYL):** antes de construir el Bloque 3 (clases), el motor aplica el **filtro duro de contraindicaciones** (5 condiciones: lesión, cardiovascular, embarazo, posparto, bariátrica). Las clases contraindicadas nunca aparecen. Detalle completo en el documento técnico (Rule 14b). 
+**Filtro de seguridad (YMYL):** antes de construir el Bloque 3 (clases), el motor aplica el **filtro duro de contraindicaciones** (5 condiciones: lesión, cardiovascular, embarazo, posparto, bariátrica). Las clases contraindicadas nunca aparecen. Detalle completo en §5.17 (Rule 14b). 
 
 ---
 
-## 4. Especificación por Pantalla / Componente
+### 4.1 Estado del usuario respecto al cuestionario (Rule 32)
 
-### 4.1 Hub temático SEO (ej. `/bajar-de-peso/`)
+Para construir el menú contextual de cada página, el sistema clasifica al usuario en uno de tres estados:
 
-- **Propósito:** captar tráfico orgánico de alta intención y enrutarlo a «Diseña tu experiencia». En el caso de `/bajar-de-peso/`, el aterrizaje pre-marca Q4 = Bajar de peso (Rule 20), lo que activa Q17–Q19 y el modal YMYL antes del resultado.
-- **Layout y dimensiones:** grid de 12 columnas; contenedor máx. 1200px; padding 16px móvil / 24px desktop; breakpoints 360 / 768 / 1024 / 1440px.
-- **Contenido SEO (mínimo por hub):** H1 con la keyword principal; 600–900 palabras de texto útil; FAQ con `schema.org/FAQPage`; enlaces internos a clubes y clases relacionadas; CTA «Diseña tu experiencia» (nombre oficial del botón, Rule 1/27).
-- **Metadatos:** `<title>` ≤ 60 car., `meta description` ≤ 155 car., canonical, Open Graph; `lang="es-MX"`.
-- **Paginación:** listados de clubes/clases con `rel=next/prev` lógico y URLs limpias `/clubes/cdmx/pagina-2`; evita contenido duplicado con canonical.
-- **CTA principal:** botón rojo `#E6282A` → inicia `welcome`.
-- **Solo `/bajar-de-peso/` (contractual, Anexo Dos I.3.k):** slot para el **video institucional de 45–60 s** (música licenciada + voz en off). Carga diferida (`poster` + lazy) para no romper el presupuesto de LCP; nunca autoplay con audio.
-- **Imágenes (contractual, Anexo Dos I.3.g):** servir en **AVIF/WebP** con `srcset` responsivo; las fotos provienen del banco del cliente (~650 tratadas) + ~150 generadas por IA.
-- **Requisito no funcional:** **LCP < 2.5 s**, **CLS < 0.1**, **INP < 200 ms** (Core Web Vitals — afectan ranking SEO; umbrales firmados en Anexo Dos I.3.e).
-
-### 4.2 Cuestionario (`questionnaire`, Q1–Q19)
-
-- **Propósito:** cualificar y personalizar; recolectar los datos del lead.
-- **Estructura (cuestionario oficial):** **15 preguntas base** siempre visibles (Q1–Q10, Q12, Q13, Q14, Q15, Q16) + **6 condicionales**: **Q11** (si Q10=pausa), **Q12b** (si Q2=Mujer), **Q14b** (hijos <12) y **Q17–Q19** (si Q4 incluye Bajar de peso). Total real **15–21** según ruta (ver tabla normativa de conteo en la Parte Técnica).
-- **Un paso por pantalla**, barra de progreso, botón "Continuar" deshabilitado hasta responder.
-- **Estados interactivos:** opción `default / hover / focus-visible / selected / disabled`; botón `default / hover / active / disabled / loading`.
-- **Validación inline (en tiempo real):**
- - Q1 Nombre: requerido, ≥ 2 caracteres.
- - Q8 días / Q7 horarios: multiselección, ≥ 1.
- - Q16 CP **o** zona (XOR): CP = 5 dígitos numéricos.
-- **Contenido (UX writing):** preguntas en español MX, voz activa, sin jerga. Concordancia de género si Q2=Mujer (Q3, Q13, Q14).
-- **Requisito no funcional:** transición entre preguntas < 100 ms; estado persistido en cliente para no perder respuestas al recargar (solo tras aceptar el aviso de privacidad, ver edge case 6.5).
-
-### 4.3 Resultado — Experiencia Ideal (`result`)
-
-- **Propósito:** entregar la recomendación personalizada (el "valor" a cambio de los datos).
-- **Estructura de contenido (vinculante):** la página presenta, en este orden, los **elementos** que deben existir — encabezado con hook (Q3) y argumento que nombra los 3 bloques; **tarjetas resumen** (objetivo, nivel, horario, con quién entrena); **card Club Ideal** (Rule 42); **3 bloques** (01 pesas · 02 cardio · 03 clases); **sección de seguridad** (YMYL) cuando aplica; nota legal. *Qué* aparece y *qué* dice es vinculante.
-- **Tratamiento visual (lo decide el equipo de diseño):** *cómo* se ven esos elementos —si son tarjetas, listas o acordeones; espaciado, retícula, jerarquía— es entregable del equipo de diseño, dentro de los tokens y los **lineamientos de estilo premium** (`DESIGN.md`). El demo usa una arquitectura v6 (barra roja, tarjetas, banner, bloques de color suaves, sección ámbar): es **referencia ilustrativa, no diseño impuesto**.
-- **Bloque 1 (pesas):** uno de **6 nombres accesibles** según objetivo Q4; nunca lista equipo ("Tu entrenador define los ejercicios y el peso en la primera sesión").
-- **Bloque 2 (cardio):** máquina + duración + ritmo en lenguaje llano ("ritmo conversacional", no "Zone 2").
-- **Bloque 3 (clases):** top 2 clases recomendadas tras el filtro de contraindicaciones, o Personal Training como alternativa.
-- **Requisito no funcional:** render con datos de fallback si el LLM devuelve JSON inválido (degradación elegante, sin pantalla en blanco).
-
-### 4.4 Captura de contacto (`contact_capture`)
-
-- **Propósito:** convertir el interés en lead contactable. Aparece **entre** `result` y `schedule`; no se puede agendar sin completarla.
-- **Encabezado:** "Antes de agendar" · "{Nombre}, necesitamos un par de datos para confirmar tu visita."
-- **Campos, validación y errores (verbatim):**
-
-| Campo | Validación | Error inline |
-|---|---|---|
-| Apellido | `trim().length ≥ 2` | "Ingresa tu apellido (mínimo 2 letras)" |
-| Celular | exactamente **10 dígitos** | "Ingresa un número de 10 dígitos" |
-| Correo | `/^[^\s@]+@[^\s@]+\.[^\s@]+$/` | "Ingresa un correo electrónico válido" |
-
-- **Privacidad:** "Tus datos se usan únicamente para coordinar tu visita guiada. No los compartimos con terceros."
-- **Estados del botón "Continuar":** rojo cuando los 3 campos son válidos; gris deshabilitado en otro caso.
-- **Validación en tiempo real:** el error del correo aparece **mientras escribe**, no al enviar.
-
-### 4.5 Agenda y Brief (`schedule`, `briefing`)
-
-- `schedule`: selección de día/hora; "Volver" regresa a `contact_capture`.
-- `briefing`: brief del asesor (10 secciones, 5 generadas por el LLM) con banderas de seguridad. Detalle en el documento técnico (Appendix G).
-
----
-
-## 5. Matriz de Edge Cases y Estados Condicionales
-
-| Condición | Disparador | Comportamiento de la UI | Mensaje |
-|---|---|---|---|
-| Estado vacío (sin clases válidas) | Todas las clases contraindicadas | Bloque 3 muestra Personal Training como alternativa | "Tu Asesor define el detalle en la visita." |
-| Queda exactamente 1 clase viable (audit L8; real en pabellón-bosques y triángulo-tecamachalco para embarazo) | Filtros dejan 1 clase | Card única + Personal Training como segundo slot | "Esta clase encaja contigo; tu Asesor complementa el resto en la visita." |
-| Error de servidor / timeout LLM | 5xx o latencia alta | Render con fallback seguro; opción de reintento | "No pudimos generar tu experiencia. Reintentar." |
-| JSON malformado del LLM | Parse falla | Página renderiza secciones hardcodeadas; arrays vacíos | — (silencioso) |
-| Texto extremadamente largo | Nombre/club muy largos | Wrap + `text-overflow: ellipsis` en chips | — |
-| Conexión lenta | Latencia alta | Skeleton en `loading` + spinner; sin bloqueo | — |
-| Fase `loading` (llamada LLM) — NFR (audit L4) | Siempre | Skeleton inmediato (0s); mensaje "Estamos armando tu experiencia…" a los ~5s; timeout con reintento a los ~15s (fallback Rule 39 si reintento falla) | "Esto está tomando más de lo normal. Reintentar." |
-| Error de red en `contact_capture`/`schedule` (audit F13) | Falla el submit | Datos retenidos en cliente; botón pasa a "Reintentar" sin perder lo escrito; tras 2 fallos, ofrece WhatsApp/BES como canal alterno | "No pudimos enviar tus datos. Reintentar." |
-| Sin cobertura de club cerca | CP/zona sin club | Muestra otros clubes + nota TooFar | "El club más cercano está a {distancia}." |
-| Embarazo / posparto / lesión / bariátrica | Q12/Q12b/Q17 | Filtro duro de clases + mensaje de seguridad | Copy contextual de seguridad (§4.3) |
-| FitKidz sin nombres de clase (10 clubes) | Estado B | Sección roja genérica, sin chips | "Tu Asesor te compartirá las actividades para tus hijos." |
-| Abandono del cuestionario | Cierra antes de Q19 | Se registra la última pregunta vista | — (evento analítico) |
-
-> Revisado con QA en fase de diseño: **`[POR DEFINIR — agendar revisión con QA]`**.
-
----
-
-## 6. Sistema de Diseño y Tokens
-
-> **Alcance (propiedad del diseño).** Esta sección define **restricciones** (tokens de marca + mínimos de accesibilidad) y los **lineamientos de estilo premium**, no el diseño gráfico final. La creación de las opciones visuales (layouts a alta fidelidad, componentes, retícula, fotografía, micro-interacciones) es **entregable del equipo de desarrollo/diseño** (Anexo Dos I.3.a). Los **lineamientos de estilo premium** —la vara de aprobación— viven en `DESIGN.md`. Todo lo "visual" que aparezca en este spec (arquitectura visual por pantalla, Appendix F HTML/CSS) es **referencia ilustrativa no vinculante** derivada del demo.
-
-- **Guía de estilo y lineamientos premium:** ver `DESIGN.md` (alcance, lineamientos de estilo premium, tokens + reglas para agentes de IA).
-- **Tokens (DTCG/JSON):** paleta de los **activos de marca del cliente** (no inventada). Son restricciones, no propuestas de diseño:
-
-| Rol | Token | Valor |
-|---|---|---|
-| Acción / marca | `color.brand.primary` | `#E6282A` |
-| Tinta (texto) | `color.text.ink` | `#1D1D1B` |
-| Texto secundario | `color.text.muted` | `#6B6B68` |
-| Texto deshabilitado | `color.text.disabled` | `#A8A8A6` |
-| Borde | `color.border.default` | `#E5E5E3` |
-| Superficie | `color.surface.base` | `#F5F5F4` |
-| Bloque 01 (pesas) | `color.block.strength` | `#EEF5FF` |
-| Bloque 02 (cardio) | `color.block.cardio` | `#EDF8F1` |
-| Bloque 03 (clases) | `color.block.classes` | `#F3F4F6` |
-| Banner CTA | `color.cta.bannerBg` / `color.cta.bannerBorder` | `#FFF4F4` / `#F3B9BC` |
-| Seguridad (YMYL) | `color.safety.bg` | `#FFF6E7` |
-
-- **Componentes/patrones reutilizados:** tarjeta de bloque, tarjeta resumen, chip/pill, banner CTA, sección de seguridad, campo con validación inline, barra de progreso.
-
----
-
-## 7. Accesibilidad (WCAG 2.2 AA) — POUR
-
-> Estándar del proyecto: **WCAG 2.2 AA** (gate axe-core bloqueante), mapeo preventivo. Nota: la **EAA es legislación de la UE**; Sports World opera solo en México, así que el marco aplicable es WCAG 2.2 AA + riesgo legal local, no la EAA.
-
-### Perceptible
-- **Contraste:** validar cada token de texto sobre su fondo ≥ **4.5:1** (texto normal) / **3:1** (grande). Ratios reales medidos del rojo `#E6282A`: 4.47:1 sobre blanco, 4.09:1 sobre `#F5F5F4`, 3.78:1 sobre `#1D1D1B` — los tres **fallan** AA para texto normal. Para texto en rojo usar `#C81E20` (~5.5:1). El blanco sobre rojo solo pasa a ≥18.66px bold (ver tokens DESIGN.md).
-- **No solo color:** el estado "seleccionado" de una opción usa **borde + check**, no solo color. La sección de seguridad usa **icono "!" + texto**, no solo el ámbar.
-- **Alt text:** toda imagen de hub/club lleva `alt` descriptivo (sintaxis: "{tipo} en {club}, {acción}").
-
-### Operable
-- **Tab order** lógico: progreso → opciones → Continuar. Foco visible (`focus-visible` ring de 2px).
-- Ningún control depende solo de gesto; multiselección operable por teclado (Espacio/Enter).
-
-### Comprensible
-- `lang="es-MX"` declarado. Mensajes de error en voz activa y específicos ("Ingresa un número de 10 dígitos").
-- Concordancia de género consistente (Q2=Mujer).
-
-### Robusto
-- Cambios dinámicos anunciados con `aria-live="polite"` (confirmación de cita, errores de validación). `role="alert"` en errores de envío.
-- Marcado semántico: `<fieldset>/<legend>` por pregunta, `<label>` por campo.
-
-**Checklist por pantalla:** contraste ✔ · alt ✔ · tab order ✔ · foco visible ✔ · idioma ✔ · aria-live ✔ → ejecutar auditoría con plugin antes de front-end.
-
----
-
-## 8. Handoff y Sincronización
-
-- **Fuente de verdad:** demo `sw_experiencia_ideal_demo_v6_FINAL.jsx` (comportamiento) + este spec (racionalidad) + `DESIGN.md` (tokens). Handoff visual: `[POR DEFINIR — Figma inspect]`.
-- **Activos:** iconos vectoriales (SVG), exportables; logotipo "SPORTS WORLD" (peso 800).
-- **Riesgo de Design Drift mitigado por:** tokens centralizados (`DESIGN.md`) y componentes respaldados por código (el demo es la referencia funcional).
-
----
-
-## 9. Criterios de Aceptación
-
-- [ ] Cada hub renderiza H1 con keyword, FAQ con datos estructurados, canonical y metadatos válidos.
-- [ ] Core Web Vitals en verde en móvil (LCP < 2.5 s, CLS < 0.1, INP < 200 ms).
-- [ ] El cuestionario avanza una pregunta por pantalla; Q11/Q12b/Q14b aparecen solo con su condición.
-- [ ] No se puede llegar a `schedule` sin los 3 datos de contacto válidos.
-- [ ] El Bloque 3 nunca muestra una clase contraindicada según Q12/Q12b/Q17.
-- [ ] Si el LLM falla, la página de resultado renderiza con fallback (sin pantalla en blanco).
-- [ ] Todos los textos de error son inline, en voz activa y específicos.
-- [ ] Contraste de todos los pares texto/fondo ≥ 4.5:1 (o 3:1 grande), validado por linter.
-- [ ] Cambios dinámicos anunciados a lectores de pantalla (aria-live).
-- [ ] `lang="es-MX"` declarado en todas las páginas.
-
----
-
-## 10. Métricas y Experimentación
-
-### 10.1 KPIs
-
-| Métrica | Punto de partida | Meta (3 meses) | Tipo |
-|---|---|---|---|
-| **Tráfico orgánico mensual** | **80,000 visitas** | **160,000 (2x)** | KPI principal |
-| **Leads cualificados / mes** | `[SUPUESTO: 1,000]` | **2x** | Secundario |
-| **Tiempo de primera respuesta** (agente de voz) | `[SUPUESTO: horas]` | **< 1 min, 24/7** | Secundario |
-| Tasa de finalización del cuestionario | `[SUPUESTO: 40%]` | `[SUPUESTO: ≥ 55%]` | Diagnóstico |
-| Tasa de agenda (visita guiada) | `[SUPUESTO: 12%]` | `[SUPUESTO: ≥ 20%]` | Conversión |
-
-> Cifras marcadas `[SUPUESTO]` son de referencia; reemplazar con datos reales de analítica.
-
-### 10.2 Lead scoring y enrutamiento
-
-Reubicado a `anexo-ingenieria-crm.md` (audit R14: lógica de CRM/ventas sin comportamiento de UI, pesos `[SUPUESTO]`).
-
-### 10.3 Perfilado progresivo (recomendación)
-
-El cuestionario único es un riesgo de abandono. **Instrumentar drop-off por pregunta**; si Q1→Q19 cae por debajo de `[SUPUESTO: 50%]`, dividir en **2 etapas**: (1) mínimo viable (nombre + objetivo + zona) para dar una recomendación preliminar, (2) detalle antes de agendar.
-
-### 10.4 A/B testing
-
-**No priorizado por ahora** (decisión de negocio). Cuando se active, marcar como variables: titular del hub, copy del CTA («Diseña tu experiencia» vs «Agenda tu visita guiada» como CTA primario del hub), e imagen hero. Construir estos componentes desde ya como **slots intercambiables** para no rehacer.
-
----
-
-## Apéndice — Preguntas abiertas al cliente (datos; auditoría 2026-06-11)
-
-Estas preguntas BLOQUEAN el gate médico (F11) y deben resolverse con Sports World antes de congelar la matriz. Ninguna se resuelve internamente.
-
-| ID | Pregunta | Dato |
-| --- | --- | --- |
-| D1 🔴 | ¿Cuál es la disponibilidad por club de TONE, TAI CHI, AERO DANCE, SENSUAL DANCE, **ALPHA TRAINER** y **SWIM TRAINERS**? (sin columna en la matriz fuente; hoy `rankClasses` las descarta siempre) | ¿O se documentan "en catálogo, sin programación actual"? |
-| D2 🔴 | Sin SWIM TRAINERS, la única acuática programada es AQUA ZUMBA (31 clubes) → el top 2 acuático es imposible. ¿Se programa SWIM TRAINERS o se acepta render de 1 card + PT (edge L8)? | Flujo Q6=alberca |
-| D3 🟠 | 14 clubes CON alberca no ofrecen AQUA ZUMBA (barranca, cumbres, la-rioja, león, metepec, palmas, paseo-interlomas, terraza-coapa, pedregal, san-jerónimo, san-pedro, puebla, bernardo-quintana, culiacán). ¿Programación pendiente o estado esperado? | Edge alberca |
-| D4 🟠 | 5 clubes ofrecen AQUA ZUMBA SIN flag de alberca (amores, antara, anzures, reforma, roma). ¿Flag mal o clase mal asignada? | Contradicción de la fuente |
-| D5 🟡 | 6 columnas no oficiales en la matriz sin destino: BEAT N BIKE (2), INTRINITY (1), BOX 1 (2), INICIACIÓN TKD (3), ECROSS (3), FÚTBOL (3). ¿Incorporar con ficha+contraindicaciones o excluir? | Catálogo |
-| D6 🟡 | Confirmar 3 mapeos SUPUESTOS: AE YOGA→AEROYOGA (2 clubes) · HATHA YOGA 90→HATHA YOGA (4) · VINYASA YOGA 90→VINYASA YOGA (6) | Catálogo |
-| D7 🟠 | FitKidz: la matriz trae 21 actividades infantiles; **el contrato firma 34** (Anexo Dos I.1, nivel 06) → el número correcto es 34; el cliente debe completar las 13 columnas faltantes de la matriz | Rule 11 / Rule 30 |
-| D8 🟠 | 4 de los 10 amenity hubs sin fuente de datos: sauna/vapor, regaderas/lockers, café, estacionamiento. ¿De dónde salen? | 155 páginas firmadas |
-| F10 🟡 | kids_classes de los 10 clubes State-B (pregunta rastreada con Gabriela) | FitKidz Estado B |
-| F14 ✅ | **Resuelto por contrato** (Anexo Dos I.2.h): schema de páginas de clase = **Course** (Rule 13 actualizada); Event por sesión queda como complemento opcional de ingeniería | SEO |
-
-## Apéndice — Trazabilidad con el documento técnico
-
-Este spec **no reemplaza** las reglas de ingeniería; las ordena bajo el estándar UX. Se conservan y referencian: cuestionario Q1–Q19 (Rule 18/19), modelo de 6 subgrupos (mapeo Q4), filtro de contraindicaciones YMYL (Rule 14b), captura de contacto (Rule 32b), brief del asesor (Appendix G) y llamada única al LLM (Appendix H) del documento `01_UX_Specification_v4_2_10.docx`.
-
----
-
----
-
-# Parte Técnica — Transferencia 1:1 del documento original
-
-> Transcripción fiel y completa de `01_UX_Specification_v4_2_10.docx` (todos los encabezados, párrafos y tablas, en su orden original). Las **tablas con celdas combinadas** se renderizan con la celda en su primera columna y el resto del span en blanco. Donde el `.docx` trae **campos vacíos** en el origen, aparecen en blanco (no se inventan).
-
-> ⚠️ **Zonas afectadas por corrupción del `.docx` ORIGEN — estado de reconstrucción.** El archivo fuente traía texto partido a media palabra y campos de Word vacíos. Reconstruido en este pase (gravedad real: media, casi todo recuperable):
-> - **Marca (Part 1 / Rule 8):** ✅ reconstruido → "premium fitness" / FitKidz "premium family fitness".
-> - **Rule 13 — Schema markup:** ✅ reconstruido con tipos estándar schema.org (confirmar con ingeniería).
-> - **Rule 2 — labels desktop:** ✅ reconstruido; los labels acortados (480–1023 y <480) venían vacíos → definir con diseño.
-> - **Rule 29 — tags del menú contextual:** menor; reconstruible de Rules 26–31.
-> - **Part 3 — diagrama de Information Architecture:** ❌ era una **imagen**; no recuperable como texto (la IA real está en el «Page inventory»). Requiere re-exportar del `.docx` o rehacer el diagrama.
-> Documento en **DRAFT** hasta confirmar estas reconstrucciones + re-exportar el diagrama.
-
-Sports World Website - UX Specification
-
-Document type: UX Specification (also known as a Behavior Specification) Version: 4.2 Issue date: Jun 2026 Status: Source of truth for design and engineering. Supersedes v4.1, v4.0 and v3.0.
-
-
-### Document Control
-
-
-##### Intended audience
-
-This document is the single source of truth for the behavior of the Sports World public website. It is written for four reading audiences:
-
-- Designers building the screens and interaction patterns.
-- Engineers implementing them.
-- Content and SEO teams populating each page.
-- Client-side stakeholders signing off on each approval gate.
-If a behavior is not described here, it does not exist on the site. If a behavior contradicts this document, this document wins until a new version is issued.
-
-
-##### How to read this document
-
-The document is organized in six parts plus four appendices.
-
-- Part 1- Project Fundamentals. Audience, business objectives, brand positioning, success measures.
-- Part 2 - Conventions. Methodology declaration, code conventions, language conventions, scope boundary, how to read the matrices.
-- Part 3 - Information Architecture. The 11 page types in scope plus the BES widget, the page count, the architecture diagram.
-- Part 4 - Global Rules (Rule 1 to Rule 43). Behavior that applies across the entire site.
-- Part 5 - Per-Page Behavior Matrices. One matrix per page type, showing what the user sees in each possible landing scenario.
-- Part 6 - Edge Cases & Error States. What the site does when the happy path fails.
-- Appendix A - Privacy & Data Handling (Rule 36).
-- Appendix B - Out-of-Scope Pages (Rule 37).
-- Appendix C - Glossary.
-- Appendix D - Code Reference.
-Rules are numbered globally so they can be referenced unambiguously.
-
-
-##### Revision history
-
-
-| Version | Date | Description |
-| --- | --- | --- |
-| 1.0 | Feb 2026 | Initial draft (sitemap + header rules). |
-| 2.0 | Mar 2026 | Added questionnaire and contextual menu logic. |
-| 3.0 | May 2026 | Added per-page matrices for the 12 page types. |
-| 4.0 | May 2026 | Restructured to industry UX Specification format. Added Project Fundamentals, Conventions, Edge Cases & Error States. Tightened glossary. |
-| 4.1 | May 2026 | Strict-adherence revision applying industry best practices (UXmatters / NN/G / Atlassian). Corrected brand positioning to Premium fitness (Premium family fitness only on FitKidz). Declared mobile-first as the methodology. Restructured BES as a global floating widget with /bes as fallback URL. Added BES + WhatsApp reminder behavior with consent. Added explicit membership-no-checkout rule. Enumerated the 4 live data points per club. Adopted YMYL as canonical term. Refined cross-linking, schema markup, FitKidz IA, tap targets. Removed references to employee photographs. Added search-query precedence rule, stale-plan refresh and explicit accessibility floor. |
-| 4.2 | Jun 2026 | Adaptive questionnaire redesigned: 10→15 base questions + 6 conditionals (Q11, Q12b, Q14b, Q17, Q18, Q19); new individual-training pages; Rule 38 added; hub Tonificar renamed to Estética corporal. |
-| 4.3 | Jun 2026 | Consolidation pass per exhaustive audit (2026-06-11): unified Q6=alberca logic (aquatic variant, never suppress Block 1), single Block 3 ranking algorithm (Rule 40 + Q6 filter + no-apto drop), Q12b gating moved to Q2 ≠ Hombre (YMYL safety), health-data consent moment defined at Q12, template contrast/touch-target fixes, six-subgroup bridge table, pre-fill dedupe, loading NFR, open client-data questions annexed. |
-
-
-##### A note on language
-
-The Sports World website is delivered in Spanish (Mexico) to end users. Throughout this specification, button names and other production UI labels are kept in their Spanish form, with an English gloss in parentheses on first mention. The descriptive prose around them is in English
-
-to serve a multilingual production team. Internal system codes (such as CIUDAD-1, ( CIUDAD-
-
-ZMVM1 Q17 ) are kept in Spanish because they map directly to implementation identifiers and
-
-must remain identical in code, copy CMS, and design files.
-
-
-## Part 1- Project Fundamentals
-
-
-##### End-user audience
-
-The site serves three primary user types, in priority order:
-
-- Prospective members researching a gym - intent-driven, often arriving from external search ("gimnasio Polanco", "bajar de peso gym", "yoga estudio").
-- Existing members performing self-service tasks - checking schedules, locating amenities, asking the conversational assistant about hours, cancellations, or freezes.
-- Parents and family decision-makers researching the children's program (FitKidz) - exploratory rather than class-name-specific search behavior.
-
-##### Business objectives
-
-The site is rebuilt to fix three measurable problems with the previous site:
-
-| Problem | Cause | Solution in the new site |
-| --- | --- | --- |
-| The site appears in less than 1% of "gym for losing weight" searches | No dedicated weight-loss page existed | Hub at /bajar-de-peso/ with YMYL-compliant content and medical sign-off |
-| The site ranks outside the top 100 results for "yoga near me" | Class pages were not optimized | One dedicated page per class (51 adult classes + the FitKidz hub absorbing 34 children's activities) with structured markup |
-| Searches like "gym near me" land on the homepage instead of the closest club | The previous site did not detect location | The new site detects location and routes to the closest club (Rule 15) |
-
-
-##### Brand positioning
-
-The site's brand is **premium fitness**. Three implications:
-
-The FitKidz sub-brand is **premium family fitness**.
-
-- Considered typography, generous spacing, editorial photography.
-- Direct, measured language. No forced enthusiasm, no exclamation marks, no all-caps marketing copy, no question-bait headlines.
-- Family framing applies only on FitKidz pages. Everywhere else the framing is individual or personalized. The rest of the site speaks to one user at a time, not to "the family".
-
-##### Success measures
-
-| Measure | Target |
+| Estado | Descripción |
 | --- | --- |
-| Organic traffic visibility on "bajar de peso" cluster | Top 10 in target queries within 90 days of launch |
-| "Gym near me" → closest club routing accuracy | 100% of geolocated sessions routed to the closest open club |
-| Class-page organic visibility | Top 50 for the 51 adult classes within 90 days |
-| Core Web Vitals on mobile p75 | LCP < 2.5 s, INP < 200 ms, CLS < 0.1 |
-| Accessibility | WCAG 2.2 AA on every page |
+| Sin cuestionario | El usuario no ha completado el cuestionario. |
+| Completo, dentro del flujo | El usuario completó el cuestionario y llegó a esta página haciendo clic en un botón desde su plan personalizado (p. ej., "Ver tu club" desde la pantalla de resultado). |
+| Completo, fuera del flujo | El usuario completó el cuestionario previamente pero llegó a esta página por una vía distinta (búsqueda externa, navegación interna, etc.). |
+
+Cuando el usuario ha completado el cuestionario, siempre tiene un club identificado - las preguntas del cuestionario que identifican el club (Q15 y Q16) forman parte de las 15 preguntas base. Conteo de preguntas visibles por path (base 15 más condicionales): 15 sin condicionales; +1 si Q11 (pausa); +1 si Q12b (Q2 = Mujer); +1 si Q14b (hijos <12); +3 si Q17–Q19 (Q4 incluye Bajar de peso). Rango 15–21. Ver la tabla normativa de conteo abajo.
+
+> **Tabla normativa de conteo de preguntas:**
+
+| Condición activa | Se añade | Δ |
+| --- | --- | :-: |
+| Base — siempre visible | Q1–Q10, Q12, Q13, Q14, Q15, Q16 | **15** |
+| Q10 = "Regreso después de una pausa" | + Q11 | +1 |
+| Q2 = Mujer | + Q12b | +1 |
+| Q14 ∈ {"Yo y mis hijos", "La familia completa"} | + Q14b | +1 |
+| Q4 incluye "Bajar de peso" | + Q17, Q18, Q19 | +3 |
+| **Mínimo** (sin condicionales) | | **15** |
+| **Máximo** (todas activas) | | **21** |
+
+### 4.2 Inferencia desde la búsqueda externa (Rule 16)
+
+Cuando un usuario llega al sitio desde una búsqueda externa, el sistema solo puede inferir dos variables del cuestionario a partir de lo que buscó:
+
+- Objetivo (Q4) — solo si la búsqueda contenía un objetivo explícito (bajar de peso, estética corporal, fuerza, condición y resistencia, recuperación de lesión o dolor).
+- Ubicación (Q15 y Q16) — solo si la búsqueda contenía una ubicación específica.
+
+Las siguientes inferencias NO se hacen:
+
+- Una búsqueda de clase no llena el objetivo, porque una misma clase puede servir a varios objetivos. (Aterrizar en una página de clase sí pre-marca Q4 según Rule 20.)
+- Una búsqueda de amenidad no llena la preferencia de movimiento (Q5 o Q6), porque la preferencia por una amenidad no determina el estilo de entrenamiento.
+- Rule 16 gobierna SOLO la inferencia desde la búsqueda externa. Los pre-llenados por página de aterrizaje los gobierna Rule 20, que es la regla autoritativa donde se superponen: aterrizar en FitKidz pre-llena Q14, en Personal Training pre-llena Q13 y en una clase o hub de objetivo pre-marca Q4.
+- Aterrizar en el hub Bajar de peso no fuerza las condicionales de peso; Q17–Q19 solo se activan cuando el usuario marca Q4 = Bajar de peso en el cuestionario.
+- Navegar internamente no infiere nada: solo cuenta la búsqueda externa que trajo al usuario al sitio.
+
+**Excepción.** Cuando el usuario presiona «Tu Club ideal» dentro del sitio y proporciona su ubicación en ese flujo, la ubicación llena Q16 automáticamente. Eso no es inferencia de búsqueda: es captura directa de una interacción del usuario.
+
+### 4.3 Precedencia entre inferencias en conflicto (Rule 17)
+
+Cuando una búsqueda combina elementos que mapean a varias inferencias (p. ej. «yoga Polanco bajar de peso» = una clase + una ubicación + un objetivo), el sistema aplica una sola precedencia:
+
+**Q4 (objetivo) > Q16 (ubicación) > pre-marca de objetivo derivada de clase.**
+
+En el ejemplo: el usuario aterriza en el hub Bajar de peso (gana Q4) con Q16 pre-llenado a Polanco. La pre-marca derivada de la clase no se aplica, porque el aterrizaje por objetivo domina al aterrizaje por clase.
+
+### 4.4 Pre-llenado por página de aterrizaje (Rule 20)
+
+Cuando el usuario aterriza en una página específica, el sistema prellena las preguntas que ya puede inferir del aterrizaje. Toda respuesta prellenada permanece editable.
 
 
-### Part 2 - Conventions
-
-
-##### Methodology: mobile-first
-
-The site is designed and engineered mobile-first as a methodology, not as a responsive afterthought. Every layout, interaction, and rule in this specification is to be implemented starting from the mobile viewport and progressively enhanced upward. El ÚNICO sistema de breakpoints es el de los tokens (DESIGN.md): mobile 360 · tablet 768 · laptop 1024 · desktop 1440 (audit C11; la media query de 720px del template legado debe migrar a 768). The opposite - designing desktop and "making it responsive" later- is non-conformant.
-
-Where this specification describes a desktop-only behavior (such as interactions in Rule
-
-5), the rule is explicit about its viewport scope. The mobile equivalent is always specified.
-
-
-##### Code conventions
-
-The specification uses several immutable identifier systems. Once assigned, a code never changes meaning and is never reused for a different element. If an element is removed from the site, its code is retired permanently and not reassigned.
-
-
-| Code system | Format | Examples | Meaning |
-| --- | --- | --- | --- |
-| Pagetype | numeric, 1-12 | Page type 2 = Individual club | Twelve canonical page types in the 155-page scope. BES is a global widget (Rule 3). |
-| Question | Q+number (+variant) | Q1, Q4, Q12, Q16, Q17, Q18, Q19 | Questionnaire questions. |
-| City classification | CIUDAD- +tag | CIUDAD-1, POCOS, CIUDAD-ZMVM | Number of clubs in the user's city. |
-| Rule | Rule + number | Rule 7, Rule 25 | Global rules in Part 4. |
-| Article tag | lowercase, hyphenated | bajar-de-peso, clase-spinning, amenidad-alberca | Content tags for the Journal cross-linking system (Rule 29). |
-
-
-##### Language conventions
-
-- End-user UI strings: Spanish (Mexico). Imperative second-person familiar for CTAs
-( Visi ta un club , not Visi te un club ). Mexican Spanish vocabulary ( checar , platicar , Aqui empieza todo - not the peninsular Aqui comienza todo ). No English calques.
-
-- Specification prose: English, for the production team.
-- Internal system codes: Spanish, never translated.
-
-##### How to read the per-page matrices
-
-Each per-page matrix in Part 5 has three columns:
-
-- State - combination of two factors: (a) whether the user has completed the questionnaire, and (b) whether the user has a club identified.
-- Questionnaire - the number of questions presented after pre-filling. If a question is omitted entirely (the special Individual Club case for Q15 and Q16), it does not count. If a question is pre-filled but editable, it still counts as a visible question.
-- Contextual menu - the buttons that appear in the page's body content for that state. The header buttons (always visible per Rules 1-2) and the BES widget (always visible per Rule 3) are not repeated in each matrix.
-The contextual button appears in matrices only on pages
-
-where tagged articles are reasonably expected to exist (the hub, goal hubs,
-
-Personal Training). On other pages the button still appears dynamically when matching articles are tagged, but it is not documented in the matrix because it is variable.
-
-
-##### Scope boundary - what this specification does NOT cover
-
-The following subjects are intentionally out of scope of this specification.They are governed by other partner-facing documents.
-
-- Visual production rules (which photographs to use, AI-generated image guidelines, video shot lists, employee imagery policies, asset volume targets) - these live in the partner brief, Section 6.
-- Technical stack choices (framework, CMS, hosting, observability, performance tooling) - these live in the partner brief, Section 5.
-- Brand asset creative direction (typography selection, color palette, logo, mood references)
-- these live in the brand asset pack delivered to the partner in Week 1.
-
-- Project process (approval gates, deliverable schedule, vendor capabilities, commercial terms) -these live in the partner brief.
-- Content production rules (anti-duplicate-content scoring, Spanish-MX register details beyond CTAs, Journal article selection criteria) - these live in the content workstream brief.
-
-### Part 3 - Information Architecture
-
-
-##### Page inventory
-
-The site has 12 canonical page types in scope plus the BES conversational assistant, which is implemented as a global floating widget rather than a destination page.
-
-| # | Page type | Count | URL pattern | Health-sensitive (YMYL) |
-| --- | --- | --- | --- | --- |
-| 1 | Home | 1 | / | No |
-| 2 | Individual club | 49 | /clubes/[club]/ | No |
-| 3 | Amenity | 10 | /amenidades/[amenidad]/ | No |
-| 4 | Premium Les Mills class | 7 | /clases/signature/[clase]/ | No |
-| 5 | Regular class | 44 | /clases/[clase]/ | No |
-| 6 | FitKidz | 1 | /fitkidz/ | No |
-| 7 | Goal hub | 5 | /perfiles/[objetivo]/ | Only rehabilitation |
-| 8 | Bajar de peso hub | 1 | /bajar-de-peso/ | Yes (YMYL) |
-| 9 | Personal Training | 1 | /personal-training/ | No |
-| 10 | Memberships | 6 (1 hub + 5 plans) | /membresias/ and /membresias/[plan]/ | No |
-| 11 | Journal article | 20 | /diario/[articulo]/ | Some, yes |
-| 12 | Individual-training page | 10 (2 parent + 8 subgroup subpages) | /entrenamiento-con-pesas-individual/[subgrupo] · /entrenamiento-aerobico-individual/[subgrupo] | No |
-
-Total signed pages: 1 + 49 + 10 + 7 + 44 + 1 + 5 + 1 + 1 + 6 + 20 + 10 = **155 pages**.
-
-> **Precedence (client rule).** What is agreed in these documents has higher authority than any other document, **including the contract deliverables**. The contract (Anexo Dos I.1) fixes a limitative architecture of **145** pages; the **2 individual-training pages + 8 subgroup subpages** the spec adds (audit M4, Rule 20/38) are **authoritative signed pages**, raising the total to **155**. This figure prevails over the contract figure; the increase is formalized via a contract amendment (convenio modificatorio) as a mere formality, without conditioning the spec scope.
-
-BES. The conversational assistant is a global floating widget present on every page (Rule 3). It
-
-also exposes a fallback URL for users without JavaScript and for deep-linking. BES is
-
-delivered as a separate workstream with its own specification; this document covers only its integration points and behavioral interfaces with the rest of the site.
-
-
-##### Detail on certain page types:
-
-- The 5 goal hubs are: first steps, health and wellness, body aesthetics, build strength, rehabilitation.
-- The 5 membership plans are: UniClub, AllClub, Black Pass, Pink Plan, and the 21-Day Promo.
-- The 10 amenity hubs are: pool, INTENZ (functional training zone), FitKidz, boxing ring, climbing wall, courts, sauna and steam room, showers and locker rooms, cafe, and parking.
-- "FitKidz" appears both as a page type (the parent hub) and as one of the 10 amenities. The FitKidz hub is the fully-built page; the FitKidz amenity entry is a pointer that links to it.
-- The FitKidz hub absorbs all 34 children's activities. Children's activities do not have individual pages; they are organized within the hub by age range, discipline type, and club availability.
-- Architecture diagram: *(diagrama visual — entregable de diseño Semana 1; el «Page inventory» de arriba es el contenido autoritativo)*
-
-The diagram above is a textual approximation. The design team produces the formal IA diagram as a Week-1 deliverable. Anti-orphan rule: every page must be reachable from at least two other pages. The cross-linking matrix is enforced by Rule 10.
-
-
-##### Individual-training subgroup taxonomy
-
-User-facing Block 1 subgroup names follow the six accessible labels mapped from the user's primary Q4 goal (see the Q4-to-subgroup mapping in this section): Cuerpo completo con peso moderado, Definición muscular por zonas, Crecimiento muscular con carga creciente, Fuerza explosiva y velocidad, Mantenimiento de fuerza general, Pesas guiadas con énfasis en técnica controlada. The ACSM prescription, equipment and citation detail that follows is the internal protocol reference and is not shown to the user; the technical names (Fuerza, Hipertrofia, Potencia, Resistencia muscular, LISS, MICT, HIIT, SIT) live only in fichas, subpage URLs and backend identifiers.
-
-Two top-level individual-training pages — entrenamiento-con-pesas-individual and entrenamiento-aerobico-individual — plus their 8 subgroup subpages (Rule 20) are **canonical page type 12** in the inventory above. Per the client precedence rule, these are authoritative signed pages and raise the total to 155 (superseding the contract's 145 figure). Each maps to six subgroups (one per Q4 goal; official names in «Catálogo oficial — Programas de entrenamiento individual»), grounded in ACSM consensus. A third, aquatic block (Entrenamiento acuático) activates when Q6 = "En la alberca"/"Ambas" and the resolved club has a pool. The weight-training subgroups follow the ACSM Position Stand 2026 (Currier BS, D'Souza AC, Singh MAF, et al. "Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews." Medicine & Science in Sports & Exercise 2026. DOI: 10.1249/MSS.0000000000003897). The aerobic subgroups follow the ACSM/ESSA Joint Expert Statement 2024 ("Physical Activity and Exercise Intensity Terminology." Journal of Science and Medicine in Sport 2024). Pre-fill and result behavior for these pages is governed by Rule 38.
-
-
-Las **prescripciones técnicas ACSM por subgrupo** (series, repeticiones, %1RM, descansos, equipo, DOIs) viven en `anexo-clinico.md` §2 (owner: validación MD; audit R6 — el propio texto admite "not shown to the user" y el scope boundary de Part 2 las excluye del behavior spec).
-
-##### Q4 goal to subgroup mapping (Rule 38)
-
-
-| Q4 goal | Block 1 — Fuerza y desarrollo muscular (nombre oficial · detalle) | Block 2 — Cardio y resistencia (nombre oficial · máquina · duración) |
+| Página de aterrizaje | Prellenado / inferido | Comportamiento |
 | --- | --- | --- |
-| Bajar de peso | **Fuerza integral con pesas** (cuerpo completo, peso moderado) | **Cardio continuo moderado** · caminadora/bici/elíptica · 35–45 min |
-| Mejorar mi estética corporal y definición muscular | **Rutina por grupos musculares** (definición por zonas) | **Cardio moderado con intervalos** · caminadora/bici/elíptica · 25–35 min |
-| Aumentar masa muscular | **Desarrollo muscular progresivo** (carga creciente) | **Cardio ligero de mantenimiento** · caminadora suave/bici · 15–25 min |
-| Mejorar mi desempeño atlético | **Potencia y velocidad** (fuerza explosiva) | **Intervalos intensos 4×4** · bici/remo/caminadora · 30–40 min |
-| Mejorar mi salud cardiovascular | **Fuerza de mantenimiento** (fuerza general) | **Base aeróbica 80/20** · caminadora/bici/elíptica/remo · 35–45 min |
-| Recuperarme de una lesión o dolor crónico | **Fuerza guiada en máquinas** (técnica controlada) | **Recuperación activa de bajo impacto** · bici reclinada/elíptica/caminadora muy suave · 15–25 min |
+| Home | Ninguno desde el aterrizaje. Q3, Q4 o Q15 pueden inferirse de la consulta de búsqueda externa según la Rule 16. | Si la búsqueda externa incluye una ubicación, Q15 y Q16 se prellenan. |
+| Página de club individual | Q15 y Q16 se omiten por completo. | El conteo baja en 2 para esta vía de entrada. |
+| Hub de amenidad | Ninguno. | |
+| Hub de clase premium o regular | Q4 pre-marca el objetivo alineado al movimiento. | El mapa de clase a objetivo es la tabla de fichas del Block 3 (perfil por objetivo Q4) bajo la Rule 14b — ver «Fichas de clases grupales (Block 3)». |
+| FitKidz | Q14 prellena "Yo y mis hijos". | |
+| Hub de objetivo — Primeros Pasos | Q9 pre-marca "Principiante". | |
+| Hub de objetivo — Salud y Bienestar | Q4 pre-marca "Mejorar mi salud cardiovascular". | |
+| Hub de objetivo — Estética corporal | Q4 pre-marca "Mejorar mi estética corporal". | Renombrado desde Tonificar. |
+| Hub de objetivo — Ganar Fuerza | Q4 pre-marca "Aumentar masa muscular". | |
+| Hub de objetivo — Rehabilitación | Q4 pre-marca "Recuperarme de una lesión o dolor". | |
+| Hub YMYL — Bajar de peso | Q4 pre-marca "Bajar de peso", lo que activa Q17 a Q19. | |
+| Personal Training | Q13 pre-marca "Acompañado/Acompañada". | |
+| Membresías, Journal | Ninguno. | |
+| entrenamiento-con-pesas-individual (y subpáginas) | Q13 pre-marca "Solo, a mi ritmo" (o "Sola" si Q2 = Mujer). Las subpáginas pre-marcan Q4: Fuerza → "Mejorar mi desempeño atlético"; Hipertrofia → "Mejorar mi estética corporal"; Potencia → "Mejorar mi desempeño atlético"; Resistencia muscular → "Mejorar mi salud cardiovascular". | Nuevo. |
+| entrenamiento-aerobico-individual (y subpáginas) | Q13 pre-marca "Solo, a mi ritmo" (o "Sola" si Q2 = Mujer). Las subpáginas pre-marcan Q4: LISS → sin pre-marca; MICT → "Mejorar mi salud cardiovascular"; HIIT → "Mejorar mi estética corporal"; SIT → "Mejorar mi salud cardiovascular". | Nuevo. |
 
-If Q4 has two selections (allowed up to two), the recommended set is the union of both rows, deduplicated.
+El prellenado siempre es editable por el usuario.
 
+### 4.5 Pipeline de la aplicación (cuestionario → resultado → brief)
 
-##### Catálogo oficial — Programas de entrenamiento individual
+> **Normativo vs. referencia.** Los catálogos oficiales (51 clases; cuestionario Q1–Q19) son **normativos**; el demo `sw_experiencia_ideal_demo_v6_FINAL.jsx` es **referencia de implementación**. Donde difieran, gobierna este documento. En particular: catálogo = **51 clases** (`DANZA AEREA`, `FLYBOARD`, `INTERVAL`, `FULL BODY`, `GIMNASIA DE GRUPOS` y `ACUAEROBICS` no existen en el catálogo); **Q18** captura peso · estatura · **cintura**. Mapeo de nombres del demo → canónicos: `FUN TRAC`→FUNTRAC · `KINETICS BALL`→KINETIC BALL · `SH BAM`→SH'BAM · `JAZZ 90`→JAZZ · `GRIT DEMO`→GRIT · `TRAINT BOOST DEMO`→TRAINT BOOST · `HAWAIANO`→RITMOS LATINOS · `FIT Y DANCE`→FIT DANCE · `ACUAZUMBA`→AQUA ZUMBA.
 
-Tres familias oficiales (Fuerza y desarrollo muscular · Cardio y resistencia · Entrenamiento acuático), 6 sub-clases cada una, mapeadas a los 6 objetivos Q4. El detalle completo (tablas de mapeo y estados `clínico`/`inferido`) vive en `anexo-clinico.md` §3 (audit R9 — datos pendientes de confirmación del cliente). El bloque acuático se activa cuando Q6 = "En la alberca"/"Ambas" y el club resuelto tiene alberca (Rule 39).
-
-##### Flujo de aplicación del cuestionario — Experiencia Ideal + resumen del lead (conforme a `sw_experiencia_ideal_demo_v6_FINAL.jsx`)
-
-> **Regla de precedencia (cliente):** donde el demo contradiga los catálogos acordados (**51 clases**, **cuestionario oficial**) **prevalece lo acordado** y se ajusta el flujo. Contradicciones ya resueltas a favor de lo acordado: catálogo = **51 clases** (NO 56 — `DANZA AEREA`, `FLYBOARD`, `INTERVAL`, `FULL BODY`, `GIMNASIA DE GRUPOS`, `ACUAEROBICS` quedan fuera); **Q18** = peso actual · estatura · **cintura** (no "edad"). Mapeo de nombres crudos del demo → canónicos: `FUN TRAC`→FUNTRAC · `KINETICS BALL`→KINETIC BALL · `SH BAM`→SH'BAM · `JAZZ 90`→JAZZ · `GRIT DEMO`→GRIT · `TRAINT BOOST DEMO`→TRAINT BOOST · `HAWAIANO`→RITMOS LATINOS · `FIT Y DANCE`→FIT DANCE · `ACUAZUMBA`→AQUA ZUMBA.
-
-**1. Flujo del cuestionario (`getQuestions`).** 15 base + 6 condicionales (ver tabla normativa). Disparadores: Q11 si Q10 = "Regreso después de una pausa"; Q12b si Q2 ≠ "Hombre" (audit L1 — incluye "Prefiero no mencionarlo", con fraseo neutro); Q14b si Q14 ∈ {"Yo y mis hijos","La familia completa"}; Q17/Q18/Q19 si Q4 incluye "Bajar de peso". Conjugación de género en Q3, Q13, Q14 cuando Q2 = Mujer.
+**1. Flujo del cuestionario (`getQuestions`).** 15 base + 6 condicionales (ver tabla normativa). Disparadores: Q11 si Q10 = "Regreso después de una pausa"; Q12b si Q2 ≠ "Hombre"; Q14b si Q14 ∈ {"Yo y mis hijos","La familia completa"}; Q17/Q18/Q19 si Q4 incluye "Bajar de peso". Conjugación de género en Q3, Q13, Q14 cuando Q2 = Mujer.
 
 **2. Resolución de bloques (`resolveBlocks`, Q6-aware).** Objetivo primario = primer Q4 seleccionado.
 - **Q6 = "En la alberca"** → si el club tiene Alberca: Block 1 y Block 2 usan las **variantes acuáticas**; si no tiene alberca: bloques secos + nota "este club no tiene alberca; revisa otros clubes cerca".
@@ -673,312 +631,399 @@ Claves JSON exactas:
 
 **7. Contexto médico (`medicalContext`)** se inyecta al prompt cuando `hasMedical`: lista condiciones; embarazo/posparto (clases de impacto ya filtradas); GLP-1 (priorizar fuerza para preservar masa muscular); bariátrica; recordatorio de que el filtro grupal ya excluye contraindicadas y el asesor ajusta protocolos individuales con criterio clínico.
 
+### 4.6 Refresco de experiencia obsoleta (Rule 34)
 
+A un usuario con cuestionario completo cuyo resultado se generó hace más de 60 días se le muestra un aviso no bloqueante que ofrece refrescar su experiencia con su contexto de vida actual («¿Sigue siendo tu objetivo?»). Si el usuario no interactúa con el aviso, su resultado sigue disponible sin cambios. Esto evita que recomendaciones obsoletas sesguen el menú contextual indefinidamente.
 
+---
 
-## Part 4 - Global Rules
+## 5. Especificación por pantalla y componente
 
+Cada subsección sigue el mismo orden: propósito · comportamiento · contenido · estados. Las matrices «estado del usuario → preguntas visibles → menú contextual» definen el comportamiento exacto por tipo de página.
 
-##### Header and global widgets Rule 1 - Desktop header structure
+### 5.1 Header global
 
-The header is fixed to the top of the screen on every page. It contains five elements, from left to right:
+#### Estructura desktop (Rule 1)
 
-- Sports World logo - always returns to the home page on click.
-- Tu Sports World (Your Sports World) - opens a side drawer with the 8 main hubs of the site (Rule 4).
-- Diseña tu experiencia (Design your experience) - opens the questionnaire (Rules 18-21).
-- Pregúntale a BES (Ask BES) - opens the BES global widget (Rule 3).
-- Agenda tu visita (Book your visit) - red pill button leading to the guided-visit booking flow (Rule 6).
-Items 2, 3, and 4 are three parallel paths through the site. They share equal hierarchy: the user picks whichever they prefer. Item 5 is the only conversion action and is treated visually differently.
+El header está fijo en la parte superior de la pantalla en todas las páginas. Contiene cinco elementos, de izquierda a derecha:
 
+- Logo de Sports World - siempre regresa a la página de inicio al hacer clic.
+- Tu Sports World - abre un drawer lateral con los 8 hubs principales del sitio (Rule 4).
+- Diseña tu experiencia - abre el cuestionario (Rules 18-21).
+- Pregúntale a BES - abre el widget global de BES (Rule 3).
+- Agenda tu visita - botón pill rojo que lleva al flujo de agendado de la visita guiada (Rule 6).
+Los elementos 2, 3 y 4 son tres rutas paralelas a través del sitio. Comparten la misma jerarquía: el usuario elige la que prefiera. El elemento 5 es la única acción de conversión y recibe un tratamiento visual distinto.
 
-##### Rule 2 - Mobile header structure
+#### Estructura móvil (Rule 2)
 
-On screens narrower than 1024 pixels, the four left-side elements do not fit on a single row. The solution is two stacked rows:
+En pantallas de menos de 1024 px los cuatro elementos de la izquierda no caben en una sola fila. La solución son dos filas apiladas:
 
+- **Fila 1 (header, 56 px):** logo Sports World (izquierda) + botón rojo «Agenda tu visita» (derecha).
+- **Fila 2 (franja editorial, 44 px):** Tu Sports World · Diseña tu experiencia · Pregúntale a BES.
 
-##### Row1(header,56px):
+Las etiquetas se acortan según el ancho disponible:
 
-- Row 2 (editorial strip, 44 px):
-and [Agenda tu visita].
-
-.
-
-The labels shorten according to the available width:
-
-| Screen width | Labels shown |
+| Ancho de pantalla | Etiquetas mostradas |
 | --- | --- |
-| 1024 px and up (desktop) | Tu Sports World • Diseña tu experiencia • Pregúntale a BES |
-| 480 to 1023 px (tablet / large mobile) | [labels acortados — venían VACÍOS en el origen; definir con diseño] |
-| Below 480 px (small mobile) | [íconos / labels mínimos — venían VACÍOS en el origen; definir con diseño] |
+| ≥ 1024 px (desktop) | Tu Sports World • Diseña tu experiencia • Pregúntale a BES |
+| 480–1023 px (tablet / móvil grande) | `[POR DEFINIR — diseño: etiquetas acortadas]` |
+| < 480 px (móvil chico) | `[POR DEFINIR — diseño: íconos o etiquetas mínimas]` |
 
+#### CTA del header «Agenda tu visita» (Rule 6)
 
-##### Rule 3 - BES global widget
+- Tratamiento visual: botón pill (esquinas redondeadas, estilo cápsula) con fondo rojo de marca y texto blanco.
+- Posición: anclado a la derecha del header en todas las páginas y en todos los estados de navegación. Esta es la única excepción a la regla de "cada cosa vive en un solo lugar", porque es la acción de conversión primaria del sitio y debe poder alcanzarse siempre en un solo toque.
+- Al presionarlo: lleva al flujo de agendado de la visita guiada. Si el usuario aún no ha completado el cuestionario, el cuestionario se presenta como paso prerrequisito antes de confirmar la cita.
 
-BES is the Sports World conversational AI assistant - text-first, with voice as an optional input/output mode. It is implemented as a global floating widget present on every page of the site, lazy-loaded so it does not affect Largest Contentful Paint.
+#### Comportamiento al hacer scroll (Rule 7)
 
-- Floating button. A persistent floating button appears bottom-right on every page on every viewport. Tap or click opens the chat panel.
-- Chat panel. Slides in over the current page (does not navigate to a new URL). Mobile: full-screen panel with close button. Desktop: 420-pixel-wide right-side panel.
-- Default mode: text input and text response. A toggle in the panel header switches to voice input and voice output.
-- Header entry point. The header element point that opens the same panel.
-(Rule 1)is a redundant entry
+El header permanece anclado en la parte superior de la pantalla mientras el usuario hace scroll. Su altura no cambia. Su fondo es sólido (transparencia y desenfoque sutiles para una sensación premium: opacidad de fondo 0.85, backdrop-blur 8px), sin cambios en ninguna posición de scroll.
 
-- Fallback URL . Users without JavaScript, users following a shared link, and search-
-engine indexers reach a server-rendered fallback page that hosts a graceful message and the same chat interface as a non-floating layout.
+### 5.2 Panel lateral «Tu Sports World»
 
-- Context-passing. When opened, BES knows the current page type and any contextual identifiers (club tag, amenity slug, goal slug, class slug). This lets BES answer page-specific questions without the user re-stating context.
+#### Contenido (Rule 4)
 
-##### Rule 3.1 - What BES does NOT do:
+Al pasar el cursor (desktop) o tocar (móvil) «Tu Sports World», un panel lateral se desliza desde la derecha con los 8 hubs principales del sitio:
 
-- It does not directly execute cancellations, freezes, plan changes, or refunds. It captures the request, performs basic identity validation, opens a ticket in the client's CRM, and offers to connect the user with a human asesor.
-- It does not answer deep health questions. It redirects them to the corresponding hub
-( Bajar de peso or off.
+- Clubes.
+- Clases.
+- Amenidades.
+- Perfiles (hubs de objetivo).
+- Bajar de peso.
+- FitKidz (programa infantil).
+- Membresías.
+- Diario (artículos editoriales).
 
-- It does not promise outcomes.
-goal hub), which carries the medical reviewer's sign-
+El panel mide 560 px de ancho en desktop y es pantalla completa en móvil. Incluye un pie con redes sociales y aviso de privacidad.
 
+Los tres elementos del header — «Diseña tu experiencia», «Pregúntale a BES» y «Agenda tu visita» — **no** están en el panel lateral: cada pieza de navegación vive en exactamente un lugar para evitar duplicación.
 
-##### Rule 3.2 - WhatsApp scope:
+#### Comportamiento (Rule 5)
 
-- Visit reminders only. When a user books a guided visit, BES schedules two WhatsApp template messages: one 24 hours before the appointment, one 2 hours before. The messages are templated and informational; they do not require user reply.
-- Consent. The phone number is captured during the booking flow with explicit opt-in to WhatsApp reminders. Without opt-in, no WhatsApp message is sent and the visit reminder falls back to email.
-- Out of scope. BES does not use WhatsApp for sales, account changes, or any other communication category.
-Rule 4 - Side drawer ((Tu Sports World)) - contents
+- Desktop: abre al hacer hover sobre «Tu Sports World» con 200 ms de retardo para evitar aperturas accidentales. Cierra cuando el cursor sale del panel, con 300 ms de gracia.
+- Móvil: abre al tocar. Cierra al tocar fuera del panel o al tocar cualquier elemento.
+- Animación: entra desde la derecha en 320 ms; sale en 240 ms.
+- Telón de fondo: mientras está abierto, el resto de la página se cubre con un velo semitransparente (backdrop-blur de 12 px + overlay negro al 40% de opacidad).
+- Cierre manual: una "X" en la esquina superior izquierda del panel.
+- Teclado: `Esc` cierra el panel; `Tab` cicla el foco solo dentro del panel mientras está abierto (focus trap).
 
-On hover (desktop) or tap (mobile) over(Tu Sports World1 a side drawer slides in from the right containing the 8 main hubs:
+### 5.3 BES — asistente conversacional global
 
-- Tu Club ideal (Your ideal club-find theclosest club).
-- Clases (catalog of the 51adult classes).
-- Amenidades (the 10 amenities in the system).
-- FitKidz (children's program).
-- Bajar de peso (medically-backed hub).
+#### Widget global (Rule 3)
 
-##### Personal Training.
+BES («Pregúntale a BES — tu asistente Sports World») es un **widget global flotante** presente en cada una de las 155 páginas. No es una página de destino.
 
-- Membresias.
-- Diario (Journal - editorial articles).
-The drawer is a 560-pixel wide panel on desktop and full screen on mobile. It includes a footer with social links and a privacy notice.
+- **Botón flotante.** Anclado a la esquina inferior derecha en todas las páginas y breakpoints. No se desplaza con el scroll.
+- **Panel de chat.** Se desliza sobre la página actual (no navega a otra URL). Móvil: panel de pantalla completa con botón de cierre. Desktop: panel lateral derecho de 420 px.
+- **Modo por defecto:** entrada y respuesta de texto. Un toggle en el encabezado del panel cambia a entrada y salida de voz.
+- **Punto de entrada del header.** El elemento «Pregúntale a BES» del header (Rule 1) es un punto de entrada redundante que abre el mismo panel.
+- **URL de fallback.** Usuarios sin JavaScript, usuarios que siguen un enlace compartido e indexadores llegan a una página de fallback renderizada en servidor con un mensaje claro y la misma interfaz de chat en layout no flotante.
+- **Paso de contexto.** Al abrirse, BES conoce el tipo de página actual y sus identificadores (tag de club, slug de amenidad, de objetivo o de clase). Así responde preguntas específicas de la página sin que el usuario repita el contexto.
 
-The three header items (Diseña tu experiencia), ( Pregúntale a BES), and (Agenda tu visita) are not in the side drawer. Each piece of navigation lives in exactly one place to avoid duplication.
+BES se entrega como proyecto aparte con su propia especificación; este documento cubre únicamente sus puntos de integración con el sitio.
 
+#### Lo que BES NO hace (Rule 3.1)
 
-##### Rule 5 - Side drawer behavior
+- No ejecuta directamente cancelaciones, congelamientos, cambios de plan ni reembolsos. Captura la solicitud, hace una validación básica de identidad, abre un ticket en el CRM del cliente y ofrece conectar con un Asesor humano.
+- No responde preguntas profundas de salud. Redirige al hub correspondiente (Bajar de peso o el hub de objetivo), que lleva la firma del revisor médico.
+- No promete resultados.
 
-- Desktop: opens on hover over (Tu Sports World) with a 200-millisecond delay to prevent accidental triggers. Closes when the cursor leaves the drawer with a 300-millisecond grace period.
-- Mobile: opens on tap. Closes on tap outside the drawer or on tap of any item.
-- Animation: slides in from the right in 320 milliseconds. Exits in 240 milliseconds.
-- Backdrop: while open, the rest of the page is covered with a semi-transparent veil with a blur ((backdrop-blur 12 px )plus a black overlay at 40% opacity).
-- Manual close: an "X" at the top left of the drawer closes it.
-- Keyboard: (Esc) closes the drawer. (Tab) cycles focus only within the drawer while open (focus trap).
+#### Alcance de WhatsApp (Rule 3.2)
 
-##### Rule 6 - button (header CTA)
+- Solo recordatorios de visita. Cuando un usuario agenda una visita guiada, BES programa dos mensajes de plantilla de WhatsApp: uno 24 horas antes de la cita y otro 2 horas antes. Los mensajes son de plantilla e informativos; no requieren respuesta del usuario.
+- Consentimiento. El número telefónico se captura durante el flujo de agendado con opt-in explícito a los recordatorios por WhatsApp. Sin opt-in, no se envía ningún mensaje de WhatsApp y el recordatorio de visita recurre al correo electrónico.
+- Fuera de alcance. BES no usa WhatsApp para ventas, cambios de cuenta ni ninguna otra categoría de comunicación.
 
-- Visual treatment: pill button (rounded corners, capsule-style) with brand red background and white text.
-- Position: pinned to the right of the header on every page in every navigation state. This is the only exception to the "each thing lives in one place" rule, because it is the site's primary conversion action and must always be reachable in a single tap.
-- On press: leads to the guided-visit booking flow. If the user has not completed the questionnaire yet, the questionnaire is presented as a prerequisite step before confirming the appointment.
+### 5.4 Menú contextual (recomendaciones, no menús)
 
-##### Rule 7 - Header scroll behavior
+#### Qué es el menú contextual (Rule 25)
 
-The header stays pinned to the top of the screen as the user scrolls. Its height does not change. Its background is solid (subtle transparency and blur for a premium feel: background opacity 0.85, backdrop-blur 8px), unchanged across scroll positions.
+El menú contextual es el conjunto de botones que aparecen como acciones primarias dentro del contenido de la página (no en el header). Cambia según la página y el estado del usuario al momento de aterrizar.
 
+Hay dos tipos de botones en el menú contextual:
 
-##### Brand and editorial
+- **Botones permanentes**, sujetos a condiciones globales que aplican en casi todas las páginas.
+- **Botones específicos de página**, que dependen del contenido de esa página en particular.
 
-Rule 8 - Brand positioning
+#### Botón «Agenda tu visita guiada» — siempre presente (Rule 26)
 
-See Part 1, Brand Positioning. Site brand is **premium fitness**
+En el menú contextual de **toda** página, en **todo** estado, aparece el botón «Agenda tu visita guiada». Es la acción de conversión del sitio y no tiene excepciones. Es la contraparte en el cuerpo de la página del botón del header (Rule 6); ambos llevan al mismo flujo de agendamiento.
 
-FitKidz sub-brand is **premium family fitness** (Premium
+#### Botón «Tu Club ideal» (Rule 23)
 
-family fitness). Family framing applies only on FitKidz pages.
+El botón **«Tu Club ideal»** aparece en el menú contextual cuando:
 
+- el usuario está en una página que NO es una página individual de club, y
+- el usuario no está dentro de su flujo de experiencia ideal.
 
-##### Rule 9 - Editorial rules for all copy
+En páginas individuales de club no aparece (el usuario ya está en un club); en su lugar puede aparecer «Otros clubes en tu ciudad» u «Otros clubes en el área», según Rule 24.
 
-The following rules apply to every piece of copy on the site:
+**Comportamiento al presionar:**
 
-- No exclamation marks. Not even on CTAs.
-- No marketing-style all-caps text. Capitals are only allowed for logos, acronyms ((BES), (GLP-
-I)), or the initial letter of proper nouns.
-
-- Noemoji.
-- No anglicisms where a Spanish word exists. Use membresia, not membership; asesor, not
-advisor; agenda, not book.
-
-- No question-bait headlines ( and descriptive.
-
-##### Rule 10 - Required cross-linking between pages
-
-Each page must link to its related pages. No orphan pages.
-
-). Headlines are direct
-
-
-| From | To | Direction |
-| --- | --- | --- |
-| Each club page | Each amenity it offers | Bidirectional |
-| Each amenity page | Each club that offers it | Bidirectional |
-| Each class page | Each club where the class is offered | Bidirectional |
-| Each Journal | At least one related hub, and at least one club if | One-way (article➔hub/club) |
-| article | geographic relevance exists | |
-| Personal Training page | Each of the 5 goal hubs | Bidirectional |
-| Each goal hub | Personal Training page | Bidirectional (counterpart of |
-| | | the above) |
-
-
-##### Site data and structured markup Rule 11 - Confirmed site data
-
-| Item | Value |
+| Situación | Qué pasa al presionar |
 | --- | --- |
-| Total clubs | 49 |
-| States with clubs | 13 |
-| Clubs in the Mexico City Metropolitan Area (CDMX + Estado de México) | 32 |
-| Clubs outside that area | 17 (across 11 states) |
-| Adult classes | 51 (7 Premium Les Mills + 44 regular) |
-| FitKidz children's activities | 34 |
-| Goal hubs | 5 |
-| Amenity hubs | 10 |
-| Membership plans | 5 (plus the hub) |
-| Initial Journal articles | 20 |
-| Total signed pages (Workstream B scope) | 155 (145 contractuales + 10 de entrenamiento individual, audit M4 — precedencia del spec) |
+| Sin ubicación inferida | El sistema presenta Q15 y Q16 del cuestionario (intención geográfica: casa, trabajo, escuela, otro; luego ciudad / colonia / CP). |
+| Ubicación inferida de la búsqueda externa | El sistema presenta Q15 y Q16 pre-llenados con la ubicación inferida; el usuario confirma o cambia. |
 
+Capturada la ubicación, el sistema aplica las reglas geográficas (Rule 24) para proponer clubes según cuántos existan en la ciudad indicada.
 
-##### Rule 12 - Live data per club
+#### Botón «Otros clubes…» y reglas geográficas (Rule 24)
 
-Each individual club page (page type 2) displays the following four data points pulled live from the client's API:
+El botón **«Otros clubes…»** solo aparece en páginas individuales de club. Su etiqueta y comportamiento dependen de tres factores:
 
-- Operating hours by day of week.
-- Phone and email for the club.
-- Class catalog-which of the 51adult classes and which FitKidz activities are offered at this specific club.
-- Class schedule - by class, by day, with times.
-If the API is unavailable, the page falls back to the last successfully cached value with a visible notice; see Edge Case 6.8.
+**Factor 1 — cuántos clubes hay en la ciudad del club actual:**
 
-
-##### Rule 13 - Schema markup (schema.org)
-
-Each page type carries the corresponding structured data so search engines can understand its content:
-
-| Page type | Required schema.org types |
+| Tipo de ciudad | Definición |
 | --- | --- |
-| Club pages | HealthClub + OpeningHoursSpecification (one entry per day per club) + GeoCoordinates (latitude, longitude verified) |
-| Class pages (premium and regular) | **Course** (contractual type — Anexo Dos I.2.h and Appendix C; resolves F14. Per-club schedules may be complemented with Event per scheduled session, an engineering decision) |
-| Bajar de peso hub | MedicalWebPage + the medical reviewer with credentials (name and cédula profesional) |
-| Goal hubs and any page with FAQs | FAQPage |
-| Journal articles | Article (author with credentials when applicable) |
-| Every page (except home) | BreadcrumbList |
+| CIUDAD-UNO | Solo 1 club en la ciudad. |
+| CIUDAD-POCOS | 2 o 3 clubes en la ciudad. |
+| CIUDAD-ZMVM | Más de 3 clubes (zona metropolitana de CDMX y Estado de México, 32 clubes). |
 
-> Tabla **reconstruida** desde el `.docx` origen corrupto (texto partido a media palabra); tipos estándar schema.org. **Confirmar con ingeniería/SEO** antes de producción.
+**Factor 2** — si el usuario ya eligió club explícitamente vía cuestionario. **Factor 3** — si el sistema tiene ubicación inferida de la búsqueda externa.
 
-All structured data must validate against Google's Rich Results Test before publication.
+**Comportamiento del botón:**
 
+| Tipo de ciudad | Estado del usuario | Etiqueta | Acción al presionar |
+| --- | --- | --- | --- |
+| CIUDAD-UNO | Cualquiera | (el botón no aparece) | — |
+| CIUDAD-POCOS | Club identificado (por aterrizaje, selección o inferencia) | Otros clubes en tu ciudad | Muestra los otros 1 o 2 clubes de la ciudad. Sin opciones adicionales. |
+| CIUDAD-ZMVM | Club identificado | Otros clubes en el área | Dos opciones: (1) clubes cerca del club actual (radio de 10 km); (2) clubes cerca de otra ubicación — el sistema pregunta si es casa, trabajo, escuela u otro; luego ciudad / colonia / CP; y aplica el filtro de conteo de la nueva ciudad. |
+| CIUDAD-ZMVM | Sin club identificado y sin ubicación inferida | Tu Club ideal | El sistema presenta Q15 y Q16 del cuestionario para identificar el club. |
 
-##### Rule 14 - YMYL content rules
+#### Aparece con cuestionario incompleto (Rule 27)
 
-The following pages are classified as YMYL (Your Money or Your Life - Google search-quality terminology for content that could affect a user's health or finances):
+Mientras el usuario no haya completado el cuestionario, Diseña tu experiencia aparece en el menú contextual de cada página. El sistema necesita capturar las variables del cuestionario y recordarle al usuario que esta opción está disponible. Una vez que el cuestionario está completo, [ Diseña tu experiencia)deja de aparecer en el menú contextual (el botón permanece en el header según la Rule 1, pero no se duplica dentro del cuerpo).
 
-- The hub (entire page).
-- The rehabilitation goal hub.
-- Some Journal articles on nutrition, rehabilitation, and supplementation.
-The following requirements apply to all YMYL pages:
+#### Aparece con cuestionario completo (Rule 28)
 
-- Visible professional sign-off- thename and Mexican professional license number (cedula profesional) of the physician, nutritionist, or physical therapist backing the content.
-- Health disclaimer - before recommendations are shown, the user must see a disclaimer stating that the information is orientational and does not substitute a medical consultation.
-- No numerical promises - the site never says "you will lose X kilos in Y weeks." Plans are
-presented in phases ( promising a specific outcome.
+Una vez que el usuario ha completado el cuestionario, Volver a tu experiencia ideal aparece en el menú contextual. Reemplaza al botón Diseña tu experiencia. Lleva al usuario de regreso a la salida de su plan personalizado.
 
-,
+Rule 29- - cuándo aparece
 
-) without
-
-(Rules about whether photos of the medical reviewer can be displayed are visual-asset production rules and live in the partner brief, Section 6, not here.)
+Cada artículo del Journal lleva una o más etiquetas que lo asocian con páginas relevantes del sitio. Las etiquetas posibles incluyen:
 
 
-##### Rule 14b - Contraindications matrix for group classes (YMYL hard filter)
+Cuando un usuario aterriza en una página y existe al menos un artículo del Journal con una etiqueta que coincide con esa página, el menú contextual muestra el botón Artículos o información útil, que se expande para mostrar los artículos relevantes. Si no hay artículos etiquetados para esa página, el botón no aparece.
 
-The Clases recomendadas block (Block 3) applies a hard contraindication filter before ranking — Rule 40 step 4. Contraindicated classes never appear in the user's recommendation and are never named in user-facing copy (the page does not surface what was removed). The filter maps questionnaire answers to five internal condition keys:
+#### Resumen de botones por estado (Rule 33)
 
+El menú contextual de cada página es función de **tres ejes**, no solo del club: (1) el **estado del cuestionario** (Rule 32), (2) la **página desde la que llega / tipo de página** (matrices por página de §5 + inferencia de aterrizaje Rule 16/20), y (3) el **club resuelto** (Rule 24/42: ciudad de 1 club, ≤3 clubes, >3 clubes, o con ubicación inferida). La tabla siguiente resuelve el eje (1); los ejes (2) y (3) determinan los *botones propios de la página* y si aparece «Tu Club ideal», según cada matriz de §5.
 
-| Condition key | Condition | Triggered by |
+| Estado del cuestionario (Rule 32) | Botones del menú contextual |
+| --- | --- |
+| **Sin cuestionario** | «Tu Club ideal» (cuando el eje 3 aplica: >3 clubes o ubicación inferida) · «Diseña tu experiencia» (Rule 27) · «Agenda tu visita guiada» · «Artículos o información útil» (si hay artículos etiquetados) · botones propios de la página (eje 2) |
+| **Completo, dentro del flujo** (llegó a esta página con un botón de su resultado, p. ej. «Ver tu club») | Botones propios de la página (eje 2). No se ofrece «Diseña tu experiencia» (ya completado) ni se duplica «Volver a tu experiencia ideal»: ya navega dentro de su experiencia |
+| **Completo, fuera del flujo** (lo completó antes pero llegó por búsqueda externa o navegación interna) | «Volver a tu experiencia ideal» (Rule 28, sustituye a «Diseña tu experiencia») · «Artículos o información útil» (si hay) · botones propios de la página (eje 2) |
+
+Regla transversal: «Agenda tu visita guiada» (conversión) y «Pregúntale a BES» están siempre en el header (Rule 1) y no se duplican en el cuerpo (Rule 7). «Diseña tu experiencia» / «Volver a tu experiencia ideal» viven en exactamente un lugar a la vez según el estado (Rule 27/28).
+
+### 5.5 Hub temático SEO (ej. `/bajar-de-peso/`)
+
+- **Propósito:** captar tráfico orgánico de alta intención y enrutarlo a «Diseña tu experiencia». En el caso de `/bajar-de-peso/`, el aterrizaje pre-marca Q4 = Bajar de peso (Rule 20), lo que activa Q17–Q19 y el modal YMYL antes del resultado.
+- **Layout y dimensiones:** grid de 12 columnas; contenedor máx. 1200px; padding 16px móvil / 24px desktop; breakpoints 360 / 768 / 1024 / 1440px.
+- **Contenido SEO (mínimo por hub):** H1 con la keyword principal; 600–900 palabras de texto útil; FAQ con `schema.org/FAQPage`; enlaces internos a clubes y clases relacionadas; CTA «Diseña tu experiencia» (nombre oficial del botón, Rule 1/27).
+- **Metadatos:** `<title>` ≤ 60 car., `meta description` ≤ 155 car., canonical, Open Graph; `lang="es-MX"`.
+- **Paginación:** listados de clubes/clases con `rel=next/prev` lógico y URLs limpias `/clubes/cdmx/pagina-2`; evita contenido duplicado con canonical.
+- **CTA principal:** botón rojo `#E6282A` → inicia `welcome`.
+- **Solo `/bajar-de-peso/` (contractual, Anexo Dos I.3.k):** slot para el **video institucional de 45–60 s** (música licenciada + voz en off). Carga diferida (`poster` + lazy) para no romper el presupuesto de LCP; nunca autoplay con audio.
+- **Imágenes (contractual, Anexo Dos I.3.g):** servir en **AVIF/WebP** con `srcset` responsivo; las fotos provienen del banco del cliente (~650 tratadas) + ~150 generadas por IA.
+- **Requisito no funcional:** **LCP < 2.5 s**, **CLS < 0.1**, **INP < 200 ms** (Core Web Vitals — afectan ranking SEO; umbrales firmados en Anexo Dos I.3.e).
+
+### 5.6 Home — matriz de comportamiento
+
+| Estado | Cuestionario | Menú contextual |
 | --- | --- | --- |
-| lesion | Lesión o dolor articular/muscular | Q12 includes "Lesión o dolor articular/muscular" |
-| cardiovascular | Condición cardiovascular o de presión | Q12 includes "Condición cardiovascular o de presión" |
-| embarazo | Embarazada | Q12b = "Sí, embarazada" |
-| posparto | Posparto reciente (<6 meses) | Q12b = "Sí, posparto reciente (últimos 6 meses)" |
-| bariatrica | Cirugía bariátrica | Q17 includes "Cirugía bariátrica" |
+| Sin cuestionario · sin ubicación inferida · búsqueda de marca pura | 15 preguntas estándar (18 si bajar de peso) | Diseña tu experiencia · Agenda tu visita guiada |
+| Sin cuestionario · sin ubicación inferida · búsqueda con objetivo | 15 preguntas, Q4 prellenada y editable (18 si bajar de peso) | Diseña tu experiencia · Agenda tu visita guiada |
+| Sin cuestionario · con ubicación inferida | 15 preguntas, Q15 y Q16 prellenadas y editables (18 si bajar de peso) | Tu Club ideal · Diseña tu experiencia · Agenda tu visita guiada |
+| Cuestionario completo (siempre fuera del flujo en home) | Ya completo | Volver a tu experiencia ideal · Agenda tu visita guiada |
 
-Matriz de contraindicaciones reorganizada por beneficio sobre el catálogo canónico de 51 clases (ver tabla siguiente). Las 3 clases que no estaban en el catálogo final (DANZA AEREA, INTERVAL, FLYBOARD) fueron eliminadas.
+### 5.7 Página individual de club — matriz de comportamiento
 
+Al aterrizar en la página de un club específico, el club ya está identificado, por lo que Q15 y Q16 se omiten (13 preguntas base; 16 si bajar de peso). El tamaño de la ciudad cambia los botones Tu Club ideal / Otros clubes.
 
-
-**Contrato del filtro (permanece aquí):** 5 claves de condición — l (lesión), c (cond_cardiovascular), e (embarazo), p (posparto), b (bariátrica) — mapeadas desde Q12/Q12b/Q17; exclusión dura ANTES del ranking (Rule 40 paso 5); las clases excluidas jamás se nombran al usuario. **Los datos** (matriz de 51 clases por beneficio×contraindicación + fichas de perfil por objetivo Q4) viven en `anexo-clinico.md` §1 como única fuente, bajo gate de validación MD bloqueante (audit R7–R8).
-
-##### Out of the matrix — contextual messaging only (no class filtered)
-
-GLP-1 (Ozempic, Wegovy, Mounjaro): no classes are filtered. The research-based clinical recommendation is to PRIORITIZE strength to preserve muscle mass during treatment. A soft info message renders: "Durante tu tratamiento con GLP-1, priorizar clases de fuerza preserva tu masa muscular mientras bajas grasa. Tu Asesor lo confirma en la visita guiada."
-
-"Otra, la comento en el club" (Q12) and "Otro tratamiento médico para peso" (Q17): open-ended responses trigger an asesor-review soft message: "Mencionaste una condición o tratamiento médico. Tu selección de clases grupales ya excluye las clases contraindicadas, y tu Asesor ajusta los protocolos de pesas y cardio individual en la visita guiada según tu criterio clínico."
-
-Research basis: ver `research_contraindicaciones_audit.md` (protocolo v2, 9 fuentes profesionales, etiquetas epistémicas [QUOTED]/[DERIVED]/[INFERRED]) — audit R3. Sports-medicine MD validation is **required (blocking gate)** before production YMYL deployment (see open dependencies).
-
-
-##### User acquisition and routing
-
-Rule 15 - Mapping search queries to pages
-
-When a user runs a search engine query related to Sports World, the site must take them to the page that best answers that query.
-
-
-| Query type | Examples | Landing page |
+| Estado | Cuestionario | Menú contextual |
 | --- | --- | --- |
-| Pure brand search | sports world, sports world mexico | Home |
-| Brand + specific location | sports world polanco, sports world antara | The specific club's page |
-| Gym near me | gimnasio cerca de mi, gimnasio polanco | Closest club via geolocation; if location cannot be detected, lands on Home with the club-search flow open |
-| Amenity + location | alberca cdmx, yoga estudio polanco | The amenity hub |
-| Specific class | body pump, spinning cdmx, pilates reformer | That class's page |
-| Personal goal | estética corporal, ganar masa muscular, primeros pasos en el gym | Corresponding goal hub |
-| Weight loss | bajar de peso, perder peso gym, GLP-1 ozempic gimnasio | Bajar de peso hub |
-| Rehabilitation | rehabilitación rodilla gym, ejercicio post lesión | Rehabilitation hub |
-| Children / family | gimnasio para niños, actividades familia, FitKidz | FitKidz |
-| Personal Training | entrenador personal, personal trainer cdmx | Personal Training |
-| Pricing and memberships | precio sports world, uniclub vs allclub | Memberships hub |
-| Fitness information | calorias spinning, diferencia body pump vs combat | Journal article on the topic |
-| Sports World specific information / cancellations, freezes, support | horario polanco, alberca en antara | Home with the BES widget opened |
+| Sin cuestionario · ciudad con un solo club | 13 preguntas estándar (16 si bajar de peso) | Diseña tu experiencia · Agenda tu visita guiada |
+| Sin cuestionario · ciudad con hasta 3 clubes | 13 preguntas estándar (16 si bajar de peso) | Diseña tu experiencia · Agenda tu visita guiada |
+| Sin cuestionario · ciudad con más de 3 clubes (CIUDAD-ZMVM) | 13 preguntas estándar (16 si bajar de peso) | Tu Club ideal · Diseña tu experiencia · Agenda tu visita guiada |
+| Completo, dentro del flujo | Ya completo | Volver a tu experiencia ideal · Agenda tu visita guiada |
+| Completo, fuera del flujo · ciudad con un solo club | Ya completo | Volver a tu experiencia ideal · Agenda tu visita guiada |
+| Completo, fuera del flujo · ciudad con hasta 3 clubes | Ya completo | Volver a tu experiencia ideal · Agenda tu visita guiada |
+| Completo, fuera del flujo · ciudad con más de 3 clubes | Ya completo | Volver a tu experiencia ideal · Otros clubes en el área · Agenda tu visita guiada |
+
+#### Otros clubes del área y re-evaluación de clases (Rule 43)
+
+La acción "Ver otros clubes cerca de ti" de la tarjeta de Club Ideal abre un panel que lista clubes adicionales de Sports World dentro de un radio configurable por Producto en la configuración del sitio (15 km por defecto) respecto a la ubicación Q16 del usuario, ordenados por distancia en coche ascendente. Las entradas del panel muestran el nombre del club, la distancia en minutos, la dirección completa y un resumen de una línea de las amenidades distintivas.
+
+Cuando el usuario selecciona un club diferente: (1) la tarjeta de Club Ideal se actualiza con el nuevo nombre, distancia, dirección, línea de intención y características; (2) el Bloque 3 se reevalúa con el catálogo del nuevo club - el algoritmo de Rule 40 se ejecuta de nuevo, se recalculan top_2, tambien_encajan y resto, y se reinvoca al LLM para los IDs de beneficio, las razones de match y las cadenas conectoras de las nuevas clases top; (3) los Bloques 1 y 2 NO se reevalúan, ya que se basan en subgrupos y no dependen del club; (4) el cambio persiste en la sesión y en el CRM con una bandera que indica una anulación manual.
+
+Si el catálogo del nuevo club no puede producir un conjunto viable para el Bloque 3, el sistema muestra una advertencia suave - "En este club no programamos [class names] en tus horarios. Aquí están las clases que sí encajan" - y el usuario puede aceptar las alternativas o volver al club anterior.
+
+### 5.8 Páginas de clase
+
+#### Clase premium Les Mills — matriz
+
+Aterrizar en una clase premarca Q4 (el objetivo alineado con el movimiento) a partir de la disciplina de la clase. El usuario puede confirmar o cambiar.
 
 
-##### Rule 16 - Inferring information from the external search query
+| Estado | Cuestionario | Menú contextual |
+| --- | --- | --- |
+| Sin cuestionario · sin club seleccionado · sin ubicación inferida | 15 preguntas, Q4 prellenada y editable (18 si bajar de peso) | Tu Club ideal • Diseña tu experiencia · Agenda tu visita guiada |
+| Sin cuestionario · sin club seleccionado · con ubicación inferida | 15 preguntas, Q4, Q15 y Q16 prellenadas y editables (18 si bajar de peso) | Tu Club ideal • Diseña tu experiencia · Agenda tu visita guiada |
+| Sin cuestionario · con club seleccionado | 15 preguntas, Q4 prellenada y editable (18 si bajar de peso) | Diseña tu experiencia · Agenda tu visita guiada |
+| Completo, dentro del flujo | Ya completo | Volver a tu experiencia ideal · Agenda tu visita guiada |
+| Completo, fuera del flujo | Ya completo | Volver a tu experiencia ideal · Agenda tu visita guiada |
 
-When a user lands on the site from an external search, the system can infer only two
+#### Clase regular — matriz
 
-questionnaire variables from what they searched:
+Comportamiento idéntico al de la clase Premium Les Mills (la misma matriz de 5 estados de arriba; el aterrizaje premarca Q4 a partir de la disciplina de la clase).
 
-- Goal (Q4) - only if the search contained an explicit goal (weight loss, body aesthetics, strength, conditioning and endurance, injury or pain recovery).
-- Location (Q15 and Q16) - only if the search contained a specific location.
-The following inferences are not drawn:
+### 5.9 Hubs de objetivo — matriz
 
-- A class search (external query) does not fill in the goal, because the same class can serve multiple goals. (Landing on a class hub still pre-marks Q4 per Rule 20.)
-- An amenity search does not fill in movement preference (Q5 or Q6), because amenity preference does not determine training style.
-- Scope note: Rule 16 governs ONLY inference from the external search query. Landing-page pre-fills are governed by Rule 20 and Rule 20 is authoritative where they overlap: FitKidz landing pre-fills Q14, Personal Training landing pre-fills Q13, and class/goal-hub landing pre-marks Q4.
-- Landing on the Bajar de peso hub does not force the weight-loss optionals; those optionals
-only activate when the user actually marks Q4 = Bajar de peso in the questionnaire.
+Aplica a los 5 hubs (Primeros Pasos, Salud y Bienestar, Estética corporal, Ganar Fuerza, Rehabilitación). El aterrizaje premarca Q4 con el objetivo del hub. El modal de aviso de salud YMYL se muestra solo en la ruta de bajar de peso (Q4 = Bajar de peso), no en el hub de rehabilitación.
 
-- Landing on a page through internal navigation infers nothing. Only the external search that brought the user to the site counts toward variable inference.
-Exception. When the user presses the button inside the site and provides their
+| Estado | Cuestionario | Menú contextual |
+| --- | --- | --- |
+| Sin cuestionario · sin club seleccionado · sin ubicación inferida | 15 preguntas, Q4 prellenada y editable (18 si el usuario cambia a bajar de peso) | Artículos o información útil (si los hay) · Diseña tu experiencia · Agenda tu visita guiada |
+| Sin cuestionario · sin club seleccionado · con ubicación inferida | 15 preguntas, Q4, Q15 y Q16 prellenadas y editables (18 si bajar de peso) | Artículos o información útil (si los hay) · Diseña tu experiencia · Agenda tu visita guiada |
+| Sin cuestionario · con club seleccionado | 15 preguntas, Q4 prellenada y editable (18 si bajar de peso) | Diseña tu experiencia · Agenda tu visita guiada |
+| Completo, dentro del flujo | Ya completo | Volver a tu experiencia ideal · Agenda tu visita guiada |
+| Completo, fuera del flujo | Ya completo | Volver a tu experiencia ideal · Agenda tu visita guiada |
 
-location through that flow, the location populates Q16 automatically. This is not search inference
+**Hub de Bajar de peso (YMYL).** El aterrizaje premarca Q4 = Bajar de peso, lo que activa automáticamente los condicionales de bajar de peso (Q17–Q19), por lo que el conteo es siempre 18. Un modal de aviso de salud aparece antes del resultado. Esta página siempre tiene artículos del Journal etiquetados bajar-de-peso, por lo que el botón de Artículos siempre aparece.
 
-- it is direct capture from a user interaction.
+| Estado | Cuestionario | Menú contextual |
+| --- | --- | --- |
+| Sin cuestionario · sin club seleccionado · sin ubicación inferida | 18 preguntas con Q4 prellenada y editable | Artículos o información útil · Diseña tu experiencia · Agenda tu visita guiada |
+| Sin cuestionario · sin club seleccionado · con ubicación inferida | 18 preguntas con Q4, Q15 y Q16 prellenadas y editables | Artículos o información útil · Diseña tu experiencia · Agenda tu visita guiada |
+| Sin cuestionario · con club seleccionado | 18 preguntas con Q4 prellenada y editable | Diseña tu experiencia · Agenda tu visita guiada |
+| Completo, dentro / fuera del flujo | Ya completo | Volver a tu experiencia ideal · Agenda tu visita guiada |
+
+### 5.10 FitKidz
+
+#### Botones específicos (Rule 30)
+
+En la página de FitKidz, además de los botones generales, aparece un botón específico — «Clases FitKidz disponibles» — una vez que el usuario tiene un club identificado. Al presionarlo, muestra las clases FitKidz que se ofrecen en el club de ese usuario, con sus horarios.
+
+Este botón no aparece cuando el usuario no tiene un club identificado, porque cada club tiene un subconjunto distinto de las 34 actividades FitKidz, y mostrarlas todas sin contexto sería engañoso.
+
+Las 34 actividades FitKidz se organizan dentro del hub de FitKidz por:
+
+- Rango de edad (niños pequeños, niños, preadolescentes, adolescentes- rangos concretos definidos por el equipo de contenido).
+- Tipo de disciplina (acuática, atlética, expresiva, marcial, fitness).
+- Disponibilidad por club (qué clubes ofrecen esta actividad).
+
+#### Clubes propuestos dentro de FitKidz (Rule 31)
+
+Cuando el usuario está en FitKidz y el sistema le propone hasta 3 clubes (según las reglas geográficas de Rule 24), cada club se presenta con tres botones propios:
+
+1. **«Ver el club»** — lleva a la página individual del club.
+2. **«Agenda tu visita guiada»** — flujo de visita guiada con ese club preseleccionado.
+3. **«Clases FitKidz disponibles para tu familia»** — muestra las clases FitKidz de ese club específico, con horarios.
+
+### 5.11 Personal Training — matriz
+
+El aterrizaje premarca Q13 = Acompañado/Acompañada. El usuario puede confirmar o cambiar.
+
+| Estado | Cuestionario | Menú contextual |
+| --- | --- | --- |
+| Sin cuestionario · sin club seleccionado · sin ubicación inferida | 15 preguntas con Q13 prellenada y editable (18 si bajar de peso) | Artículos o información útil (si los hay) · Diseña tu experiencia · Agenda tu visita guiada |
+| Sin cuestionario · sin club seleccionado · con ubicación inferida | 15 preguntas con Q13, Q15 y Q16 prellenadas y editables (18 si bajar de peso) | Artículos o información útil (si los hay) · Diseña tu experiencia · Agenda tu visita guiada |
+| Sin cuestionario · con club seleccionado | 15 preguntas con Q13 prellenada y editable (18 si bajar de peso) | Diseña tu experiencia · Agenda tu visita guiada |
+| Completo, dentro del flujo | Ya completo | Volver a tu experiencia ideal · Agenda tu visita guiada |
+| Completo, fuera del flujo | Ya completo | Volver a tu experiencia ideal · Agenda tu visita guiada |
+
+**Membresías.** El aterrizaje en membresías no permite inferir variables del cuestionario. Según Rule 22, la página no tiene checkout en línea — la conversión pasa por Agenda tu visita guiada.
+
+| Estado | Cuestionario | Menú contextual |
+| --- | --- | --- |
+| Sin cuestionario · sin club seleccionado · sin ubicación inferida | 15 preguntas estándar (18 si bajar de peso) | Tu Club ideal · Diseña tu experiencia · Agenda tu visita guiada |
+| Sin cuestionario · sin club seleccionado · con ubicación inferida | 15 preguntas con Q15 y Q16 prellenadas y editables (18 si bajar de peso) | Tu Club ideal · Diseña tu experiencia · Agenda tu visita guiada |
+| Sin cuestionario · con club seleccionado | 15 preguntas estándar (18 si bajar de peso) | Diseña tu experiencia · Agenda tu visita guiada |
+| Completo, dentro del flujo | Ya completo | Volver a tu experiencia ideal · Agenda tu visita guiada |
+| Completo, fuera del flujo | Ya completo | Volver a tu experiencia ideal · Agenda tu visita guiada |
+
+### 5.12 Diario (Journal) — matriz
+
+El aterrizaje en un artículo no permite inferir variables del cuestionario.
+
+| Estado | Cuestionario | Menú contextual |
+| --- | --- | --- |
+| Sin cuestionario · sin club seleccionado · sin ubicación inferida | 15 preguntas estándar (18 si bajar de peso) | Diseña tu experiencia · Agenda tu visita guiada |
+| Sin cuestionario · sin club seleccionado · con ubicación inferida | 15 preguntas con Q15 y Q16 prellenadas y editables (18 si bajar de peso) | Diseña tu experiencia · Agenda tu visita guiada |
+| Sin cuestionario · con club seleccionado | 15 preguntas estándar (18 si bajar de peso) | Diseña tu experiencia · Agenda tu visita guiada |
+| Completo, dentro del flujo | Ya completo | Volver a tu experiencia ideal · Agenda tu visita guiada |
+| Completo, fuera del flujo | Ya completo | Volver a tu experiencia ideal · Agenda tu visita guiada |
+
+#### Etiquetas de artículos (Rule 29)
+
+Las etiquetas temáticas de los artículos del Diario (todas en minúsculas, con guiones) enlazan artículos con páginas de clase, hubs y clubes para el cross-linking de Rule 10. La lista canónica de etiquetas es `[POR DEFINIR — contenido: la lista no llegó íntegra del documento fuente; reconstruirla con el equipo editorial antes de producción]`.
+
+### 5.13 Membresías (Rule 22 — sin checkout)
+
+Las 6 páginas de membresía (1 hub + 5 planes) muestran de cada plan: descripción, qué incluye, qué no incluye, precio, letra chica y un comparativo. **No incluyen checkout transaccional.**
+
+La ruta de conversión desde una página de membresía es «Agenda tu visita guiada», que captura el lead y lo enruta al call center o al club correspondiente para una visita presencial guiada. La venta de la membresía ocurre en persona en el club o por teléfono con el call center, no en el sitio.
+
+### 5.14 Páginas de entrenamiento individual
+
+El sitio ofrece dos experiencias de entrenamiento individual de nivel superior, entrenamiento-con-pesas-individual y entrenamiento-aerobico-individual, cada una con seis subgrupos — uno por objetivo de Q4, con los nombres oficiales del Catálogo oficial (ver §3.3 y la tabla puente más abajo) — fundamentados en el consenso de la ACSM. Cuando el usuario aterriza en cualquier página dentro de estos dos árboles, Q13 se premarca "Solo, a mi ritmo" (mostrado "Sola" si Q2 = Mujer), y Q4 se premarca con el objetivo que corresponde al subgrupo en el que se aterrizó, según el mapeo de Rule 20.
+
+Cuando Q13 = "Solo, a mi ritmo" (o "Sola, a mi ritmo") en la respuesta final, la página de resultado de la Experiencia Ideal del usuario no recomienda clases grupales. En su lugar recomienda: (1) el subgrupo o subgrupos de entrenamiento con pesas individual que correspondan a Q4 según la tabla de §3.3; (2) el subgrupo o subgrupos de entrenamiento aeróbico individual que correspondan a Q4 según la misma tabla. Si Q4 contiene dos selecciones, el conjunto recomendado es la unión de ambas filas, sin duplicados.
+
+El catálogo de clases se suprime para este estado del usuario. El menú contextual (Rules 22-31) lo refleja: donde normalmente mostraría "Clases recomendadas", muestra en su lugar "Tu rutina individual".
+
+#### Entrenamiento con pesas individual — matriz
+
+Individual weight-training page (class page type). Per Rule 38, Q13 pre-marks Solo, a mi ritmo (Sola if Q2 = Mujer) and the result page recommends individual subgroups, not group classes; the contextual menu shows Tu rutina individual instead of Clases recomendadas.
 
 
-##### Rule 17 - Search-query precedence (multiple competing inferences)
+| State | Questionnaire | Contextual menu |
+| --- | --- | --- |
+| No questionnaire | 15 questions, Q13 pre-marked Solo/Sola and Q4 pre-marked per subpage, both editable (18 if weight loss) | Diseña tu experiencia · Agenda tu visita guiada |
+| Complete, inside the flow | Already complete | Volver a tu experiencia ideal · Tu rutina individual · Agenda tu visita guiada |
+| Complete, outside the flow | Already complete | Volver a tu experiencia ideal · Tu rutina individual · Agenda tu visita guiada |
 
-When a query combines elements that map to multiple inferences (e.g.,[ yoga Polanco bajar de peso)- a class+ a location+ a goal), the system applies a single precedence:
+Subpage Q4 pre-mark (Rule 20, dedupe per): Fuerza pre-marks **Aumentar masa muscular**; Hipertrofia pre-marks Mejorar mi estética corporal; Potencia pre-marks Mejorar mi desempeño atlético; Resistencia muscular pre-marks Mejorar mi salud cardiovascular. Nota de coherencia landing→resultado: el pre-fill es editable; el resultado se deriva del Q4 final, por lo que puede diferir de la subpágina visitada — comportamiento intencional, documentado aquí.
 
-Q4 (goal) > Q16 (location) > class-driven goal pre-mark (the movement-aligned goal inferred from a class search)
+#### Entrenamiento aeróbico individual — matriz
 
-Concretely: for the example query, the user lands on the Bajar de peso hub (Q4 wins) with Q16 pre-filled to Polanco. The class-driven goal pre-mark is not applied because the goal-driven landing overrides the class-driven landing.
+Página de entrenamiento aeróbico individual (tipo de página de clase). Según Rule 38, Q13 premarca Solo, a mi ritmo (Sola si Q2 = Mujer) y la página de resultado recomienda subgrupos individuales, no clases grupales; el menú contextual muestra Tu rutina individual.
 
-- The (Diseiia tu experiencia) questionnaire
 
-#### Rule 18 - The base questionnaire (15 base + 6 conditional)
+| Estado | Cuestionario | Menú contextual |
+| --- | --- | --- |
+| Sin cuestionario | 15 preguntas, Q13 premarcada Solo/Sola y Q4 premarcada según la subpágina, ambas editables (18 si bajar de peso) | Diseña tu experiencia · Agenda tu visita guiada |
+| Completo, dentro del flujo | Ya completo | Volver a tu experiencia ideal · Tu rutina individual · Agenda tu visita guiada |
+| Completo, fuera del flujo | Ya completo | Volver a tu experiencia ideal · Tu rutina individual · Agenda tu visita guiada |
+
+Premarcado de Q4 por subpágina (Rule 20, dedupe según): LISS sin premarcado; MICT premarca Mejorar mi salud cardiovascular; HIIT premarca Mejorar mi estética corporal; SIT premarca **Mejorar mi desempeño atlético**.
+
+### 5.15 BES vía URL de fallback — matriz
+
+Normalmente se llega a BES mediante el widget global (Rule 3), que se superpone a la página actual. La URL dedicada existe como fallback para usuarios sin JavaScript y como destino enlazable mediante deep link. Cuando se llega por /bes, la página se renderiza en el servidor con la misma interfaz de chat en un layout no flotante.
+
+| Estado | Comportamiento |
+| --- | --- |
+| Sin cuestionario | El asistente responde preguntas. Si BES detecta una intención de personalización, ofrece abrir el cuestionario; el usuario decide. Acción siempre disponible: "Hablar con un asesor humano". |
+| Completo, dentro del flujo | El asistente responde manteniendo el contexto de la experiencia. "Volver a tu experiencia ideal" está siempre visible. |
+| Completo, fuera del flujo | El asistente responde libremente. "Volver a tu experiencia ideal" está siempre visible. |
+
+### 5.16 Cuestionario «Diseña tu experiencia»
+
+- **Propósito:** cualificar y personalizar; recolectar los datos del lead.
+- **Estructura (cuestionario oficial):** **15 preguntas base** siempre visibles (Q1–Q10, Q12, Q13, Q14, Q15, Q16) + **6 condicionales**: **Q11** (si Q10=pausa), **Q12b** (si Q2=Mujer), **Q14b** (hijos <12) y **Q17–Q19** (si Q4 incluye Bajar de peso). Total real **15–21** según ruta (ver la tabla normativa de conteo en §4.1).
+- **Un paso por pantalla**, barra de progreso, botón "Continuar" deshabilitado hasta responder.
+- **Estados interactivos:** opción `default / hover / focus-visible / selected / disabled`; botón `default / hover / active / disabled / loading`.
+- **Validación inline (en tiempo real):**
+ - Q1 Nombre: requerido, ≥ 2 caracteres.
+ - Q8 días / Q7 horarios: multiselección, ≥ 1.
+ - Q16 CP **o** zona (XOR): CP = 5 dígitos numéricos.
+- **Contenido (UX writing):** preguntas en español MX, voz activa, sin jerga. Concordancia de género si Q2=Mujer (Q3, Q13, Q14).
+- **Requisito no funcional:** transición entre preguntas < 100 ms; estado persistido en cliente para no perder respuestas al recargar (solo tras aceptar el aviso de privacidad, ver edge case 6.5).
+
+#### Cuestionario base: 15 + 6 condicionales (Rule 18)
 
 Per the official questionnaire, there are 15 base questions always shown (Q1–Q10, Q12, Q13, Q14, Q15, Q16) plus six conditional questions: Q11 (only if Q10 = "Regreso después de una pausa"), Q12b (only if Q2 = Mujer), Q14b (only if Q14 = "Yo y mis hijos" or "La familia completa"), and the weight-loss conditionals Q17, Q18, Q19 (only if Q4 includes "Bajar de peso", see Rule 19). Visible count ranges 15–21 (normative table below). Pregnancy is not an option inside Q12 — captured separately in Q12b. Question copy is production Spanish (MX); type descriptors are engineering notes. All pre-filled answers remain editable.
 
@@ -997,7 +1042,7 @@ Per the official questionnaire, there are 15 base questions always shown (Q1–Q
 | Q10 | ¿Vienes de otro gimnasio? | Single-select, required | Sí, vengo de otro gimnasio · Nunca he ido a un gimnasio · Regreso después de una pausa |
 | Q11 | ¿Qué tan larga fue la pausa? | Single-select, conditional (visible if Q10 = Regreso después de una pausa) | Menos de 3 meses · Entre 3 y 12 meses · Más de un año |
 | Q12 | ¿Tienes alguna condición médica? | Multi-select, required | Ninguna · Lesión o dolor articular/muscular · Condición cardiovascular o de presión · Otra, la comento en el club (helper cuando Q2 ≠ Hombre: "Solo condiciones médicas. Embarazo no es una condición." (lo pregunta Q12b después); helper cuando Q2 = Hombre: "Solo condiciones médicas." — pregnancy captured separately in Q12b) |
-| Q12b | ¿Estás embarazada o en posparto reciente? | Single-select, conditional (**visible unless Q2 = Hombre** — incluye "Prefiero no mencionarlo", audit L1: la privacidad de género no puede eliminar el screening médico; con "Prefiero no mencionarlo" se usa fraseo neutro "¿Aplica para ti alguna de estas situaciones?") | Sí, embarazo · Sí, posparto reciente (últimos 6 meses) · No |
+| Q12b | ¿Estás embarazada o en posparto reciente? | Single-select, conditional (**visible unless Q2 = Hombre** — incluye "Prefiero no mencionarlo",: la privacidad de género no puede eliminar el screening médico; con "Prefiero no mencionarlo" se usa fraseo neutro "¿Aplica para ti alguna de estas situaciones?") | Sí, embarazo · Sí, posparto reciente (últimos 6 meses) · No |
 | Q13 | ¿Prefieres entrenar solo o acompañado? | Single-select, required | Solo/Sola, a mi ritmo · Acompañado/Acompañada, en clases o grupo · Me da igual |
 | Q14 | ¿Con quién nos visitas en el club? | Single-select, required | Solo/Sola · Con mi amigo/a · Con mi pareja · Yo y mis hijos · La familia completa |
 | Q14b | ¿Uno o más de tus hijos tiene menos de 12 años? | Single-select, conditional (visible if Q14 = "Yo y mis hijos" or "La familia completa") | Sí · No |
@@ -1006,287 +1051,44 @@ Per the official questionnaire, there are 15 base questions always shown (Q1–Q
 
 Gender concordance (Q3, Q13, Q14). If Q2 = Mujer, render feminine forms ("Desconectada", "Renovada", "Confiada", "conmigo misma", "Sola", "Acompañada"). Otherwise the masculine default applies.
 
+#### Condicionales del path de peso Q17–Q19 (Rule 19)
 
-##### Rule 19 - The weight-loss optionals (Q17 to Q19)
+> Aclaración: "optionals" = **condicionales del path de peso**: solo aparecen si Q4 = Bajar de peso, pero **una vez en ese path son obligatorias** (no se pueden saltar). El descriptor de tipo "required" es correcto.
 
-> Aclaración (C-audit M6): "optionals" = **condicionales del path de peso**: solo aparecen si Q4 = Bajar de peso, pero **una vez en ese path son obligatorias** (no se pueden saltar). El descriptor de tipo "required" es correcto.
-
-When the user marks Q4 = Bajar de peso, three optional questions (Q17 to Q19) are appended after Q16. They are shown for no other goal; in particular, Q4 = Mejorar mi estética corporal does not trigger them.
+Cuando el usuario marca Q4 = Bajar de peso, se añaden tres preguntas opcionales (Q17 a Q19) después de Q16. No se muestran para ningún otro objetivo; en particular, Q4 = Mejorar mi estética corporal no las activa.
 
 
-| Code | Question (ES MX) | Type | Options / Field |
+| Código | Pregunta (ES MX) | Tipo | Opciones / Campo |
 | --- | --- | --- | --- |
-| Q17 | ¿Estás tomando algún tratamiento para bajar de peso? | Multi-select, conditional (visible if Q4 includes Bajar de peso) | GLP-1 (Ozempic, Wegovy, Mounjaro) · Cirugía bariátrica · Acompañamiento nutricional con especialista · Otro tratamiento médico para peso · Ninguno. Helper: "Solo tratamientos activos. Las condiciones médicas ya las anotaste antes." |
-| Q18 | Tus datos físicos actuales | Numeric, 3 fields, required | Peso actual kg (30–300) · Estatura cm (120–230) · Cintura cm (40–200). Ayuda: "Esta información permite construir un plan seguro. Se almacena bajo consentimiento LFPDPPP." |
-| Q19 | ¿Cuál es tu objetivo de cambio? | Single-select, required | 1 a 3 kilos · 3 a 6 kilos · 6 a 10 kilos · 10 a 15 kilos · Más de 15 kilos · Sin un número específico. Ayuda: "Sin promesas clínicas — los rangos son referencia, no compromiso." |
+| Q17 | ¿Estás tomando algún tratamiento para bajar de peso? | Multiselección, condicional (visible si Q4 incluye Bajar de peso) | GLP-1 (Ozempic, Wegovy, Mounjaro) · Cirugía bariátrica · Acompañamiento nutricional con especialista · Otro tratamiento médico para peso · Ninguno. Helper: "Solo tratamientos activos. Las condiciones médicas ya las anotaste antes." |
+| Q18 | Tus datos físicos actuales | Numérico, 3 campos, obligatoria | Peso actual kg (30–300) · Estatura cm (120–230) · Cintura cm (40–200). Ayuda: "Esta información permite construir un plan seguro. Se almacena bajo consentimiento LFPDPPP." |
+| Q19 | ¿Cuál es tu objetivo de cambio? | Selección única, obligatoria | 1 a 3 kilos · 3 a 6 kilos · 6 a 10 kilos · 10 a 15 kilos · Más de 15 kilos · Sin un número específico. Ayuda: "Sin promesas clínicas — los rangos son referencia, no compromiso." |
 
-Before the result is rendered, a YMYL health-disclaimer modal is shown, carrying the medical reviewer's signature (see Rule 14). This applies only to the weight-loss path. For visible-question counts per path, the normative count table (Rule 32) is the single source: base 15, +3 on the weight-loss path (18), plus the other conditionals as applicable.
+Antes de renderizar el resultado, se muestra un modal de aviso de salud YMYL, que lleva la firma del revisor médico (ver Rule 14). Esto aplica únicamente al path de bajar de peso. Para los conteos de preguntas visibles por path, la tabla normativa de conteo (Rule 32) es la fuente única: base 15, +3 en el path de bajar de peso (18), más los demás condicionales según apliquen.
 
+#### Q4 admite hasta dos objetivos (Rule 21)
 
-##### Rule 20 - Question pre-filling based on landing page
+Q4 (objetivo) es siempre multiselección con un máximo de dos objetivos. El usuario puede elegir una o dos de las seis opciones de objetivo, en cualquier combinación. Ya no existe una excepción específica para bajar de peso: queda retirado el comportamiento del legacy P1 de selección única salvo pérdida de peso. Cuando se seleccionan dos objetivos, la página de resultado y las recomendaciones de entrenamiento individual usan la unión de los mapeos de ambos objetivos, deduplicada, según la Rule 38 y §3.3.
 
-When the user lands on a specific page, the system pre-fills the questions it can already infer from the landing. Every pre-filled answer remains editable.
+### 5.17 Resultado — la página Experiencia Ideal
 
+- **Propósito:** entregar la recomendación personalizada (el "valor" a cambio de los datos).
+- **Estructura de contenido (vinculante):** la página presenta, en este orden, los **elementos** que deben existir — encabezado con hook (Q3) y argumento que nombra los 3 bloques; **tarjetas resumen** (objetivo, nivel, horario, con quién entrena); **card Club Ideal** (Rule 42); **3 bloques** (01 pesas · 02 cardio · 03 clases); **sección de seguridad** (YMYL) cuando aplica; nota legal. *Qué* aparece y *qué* dice es vinculante.
+- **Tratamiento visual (lo decide el equipo de diseño):** *cómo* se ven esos elementos —si son tarjetas, listas o acordeones; espaciado, retícula, jerarquía— es entregable del equipo de diseño, dentro de los tokens y los **lineamientos de estilo premium** (`DESIGN.md`). El demo usa una arquitectura v6 (barra roja, tarjetas, banner, bloques de color suaves, sección ámbar): es **referencia ilustrativa, no diseño impuesto**.
+- **Bloque 1 (pesas):** uno de **6 nombres accesibles** según objetivo Q4; nunca lista equipo ("Tu entrenador define los ejercicios y el peso en la primera sesión").
+- **Bloque 2 (cardio):** máquina + duración + ritmo en lenguaje llano ("ritmo conversacional", no "Zone 2").
+- **Bloque 3 (clases):** top 2 clases recomendadas tras el filtro de contraindicaciones, o Personal Training como alternativa.
+- **Requisito no funcional:** render con datos de fallback si el LLM devuelve JSON inválido (degradación elegante, sin pantalla en blanco).
 
-| Landing page | Pre-filled / inferred | Behavior |
-| --- | --- | --- |
-| Home | None from landing. Q3, Q4 or Q15 may be inferred from the external search query per Rule 16. | If the external search includes a location, Q15 and Q16 are pre-filled. |
-| Individual club page | Q15 and Q16 omitted entirely. | The count drops by 2 for this entry path. |
-| Amenity hub | None. | |
-| Premium or regular class hub | Q4 pre-marks the movement-aligned goal. | The class-to-goal map is the Block 3 fichas table (perfil por objetivo Q4) under Rule 14b — see «Fichas de clases grupales (Block 3)». |
-| FitKidz | Q14 pre-fills "Yo y mis hijos". | |
-| Goal hub — Primeros Pasos | Q9 pre-marks "Principiante". | |
-| Goal hub — Salud y Bienestar | Q4 pre-marks "Mejorar mi salud cardiovascular". | |
-| Goal hub — Estética corporal | Q4 pre-marks "Mejorar mi estética corporal". | Renamed from Tonificar. |
-| Goal hub — Ganar Fuerza | Q4 pre-marks "Aumentar masa muscular" (audit L7: el hub habla de fuerza, no de potencia explosiva). | |
-| Goal hub — Rehabilitación | Q4 pre-marks "Recuperarme de una lesión o dolor". | |
-| YMYL hub — Bajar de peso | Q4 pre-marks "Bajar de peso", which activates Q17 to Q19. | |
-| Personal Training | Q13 pre-marks "Acompañado/Acompañada". | |
-| Memberships, Journal | None. | |
-| entrenamiento-con-pesas-individual (and subpages) | Q13 pre-marks "Solo, a mi ritmo" (or "Sola" if Q2 = Mujer). Subpages pre-mark Q4: Fuerza → "Mejorar mi desempeño atlético"; Hipertrofia → "Mejorar mi estética corporal"; Potencia → "Mejorar mi desempeño atlético"; Resistencia muscular → "Mejorar mi salud cardiovascular". | New. |
-| entrenamiento-aerobico-individual (and subpages) | Q13 pre-marks "Solo, a mi ritmo" (or "Sola" if Q2 = Mujer). Subpages pre-mark Q4: LISS → no pre-mark; MICT → "Mejorar mi salud cardiovascular"; HIIT → "Mejorar mi estética corporal"; SIT → "Mejorar mi salud cardiovascular". | New. |
+#### Estructura combinada de los 3 bloques (Rule 39)
 
-Pre-fill is always editable by the user.
+Cada usuario que completa el cuestionario recibe un plan personalizado combinado compuesto por tres bloques estructurados, presentados en este orden:
 
+1. Entrenamiento con pesas individual - uno de los seis subgrupos oficiales (§3.3, Catálogo oficial).
 
-##### Rule 21 - Goal selection allows up to two goals
+2. Entrenamiento aeróbico individual - uno de los seis subgrupos oficiales (§3.3, Catálogo oficial), con presentación de cara al usuario según §5 (máquina, duración y momento relativo a pesas), no el nombre técnico de la ACSM.
 
-Q4 (goal) is always multi-select with a maximum of two goals. The user may choose one or two of the six goal options, in any combination. There is no longer a weight-loss-specific exception: the former single-select-unless-weight-loss behavior of legacy P1 is retired. When two goals are selected, the result page and the individual-training recommendations use the union of both goals' mappings, deduplicated, per Rule 38 and Part 3, Individual-training subgroup taxonomy.
-
-
-##### Membership and conversion
-
-Rule 22 - Membership pages do not have checkout
-
-The 6 membership pages (1 hub+ 5 plans) display each plan's description, what is included, what is not, the price, the fine print, and a comparison. They do not include a transactional checkout.
-
-The conversion path from a membership page is Agenda tu visita guiada, which captures the lead and routes it to the call center or to the relevant club for a guided in-person visit. The actual sale of the membership happens in person at the club or by phone with the call center, not on the site.
-
-Rule 23 - The
-
-
-##### button - when it appears and how it behaves
-
-button appears in the contextual menu when:
-
-- The user is on a page that is not an individual club page, and
-- The user is not inside their ideal-experience flow.
-On individual club pages, Tu Club ideal does not appear because the user is already at a club.
-
-Instead, 0tros clubes en tu ciudad (Other clubs in your city) or (Other clubs in the area) may appear, depending on Rule 24.
-
-
-##### Behavior on press:
-
-| Situation | What happens on press |
-| --- | --- |
-| No location inferred | The system prompts the user with questionnaire questions Q15 and Q16 (geography intent: home, work, school, other; then city / neighborhood / ZIP). |
-| Location inferred from external search | The system presents Q15 and Q16 pre-filled with the inferred location. The user can confirm or change. |
-
-After capturing the location, the system applies the geographic rules (Rule 24) to surface clubs based on how many clubs exist in the indicated city.
-
-
-##### Rule 24 -
-
-The
-
-on three factors:
-
-
-##### button - when it appears and how it behaves
-
-button only appears on individual club pages. Its label and behavior depend
-
-
-##### Factor 1 - How many clubs exist in the current club's city:
-
-| City type | Definition |
-| --- | --- |
-| CIUDAD-UNO | Only 1 club in the city. |
-| CIUDAD-POCOS | 2 or 3 clubs in the city. |
-| CIUDAD-ZMVM | More than 3 clubs (Mexico City and Estado de México metro area, 32 clubs). |
-
-Factor 2 - Whether the user has already explicitly chosen a club via the questionnaire. Factor 3
-
-- Whether the system has location inferred from the external search.
-
-
-##### Button behavior:
-
-| City type | User state | Button label | Action on press |
-| --- | --- | --- | --- |
-| CIUDAD-UNO | Any | (the button does not appear) | — |
-| CIUDAD-POCOS | User has a club identified (by landing, selection or inference) | Otros clubes en tu ciudad | Shows the other 1 or 2 clubs in the city. No additional options. |
-| CIUDAD-ZMVM | User has a club identified | Otros clubes en el área | Two options: (1) clubs near the current club (10 km radius); (2) clubs near a different location — the system asks if it is home, work, school or other, then city / neighborhood / ZIP, then applies the city-count filter for the new city. |
-| CIUDAD-ZMVM | No club identified, no inferred location | Tu Club ideal | The system prompts Q15 and Q16 from the questionnaire to identify the club. |
-
-
-##### The contextual menu
-
-Rule 25 - What the contextual menu is
-
-The contextual menu is the set of buttons that appear as primary actions inside the body content of a page, not in the header. It changes based on the page and the user's state at the moment of landing.
-
-There are two kinds of buttons in the contextual menu:
-
-- Always-on buttons, subject to global conditions that apply across nearly all pages.
-- Page-specific buttons that depend on the content of that particular page.
-
-##### Rule 26 - always appears
-
-In the contextual menu of every page, in every state, the (Book your
-
-guided visit) button appears. It is the site's conversion action. There are no exceptions. This is the
-
-body-content counterpart of the header same booking flow.
-
-button (Rule 6); both lead to the
-
-
-##### Rule 27- appears when the questionnaire is incomplete
-
-As long as the user has not completed the questionnaire, Diseña tu experiencia appears in the contextual menu of every page. The system needs to capture the questionnaire variables and remind the user that this option is available. Once the questionnaire is complete, [ Diseña tu experiencia)stops appearing in the contextual menu (the button stays in the header per Rule 1, but it does not duplicate inside the body).
-
-
-##### Rule 28- appears when the questionnaire is complete
-
-Once the user has completed the questionnaire, Volver a tu experiencia ideal (Back to your ideal experience) appears in the contextual menu. It replaces the Diseña tu experiencia button. It takes the user back to their personalized plan output.
-
-Rule 29- - when it appears
-
-Each Journal article carries one or more tags that associate it with relevant pages on the site. Possible tags include:
-
-• •
-
-When a user lands on a page and at least one Journal article exists with a tag matching that page, the contextual menu shows the Artículos o información útil button, which expands to display the relevant articles. If no articles are tagged for that page, the button does not appear.
-
-
-##### Rule 30 - FitKidz-specific buttons
-
-On the FitKidz page, in addition to the general buttons, a specific button -[ Clases Fi tKidz disponibles) (Available FitKidz classes) - appears once the user has a club identified. On press, it shows the FitKidz classes offered at that user's club, with their schedules.
-
-This button does not appear when the user has no club identified, because each club has a different subset of the 34 FitKidz activities, and showing them all without context would be misleading.
-
-The 34 FitKidz activities are organized within the FitKidz hub by:
-
-- Age range (toddlers, kids, pre-teens, teens- concrete ranges set by the content team).
-- Discipline type (aquatic, athletic, expressive, martial, fitness).
-- Club availability (which clubs offer this activity).
-
-##### Rule 31 - Buttons shown when surfacing clubs in FitKidz
-
-When the user is on FitKidz and the system surfaces up to 3 proposed clubs (per the geographic rules in Rule 24), each of the 3 clubs is presented with three of its own buttons:
-
-1.
-
-2.
-
-selected.
-
-3.
-
-(View the club) - leads to the individual club page.
-
-(Book a guided visit) - guided-visit flow with that club
-
-(Available FitKidz classes for your
-
-family) - shows the FitKidz classes at that specific club, with schedules.
-
-
-##### Rule 32 - User state with respect to the questionnaire
-
-To build the contextual menu of each page, the system classifies the user into one of three states:
-
-| State | Description |
-| --- | --- |
-| No questionnaire | The user has not completed the questionnaire. |
-| Complete, inside the flow | The user completed the questionnaire and reached this page by clicking a button from their personalized plan (e.g., "View your club" from the result screen). |
-| Complete, outside the flow | The user completed the questionnaire previously but reached this page through a different path (external search, internal navigation, etc.). |
-
-When the user has completed the questionnaire, they always have a club identified - the questionnaire questions that identify the club (Q15 and Q16) are part of the 15 base questions. Visible-question count by path (base 15 plus conditionals): 15 with no conditionals; +1 if Q11 (pause); +1 if Q12b (Q2 = Mujer); +1 if Q14b (children <12); +3 if Q17–Q19 (Q4 includes Bajar de peso). Range 15–21. See the normative count table below.
-
-> **Tabla normativa de conteo de preguntas (cierra C5):**
-
-| Condición activa | Se añade | Δ |
-| --- | --- | :-: |
-| Base — siempre visible | Q1–Q10, Q12, Q13, Q14, Q15, Q16 | **15** |
-| Q10 = "Regreso después de una pausa" | + Q11 | +1 |
-| Q2 = Mujer | + Q12b | +1 |
-| Q14 ∈ {"Yo y mis hijos", "La familia completa"} | + Q14b | +1 |
-| Q4 incluye "Bajar de peso" | + Q17, Q18, Q19 | +3 |
-| **Mínimo** (sin condicionales) | | **15** |
-| **Máximo** (todas activas) | | **21** |
-
-
-
-##### Rule 32b - Contact-capture step (between result and scheduling)
-
-After the Experiencia Ideal result and before calendar selection there is one mandatory intake screen (phase token: contact_capture). The flow is: result → contact_capture → schedule → briefing. The user cannot proceed to date/time selection without providing apellido, celular and correo. This is NOT a questionnaire question; it is a post-questionnaire intake step and is excluded from the Q1-Q19 count.
-
-Header copy (verbatim): eyebrow "Antes de agendar"; H2 "{firstName}, necesitamos un par de datos para confirmar tu visita."; helper "Tu Asesor te contactará para coordinar el horario y enviarte los detalles del club."
-
-
-| Field | Label | Placeholder | Validation | Error message (verbatim) |
-| --- | --- | --- | --- | --- |
-| lastName | Apellido | Tu apellido | trim().length >= 2 | Ingresa tu apellido (mínimo 2 letras) |
-| phone | Número de celular | 10 dígitos · ejemplo: 5512345678 | digits.length === 10 | Ingresa un número de 10 dígitos |
-| email | Correo electrónico | tu@correo.com | /^[^\s@]+@[^\s@]+\.[^\s@]+$/ | Ingresa un correo electrónico válido |
-
-Privacy disclaimer below the fields (verbatim): "Tus datos se usan únicamente para coordinar tu visita guiada. No los compartimos con terceros."
-
-Navigation: "← Volver" returns to the result phase; "Continuar" is red when all three fields are valid and gray-disabled otherwise. On Continuar the trio is stored as result.contact = { lastName, phone, email } and the flow advances to schedule. The back button from schedule returns to contact_capture (not result). The asesor brief renders the full name as {Q1} {lastName} and surfaces phone and email as the contact channels for CRM.
-
-
-##### Rule 33 - Summary of which buttons appear in each state
-
-> **Reconstructed table** (corrupted zone in the source `.docx`). Each page's contextual menu is a function of **three axes**, not the club alone: (1) the **questionnaire state** (Rule 32), (2) the **page the user arrives from / page type** (the per-page matrices in Part 5 + landing inference, Rule 16/20), and (3) the **resolved club** (Rule 24/42: single-club city, =<3 clubs, >3 clubs, or with inferred location). The table below resolves axis (1); axes (2) and (3) determine the *page-specific buttons* and whether "Tu Club ideal" appears, per each Part 5 matrix.
-
-| Questionnaire state (Rule 32) | Contextual-menu buttons |
-| --- | --- |
-| **No questionnaire** | "Tu Club ideal" (when axis 3 applies: >3 clubs or inferred location) - "Diseña tu experiencia" (Rule 27) - "Agenda tu visita guiada" - "Articulos o informacion util" (if tagged articles exist) - page-specific buttons (axis 2) |
-| **Complete, inside the flow** (reached this page via a button from their result, e.g. "Ver tu club") | Page-specific buttons (axis 2). "Diseña tu experiencia" is not offered (already complete) and "Volver a tu experiencia ideal" is not duplicated: the user is already navigating inside their experience |
-| **Complete, outside the flow** (completed earlier but arrived via external search or internal navigation) | "Volver a tu experiencia ideal" (Rule 28, replaces "Diseña tu experiencia") - "Articulos o informacion util" (if any) - page-specific buttons (axis 2) |
-
-Cross-cutting rule: "Agenda tu visita guiada" (conversion) and "Pregúntale a BES" are always in the header (Rule 1) and are not duplicated in the body (Rule 7). "Diseña tu experiencia" / "Volver a tu experiencia ideal" live in exactly one place at a time per state (Rule 27/28).
-
-
-##### System-wide behavior Rule 34 - Stale-plan refresh
-
-A questionnaire-complete user whose plan was generated more than 60 days ago is shown a non-blocking prompt offering to refresh the plan with current life context ([LSigue siendo tu objetivo? )). The plan continues to be available unchanged if the user does not interact with the prompt. This prevents stale recommendations from biasing the contextual menu indefinitely.
-
-
-##### Rule 35 - Accessibility floor
-
-Every page on the site meets WCAG 2.2 AA. Specifically:
-
-- Minimum color contrast 4.5:1 for body text and 3:1 for large text and UI components.
-- Full keyboard operability with visible focus rings.
-- Semantic HTML landmarks.
-- ARIA labels on icon-only buttons.
-respected for animations.
-
-- Touch targets ;;:: 44 x 44 px (Apple HIG) and ;;:: 48 x 48 dp (Material) on mobile.
-- No interaction relies on hover alone.
-
-##### Rule 38 - Individual-training pre-fill and result behavior when the user trains alone
-
-The site offers two top-level individual-training experiences, entrenamiento-con-pesas-individual and entrenamiento-aerobico-individual, each mapping to six subgroups — one per Q4 goal, with the official names of the Catálogo oficial (see Part 3 and the bridge table below) — grounded in ACSM consensus. When the user lands on any page within these two trees, Q13 pre-marks "Solo, a mi ritmo" (rendered "Sola" if Q2 = Mujer), and Q4 pre-marks the goal that corresponds to the subgroup landed on, per the mapping in Rule 20.
-
-When Q13 = "Solo, a mi ritmo" (or "Sola, a mi ritmo") in the final answer, the user's Experiencia Ideal result page does not recommend group classes. Instead it recommends: (1) the individual weight-training subgroup or subgroups that match Q4 per the table in Part 3, Individual-training subgroup taxonomy; (2) the individual aerobic-training subgroup or subgroups that match Q4 per the same table. If Q4 contains two selections, the recommended set is the union of both rows, deduplicated.
-
-The class catalog is suppressed for this user state. The contextual menu (Rules 22-31) reflects this: where it would normally show "Clases recomendadas", it instead shows "Tu rutina individual".
-
-
-##### Rule 39 - Combined plan structure of the Experiencia Ideal result page
-
-Every user who completes the questionnaire receives a combined personalized plan composed of three structured blocks, presented in this order:
-
-1. Entrenamiento con pesas individual - one of the six official subgroups (Part 3, Catálogo oficial).
-
-2. Entrenamiento aeróbico individual - one of the six official subgroups (Part 3, Catálogo oficial), with user-facing presentation per Part 5 (machine, duration, and when relative to pesas), not the technical ACSM name.
-
-> **Tabla puente — protocolo técnico (fichas ACSM) ↔ nombre oficial (cierra C5):**
+> **Tabla puente — protocolo técnico (fichas ACSM) ↔ nombre oficial:**
 >
 > | Protocolo técnico (ficha) | Nombre oficial (Bloque 1) | Nombre oficial (Bloque 2) |
 > | --- | --- | --- |
@@ -1299,210 +1101,86 @@ Every user who completes the questionnaire receives a combined personalized plan
 > | HIIT | — | Cardio moderado con intervalos / Intervalos intensos 4×4 |
 > | SIT | — | (componente de Intervalos intensos 4×4, fase sprint) |
 
-3. Clases recomendadas - two top group classes with explanation, plus collapsible additional classes.
+3. Clases recomendadas - las dos mejores clases grupales con explicación, más clases adicionales plegables.
 
-Each block is default ON. A block is set OFF only when an explicit suppression condition applies. The system is auditable: any reviewer can predict which blocks the user sees by reading their questionnaire answers.
+Cada bloque está ON por defecto. Un bloque se pone OFF solo cuando aplica una condición de supresión explícita. El sistema es auditable: cualquier revisor puede predecir qué bloques ve el usuario leyendo sus respuestas del cuestionario.
 
-Block 1 (Pesas) — Q6 NEVER suppresses Block 1 (lógica única, adoptada del demo v6 y propagada a Appendix F y Part 5): when Q6 = "En la alberca" AND the resolved club has a pool, Block 1 renders its AQUATIC variant (e.g., "Fuerza acuática con equipo" per the Catálogo oficial); if the club has no pool, Block 1 renders the dry variant with the no-pool note (edge case "aquatic preference but the ideal club has no pool"). The ONLY suppression trigger is Q12 containing a condition flagged in the subgroup ficha as an absolute contraindication. Otherwise ON, with subgroup per the Q4 mapping in Part 3.
+Bloque 1 (Pesas) — Q6 NUNCA suprime el Bloque 1 (lógica única, adoptada del demo v6 y propagada a Apéndice F y §5): cuando Q6 = "En la alberca" Y el club resuelto tiene alberca, el Bloque 1 muestra su variante ACUÁTICA (p. ej., "Fuerza acuática con equipo" según el Catálogo oficial); si el club no tiene alberca, el Bloque 1 muestra la variante en seco con la nota de sin alberca (caso límite "preferencia acuática pero el club ideal no tiene alberca"). El ÚNICO disparador de supresión es que Q12 contenga una condición marcada en la ficha del subgrupo como contraindicación absoluta. En caso contrario ON, con subgrupo según el mapeo de Q4 en §3.
 
-Block 2 (Aeróbico) suppression: a Q12 unstabilized cardiovascular condition without clearance restricts it to Cardio suave (LISS) only, or OFF. Otherwise ON, with subgroup per the Q4 mapping in Part 3 and user-facing presentation per Part 5.
+Supresión del Bloque 2 (Aeróbico): una condición cardiovascular no estabilizada en Q12 sin autorización médica lo restringe a solo Cardio suave (LISS), o lo pone OFF. En caso contrario ON, con subgrupo según el mapeo de Q4 en §3 y presentación de cara al usuario según §5.
 
-Block 3 (Clases) suppression: Q13 = "Solo, a mi ritmo" (or "Sola, a mi ritmo") sets it OFF, per Rule 38. Otherwise ON, with selection per Rule 40 and presentation per Rule 41.
+Supresión del Bloque 3 (Clases): Q13 = "Solo, a mi ritmo" (o "Sola, a mi ritmo") lo pone OFF, según Rule 38. En caso contrario ON, con selección según Rule 40 y presentación según Rule 41.
 
-Q6 special cases: "Ambas" leaves Blocks 1 and 2 both ON, and the aerobic block may prefer aquatic when the club has a pool; "Lo que mi entrenador recomiende" leaves both ON with the setting decided in the first session; "En piso / área seca" leaves both ON with no aquatic preference; "En la alberca" sets Block 1 OFF and Block 2 aquatic-only.
+Casos especiales de Q6: "Ambas" deja los Bloques 1 y 2 ambos ON, y el bloque aeróbico puede preferir la variante acuática cuando el club tiene alberca; "Lo que mi entrenador recomiende" deja ambos ON con el entorno decidido en la primera sesión; "En piso / área seca" deja ambos ON sin preferencia acuática; "En la alberca" pone el Bloque 1 OFF y el Bloque 2 solo en variante acuática.
 
-The system returns flags block_1_on, block_2_on and block_3_on. The frontend renders only blocks whose flag is true. If all three would be suppressed, the system raises an error and routes the user to a human asesor.
+El sistema devuelve las banderas block_1_on, block_2_on y block_3_on. El frontend renderiza solo los bloques cuya bandera es true. Si los tres quedaran suprimidos, el sistema lanza un error y dirige al usuario a un asesor humano.
 
+#### Filtro duro de contraindicaciones YMYL (Rule 14b)
 
-##### Rule 40 - Class selection algorithm for the Clases recomendadas block
-
-When Block 3 is ON, class selection executes in the backend before the LLM is invoked. The LLM does not generate, rank, or filter classes. The LLM only selects, from validated fichas, the benefit IDs and match-reason IDs to display per class.
-
-This is the SINGLE authoritative ranking algorithm (audit C8: unifies Rule 40 with the demo v6 flow). It runs in order: (1) candidate set - the full catalog of the user's ideal club, resolved from Q15 and Q16; (2) **Q6 setting filter** - "En la alberca" keeps only aquatic classes; "En piso / área seca" keeps only dry classes; "Ambas" / "Lo que mi entrenador recomiende" keep all; (3) Q4 compatibility filter - keep classes whose ficha lists the Q4 goal; **any "no apto" against any selected Q4 goal drops the class outright**; (4) Q9 level filter - keep classes whose ficha lists Q9; (5) contraindication hard filter (Q12, Q12b, Q17 → keys l/c/e/p/b) - remove contraindicated classes; (6) final ranking by score - Q4 match (top3 +3, apto +1), Q3 match (+2), Q5 match (+1), Q7 schedule overlap (full +1, partial +0.5), sorted descending with alphabetic tie-break; (7) partitioning into top_2, tambien_encajan (3 to 5) and resto. The demo v6 implementation must add the Q3/Q5/Q7 tiebreaker scoring to match this rule.
-
-The LLM receives top_2 and tambien_encajan with full fichas. It selects beneficios_seleccionados (one or two benefit IDs per class) and razon_de_match_id (one ID matching the user's primary Q4), and produces a conector_personal (15 words or fewer) referencing the user's questionnaire answers verbatim. No factual content is generated by the LLM in this block.
+The Clases recomendadas block (Block 3) applies a hard contraindication filter before ranking — Rule 40 step 4. Contraindicated classes never appear in the user's recommendation and are never named in user-facing copy (the page does not surface what was removed). The filter maps questionnaire answers to five internal condition keys:
 
 
-##### Rule 41 - UI behavior for class replacement and access to the full club catalog
-
-Block 3 presentation includes three elements. (1) Two top class cards - each shows the class name, the match reason (ficha verbatim), one or two benefits (ficha verbatim), the LLM-generated conector_personal (15 words or fewer), and two separate action controls displayed as stacked links: "Cambiar mis clases" and "Ver todas las del club". The two actions are independent: "Cambiar mis clases" opens the replacement panel; "Ver todas" opens the full catalog filter. (2) A collapsible "Otras clases que también encajan" listing 3 to 5 classes from tambien_encajan. (3) A full club catalog panel, opened via "Ver todas las del club", listing the filtered club catalog alphabetically with free-text and Q4-chip filters.
-
-"Cambiar mis clases" opens a replacement panel showing tambien_encajan first, then a divider, then the broader catalog. On user selection it replaces the affected card and re-invokes the LLM only for that single class; the other top card is not regenerated. The manual replacement persists in session and in CRM if Q1 and a contact field are present, per Appendix A.
-
-Constraints: the user cannot select a class outside the club's catalog; each top card is replaceable independently; if the user picks a class outside Q4 compatibility, the card shows a soft note - "Esta clase no es la mejor opción para tu objetivo de [Q4], pero está disponible en tu club"; "Reiniciar cuestionario" remains available throughout.
-
-
-##### Rule 42 - Club Ideal card structure and resolution
-
-The Experiencia Ideal page renders a Club Ideal card between the hero/argument section and the three plan blocks. All factual content is verifiable from the backend (catalog plus geocoding API). No LLM generation of facts.
-
-Card contents: (1) club name, resolved from the club catalog using Q16 location versus club GPS - closest wins unless Q15 = "No me importa", in which case the city or nearest fallback applies; (2) distance, a driving-distance estimate in minutes from Q16 to the club via Google Maps Distance Matrix API or equivalent, displayed as "A N minutos de tu colonia/CP"; (3) address, verbatim from the catalog; (4) intent line, LLM-generated, combining Q13 and Q14 into one sentence of 18 words or fewer, with templates in Appendix E; (5) features list, exactly four bullets, all verifiable from the catalog - the top two classes from Block 3 with the schedule note "en tus horarios disponibles" when Q7 overlap is full, the pesas area, the pool if it exists, and one additional amenity relevant to the user's Q4; (6) the action link "Ver otros clubes cerca de ti", which triggers Rule 43.
-
-Graceful degradation: if any of contents 1 to 4 cannot be resolved (geocoding failure, missing Q16, catalog gap), omit the unresolvable element. Never invent.
-
-
-##### Rule 43 - Other clubs in the user's area and class re-evaluation on club change
-
-The Club Ideal card "Ver otros clubes cerca de ti" action opens a panel listing additional Sports World clubs within a radius configurable by Product in site config (default 15 km) of the user's Q16 location, sorted by driving distance ascending. Panel entries show club name, distance in minutes, full address, and a single-line summary of distinguishing amenities.
-
-When the user selects a different club: (1) the Club Ideal card updates with the new name, distance, address, intent line and features; (2) Block 3 is re-evaluated with the new club's catalog - the Rule 40 algorithm executes again, top_2, tambien_encajan and resto are recomputed, and the LLM is re-invoked for the new top classes' benefit IDs, match reasons and connector strings; (3) Blocks 1 and 2 are NOT re-evaluated, as they are subgroup-based, not club-dependent; (4) the change persists in session and in CRM with a flag indicating a manual override.
-
-If the new club's catalog cannot produce a viable Block 3 set, the system displays a soft warning - "En este club no programamos [class names] en tus horarios. Aquí están las clases que sí encajan" - and the user can accept the alternatives or return to the previous club.
-
-
-## Part 5 - Per-Page Behavior Matrices
-
-Each matrix crosses the user state with the contextual menu and the questionnaire. Matrices assume the global rules from Part 4 are already applied. The header (Rules 1-2) and the BES widget (Rule 3) are always visible and are not repeated in each matrix.
-
-##### 5.1 — Home
-
-| State | Questionnaire | Contextual menu |
+| Condition key | Condition | Triggered by |
 | --- | --- | --- |
-| No questionnaire · no inferred location · pure brand search | 15 standard questions (18 if weight loss) | Diseña tu experiencia · Agenda tu visita guiada |
-| No questionnaire · no inferred location · search with goal | 15 questions, Q4 pre-filled and editable (18 if weight loss) | Diseña tu experiencia · Agenda tu visita guiada |
-| No questionnaire · with inferred location | 15 questions, Q15 and Q16 pre-filled and editable (18 if weight loss) | Tu Club ideal · Diseña tu experiencia · Agenda tu visita guiada |
-| Questionnaire complete (always outside the flow on home) | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
+| lesion | Lesión o dolor articular/muscular | Q12 includes "Lesión o dolor articular/muscular" |
+| cardiovascular | Condición cardiovascular o de presión | Q12 includes "Condición cardiovascular o de presión" |
+| embarazo | Embarazada | Q12b = "Sí, embarazada" |
+| posparto | Posparto reciente (<6 meses) | Q12b = "Sí, posparto reciente (últimos 6 meses)" |
+| bariatrica | Cirugía bariátrica | Q17 includes "Cirugía bariátrica" |
 
-##### - Individual club
-
-By landing on a specific club page the club is already identified, so Q15 and Q16 are omitted (13 base questions; 16 if weight loss). City size changes the Tu Club ideal / Otros clubes buttons.
-
-| State | Questionnaire | Contextual menu |
-| --- | --- | --- |
-| No questionnaire · single-club city | 13 standard questions (16 if weight loss) | Diseña tu experiencia · Agenda tu visita guiada |
-| No questionnaire · city with up to 3 clubs | 13 standard questions (16 if weight loss) | Diseña tu experiencia · Agenda tu visita guiada |
-| No questionnaire · city with more than 3 clubs (CIUDAD-ZMVM) | 13 standard questions (16 if weight loss) | Tu Club ideal · Diseña tu experiencia · Agenda tu visita guiada |
-| Complete, inside the flow | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
-| Complete, outside the flow · single-club city | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
-| Complete, outside the flow · city with up to 3 clubs | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
-| Complete, outside the flow · city with more than 3 clubs | Already complete | Volver a tu experiencia ideal · Otros clubes en el área · Agenda tu visita guiada |
-
-##### - Premium Les Mills class
-
-Landing on a class pre-marks Q4 (the movement-aligned goal) from the class's discipline. The user can confirm or change.
+Matriz de contraindicaciones reorganizada por beneficio sobre el catálogo canónico de 51 clases (ver tabla siguiente). Las 3 clases que no estaban en el catálogo final (DANZA AEREA, INTERVAL, FLYBOARD) fueron eliminadas.
 
 
-| State | Questionnaire | Contextual menu |
-| --- | --- | --- |
-| No questionnaire · no club selected · no inferred location | 15 questions, Q4 pre-filled and editable (18 if weight loss) | Tu Club ideal • Diseña tu experiencia · Agenda tu visita guiada |
-| No questionnaire · no club selected · with inferred location | 15 questions, Q4, Q15 and Q16 pre-filled and editable (18 if weight loss) | Tu Club ideal • Diseña tu experiencia · Agenda tu visita guiada |
-| No questionnaire · with club selected | 15 questions, Q4 pre-filled and editable (18 if weight loss) | Diseña tu experiencia · Agenda tu visita guiada |
-| Complete, inside the flow | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
-| Complete, outside the flow | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
+**Contrato del filtro (permanece aquí):** 5 claves de condición — l (lesión), c (cond_cardiovascular), e (embarazo), p (posparto), b (bariátrica) — mapeadas desde Q12/Q12b/Q17; exclusión dura ANTES del ranking (Rule 40 paso 5); las clases excluidas jamás se nombran al usuario. **Los datos** (matriz de 51 clases por beneficio×contraindicación + fichas de perfil por objetivo Q4) viven en `anexo-clinico.md` §1 como única fuente, bajo gate de validación MD bloqueante.
+
+GLP-1 (Ozempic, Wegovy, Mounjaro): no classes are filtered. The research-based clinical recommendation is to PRIORITIZE strength to preserve muscle mass during treatment. A soft info message renders: "Durante tu tratamiento con GLP-1, priorizar clases de fuerza preserva tu masa muscular mientras bajas grasa. Tu Asesor lo confirma en la visita guiada."
+
+"Otra, la comento en el club" (Q12) and "Otro tratamiento médico para peso" (Q17): open-ended responses trigger an asesor-review soft message: "Mencionaste una condición o tratamiento médico. Tu selección de clases grupales ya excluye las clases contraindicadas, y tu Asesor ajusta los protocolos de pesas y cardio individual en la visita guiada según tu criterio clínico."
+
+Base de investigación: `research_contraindicaciones_audit.md` (protocolo v2, 9 fuentes profesionales, etiquetas epistémicas [QUOTED]/[DERIVED]/[INFERRED]). La validación por un médico del deporte es **obligatoria y bloqueante** antes de desplegar este contenido YMYL a producción (ver §10.1).
+
+#### Algoritmo de selección de clases (Rule 40)
+
+Cuando el Bloque 3 está ON, la selección de clases se ejecuta en el backend antes de invocar al LLM. El LLM no genera, ordena ni filtra clases. El LLM solo selecciona, a partir de fichas validadas, los IDs de beneficio y los IDs de razón de match a mostrar por clase.
+
+Este es el ÚNICO algoritmo de ranking con autoridad. Se ejecuta en este orden: (1) conjunto de candidatas - el catálogo completo del club ideal del usuario, resuelto a partir de Q15 y Q16; (2) **filtro de entorno Q6** - "En la alberca" conserva solo clases acuáticas; "En piso / área seca" conserva solo clases en seco; "Ambas" / "Lo que mi entrenador recomiende" conservan todas; (3) filtro de compatibilidad Q4 - conservar las clases cuya ficha lista el objetivo de Q4; **cualquier "no apto" frente a cualquier objetivo Q4 seleccionado descarta la clase de inmediato**; (4) filtro de nivel Q9 - conservar las clases cuya ficha lista Q9; (5) filtro duro de contraindicaciones (Q12, Q12b, Q17 → claves l/c/e/p/b) - eliminar las clases contraindicadas; (6) ranking final por puntuación - coincidencia con Q4 (top3 +3, apto +1), coincidencia con Q3 (+2), coincidencia con Q5 (+1), solapamiento de horario Q7 (completo +1, parcial +0.5), ordenado de forma descendente con desempate alfabético; (7) partición en top_2, tambien_encajan (3 a 5) y resto. La implementación del demo v6 debe añadir la puntuación de desempate Q3/Q5/Q7 para ajustarse a esta regla.
+
+El LLM recibe top_2 y tambien_encajan con las fichas completas. Selecciona beneficios_seleccionados (uno o dos IDs de beneficio por clase) y razon_de_match_id (un ID que coincide con el Q4 primario del usuario), y produce un conector_personal (15 palabras o menos) que hace referencia literal a las respuestas del cuestionario del usuario. El LLM no genera ningún contenido factual en este bloque.
+
+#### Reemplazo de clases y catálogo completo (Rule 41)
+
+La presentación del Bloque 3 incluye tres elementos. (1) Dos tarjetas de clases top - cada una muestra el nombre de la clase, la razón de match (textual de la ficha), uno o dos beneficios (textuales de la ficha), el conector_personal generado por el LLM (15 palabras o menos) y dos controles de acción separados mostrados como enlaces apilados: "Cambiar mis clases" y "Ver todas las del club". Las dos acciones son independientes: "Cambiar mis clases" abre el panel de reemplazo; "Ver todas" abre el filtro del catálogo completo. (2) Un desplegable "Otras clases que también encajan" que lista de 3 a 5 clases de tambien_encajan. (3) Un panel de catálogo completo del club, abierto mediante "Ver todas las del club", que lista alfabéticamente el catálogo filtrado del club con filtros de texto libre y de chips de Q4.
+
+"Cambiar mis clases" abre un panel de reemplazo que muestra primero tambien_encajan, luego un separador y después el catálogo más amplio. Cuando el usuario selecciona, se reemplaza la tarjeta afectada y se reinvoca al LLM solo para esa única clase; la otra tarjeta top no se regenera. El reemplazo manual persiste en la sesión y en el CRM si Q1 y un campo de contacto están presentes, según la política de privacidad (§9).
+
+Restricciones: el usuario no puede seleccionar una clase fuera del catálogo del club; cada tarjeta top es reemplazable de forma independiente; si el usuario elige una clase fuera de la compatibilidad con Q4, la tarjeta muestra una nota suave - "Esta clase no es la mejor opción para tu objetivo de [Q4], pero está disponible en tu club"; "Reiniciar cuestionario" permanece disponible en todo momento.
+
+#### Card «Tu Club Ideal» (Rule 42)
+
+La página de Experiencia Ideal renderiza una tarjeta de Club Ideal entre la sección de hero/argumento y los tres bloques del plan. Todo el contenido factual es verificable desde el backend (catálogo más API de geocodificación). Ninguna generación de hechos por el LLM.
+
+Contenido de la tarjeta: (1) nombre del club, resuelto a partir del catálogo de clubes usando la ubicación de Q16 frente al GPS del club - gana el más cercano salvo que Q15 = "No me importa", en cuyo caso aplica la ciudad o el fallback más cercano; (2) distancia, una estimación de distancia en coche en minutos desde Q16 hasta el club mediante la Google Maps Distance Matrix API o equivalente, mostrada como "A N minutos de tu colonia/CP"; (3) dirección, textual del catálogo; (4) línea de intención, generada por el LLM, que combina Q13 y Q14 en una oración de 18 palabras o menos, con plantillas en `anexo-contenido-prompts.md`; (5) lista de características, exactamente cuatro viñetas, todas verificables desde el catálogo - las dos clases top del Bloque 3 con la nota de horario "en tus horarios disponibles" cuando el solapamiento de Q7 es completo, el área de pesas, la alberca si existe y una amenidad adicional relevante para el Q4 del usuario; (6) el enlace de acción "Ver otros clubes cerca de ti", que activa Rule 43.
+
+Degradación elegante: si alguno de los contenidos 1 a 4 no puede resolverse (fallo de geocodificación, Q16 faltante, hueco en el catálogo), se omite el elemento no resoluble. Nunca inventar.
+
+#### Matriz de la página de resultado
+
+Se llega solo después de completar el cuestionario. Renderiza el plan personalizado combinado de tres bloques definido en Rule 39. La visibilidad de los bloques se controla con las banderas block_1_on, block_2_on y block_3_on; el frontend renderiza solo los bloques cuya bandera es true. La tarjeta de Club Ideal sigue Rule 42 y el panel de otros clubes sigue Rule 43; la selección de clases sigue Rule 40 y la UI de reemplazo sigue Rule 41. La referencia de layout de la página está en Apéndice F, y toda cadena generada por el LLM en la página sigue la Brand Voice Guide (`anexo-contenido-prompts.md`).
 
 
-##### - Regular class
-
-Behavior identical to Premium Les Mills class (same 5-state matrix above; landing pre-marks Q4 from the class discipline).
-
-##### - Goal hub
-
-Applies to all 5 hubs (Primeros Pasos, Salud y Bienestar, Estética corporal, Ganar Fuerza, Rehabilitación). Landing pre-marks Q4 with the hub's goal. The YMYL health-disclaimer modal is shown only on the weight-loss path (Q4 = Bajar de peso), not on the rehabilitation hub.
-
-| State | Questionnaire | Contextual menu |
-| --- | --- | --- |
-| No questionnaire · no club selected · no inferred location | 15 questions, Q4 pre-filled and editable (18 if user switches to weight loss) | Artículos o información útil (if any) · Diseña tu experiencia · Agenda tu visita guiada |
-| No questionnaire · no club selected · with inferred location | 15 questions, Q4, Q15 and Q16 pre-filled and editable (18 if weight loss) | Artículos o información útil (if any) · Diseña tu experiencia · Agenda tu visita guiada |
-| No questionnaire · with club selected | 15 questions, Q4 pre-filled and editable (18 if weight loss) | Diseña tu experiencia · Agenda tu visita guiada |
-| Complete, inside the flow | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
-| Complete, outside the flow | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
-
-**Bajar de peso hub (YMYL).** Landing pre-marks Q4 = Bajar de peso, which automatically activates the weight-loss conditionals (Q17–Q19), so the count is always 18. A health-disclaimer modal appears before the result. This page always has Journal articles tagged bajar-de-peso, so the Artículos button always appears.
-
-| State | Questionnaire | Contextual menu |
-| --- | --- | --- |
-| No questionnaire · no club selected · no inferred location | 18 questions with Q4 pre-filled and editable | Artículos o información útil · Diseña tu experiencia · Agenda tu visita guiada |
-| No questionnaire · no club selected · with inferred location | 18 questions with Q4, Q15 and Q16 pre-filled and editable | Artículos o información útil · Diseña tu experiencia · Agenda tu visita guiada |
-| No questionnaire · with club selected | 18 questions with Q4 pre-filled and editable | Diseña tu experiencia · Agenda tu visita guiada |
-| Complete, inside / outside the flow | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
-
-##### - Personal Training
-
-Landing pre-marks Q13 = Acompañado/Acompañada. The user can confirm or change.
-
-| State | Questionnaire | Contextual menu |
-| --- | --- | --- |
-| No questionnaire · no club selected · no inferred location | 15 questions with Q13 pre-filled and editable (18 if weight loss) | Artículos o información útil (if any) · Diseña tu experiencia · Agenda tu visita guiada |
-| No questionnaire · no club selected · with inferred location | 15 questions with Q13, Q15 and Q16 pre-filled and editable (18 if weight loss) | Artículos o información útil (if any) · Diseña tu experiencia · Agenda tu visita guiada |
-| No questionnaire · with club selected | 15 questions with Q13 pre-filled and editable (18 if weight loss) | Diseña tu experiencia · Agenda tu visita guiada |
-| Complete, inside the flow | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
-| Complete, outside the flow | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
-
-**Memberships.** Landing on memberships does not allow inferring questionnaire variables. Per Rule 22, the page has no online checkout — conversion goes through Agenda tu visita guiada.
-
-| State | Questionnaire | Contextual menu |
-| --- | --- | --- |
-| No questionnaire · no club selected · no inferred location | 15 standard questions (18 if weight loss) | Tu Club ideal · Diseña tu experiencia · Agenda tu visita guiada |
-| No questionnaire · no club selected · with inferred location | 15 questions with Q15 and Q16 pre-filled and editable (18 if weight loss) | Tu Club ideal · Diseña tu experiencia · Agenda tu visita guiada |
-| No questionnaire · with club selected | 15 standard questions (18 if weight loss) | Diseña tu experiencia · Agenda tu visita guiada |
-| Complete, inside the flow | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
-| Complete, outside the flow | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
-
-##### - Journal article
-
-Landing on an article does not allow inferring questionnaire variables.
-
-| State | Questionnaire | Contextual menu |
-| --- | --- | --- |
-| No questionnaire · no club selected · no inferred location | 15 standard questions (18 if weight loss) | Diseña tu experiencia · Agenda tu visita guiada |
-| No questionnaire · no club selected · with inferred location | 15 questions with Q15 and Q16 pre-filled and editable (18 if weight loss) | Diseña tu experiencia · Agenda tu visita guiada |
-| No questionnaire · with club selected | 15 standard questions (18 if weight loss) | Diseña tu experiencia · Agenda tu visita guiada |
-| Complete, inside the flow | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
-| Complete, outside the flow | Already complete | Volver a tu experiencia ideal · Agenda tu visita guiada |
-
-##### - BES (when reached via the fallback URL)
-
-BES is normally reached via the global widget (Rule 3), which overlays the current page. The dedicated URL exists as a fallback for non-JavaScript users and as a deep-linkable destination. When reached via /bes, the page is server-rendered with the same chat interface in a non-floating layout.
-
-| State | Behavior |
-| --- | --- |
-| No questionnaire | The assistant answers questions. If BES detects a personalization intent, it offers to open the questionnaire; the user decides. Always-available action: "Hablar con un asesor humano". |
-| Complete, inside the flow | The assistant answers while keeping the experience context. "Volver a tu experiencia ideal" is always visible. |
-| Complete, outside the flow | The assistant responds freely. "Volver a tu experiencia ideal" is always visible. |
-
-##### entrenamiento-con-pesas-individual (and subpages)
-
-Individual weight-training page (class page type). Per Rule 38, Q13 pre-marks Solo, a mi ritmo (Sola if Q2 = Mujer) and the result page recommends individual subgroups, not group classes; the contextual menu shows Tu rutina individual instead of Clases recomendadas.
-
-
-| State | Questionnaire | Contextual menu |
-| --- | --- | --- |
-| No questionnaire | 15 questions, Q13 pre-marked Solo/Sola and Q4 pre-marked per subpage, both editable (18 if weight loss) | Diseña tu experiencia · Agenda tu visita guiada (audit L6: "Tu rutina individual" solo existe con resultado generado) |
-| Complete, inside the flow | Already complete | Volver a tu experiencia ideal · Tu rutina individual · Agenda tu visita guiada |
-| Complete, outside the flow | Already complete | Volver a tu experiencia ideal · Tu rutina individual · Agenda tu visita guiada |
-
-Subpage Q4 pre-mark (Rule 20, dedupe per audit C9): Fuerza pre-marks **Aumentar masa muscular**; Hipertrofia pre-marks Mejorar mi estética corporal; Potencia pre-marks Mejorar mi desempeño atlético; Resistencia muscular pre-marks Mejorar mi salud cardiovascular. Nota de coherencia landing→resultado: el pre-fill es editable; el resultado se deriva del Q4 final, por lo que puede diferir de la subpágina visitada — comportamiento intencional, documentado aquí.
-
-
-##### entrenamiento-aerobico-individual (and subpages)
-
-Individual aerobic-training page (class page type). Per Rule 38, Q13 pre-marks Solo, a mi ritmo (Sola if Q2 = Mujer) and the result page recommends individual subgroups, not group classes; the contextual menu shows Tu rutina individual.
-
-
-| State | Questionnaire | Contextual menu |
-| --- | --- | --- |
-| No questionnaire | 15 questions, Q13 pre-marked Solo/Sola and Q4 pre-marked per subpage, both editable (18 if weight loss) | Diseña tu experiencia · Agenda tu visita guiada (audit L6: "Tu rutina individual" solo existe con resultado generado) |
-| Complete, inside the flow | Already complete | Volver a tu experiencia ideal · Tu rutina individual · Agenda tu visita guiada |
-| Complete, outside the flow | Already complete | Volver a tu experiencia ideal · Tu rutina individual · Agenda tu visita guiada |
-
-Subpage Q4 pre-mark (Rule 20, dedupe per audit C9): LISS no pre-mark; MICT pre-marks Mejorar mi salud cardiovascular; HIIT pre-marks Mejorar mi estética corporal; SIT pre-marks **Mejorar mi desempeño atlético**.
-
-
-##### experiencia-ideal - the Experiencia Ideal result page
-
-Reached only after the questionnaire is complete. It renders the combined three-block personalized plan defined in Rule 39. Block visibility is controlled by the flags block_1_on, block_2_on and block_3_on; the frontend renders only blocks whose flag is true. The Club Ideal card follows Rule 42 and the other-clubs panel follows Rule 43; class selection follows Rule 40 and the replacement UI follows Rule 41. The page layout reference is in Appendix F, and every LLM-generated string on the page follows the Brand Voice Guide in Appendix E.
-
-
-| Block | Default | Suppression condition | Backend flag |
+| Bloque | Por defecto | Condición de supresión | Bandera de backend |
 | --- | --- | --- | --- |
-| 01 Pesas individual | ON (dry or aquatic variant per Q6 + club pool, Rule 39) | ONLY: Q12 contains a subgroup-ficha absolute contraindication | block_1_on |
-| 02 Cardio individual | ON | Q12 unstabilized cardiovascular without clearance (restrict to Cardio suave, or OFF) | block_2_on |
-| 03 Clases recomendadas | ON | Q13 = Solo/Sola, a mi ritmo (per Rule 38) | block_3_on |
+| 01 Pesas individual | ON (variante en seco o acuática según Q6 + alberca del club, Rule 39) | SOLO: Q12 contiene una contraindicación absoluta de la ficha del subgrupo | block_1_on |
+| 02 Cardio individual | ON | Q12 cardiovascular no estabilizada sin autorización médica (restringir a Cardio suave, u OFF) | block_2_on |
+| 03 Clases recomendadas | ON | Q13 = Solo/Sola, a mi ritmo (según Rule 38) | block_3_on |
 
-State matrix. No questionnaire: the page is not reachable; the user is routed to Diseña tu experiencia. Questionnaire complete: full plan renders with blocks per the flags above. Contextual menu: Volver a tu experiencia ideal plus Agendar visita guiada; when block_3_on is false, Clases recomendadas is replaced by Tu rutina individual (per Rule 38). If all three flags are false, the system raises an error and renders the human-asesor handoff card (Part 6).
+Matriz de estados. Sin cuestionario: la página no es alcanzable; el usuario es dirigido a Diseña tu experiencia. Cuestionario completo: se renderiza el plan completo con los bloques según las banderas anteriores. Menú contextual: Volver a tu experiencia ideal más Agendar visita guiada; cuando block_3_on es false, Clases recomendadas se reemplaza por Tu rutina individual (según Rule 38). Si las tres banderas son false, el sistema lanza un error y renderiza la tarjeta de traspaso a asesor humano (§6).
 
+#### Bloque 1 (pesas) — presentación al usuario
 
-##### Block 2 - Cardio individual user-facing presentation
+El Bloque 1 muestra el nombre de subgrupo de cara al usuario seleccionado a partir del objetivo Q4 primario del usuario — una de las seis etiquetas accesibles del mapeo de Q4 a subgrupo: Cuerpo completo con peso moderado, Definición muscular por zonas, Crecimiento muscular con carga creciente, Fuerza explosiva y velocidad, Mantenimiento de fuerza general, Pesas guiadas con énfasis en técnica controlada. La razón del bloque explica en lenguaje sencillo el beneficio ligado a Q4. El Bloque 1 nunca lista equipamiento en el copy de cara al usuario: la selección del equipamiento es decisión del entrenador en la primera sesión, y la razón termina con "Tu entrenador define los ejercicios y el peso en la primera sesión" (o una variante aprobada).
+
+#### Bloque 2 (cardio) — presentación al usuario
 
 The Block 2 card does NOT use the technical ACSM names (LISS, MICT, HIIT, SIT) in user-facing copy. It shows a machine recommendation, a duration, the timing relative to the pesas session, and a plain-language reason. The technical names stay in fichas, subpage URLs and backend identifiers only. Mapping by Q4:
 
@@ -1518,327 +1196,576 @@ The Block 2 card does NOT use the technical ACSM names (LISS, MICT, HIIT, SIT) i
 
 The machine list is a recommendation, not a constraint; the user can substitute any equivalent machine in the club. The timing instruction is always relative to the primary Q4 goal; when Q4 has two selections, use the more restrictive guidance (priority for the goal that demands more recovery: Recuperarme de una lesión o dolor crónico, Aumentar masa muscular, Mejorar mi desempeño atlético, Mejorar mi estética corporal, Bajar de peso, Mejorar mi salud cardiovascular). High-intensity interval group classes from the canonical catalog (GRIT, TRAINT BOOST, ALPHA TRAINER, STRONG NATION, POWER JUMP) go exclusively to Block 3, never to Block 2.
 
+### 5.18 Captura de contacto (Rule 32b)
 
-##### Block 1 - Pesas individual user-facing presentation
+- **Propósito:** convertir el interés en lead contactable. Aparece **entre** `result` y `schedule`; no se puede agendar sin completarla.
+- **Encabezado:** "Antes de agendar" · "{Nombre}, necesitamos un par de datos para confirmar tu visita."
+- **Campos, validación y errores (verbatim):**
 
-Block 1 shows the user-facing subgroup name selected from the user's primary Q4 goal — one of the six accessible labels in the Q4-to-subgroup mapping: Cuerpo completo con peso moderado, Definición muscular por zonas, Crecimiento muscular con carga creciente, Fuerza explosiva y velocidad, Mantenimiento de fuerza general, Pesas guiadas con énfasis en técnica controlada. The block reason explains the benefit tied to Q4 in plain language. Block 1 never lists equipment in user-facing copy: equipment selection is the trainer's decision in the first session, and the reason ends with "Tu entrenador define los ejercicios y el peso en la primera sesión" (or an approved variant).
+| Campo | Validación | Error inline |
+|---|---|---|
+| Apellido | `trim().length ≥ 2` | "Ingresa tu apellido (mínimo 2 letras)" |
+| Celular | exactamente **10 dígitos** | "Ingresa un número de 10 dígitos" |
+| Correo | `/^[^\s@]+@[^\s@]+\.[^\s@]+$/` | "Ingresa un correo electrónico válido" |
 
+- **Privacidad:** "Tus datos se usan únicamente para coordinar tu visita guiada. No los compartimos con terceros."
+- **Estados del botón "Continuar":** rojo cuando los 3 campos son válidos; gris deshabilitado en otro caso.
+- **Validación en tiempo real:** el error del correo aparece **mientras escribe**, no al enviar.
 
-## Part 6 - Edge Cases & Error States
+Después del resultado de Experiencia Ideal y antes de la selección de calendario hay una pantalla de captura obligatoria (token de fase: contact_capture). El flujo es: result → contact_capture → schedule → briefing. El usuario no puede avanzar a la selección de fecha/hora sin proporcionar apellido, celular y correo. Esto NO es una pregunta del cuestionario; es un paso de captura posterior al cuestionario y queda excluido del conteo Q1-Q19.
 
-This part documents what the site does when the happy path fails. Every behavior described here must be implemented and verified before launch.
+Copy del encabezado (verbatim): eyebrow "Antes de agendar"; H2 "{firstName}, necesitamos un par de datos para confirmar tu visita."; helper "Tu Asesor te contactará para coordinar el horario y enviarte los detalles del club."
 
 
-##### 6.1 - Geolocation permission denied or unavailable
+| Campo | Etiqueta | Placeholder | Validación | Mensaje de error (verbatim) |
+| --- | --- | --- | --- | --- |
+| lastName | Apellido | Tu apellido | trim().length >= 2 | Ingresa tu apellido (mínimo 2 letras) |
+| phone | Número de celular | 10 dígitos · ejemplo: 5512345678 | digits.length === 10 | Ingresa un número de 10 dígitos |
+| email | Correo electrónico | tu@correo.com | /^[^\s@]+@[^\s@]+\.[^\s@]+$/ | Ingresa un correo electrónico válido |
 
-Trigger: the browser denies the geolocation permission prompt, or the user is on a device or network that does not return a coordinate.
+Aviso de privacidad debajo de los campos (verbatim): "Tus datos se usan únicamente para coordinar tu visita guiada. No los compartimos con terceros."
 
-Behavior: the system does not prompt repeatedly. The user lands on Home with the (Tu Club ideal) flow opened in capture mode (Q15+ Q16 manual entry). A non-intrusive notice explains that
+Navegación: "← Volver" regresa a la fase de resultado; "Continuar" se muestra en rojo cuando los tres campos son válidos y en gris-deshabilitado en caso contrario. Al presionar Continuar, el trío se guarda como result.contact = { lastName, phone, email } y el flujo avanza a schedule. El botón de regreso desde schedule vuelve a contact_capture (no a result). El brief del asesor renderiza el nombre completo como {Q1} {lastName} y expone phone y email como los canales de contacto para el CRM.
 
-the user can enter their location manually or browse the full club list at .
+### 5.19 Agenda y brief del Asesor
 
+- `schedule`: selección de día/hora; "Volver" regresa a `contact_capture`.
+- `briefing`: brief del asesor (10 secciones, 5 generadas por el LLM) con banderas de seguridad. Detalle en el Apéndice G.
 
-##### - External search inferred a location not in the 49-club roster
+---
 
-Trigger: the user searches (no Sports World club exists in Tijuana).
+---
 
-Behavior: the user lands on Home, not on a club page. A neutral notice (( No tenemos club en Tijuana)) and a fallback offers to search for the closest club by manual ZIP entry, or browse the full club list. The system does not auto-pick a far club.
+## 6. Matriz de edge cases y estados condicionales
 
+| Condición | Disparador | Comportamiento de la UI | Mensaje |
+|---|---|---|---|
+| Estado vacío (sin clases válidas) | Todas las clases contraindicadas | Bloque 3 muestra Personal Training como alternativa | "Tu Asesor define el detalle en la visita." |
+| Queda exactamente 1 clase viable | Filtros dejan 1 clase | Card única + Personal Training como segundo slot | "Esta clase encaja contigo; tu Asesor complementa el resto en la visita." |
+| Error de servidor / timeout LLM | 5xx o latencia alta | Render con fallback seguro; opción de reintento | "No pudimos generar tu experiencia. Reintentar." |
+| JSON malformado del LLM | Parse falla | Página renderiza secciones hardcodeadas; arrays vacíos | — (silencioso) |
+| Texto extremadamente largo | Nombre/club muy largos | Wrap + `text-overflow: ellipsis` en chips | — |
+| Conexión lenta | Latencia alta | Skeleton en `loading` + spinner; sin bloqueo | — |
+| Fase `loading` (llamada LLM) — NFR | Siempre | Skeleton inmediato (0s); mensaje "Estamos armando tu experiencia…" a los ~5s; timeout con reintento a los ~15s (fallback Rule 39 si reintento falla) | "Esto está tomando más de lo normal. Reintentar." |
+| Error de red en `contact_capture`/`schedule` | Falla el submit | Datos retenidos en cliente; botón pasa a "Reintentar" sin perder lo escrito; tras 2 fallos, ofrece WhatsApp/BES como canal alterno | "No pudimos enviar tus datos. Reintentar." |
+| Sin cobertura de club cerca | CP/zona sin club | Muestra otros clubes + nota TooFar | "El club más cercano está a {distancia}." |
+| Embarazo / posparto / lesión / bariátrica | Q12/Q12b/Q17 | Filtro duro de clases + mensaje de seguridad | Copy contextual de seguridad (§4.3) |
+| FitKidz sin nombres de clase (10 clubes) | Estado B | Sección roja genérica, sin chips | "Tu Asesor te compartirá las actividades para tus hijos." |
+| Abandono del cuestionario | Cierra antes de Q19 | Se registra la última pregunta vista | — (evento analítico) |
 
-##### - SEPOMEX autocomplete service unavailable
+> Revisado con QA en fase de diseño: **`[POR DEFINIR — agendar revisión con QA]`**.
 
-Trigger: the SEPOMEX endpoint is down or the user's network blocks it.
+---
 
-Behavior: Q16 falls back to a free-text input with looser validation. The user can submit a neighborhood or city name typed by hand. The system later normalizes the input server-side.
+### 6.1 Geolocalización denegada o no disponible
 
+Disparador: el navegador deniega el aviso de permiso de geolocalización, o el usuario está en un dispositivo o red que no devuelve una coordenada.
 
-##### - Form validation errors Behavior:
+Comportamiento: el sistema no vuelve a preguntar repetidamente. El usuario aterriza en Home con el flujo (Tu Club ideal) abierto en modo captura (entrada manual de Q15+ Q16). Un aviso no intrusivo explica que
 
-- Errors appear inline immediately under the offending field, in Spanish (Mexico), with the same tone and typography as the rest of the site.
-- No error blocks the user from editing other fields.
-- On submission of a form with errors, the page scrolls to the first error and places focus on it for keyboard and screen-reader users.
+el usuario puede ingresar su ubicación manualmente o explorar la lista completa de clubes en .
 
-##### - User abandons the questionnaire mid-flow
+### 6.2 La búsqueda infiere una ubicación sin club
 
-Behavior: partial questionnaire state is preserved in
+**Disparador:** el usuario busca con una ubicación donde no existe club Sports World (p. ej. «gimnasio en Tijuana»).
 
-after the user has explicitly
+**Comportamiento:** el usuario aterriza en Home, no en una página de club. Un aviso neutro («No tenemos club en Tijuana») acompaña dos alternativas: buscar el club más cercano capturando CP manualmente, o explorar la lista completa de clubes. El sistema no auto-selecciona un club lejano.
 
-accepted the privacy notice (Rule 36). When the user returns, the questionnaire offers to resume from the last answered question. If the user has not accepted the privacy notice, no state is preserved.
+### 6.3 SEPOMEX (autocompletado de CP) no disponible
 
+Disparador: el endpoint de SEPOMEX está caído o la red del usuario lo bloquea.
 
-##### - Health disclaimer rejected
+Comportamiento: Q16 recurre a un campo de texto libre con validación más laxa. El usuario puede enviar un nombre de colonia o ciudad escrito a mano. El sistema normaliza después la entrada del lado del servidor.
 
-Trigger: in the (Bajar de peso) flow, the user is shown the health-disclaimer modal and declines.
+### 6.4 Errores de validación de formularios
 
-Behavior: the user does not receive the personalized weight-loss plan. They receive a non-clinical generic experience instead (names the three blocks generically, without intensities, durations or medical content; the Asesor validates in the visit), with a clear explanation that personalized recommendations require accepting the disclaimer. No data is captured beyond what the user has already entered.
+- Los errores aparecen en línea inmediatamente debajo del campo afectado, en español (México), con el mismo tono y tipografía que el resto del sitio.
+- Ningún error impide al usuario editar otros campos.
+- Al enviar un formulario con errores, la página se desplaza hasta el primer error y coloca el foco en él para usuarios de teclado y de lector de pantalla.
 
+### 6.5 Abandono del cuestionario a medio flujo
 
-##### - BES asked an out-of-scope question
+Comportamiento: el estado parcial del cuestionario se conserva en
 
-Trigger: the user asks BES for medical diagnosis, billing changes that require human handling, or a service the site does not offer.
+después de que el usuario haya aceptado
 
-Behavior: BES redirects to the relevant hub or offers (Hablar con un asesor humano ). It never fabricates an answer. Out-of-scope categories include deep health questions, account-level financial actions, and any commitment about future pricing or promotions.
+explícitamente el aviso de privacidad (Rule 36). Cuando el usuario regresa, el cuestionario ofrece retomar desde la última pregunta respondida. Si el usuario no ha aceptado el aviso de privacidad, no se conserva ningún estado.
 
+### 6.6 Aviso de salud rechazado
 
-##### - Club catalog or booking API unavailable
+Disparador: en el flujo (Bajar de peso), se muestra al usuario el modal del aviso de salud (health disclaimer) y este lo rechaza.
 
-Trigger: the upstream booking API is down, or the club-catalog endpoint times out.
+Comportamiento: el usuario no recibe el plan personalizado de pérdida de peso. En su lugar recibe una experiencia genérica no clínica (nombra los tres bloques de forma genérica, sin intensidades, duraciones ni contenido médico; el Asesor valida en la visita), con una explicación clara de que las recomendaciones personalizadas requieren aceptar el aviso. No se capturan datos más allá de los que el usuario ya haya ingresado.
 
+### 6.7 BES recibe una pregunta fuera de alcance
 
-##### Behavior:
+Disparador: el usuario pide a BES un diagnóstico médico, cambios de facturación que requieren atención humana, o un servicio que el sitio no ofrece.
 
-- Live data per club (Rule 12) - operating hours, phone, email, class catalog, schedule - defaults to the last successfully cached values.
-- A visible notice on the affected pages explains that schedules may be outdated and asks the user to confirm by phone.
-- The (Agenda tu visita guiada) button remains operational but in a degraded mode that captures the lead and contacts the user back manually within one business day (owner: club Asesor/recepción), instead of offering a real-time slot.
+Comportamiento: BES redirige al hub correspondiente u ofrece (Hablar con un asesor humano ). Nunca inventa una respuesta. Las categorías fuera de alcance incluyen preguntas profundas de salud, acciones financieras a nivel de cuenta y cualquier compromiso sobre precios o promociones futuros.
 
-##### - Search query has multiple competing inferences
+### 6.8 API de catálogo o reservas no disponible
 
-Trigger: the user searches (yoga Polanco bajar de peso) (a class+ a location+ a goal).
+Disparador: la API de reservas upstream está caída, o el endpoint del catálogo de clubes excede el tiempo de espera.
 
-Behavior: see Rule 17. Q4 (goal) wins over Q16 (location) wins over the class-driven goal pre-mark. For this example, the user lands on the (Bajar de peso) hub with Q16 pre-filled to (Polanco). The class-driven goal pre-mark is not applied (goal-driven landing overrides class-driven landing).
+- Los datos en vivo por club (Rule 12) - horarios de operación, teléfono, correo electrónico, catálogo de clases, horario - recurren por defecto a los últimos valores correctamente almacenados en caché.
+- Un aviso visible en las páginas afectadas explica que los horarios pueden estar desactualizados y pide al usuario confirmar por teléfono.
+- El botón (Agenda tu visita guiada) permanece operativo pero en un modo degradado que captura el lead y contacta de vuelta al usuario manualmente dentro de un día hábil (responsable: Asesor/recepción del club), en lugar de ofrecer un horario en tiempo real.
 
+### 6.9 Búsqueda con inferencias en conflicto
 
-##### - Stale plan returning user
+Disparador: el usuario busca (yoga Polanco bajar de peso) (una clase+ una ubicación+ un objetivo).
 
-Covered by Rule 34. After 60 days, the user is shown a non-blocking refresh prompt.
+Comportamiento: ver Rule 17. Q4 (objetivo) gana sobre Q16 (ubicación), que gana sobre el pre-marcado de objetivo derivado de clase. Para este ejemplo, el usuario aterriza en el hub de (Bajar de peso) con Q16 pre-llenada con (Polanco). El pre-marcado de objetivo derivado de clase no se aplica (el aterrizaje guiado por objetivo prevalece sobre el aterrizaje guiado por clase).
 
+### 6.10 Usuario recurrente con experiencia obsoleta
 
-##### - JavaScript disabled or older browser
+Cubierto por Rule 34. Después de 60 días, se muestra al usuario un aviso de actualización no bloqueante.
 
-Behavior: the site degrades gracefully. Server-rendered content is fully readable. The drawer becomes a static link list. The questionnaire and BES are unavailable in their interactive form, but their entry points show a graceful notice and direct the user to (Agenda tu visita guiada),
+### 6.11 JavaScript desactivado o navegador antiguo
 
-which works server-side. The alternative.
+Comportamiento: el sitio se degrada con elegancia. El contenido renderizado en servidor es totalmente legible. El drawer se convierte en una lista estática de enlaces. El cuestionario y BES no están disponibles en su forma interactiva, pero sus puntos de entrada muestran un aviso apropiado y dirigen al usuario a (Agenda tu visita guiada),
 
-fallback URL provides a server-rendered chat-like
+que funciona del lado del servidor. La alternativa.
 
+La URL de respaldo (fallback) proporciona una interfaz tipo chat renderizada en servidor
 
-##### - Slow connection or data-saver mode
+### 6.12 Conexión lenta o ahorro de datos
 
-Behavior: hero videos use a poster image fallback. Below-the-fold images use •
+Comportamiento: los videos del hero usan una imagen poster como respaldo. Las imágenes below-the-fold usan •
 
-The site uses progressive enhancement so that the first meaningful paint is text and image, not a
+El sitio usa mejora progresiva (progressive enhancement) para que el primer renderizado significativo (first meaningful paint) sea texto e imagen, no un
 
-blocking video. Animation respects the media query.
+video bloqueante. La animación respeta la media query.
 
+### 6.13 Listas vacías de amenidades o clubes
 
-##### - Empty result set on amenity or club lists
+Disparador: el usuario filtra la amenidad X por la ciudad Y, y ningún club de la ciudad Y tiene la amenidad X.
 
-Trigger: the user filters amenity X by city Y, and no club in city Y has amenity X.
+Comportamiento: el estado vacío no es silencioso. Un mensaje breve explica que la combinación no tiene coincidencias y ofrece dos opciones: (a) el club más cercano que tiene la amenidad, sin importar la ciudad, y (b) la amenidad más cercana a la ciudad del usuario, sin importar el club.
 
-Behavior: the empty state is not silent. A short message explains that the combination has no match, and offers two options: (a) the closest club that has the amenity, regardless of city, and (b) the closest amenity to the user's city, regardless of club.
+### 6.14 Preferencia acuática pero el club ideal no tiene alberca
 
+Disparador: Q6 = En la alberca (o Ambas con preferencia acuática) pero el club ideal resuelto no tiene alberca. Comportamiento: el Bloque 1 no se suprime en este club; el sistema mantiene el Bloque 1 en ON y presenta el Bloque 2 con máquinas en piso, con una nota suave - "Tu club más cercano no tiene alberca; te armamos el plan en piso y te marcamos el club con alberca más cercano". El panel de otros clubes (Rule 43) destaca el club más cercano con alberca. Nunca se renderiza un plan acuático para un club sin alberca.
 
-##### - Aquatic preference but the ideal club has no pool
+### 6.15 Q12 suprime Bloque 1 y Bloque 2 a la vez
 
-Trigger: Q6 = En la alberca (or Ambas with aquatic preference) but the resolved ideal club has no pool. Behavior: Block 1 is not suppressed in this club; the system keeps Block 1 ON and presents Block 2 on dry-land machines, with a soft note - "Tu club más cercano no tiene alberca; te armamos el plan en piso y te marcamos el club con alberca más cercano". The other-clubs panel (Rule 43) highlights the nearest club with a pool. Never render an aquatic plan for a club without a pool.
+Disparador: las selecciones de Q12 constituyen una contraindicación absoluta para el subgrupo de pesas y una condición cardiovascular no estabilizada sin autorización médica, por lo que block_1_on y block_2_on son ambos false. Comportamiento: si block_3_on es true, se renderiza únicamente el Bloque 3, con una nota YMYL que recomienda autorización médica antes de pesas o cardio. Si el Bloque 3 también es false, se sigue el caso de todos los bloques suprimidos descrito abajo. Nunca se habilita automáticamente un bloque suprimido.
 
+### 6.16 Reemplazo de clase fuera de compatibilidad Q4
 
-##### - Q12 suppresses both Block 1 and Block 2
+Disparador: en el panel de reemplazo de Rule 41 el usuario elige una clase que no está en el conjunto compatible con Q4. Comportamiento: la tarjeta renderiza la clase elegida con la nota suave - "Esta clase no es la mejor opción para tu objetivo de [Q4], pero está disponible en tu club". El conector del LLM se regenera para esa única tarjeta sin afirmar una coincidencia con Q4. La otra tarjeta top no se regenera. El override persiste según Rule 41.
 
-Trigger: Q12 selections constitute an absolute contraindication for the pesas subgroup and an unstabilized cardiovascular condition without clearance, so block_1_on and block_2_on are both false. Behavior: if block_3_on is true, render Block 3 only, with a YMYL note recommending medical clearance before pesas or cardio. If Block 3 is also false, follow the all-blocks-suppressed case below. Never auto-enable a suppressed block.
+### 6.17 Cambio de club sin set viable de Bloque 3
 
+Disparador: el usuario cambia de club mediante Rule 43 y el catálogo del nuevo club no puede producir un conjunto viable para el Bloque 3 dentro de las ventanas de Q7 del usuario. Comportamiento: el sistema muestra la advertencia suave - "En este club no programamos [class names] en tus horarios. Aquí están las clases que sí encajan" - ofreciendo las alternativas más cercanas, y permite al usuario aceptarlas o regresar al club anterior. Los Bloques 1 y 2 no se reevalúan (Rule 43).
 
-##### - User selects a replacement class outside Q4 compatibility
+### 6.18 Los tres bloques suprimidos
 
-Trigger: in the Rule 41 replacement panel the user picks a class not in the Q4-compatible set. Behavior: the card renders the chosen class with the soft note - "Esta clase no es la mejor opción para tu objetivo de [Q4], pero está disponible en tu club". The LLM connector is regenerated for that single card without asserting a Q4 match. The other top card is not regenerated. The override persists per Rule 41.
+Disparador: block_1_on, block_2_on y block_3_on son todos false (Rule 39). Comportamiento: el sistema no renderiza un plan vacío; lanza un error controlado y renderiza una tarjeta de handoff a un asesor humano que invita al usuario a Agendar visita guiada y hablar con un asesor que construirá un plan supervisado. Las respuestas del cuestionario se conservan y se adjuntan al lead. Este es el único caso en el que la página de Experiencia Ideal no renderiza ningún bloque del plan.
 
+---
 
-##### - Club change yields no viable Block 3 set
+## 7. Sistema de diseño, tokens y redacción
 
-Trigger: the user changes club via Rule 43 and the new club's catalog cannot produce a viable Block 3 set in the user's Q7 windows. Behavior: the system displays the soft warning - "En este club no programamos [class names] en tus horarios. Aquí están las clases que sí encajan" - offering the closest alternatives, and lets the user accept them or return to the previous club. Blocks 1 and 2 are not re-evaluated (Rule 43).
+> **Alcance (propiedad del diseño).** Esta sección define **restricciones** (tokens de marca + mínimos de accesibilidad) y los **lineamientos de estilo premium**, no el diseño gráfico final. La creación de las opciones visuales (layouts a alta fidelidad, componentes, retícula, fotografía, micro-interacciones) es **entregable del equipo de desarrollo/diseño** (Anexo Dos I.3.a). Los **lineamientos de estilo premium** —la vara de aprobación— viven en `DESIGN.md`. Todo lo "visual" que aparezca en este spec (arquitectura visual por pantalla, Apéndice F HTML/CSS) es **referencia ilustrativa no vinculante** derivada del demo.
 
+- **Guía de estilo y lineamientos premium:** ver `DESIGN.md` (alcance, lineamientos de estilo premium, tokens + reglas para agentes de IA).
+- **Tokens (DTCG/JSON):** paleta de los **activos de marca del cliente** (no inventada). Son restricciones, no propuestas de diseño:
 
-##### - All three plan blocks suppressed
+| Rol | Token | Valor |
+|---|---|---|
+| Acción / marca | `color.brand.primary` | `#E6282A` |
+| Tinta (texto) | `color.text.ink` | `#1D1D1B` |
+| Texto secundario | `color.text.muted` | `#6B6B68` |
+| Texto deshabilitado | `color.text.disabled` | `#A8A8A6` |
+| Borde | `color.border.default` | `#E5E5E3` |
+| Superficie | `color.surface.base` | `#F5F5F4` |
+| Bloque 01 (pesas) | `color.block.strength` | `#EEF5FF` |
+| Bloque 02 (cardio) | `color.block.cardio` | `#EDF8F1` |
+| Bloque 03 (clases) | `color.block.classes` | `#F3F4F6` |
+| Banner CTA | `color.cta.bannerBg` / `color.cta.bannerBorder` | `#FFF4F4` / `#F3B9BC` |
+| Seguridad (YMYL) | `color.safety.bg` | `#FFF6E7` |
 
-Trigger: block_1_on, block_2_on and block_3_on are all false (Rule 39). Behavior: the system does not render an empty plan; it raises a controlled error and renders a human-asesor handoff card inviting the user to Agendar visita guiada and talk to an asesor who will build a supervised plan. The questionnaire answers are preserved and attached to the lead. This is the only case in which the Experiencia Ideal page renders no plan blocks.
+- **Componentes/patrones reutilizados:** tarjeta de bloque, tarjeta resumen, chip/pill, banner CTA, sección de seguridad, campo con validación inline, barra de progreso.
 
+---
 
-### Appendix A - Privacy & Data Handling
+### 7.1 Marca y posicionamiento editorial (Rule 8)
 
+Rule 8 - Posicionamiento de marca
 
-##### Rule 36 - User data and privacy
+Ver §1.4, Posicionamiento de marca. La marca del sitio es **fitness premium**
 
-The site captures personal data at four moments: questionnaire, plan-delivery sign-up, visit booking, and BES conversation.
+La submarca FitKidz es **fitness familiar premium** (Premium
 
-- At every capture point, the user must see the privacy notice and give explicit consent before any data is stored. Compliance with the Mexican LFPDPPP (Ley Federal de Protección de Datos Personales en Posesión de los Particulares) is mandatory.
-- Data is stored in the client's system, not in separate web-side systems.
-- Health data (weight, height, medical conditions, medication use) requires additional, specific consent. **Momento de UI (audit L2):** el consentimiento específico de datos de salud se captura como checkbox obligatorio EN la pantalla de Q12, ANTES de que el usuario pueda responder Q12/Q12b/Q17/Q18 — no después. El health-disclaimer modal pre-resultado es adicional, no sustituto.
-- WhatsApp reminder consent (Rule 3.2) is captured separately from the general privacy consent, with explicit opt-in.
-- The user can request deletion of their data at any time, and the request is honored within the timeframes set by the applicable regulation.
-Contact-capture data (LFPDPPP). The contact-capture step (Rule 32b) collects apellido, número de celular and correo electrónico. Purpose limitation: these data are used únicamente to coordinate the visita guiada (scheduling and club details) and are not shared with third parties, consistent with the on-screen disclaimer "Tus datos se usan únicamente para coordinar tu visita guiada. No los compartimos con terceros." They are stored as result.contact and transferred to CRM under the same consent basis as the questionnaire answers.
+family fitness). El encuadre familiar aplica solo en las páginas de FitKidz.
 
-Health-related data. Q12, Q12b and Q17 (medical conditions, pregnancy/postpartum, weight-loss treatments) are sensitive personal data under LFPDPPP. They drive the contraindications hard filter (Rule 14b) and require explicit consent; they are used only to exclude contraindicated group classes and to brief the asesor, never to diagnose. The asesor validates with clinical criterion in the visit.
+### 7.2 Reglas editoriales para todo el copy (Rule 9)
 
+Las siguientes reglas aplican a todo el copy del sitio:
 
-### Appendix B - Out-of-Scope Pages
+- Sin signos de exclamación. Ni siquiera en CTAs.
+- Sin mayúsculas sostenidas de estilo marketing. Las mayúsculas solo se permiten en logotipos, siglas (BES, GLP-1) o la inicial de nombres propios.
+- Sin emojis.
+- Sin anglicismos cuando existe la palabra en español: membresía, no membership; asesor, no coach o advisor (la palabra «coach» solo puede aparecer dentro de nombres propios de clases del catálogo).
+- Concordancia de género: cuando Q2 = Mujer, todo el copy dirigido a la usuaria usa formas femeninas (Q3, Q13, Q14 y el resultado).
 
+---
 
-##### Rule 37 - Pages explicitly out of scope
+## 8. Accesibilidad (WCAG 2.2 AA)
 
-To prevent confusion, the following pages do not exist on the site and are explicitly out of scope:
+> Estándar del proyecto: **WCAG 2.2 AA** (gate axe-core bloqueante), mapeo preventivo. Nota: la **EAA es legislación de la UE**; Sports World opera solo en México, así que el marco aplicable es WCAG 2.2 AA + riesgo legal local, no la EAA.
 
-- Help Center with article cluster. Operational FAQs (cancel, freeze, switch club) are handled by BES. Articles on exercise or nutrition live in the Journal.
-- A page for each FitKidz activity. All 34 activities live within the FitKidz hub, organized by age range, discipline, and club availability per Rule 30. There is no individual page per activity.
-- A page per trainer. Personal Training has one page, with no individual trainer profiles.
-- Studio Polanco or any other boutique studio as a separate entity. They do not exist as a sub-brand on the site.
-- Online membership checkout. Per Rule 22, the site does not sell memberships
-transactionally; conversion is via .
+### Perceptible
 
+- **Contraste:** validar cada token de texto sobre su fondo ≥ **4.5:1** (texto normal) / **3:1** (grande). Ratios reales medidos del rojo `#E6282A`: 4.47:1 sobre blanco, 4.09:1 sobre `#F5F5F4`, 3.78:1 sobre `#1D1D1B` — los tres **fallan** AA para texto normal. Para texto en rojo usar `#C81E20` (~5.5:1). El blanco sobre rojo solo pasa a ≥18.66px bold (ver tokens DESIGN.md).
+- **No solo color:** el estado "seleccionado" de una opción usa **borde + check**, no solo color. La sección de seguridad usa **icono "!" + texto**, no solo el ámbar.
+- **Alt text:** toda imagen de hub/club lleva `alt` descriptivo (sintaxis: "{tipo} en {club}, {acción}").
 
-### Appendix C - Glossary
+### Operable
 
-The glossary lists every term and code used in this specification.Terms not in this list should not appear in the production site copy or in supporting partner documents without prior addition here.
+- **Tab order** lógico: progreso → opciones → Continuar. Foco visible (`focus-visible` ring de 2px).
+- Ningún control depende solo de gesto; multiselección operable por teclado (Espacio/Enter).
+
+### Comprensible
+
+- `lang="es-MX"` declarado. Mensajes de error en voz activa y específicos ("Ingresa un número de 10 dígitos").
+- Concordancia de género consistente (Q2=Mujer).
+
+### Robusto
+
+- Cambios dinámicos anunciados con `aria-live="polite"` (confirmación de cita, errores de validación). `role="alert"` en errores de envío.
+- Marcado semántico: `<fieldset>/<legend>` por pregunta, `<label>` por campo.
+
+**Checklist por pantalla:** contraste ✔ · alt ✔ · tab order ✔ · foco visible ✔ · idioma ✔ · aria-live ✔ → ejecutar auditoría con plugin antes de front-end.
+
+---
+
+### Piso de accesibilidad por página (Rule 35)
+
+Toda página del sitio cumple WCAG 2.2 AA. En específico:
+
+- Contraste mínimo 4.5:1 en texto de cuerpo y 3:1 en texto grande y componentes de UI.
+- Operación completa por teclado con anillos de foco visibles.
+- Landmarks semánticos de HTML.
+- Etiquetas ARIA en botones de solo ícono.
+- `prefers-reduced-motion` respetado en animaciones.
+- Objetivos táctiles ≥ 44×44 px (Apple HIG) y ≥ 48×48 dp (Material) en móvil.
+- Ninguna interacción depende solo del hover.
+
+---
+
+## 9. Privacidad y manejo de datos (Rule 36)
+
+El sitio captura datos personales en cuatro momentos: cuestionario, registro para la entrega del plan, reserva de visita y conversación con BES.
+
+- En cada punto de captura, el usuario debe ver el aviso de privacidad y dar su consentimiento explícito antes de que se almacene cualquier dato. El cumplimiento de la LFPDPPP mexicana (Ley Federal de Protección de Datos Personales en Posesión de los Particulares) es obligatorio.
+- Los datos se almacenan en el sistema del cliente, no en sistemas web separados.
+- Los datos de salud (peso, estatura, condiciones médicas, uso de medicamentos) requieren un consentimiento adicional y específico. **Momento de UI:** el consentimiento específico de datos de salud se captura como checkbox obligatorio EN la pantalla de Q12, ANTES de que el usuario pueda responder Q12/Q12b/Q17/Q18 — no después. El health-disclaimer modal pre-resultado es adicional, no sustituto.
+- El consentimiento para recordatorios por WhatsApp (Rule 3.2) se captura por separado del consentimiento general de privacidad, con opt-in explícito.
+- El usuario puede solicitar la eliminación de sus datos en cualquier momento, y la solicitud se atiende dentro de los plazos establecidos por la regulación aplicable.
+Datos de captura de contacto (LFPDPPP). El paso de captura de contacto (Rule 32b) recopila apellido, número de celular y correo electrónico. Limitación de finalidad: estos datos se usan únicamente para coordinar la visita guiada (agendamiento y detalles del club) y no se comparten con terceros, en consistencia con el aviso en pantalla "Tus datos se usan únicamente para coordinar tu visita guiada. No los compartimos con terceros." Se almacenan como result.contact y se transfieren al CRM bajo la misma base de consentimiento que las respuestas del cuestionario.
+
+Datos relacionados con la salud. Q12, Q12b y Q17 (condiciones médicas, embarazo/posparto, tratamientos para bajar de peso) son datos personales sensibles conforme a la LFPDPPP. Alimentan el filtro duro de contraindicaciones (Rule 14b) y requieren consentimiento explícito; se usan únicamente para excluir clases grupales contraindicadas y para preparar el briefing del asesor, nunca para diagnosticar. El asesor valida con criterio clínico en la visita.
+
+### Contenido YMYL (Rule 14)
+
+Las siguientes páginas se clasifican como YMYL (Your Money or Your Life — terminología de calidad de búsqueda de Google para contenido que puede afectar la salud o las finanzas del usuario):
+
+- El hub Bajar de peso (página completa).
+- El hub de objetivo Rehabilitación.
+- Los artículos del Diario sobre nutrición, rehabilitación y suplementación.
+
+A todas las páginas YMYL les aplican estos requisitos:
+
+- **Firma profesional visible** — nombre y cédula profesional del médico, nutriólogo o fisioterapeuta que respalda el contenido.
+- **Aviso de salud** — antes de mostrar recomendaciones, el usuario ve un aviso de que la información es orientativa y no sustituye una consulta médica.
+- **Sin promesas numéricas** — el sitio nunca dice "vas a bajar X kilos en Y semanas". Las recomendaciones se presentan por fases, sin prometer un resultado específico.
+
+(Las reglas sobre si pueden mostrarse fotografías del revisor médico son reglas de producción de activos visuales y viven en el brief del socio, sección 6, no aquí.)
+
+---
+
+## 10. Handoff y sincronización
+
+- **Fuente de verdad:** demo `sw_experiencia_ideal_demo_v6_FINAL.jsx` (comportamiento) + este spec (racionalidad) + `DESIGN.md` (tokens). Handoff visual: `[POR DEFINIR — Figma inspect]`.
+- **Activos:** iconos vectoriales (SVG), exportables; logotipo "SPORTS WORLD" (peso 800).
+- **Riesgo de Design Drift mitigado por:** tokens centralizados (`DESIGN.md`) y componentes respaldados por código (el demo es la referencia funcional).
+
+---
+
+### 10.1 Insumos pendientes del cliente
+
+Estas preguntas BLOQUEAN el gate médico (F11) y deben resolverse con Sports World antes de congelar la matriz. Ninguna se resuelve internamente.
+
+| ID | Pregunta | Dato |
+| --- | --- | --- |
+| D1 🔴 | ¿Cuál es la disponibilidad por club de TONE, TAI CHI, AERO DANCE, SENSUAL DANCE, **ALPHA TRAINER** y **SWIM TRAINERS**? (sin columna en la matriz fuente; hoy `rankClasses` las descarta siempre) | ¿O se documentan "en catálogo, sin programación actual"? |
+| D2 🔴 | Sin SWIM TRAINERS, la única acuática programada es AQUA ZUMBA (31 clubes) → el top 2 acuático es imposible. ¿Se programa SWIM TRAINERS o se acepta render de 1 card + PT (edge L8)? | Flujo Q6=alberca |
+| D3 🟠 | 14 clubes CON alberca no ofrecen AQUA ZUMBA (barranca, cumbres, la-rioja, león, metepec, palmas, paseo-interlomas, terraza-coapa, pedregal, san-jerónimo, san-pedro, puebla, bernardo-quintana, culiacán). ¿Programación pendiente o estado esperado? | Edge alberca |
+| D4 🟠 | 5 clubes ofrecen AQUA ZUMBA SIN flag de alberca (amores, antara, anzures, reforma, roma). ¿Flag mal o clase mal asignada? | Contradicción de la fuente |
+| D5 🟡 | 6 columnas no oficiales en la matriz sin destino: BEAT N BIKE (2), INTRINITY (1), BOX 1 (2), INICIACIÓN TKD (3), ECROSS (3), FÚTBOL (3). ¿Incorporar con ficha+contraindicaciones o excluir? | Catálogo |
+| D6 🟡 | Confirmar 3 mapeos SUPUESTOS: AE YOGA→AEROYOGA (2 clubes) · HATHA YOGA 90→HATHA YOGA (4) · VINYASA YOGA 90→VINYASA YOGA (6) | Catálogo |
+| D7 🟠 | FitKidz: la matriz trae 21 actividades infantiles; **el contrato firma 34** (Anexo Dos I.1, nivel 06) → el número correcto es 34; el cliente debe completar las 13 columnas faltantes de la matriz | Rule 11 / Rule 30 |
+| D8 🟠 | 4 de los 10 amenity hubs sin fuente de datos: sauna/vapor, regaderas/lockers, café, estacionamiento. ¿De dónde salen? | 155 páginas firmadas |
+| F10 🟡 | kids_classes de los 10 clubes State-B (pregunta rastreada con Gabriela) | FitKidz Estado B |
+| F14 ✅ | **Resuelto por contrato** (Anexo Dos I.2.h): schema de páginas de clase = **Course** (Rule 13 actualizada); Event por sesión queda como complemento opcional de ingeniería | SEO |
+
+---
+
+## 11. Criterios de aceptación
+
+- [ ] Cada hub renderiza H1 con keyword, FAQ con datos estructurados, canonical y metadatos válidos.
+- [ ] Core Web Vitals en verde en móvil (LCP < 2.5 s, CLS < 0.1, INP < 200 ms).
+- [ ] El cuestionario avanza una pregunta por pantalla; Q11/Q12b/Q14b aparecen solo con su condición.
+- [ ] No se puede llegar a `schedule` sin los 3 datos de contacto válidos.
+- [ ] El Bloque 3 nunca muestra una clase contraindicada según Q12/Q12b/Q17.
+- [ ] Si el LLM falla, la página de resultado renderiza con fallback (sin pantalla en blanco).
+- [ ] Todos los textos de error son inline, en voz activa y específicos.
+- [ ] Contraste de todos los pares texto/fondo ≥ 4.5:1 (o 3:1 grande), validado por linter.
+- [ ] Cambios dinámicos anunciados a lectores de pantalla (aria-live).
+- [ ] `lang="es-MX"` declarado en todas las páginas.
+
+---
+
+---
+
+## 12. Métricas y experimentación
+
+### 12.1 KPIs
+
+| Métrica | Punto de partida | Meta (3 meses) | Tipo |
+|---|---|---|---|
+| **Tráfico orgánico mensual** | **80,000 visitas** | **160,000 (2x)** | KPI principal |
+| **Leads cualificados / mes** | `[SUPUESTO: 1,000]` | **2x** | Secundario |
+| **Tiempo de primera respuesta** (agente de voz) | `[SUPUESTO: horas]` | **< 1 min, 24/7** | Secundario |
+| Tasa de finalización del cuestionario | `[SUPUESTO: 40%]` | `[SUPUESTO: ≥ 55%]` | Diagnóstico |
+| Tasa de agenda (visita guiada) | `[SUPUESTO: 12%]` | `[SUPUESTO: ≥ 20%]` | Conversión |
+
+> Cifras marcadas `[SUPUESTO]` son de referencia; reemplazar con datos reales de analítica.
+
+### 12.2 Lead scoring y enrutamiento
+
+La lógica de lead scoring y enrutamiento (pesos, umbrales, reglas de CRM/ventas) vive en `anexo-ingenieria-crm.md`; no define comportamiento de UI.
+
+### 12.3 Perfilado progresivo (recomendación)
+
+El cuestionario único es un riesgo de abandono. **Instrumentar drop-off por pregunta**; si Q1→Q19 cae por debajo de `[SUPUESTO: 50%]`, dividir en **2 etapas**: (1) mínimo viable (nombre + objetivo + zona) para dar una recomendación preliminar, (2) detalle antes de agendar.
+
+### 12.4 A/B testing
+
+**No priorizado por ahora** (decisión de negocio). Cuando se active, marcar como variables: titular del hub, copy del CTA («Diseña tu experiencia» vs «Agenda tu visita guiada» como CTA primario del hub), e imagen hero. Construir estos componentes desde ya como **slots intercambiables** para no rehacer.
+
+---
+
+---
+
+## Apéndice B — Páginas explícitamente fuera de alcance (Rule 37)
+
+Para evitar confusiones, las siguientes páginas no existen en el sitio y están explícitamente fuera de alcance:
+
+- Centro de ayuda con clúster de artículos. Las FAQs operativas (cancelar, congelar, cambiar de club) las maneja BES. Los artículos sobre ejercicio o nutrición viven en el Journal.
+- Una página para cada actividad de FitKidz. Las 34 actividades viven dentro del hub de FitKidz, organizadas por rango de edad, disciplina y disponibilidad por club según Rule 30. No hay una página individual por actividad.
+- Una página por entrenador. Personal Training tiene una sola página, sin perfiles individuales de entrenadores.
+- Studio Polanco ni ningún otro estudio boutique como entidad separada. No existen como sub-marca en el sitio.
+- Checkout de membresías en línea. Según Rule 22, el sitio no vende membresías
+de forma transaccional; la conversión es vía .
+
+## Apéndice C — Glosario
+
+El glosario lista cada término y código usados en esta especificación. Los términos que no estén en esta lista no deben aparecer en el copy del sitio de producción ni en documentos de apoyo de partners sin antes agregarse aquí.
 
 | Término | Significado |
 | --- | --- |
-| Agenda tu visita guiada | Book your guided visit. The site's primary conversion action (header version too). |
-| BES | The Sports World conversational AI assistant. Full user-facing name: Pregúntale a BES — tu asistente Sports World. Text-first, voice optional. Global floating widget (Rule 3) with /bes as a fallback URL. |
-| Bajar de peso (page) | Weight-loss page. Activates the weight-loss optionals Q17–Q19 (Rule 19). Classified as YMYL (Rule 14). |
-| Brand / Premium fitness | The site brand: Premium fitness. The FitKidz sub-brand: Premium family fitness. See Part 1. |
-| CIUDAD-UNO | City where Sports World has only one club. |
-| CIUDAD-POCOS | City where Sports World has 2 or 3 clubs. |
-| CIUDAD-ZMVM | Mexico City Metropolitan Area (CDMX and Estado de México), where Sports World has 32 clubs (more than 3). Subject to special geographic rules in Rule 24. |
-| Classic navigation | Navigating the site through menus (header, Tu Sports World drawer, internal links), without the questionnaire or BES. |
-| Contextual menu | Set of buttons that appear as primary actions inside a page's body content, not in the header. Changes by page and user state (Rule 25). |
-| Course (schema) | Schema.org markup type used on every adult class page. |
-| Cédula profesional | Mexican professional license number. Required visible on YMYL pages for the medical reviewer (Rule 14). |
-| Diseña tu experiencia | Design your experience. The 15-question base questionnaire (18 with the weight-loss optionals) that captures user information to build a personalized experience. |
-| External-search inference | When the system deduces information about the user (goal, location) from the words typed into the search engine before reaching the site. |
-| FAQPage | Schema.org structured-data markup for pages with FAQs. |
-| FitKidz | Sports World's children's program with 34 activities organized by age and discipline. Not every club has FitKidz. |
-| GLP-1 | Family of medications for diabetes and weight loss (Ozempic, Wegovy, Mounjaro, and similar). Sensitive information; requires special handling. |
-| HealthClub (schema) | Schema.org markup type used on every club page, alongside OpeningHoursSpecification and GeoCoordinates. |
-| Hover | Placing the cursor over an element without clicking. Desktop only — does not apply on mobile. |
-| Hub | Top-level page on a topic that aggregates related content (memberships, FitKidz, amenity hubs, goal hubs). |
-| Club Ideal | The club identified by the system as the best fit for the user (by explicit pick, external-search identification, or Q15/Q16). |
-| Inferred location | Location the system deduces without the user providing it explicitly, generally from the external search (e.g., Polanco). |
-| LFPDPPP | Ley Federal de Protección de Datos Personales en Posesión de los Particulares — Mexico's federal personal-data protection law. Mandatory compliance for any personal-data capture (Rule 36). |
-| LocalBusiness | Schema.org markup type for physical businesses, used on each club page so clubs surface correctly in search and Maps. |
-| MedicalWebPage | Schema.org markup type for medical-content pages; used on the Bajar de peso hub to indicate professional sign-off (Rule 13). |
-| Memberships (no checkout) | Per Rule 22, membership pages have no online checkout; conversion is via Agenda tu visita guiada. |
-| Mobile-first | Methodology declared in Part 2. Mandatory across all design and engineering decisions. |
-| Movement type | In v4.1 this was P4 with six categories; in v4.2 movement preference is captured via Q5 (pace) and Q6 (setting), with detailed style in the individual-training subgroups (Part 3). |
-| Q (questionnaire questions) | Questions Q1–Q19. Q4 is goal; Q16 is location. |
-| Weight-loss optionals | Q17, Q18, Q19. Shown on the weight-loss path (Rule 19); replace the legacy P10-WL, P11-WL, P12-WL. |
-| PAR-Q | Standard medical questionnaire used before starting physical activity. Q12 is a friendly, simplified version. |
-| Pill button | Button with moderately rounded corners (capsule-style); the premium-design standard for the conversion action. |
-| Pre-fill | When a questionnaire question appears with a suggested answer based on info the system already has. The user can confirm or change. |
-| Brand positioning | The site's brand positioning. See Part 1. |
-| Premium family fitness | The FitKidz sub-brand positioning. Family framing is exclusive to FitKidz pages. |
-| Pregúntale a BES | Ask BES. The header entry point to the BES global widget. |
-| Questionnaire complete, inside the flow | The user completed the questionnaire and is currently navigating within the active flow of their personalized experience. |
-| Questionnaire complete, outside the flow | The user completed the questionnaire previously but is now navigating freely, no longer inside the active flow. |
-| Schema markup | Markup embedded in web-page code that helps search engines understand the content (Rule 13). |
-| SEPOMEX | Mexico's postal service. SEPOMEX autocomplete lets the user type a ZIP code and receive the corresponding neighborhood, city, and state. |
-| Stale plan | A questionnaire-complete experience generated more than 60 days ago. Triggers a non-blocking refresh prompt (Rule 34). |
-| Sticky | Behavior of an element pinned to a fixed screen position when scrolling. The header is sticky. |
-| Tag | Label attached to a Journal article to associate it with relevant pages (Rule 29). |
-| Tap | Touching an element on a touch screen; the mobile equivalent of clicking. |
-| Tu Club ideal | Button and concept that helps the user identify the best-fit Sports World club (Rule 23). |
-| Tu Sports World | Name of the side drawer containing the 8 main hubs of classic navigation (Rule 4). |
-| WCAG 2.2 AA | Web Content Accessibility Guidelines, version 2.2, level AA. Mandatory for every page (Rule 35). |
-| Bajar de peso questionnaire variant | Activates when Q4 = Bajar de peso. 18 questions total (base 15 + weight-loss optionals Q17–Q19); includes a health-disclaimer modal before the result. |
-| YMYL | Your Money or Your Life — Google search-quality terminology for content that could affect health or finances. The Bajar de peso hub, rehabilitation hub, and some Journal articles are YMYL (Rule 14). |
-| ZMVM | Zona Metropolitana del Valle de México (CDMX + conurbated Estado de México municipalities). Sports World has 32 clubs in this region. |
-| LISS / MICT / HIIT / SIT | Aerobic individual-training subgroups (Low-Intensity Steady State / Moderate-Intensity Continuous / High-Intensity Interval / Sprint Interval Training). See Part 3. |
-| Individual-training subgroup | A subpage under entrenamiento-con-pesas-individual (Fuerza, Hipertrofia, Potencia, Resistencia muscular) or entrenamiento-aerobico-individual (LISS, MICT, HIIT, SIT). See Part 3 and Rule 38. |
-| Gender concordance | (Q3, Q13, Q14). If Q2 = Mujer, render feminine forms; otherwise the masculine default applies. |
-| Q16 location (OR) | At least one of Código postal or Colonia is required; supplying both is acceptable. |
-| Estética corporal hub | Goal hub renamed from Tonificar (Rule 20). |
+| Agenda tu visita guiada | Reserva tu visita guiada. La acción de conversión principal del sitio (también la versión del header). |
+| BES | El asistente conversacional de IA de Sports World. Nombre completo de cara al usuario: Pregúntale a BES — tu asistente Sports World. Primero texto, voz opcional. Widget flotante global (Rule 3) con /bes como URL de respaldo. |
+| Bajar de peso (page) | Página de pérdida de peso. Activa las opcionales de pérdida de peso Q17–Q19 (Rule 19). Clasificada como YMYL (Rule 14). |
+| Brand / Premium fitness | La marca del sitio: Premium fitness. La sub-marca FitKidz: Premium family fitness. Ver §1.4. |
+| CIUDAD-UNO | Ciudad donde Sports World tiene un solo club. |
+| CIUDAD-POCOS | Ciudad donde Sports World tiene 2 o 3 clubes. |
+| CIUDAD-ZMVM | Zona Metropolitana de la Ciudad de México (CDMX y Estado de México), donde Sports World tiene 32 clubes (más de 3). Sujeta a reglas geográficas especiales en Rule 24. |
+| Classic navigation | Navegar el sitio mediante menús (header, drawer Tu Sports World, enlaces internos), sin el cuestionario ni BES. |
+| Contextual menu | Conjunto de botones que aparecen como acciones primarias dentro del contenido del cuerpo de una página, no en el header. Cambia según la página y el estado del usuario (Rule 25). |
+| Course (schema) | Tipo de marcado de Schema.org usado en cada página de clase para adultos. |
+| Cédula profesional | Número de cédula profesional mexicana. Debe estar visible en las páginas YMYL para el revisor médico (Rule 14). |
+| Diseña tu experiencia | Diseña tu experiencia. El cuestionario base de 15 preguntas (18 con las opcionales de pérdida de peso) que captura información del usuario para construir una experiencia personalizada. |
+| External-search inference | Cuando el sistema deduce información sobre el usuario (objetivo, ubicación) a partir de las palabras escritas en el buscador antes de llegar al sitio. |
+| FAQPage | Marcado de datos estructurados de Schema.org para páginas con FAQs. |
+| FitKidz | El programa infantil de Sports World con 34 actividades organizadas por edad y disciplina. No todos los clubes tienen FitKidz. |
+| GLP-1 | Familia de medicamentos para diabetes y pérdida de peso (Ozempic, Wegovy, Mounjaro y similares). Información sensible; requiere manejo especial. |
+| HealthClub (schema) | Tipo de marcado de Schema.org usado en cada página de club, junto con OpeningHoursSpecification y GeoCoordinates. |
+| Hover | Colocar el cursor sobre un elemento sin hacer clic. Solo desktop — no aplica en móvil. |
+| Hub | Página de nivel superior sobre un tema que agrega contenido relacionado (membresías, FitKidz, hubs de amenidades, hubs de objetivos). |
+| Club Ideal | El club identificado por el sistema como el más adecuado para el usuario (por elección explícita, identificación por búsqueda externa, o Q15/Q16). |
+| Inferred location | Ubicación que el sistema deduce sin que el usuario la proporcione explícitamente, generalmente a partir de la búsqueda externa (p. ej., Polanco). |
+| LFPDPPP | Ley Federal de Protección de Datos Personales en Posesión de los Particulares — la ley federal mexicana de protección de datos personales. Cumplimiento obligatorio para cualquier captura de datos personales (Rule 36). |
+| LocalBusiness | Tipo de marcado de Schema.org para negocios físicos, usado en cada página de club para que los clubes aparezcan correctamente en búsqueda y Maps. |
+| MedicalWebPage | Tipo de marcado de Schema.org para páginas de contenido médico; usado en el hub de Bajar de peso para indicar la aprobación profesional (Rule 13). |
+| Memberships (no checkout) | Según Rule 22, las páginas de membresías no tienen checkout en línea; la conversión es vía Agenda tu visita guiada. |
+| Mobile-first | Metodología declarada en §3.9. Obligatoria en todas las decisiones de diseño e ingeniería. |
+| Movement type | En v4.1 esto era P4 con seis categorías; en v4.2 la preferencia de movimiento se captura mediante Q5 (ritmo) y Q6 (entorno), con el estilo detallado en los subgrupos de entrenamiento individual (§3.3). |
+| Q (questionnaire questions) | Preguntas Q1–Q19. Q4 es objetivo; Q16 es ubicación. |
+| Weight-loss optionals | Q17, Q18, Q19. Se muestran en la ruta de pérdida de peso (Rule 19); reemplazan a las legadas P10-WL, P11-WL, P12-WL. |
+| PAR-Q | Cuestionario médico estándar usado antes de iniciar actividad física. Q12 es una versión amigable y simplificada. |
+| Pill button | Botón con esquinas moderadamente redondeadas (estilo cápsula); el estándar de diseño premium para la acción de conversión. |
+| Pre-fill | Cuando una pregunta del cuestionario aparece con una respuesta sugerida basada en información que el sistema ya tiene. El usuario puede confirmar o cambiar. |
+| Brand positioning | El posicionamiento de marca del sitio. Ver §1.4. |
+| Premium family fitness | El posicionamiento de la sub-marca FitKidz. El encuadre familiar es exclusivo de las páginas de FitKidz. |
+| Pregúntale a BES | Pregúntale a BES. El punto de entrada del header al widget global de BES. |
+| Questionnaire complete, inside the flow | El usuario completó el cuestionario y actualmente navega dentro del flujo activo de su experiencia personalizada. |
+| Questionnaire complete, outside the flow | El usuario completó el cuestionario previamente pero ahora navega libremente, ya no dentro del flujo activo. |
+| Schema markup | Marcado incrustado en el código de las páginas web que ayuda a los motores de búsqueda a entender el contenido (Rule 13). |
+| SEPOMEX | El servicio postal de México. El autocompletado SEPOMEX permite al usuario escribir un código postal y recibir la colonia, ciudad y estado correspondientes. |
+| Stale plan | Una experiencia con cuestionario completo generada hace más de 60 días. Dispara un aviso de actualización no bloqueante (Rule 34). |
+| Sticky | Comportamiento de un elemento fijado a una posición fija de la pantalla al hacer scroll. El header es sticky. |
+| Tag | Etiqueta adjunta a un artículo del Journal para asociarlo con páginas relevantes (Rule 29). |
+| Tap | Tocar un elemento en una pantalla táctil; el equivalente móvil de hacer clic. |
+| Tu Club ideal | Botón y concepto que ayuda al usuario a identificar el club de Sports World que mejor le queda (Rule 23). |
+| Tu Sports World | Nombre del drawer lateral que contiene los 8 hubs principales de la navegación clásica (Rule 4). |
+| WCAG 2.2 AA | Web Content Accessibility Guidelines, versión 2.2, nivel AA. Obligatorio para todas las páginas (Rule 35). |
+| Bajar de peso questionnaire variant | Se activa cuando Q4 = Bajar de peso. 18 preguntas en total (15 base + opcionales de pérdida de peso Q17–Q19); incluye un modal de aviso de salud antes del resultado. |
+| YMYL | Your Money or Your Life — terminología de calidad de búsqueda de Google para contenido que podría afectar la salud o las finanzas. El hub de Bajar de peso, el hub de rehabilitación y algunos artículos del Journal son YMYL (Rule 14). |
+| ZMVM | Zona Metropolitana del Valle de México (CDMX + municipios conurbados del Estado de México). Sports World tiene 32 clubes en esta región. |
+| LISS / MICT / HIIT / SIT | Subgrupos de entrenamiento individual aeróbico (Low-Intensity Steady State / Moderate-Intensity Continuous / High-Intensity Interval / Sprint Interval Training). Ver §3.3. |
+| Individual-training subgroup | Una subpágina bajo entrenamiento-con-pesas-individual (Fuerza, Hipertrofia, Potencia, Resistencia muscular) o entrenamiento-aerobico-individual (LISS, MICT, HIIT, SIT). Ver §3.3 y Rule 38. |
+| Gender concordance | (Q3, Q13, Q14). Si Q2 = Mujer, se renderizan las formas femeninas; de lo contrario aplica el masculino por defecto. |
+| Q16 location (OR) | Se requiere al menos uno de Código postal o Colonia; proporcionar ambos es aceptable. |
+| Estética corporal hub | Hub de objetivo renombrado desde Tonificar (Rule 20). |
 
+## Apéndice D — Referencia de códigos
 
-## Appendix D - Code Reference
+Este apéndice reúne todos los códigos usados en la especificación, en un solo lugar, para consulta rápida.
 
-This appendix collects every code used in the specification, in one place, for quick lookup.
+Tipos de página. 12 en alcance (numerados 1-12), ver Sección 3.1. BES se implementa como un widget global (Rule 3).
 
-Page types. 12 in scope (numbered 1-12), see Section 3.1. BES is implemented as a global widget (Rule 3).
+- Q1 (nombre), Q2 (género), Q3 (emoción), Q4 (objetivo), Q5 (ritmo), Q6 (entorno), Q7 (tiempo), Q8 (días), Q9 (nivel), Q10 (historial de gimnasio), Q11 (duración de la pausa, condicional a Q10), Q12 (médica; embarazo/posparto NO está dentro de Q12 — se captura por separado en Q12b cuando Q2 = Mujer), Q13 (acompañamiento propio, con concordancia de género), Q14 (acompañamiento en la visita, con concordancia de género), Q15 (intención geográfica), Q16 (ubicación, XOR código postal / colonia).
+- Las opcionales de pérdida de peso, visibles cuando Q4 incluye Bajar de peso, agregan Q17 (salud actual), Q18 (datos físicos), Q19 (objetivo de cambio). La serie P legada (P1 a P10) y su variante de pérdida de peso (P10-WL, P11-WL, P12-WL) quedan retiradas permanentemente conforme al principio de inmutabilidad de códigos y no se reasignan.
+Códigosdeclasificacióndeciudad. CIUDAD-1, CIUDAD-POCOS, .Ver Rule 24.
 
+Códigos de tags de artículos. Todos en minúsculas, con guiones. Ver Rule 29 para la lista completa.
 
-##### Questionnaire codes.
+Flags de bloques. block_1_on, block_2_on, block_3_on. Booleanos devueltos por el motor de resultados que controlan el render de los tres bloques de la Experiencia Ideal (Rule 39). No se reasignan.
 
-- Q1 (name), Q2 (gender), Q3 (emotion), Q4 (goal), Q5 (pace), Q6 (setting), Q7 (time), Q8 (days), Q9 (level), Q10 (gym history), Q11 (pause length, conditional on Q10), Q12 (medical; pregnancy/postpartum is NOT inside Q12 — captured separately in Q12b when Q2 = Mujer), Q13 (companion self, gender-concordant), Q14 (companion visit, gender-concordant), Q15 (geography intent), Q16 (location, XOR código postal / colonia).
-- Weight-loss optionals, visible when Q4 includes Bajar de peso, add Q17 (current health), Q18 (physical data), Q19 (change goal). The legacy P-series (P1 to P10) and its weight-loss variant (P10-WL, P11-WL, P12-WL) are retired permanently per the code-immutability principle and are not reassigned.
-Cityclassificationcodes. CIUDAD-1, CIUDAD-POCOS, .See Rule 24.
+IDs de subgrupos de entrenamiento individual. pesas-fuerza, pesas-hipertrofia, pesas-potencia, pesas-resistencia-muscular; aero-liss, aero-mict, aero-hiit, aero-sit. Identificadores estables para los ocho subgrupos de §3.3; las etiquetas de cara al usuario difieren según la presentación del Bloque 1 y el Bloque 2 (§5).
 
-Article tag codes. All lowercase, hyphenated. See Rule 29 for the full list.
+Códigos de razón de supresión. SUP-Q6-ALBERCA, SUP-Q12-CONTRA, SUP-Q13-SOLO, SUP-CARDIO-RESTRICT. Razones legibles por máquina por las que un bloque del plan se establece en OFF o se restringe (Rule 39); se muestran a los asesores, nunca a los usuarios finales.
 
-Block flags. block_1_on, block_2_on, block_3_on. Booleans returned by the result engine controlling render of the three Experiencia Ideal blocks (Rule 39). Not reassigned.
+IDs de slots de tarjetas de clase. top_2, tambien_encajan, resto, beneficios_seleccionados, razon_de_match_id, conector_personal. Particiones de selección del Bloque 3 y slots de LLM por tarjeta (Rules 40 y 41).
 
-Individual-training subgroup IDs. pesas-fuerza, pesas-hipertrofia, pesas-potencia, pesas-resistencia-muscular; aero-liss, aero-mict, aero-hiit, aero-sit. Stable identifiers for the eight subgroups in Part 3; user-facing labels differ per Block 1 and Block 2 presentation (Part 5).
+Sub-códigos condicionales del cuestionario. Q12b (embarazo/posparto, condicional a Q2 = Mujer) y Q14b (hijos menores de 12 años, condicional a Q14 = "Yo y mis hijos" o "La familia completa"). No se reasignan.
 
-Suppression reason codes. SUP-Q6-ALBERCA, SUP-Q12-CONTRA, SUP-Q13-SOLO, SUP-CARDIO-RESTRICT. Machine-readable reasons a plan block is set OFF or restricted (Rule 39); surfaced to asesors, never to end users.
+Claves de condiciones de contraindicación. lesion, cardiovascular, embarazo, posparto, bariatrica. Mapeadas desde Q12, Q12b y Q17; alimentan el filtro duro de Rule 14b.
 
-Class-card slot IDs. top_2, tambien_encajan, resto, beneficios_seleccionados, razon_de_match_id, conector_personal. Block 3 selection partitions and per-card LLM slots (Rules 40 and 41).
+Campos de captura de contacto. result.contact = { lastName, phone, email }. Recolectados en la fase contact_capture (Rule 32b); el teléfono se normaliza a 10 dígitos.
 
-Conditional questionnaire sub-codes. Q12b (pregnancy/postpartum, conditional on Q2 = Mujer) and Q14b (children under 12, conditional on Q14 = "Yo y mis hijos" or "La familia completa"). Not reassigned.
+Fases del flujo. welcome, questionnaire, loading, result, contact_capture, schedule, briefing, error.
 
-Contraindication condition keys. lesion, cardiovascular, embarazo, posparto, bariatrica. Mapped from Q12, Q12b and Q17; drive the Rule 14b hard filter.
+Claves LLM del briefing del Asesor. validation_questions[5], visit_route[4]{title,description}, proposal{main,complement}, closing_priorities[3], closing_script — devueltas por la única llamada al LLM junto con las claves del lado cliente hook, plan_argument, intent_line, infrastructure_argument, class_1_connector, class_2_connector (Apéndice H).
 
-Contact-capture fields. result.contact = { lastName, phone, email }. Collected in the contact_capture phase (Rule 32b); phone normalized to 10 digits.
+Flag de FitKidz. amenidades.includes('FitKidz') booleano por club (40 clubes), separado del catálogo kids_classes; estados de render A/B/C según el Apéndice F.
 
-Flow phases. welcome, questionnaire, loading, result, contact_capture, schedule, briefing, error.
+Reglas. Rule 1 a Rule 43, con sub-reglas 3.1 y 3.2. Todas numeradas globalmente.
 
-Asesor-brief LLM keys. validation_questions[5], visit_route[4]{title,description}, proposal{main,complement}, closing_priorities[3], closing_script — returned by the single LLM call alongside the client keys hook, plan_argument, intent_line, infrastructure_argument, class_1_connector, class_2_connector (Appendix H).
+Principio de inmutabilidad de códigos. Ninguno de los códigos anteriores se reasigna si un elemento se elimina o reemplaza. Los códigos eliminados se retiran permanentemente. Los códigos nuevos se agregan al final de la serie correspondiente.
 
-FitKidz flag. amenidades.includes('FitKidz') boolean per club (40 clubs), separate from the kids_classes catalog; render states A/B/C per Appendix F.
+## Apéndice F — Plantilla de referencia de la página de resultado
 
-Rules. Rule 1 to Rule 43, with sub-rules 3.1 and 3.2. All numbered globally.
+> **Alcance (referencia visual no vinculante).** Este apéndice es una **referencia ilustrativa** de **estructura de contenido, slots y semántica** — **no** es el diseño gráfico prescrito. Crear las opciones de diseño visual (layout a alta fidelidad, componentes, retícula, escala tipográfica, fotografía, micro-interacciones) es **entregable del equipo de diseño/desarrollo** (Anexo Dos I.3.a), guiado por los **lineamientos de estilo premium** de `DESIGN.md`. Lo vinculante aquí es *qué* bloques de contenido existen y *qué* dicen; *cómo* se ven lo diseña el equipo de diseño. El HTML/CSS de abajo es referencia legada del demo.
 
-Code immutability principle. None of the codes above are reassigned if an element is removed or replaced. Removed codes are retired permanently. New codes are added at the end of the relevant series.
+Esta es la forma autoritativa del reporte de Experiencia Ideal renderizado para el usuario del happy path (Sofía: Mujer, Intermedio, Estética corporal, Q6 = Ambas, Q13 = Acompañada, club Polanco). Los tokens de slot entre llaves son placeholders; sus fuentes de datos están documentadas en la matriz experiencia-ideal de la §5. Solo el hook, el argumento del plan, la intent line, el argumento de infraestructura y los conectores por clase son generados por el LLM, cada uno regido por el Apéndice E; todo el demás contenido proviene del backend o de las fichas.
 
-
-### Appendix E - Brand Voice and Tone (contrato)
-
-El Brand Voice Guide completo (vocabularios aprobado/prohibido, 5 reglas de redacción, prohibiciones verbatim del system prompt — incluida "plan" → "Experiencia Ideal" —, hooks por Q3, before/after, reglas de conectores ≤15 palabras, intent-lines ≤18, plan-argument ≤45, infrastructure ≤55) vive en `anexo-contenido-prompts.md` como única copia (audit R10–R11; la duplicación previa causó drift C13). **Contrato que permanece aquí:** las únicas zonas de generación libre del LLM son hook, plan_argument, intent_line, infrastructure_argument y los 2 conectores de clase, cada una con su límite de palabras; todo hecho factual viene del backend/fichas; lint de vocabulario prohibido obligatorio sobre la salida (F9).
-
-### Appendix F - Experiencia Ideal HTML Reference Template
-
-> **Scope (non-binding visual reference).** This appendix is an **illustrative reference** for **content structure, slots and semantics** — it is **not** the prescribed graphic design. Creating the visual design options (hi-fi layout, components, grid, type scale, photography, micro-interactions) is the **design/development team's deliverable** (Anexo Dos I.3.a), guided by the **premium style guidelines** in `DESIGN.md`. What is binding here is *which* content blocks exist and *what* they say; *how* they look is the design team's to design. The HTML/CSS below is legacy reference from the demo.
-
-This is the authoritative **content shape** of the rendered Experiencia Ideal report for the happy-path user (Sofía: Mujer, Intermedio, Estética corporal, Q6 = Ambas, Q13 = Acompañada, club Polanco). Slot tokens in braces are placeholders; their data sources are documented in the experiencia-ideal matrix in Part 5. Only the hook, plan argument, intent line, infrastructure argument and per-class connectors are LLM-generated, each governed by Appendix E; all other content is sourced from the backend or fichas.
-
-
-##### Visual structure (happy path)
+### Estructura visual (happy path)
 
 [HERO]
 
-Kicker · Name · Hook (Q3-driven) · Plan argument (names 3 blocks) · Tags
+Kicker · Nombre · Hook (derivado de Q3) · Argumento del plan (nombra los 3 bloques) · Tags
 
-[CLUB IDEAL CARD - dark]
+[TARJETA CLUB IDEAL - oscura]
 
-Left: club name · distance · address · intent line · "Ver otros clubes ->"
+Izquierda: nombre del club · distancia · dirección · intent line · "Ver otros clubes ->"
 
-Right: 4 features
+Derecha: 4 características
 
-[THREE-BLOCK GRID]
+[GRID DE TRES BLOQUES]
 
-Block 1 · Pesas individual · subgroup name · why
+Bloque 1 · Pesas individual · nombre del subgrupo · por qué
 
-Block 2 · Cardio individual · machine + duration + when + why
+Bloque 2 · Cardio individual · máquina + duración + cuándo + por qué
 
-Block 3 · Clases en grupo · top 2 class rows · two stacked actions
+Bloque 3 · Clases en grupo · 2 filas de clases top · dos acciones apiladas
 
 [CTA]
 
-Red button: Agendar visita guiada
+Botón rojo: Agendar visita guiada
 
-Secondary: Reiniciar cuestionario
+Secundario: Reiniciar cuestionario
+
+### Restricciones estrictas
+
+La Página 1 cabe en un solo viewport de escritorio (800 px o menos en pantallas de 1280 de ancho); la Página 2 continúa debajo según el Two-page split. Tres alturas de pantalla o menos en móvil (2700 px o menos en viewports de 900 de alto); el total renderizado de referencia es de alrededor de 1,350 px. Sin signos de exclamación. Todo el contenido factual (nombres de subgrupos, resúmenes de prescripción, nombres de clases, beneficios, razones de match, nombre del club, distancia, características, recomendaciones de máquinas) proviene del backend o de las fichas. Tokens de marca: Pantone Black C #1D1D1B, Pantone 485C #E6282A (solo acento), Pantone Bright White; Montserrat (900 titulares, 600-700 kickers/tags, 400-500 cuerpo).
+
+### Variantes de supresión
+
+Variante acuática del Block 1 (Q6 = alberca, club con alberca — según la lógica unificada de la Rule 39, el Block 1 NO se suprime): la tarjeta del Block 1 renderiza el subgrupo acuático; el argumento hero nombra el trabajo de fuerza acuático más el cardio y las clases grupales; el párrafo de infraestructura enfatiza la alberca. (El texto heredado «Block 1 OFF» queda reemplazado por el demo v6.) Block 3 OFF (Q13 = solo): la tarjeta del Block 3 se oculta; argumento hero - "Combinamos pesas para construir forma y cardio para sostener definición, en tu propio ritmo, sin clases grupales"; el menú contextual renombra Clases recomendadas a Tu rutina individual. Block 1 y Block 3 ambos OFF: solo se renderiza el Block 2, con el hero restringido a la narrativa aeróbica acuática. Los tres OFF: error del sistema según la Rule 39, renderizando la tarjeta de handoff al asesor.
+
+### Arquitectura visual (vista del cliente)
+
+The client Experiencia Ideal page incorporates these visual elements (LLM-personalized content from the result engine is preserved; generic preview content is not adopted):
 
 
-##### Hard constraints
+| Element | Location | Implementation |
+| --- | --- | --- |
+| Top bar rojo | Top of page | 4px bar, #E6282A |
+| Brand box | Header right | "SPORTS WORLD" (800) + "Tu experiencia, a tu medida" (gray) |
+| Summary cards (4) | Below header | Tu objetivo (Q4[0]) · Tu nivel (Q9) · Tu horario (Q8+Q7[0]) · Entrenas con (mapped from Q14: A tu ritmo / Con tu amigo/a / Con tu pareja / Con tus hijos / Con tu familia) |
+| CTA-row | Between summary and plan-cards | Pink banner (#FFF4F4 / #F3B9BC): "Conoce el club y valida tu experiencia con un Asesor…" + red button "Agendar visita guiada" (pill rojo; sin all-caps por Rule 9) |
+| Plan-cards with colors | Three bloque cards | 01 blue (#EEF5FF) · 02 green (#EDF8F1) · 03 gray (#F3F4F6). PT fallback uses dark background. |
+| Section title + numbered circle | Above plan-cards | Black circle "1" + "Tres componentes para una experiencia equilibrada" |
+| Two-col club + family | Below plan-cards | Club in dark card + Beneficio familiar in green card when applicable |
+| Beneficio familiar tags | Inside green card | Pill chips, up to 6 kids class names |
+| Safety section amber | Below two-col | Yellow (#FFF6E7) "!" icon + contextual copy (below) + disclaimer |
+| Fineprint footer | Bottom | "Recomendación generada con base en tus respuestas." · "Sports World · Tu experiencia, a tu medida" |
 
-Página 1 fits in one desktop viewport (800 px or less on 1280-wide screens); Página 2 continues below per the Two-page split. Three screen heights or fewer on mobile (2700 px or less on 900-tall viewports); reference rendered total around 1,350 px. No exclamation marks. All factual content (subgroup names, prescription summaries, class names, benefits, match reasons, club name, distance, features, machine recommendations) is sourced from the backend or fichas. Brand tokens: Pantone Black C #1D1D1B, Pantone 485C #E6282A (accent only), Pantone Bright White; Montserrat (900 headlines, 600-700 kickers/tags, 400-500 body).
+### Sección de seguridad — copy contextual, no genérico
 
+| Condition | Safety body copy (verbatim ES-MX) |
+| --- | --- |
+| GLP-1 + other medical condition | Tu experiencia incluye prioridad en clases de fuerza para preservar tu masa muscular durante tu tratamiento. Las clases con impacto o restricciones específicas ya están filtradas. Tu Asesor confirma el detalle en la visita guiada. |
+| GLP-1 only | Durante tu tratamiento con GLP-1, priorizamos clases de fuerza para preservar tu masa muscular mientras bajas grasa. Tu Asesor confirma el detalle clínico en la visita guiada. |
+| Other medical condition (no GLP-1) | Con base en lo que compartiste, esta recomendación prioriza opciones controladas y evita actividades contraindicadas. Las clases con impacto o restricciones específicas ya están filtradas. Informa al personal del club sobre cualquier indicación de tu profesional de salud. |
+| No medical condition (default) | Con base en lo que compartiste, esta recomendación se ajusta a tu nivel y disponibilidad. Si tienes alguna indicación médica antes de comenzar, coméntala con tu Asesor en la visita guiada. |
 
-##### Suppression variants
+Fixed disclaimer line below the body: "Esta recomendación orienta la selección de servicios disponibles y no sustituye una valoración médica."
 
-Block 1 aquatic variant (Q6 = alberca, club with pool — per unified Rule 39 logic, Block 1 is NOT suppressed): the Block 1 card renders the aquatic subgroup; hero argument names the aquatic strength work plus cardio and group classes; the infrastructure paragraph emphasizes the pool. (Legacy "Block 1 OFF" wording superseded by demo v6.) Block 3 OFF (Q13 = solo): the Block 3 card is hidden; hero argument - "Combinamos pesas para construir forma y cardio para sostener definición, en tu propio ritmo, sin clases grupales"; the contextual menu renames Clases recomendadas to Tu rutina individual. Block 1 and Block 3 both OFF: only Block 2 renders, with the hero restricted to the aquatic-aerobic narrative. All three OFF: system error per Rule 39, rendering the asesor handoff card.
+### Elementos rechazados (no regresar)
 
+Explícitamente NO adoptados de la vista previa de referencia: el texto "Plan recomendado" (usar "experiencia ideal"/"tu experiencia"); las descripciones genéricas de bloque ("Fuerza adaptada / Movimientos controlados"); el placeholder genérico "Clase guiada" (usar las top 2 elegidas por el LLM con conectores personalizados); el bloque placeholder estático con el nombre de marca (toda la personalización deriva de Q1-Q19 + la llamada al LLM).
 
-##### Embedded HTML reference (verbatim)
+### FitKidz — render de tres estados
 
-> ⚠️ **SUPERSEDED (audit C2).** La definición AUTORITATIVA de la página de resultado es la tabla «Visual architecture (client view)» (arquitectura v6: barra roja 4px, 4 summary cards, banner CTA rosa, bloques azul/verde/gris #EEF5FF/#EDF8F1/#F3F4F6, club+familia, sección seguridad ámbar) — implementada por el demo JSX. Este HTML es la referencia COMPACTA legada: conserva valor como semántica/CSS base, pero donde difiera de la tabla v6 (colores de bloque uniformes, sin summary cards/banner/seguridad) **gana la tabla v6**. Los colores de bloque v6 deben añadirse al :root.
+La disponibilidad de FitKidz por club es una bandera booleana amenidades.includes('FitKidz'), separada del catálogo kids_classes. 40 de los 49 clubes ofrecen FitKidz (coincide con el CSV oficial); la lógica anterior kids_classes.length>0 devolvía erróneamente 30. Estados de render: Estado A (30 clubes, ofrece FitKidz + clases infantiles nombradas) → sección roja con chips de clases y "Conoce FitKidz →". Estado B (10 clubes, ofrece FitKidz + kids_classes vacío) → sección roja, texto genérico "Este club ofrece FitKidz. Tu Asesor te compartirá el detalle de actividades y horarios disponibles para tus hijos en tu visita guiada.", sin chips. Estado C (9 de 49 clubes = 18%, — flujo normal, no excepcional: amores, antara, anzures, apodaca, condesa, pabellón-bosques, reforma, roma, triángulo-tecamachalco) → sección gris "Este club no ofrece FitKidz. Otros clubes cerca de ti sí lo tienen — revisa la lista de otros clubes."
+
+Los 10 tags de clubes del Estado B: pedregal, felix-cuevas, miguel-angel-de-quevedo, san-jeronimo, zona-esmeralda, san-pedro, puebla, bernardo-quintana, esfera-queretaro, culiacan. Dependencia del resolver: cuando Q14 ∈ {"Yo y mis hijos", "La familia completa"} y Q14b = "Sí", el resolver trata a FitKidz como una amenidad requerida y elige del universo de 40 clubes (clubMeetsAmenity usa la bandera, no kids_classes.length). Los 10 clubes del Estado B tienen disponibilidad de FitKidz autoritativa pero datos de kids_classes incompletos; la pregunta abierta al cliente para Gabriela sobre los nombres faltantes de clases infantiles se rastrea en las dependencias abiertas.
+
+### División en dos páginas: vista cliente y vista Asesor
+
+Ambas páginas se dividen en Página 1 y Página 2 con un separador digital "Página 2" y un salto de página A4 al imprimir. Vista del cliente — Página 1: barra superior, header, summary cards, CTA-row, título de sección, plan-cards (y paneles expandidos de cambio/todas-las-clases); Página 2: two-col (club + beneficio familiar), panel de otros clubes, nota TooFar, sección de seguridad, argumento de infraestructura, CTA inferior + Reiniciar, fineprint. Vista del asesor — Página 1: banner del cliente, header breve, §1 Perfil, §2 Logística; Página 2: §3-§7, guion de cierre, registro del asesor, footer. No se introduce ninguna nueva fase de máquina de estados; cada vista es un único componente con paginación interna. Print CSS:
+
+@media print {
+
+.page-separator { display: none !important; }
+
+.page-2 { page-break-before: always; }
+
+.brief-page-separator { display: none !important; }
+
+.brief-page-separator + * { page-break-before: always; }
+
+}
+
+### HTML de referencia (legado, no vinculante)
+
+> ⚠️ **SUPERSEDED.** La definición AUTORITATIVA de la página de resultado es la tabla «Visual architecture (client view)» (arquitectura v6: barra roja 4px, 4 summary cards, banner CTA rosa, bloques azul/verde/gris #EEF5FF/#EDF8F1/#F3F4F6, club+familia, sección seguridad ámbar) — implementada por el demo JSX. Este HTML es la referencia COMPACTA legada: conserva valor como semántica/CSS base, pero donde difiera de la tabla v6 (colores de bloque uniformes, sin summary cards/banner/seguridad) **gana la tabla v6**. Los colores de bloque v6 deben añadirse al :root.
 
 <!DOCTYPE html>
 
@@ -1862,7 +1789,7 @@ body { font-family:'Montserrat',sans-serif; color:var(--black); background:var(-
 
 .page { flex:1; max-width:1080px; margin:0 auto; width:100%; padding:1.75rem 2rem 2rem; display:flex; flex-direction:column; gap:1.25rem; }
 
-.hero__kicker { font-size:.6875rem; letter-spacing:.22em; text-transform:uppercase; color:#C81E20; font-weight:700; margin-bottom:.5rem; } /* audit C1: #E6282A 4.47:1 falla AA a 11px */
+.hero__kicker { font-size:.6875rem; letter-spacing:.22em; text-transform:uppercase; color:#C81E20; font-weight:700; margin-bottom:.5rem; } /*: #E6282A 4.47:1 falla AA a 11px */
 
 .hero__name { font-size:2.25rem; font-weight:900; line-height:1.05; letter-spacing:-.02em; margin-bottom:.625rem; }
 
@@ -1878,7 +1805,7 @@ body { font-family:'Montserrat',sans-serif; color:var(--black); background:var(-
 
 .club { background:var(--black); color:var(--white); border-radius:6px; padding:1.25rem 1.5rem; display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; align-items:start; }
 
-.club__kicker { font-size:.625rem; letter-spacing:.22em; text-transform:uppercase; color:var(--white); opacity:.85; font-weight:700; margin-bottom:.375rem; } /* audit C1: rojo/negro 3.78:1 falla */
+.club__kicker { font-size:.625rem; letter-spacing:.22em; text-transform:uppercase; color:var(--white); opacity:.85; font-weight:700; margin-bottom:.375rem; } /*: rojo/negro 3.78:1 falla */
 
 .club__name { font-size:1.375rem; font-weight:900; line-height:1.1; margin-bottom:.375rem; }
 
@@ -1910,7 +1837,7 @@ body { font-family:'Montserrat',sans-serif; color:var(--black); background:var(-
 
 .block__why { font-size:.8125rem; color:var(--gray-4); margin-bottom:.875rem; flex:1; line-height:1.45; }
 
-.block__action { font-size:.75rem; color:#C81E20; font-weight:700; text-decoration:none; border-bottom:1px solid #C81E20; align-self:flex-start; min-height:44px; display:inline-flex; align-items:center; } /* audit L3+C1: target ≥44px, rojo AA */
+.block__action { font-size:.75rem; color:#C81E20; font-weight:700; text-decoration:none; border-bottom:1px solid #C81E20; align-self:flex-start; min-height:44px; display:inline-flex; align-items:center; } /*+C1: target ≥44px, rojo AA */
 
 .classes__list { flex:1; margin-bottom:.875rem; }
 
@@ -1924,9 +1851,9 @@ body { font-family:'Montserrat',sans-serif; color:var(--black); background:var(-
 
 .cta { text-align:center; padding-top:.875rem; border-top:1px solid var(--gray-2); }
 
-.cta__button { display:inline-block; background:var(--red); color:var(--white); font-size:1.1875rem; font-weight:700; padding:.875rem 2.25rem; border:none; cursor:pointer; border-radius:4px; text-decoration:none; } /* audit C1: blanco/rojo pasa AA solo ≥18.66px bold → 19px */
+.cta__button { display:inline-block; background:var(--red); color:var(--white); font-size:1.1875rem; font-weight:700; padding:.875rem 2.25rem; border:none; cursor:pointer; border-radius:4px; text-decoration:none; } /*: blanco/rojo pasa AA solo ≥18.66px bold → 19px */
 
-.cta__secondary { margin-top:.875rem; display:flex; justify-content:center; gap:1.5rem; font-size:.75rem; } .cta__secondary a { min-height:44px; display:inline-flex; align-items:center; } /* audit L3 */
+.cta__secondary { margin-top:.875rem; display:flex; justify-content:center; gap:1.5rem; font-size:.75rem; } .cta__secondary a { min-height:44px; display:inline-flex; align-items:center; } /* */
 
 .cta__secondary a { color:var(--gray-4); text-decoration:none; font-weight:500; }
 
@@ -1960,9 +1887,9 @@ body { font-family:'Montserrat',sans-serif; color:var(--black); background:var(-
 
 <h1 class="hero__name">{user_first_name}, esta es tu Experiencia Ideal.</h1>
 
-<p class="hero__hook">{LLM_hook · per Appendix E}</p>
+<p class="hero__hook">{LLM_hook · per `anexo-contenido-prompts.md`}</p>
 
-<p class="hero__argument">{LLM_plan_argument · per Appendix E · names 3 blocks}</p>
+<p class="hero__argument">{LLM_plan_argument · per `anexo-contenido-prompts.md` · names 3 blocks}</p>
 
 <div class="hero__tags">
 
@@ -1988,7 +1915,7 @@ body { font-family:'Montserrat',sans-serif; color:var(--black); background:var(-
 
 <p class="club__address">{club_address}</p>
 
-<p class="club__intent">{LLM_intent_line · per Appendix E}</p>
+<p class="club__intent">{LLM_intent_line · per `anexo-contenido-prompts.md`}</p>
 
 <a href="#" class="club__other">Ver otros clubes cerca de ti →</a>
 
@@ -2090,75 +2017,11 @@ body { font-family:'Montserrat',sans-serif; color:var(--black); background:var(-
 
 </html>
 
+## Apéndice G — Brief del Asesor
 
-##### Visual architecture (client view)
+El brief dirigido al asesor se renderiza tras la confirmación de la cita (fase briefing). Sigue una arquitectura fija de 10 secciones. Cinco secciones son generadas por LLM mediante la MISMA llamada única al LLM que produce el copy del cliente (ver Apéndice H); el resto está hardcodeado a partir de las respuestas del cuestionario, el club resuelto y la cita.
 
-The client Experiencia Ideal page incorporates these visual elements (LLM-personalized content from the result engine is preserved; generic preview content is not adopted):
-
-
-| Element | Location | Implementation |
-| --- | --- | --- |
-| Top bar rojo | Top of page | 4px bar, #E6282A |
-| Brand box | Header right | "SPORTS WORLD" (800) + "Tu experiencia, a tu medida" (gray) |
-| Summary cards (4) | Below header | Tu objetivo (Q4[0]) · Tu nivel (Q9) · Tu horario (Q8+Q7[0]) · Entrenas con (mapped from Q14: A tu ritmo / Con tu amigo/a / Con tu pareja / Con tus hijos / Con tu familia) |
-| CTA-row | Between summary and plan-cards | Pink banner (#FFF4F4 / #F3B9BC): "Conoce el club y valida tu experiencia con un Asesor…" + red button "Agendar visita guiada" (pill rojo; sin all-caps por Rule 9) |
-| Plan-cards with colors | Three bloque cards | 01 blue (#EEF5FF) · 02 green (#EDF8F1) · 03 gray (#F3F4F6). PT fallback uses dark background. |
-| Section title + numbered circle | Above plan-cards | Black circle "1" + "Tres componentes para una experiencia equilibrada" |
-| Two-col club + family | Below plan-cards | Club in dark card + Beneficio familiar in green card when applicable |
-| Beneficio familiar tags | Inside green card | Pill chips, up to 6 kids class names |
-| Safety section amber | Below two-col | Yellow (#FFF6E7) "!" icon + contextual copy (below) + disclaimer |
-| Fineprint footer | Bottom | "Recomendación generada con base en tus respuestas." · "Sports World · Tu experiencia, a tu medida" |
-
-
-##### Safety section — contextual copy (not generic)
-
-
-| Condition | Safety body copy (verbatim ES-MX) |
-| --- | --- |
-| GLP-1 + other medical condition | Tu experiencia incluye prioridad en clases de fuerza para preservar tu masa muscular durante tu tratamiento. Las clases con impacto o restricciones específicas ya están filtradas. Tu Asesor confirma el detalle en la visita guiada. |
-| GLP-1 only | Durante tu tratamiento con GLP-1, priorizamos clases de fuerza para preservar tu masa muscular mientras bajas grasa. Tu Asesor confirma el detalle clínico en la visita guiada. |
-| Other medical condition (no GLP-1) | Con base en lo que compartiste, esta recomendación prioriza opciones controladas y evita actividades contraindicadas. Las clases con impacto o restricciones específicas ya están filtradas. Informa al personal del club sobre cualquier indicación de tu profesional de salud. |
-| No medical condition (default) | Con base en lo que compartiste, esta recomendación se ajusta a tu nivel y disponibilidad. Si tienes alguna indicación médica antes de comenzar, coméntala con tu Asesor en la visita guiada. |
-
-Fixed disclaimer line below the body: "Esta recomendación orienta la selección de servicios disponibles y no sustituye una valoración médica."
-
-
-##### Rejected elements (do not regress)
-
-Explicitly NOT adopted from the reference preview: the wording "Plan recomendado" (use "experiencia ideal"/"tu experiencia"); generic block descriptions ("Fuerza adaptada / Movimientos controlados"); the generic "Clase guiada" placeholder (use LLM-picked top 2 with personalized connectors); the static brand-name placeholder block (all personalization derives from Q1-Q19 + the LLM call).
-
-
-##### FitKidz availability — three-state render
-
-FitKidz availability per club is a boolean flag amenidades.includes('FitKidz'), separate from the kids_classes catalog. 40 of the 49 clubs offer FitKidz (matches the official CSV); the old logic kids_classes.length>0 wrongly returned 30. Render states: State A (30 clubs, offers FitKidz + named kids classes) → red section with class chips and "Conoce FitKidz →". State B (10 clubs, offers FitKidz + kids_classes empty) → red section, generic copy "Este club ofrece FitKidz. Tu Asesor te compartirá el detalle de actividades y horarios disponibles para tus hijos en tu visita guiada.", no chips. State C (9 de 49 clubes = 18%, audit D9 — flujo normal, no excepcional: amores, antara, anzures, apodaca, condesa, pabellón-bosques, reforma, roma, triángulo-tecamachalco) → gray section "Este club no ofrece FitKidz. Otros clubes cerca de ti sí lo tienen — revisa la lista de otros clubes."
-
-The 10 State-B club tags: pedregal, felix-cuevas, miguel-angel-de-quevedo, san-jeronimo, zona-esmeralda, san-pedro, puebla, bernardo-quintana, esfera-queretaro, culiacan. Resolver dependency: when Q14 ∈ {"Yo y mis hijos", "La familia completa"} and Q14b = "Sí", the resolver treats FitKidz as a required amenity and picks from the 40-club universe (clubMeetsAmenity uses the flag, not kids_classes.length). The 10 State-B clubs have authoritative FitKidz availability but incomplete kids_classes data; the open client question to Gabriela for the missing kids class names is tracked in open dependencies.
-
-
-##### Two-page split (client and asesor views)
-
-Both pages split into Página 1 and Página 2 with a digital "Página 2" separator and an A4 page break when printed. Client view — Página 1: top bar, header, summary cards, CTA-row, section title, plan-cards (and expanded change/all-classes panels); Página 2: two-col (club + beneficio familiar), other-clubs panel, TooFar note, safety section, infrastructure argument, bottom CTA + Reiniciar, fineprint. Asesor view — Página 1: client banner, brief header, §1 Perfil, §2 Logística; Página 2: §3-§7, guion de cierre, registro del asesor, footer. No new state-machine phase is introduced; each view is a single component with internal pagination. Print CSS:
-
-@media print {
-
-.page-separator { display: none !important; }
-
-.page-2 { page-break-before: always; }
-
-.brief-page-separator { display: none !important; }
-
-.brief-page-separator + * { page-break-before: always; }
-
-}
-
-
-### Appendix G - Asesor Brief Template
-
-The asesor-facing brief is rendered after appointment confirmation (phase briefing). It follows a fixed 10-section architecture. Five sections are LLM-generated by the SAME single LLM call that produces the client copy (see Appendix H); the rest is hardcoded from the questionnaire answers, the resolved club and the appointment.
-
-
-##### Structure (10 sections, in order)
-
+### Estructura (10 secciones en orden)
 
 | Section | Content | Source |
 | --- | --- | --- |
@@ -2174,9 +2037,7 @@ The asesor-facing brief is rendered after appointment confirmation (phase briefi
 | Guion de cierre sugerido | Quote box, primera persona | LLM-generated |
 | Registro del asesor / Footer | 4 cajas vacías (llena el asesor) + "USO INTERNO · Datos declarados por el lead; validar antes de formular recomendaciones." | Hardcoded |
 
-
-##### §7 Notas y banderas — flag logic
-
+### Notas y banderas (lógica de flags)
 
 | Flag | Trigger | Severity | Copy template |
 | --- | --- | --- | --- |
@@ -2194,13 +2055,11 @@ The asesor-facing brief is rendered after appointment confirmation (phase briefi
 
 Severity drives style: warn = red ⚠ + black text; info = gray middot + gray text.
 
+## Apéndice H — Llamada única al LLM: esquema y prompt YMYL
 
-### Appendix H - Single LLM Call — Schema and YMYL-Aware Prompt
+Una sola llamada al LLM se dispara cuando se completa el cuestionario y devuelve TANTO el copy del cliente como el contenido del brief del asesor. NO hay llamadas separadas. (Modelo y parámetros: `anexo-ingenieria-crm.md` R12.) La misma llamada rellena result.llm con todas las claves de abajo.
 
-One LLM call fires when the questionnaire completes and returns BOTH the client copy and the asesor-brief content. There are NOT separate calls. (Modelo y parámetros: `anexo-ingenieria-crm.md` R12.) The same call populates result.llm with all keys below.
-
-
-##### Output JSON schema (single call)
+### Esquema JSON de salida (una sola llamada)
 
 > Conforme al demo v6 (`callClaude`): estas claves coinciden con la implementación. El **flujo completo** (resolveBlocks Q6-aware, rankClasses, banderas, `stripQCodes`) está en «Flujo de aplicación del cuestionario». **Precedencia:** catálogos acordados (51 clases, cuestionario oficial).
 
@@ -2230,15 +2089,86 @@ One LLM call fires when the questionnaire completes and returns BOTH the client 
 
 }
 
+### Contexto adaptativo
 
-##### Adaptive context
+Antes de componer el user prompt, el backend construye banderas a partir de las respuestas: hasMedical, isPregnant, isPostpartum, onGLP1, onBariatric, isFamily, hasKids, isSolo, isPrincipiante, fromOtherGym, fromPause, fromSedentary, wantsAquatic, wantsDry. Cuando hasMedical es true, el prompt agrega un bloque "⚠ CONDICIONES MÉDICAS / TRATAMIENTOS DECLARADOS:" que enumera las condiciones específicas, con un recordatorio explícito de que las clases contraindicadas están pre-filtradas y de que el asesor maneja el ajuste individual de protocolo por bloque con criterio clínico. Las prohibiciones textuales del system prompt están en el Apéndice E.
 
-Before composing the user prompt, the backend builds flags from the answers: hasMedical, isPregnant, isPostpartum, onGLP1, onBariatric, isFamily, hasKids, isSolo, isPrincipiante, fromOtherGym, fromPause, fromSedentary, wantsAquatic, wantsDry. When hasMedical is true, the prompt appends a "⚠ CONDICIONES MÉDICAS / TRATAMIENTOS DECLARADOS:" block listing the specific conditions, with an explicit reminder that contraindicated classes are pre-filtered and the asesor handles individual block-protocol adjustment with clinical criterion. The verbatim system-prompt prohibitions are in Appendix E.
+### Saneamiento y fallback
 
+Un sanitize() recursivo recorre strings, arrays y objetos anidados para eliminar cualquier código Q filtrado del output del LLM. Si el LLM devuelve JSON malformado u omite claves requeridas, el BriefingScreen y la página de resultado se renderizan con fallbacks seguros (arrays vacíos / strings vacíos): la página Experiencia Ideal de cara al usuario aún renderiza sus secciones hardcoded sin fallar. Un strip de términos prohibidos por separado aún no está implementado (ver dependencias abiertas).
 
-##### Sanitization and fallback
+Fin de la Especificación UX v4.2. Confidencial.
 
-A recursive sanitize() walks strings, arrays and nested objects to strip any leaked Q-codes from the LLM output. If the LLM returns malformed JSON or omits required keys, the BriefingScreen and the result page render with safe fallbacks (empty arrays / empty strings): the user-facing Experiencia Ideal page still renders its hardcoded sections without crashing. A separate banned-terms strip is not yet implemented (see open dependencies).
+## Apéndice — Índice de reglas
 
-End of UX Specification v4.2. Confidential.
+| Regla | Tema | Sección |
+| --- | --- | --- |
+| Rule 1 | Header desktop | §5.1 |
+| Rule 2 | Header móvil | §5.1 |
+| Rule 3 | Widget global BES | §5.3 |
+| Rule 3.1 | Lo que BES no hace | §5.3 |
+| Rule 3.2 | Alcance de WhatsApp | §5.3 |
+| Rule 4 | Panel lateral: contenido | §5.2 |
+| Rule 5 | Panel lateral: comportamiento | §5.2 |
+| Rule 6 | CTA del header | §5.1 |
+| Rule 7 | Header al hacer scroll | §5.1 |
+| Rule 8 | Marca y posicionamiento | §7.1 |
+| Rule 9 | Reglas editoriales del copy | §7.2 |
+| Rule 10 | Cross-linking entre páginas | §3.6 |
+| Rule 11 | Datos confirmados del sitio | §3.4 |
+| Rule 12 | Datos vivos por club | §3.5 |
+| Rule 13 | Schema markup | §3.7 |
+| Rule 14 | Contenido YMYL | §9 |
+| Rule 14b | Filtro duro de contraindicaciones | §5.17 |
+| Rule 15 | Ruteo de búsqueda externa | §3.8 |
+| Rule 16 | Inferencia desde búsqueda | §4.2 |
+| Rule 17 | Precedencia de inferencias | §4.3 |
+| Rule 18 | Cuestionario base 15+6 | §5.16 |
+| Rule 19 | Condicionales de peso Q17–Q19 | §5.16 |
+| Rule 20 | Pre-llenado por aterrizaje | §4.4 |
+| Rule 21 | Q4 hasta dos objetivos | §5.16 |
+| Rule 22 | Membresías sin checkout | §5.13 |
+| Rule 23 | Botón «Tu Club ideal» | §5.4 |
+| Rule 24 | Botón «Otros clubes…» / geografía | §5.4 |
+| Rule 25 | Definición del menú contextual | §5.4 |
+| Rule 26 | «Agenda tu visita guiada» siempre | §5.4 |
+| Rule 27 | Cuestionario incompleto | §5.4 |
+| Rule 28 | Cuestionario completo | §5.4 |
+| Rule 29 | Etiquetas del Diario | §5.12 |
+| Rule 30 | Botones FitKidz | §5.10 |
+| Rule 31 | Clubes propuestos en FitKidz | §5.10 |
+| Rule 32 | Estados del usuario | §4.1 |
+| Rule 32b | Captura de contacto | §5.18 |
+| Rule 33 | Botones por estado | §5.4 |
+| Rule 34 | Refresco de experiencia obsoleta | §4.6 |
+| Rule 35 | Piso de accesibilidad | §8 |
+| Rule 36 | Datos del usuario y privacidad | §9 |
+| Rule 37 | Páginas fuera de alcance | Apéndice B |
+| Rule 38 | Entrenamiento individual: pre-fill y resultado | §5.14 |
+| Rule 39 | Estructura de los 3 bloques | §5.17 |
+| Rule 40 | Algoritmo de selección de clases | §5.17 |
+| Rule 41 | Reemplazo de clases | §5.17 |
+| Rule 42 | Card «Tu Club Ideal» | §5.17 |
+| Rule 43 | Otros clubes y re-evaluación | §5.7 |
 
+## Control del documento
+
+Este documento es la única fuente de verdad del comportamiento del sitio web público de Sports World. Está escrito para cuatro audiencias de lectura:
+
+- Diseñadores que construyen las pantallas y los patrones de interacción.
+- Ingenieros que los implementan.
+- Equipos de contenido y SEO que pueblan cada página.
+- Stakeholders del lado del cliente que firman cada gate de aprobación.
+Si un comportamiento no está descrito aquí, no existe en el sitio. Si un comportamiento contradice este documento, este documento prevalece hasta que se emita una nueva versión.
+
+**Organización.** Las secciones 1–12 van del negocio a la verificación: racionalidad (§1), personas (§2), arquitectura de información (§3), flujos y estados (§4), especificación por pantalla (§5), edge cases (§6), tokens y redacción (§7), accesibilidad (§8), privacidad (§9), handoff (§10), aceptación (§11) y métricas (§12). Los apéndices conservan su **letra histórica** como identificador estable: B (fuera de alcance), C (glosario), D (códigos), F (plantilla del resultado), G (brief del Asesor), H (llamada LLM). El Apéndice A (privacidad) se integró en §9 y el Apéndice E (voz de marca) vive en `anexo-contenido-prompts.md`. Las reglas (`Rule 1`–`Rule 43`) son identificadores estables; el índice de reglas al final mapea cada una a su sección.
+
+| Versión | Fecha | Descripción |
+| --- | --- | --- |
+| 1.0 | Feb 2026 | Borrador inicial (sitemap + reglas del header). |
+| 2.0 | Mar 2026 | Se agregó la lógica del cuestionario y del menú contextual. |
+| 3.0 | May 2026 | Se agregaron las matrices por página para los 12 tipos de página. |
+| 4.0 | May 2026 | Reestructurado al formato de UX Specification estándar de la industria. Se agregaron Fundamentos del proyecto, Convenciones, Casos límite y estados de error. Se ajustó el glosario. |
+| 4.1 | May 2026 | Revisión de adherencia estricta aplicando mejores prácticas de la industria (UXmatters / NN/G / Atlassian). Se corrigió el posicionamiento de marca a Premium fitness (Premium family fitness solo en FitKidz). Se declaró mobile-first como la metodología. Se reestructuró BES como widget flotante global con /bes como URL de respaldo. Se agregó el comportamiento de recordatorio de BES + WhatsApp con consentimiento. Se agregó la regla explícita de membresía-sin-checkout. Se enumeraron los 4 datos en vivo por club. Se adoptó YMYL como término canónico. Se refinaron el cross-linking, el schema markup, la IA de FitKidz y los tap targets. Se eliminaron las referencias a fotografías de empleados. Se agregaron la regla de precedencia de consultas de búsqueda, el refresh de planes obsoletos y el piso explícito de accesibilidad. |
+| 4.2 | Jun 2026 | Cuestionario adaptativo rediseñado: 10→15 preguntas base + 6 condicionales (Q11, Q12b, Q14b, Q17, Q18, Q19); nuevas páginas de entrenamiento individual; se agregó la Rule 38; el hub Tonificar se renombró a Estética corporal. |
+| 4.3 | Jun 2026 | Pase de consolidación según auditoría exhaustiva (2026-06-11): lógica Q6=alberca unificada (variante acuática, nunca suprimir el Block 1), algoritmo único de ranking del Block 3 (Rule 40 + filtro Q6 + descarte de no-apto), gating de Q12b movido a Q2 ≠ Hombre (seguridad YMYL), momento de consentimiento de datos de salud definido en Q12, correcciones de contraste/touch-target en plantillas, tabla puente de seis subgrupos, dedupe de pre-llenado, NFR de carga, preguntas abiertas de datos del cliente anexadas. |
