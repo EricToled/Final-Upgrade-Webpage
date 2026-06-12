@@ -14,6 +14,12 @@ for f in files:
         trans[o['id']] = o
 
 missing = [s['id'] for s in raw if s['id'] not in trans]
+
+# EN-side patches for sections whose ORIGINAL language is English (annotation
+# notes translated for the English edition in resultados/en/)
+enpatch_path = os.path.join(HERE, '_enpatch.json')
+enpatch = json.load(open(enpatch_path, encoding='utf-8')) if os.path.exists(enpatch_path) else {}
+
 sections = []
 for s in raw:
     src = s['lang']                      # original language of this section
@@ -21,6 +27,9 @@ for s in raw:
     tr = trans.get(s['id'], {})
     title = {src: s['title'], tgt: tr.get('title', '')}
     body  = {src: s['body'],  tgt: tr.get('body', '')}
+    if src == 'en' and s['id'] in enpatch:
+        title['en'] = enpatch[s['id']].get('title', title['en'])
+        body['en']  = enpatch[s['id']].get('body',  body['en'])
     sections.append({
         'id': s['id'], 'doc': s['doc'], 'level': s['level'],
         'title': title, 'body': body,
