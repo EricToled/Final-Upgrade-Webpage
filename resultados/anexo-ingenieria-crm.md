@@ -10,10 +10,8 @@
 Requisito del spec: ningún código Qn llega al usuario. Implementación de referencia (prototipo): `stripQCodes` con regex sobre "(Qn)", " en Qn", " para Qn", " según Qn", "Qn" + colapso de espacios; `sanitize()` recursivo sobre strings/arrays/objetos del JSON parseado.
 
 ## R14 — Lead scoring y enrutamiento (CRM/ventas; [SUPUESTO, validar pesos con datos])
-La lógica de puntuación y enrutamiento de leads (pesos, umbrales, reglas de CRM/ventas) se desarrolla en la sub-sección siguiente; no define comportamiento de UI.
 
 
-### 10.2 Lead scoring y enrutamiento (propuesta — `[SUPUESTO, validar pesos]`)
 
 | Señal (respuesta) | Puntos | 
 |---|---|

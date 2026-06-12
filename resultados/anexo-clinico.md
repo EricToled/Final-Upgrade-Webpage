@@ -146,7 +146,7 @@ Catálogo canónico **51 clases** (49 secas + 2 acuáticas: AQUA ZUMBA, SWIM TRA
 
 
 ## 2. Prescripciones técnicas ACSM por subgrupo (no user-facing)
-Las prescripciones detalladas (series, repeticiones, %1RM, descansos, equipo y citas) por subgrupo se documentan en las dos sub-secciones siguientes.
+Protocolos internos de los subgrupos de entrenamiento individual: dosis exacta (series, repeticiones, %1RM, descansos), equipo y fuentes. **No se muestran al usuario** — el sitio presenta solo los nombres oficiales y el copy accesible; el entrenador aplica el protocolo en la primera sesión. Sujetos al mismo gate de validación médica que la matriz de clases.
 
 
 ##### entrenamiento-con-pesas-individual (ACSM Position Stand 2026)
@@ -286,10 +286,8 @@ Cautions: No apto para principiantes ni intermedios sin base · contraindicado e
 
 
 ## 3. Catálogo oficial — 18 sub-clases de entrenamiento individual (mapeos `inferido` pendientes de confirmación del cliente)
-Las tres familias de entrenamiento individual y sus 18 sub-clases, con su mapeo a los objetivos Q4 y su estado de validación, se detallan a continuación.
 
 
-##### Catálogo oficial — Programas de entrenamiento individual (3 bloques · 18 sub-clases)
 
 Catálogo oficial del cliente. Tres familias de entrenamiento individual; cada una con 6 sub-clases. Se entregan en Block 1 (fuerza), Block 2 (cardio) y un **nuevo Block acuático** (gated por Q6).
 

@@ -134,7 +134,7 @@
 
 ## 1. Design rationale
 
-Why this site exists, for whom, and why each design decision is what it is.
+The site exists to turn Google searches into guided club visits. This section documents that full chain: the business goal (double organic traffic from 80,000 to 160,000 monthly visits and double qualified leads), who the actors are (the two CORE archetypes, the Asesor and BES), what measurable behavior is expected from the user, and why each product decision — the single adaptive questionnaire, red reserved for conversion, contact capture after the result — is what it is and not something else.
 
 ### 1.1 Reasoning chain (Why → Who → What → How)
 
@@ -662,7 +662,7 @@ Each subsection follows the same order: purpose · behavior · content · states
 
 ### 5.1 Global header
 
-The fixed header present on every page and its responsive behavior.
+The header is fixed at the top of all 155 pages and concentrates the site's three parallel routes (Tu Sports World · Diseña tu experiencia · Pregúntale a BES) plus the single conversion action («Agenda tu visita», red button). Its desktop structure, its two-row collapse on mobile, the CTA behavior and its conduct on scroll are defined in the four rules below.
 
 #### Desktop structure (Rule 1)
 
@@ -702,7 +702,7 @@ The header stays pinned to the top of the screen as the user scrolls. Its height
 
 ### 5.2 «Tu Sports World» side panel
 
-The navigation panel that gathers the site's 8 main hubs.
+«Tu Sports World» is the site's single structural navigation point: a side panel gathering the 8 main hubs (clubs, classes, amenities, profiles, weight loss, FitKidz, memberships and journal). The header's three action items are not duplicated inside it — each piece of navigation lives in exactly one place. Its contents and behavior (open, close, animation, keyboard) are defined in the two rules below.
 
 #### Contents (Rule 4)
 
@@ -732,7 +732,7 @@ The three header items — «Diseña tu experiencia», «Pregúntale a BES» and
 
 ### 5.3 BES — global conversational assistant
 
-The chat widget present on every page and what it can and cannot do.
+BES («Pregúntale a BES») is the site's conversational assistant: a floating widget present on all 155 pages that answers operational questions (schedules, prices, classes, memberships), books visits and knows the context of the page where it opens. It has deliberate limits — it does not execute cancellations or answer deep health questions — and a narrow WhatsApp scope (visit reminders only). The three rules below define the widget, its limits and that scope.
 
 #### Global widget (Rule 3)
 
@@ -761,7 +761,7 @@ BES is delivered as a separate project with its own specification; this document
 
 ### 5.4 Contextual menu (recommendations, not menus)
 
-The action buttons that appear inside each page's body depending on the user's state.
+The user does not see menus: they see recommendations. The contextual menu is the set of action buttons inside each page's body, and it changes along three axes: questionnaire state (incomplete / complete), the page the user arrives at, and the resolved club. «Agenda tu visita guiada» always appears; the rest of the buttons follow the rules below.
 
 #### What the contextual menu is (Rule 25)
 
@@ -888,7 +888,7 @@ If the new club's catalog cannot produce a viable Block 3 set, the system displa
 
 ### 5.8 Class pages
 
-Behavior of the premium Les Mills class pages and the regular class pages.
+The site has 51 class pages (7 premium Les Mills under `/clases/signature/` and 44 regular under `/clases/`), one per catalog class. Each shows the description, the clubs offering it with real schedules, and pre-marks the Q4 goal aligned with the class when the user starts the questionnaire from it. The matrices below define their exact behavior per user state.
 
 #### Premium Les Mills class — matrix
 
@@ -930,7 +930,7 @@ Applies to all 5 hubs (Primeros Pasos, Salud y Bienestar, Estética corporal, Ga
 
 ### 5.10 FitKidz
 
-The children's hub and its specific buttons once the user has an identified club.
+FitKidz is the children's program hub: it absorbs the 34 kids' activities (organized by age, discipline and per-club availability; they have no individual pages) and pre-fills Q14 = «Yo y mis hijos» when the user starts the questionnaire from here. Its specific buttons — viewing the identified club's classes and the surfaced clubs with their three actions — are defined in the two rules below.
 
 #### Specific buttons (Rule 30)
 
@@ -1560,7 +1560,7 @@ These questions BLOCK the medical gate (F11) and must be resolved with Sports Wo
 
 ## 12. Metrics and experimentation
 
-The indicators that measure the site's success and how it is experimented on to improve them.
+The site's success is measured against the three business goals: organic traffic (80,000 → 160,000 visits/month), qualified leads (2x) and first-response time (<1 min via BES). This section defines the KPIs and their sources, where the lead-scoring logic lives, the progressive-profiling recommendation if questionnaire abandonment exceeds the threshold, and the A/B-testing status (not prioritized; components are built as swappable slots from the start).
 
 ### 12.1 KPIs
 

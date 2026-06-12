@@ -17,7 +17,7 @@
 {
 "id": "1-racionalidad-del-dise-o",
 "title": "1. Design rationale",
-"body": "Why this site exists, for whom, and why each design decision is what it is."
+"body": "The site exists to turn Google searches into guided club visits. This section documents that full chain: the business goal (double organic traffic from 80,000 to 160,000 monthly visits and double qualified leads), who the actors are (the two CORE archetypes, the Asesor and BES), what measurable behavior is expected from the user, and why each product decision — the single adaptive questionnaire, red reserved for conversion, contact capture after the result — is what it is and not something else."
 },
 {
 "id": "1-1-cadena-de-razonamiento-por-qu-qui-n-qu-c-mo",
@@ -177,7 +177,7 @@
 {
 "id": "5-1-header-global",
 "title": "5.1 Global header",
-"body": "The fixed header present on every page and its responsive behavior."
+"body": "The header is fixed at the top of all 155 pages and concentrates the site's three parallel routes (Tu Sports World · Diseña tu experiencia · Pregúntale a BES) plus the single conversion action («Agenda tu visita», red button). Its desktop structure, its two-row collapse on mobile, the CTA behavior and its conduct on scroll are defined in the four rules below."
 },
 {
 "id": "estructura-desktop-rule-1",
@@ -202,7 +202,7 @@
 {
 "id": "5-2-panel-lateral-tu-sports-world",
 "title": "5.2 «Tu Sports World» side panel",
-"body": "The navigation panel that gathers the site's 8 main hubs."
+"body": "«Tu Sports World» is the site's single structural navigation point: a side panel gathering the 8 main hubs (clubs, classes, amenities, profiles, weight loss, FitKidz, memberships and journal). The header's three action items are not duplicated inside it — each piece of navigation lives in exactly one place. Its contents and behavior (open, close, animation, keyboard) are defined in the two rules below."
 },
 {
 "id": "contenido-rule-4",
@@ -217,7 +217,7 @@
 {
 "id": "5-3-bes-asistente-conversacional-global",
 "title": "5.3 BES — global conversational assistant",
-"body": "The chat widget present on every page and what it can and cannot do."
+"body": "BES («Pregúntale a BES») is the site's conversational assistant: a floating widget present on all 155 pages that answers operational questions (schedules, prices, classes, memberships), books visits and knows the context of the page where it opens. It has deliberate limits — it does not execute cancellations or answer deep health questions — and a narrow WhatsApp scope (visit reminders only). The three rules below define the widget, its limits and that scope."
 },
 {
 "id": "widget-global-rule-3",
@@ -237,7 +237,7 @@
 {
 "id": "5-4-men-contextual-recomendaciones-no-men-s",
 "title": "5.4 Contextual menu (recommendations, not menus)",
-"body": "The action buttons that appear inside each page's body depending on the user's state."
+"body": "The user does not see menus: they see recommendations. The contextual menu is the set of action buttons inside each page's body, and it changes along three axes: questionnaire state (incomplete / complete), the page the user arrives at, and the resolved club. «Agenda tu visita guiada» always appears; the rest of the buttons follow the rules below."
 },
 {
 "id": "qu-es-el-men-contextual-rule-25",
@@ -297,7 +297,7 @@
 {
 "id": "5-8-p-ginas-de-clase",
 "title": "5.8 Class pages",
-"body": "Behavior of the premium Les Mills class pages and the regular class pages."
+"body": "The site has 51 class pages (7 premium Les Mills under `/clases/signature/` and 44 regular under `/clases/`), one per catalog class. Each shows the description, the clubs offering it with real schedules, and pre-marks the Q4 goal aligned with the class when the user starts the questionnaire from it. The matrices below define their exact behavior per user state."
 },
 {
 "id": "clase-premium-les-mills-matriz",
@@ -317,7 +317,7 @@
 {
 "id": "5-10-fitkidz",
 "title": "5.10 FitKidz",
-"body": "The children's hub and its specific buttons once the user has an identified club."
+"body": "FitKidz is the children's program hub: it absorbs the 34 kids' activities (organized by age, discipline and per-club availability; they have no individual pages) and pre-fills Q14 = «Yo y mis hijos» when the user starts the questionnaire from here. Its specific buttons — viewing the identified club's classes and the surfaced clubs with their three actions — are defined in the two rules below."
 },
 {
 "id": "botones-espec-ficos-rule-30",
@@ -612,7 +612,7 @@
 {
 "id": "12-m-tricas-y-experimentaci-n",
 "title": "12. Metrics and experimentation",
-"body": "The indicators that measure the site's success and how it is experimented on to improve them."
+"body": "The site's success is measured against the three business goals: organic traffic (80,000 → 160,000 visits/month), qualified leads (2x) and first-response time (<1 min via BES). This section defines the KPIs and their sources, where the lead-scoring logic lives, the progressive-profiling recommendation if questionnaire abandonment exceeds the threshold, and the A/B-testing status (not prioritized; components are built as swappable slots from the start)."
 },
 {
 "id": "12-1-kpis",
@@ -787,7 +787,7 @@
 {
 "id": "2-prescripciones-t-cnicas-acsm-por-subgrupo-no-user-facing",
 "title": "2. ACSM technical prescriptions by subgroup (not user-facing)",
-"body": "The detailed prescriptions (sets, reps, %1RM, rests, equipment and citations) per subgroup are documented in the two sub-sections below."
+"body": "Internal protocols for the individual-training subgroups: exact dosing (sets, reps, %1RM, rests), equipment and sources. **Not shown to the user** — the site presents only the official names and accessible copy; the trainer applies the protocol in the first session. Subject to the same medical-validation gate as the class matrix."
 },
 {
 "id": "entrenamiento-con-pesas-individual-acsm-position-stand-2026",
@@ -802,11 +802,6 @@
 {
 "id": "3-cat-logo-oficial-18-sub-clases-de-entrenamiento-individual",
 "title": "3. Official catalog — 18 sub-classes of individual training (`inferido` mappings pending client confirmation)",
-"body": "The three individual-training families and their 18 sub-classes, with their mapping to the Q4 goals and validation status, are detailed below."
-},
-{
-"id": "cat-logo-oficial-programas-de-entrenamiento-individual-3-blo",
-"title": "Official catalog — Individual training programs (3 blocks · 18 sub-classes)",
 "body": "Official client catalog. Three individual-training families; each with 6 sub-classes. They are delivered in Block 1 (strength), Block 2 (cardio) and a **new aquatic Block** (gated by Q6).\n\n**Block 1 — Strength and muscle development** (Block 1, Q4 mapping above):\n\n| Sub-class | Q4 objective | Mapping source |\n| --- | --- | --- |\n| Fuerza integral con pesas | Bajar de peso | clínico (existing detail) |\n| Rutina por grupos musculares | Mejorar mi estética corporal y definición muscular | clínico |\n| Desarrollo muscular progresivo | Aumentar masa muscular | clínico |\n| Potencia y velocidad | Mejorar mi desempeño atlético | clínico |\n| Fuerza de mantenimiento | Mejorar mi salud cardiovascular | clínico |\n| Fuerza guiada en máquinas | Recuperarme de una lesión o dolor crónico | clínico |\n\n**Block 2 — Cardio and endurance** (Block 2, Q4 mapping above; fine-tuned by Q5 pace and Q9 level):\n\n| Sub-class | Profile (Q4 · Q9) | Mapping source |\n| --- | --- | --- |\n| Cardio continuo moderado | Bajar de peso · principiante/intermedio | inferido |\n| Cardio moderado con intervalos | Estética · intermedio | inferido |\n| Cardio ligero de mantenimiento | Masa muscular / recuperación · cualquier nivel | inferido |\n| Intervalos intensos 4×4 | Desempeño atlético · avanzado (sin contraindicación cardiovascular) | inferido |\n| Base aeróbica 80/20 | Salud cardiovascular · intermedio/avanzado | inferido |\n| Recuperación activa de bajo impacto | Recuperación de lesión · cualquier nivel | inferido |\n\n**Aquatic Block — Aquatic training** (NEW; activates when Q6 = \"En la alberca\" or \"Ambas\" and the resolved club has a pool; see Rule 39 / pool edge case):\n\n| Sub-class | Profile (Q4, aquatic) | Mapping source |\n| --- | --- | --- |\n| Nado continuo moderado | Bajar de peso / salud cardiovascular | inferido |\n| Fuerza acuática con equipo | Estética / masa muscular | inferido |\n| Trote acuático por intervalos | Desempeño atlético / cardio | inferido |\n| Potencia y velocidad acuática | Desempeño atlético | inferido |\n| Fuerza combinada: agua y gimnasio | Q6 = \"Ambas\" (combines dry + water) | inferido |\n| Movilidad y recuperación acuática | Recuperarme de una lesión o dolor crónico | inferido |\n\n> **Pending confirmation (client):** the `inferido` mappings in Block 2 and the aquatic Block are a proposal based on name/intensity; Block 1 was already mapped. The aquatic Block introduces a dependency on Q6 — when \"En la alberca\" is chosen, the plan is built with these sub-classes instead of the dry Block 2; with \"Ambas\" it can combine (Fuerza combinada: agua y gimnasio)."
 },
 {
@@ -897,11 +892,6 @@
 {
 "id": "r14-lead-scoring-y-enrutamiento-crm-ventas-supuesto-validar-",
 "title": "R14 — Lead scoring and routing (CRM/sales; [ASSUMPTION, validate weights with data])",
-"body": "The lead scoring and routing logic (weights, thresholds, CRM/sales rules) is developed in the sub-section below; it defines no UI behavior."
-},
-{
-"id": "10-2-lead-scoring-y-enrutamiento-propuesta-supuesto-validar-",
-"title": "10.2 Lead scoring and routing (proposal — `[SUPUESTO, validar pesos]`)",
 "body": "| Signal (answer) | Points | \n|---|---|\n| Completes contact + booking | +40 |\n| Q4 = Bajar de peso / Masa muscular (high intent) | +20 |\n| Q10 = Viene de otro gimnasio | +15 |\n| Q19 defined change objective | +10 |\n| Q9 = Avanzado / Intermedio | +5 |\n| Only browsed, no booking | +0 |\n\n| Score | Routing |\n|---|---|\n| ≥ 60 | **Hot lead → Asesor + voice agent instantly** |\n| 30–59 | Standard booking + reminder |\n| < 30 | Email nurturing / retargeting |"
 }
 ]

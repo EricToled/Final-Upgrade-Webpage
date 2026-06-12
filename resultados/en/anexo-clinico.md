@@ -141,7 +141,7 @@ Canonical catalog **51 classes** (49 dry + 2 aquatic: AQUA ZUMBA, SWIM TRAINERS 
 | ZUMBA TONING | PI | ✓ | ✓ | — | — | ✓ | — |
 
 ## 2. ACSM technical prescriptions by subgroup (not user-facing)
-The detailed prescriptions (sets, reps, %1RM, rests, equipment and citations) per subgroup are documented in the two sub-sections below.
+Internal protocols for the individual-training subgroups: exact dosing (sets, reps, %1RM, rests), equipment and sources. **Not shown to the user** — the site presents only the official names and accessible copy; the trainer applies the protocol in the first session. Subject to the same medical-validation gate as the class matrix.
 
 
 ##### entrenamiento-con-pesas-individual (ACSM Position Stand 2026)
@@ -277,10 +277,8 @@ Ideal user profile: Advanced level · solid aerobic base (minimum 3 months of pr
 Cautions: Not suitable for beginners or intermediates without a base · contraindicated in cardiovascular condition (Q12) · contraindicated during pregnancy · high risk of muscle injury without adequate warm-up · space a minimum of 72 h between SIT sessions · monitor signs of overtraining (insomnia, chronic fatigue, elevated resting heart rate).
 
 ## 3. Official catalog — 18 sub-classes of individual training (`inferido` mappings pending client confirmation)
-The three individual-training families and their 18 sub-classes, with their mapping to the Q4 goals and validation status, are detailed below.
 
 
-##### Official catalog — Individual training programs (3 blocks · 18 sub-classes)
 
 Official client catalog. Three individual-training families; each with 6 sub-classes. They are delivered in Block 1 (strength), Block 2 (cardio) and a **new aquatic Block** (gated by Q6).
 

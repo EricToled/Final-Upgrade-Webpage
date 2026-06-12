@@ -136,7 +136,7 @@
 
 ## 1. Racionalidad del diseño
 
-Por qué existe este sitio, para quién, y por qué cada decisión de diseño es la que es.
+El sitio existe para convertir búsquedas de Google en visitas guiadas al club. Esta sección documenta esa cadena completa: la meta de negocio (duplicar el tráfico orgánico de 80,000 a 160,000 visitas mensuales y duplicar los leads cualificados), quiénes son los actores (los dos arquetipos CORE, el Asesor y BES), qué comportamiento medible se busca del usuario, y por qué cada decisión de producto — el cuestionario único adaptativo, el rojo reservado a conversión, la captura de contacto después del resultado — es la que es y no otra.
 
 ### 1.1 Cadena de razonamiento (Por qué → Quién → Qué → Cómo)
 
@@ -658,7 +658,7 @@ Cada subsección sigue el mismo orden: propósito · comportamiento · contenido
 
 ### 5.1 Header global
 
-El encabezado fijo presente en todas las páginas y su comportamiento responsivo.
+El header está fijo en la parte superior de las 155 páginas y concentra las tres rutas paralelas del sitio (Tu Sports World · Diseña tu experiencia · Pregúntale a BES) más la única acción de conversión («Agenda tu visita», botón rojo). Su estructura desktop, su colapso a dos filas en móvil, el comportamiento del CTA y su conducta al hacer scroll se definen en las cuatro reglas siguientes.
 
 #### Estructura desktop (Rule 1)
 
@@ -698,7 +698,7 @@ El header permanece anclado en la parte superior de la pantalla mientras el usua
 
 ### 5.2 Panel lateral «Tu Sports World»
 
-El panel de navegación que reúne los 8 hubs principales del sitio.
+«Tu Sports World» es el único punto de navegación estructural del sitio: un panel lateral que reúne los 8 hubs principales (clubes, clases, amenidades, perfiles, bajar de peso, FitKidz, membresías y diario). Los tres elementos de acción del header no se duplican dentro de él — cada pieza de navegación vive en exactamente un lugar. Su contenido y su comportamiento (apertura, cierre, animación, teclado) se definen en las dos reglas siguientes.
 
 #### Contenido (Rule 4)
 
@@ -728,7 +728,7 @@ Los tres elementos del header — «Diseña tu experiencia», «Pregúntale a BE
 
 ### 5.3 BES — asistente conversacional global
 
-El widget de chat presente en todas las páginas y lo que puede y no puede hacer.
+BES («Pregúntale a BES») es el asistente conversacional del sitio: un widget flotante presente en las 155 páginas que responde preguntas operativas (horarios, precios, clases, membresías), agenda visitas y conoce el contexto de la página donde se abre. Tiene límites deliberados — no ejecuta cancelaciones ni responde preguntas profundas de salud — y un alcance acotado de WhatsApp (solo recordatorios de visita). Las tres reglas siguientes definen el widget, sus límites y ese alcance.
 
 #### Widget global (Rule 3)
 
@@ -757,7 +757,7 @@ BES se entrega como proyecto aparte con su propia especificación; este document
 
 ### 5.4 Menú contextual (recomendaciones, no menús)
 
-Los botones de acción que aparecen dentro del cuerpo de cada página según el estado del usuario.
+El usuario no ve menús: ve recomendaciones. El menú contextual es el conjunto de botones de acción dentro del cuerpo de cada página, y cambia en función de tres ejes: el estado del cuestionario (sin completar / completo), la página por la que llega, y el club resuelto. «Agenda tu visita guiada» aparece siempre; el resto de los botones obedece a las reglas siguientes.
 
 #### Qué es el menú contextual (Rule 25)
 
@@ -885,7 +885,7 @@ Si el catálogo del nuevo club no puede producir un conjunto viable para el Bloq
 
 ### 5.8 Páginas de clase
 
-Comportamiento de las páginas de las clases Les Mills premium y de las clases regulares.
+El sitio tiene 51 páginas de clase (7 Les Mills premium en `/clases/signature/` y 44 regulares en `/clases/`), una por clase del catálogo. Cada una muestra la descripción, los clubes que la ofrecen con horarios reales, y pre-marca el objetivo Q4 alineado a la clase cuando el usuario inicia el cuestionario desde ella. Las matrices siguientes definen su comportamiento exacto por estado del usuario.
 
 #### Clase premium Les Mills — matriz
 
@@ -927,7 +927,7 @@ Aplica a los 5 hubs (Primeros Pasos, Salud y Bienestar, Estética corporal, Gana
 
 ### 5.10 FitKidz
 
-El hub infantil y sus botones específicos cuando el usuario tiene un club identificado.
+FitKidz es el hub del programa infantil: absorbe las 34 actividades para niños (organizadas por edad, disciplina y disponibilidad por club; no tienen páginas individuales) y pre-llena Q14 = «Yo y mis hijos» cuando el usuario inicia el cuestionario desde aquí. Sus botones específicos — ver las clases del club identificado y los clubes propuestos con sus tres acciones — se definen en las dos reglas siguientes.
 
 #### Botones específicos (Rule 30)
 
@@ -1559,7 +1559,7 @@ Estas preguntas BLOQUEAN el gate médico (F11) y deben resolverse con Sports Wor
 
 ## 12. Métricas y experimentación
 
-Los indicadores con los que se mide el éxito del sitio y cómo se experimenta para mejorarlos.
+El éxito del sitio se mide contra las tres metas de negocio: tráfico orgánico (80,000 → 160,000 visitas/mes), leads cualificados (2x) y tiempo de primera respuesta (<1 min vía BES). Esta sección define los KPIs y sus fuentes, dónde vive la lógica de lead scoring, la recomendación de perfilado progresivo si el abandono del cuestionario supera el umbral, y el estado del A/B testing (no priorizado; los componentes se construyen como slots intercambiables desde ahora).
 
 ### 12.1 KPIs
 

@@ -12,10 +12,8 @@
 Spec requirement: no Qn code reaches the user. Reference implementation (prototype): `stripQCodes` with regex over "(Qn)", " en Qn", " para Qn", " según Qn", "Qn" + whitespace collapsing; recursive `sanitize()` over strings/arrays/objects of the parsed JSON.
 
 ## R14 — Lead scoring and routing (CRM/sales; [ASSUMPTION, validate weights with data])
-The lead scoring and routing logic (weights, thresholds, CRM/sales rules) is developed in the sub-section below; it defines no UI behavior.
 
 
-### 10.2 Lead scoring and routing (proposal — `[SUPUESTO, validar pesos]`)
 
 | Signal (answer) | Points | 
 |---|---|
