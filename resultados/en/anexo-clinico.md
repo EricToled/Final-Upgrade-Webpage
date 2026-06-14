@@ -144,7 +144,7 @@ Canonical catalog **51 classes** (49 dry + 2 aquatic: AQUA ZUMBA, SWIM TRAINERS 
 Internal protocols for the individual-training subgroups: exact dosing (sets, reps, %1RM, rests), equipment and sources. **Not shown to the user** — the site presents only the official names and accessible copy; the trainer applies the protocol in the first session. Subject to the same medical-validation gate as the class matrix.
 
 
-##### entrenamiento-con-pesas-individual (ACSM Position Stand 2026)
+### entrenamiento-con-pesas-individual (ACSM Position Stand 2026)
 
 Strength — URL slug: /entrenamiento-con-pesas-individual/fuerza
 
@@ -210,7 +210,7 @@ Ideal user profile: Absolute beginners · users returning after a long break (Q1
 
 Cautions: Verify basic technique before increasing volume · if there is acute pain, refer to supervised Personal Training instead of individual · pregnant women should consult before starting.
 
-##### entrenamiento-aerobico-individual (ACSM/ESSA Joint Statement 2024)
+### entrenamiento-aerobico-individual (ACSM/ESSA Joint Statement 2024)
 
 LISS — Low-Intensity Steady State — URL slug: /entrenamiento-aerobico-individual/liss
 

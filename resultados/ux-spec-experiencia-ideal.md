@@ -682,9 +682,12 @@ Las etiquetas se acortan según el ancho disponible:
 
 | Ancho de pantalla | Etiquetas mostradas |
 | --- | --- |
-| ≥ 1024 px (desktop) | Tu Sports World • Diseña tu experiencia • Pregúntale a BES |
-| 480–1023 px (tablet / móvil grande) | `[POR DEFINIR — diseño: etiquetas acortadas]` |
-| < 480 px (móvil chico) | `[POR DEFINIR — diseño: íconos o etiquetas mínimas]` |
+| ≥ 1024 px (desktop) | Tu Sports World • Diseña tu experiencia • Pregúntale a BES (texto completo) |
+| 768–1023 px (tablet) | Texto completo en una sola franja; si no cabe, abreviar a: Tu Sports World • Diseña tu experiencia • BES |
+| 480–767 px (móvil grande) | Ícono + texto: ☰ Menú • ✦ Diseña tu experiencia • 💬 BES (la franja puede hacer scroll horizontal antes que truncar) |
+| < 480 px (móvil chico) | Solo íconos con `aria-label`: ☰ (Tu Sports World) • ✦ (Diseña tu experiencia) • 💬 (BES). El botón rojo «Agenda tu visita» permanece visible con texto en la fila 1 |
+
+> El botón de conversión «Agenda tu visita» **nunca** se reduce a ícono: es la acción primaria y conserva su etiqueta en todos los anchos (Rule 6). Cada ícono lleva `aria-label` con su nombre completo para lectores de pantalla.
 
 #### CTA del header «Agenda tu visita» (Rule 6)
 
@@ -1259,7 +1262,27 @@ Navegación: "← Volver" regresa a la fase de resultado; "Continuar" se muestra
 - `schedule`: selección de día/hora; "Volver" regresa a `contact_capture`.
 - `briefing`: brief del asesor (10 secciones, 5 generadas por el LLM) con banderas de seguridad. Detalle en el Apéndice G.
 
----
+### 5.20 Comportamiento responsive por pantalla (celular · tablet · desktop)
+
+El sitio es **mobile-first**: la columna "Celular" es la base; "Tablet" y "Desktop" son mejoras progresivas. Breakpoints únicos (tokens `DESIGN.md`): móvil 360 · tablet 768 · laptop 1024 · desktop 1440. Contenedor de contenido: ancho fluido al 100% en celular (padding 16px), centrado con máximo **1200px** desde laptop (padding 24px). Esta tabla fija el **reflow** (qué se apila, en cuántas columnas, dónde va la navegación y el CTA); la composición visual fina la resuelve el equipo de diseño dentro de estos tokens.
+
+| Pantalla / componente | Celular (<768px) | Tablet (768–1023px) | Desktop (≥1024px) |
+| --- | --- | --- | --- |
+| **Header** (Rule 1/2) | 2 filas: logo + «Agenda tu visita» (fila 1, 56px) · franja Tu Sports World/Diseña/BES con íconos (fila 2, 44px) | 2 filas, etiquetas abreviadas | 1 fila, 5 elementos con texto completo |
+| **Panel «Tu Sports World»** | Pantalla completa, abre al tocar, cierre con «X» | Pantalla completa o panel ancho | Panel 560px, abre en hover |
+| **BES** (Rule 3) | Botón flotante ↘; panel de chat a **pantalla completa** | Panel completo o lateral | Botón flotante ↘; panel lateral **420px** |
+| **Hub SEO / páginas de contenido** (club, clase, objetivo, FitKidz, PT, diario, membresías) | 1 columna; hero apilado (imagen sobre texto); listados en tarjetas a 1 columna; CTA «Diseña tu experiencia» **fijo al pie** (sticky) | 2 columnas en listados; hero a 1 columna | Grid de 12 col., contenedor 1200px; listados 2–3 col.; CTA en el flujo del hero |
+| **Cuestionario** (1 paso por pantalla) | Ancho completo; 1 pregunta visible; opciones apiladas a ancho completo (target ≥44px); barra de progreso fija arriba; «Continuar» fijo al pie | Tarjeta centrada ~600px; opciones en 1–2 col. según largo | Tarjeta centrada máx ~720px; opciones en 2 col. cuando son cortas; «Continuar» bajo la tarjeta |
+| **Resultado — Experiencia Ideal** | Todo en **1 columna**: 4 tarjetas resumen en grid **2×2**; Club Ideal apilada; **3 bloques apilados** (01→02→03); sección de seguridad debajo; banner CTA **sticky al pie** | 4 tarjetas resumen 2×2 o 4-up; bloques en 1–2 col. | 4 tarjetas resumen **4-up**; **3 bloques en grid de 3 columnas**; Club Ideal a ancho de contenido; CTA en el flujo |
+| **Captura de contacto** | Campos a ancho completo, apilados; validación inline; «Continuar» fijo al pie | Formulario centrado ~480px | Formulario centrado ~480px |
+| **Agenda (`schedule`)** | Selector de día/hora a ancho completo (lista vertical o carrusel de fechas); 1 columna | Calendario/horarios en 2 col. | Calendario + horarios lado a lado |
+
+**Reglas transversales responsive:**
+- **CTA primario siempre alcanzable:** en celular, «Agenda tu visita guiada» / «Continuar» van fijos al pie (sticky) para quedar siempre a un toque; en desktop viven en el flujo de la página.
+- **Sin dependencia de hover:** todo lo que en desktop se abre con hover (panel lateral) abre con tap en celular/tablet (Rule 5).
+- **Objetivos táctiles ≥44×44px** en celular y tablet (§8).
+- **Imágenes responsivas** (AVIF/WebP con `srcset`) sirviendo el tamaño correcto por breakpoint para cumplir LCP en celular.
+- **Core Web Vitals se miden en celular** (criterio de aceptación §11): es el viewport que gobierna el ranking.
 
 ---
 

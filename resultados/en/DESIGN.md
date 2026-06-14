@@ -1,7 +1,7 @@
 ---
 meta:
   product: "Sports World — Experiencia Ideal"
-  source: "sw_experiencia_ideal_demo_v6_FINAL.jsx"
+  source: "experiencia-ideal-v5 source-of-truth package"
   lang: "es-MX"
 tokens:
   color:
@@ -90,7 +90,16 @@ This document **does not impose the graphic design**. Creating the visual option
 | The verbatim **copy** and brand voice | Composition, photography and illustration |
 | The **premium style guidelines** (below) as the approval bar | The proposals that meet those guidelines |
 
-> Therefore, everything "visual" that appears in the spec (the per-screen *visual architecture v6* and **Appendix F HTML/CSS**) is a **NON-binding illustrative reference**, derived from the reference prototype, to convey intent and semantics — **not** a design to copy. What is binding is: tokens (brand + accessibility) + content structure + these premium guidelines.
+> Therefore, everything "visual" that appears in the spec (the per-screen *visual architecture v6* and **Apéndice F HTML/CSS**) is a **NON-binding illustrative reference**, derived from the reference prototype, to convey intent and semantics — **not** a design to copy. What is binding is: tokens (brand + accessibility) + content structure + these premium guidelines.
+
+## Normative design hierarchy
+
+This document governs tokens, contrast, visual accessibility and premium guidelines. It does not govern behavior, flows, clinical rules, CRM or prompts. If there is tension between documents:
+
+- `ux-spec-experiencia-ideal.md` decides behavior, states, information architecture and content structure.
+- `DESIGN.md` decides visual constraints, tokens and premium quality criteria.
+- The prototype `sw_experiencia_ideal_demo_v6_FINAL.jsx` is historical visual/functional reference, not a normative source.
+- Any final high-fidelity composition must satisfy this file and the UX Spec; if it does not satisfy both, it is not ready for handoff.
 
 ## Premium style guidelines (the bar we are aiming for)
 
@@ -132,7 +141,7 @@ Each piece of content has exactly one authoritative copy (duplicating it across 
 | Content | Lives in |
 | --- | --- |
 | Complete Brand Voice Guide (vocabularies, rules, hooks, prompt prohibitions) | `anexo-contenido-prompts.md` |
-| Visual architecture v6 of the result page (authoritative content structure; HTML/CSS = **non-binding illustrative** reference, see «Scope» above) | `ux-spec-experiencia-ideal.md`, Appendix F |
+| Visual architecture v6 of the result page (authoritative content structure; HTML/CSS = **non-binding illustrative** reference, see «Scope» above) | `ux-spec-experiencia-ideal.md`, Apéndice F |
 | Contraindication matrix + profiles + 18 sub-classes | `anexo-clinico.md` (MD gate) |
 | LLM parameters, sanitization, lead scoring | `anexo-ingenieria-crm.md` |
 | Behavior (rules, matrices, edge cases, flow) | `ux-spec-experiencia-ideal.md` |
