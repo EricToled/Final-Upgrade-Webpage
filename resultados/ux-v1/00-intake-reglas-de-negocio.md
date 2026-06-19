@@ -12,8 +12,8 @@ Leyenda de prioridad: 🔴 bloqueante para empezar el spec · 🟠 importante ·
 
 > Nota: los KPIs/metas **no bloquean** el spec; se definen **tras la auditoría**. Hasta entonces, `[POR DEFINIR — tras auditoría]`.
 
-1. 🟡 ¿Cuál es la **meta primaria** del sitio, en términos SMART (cifra + plazo)? — *Respuesta:* `[POR DEFINIR — tras auditoría]`
-2. 🟡 ¿Cuáles son las **metas secundarias** (p. ej. leads cualificados, tiempo de respuesta)? — *Respuesta:* `[POR DEFINIR — tras auditoría]`
+1. 🟡 ¿Cuál es la **meta primaria** del sitio, en términos SMART (cifra + plazo)? — *Respuesta:* Tráfico orgánico non-branded a 120k–160k/mes y cobertura unbranded 55–65% (RN-D1-01/02), en 10–14 semanas (RN-meta-01). Se reafirma tras auditoría.
+2. 🟡 ¿Cuáles son las **metas secundarias** (p. ej. leads cualificados, tiempo de respuesta)? — *Respuesta:* +40k–80k visitas incrementales/mes, "perder peso" 50–100 en Top 10, amenidades 350–500 en Top 10, 49+ club pages indexadas, revenue base ≈ $56.4M MXN (RN-D1-03..08).
 3. 🟠 ¿Cuál es el **punto de partida** actual de cada métrica (tráfico, leads/mes, tasa de cierre, tiempo de respuesta)? — *Respuesta:*
 4. 🟠 ¿Cómo se define un **«lead cualificado»** para este negocio? — *Respuesta:*
 5. 🟡 ¿Qué herramientas de medición se usan (analítica, CRM, etc.)? — *Respuesta:*
@@ -27,7 +27,7 @@ Leyenda de prioridad: 🔴 bloqueante para empezar el spec · 🟠 importante ·
 
 ## D3 · Hechos confirmados del negocio (catálogo)
 
-10. 🔴 Número de **clubes** y su distribución geográfica. — *Respuesta:*
+10. 🔴 Número de **clubes** y su distribución geográfica. — *Respuesta:* 49+ clubes (RN-D3-01). Distribución geográfica `[POR DEFINIR]`.
 11. 🔴 Catálogo de **clases para adultos** (cuántas, categorías). — *Respuesta:*
 12. 🟠 Programa **infantil** (existe, cuántas actividades, disponibilidad por club). — *Respuesta:*
 13. 🟠 **Amenidades** ofrecidas y cuáles son diferenciadores. — *Respuesta:*
@@ -36,7 +36,7 @@ Leyenda de prioridad: 🔴 bloqueante para empezar el spec · 🟠 importante ·
 
 ## D4 · Arquitectura de información y navegación
 
-16. 🔴 ¿Qué **tipos de página** existen y cuántas de cada uno (inventario)? — *Respuesta:*
+16. 🔴 ¿Qué **tipos de página** existen y cuántas de cada uno (inventario)? — *Respuesta:* (parcial) Páginas de club: 49+ (RN-D4-05). Hubs de amenidad: 392 — Yoga, Box, Alberca, Spinning, etc. (RN-D4-06). Resto del inventario `[POR DEFINIR]`.
 17. 🔴 ¿Cómo se **mapea una búsqueda externa** (Google) a la página de aterrizaje correcta? — *Respuesta:*
 18. 🟠 ¿Cuál es la **jerarquía de navegación** y el menú estructural principal? — *Respuesta:*
 19. 🟠 Reglas de **enlazado interno** (anti-huérfanos, páginas relacionadas). — *Respuesta:*
