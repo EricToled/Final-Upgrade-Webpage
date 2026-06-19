@@ -10,8 +10,10 @@ Leyenda de prioridad: 🔴 bloqueante para empezar el spec · 🟠 importante ·
 
 ## D1 · Negocio, metas y métricas
 
-1. 🔴 ¿Cuál es la **meta primaria** del sitio, en términos SMART (cifra + plazo)? — *Respuesta:*
-2. 🔴 ¿Cuáles son las **metas secundarias** (p. ej. leads cualificados, tiempo de respuesta)? — *Respuesta:*
+> Nota: los KPIs/metas **no bloquean** el spec; se definen **tras la auditoría**. Hasta entonces, `[POR DEFINIR — tras auditoría]`.
+
+1. 🟡 ¿Cuál es la **meta primaria** del sitio, en términos SMART (cifra + plazo)? — *Respuesta:* `[POR DEFINIR — tras auditoría]`
+2. 🟡 ¿Cuáles son las **metas secundarias** (p. ej. leads cualificados, tiempo de respuesta)? — *Respuesta:* `[POR DEFINIR — tras auditoría]`
 3. 🟠 ¿Cuál es el **punto de partida** actual de cada métrica (tráfico, leads/mes, tasa de cierre, tiempo de respuesta)? — *Respuesta:*
 4. 🟠 ¿Cómo se define un **«lead cualificado»** para este negocio? — *Respuesta:*
 5. 🟡 ¿Qué herramientas de medición se usan (analítica, CRM, etc.)? — *Respuesta:*
