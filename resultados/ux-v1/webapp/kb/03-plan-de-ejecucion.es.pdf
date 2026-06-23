@@ -1,0 +1,580 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Pages /Count 6 /Kids [11 0 R 12 0 R 13 0 R 14 0 R 15 0 R 16 0 R] >>
+endobj
+5 0 obj
+<< /Length 4638 >>
+stream
+BT
+/F2 17.00 Tf
+1 0 0 1 54.00 701.00 Tm (Sports World México · Plan de Ejecución · V1.0) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 662.06 Tm (Estructura del equipo, el cronograma de ocho semanas, las) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 644.24 Tm (dependencias con Sports World y el servidor) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 622.42 Tm ([§— ¶1 p.1] Documento fundacional. Describe cómo se construye la experiencia, desde el primer) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 608.56 Tm (día hasta el lanzamiento, en ocho semanas: qué se construye, la estructura del equipo, el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 594.70 Tm (cronograma semana a semana, los puntos precisos en los que se requiere al equipo de sistemas de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 580.84 Tm (Sports World —reducidos deliberadamente al mínimo— y el servidor en el que opera. Se lee por sí) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 566.98 Tm (solo.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 533.12 Tm (1 · Qué se está construyendo, en paralelo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 511.30 Tm ([§1 ¶2 p.1] El proyecto entrega cuatro cosas a la vez, ejecutadas por cuatro equipos coordinados) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 497.44 Tm (a lo largo de las mismas ocho semanas:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 479.58 Tm ([§1 ¶3 p.1] •  El sitio web — un sitio rápido y optimizado para búsqueda, construido a partir) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 465.72 Tm (de plantillas de diseño aprobadas: el home, una página para cada uno de los 49 clubes, los) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 451.86 Tm (hubs de amenidades y objetivos, y el flujo de experiencia ideal que convierte a un visitante) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 438.00 Tm (anónimo en un lead calificado y agendado. El inventario completo de páginas está en) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 424.14 Tm (02-site-architecture.md.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 408.28 Tm ([§1 ¶4 p.1] •  La base de SEO y el contenido escrito — la estrategia de búsqueda y todo el) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 394.42 Tm (contenido escrito optimizado que el sitio necesita para posicionar, además de la creación y) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 380.56 Tm (optimización de las 49 fichas de Google Business \(una por club\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 364.70 Tm ([§1 ¶5 p.1] •  El contenido visual a escala — todas las imágenes de cada club y página,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 350.84 Tm (producidas en masa a través de la aplicación a la medida \(03-technical-strategy.md, §4\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 334.98 Tm ([§1 ¶6 p.1] •  BES, el agente de voz y texto con IA — el agente conversacional en teléfono y) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 321.12 Tm (chat/WhatsApp, conectado a la misma lógica de club/clase y a la misma captación de leads que) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 307.26 Tm (el sitio web \(03-technical-strategy.md, §5\).) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 289.40 Tm ([§1 ¶7 p.1] Estas cuatro áreas son interdependientes: el sitio necesita el contenido y las) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 275.54 Tm (imágenes; el contenido necesita la estructura del sitio; las imágenes necesitan los diseños) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 261.68 Tm (\(layouts\); y BES necesita la misma lógica que usa el sitio para que un prospecto obtenga la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 247.82 Tm (misma respuesta por cualquier vía. Se ejecutan en paralelo, con puntos de control compartidos,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 233.96 Tm (bajo un único coordinador general.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 200.10 Tm (2 · Estructura del equipo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 178.28 Tm ([§2 ¶8 p.1] El proyecto se ejecuta con cuatro equipos, cada uno con un líder, todos coordinados) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 164.42 Tm (por un único líder general del proyecto.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 146.56 Tm ([§2 ¶9 p.1] •  Líder general del proyecto. Coordina los cuatro equipos, es responsable del) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 132.70 Tm (cronograma maestro, ejecuta los puntos de control, gestiona las dependencias con Sports World) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 118.84 Tm (y es el punto único de contacto con la dirección de Sports World. Asegura que el contenido,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 104.98 Tm (el código, las imágenes y BES converjan en un mismo lanzamiento y le cuenten a los prospectos) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 91.12 Tm (una sola historia coherente en cada canal.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 75.26 Tm ([§2 ¶10 p.1] •  Equipo 1 — Diseño y desarrollo web \(a partir de plantillas\). Es responsable) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 61.40 Tm (de la construcción del sitio web y de su estándar de calidad. Construye el home, las 49) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Plan de Ejecución  ·  pág. 1 de 6) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Length 5557 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 68.00 723.50 Tm (páginas de club, los hubs y el flujo de experiencia ideal, utilizando la tecnología, el flujo) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 709.64 Tm (de trabajo asistido por IA y las compuertas de seguridad de 03-technical-strategy.md. Integra) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 695.78 Tm (la API del CRM y los datos de club/clase.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 679.92 Tm ([§2 ¶11 p.2] •  Equipo 2 — Estrategia de SEO y contenido escrito. Es responsable de la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 666.06 Tm (estrategia de búsqueda y de la calidad del contenido. Define la estrategia de palabras clave) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 652.20 Tm (y de contenido, produce y revisa todo el contenido optimizado, genera el marcado de datos) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 638.34 Tm (estructurados y crea y optimiza las 49 fichas de Google Business.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 622.48 Tm ([§2 ¶12 p.2] •  Equipo 3 — Contenido visual a escala. Es responsable de la identidad visual y) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 608.62 Tm (del pipeline de producción. Construye y opera la aplicación a la medida que aplica un estilo) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 594.76 Tm (artístico consistente y la resolución correcta, produciendo el contenido visual en masa para) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 580.90 Tm (los 49 clubes y las páginas de apoyo.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 565.04 Tm ([§2 ¶13 p.2] •  Equipo 4 — BES, el agente de voz y texto. Es responsable del agente) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 551.18 Tm (conversacional en voz y texto. Construye, configura y prueba BES, conectándolo a la misma) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 537.32 Tm (lógica de club/clase y a la misma captación de leads en el CRM que el sitio web, afinándolo) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 523.46 Tm (para una conversación natural en español de México y estableciendo un traspaso limpio al) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 509.60 Tm (personal humano. Conecta BES al número telefónico y al número de WhatsApp que Sports World) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 495.74 Tm (proporciona.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 477.88 Tm ([§2 ¶14 p.2] Los equipos no son silos. El líder general del proyecto ejecuta puntos de control) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 464.02 Tm (breves y periódicos donde los cuatro líderes se sincronizan sobre las dependencias compartidas,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 450.16 Tm (y el cronograma de la §3 secuencia el trabajo para que estos traspasos ocurran en el orden) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 436.30 Tm (correcto.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 402.44 Tm (3 · El cronograma de ocho semanas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 380.62 Tm ([§3 ¶15 p.2] El cronograma corre de la Semana 1 a la Semana 8. Los cuatro equipos trabajan en) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 366.76 Tm (paralelo, con las dependencias de Sports World adelantadas \(front-loaded\) para que nada quede) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 352.90 Tm (esperándolas más adelante.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 333.04 Tm ([§3 ¶16 p.2] Semana 1 — Cimientos y arranque de dependencias. Líder del proyecto: confirmar los) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 319.18 Tm (detalles de la API del CRM, la fuente de datos de club/clase y el acceso a teléfono/WhatsApp) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 305.32 Tm (para BES y —de manera crítica— iniciar de inmediato la titularidad y verificación de la cuenta) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 291.46 Tm (de Google Business, porque es el camino más largo. Equipo web: levantar el proyecto, el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 277.60 Tm (framework, los tokens de diseño de marca y las plantillas base; establecer las compuertas de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 263.74 Tm (seguridad. Equipo SEO: finalizar la estrategia de palabras clave y de contenido, definir las) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 249.88 Tm (estructuras de página y comenzar la preparación de las fichas de Google Business. Equipo visual:) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 236.02 Tm (construir la aplicación a la medida, fijar el estilo artístico contra la marca, ejecutar el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 222.16 Tm (primer lote de prueba. Equipo BES: seleccionar los componentes de voz y texto frente a los) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 208.30 Tm (requisitos de español de México y de latencia, levantar un primer esqueleto funcional del agente) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 194.44 Tm (y diseñar la conversación \(qué pregunta, responde y cuándo traspasa BES\).) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 174.58 Tm ([§3 ¶17 p.2] Semana 2 — Primeras páginas pilar y pipelines en marcha. Equipo web: construir el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 160.72 Tm (home, una página de club y un hub como los "pilares" aprobados que fijan el patrón. Equipo SEO:) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 146.86 Tm (producir la primera ola de contenido optimizado para los pilares; enviar las fichas de Google) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 133.00 Tm (Business a verificación. Equipo visual: producir el primer set completo de imágenes para los) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 119.14 Tm (pilares. Equipo BES: lograr que BES sostenga una conversación básica de extremo a extremo en voz) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 105.28 Tm (y texto, usando la misma lógica de club/clase; primeras llamadas y chats de prueba internos.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 91.42 Tm (Punto de control: Sports World revisa y aprueba las páginas pilar —apariencia, contenido,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 77.56 Tm (imágenes— y una primera conversación de BES, antes de replicar los patrones.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Plan de Ejecución  ·  pág. 2 de 6) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Length 5659 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm ([§3 ¶18 p.3] Semanas 3–4 — Escalar la construcción. Equipo web: replicar los patrones aprobados) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm (a las 49 páginas de club y a los hubs; integrar la API del CRM para la captación de leads y los) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 695.78 Tm (datos de club/clase para la recomendación. Equipo SEO: producir el grueso del contenido por club) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 681.92 Tm (y de hub; seguir optimizando las fichas conforme superan la verificación. Equipo visual:) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 668.06 Tm (producir las imágenes para los 49 clubes a escala. Equipo BES: conectar BES a la captación de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 654.20 Tm (leads \(la misma API del CRM que el sitio\) y a los canales de teléfono y WhatsApp; ampliar su) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 640.34 Tm (cobertura de preguntas comunes; refinar el traspaso a humano. Punto de control \(fin de la Semana) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 626.48 Tm (4\): aproximadamente la mitad de las páginas de producción completas y revisadas; el flujo de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 612.62 Tm (captación de leads funcionando de extremo a extremo contra la API del CRM —tanto desde el sitio) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 598.76 Tm (web como desde BES.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 578.90 Tm ([§3 ¶19 p.3] Semanas 5–6 — Completar la producción e integrar. Equipo web: terminar las páginas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 565.04 Tm (restantes y el flujo completo de experiencia ideal; completar la integración de datos; endurecer) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 551.18 Tm (el rendimiento y la accesibilidad. Equipo SEO: completar los artículos de apoyo, finalizar los) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 537.32 Tm (datos estructurados, completar la optimización de Google Business. Equipo visual: completar y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 523.46 Tm (colocar todas las imágenes restantes. Equipo BES: terminar la cobertura completa de conversación) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 509.60 Tm (de BES; afinar la calidad de voz y la velocidad de respuesta; probar con distintos acentos y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 495.74 Tm (casos límite; confirmar que los leads de BES llegan al CRM de forma idéntica a los leads web.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 481.88 Tm (Punto de control \(fin de la Semana 6\): todas las páginas completas; sitio completo revisable en) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 468.02 Tm (un enlace de vista previa; BES manejando conversaciones reales de extremo a extremo en ambos) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 454.16 Tm (canales.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 434.30 Tm ([§3 ¶20 p.3] Semana 7 — Pase completo de calidad y congelamiento previo al lanzamiento. Todos) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 420.44 Tm (los equipos: un pase completo de calidad —rendimiento, accesibilidad, preparación para búsqueda,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 406.58 Tm (exactitud del contenido, consistencia visual, el flujo de captación de leads contra el CRM real) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 392.72 Tm (y BES en voz y texto. Equipo web: preparar el lanzamiento —el plan de cambio de DNS y el plan de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 378.86 Tm (redirecciones para que no se pierda ningún posicionamiento de búsqueda existente. También es) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 365.00 Tm (cuando se corre la prueba de carga del servidor \(§5\). Punto de control: Sports World da el visto) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 351.14 Tm (bueno al sitio congelado y listo para lanzar y al agente BES.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 331.28 Tm ([§3 ¶21 p.3] Semana 8 — Lanzamiento. Líder del proyecto y equipo web: ejecutar el lanzamiento) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 317.42 Tm (con Sports World —apuntar el dominio al nuevo sitio, enviar las páginas a Google y confirmar que) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 303.56 Tm (todo está en vivo y medido. Equipo BES: poner a BES en vivo en teléfono y WhatsApp junto con el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 289.70 Tm (sitio. Todos los equipos: monitorear los primeros días; confirmar que las fichas de Google) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 275.84 Tm (Business y los datos estructurados son reconocidos; confirmar que los leads fluyen correctamente) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 261.98 Tm (al CRM tanto desde el sitio como desde BES. Entrega: Sports World recibe un sitio funcional,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 248.12 Tm (medido y optimizado para búsqueda y un agente BES en vivo, con todo el contenido, el código y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 234.26 Tm (las imágenes entregados.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 214.40 Tm ([§3 ¶22 p.3] El único riesgo de cronograma a vigilar. La verificación de las fichas de Google) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 200.54 Tm (Business \(§4.3\) la controla Google, no el proyecto. Se inicia en la Semana 1 precisamente porque) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 186.68 Tm (puede tardar semanas. Si la verificación de Google se alarga, las fichas podrían finalizarse) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 172.82 Tm (cerca del lanzamiento —pero como todo el resto del proyecto es independiente de ella, esto no) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 158.96 Tm (detiene el sitio web ni el contenido. Es la única dependencia que el líder del proyecto sigue) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 145.10 Tm (más de cerca.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 111.24 Tm (4 · Dónde se requiere al equipo de sistemas de Sports World) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 93.42 Tm (\(reducido al mínimo\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 71.60 Tm ([§4 ¶23 p.3] El plan está diseñado para que la participación técnica interna de Sports World sea) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Plan de Ejecución  ·  pág. 3 de 6) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Length 5142 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm (pequeña y concentrada. El equipo de entrega construye por su cuenta todo lo que puede. A) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm (continuación está la lista completa de lo que genuinamente se necesita —no hay nada requerido) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 695.78 Tm (más allá de esto.) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 668.92 Tm (4.1 La única dependencia central: la API del CRM) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 648.74 Tm ([§4.1 ¶24 p.4] El único supuesto sobre el que descansa el plan es que Sports World proporciona) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 634.88 Tm (una API para su sistema de clientes \(CRM\). El equipo necesita la forma de conectarse \(endpoint y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 621.02 Tm (credenciales, entregadas de manera segura —nunca por correo electrónico en texto plano\) y la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 607.16 Tm (instrucción para una operación: crear \(o actualizar\) un lead calificado, con los campos que) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 593.30 Tm (lleva \(nombre, teléfono, email, el perfil, el club elegido, la visita agendada\). La operación es) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 579.44 Tm (idempotente por sesión: si el prospecto modifica la cita y la vuelve a confirmar, se actualiza) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 565.58 Tm (el mismo registro en lugar de duplicarlo \(ver 01-experience-architecture.md, §5.2\). Esta es la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 551.72 Tm (única escritura en tiempo real que hace la experiencia; con ella disponible, todo el flujo de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 537.86 Tm (captación de leads se construye sin más participación interna.) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 511.00 Tm (4.2 Acceso de lectura a los datos de clubes y clases) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 490.82 Tm ([§4.2 ¶25 p.4] Para recomendar el club y las clases correctas, la experiencia necesita) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 476.96 Tm (información actual de clubes y clases. El equipo necesita una de las siguientes opciones, en) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 463.10 Tm (orden de preferencia: \(1\) una API de lectura o feed de datos para detalles de clubes, amenidades) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 449.24 Tm (y catálogo/horarios de clases —ideal, porque mantiene el sitio automáticamente al día; o \(2\) si) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 435.38 Tm (no existe una API, una exportación estructurada \(una hoja de cálculo bien formada o un archivo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 421.52 Tm (de datos\) de la misma información, actualizada en un calendario acordado. En cualquier caso, el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 407.66 Tm (equipo se encarga de la integración; el rol de Sports World es exponer o proporcionar los datos,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 393.80 Tm (no construir nada.) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 366.94 Tm (4.3 Titularidad en Google para las 49 fichas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 346.76 Tm ([§4.3 ¶26 p.4] Esta es la dependencia con la restricción más honesta, señalada con anticipación) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 332.90 Tm (porque tiene un tiempo de espera real. Google no permite que se creen automáticamente fichas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 319.04 Tm (completamente nuevas a través de sus herramientas. Crear y verificar 49 fichas requiere que) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 305.18 Tm (Sports World sea titular \(o conceda la administración\) de la cuenta de Google Business de la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 291.32 Tm (marca, la verificación propia de Google de cada ubicación \(que Google controla y que toma) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 277.46 Tm (tiempo\) y la aprobación de acceso programático \(que Google otorga en su propio calendario,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 263.60 Tm (típicamente semanas\). El equipo gestiona todo el proceso; la titularidad de la cuenta y la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 249.74 Tm (verificación de Google están fuera del control de cualquiera salvo de Google y de Sports World.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 235.88 Tm (Esta es la dependencia más sensible al tiempo de todo el proyecto y debe iniciarse en la Semana) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 222.02 Tm (1.) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 195.16 Tm (4.4 Acceso al dominio y a la publicación) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 174.98 Tm ([§4.4 ¶27 p.4] Para poner el nuevo sitio en vivo, el equipo necesita, cerca del lanzamiento:) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 161.12 Tm (acceso para apuntar la dirección del sitio web \(DNS\) al nuevo sitio, y acceso a las cuentas de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 147.26 Tm (búsqueda y analítica \(Google Search Console, Google Analytics\) para poder medir el rendimiento) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 133.40 Tm (del nuevo sitio y enviar sus páginas a Google. Estos se necesitan una sola vez, cerca del) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 119.54 Tm (lanzamiento, y el equipo guía a Sports World paso a paso a través de ellos.) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 92.68 Tm (4.5 Número telefónico y WhatsApp para BES) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 72.50 Tm ([§4.5 ¶28 p.4] Para que BES conteste llamadas y chats, el equipo necesita un número telefónico) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Plan de Ejecución  ·  pág. 4 de 6) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Length 4999 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm (que BES conteste \(ya sea uno que Sports World proporcione para el agente, o permiso para enrutar) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm (hacia él las llamadas entrantes pertinentes\) y el número oficial de WhatsApp Business de la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 695.78 Tm (marca. El equipo construye y configura el agente por sí mismo; el rol de Sports World es) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 681.92 Tm (proporcionar el o los números y autorizar su uso. Si Sports World ya opera una línea telefónica) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 668.06 Tm (de atención al cliente o WhatsApp, el plan es conectar BES a la configuración existente en lugar) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 654.20 Tm (de reemplazarla, con un traspaso limpio al personal humano siempre que un prospecto lo necesite.) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 627.34 Tm (4.6 El servidor \(ver §5\).) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 600.16 Tm (4.7 Resumen de lo que se le pide a Sports World) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 581.98 Tm ([§4.7 ¶29 p.5] •  La API del CRM para crear un lead \(dependencia central, usada tanto por el) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 568.12 Tm (sitio web como por BES\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 552.26 Tm ([§4.7 ¶30 p.5] •  Datos de clubes y clases, por API o exportación programada \(usados por) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 538.40 Tm (ambos\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 522.54 Tm ([§4.7 ¶31 p.5] •  Titularidad de la cuenta de Google Business y cooperación con la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 508.68 Tm (verificación de Google \(iniciar en la Semana 1\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 492.82 Tm ([§4.7 ¶32 p.5] •  Acceso al dominio y a la analítica cerca del lanzamiento.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 476.96 Tm ([§4.7 ¶33 p.5] •  Un número telefónico y el número oficial de WhatsApp Business para BES, con) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 463.10 Tm (autorización para usarlos.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 447.24 Tm ([§4.7 ¶34 p.5] •  Un servidor que cumpla la especificación de la §5, con acceso seguro para) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 433.38 Tm (que el equipo lo configure.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 415.52 Tm ([§4.7 ¶35 p.5] Todo lo demás lo entrega el equipo del proyecto.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 381.66 Tm (5 · El servidor donde corre el sitio) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 359.84 Tm ([§5 ¶36 p.5] El sitio web corre en el propio servidor de Sports World. La especificación está) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 345.98 Tm (dimensionada a las condiciones reales del proyecto: el sitio actualmente recibe alrededor de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 332.12 Tm (80,000 visitas al mes, la meta es duplicarlas a aproximadamente 160,000 visitas al mes, y se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 318.26 Tm (espera que el tráfico alcance picos de hasta cinco veces el promedio por hora durante periodos) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 304.40 Tm (de alta demanda \(por ejemplo, cuando las campañas pagadas generan un repunte\). Dimensionar para) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 290.54 Tm (ese pico —y no para el promedio mensual— es lo que mantiene el sitio rápido y en línea cuando) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 276.68 Tm (más importa.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 258.82 Tm ([§5 ¶37 p.5] •  Sistema operativo: Linux \(cualquier distribución mainstream actual\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 242.96 Tm ([§5 ¶38 p.5] •  Runtime: Node.js 20.9 o posterior, que el framework requiere; el equipo lo) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 229.10 Tm (instala y configura.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 213.24 Tm ([§5 ¶39 p.5] •  Procesador: aproximadamente 8 núcleos de CPU virtuales. Un pico de cinco) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 199.38 Tm (veces es principalmente un evento de procesador —la parte dinámica del sitio y la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 185.52 Tm (optimización de imágenes al vuelo consumen CPU, y durante un repunte muchas se ejecutan a la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 171.66 Tm (vez; ocho núcleos dan el margen para absorber eso sin que las solicitudes se encolen. Con) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 157.80 Tm (tráfico normal el sitio se apoya en el caché, así que la mayoría de las vistas se sirven) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 143.94 Tm (desde caché y los núcleos quedan libres para el trabajo dinámico y los picos.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 128.08 Tm ([§5 ¶40 p.5] •  Memoria: aproximadamente 16 GB de RAM. Bajo un pico de cinco veces, muchas) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 114.22 Tm (solicitudes se ejecutan de forma concurrente, el caché trabaja a tope y varias operaciones de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 100.36 Tm (imagen ocurren a la vez —todo lo cual consume memoria; 16 GB proporcionan un margen real y) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 86.50 Tm (protegen contra el peor modo de falla, quedarse sin memoria durante un repunte.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 70.64 Tm ([§5 ¶41 p.5] •  Almacenamiento: aproximadamente 80 GB de SSD —espacio amplio para la) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Plan de Ejecución  ·  pág. 5 de 6) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Length 2681 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 68.00 723.50 Tm (aplicación, un caché de imágenes generoso, logs \(que crecen más rápido durante los picos\) y) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 709.64 Tm (respaldos.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 693.78 Tm ([§5 ¶42 p.6] •  Red y seguridad: un certificado HTTPS estándar, los puertos web normales) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 679.92 Tm (abiertos y suficiente ancho de banda de salida para servir el tráfico pico.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 662.06 Tm ([§5 ¶43 p.6] Un solo servidor de este tamaño maneja 160,000 visitas al mes con picos de cinco) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 648.20 Tm (veces cómodamente, porque el caché agresivo absorbe la carga rutinaria y el margen de 8 núcleos) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 634.34 Tm (/ 16 GB absorbe los repuntes. Esto se cubre con un servidor virtual estándar de gama media de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 620.48 Tm (cualquier proveedor de hosting mainstream —no requiere hardware dedicado ni de gama alta. Si el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 606.62 Tm (tráfico más adelante crece muy por encima de la meta, la misma arquitectura escala agregando una) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 592.76 Tm (segunda instancia detrás de un balanceador de carga simple; esa es una optimización futura, no) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 578.90 Tm (un requisito de lanzamiento.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 559.04 Tm ([§5 ¶44 p.6] Estos números son una estimación de ingeniería sólida. La forma de convertir la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 545.18 Tm (estimación en una garantía es una breve prueba de carga antes del lanzamiento —simulando 160,000) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 531.32 Tm (visitas al mes con el pico de cinco veces y midiendo la CPU y la memoria realmente utilizadas.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 517.46 Tm (El equipo la ejecuta como parte de la calidad previa al lanzamiento \(Semana 7\) y ajusta la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 503.60 Tm (especificación al alza o a la baja según el resultado medido.) Tj
+/F3 10.00 Tf
+1 0 0 1 54.00 481.24 Tm (Nota sobre BES: la especificación anterior cubre únicamente el sitio web. BES es una carga de) Tj
+/F3 10.00 Tf
+1 0 0 1 54.00 468.04 Tm (trabajo separada con su propio runtime y perfil de recursos. Si BES corre en este mismo servidor o) Tj
+/F3 10.00 Tf
+1 0 0 1 54.00 454.84 Tm (en uno separado es una decisión pendiente; si comparte este servidor, el procesador y la memoria) Tj
+/F3 10.00 Tf
+1 0 0 1 54.00 441.64 Tm (anteriores deben incrementarse para tomarlo en cuenta. Esto se confirma cuando se defina el) Tj
+/F3 10.00 Tf
+1 0 0 1 54.00 428.44 Tm (enfoque de hosting de BES.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Plan de Ejecución  ·  pág. 6 de 6) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 5 0 R >>
+endobj
+12 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+13 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 7 0 R >>
+endobj
+14 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+15 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 9 0 R >>
+endobj
+16 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+17 0 obj
+<< /Title (Plan de Ejecución) /Author (Final Upgrade AI) /Subject (Documentacion UX Sports World - KB es-MX para agente de voz) /Keywords (Sports World, UX, documentacion, KB, ElevenLabs) >>
+endobj
+18 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 19
+0000000000 65535 f 
+0000000015 00000 n 
+0000000112 00000 n 
+0000000214 00000 n 
+0000000319 00000 n 
+0000000412 00000 n 
+0000005102 00000 n 
+0000010711 00000 n 
+0000016422 00000 n 
+0000021616 00000 n 
+0000026667 00000 n 
+0000029401 00000 n 
+0000029548 00000 n 
+0000029695 00000 n 
+0000029842 00000 n 
+0000029989 00000 n 
+0000030136 00000 n 
+0000030284 00000 n 
+0000030491 00000 n 
+trailer
+<< /Size 19 /Root 18 0 R /Info 17 0 R >>
+startxref
+30541
+%%EOF

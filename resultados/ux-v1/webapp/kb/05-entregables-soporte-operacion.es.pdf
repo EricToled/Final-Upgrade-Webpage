@@ -1,0 +1,422 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Pages /Count 4 /Kids [9 0 R 10 0 R 11 0 R 12 0 R] >>
+endobj
+5 0 obj
+<< /Length 4651 >>
+stream
+BT
+/F2 17.00 Tf
+1 0 0 1 54.00 701.00 Tm (Sports World México · Entregables, Soporte y) Tj
+/F2 17.00 Tf
+1 0 0 1 54.00 678.56 Tm (Operación · V1.0) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 639.62 Tm (Lo que recibe Sports World, cómo se entrega y cómo opera después) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 617.80 Tm ([§— ¶1 p.1] Documento fundacional. Enumera, a detalle, todo lo que recibe Sports World — el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 603.94 Tm (sitio web, el contenido, las fichas de Google, el contenido visual, el agente BES — además de la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 590.08 Tm (migración del sitio y los servicios que continúan después del lanzamiento: estabilización,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 576.22 Tm (soporte 24/7 y la bolsa de horas de mejora. Se lee por sí solo y responde, de forma directa, los) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 562.36 Tm (puntos que planteó el equipo de TI de Sports World.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 528.50 Tm (1 · Lo que recibe Sports World \(entrega única\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 506.68 Tm ([§1 ¶2 p.1] Al cierre del proyecto, Sports World es propietario de lo siguiente. Todo ello queda) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 492.82 Tm (como propiedad de Sports World.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 474.96 Tm ([§1 ¶3 p.1] •  El sitio web completo — rápido y optimizado para buscadores, construido a) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 461.10 Tm (partir de plantillas aprobadas: el home, una página para cada uno de los 49 clubes, los hubs) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 447.24 Tm (de amenidades y objetivos, y el flujo de experiencia ideal que convierte a un visitante) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 433.38 Tm (anónimo en un lead agendado y cualificado. El inventario completo de 148 páginas está en) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 419.52 Tm (02-site-architecture.md; la tecnología en 03-technical-strategy.md. Se entrega alojado en el) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 405.66 Tm (servidor propio de Sports World.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 389.80 Tm ([§1 ¶4 p.1] •  El sitio en dos versiones, móvil y escritorio — un único código responsivo) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 375.94 Tm (mobile-first, con las metas de calidad medibles \(Core Web Vitals, optimización de imágenes,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 362.08 Tm (WCAG 2.2 AA\) verificadas en cada cambio.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 346.22 Tm ([§1 ¶5 p.1] •  El panel de contenido no-code \(CMS\) — para editar texto y reemplazar imágenes) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 332.36 Tm (sin programar, recomendado como un CMS headless autoalojado en el servidor propio de Sports) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 318.50 Tm (World \(02-site-architecture.md\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 302.64 Tm ([§1 ¶6 p.1] •  Todo el contenido escrito optimizado y los datos estructurados — las páginas) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 288.78 Tm (por club, los hubs de amenidades y objetivos, los artículos de apoyo, y el schema markup) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 274.92 Tm (JSON-LD que permite a Google entender cada servicio en cada ubicación.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 259.06 Tm ([§1 ¶7 p.1] •  Las 49 fichas de Google Business — creadas y optimizadas, una por club, para) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 245.20 Tm (que cada ubicación quede correctamente representada en Google Search y Maps. \(Dependencia) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 231.34 Tm (honesta: Google no permite crear nuevas fichas de forma automática; su verificación es) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 217.48 Tm (controlada por Google y está sujeta a tiempos, razón por la cual el proceso inicia en la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 203.62 Tm (Semana 1 — ver 04-execution-plan.md, §4.3.\)) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 187.76 Tm ([§1 ¶8 p.1] •  El contenido visual alineado a la marca — un conjunto completo en los 49) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 173.90 Tm (clubes y las páginas de apoyo, producido mediante la aplicación a la medida.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 158.04 Tm ([§1 ¶9 p.1] •  BES, el agente de voz y texto — activo en teléfono y WhatsApp, capturando) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 144.18 Tm (leads en el mismo CRM con las mismas respuestas que el sitio web.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 128.32 Tm ([§1 ¶10 p.1] •  La migración completa del sitio — del sitio actual al nuevo, protegiendo el) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 114.46 Tm (correo corporativo y cualquier otra función ligada al DNS \(§2\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 98.60 Tm ([§1 ¶11 p.1] •  Todo el código, el contenido y los activos — propiedad de Sports World,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 84.74 Tm (operando de forma independiente.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Entregables, Soporte y Operación  ·  pág. 1 de 4) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Length 5463 >>
+stream
+BT
+/F2 13.50 Tf
+1 0 0 1 54.00 720.50 Tm (2 · Migrar el sitio actual al nuevo \(protegiendo el correo y el) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 702.68 Tm (DNS\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 680.86 Tm ([§2 ¶12 p.2] El proyecto se hace cargo de mover el sitio actual al nuevo, asegurando en todo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 667.00 Tm (momento que nada más ligado al DNS — sobre todo el correo corporativo — se vea afectado.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 647.14 Tm ([§2 ¶13 p.2] Qué se protege. El DNS no solo apunta al sitio web: también enruta el correo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 633.28 Tm (corporativo y, potencialmente, otros servicios \(subdominios de apps, reservaciones, etc.\). La) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 619.42 Tm (migración del sitio web toca únicamente los registros que apuntan al sitio, y deja intactos los) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 605.56 Tm (registros de correo \(MX\) y todo lo relacionado con el correo corporativo, así como cualquier) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 591.70 Tm (otro servicio ligado al dominio que no sea el sitio web.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 571.84 Tm ([§2 ¶14 p.2] Cómo se protege. Antes de migrar, se levanta un inventario completo de los) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 557.98 Tm (registros DNS actuales, identificando cuáles son del sitio web y cuáles son de correo y otros) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 544.12 Tm (servicios. Solo se migran los registros del sitio web; los registros de correo y demás no se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 530.26 Tm (modifican. El time-to-live \(TTL\) de los registros del sitio web se reduce 24 horas antes del) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 516.40 Tm (cambio, para que la transición sea rápida y reversible. Se mantiene un conjunto de redirecciones) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 502.54 Tm (301 para que las direcciones del sitio anterior lleven a las nuevas, de modo que no se pierda el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 488.68 Tm (posicionamiento ganado ni ningún visitante llegue a una página inexistente. El cambio se ejecuta) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 474.82 Tm (en coordinación con Sports World, e inmediatamente después se confirma que el correo corporativo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 460.96 Tm (y los demás servicios siguen funcionando sin interrupción. La meta es explícita: la migración) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 447.10 Tm (del sitio web es invisible para el correo corporativo y para cualquier otra función del dominio.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 413.24 Tm (3 · El sistema de soporte 24/7) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 391.42 Tm ([§3 ¶15 p.2] El proyecto incluye un sistema de soporte 24/7, provisto por el equipo de Final) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 377.56 Tm (Upgrade como un servicio continuo posterior a la entrega, por el cual Sports World paga una) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 363.70 Tm (cuota mensual.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 343.84 Tm ([§3 ¶16 p.2] Qué tipo de soporte es. Es soporte técnico para el sitio y el sistema entregados —) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 329.98 Tm (es decir, soporte para Sports World cuando algo falla en el sitio o sus integraciones. No es) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 316.12 Tm (soporte a usuario final \(prospectos o socios\); la atención de cara al prospecto la manejan el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 302.26 Tm (sitio y el agente BES.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 282.40 Tm ([§3 ¶17 p.2] Cómo funciona: primer respondiente más escalamiento. Cuando Sports World reporta) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 268.54 Tm (una incidencia, el primer punto de contacto es un agente de voz que recibe el reporte, lo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 254.68 Tm (clasifica y lo resuelve si es de primer nivel o lo escala. Si el problema requiere intervención) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 240.82 Tm (humana, se escala a un equipo técnico, con el nivel de escalamiento dependiendo de la severidad.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 226.96 Tm (Cada incidencia genera un ticket de ocurrencia, de modo que tanto Sports World como el equipo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 213.10 Tm (tienen visibilidad del estatus, el historial y la resolución de cada reporte.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 193.24 Tm ([§3 ¶18 p.2] Horarios y niveles de servicio \(SLA\). El soporte opera 24 horas al día, 7 días a la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 179.38 Tm (semana, 365 días al año. Los tiempos de respuesta se proponen por severidad, siguiendo el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 165.52 Tm (estándar típico de la industria para soporte de misión crítica. Estos tiempos son una propuesta) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 151.66 Tm (a acordar con Sports World, ajustados a la criticidad que Sports World defina para el sitio:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 133.80 Tm ([§3 ¶19 p.2] •  Crítico — el sitio o una función esencial está caído o inaccesible \(por) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 119.94 Tm (ejemplo, el sitio no carga, o la captura de leads no funciona\). Primera respuesta propuesta:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 106.08 Tm (15 to 30 minutes. Resolución objetivo propuesta: 4 hours.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 90.22 Tm ([§3 ¶20 p.2] •  Alto — una función importante está degradada pero el sitio sigue operando) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 76.36 Tm (\(por ejemplo, una integración intermitente\). Primera respuesta propuesta: 1 hour. Resolución) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 62.50 Tm (objetivo propuesta: 8 business hours.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Entregables, Soporte y Operación  ·  pág. 2 de 4) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Length 5320 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 68.00 723.50 Tm ([§3 ¶21 p.3] •  Medio — un problema que afecta parte del sitio sin impedir su uso \(por) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 709.64 Tm (ejemplo, un componente visual que se renderiza mal en algunos casos\). Primera respuesta) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 695.78 Tm (propuesta: 4 business hours. Resolución objetivo propuesta: 2 business days.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 679.92 Tm ([§3 ¶22 p.3] •  Bajo — una incidencia menor o una consulta \(por ejemplo, una duda sobre cómo) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 666.06 Tm (editar una página en el panel\). Primera respuesta propuesta: 1 business day. Resolución según) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 652.20 Tm (lo planeado.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 634.34 Tm ([§3 ¶23 p.3] Estos tiempos se miden desde que se abre el ticket de ocurrencia. Al cierre de cada) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 620.48 Tm (mes, se entrega un reporte de los tickets atendidos — su severidad, tiempo de respuesta y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 606.62 Tm (resolución.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 586.76 Tm ([§3 ¶24 p.3] La cuota mensual. El modelo de cuota mensual ya está en la propuesta firmada, con) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 572.90 Tm (dos opciones según quién opere el sitio en el día a día:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 555.04 Tm ([§3 ¶25 p.3] •  Opción A — $35,000 MXN/month \(el cliente se autogestiona en el CMS\). Sports) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 541.18 Tm (World edita su propio texto e imágenes a través del panel de administración, y Final Upgrade) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 527.32 Tm (brinda soporte técnico para el sitio y el sistema bajo el modelo 24/7 anterior.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 511.46 Tm ([§3 ¶26 p.3] •  Opción B — $55,000 MXN/month \(Final Upgrade opera\). Además del soporte) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 497.60 Tm (técnico 24/7, Final Upgrade también ejecuta las actualizaciones de contenido y los cambios) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 483.74 Tm (operativos, de modo que Sports World no necesita operar el panel.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 465.88 Tm ([§3 ¶27 p.3] Sports World elige una de las dos. Ambas incluyen soporte técnico 24/7 con un) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 452.02 Tm (primer respondiente de voz, escalamiento basado en severidad y tickets de ocurrencia.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 418.16 Tm (4 · La bolsa de horas de mejora) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 396.34 Tm ([§4 ¶28 p.3] Más allá del soporte 24/7 \(que atiende las fallas\), el servicio mensual incluye una) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 382.48 Tm (bolsa de horas de mejora — tiempo de trabajo técnico que Sports World puede destinar a) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 368.62 Tm (evolucionar el sitio: nuevas funcionalidades, ajustes, optimizaciones, nuevo contenido, o) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 354.76 Tm (cualquier mejora que el negocio necesite con el tiempo.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 334.90 Tm ([§4 ¶29 p.3] Por qué existe. El soporte 24/7 atiende lo que falla; la bolsa de horas atiende lo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 321.04 Tm (que se va a mejorar o agregar. Son cosas distintas: corregir un bug es soporte; agregar una) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 307.18 Tm (nueva sección o funcionalidad es una mejora evolutiva. Separarlas evita el conflicto común de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 293.32 Tm (confundir un bug \(corregido sin costo bajo soporte\) con una nueva funcionalidad \(que consume) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 279.46 Tm (horas de mejora\).) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 259.60 Tm ([§4 ¶30 p.3] Cantidad propuesta. Para un sitio de la escala de Sports World con soporte 24/7 de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 245.74 Tm (misión crítica, el rango común de la industria para mantenimiento evolutivo en México para este) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 231.88 Tm (perfil es de 40 to 80 hours per month. Esta cantidad es una propuesta a acordar con Sports) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 218.02 Tm (World, definida en el contrato según el ritmo de cambio que Sports World espere. Como) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 204.16 Tm (referencia, una práctica común y recomendada es que las horas sean mensuales y no acumulables,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 190.30 Tm (reservando una porción \(típicamente alrededor del 20%\) para incidencias que requieran trabajo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 176.44 Tm (más allá del soporte. La cantidad exacta y las reglas de acumulación se acuerdan con Sports) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 162.58 Tm (World.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 142.72 Tm ([§4 ¶31 p.3] Cómo se usan y se reportan. Sports World solicita las mejoras; cada solicitud se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 128.86 Tm (estima antes de ejecutarse, de modo que Sports World la aprueba sabiendo cuántas horas consume.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 115.00 Tm (Las horas pueden destinarse a desarrollo de nuevas funcionalidades, mantenimiento evolutivo,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 101.14 Tm (optimización de desempeño, contenido, o cualquier tarea técnica del sitio. Al cierre de cada) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 87.28 Tm (mes, se entrega un reporte de las horas consumidas, con el detalle de cada tarea y el tiempo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 73.42 Tm (invertido, con total transparencia.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Entregables, Soporte y Operación  ·  pág. 3 de 4) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Length 5193 >>
+stream
+BT
+/F2 13.50 Tf
+1 0 0 1 54.00 720.50 Tm (5 · La etapa de estabilización posterior al lanzamiento) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 698.68 Tm ([§5 ¶32 p.4] Una vez liberado el proyecto \(lanzado el sitio\), se contempla una etapa de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 684.82 Tm (estabilización — un periodo posterior al lanzamiento con atención reforzada, durante el cual el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 670.96 Tm (equipo vigila el sitio de cerca bajo condiciones reales y corrige cualquier ajuste que surja del) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 657.10 Tm (tráfico real.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 637.24 Tm ([§5 ¶33 p.4] Qué es y para qué sirve. Por bien probado que esté un sitio antes del lanzamiento,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 623.38 Tm (la exposición al tráfico real, a los dispositivos reales de los usuarios y a las integraciones) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 609.52 Tm (en vivo siempre revela ajustes finos. La etapa de estabilización es el periodo en el que esos) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 595.66 Tm (ajustes se atienden de inmediato, antes de pasar a la operación normal de soporte mensual.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 575.80 Tm ([§5 ¶34 p.4] Duración propuesta. Siguiendo el estándar de la industria, se propone una etapa de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 561.94 Tm (estabilización de 2 to 4 weeks después del lanzamiento. Esta duración es una propuesta a acordar) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 548.08 Tm (con Sports World.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 528.22 Tm ([§5 ¶35 p.4] Qué incluye. Atención reforzada \(el equipo monitorea el sitio de forma proactiva y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 514.36 Tm (prioriza cualquier incidencia derivada del lanzamiento\); corrección de ajustes de lanzamiento) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 500.50 Tm (\(los que surjan de la exposición al tráfico y dispositivos reales se corrigen como parte de la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 486.64 Tm (estabilización, sin consumir la bolsa de horas de mejora\); confirmación de las integraciones en) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 472.78 Tm (vivo \(la captura de leads al CRM, los datos de clubes y clases, las 49 fichas de Google, y BES) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 458.92 Tm (operando correctamente bajo condiciones reales\); y cierre \(al final del periodo, el sitio pasa a) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 445.06 Tm (operación normal bajo el modelo de soporte mensual y la bolsa de horas\). La distinción es clara:) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 431.20 Tm (durante la estabilización, los ajustes derivados del lanzamiento se corrigen sin costo extra;) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 417.34 Tm (después de la estabilización, las nuevas mejoras consumen la bolsa de horas y las fallas se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 403.48 Tm (atienden bajo el soporte 24/7.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 369.62 Tm (6 · Resumen: qué se recibe y qué continúa) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 347.80 Tm ([§6 ¶36 p.4] Entrega única: el sitio web completo \(home, 49 clubes, hubs, experiencia ideal\), en) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 333.94 Tm (dos versiones \(móvil y escritorio\), mobile-first, alojado en el servidor de Sports World; el CMS) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 320.08 Tm (no-code; todo el contenido escrito optimizado y los datos estructurados; 49 fichas de Google) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 306.22 Tm (Business; el contenido visual alineado a la marca para todos los clubes y páginas; BES, el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 292.36 Tm (agente de voz y texto, operando; la migración completa desde el sitio anterior, protegiendo el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 278.50 Tm (correo corporativo y otras funciones del DNS; y todo el código, el contenido y los activos,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 264.64 Tm (propiedad de Sports World.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 244.78 Tm ([§6 ¶37 p.4] Lo que continúa después del lanzamiento \(servicio mensual\): una etapa de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 230.92 Tm (estabilización de 2 a 4 semanas \(propuesta a acordar\); soporte técnico 24/7 con un primer) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 217.06 Tm (respondiente de voz, escalamiento basado en severidad y tickets de ocurrencia, bajo la cuota) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 203.20 Tm (mensual — Opción A $35,000 MXN/month \(el cliente se autogestiona en el CMS\) u Opción B $55,000) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 189.34 Tm (MXN/month \(Final Upgrade opera\); y la bolsa de horas de mejora \(40 to 80 hours/month, propuesta) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 175.48 Tm (a acordar\), con un reporte mensual de las horas consumidas.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 155.62 Tm ([§6 ¶38 p.4] El proyecto se completa en 8 weeks desde el arranque hasta el lanzamiento,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 141.76 Tm (cubriendo las tres áreas de trabajo — diseño y desarrollo del sitio a partir de plantillas;) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 127.90 Tm (estrategia SEO y contenido escrito optimizado incluyendo las 49 fichas de Google Business; y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 114.04 Tm (contenido visual a escala — además del agente BES, todo coordinado por un líder general de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 100.18 Tm (proyecto.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Entregables, Soporte y Operación  ·  pág. 4 de 4) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 5 0 R >>
+endobj
+10 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+11 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 7 0 R >>
+endobj
+12 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+13 0 obj
+<< /Title (Entregables, Soporte y Operación) /Author (Final Upgrade AI) /Subject (Documentacion UX Sports World - KB es-MX para agente de voz) /Keywords (Sports World, UX, documentacion, KB, ElevenLabs) >>
+endobj
+14 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000015 00000 n 
+0000000112 00000 n 
+0000000214 00000 n 
+0000000319 00000 n 
+0000000397 00000 n 
+0000005100 00000 n 
+0000010615 00000 n 
+0000015987 00000 n 
+0000021232 00000 n 
+0000021378 00000 n 
+0000021525 00000 n 
+0000021672 00000 n 
+0000021819 00000 n 
+0000022041 00000 n 
+trailer
+<< /Size 15 /Root 14 0 R /Info 13 0 R >>
+startxref
+22091
+%%EOF

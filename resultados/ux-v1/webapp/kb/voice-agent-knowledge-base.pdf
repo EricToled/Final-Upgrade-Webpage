@@ -1,0 +1,434 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Pages /Count 5 /Kids [10 0 R 11 0 R 12 0 R 13 0 R 14 0 R] >>
+endobj
+5 0 obj
+<< /Length 4345 >>
+stream
+BT
+/bold 18.00 Tf
+1 0 0 1 54.00 700.00 Tm (Sports World México · UX — Base de Conocimiento) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 674.74 Tm (Documento de referencia para un agente de voz \(ElevenLabs\) que ayuda al personal de TI a ubicar) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 660.88 Tm (información dentro de la documentación del proyecto. Idioma: español de México. Versión 1.0.) Tj
+/bold 14.00 Tf
+1 0 0 1 54.00 624.52 Tm (0 · Cómo debe usar este documento el agente) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 601.54 Tm (Este documento es la base de conocimiento del agente. Cada respuesta debe: \(1\) responder en) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 587.68 Tm (español de México, breve y claro; \(2\) citar el documento y la sección exacta donde está el) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 573.82 Tm (detalle \(por ejemplo: «está en el documento Execution Plan , sección §5»\); \(3\) si la pregunta) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 559.96 Tm (toca datos de usuario, captura de leads o contenido de salud, recordar que requiere validación;) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 546.10 Tm (\(4\) si no encuentra la respuesta aquí, ofrecer escalar con el líder del proyecto en lugar de) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 532.24 Tm (inventar.) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 512.38 Tm (Palabras clave del documento: documentación UX, Sports World, dónde encontrar, ubicar sección,) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 498.52 Tm (TI, sistemas, CRM, servidor, BES, despliegue, soporte, entregables.) Tj
+/bold 14.00 Tf
+1 0 0 1 54.00 462.16 Tm (1 · Los cinco documentos del set) Tj
+/bold 9.50 Tf
+1 0 0 1 54.00 439.18 Tm (ID   Documento \(EN\)   Nombre \(ES\)   Qué cubre) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 424.64 Tm (experience   Experience Architecture   Arquitectura de Experiencia   Navegación, máquina de 7 fases,) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 412.10 Tm (cuestionario \(Q1–Q19\), menús dinámicos, reglas de negocio \(§4.1–§4.15\), integración de datos \(§5\).) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 397.56 Tm (technical   Technical Strategy   Estrategia Técnica   Stack, datos, SEO/datos estructurados, app de) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 385.02 Tm (contenido visual, agente BES, método de desarrollo, controles de calidad, integraciones y seguridad.) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 370.48 Tm (execution   Execution Plan   Plan de Ejecución   Equipo \(4 equipos + líder\), calendario de 8 semanas,) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 357.94 Tm (dependencias de Sports World, especificación del servidor.) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 343.40 Tm (site   Site Architecture   Arquitectura del Sitio   Las 148 páginas en 11 niveles, versión) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 330.86 Tm (móvil/escritorio, objetivos de calidad, CMS sin código.) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 316.32 Tm (deliverables   Deliverables, Support & Operations   Entregables, Soporte y Operación   Entregables,) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 303.78 Tm (migración segura de DNS/correo, soporte 24/7 y SLA, bolsa de horas, estabilización.) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 286.24 Tm (Palabras clave: cuántos documentos, qué documento, lista de documentos, secciones.) Tj
+/bold 14.00 Tf
+1 0 0 1 54.00 249.88 Tm (2 · Índice temático — ¿dónde encuentro…? \(tema -> documento ->) Tj
+/bold 14.00 Tf
+1 0 0 1 54.00 231.40 Tm (sección\)) Tj
+/bold 9.50 Tf
+1 0 0 1 54.00 208.42 Tm (Tema / pregunta   Documento   Sección) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 193.88 Tm (Especificación del servidor \(CPU, RAM, disco\)   Execution Plan   §5) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 179.34 Tm (API del CRM / crear o actualizar lead   Technical Strategy · Execution Plan · Experience   §8 · §4.1 ·) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 166.80 Tm (§5.2) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 152.26 Tm (Datos de clubes y clases \(lectura\)   Technical · Execution   §2/§8 · §4.2) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 137.72 Tm (Google Business \(49 listados\) y su dependencia de tiempo   Technical · Execution · Deliverables   §3 ·) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 125.18 Tm (§4.3 · §1.5) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 110.64 Tm (Migración del sitio sin afectar el correo \(DNS, MX, 301\)   Deliverables   §2) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 96.10 Tm (Soporte 24/7, severidades y SLA   Deliverables   §3) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 81.56 Tm (Cuotas mensuales \(Opción A / Opción B\)   Deliverables   §3.4) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 67.02 Tm (Bolsa de horas para mejoras   Deliverables   §5) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Length 4719 >>
+stream
+BT
+/reg 9.50 Tf
+1 0 0 1 54.00 726.50 Tm (Etapa de estabilización posterior al lanzamiento   Deliverables   §6) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 711.96 Tm (BES \(agente de voz y texto\): ASR, LLM, TTS, canal   Technical Strategy   §5) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 697.42 Tm (Número telefónico y WhatsApp para BES   Execution Plan   §4.5) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 682.88 Tm (Stack y versiones \(Next.js 16, React 19, Node 20.9…\)   Technical · Site   §1 · \(stack\)) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 668.34 Tm (Core Web Vitals y accesibilidad \(WCAG 2.2 AA\)   Site · Technical   \(calidad\) · §7) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 653.80 Tm (CMS para editar textos/imágenes sin programar   Site Architecture   \(CMS\)) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 639.26 Tm (Las 148 páginas / niveles del sitio   Site Architecture   \(inventario\)) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 624.72 Tm (Cuestionario y sus preguntas \(Q1–Q19\)   Experience   §2.2) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 610.18 Tm (Resolución del club \(árbol por radio de 10 km\)   Experience   §4.1) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 595.64 Tm (Bloques de entrenamiento 01/02/03   Experience   §4.2–§4.6) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 581.10 Tm (Contraindicaciones, YMYL, GLP-1, embarazo/posparto   Experience   §4.8–§4.10) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 566.56 Tm (Captura de contacto y agenda de la visita   Experience   §4.11 · §1.2) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 552.02 Tm (Escritura al CRM \(idempotente, al confirmar la cita\)   Experience   §5.2) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 537.48 Tm (Seguridad de integración \(webhooks/HMAC, HTTPS/HSTS\)   Technical Strategy   §8) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 522.94 Tm (CI/CD, entornos y compuertas de calidad   Technical Strategy   §7 · §8) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 508.40 Tm (Método de desarrollo \(Claude Code + Codex\)   Technical Strategy   §6) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 493.86 Tm (Estructura del equipo \(4 equipos + líder\)   Execution Plan   §2) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 479.32 Tm (Calendario de 8 semanas \(Semana 1 a 8\)   Execution Plan   §3) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 464.78 Tm (Lista completa de dependencias de Sports World   Execution Plan   §4) Tj
+/bold 14.00 Tf
+1 0 0 1 54.00 430.74 Tm (3 · Preguntas frecuentes de TI \(respuestas autocontenidas\)) Tj
+/bold 11.50 Tf
+1 0 0 1 54.00 399.76 Tm (¿Qué servidor necesita Sports World?) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 379.58 Tm (Un servidor propio con Linux , aproximadamente 8 núcleos virtuales \(vCPU\) , 16 GB de RAM , 80 GB) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 365.72 Tm (de SSD , certificado HTTPS y ancho de banda para el pico. Está dimensionado para picos de hasta) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 351.86 Tm (cinco veces el promedio por hora; se valida con una prueba de carga en la Semana 7. Es un) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 338.00 Tm (servidor virtual de gama media; no requiere hardware dedicado. Detalle en Execution Plan , §5.) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 324.14 Tm (\(servidor, hosting, requisitos, CPU, RAM, disco, especificación\)) Tj
+/bold 11.50 Tf
+1 0 0 1 54.00 296.28 Tm (¿Qué necesita el proyecto de mi equipo de sistemas?) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 276.10 Tm (Una lista corta, la mayoría una sola vez: \(1\) API del CRM para crear o actualizar un lead; \(2\)) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 262.24 Tm (datos de clubes y clases por API o exportación programada; \(3\) propiedad de la cuenta de Google) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 248.38 Tm (Business y cooperación con la verificación de Google \(inicia en la Semana 1\); \(4\) acceso al) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 234.52 Tm (dominio y a analítica cerca del lanzamiento; \(5\) un número telefónico y el WhatsApp Business) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 220.66 Tm (para BES; \(6\) el servidor . Todo lo demás lo entrega el equipo del proyecto. Detalle en) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 206.80 Tm (Execution Plan , §4. \(dependencias, qué se necesita, integraciones, accesos\)) Tj
+/bold 11.50 Tf
+1 0 0 1 54.00 178.94 Tm (¿Cómo se conecta el sistema al CRM?) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 158.76 Tm (Hay una sola escritura en tiempo real : crear \(o actualizar\) un lead calificado vía la API del) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 144.90 Tm (CRM. Ocurre al confirmar la cita e incluye los datos de contacto, el perfil, el club y la) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 131.04 Tm (fecha/hora. Es idempotente por sesión : si la persona cambia la cita, se actualiza el mismo) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 117.18 Tm (registro, no se duplica. Detalle en Technical Strategy §8 y Experience §5.2. \(CRM, API, lead,) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 103.32 Tm (escritura, integración\)) Tj
+/bold 11.50 Tf
+1 0 0 1 54.00 75.46 Tm (¿La migración del sitio afecta el correo corporativo?) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Length 4542 >>
+stream
+BT
+/reg 10.50 Tf
+1 0 0 1 54.00 725.50 Tm (No. La migración toca únicamente los registros DNS del sitio web y deja intactos los registros) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 711.64 Tm (de correo \( MX \) y demás servicios. Se hace inventario previo de DNS, se baja el TTL 24 horas) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 697.78 Tm (antes, se conservan redirecciones 301 y se confirma que el correo sigue funcionando justo) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 683.92 Tm (después. Detalle en Deliverables , §2. \(DNS, correo, MX, migración, dominio, 301\)) Tj
+/bold 11.50 Tf
+1 0 0 1 54.00 656.06 Tm (¿Qué incluye el soporte 24/7 y cuáles son los SLA?) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 635.88 Tm (Soporte técnico del sitio y del sistema, 24/7/365, con primer respondedor de voz , escalamiento) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 622.02 Tm (por gravedad y tickets de ocurrencia . Tiempos propuestos \(a acordar\): Crítico 15–30 min /) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 608.16 Tm (resolución 4 h; Alto 1 h / 8 h hábiles; Medio 4 h hábiles / 2 días hábiles; Bajo 1 día hábil.) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 594.30 Tm (Reporte mensual de tickets. Detalle en Deliverables , §3. \(soporte, SLA, severidad, tickets,) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 580.44 Tm (24/7\)) Tj
+/bold 11.50 Tf
+1 0 0 1 54.00 552.58 Tm (¿Cuánto cuesta el servicio mensual?) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 532.40 Tm (Dos opciones: Opción A — $35,000 MXN/mes \(Sports World edita su contenido en el CMS y Final) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 518.54 Tm (Upgrade da el soporte técnico 24/7\) u Opción B — $55,000 MXN/mes \(Final Upgrade además ejecuta) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 504.68 Tm (las actualizaciones de contenido\). Ambas incluyen el soporte 24/7. Detalle en Deliverables ,) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 490.82 Tm (§3.4. \(precio, cuota, mensualidad, opción A, opción B, costo\)) Tj
+/bold 11.50 Tf
+1 0 0 1 54.00 462.96 Tm (¿Qué es la bolsa de horas?) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 442.78 Tm (Tiempo técnico mensual para mejoras \(nuevas funciones, optimizaciones, contenido\), distinto del) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 428.92 Tm (soporte \(que atiende fallas\). Rango propuesto 40 a 80 horas/mes , mensual y no acumulable, con) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 415.06 Tm (reporte de horas consumidas. Detalle en Deliverables , §5. \(horas, mejoras, mantenimiento) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 401.20 Tm (evolutivo\)) Tj
+/bold 11.50 Tf
+1 0 0 1 54.00 373.34 Tm (¿Qué es la etapa de estabilización?) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 353.16 Tm (Periodo de 2 a 4 semanas tras el lanzamiento con atención reforzada; los ajustes derivados del) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 339.30 Tm (lanzamiento se corrigen sin consumir la bolsa de horas, y se confirman las integraciones en) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 325.44 Tm (vivo. Detalle en Deliverables , §6. \(estabilización, post-lanzamiento, hypercare\)) Tj
+/bold 11.50 Tf
+1 0 0 1 54.00 297.58 Tm (¿Qué es BES y cómo funciona técnicamente?) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 277.40 Tm (Es el agente de voz y texto \(llamadas y WhatsApp/chat\). Se arma en 4 capas: reconocimiento de) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 263.54 Tm (voz \(ASR\) , razonamiento \(LLM\) con la misma lógica de clubes/clases/leads que el sitio, síntesis) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 249.68 Tm (de voz \(TTS\) en español de México, y capa de canal/orquestación \(telefonía, WhatsApp, chat\).) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 235.82 Tm (Meta de latencia por debajo de ~900 ms y escalamiento limpio a un humano. Escribe los leads al) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 221.96 Tm (mismo CRM que el sitio. Detalle en Technical Strategy , §5. \(BES, agente de voz, ASR, TTS, LLM,) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 208.10 Tm (WhatsApp, latencia\)) Tj
+/bold 11.50 Tf
+1 0 0 1 54.00 180.24 Tm (¿Dónde se aloja BES?) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 160.06 Tm (Es una carga de trabajo separada del sitio, con su propio perfil de recursos. Si comparte el) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 146.20 Tm (mismo servidor, hay que aumentar CPU y memoria . La decisión de alojamiento está por definir .) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 132.34 Tm (Nota en Execution Plan , §5. \(BES hosting, servidor BES, recursos\)) Tj
+/bold 11.50 Tf
+1 0 0 1 54.00 104.48 Tm (¿Cuántas páginas tiene el sitio y cómo se organizan?) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 84.30 Tm (148 páginas en 11 niveles : home \(1\), clubes \(49\), hubs de amenidades \(10\), clases premium \(7\),) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 70.44 Tm (clases individuales \(47\), hub FitKidz \(1\), hubs de perfil \(5\), hub bajar de peso \(1\), hub) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Length 4211 >>
+stream
+BT
+/reg 10.50 Tf
+1 0 0 1 54.00 725.50 Tm (personal training \(1\), membresías \(6\), blog SEO \(20\). Inventario completo en Site Architecture .) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 711.64 Tm (\(148 páginas, niveles, arquitectura del sitio, inventario\)) Tj
+/bold 11.50 Tf
+1 0 0 1 54.00 683.78 Tm (¿Cómo se edita el contenido sin programar?) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 663.60 Tm (Con un CMS sin código , recomendado headless y auto-alojado en el servidor de Sports World \(por) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 649.74 Tm (ejemplo Payload o Strapi\). Permite editar textos y reemplazar imágenes desde una interfaz) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 635.88 Tm (visual. Detalle en Site Architecture \(sección del CMS\). \(CMS, editar, sin código, Payload,) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 622.02 Tm (Strapi\)) Tj
+/bold 11.50 Tf
+1 0 0 1 54.00 594.16 Tm (¿Con qué tecnología está construido el sitio?) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 573.98 Tm (Next.js 16 \(App Router\) con SSR e ISR , React 19 con React Compiler, TypeScript estricto,) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 560.12 Tm (Tailwind CSS v4 , fuentes variables auto-alojadas, Node.js 20.9+ y caché agresiva. El) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 546.26 Tm (renderizado en servidor es el requisito técnico más importante \(corrige que el sitio anterior no) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 532.40 Tm (fuera legible por Google\). Detalle en Technical Strategy , §1. \(stack, Next.js, React, Node,) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 518.54 Tm (SSR, tecnología\)) Tj
+/bold 11.50 Tf
+1 0 0 1 54.00 490.68 Tm (¿Cómo se asegura la calidad en cada cambio?) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 470.50 Tm (Compuertas automáticas \(CI/CD\): pruebas, rendimiento \(Core Web Vitals\), accesibilidad) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 456.64 Tm (\(axe-core\), enlaces de previsualización y verificación de datos estructurados. Si una compuerta) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 442.78 Tm (falla, el cambio no se publica. Detalle en Technical Strategy , §7. \(CI/CD, calidad, pruebas,) Tj
+/reg 10.50 Tf
+1 0 0 1 54.00 428.92 Tm (accesibilidad, Core Web Vitals\)) Tj
+/bold 14.00 Tf
+1 0 0 1 54.00 392.56 Tm (4 · Datos clave de referencia rápida) Tj
+/bold 9.50 Tf
+1 0 0 1 54.00 369.58 Tm (Dato   Valor   Fuente) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 355.04 Tm (Clubes en la red   49   varios) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 340.50 Tm (Páginas del sitio   148 \(11 niveles\)   Site) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 325.96 Tm (Tráfico actual -> meta   ~80,000 -> ~160,000 visitas/mes   Execution §5) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 311.42 Tm (Pico de tráfico de diseño   hasta 5× el promedio por hora   Execution §5) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 296.88 Tm (Servidor   Linux · ~8 vCPU · ~16 GB RAM · ~80 GB SSD · HTTPS   Execution §5) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 282.34 Tm (Runtime   Node.js 20.9+   Technical §1) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 267.80 Tm (Escrituras al CRM   1 \(crear/actualizar lead, al confirmar cita, idempotente\)   Experience §5.2) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 253.26 Tm (Latencia objetivo de BES   < ~900 ms   Technical §5) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 238.72 Tm (Soporte   24/7/365, primer respondedor de voz + escalamiento   Deliverables §3) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 224.18 Tm (Cuota mensual   A: $35,000 MXN · B: $55,000 MXN   Deliverables §3.4) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 209.64 Tm (Bolsa de horas   40–80 h/mes \(propuesta\)   Deliverables §5) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 195.10 Tm (Estabilización   2–4 semanas post-lanzamiento   Deliverables §6) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 180.56 Tm (Duración del proyecto   8 semanas a lanzamiento   Execution §3) Tj
+/reg 9.50 Tf
+1 0 0 1 54.00 166.02 Tm (Listados de Google Business   49 \(1 por club\), inician Semana 1   Deliverables §1.5) Tj
+/bold 14.00 Tf
+1 0 0 1 54.00 131.98 Tm (5 · Glosario) Tj
+/reg 10.50 Tf
+1 0 0 1 66.00 111.00 Tm (•  BES — agente de inteligencia artificial de voz y texto \(llamadas y WhatsApp/chat\) que) Tj
+/reg 10.50 Tf
+1 0 0 1 66.00 97.14 Tm (atiende prospectos y captura leads. \(Technical §5\)) Tj
+/reg 10.50 Tf
+1 0 0 1 66.00 81.28 Tm (•  Prospecto — la persona que recorre la experiencia. Lead — el registro capturado que se) Tj
+/reg 10.50 Tf
+1 0 0 1 66.00 67.42 Tm (escribe en el CRM. \(Experience\)) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Length 1669 >>
+stream
+BT
+/reg 10.50 Tf
+1 0 0 1 66.00 725.50 Tm (•  Resolver / motor de asignación de club — lógica determinista que elige el club ideal por) Tj
+/reg 10.50 Tf
+1 0 0 1 66.00 711.64 Tm (radio de distancia y "experiencia que cumple". \(Experience §4.1\)) Tj
+/reg 10.50 Tf
+1 0 0 1 66.00 695.78 Tm (•  FitKidz — submarca infantil; amenidad que puede condicionar la elección del club.) Tj
+/reg 10.50 Tf
+1 0 0 1 66.00 681.92 Tm (\(Experience §4.7\)) Tj
+/reg 10.50 Tf
+1 0 0 1 66.00 666.06 Tm (•  YMYL — contenido sensible a la salud que exige validación profesional y sin promesas.) Tj
+/reg 10.50 Tf
+1 0 0 1 66.00 652.20 Tm (\(Experience §4.8\)) Tj
+/reg 10.50 Tf
+1 0 0 1 66.00 636.34 Tm (•  GLP-1 — tratamiento para bajar de peso \(Ozempic, Wegovy, Mounjaro\); prioriza fuerza, no) Tj
+/reg 10.50 Tf
+1 0 0 1 66.00 622.48 Tm (filtra clases. \(Experience §4.9\)) Tj
+/reg 10.50 Tf
+1 0 0 1 66.00 606.62 Tm (•  SSR / ISR — renderizado en servidor / regeneración incremental; clave para SEO. \(Technical) Tj
+/reg 10.50 Tf
+1 0 0 1 66.00 592.76 Tm (§1\)) Tj
+/reg 10.50 Tf
+1 0 0 1 66.00 576.90 Tm (•  Core Web Vitals — métricas de rendimiento \(LCP, INP, CLS\). \(Site\)) Tj
+/reg 10.50 Tf
+1 0 0 1 66.00 561.04 Tm (•  CRM — sistema de clientes de Sports World; recibe los leads vía API. \(Technical §8\)) Tj
+/reg 10.50 Tf
+1 0 0 1 66.00 545.18 Tm (•  CMS — panel para editar contenido sin programar \(headless, auto-alojado\). \(Site\)) Tj
+/obl 10.00 Tf
+1 0 0 1 54.00 522.82 Tm (Este documento resume y localiza ; el detalle normativo vive en cada documento citado. Si una) Tj
+/obl 10.00 Tf
+1 0 0 1 54.00 509.62 Tm (respuesta no está aquí, el agente debe escalar con el líder del proyecto.) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 5 0 R >>
+endobj
+11 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+12 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 7 0 R >>
+endobj
+13 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+14 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 9 0 R >>
+endobj
+15 0 obj
+<< /Title (Sports World UX - Base de Conocimiento para Agente de Voz \(TI\)) /Author (Final Upgrade AI) /Subject (Localizador de la documentacion UX para agente de voz ElevenLabs) /Keywords (Sports World, UX, TI, CRM, servidor, BES, soporte, entregables, documentacion) >>
+endobj
+16 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 17
+0000000000 65535 f 
+0000000015 00000 n 
+0000000112 00000 n 
+0000000214 00000 n 
+0000000319 00000 n 
+0000000405 00000 n 
+0000004802 00000 n 
+0000009573 00000 n 
+0000014167 00000 n 
+0000018430 00000 n 
+0000020151 00000 n 
+0000020298 00000 n 
+0000020445 00000 n 
+0000020592 00000 n 
+0000020739 00000 n 
+0000020886 00000 n 
+0000021175 00000 n 
+trailer
+<< /Size 17 /Root 16 0 R /Info 15 0 R >>
+startxref
+21225
+%%EOF
