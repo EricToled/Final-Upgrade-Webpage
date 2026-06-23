@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sports World · UX Specs</title>
-  <meta name="description" content="Consulta de especificaciones UX de Sports World México — Experiencia, Estrategia Técnica y Entregables (bilingüe EN/ES)." />
+  <title>Sports World · Proyecto Digital</title>
+  <meta name="description" content="Consulta del proyecto digital de Sports World México — Arquitectura UX, Estrategia Técnica, Mapa del Sitio, Contrato, Auditoría y Demo. Con asistente de voz y texto BES." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="topbar">
     <button id="menuToggle" class="icon-btn" aria-label="Menú">☰</button>
     <div class="brand">
-      <strong>Sports World</strong> · <span data-i18n="suite">UX Specs</span>
+      <strong>Sports World</strong> · <span data-i18n="suite">Proyecto Digital</span>
     </div>
     <div class="search-wrap">
       <input id="search" type="search" autocomplete="off" />
@@ -23,12 +23,16 @@
   </header>
 
   <div class="layout">
-    <nav id="sidebar" class="sidebar" aria-label="Documentos"></nav>
+    <nav id="sidebar" class="sidebar" aria-label="Secciones"></nav>
     <main id="content" class="content"><article id="doc" class="doc"></article></main>
     <aside id="toc" class="toc" aria-label="On this page"></aside>
   </div>
 
   <div id="backdrop" class="backdrop" hidden></div>
   <script src="app.js"></script>
+
+  <!-- BES · Asistente de voz y texto (ElevenLabs ConvAI) -->
+  <elevenlabs-convai agent-id="agent_7201kvt2wmqmefsvvvssjng7sp6g"></elevenlabs-convai>
+  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>

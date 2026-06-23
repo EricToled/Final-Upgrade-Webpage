@@ -75,6 +75,22 @@ a{color:var(--brand-text)}
 .doc :target{scroll-margin-top:4rem}
 .doc-meta{color:var(--muted);font-size:.82rem;margin-bottom:1.4rem}
 
+/* Download PDF button */
+.doc-actions{display:flex;justify-content:flex-end;margin:-.4rem 0 .2rem}
+.dl-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .8rem;
+  border:1px solid var(--border);border-radius:8px;background:var(--bg-soft);
+  color:var(--ink);text-decoration:none;font-size:.82rem;font-weight:600}
+.dl-btn:hover{background:#fff;border-color:var(--brand);color:var(--brand-text)}
+.dl-btn svg{color:var(--brand)}
+
+/* Pending placeholder sections (audit / demo) */
+.placeholder{margin-top:1.2rem;padding:1.6rem 1.4rem;border:1px dashed var(--border);
+  border-radius:12px;background:var(--bg-soft)}
+.placeholder p{color:var(--muted);max-width:42rem}
+.pending-badge{display:inline-block;padding:.2rem .6rem;border-radius:999px;
+  background:var(--amber-bg);border:1px solid #f3b9bc;color:var(--brand-text);
+  font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+
 /* states */
 .loading,.error{color:var(--muted);padding:2rem 0}
 .error{color:var(--brand-text)}
