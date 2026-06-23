@@ -20,6 +20,7 @@ Everything else — how it is built, by whom, in what order, and what happens af
 | `03-technical-strategy.md` | Technology stack, AI-assisted development with human supervision, the automated safety gates, the BES voice & text agent, and the integrations. |
 | `04-execution-plan.md` | Team structure, the eight-week schedule, the dependencies on Sports World (kept to a minimum), and the server specification. |
 | `05-deliverables-support-operations.md` | What Sports World receives, the email-safe site migration, the 24/7 support model and SLA, the improvement-hours pool, and the post-launch stabilization. |
+| `CHANGELOG-mis-cambios.md` | Exact record of the edits made beyond the client source documents (logic/safety fixes, items deliberately left to the source, and editorial/structural decisions). |
 
 ## Single underlying assumption
 
