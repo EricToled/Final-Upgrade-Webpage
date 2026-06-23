@@ -411,19 +411,22 @@ function preferredClassesForQ4(q4Array, mode, excludeContraindicated) {
 // ─── Questionnaire definition with all conditional logic ───
 function getQuestions(answers) {
   const isWoman = answers.Q2 === "Mujer";
-  const solo_self = isWoman ? "Sola, a mi ritmo" : "Solo, a mi ritmo";
-  const acomp_self = isWoman ? "Acompañada, en clases o grupo" : "Acompañado, en clases o grupo";
-  const solo_visit = isWoman ? "Sola, es mi momento" : "Solo, es mi momento";
+  const isNeutral = answers.Q2 === "Prefiero no mencionarlo";
+  // Concordancia de género: femenino / masculino / neutro (si prefiere no mencionarlo).
+  const g = (f, m, n) => (isNeutral ? n : isWoman ? f : m);
+  const solo_self = g("Sola, a mi ritmo", "Solo, a mi ritmo", "Por mi cuenta, a mi ritmo");
+  const acomp_self = g("Acompañada, en clases o grupo", "Acompañado, en clases o grupo", "En clases o en grupo");
+  const solo_visit = g("Sola, es mi momento", "Solo, es mi momento", "Por mi cuenta, es mi momento");
 
   return [
     { id: "Q1", type: "text", label: "Antes de empezar, ¿cómo te llamas?", placeholder: "Tu nombre completo" },
     { id: "Q2", type: "single", label: "Género", options: ["Hombre", "Mujer", "Prefiero no mencionarlo"] },
     { id: "Q3", type: "single", label: "¿Qué quieres sentir al salir del club?", helper: "Esto define el tono de tu experiencia ideal.", options: [
-      isWoman ? "Desconectada del trabajo y la rutina" : "Desconectado del trabajo y la rutina",
-      isWoman ? "Renovada y de buen ánimo" : "Renovado y de buen ánimo",
+      g("Desconectada del trabajo y la rutina", "Desconectado del trabajo y la rutina", "Con la mente lejos del trabajo y la rutina"),
+      g("Renovada y de buen ánimo", "Renovado y de buen ánimo", "Con energía renovada y de buen ánimo"),
       "Parte de una comunidad saludable",
-      isWoman ? "Confiada en que mi cuerpo no me va a fallar" : "Confiado en que mi cuerpo no me va a fallar",
-      isWoman ? "Más a gusto conmigo misma" : "Más a gusto conmigo mismo"
+      g("Confiada en que mi cuerpo no me va a fallar", "Confiado en que mi cuerpo no me va a fallar", "Con la confianza de que mi cuerpo no me va a fallar"),
+      g("Más a gusto conmigo misma", "Más a gusto conmigo mismo", "Más a gusto conmigo")
     ] },
     { id: "Q4", type: "multi", max: 2, label: "¿Qué buscas?", helper: "Puedes elegir hasta dos.", options: ["Bajar de peso", "Mejorar mi estética corporal y definición muscular", "Aumentar masa muscular", "Mejorar mi desempeño atlético", "Mejorar mi salud cardiovascular", "Recuperarme de una lesión o dolor crónico"] },
     { id: "Q5", type: "single", label: "¿Qué ritmo va contigo?", options: ["Suave/controlado", "Moderado y constante", "Intenso, que me rete"] },
@@ -435,7 +438,7 @@ function getQuestions(answers) {
     { id: "Q11", type: "single", label: "¿Qué tan larga fue la pausa?", options: ["Menos de 3 meses", "Entre 3 y 12 meses", "Más de un año"], condition: (a) => a.Q10 === "Regreso después de una pausa" },
     { id: "Q12", type: "multi", label: "¿Tienes alguna condición médica?", helper: "Solo condiciones médicas. Embarazo no es una condición.", options: ["Ninguna", "Lesión o dolor articular/muscular", "Condición cardiovascular o de presión", "Otra, la comento en el club"] },
     { id: "Q12b", type: "single", label: answers.Q2 === "Prefiero no mencionarlo" ? "¿Aplica para ti embarazo o posparto reciente?" : "¿Estás embarazada o en posparto reciente?", options: ["Sí, embarazada", "Sí, posparto reciente (últimos 6 meses)", "No"], condition: (a) => a.Q2 !== "Hombre" },
-    { id: "Q13", type: "single", label: isWoman ? "¿Prefieres entrenar sola o acompañada?" : "¿Prefieres entrenar solo o acompañado?", options: [solo_self, acomp_self, "Me da igual"] },
+    { id: "Q13", type: "single", label: g("¿Prefieres entrenar sola o acompañada?", "¿Prefieres entrenar solo o acompañado?", "¿Prefieres entrenar por tu cuenta o en grupo?"), options: [solo_self, acomp_self, "Me da igual"] },
     { id: "Q14", type: "single", label: "¿Con quién nos visitas en el club?", options: [solo_visit, "Con mi amigo/a", "Con mi pareja", "Yo y mis hijos", "La familia completa"] },
     { id: "Q14b", type: "single", label: "¿Uno o más de tus hijos tiene menos de 12 años?", options: ["Sí", "No"], condition: (a) => a.Q14 === "Yo y mis hijos" || a.Q14 === "La familia completa" },
     { id: "Q15", type: "single", label: "¿Buscas el gimnasio cerca de tu casa o de tu trabajo?", options: ["Cerca de mi casa", "Cerca de mi trabajo", "Ambos", "No me importa"] },
@@ -495,7 +498,7 @@ function resolveBlocks(answers, clubTag) {
   const primaryGoal = (answers.Q4 || [])[0] || "Mejorar mi estética corporal y definición muscular";
   const q6 = answers.Q6;
   const mode = resolveTrainingMode(answers);
-  const isSolo = answers.Q13 === "Solo, a mi ritmo" || answers.Q13 === "Sola, a mi ritmo";
+  const isSolo = String(answers.Q13 || "").includes("a mi ritmo");
   const clubHasAlberca = (CATALOG[clubTag]?.amenidades || []).includes('Alberca');
 
   let block1, block2, alberca_note = null;
@@ -558,7 +561,7 @@ FORMATO: SOLO un objeto JSON válido. Sin preámbulo. Sin markdown.`;
   const onBariatric = q17.includes("Cirugía bariátrica");
   const isFamily = answers.Q14 === "Yo y mis hijos" || answers.Q14 === "La familia completa";
   const hasKids = answers.Q14b === "Sí";
-  const isSolo = answers.Q13 === "Solo, a mi ritmo" || answers.Q13 === "Sola, a mi ritmo";
+  const isSolo = String(answers.Q13 || "").includes("a mi ritmo");
   const isPrincipiante = answers.Q9 === "Principiante";
   const fromOtherGym = answers.Q10 && answers.Q10.toLowerCase().includes("otro gimnasio");
   const fromPause = answers.Q10 && answers.Q10.toLowerCase().includes("pausa");
@@ -1475,7 +1478,7 @@ function BriefingScreen({ data, appointment, onRestart, onBack }) {
     return `${d.slice(0, 2)} ${d.slice(2, 6)} ${d.slice(6)}`;
   };
   const fullName = contact && contact.lastName ? `${answers.Q1} ${contact.lastName}` : (answers.Q1 || "—");
-  const isSolo = answers.Q13 === "Solo, a mi ritmo" || answers.Q13 === "Sola, a mi ritmo";
+  const isSolo = String(answers.Q13 || "").includes("a mi ritmo");
   const isPregnant = answers.Q12b === "Sí, embarazada";
   const isPostpartum = answers.Q12b === "Sí, posparto reciente (últimos 6 meses)";
   const wlTreatments = (answers.Q17 || []).filter(t => t !== "Ninguno");
@@ -1750,7 +1753,7 @@ export default function App() {
     setPhase("loading");
     try {
       setLoadingMsg("Buscando tu club ideal");
-      const isSoloForResolve = answers.Q13 === "Solo, a mi ritmo" || answers.Q13 === "Sola, a mi ritmo";
+      const isSoloForResolve = String(answers.Q13 || "").includes("a mi ritmo");
       const isFamilyForResolve = answers.Q14 === "Yo y mis hijos" || answers.Q14 === "La familia completa";
       const hasKidsForResolve = answers.Q14b === "Sí";
       let resolveOpts = { requireAmenities: [] };
