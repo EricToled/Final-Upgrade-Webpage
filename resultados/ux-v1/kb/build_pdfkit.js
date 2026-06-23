@@ -14,8 +14,10 @@ const DOCS = [
   { src: SRC + "/execution.es.md", kind: "md", title: "Plan de Ejecución", out: "03-plan-de-ejecucion.es.pdf" },
   { src: SRC + "/site.es.md", kind: "md", title: "Mapa del Sitio (148 páginas)", out: "04-mapa-del-sitio.es.pdf" },
   { src: SRC + "/deliverables.es.md", kind: "md", title: "Entregables, Soporte y Operación", out: "05-entregables-soporte-operacion.es.pdf" },
-  { src: SRC + "/contrato.es.md", kind: "md", title: "Contrato — Objetivo, Entregables y Pre-requisitos", out: "06-contrato.es.pdf" },
+  { src: SRC + "/contrato.es.md", kind: "md", title: "Contrato de Prestación de Servicios — Cláusulas + Anexos A y B", out: "06-contrato.es.pdf" },
   { src: SRC + "/auditoria.es.md", kind: "md", title: "Auditoría inicial del sitio — El Gigante Invisible", out: "07-auditoria-inicial.es.pdf" },
+  { src: SRC + "/minuta-2026-06-22.es.md", kind: "md", title: "Minuta — Reunión 22 de junio de 2026", out: "08-minuta-2026-06-22.es.pdf" },
+  { src: SRC + "/seguimiento-2026-06-22.es.md", kind: "md", title: "Seguimiento — Reunión 22 de junio de 2026", out: "09-seguimiento-2026-06-22.es.pdf" },
   { src: KB + "/voice-agent-knowledge-base.html", kind: "html", title: "Base de Conocimiento — Localizador para Agente de Voz", out: "voice-agent-knowledge-base.pdf" },
 ];
 
