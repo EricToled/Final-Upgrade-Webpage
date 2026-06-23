@@ -4,21 +4,57 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Demo Cuestionario Inteligente · Sports World</title>
-  <!-- Tailwind (utility classes used by the demo) -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- React + Babel (no build step; JSX is transformed in the browser) -->
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <style>html,body{margin:0;background:#fff}</style>
+  <style>
+    html,body{margin:0;background:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+    #keybar{position:sticky;top:0;z-index:50;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;
+      padding:.6rem .9rem;background:#0e1b2c;color:#fff;font-size:.85rem;border-bottom:2px solid #e11d48}
+    #keybar input{flex:1;min-width:220px;padding:.45rem .6rem;border-radius:6px;border:1px solid #33455c;
+      background:#fff;color:#0e1b2c;font-size:.85rem}
+    #keybar button{padding:.45rem .9rem;border:0;border-radius:6px;background:#e11d48;color:#fff;
+      font-weight:600;cursor:pointer;font-size:.85rem}
+    #keybar .muted{opacity:.8;font-size:.78rem;width:100%}
+    #keychip{position:fixed;right:12px;bottom:12px;z-index:50;padding:.4rem .7rem;border-radius:999px;
+      background:#0e1b2c;color:#fff;border:0;cursor:pointer;font-size:.78rem;display:none}
+  </style>
 </head>
 <body>
+  <!-- Bring-your-own-key: la llave se guarda SOLO en este navegador (localStorage), nunca se sube al repo. -->
+  <div id="keybar">
+    <strong>🔑 Demo en vivo:</strong>
+    <input id="keyinput" type="password" placeholder="Pega tu API key de Anthropic (sk-ant-...)" autocomplete="off" spellcheck="false" />
+    <button id="keysave">Guardar y activar</button>
+    <span class="muted">Se guarda solo en tu navegador. Consíguela en console.anthropic.com → API Keys. El cuestionario funciona sin key; solo el resultado con IA la necesita.</span>
+  </div>
+  <button id="keychip" title="Cambiar API key">🔑 Cambiar key</button>
+
   <div id="root"></div>
 
-  <!-- ░░ CONFIG ░░ Pega aquí la URL de tu Cloudflare Worker (proxy de la API de Claude). -->
-  <!-- Ejemplo: window.DEMO_PROXY_URL = "https://sw-claude-proxy.tucuenta.workers.dev"; -->
   <script>
-    window.DEMO_PROXY_URL = "https://REEMPLAZAR-CON-TU-WORKER.workers.dev";
+    (function () {
+      var bar = document.getElementById("keybar");
+      var chip = document.getElementById("keychip");
+      var input = document.getElementById("keyinput");
+      var save = document.getElementById("keysave");
+      function refresh() {
+        var has = !!localStorage.getItem("ANTHROPIC_API_KEY");
+        bar.style.display = has ? "none" : "flex";
+        chip.style.display = has ? "block" : "none";
+      }
+      save.addEventListener("click", function () {
+        var v = (input.value || "").trim();
+        if (!v) { input.focus(); return; }
+        localStorage.setItem("ANTHROPIC_API_KEY", v);
+        input.value = "";
+        refresh();
+      });
+      input.addEventListener("keydown", function (e) { if (e.key === "Enter") save.click(); });
+      chip.addEventListener("click", function () { localStorage.removeItem("ANTHROPIC_API_KEY"); refresh(); input.focus(); });
+      refresh();
+    })();
   </script>
 
   <script type="text/babel" data-presets="react" src="app.demo.jsx"></script>

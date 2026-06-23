@@ -617,14 +617,29 @@ Genera JSON con estas claves exactas:
   "closing_script": "máx 60 palabras · guion sugerido para el advisor en primera persona, dirigido al lead. Plantilla: 'Por lo que me compartiste, la mejor forma de comenzar es con [experiencia centrada en X según preferencia], [acompañamiento adecuado al nivel/formato], y [solución al bloqueador clave]. Revisemos lo que te permite iniciar esta misma semana.' Tono cálido pero directo."
 }`;
 
-  // Calls Claude through a serverless proxy that holds the API key (set window.DEMO_PROXY_URL
-  // to your Cloudflare Worker URL). The browser never ships an API key.
-  const API_ENDPOINT = (typeof window !== "undefined" && window.DEMO_PROXY_URL) || "/api/claude";
-  const r = await fetch(API_ENDPOINT, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ model: "claude-sonnet-4-6", max_tokens: 2000, system: sys, messages: [{ role: "user", content: user }] }),
-  });
+  // Calls Claude. Two modes:
+  //  - If window.DEMO_PROXY_URL is set, posts to that serverless proxy (key lives server-side).
+  //  - Otherwise (bring-your-own-key): calls the Anthropic API directly from the browser using the
+  //    key the operator pasted (stored only in this browser's localStorage). Requires the official
+  //    anthropic-dangerous-direct-browser-access header.
+  const PROXY = (typeof window !== "undefined" && window.DEMO_PROXY_URL) || null;
+  const bodyObj = { model: "claude-sonnet-4-6", max_tokens: 2000, system: sys, messages: [{ role: "user", content: user }] };
+  let url, headers;
+  if (PROXY) {
+    url = PROXY;
+    headers = { "Content-Type": "application/json" };
+  } else {
+    const key = (typeof window !== "undefined" && window.localStorage.getItem("ANTHROPIC_API_KEY")) || "";
+    if (!key) throw new Error("Falta la API key. Pégala en la barra superior para correr el demo en vivo.");
+    url = "https://api.anthropic.com/v1/messages";
+    headers = {
+      "Content-Type": "application/json",
+      "x-api-key": key,
+      "anthropic-version": "2023-06-01",
+      "anthropic-dangerous-direct-browser-access": "true",
+    };
+  }
+  const r = await fetch(url, { method: "POST", headers, body: JSON.stringify(bodyObj) });
   if (!r.ok) throw new Error("AI " + r.status);
   const data = await r.json();
   const text = data.content.map(b => b.text || "").join("");
