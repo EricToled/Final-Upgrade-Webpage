@@ -1,4 +1,3 @@
-import { jsxDEV as _jsxDEV, Fragment as _Fragment } from "react/jsx-dev-runtime";
 const {
   useState
 } = React;
@@ -2067,73 +2066,66 @@ Genera JSON con estas claves exactas:
 function Welcome({
   onStart
 }) {
-  return /*#__PURE__*/_jsxDEV("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "min-h-screen flex flex-col justify-center px-6 py-10",
     style: {
       background: BRAND.black,
       color: BRAND.white
-    },
-    children: /*#__PURE__*/_jsxDEV("div", {
-      className: "max-w-xl mx-auto w-full",
-      children: [/*#__PURE__*/_jsxDEV("p", {
-        style: {
-          color: BRAND.red,
-          letterSpacing: "0.22em",
-          fontSize: "0.7rem",
-          fontWeight: 700
-        },
-        children: "DISEÑA TU EXPERIENCIA"
-      }, void 0, false), /*#__PURE__*/_jsxDEV("h1", {
-        className: "mt-4",
-        style: {
-          fontWeight: 900,
-          fontSize: "2.5rem",
-          lineHeight: 1.05,
-          letterSpacing: "-0.02em"
-        },
-        children: "Tu experiencia ideal comienza conociéndonos mejor."
-      }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-        className: "mt-5",
-        style: {
-          color: BRAND.gray3,
-          fontSize: "1rem",
-          lineHeight: 1.55
-        },
-        children: "1 minuto de tu tiempo para comenzar una vida saludable."
-      }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
-        onClick: onStart,
-        className: "mt-8 px-8 py-3 font-bold rounded",
-        style: {
-          background: BRAND.red,
-          color: BRAND.white,
-          fontSize: "0.95rem",
-          letterSpacing: "0.02em"
-        },
-        children: "Empezar"
-      }, void 0, false)]
-    }, void 0, true)
-  }, void 0, false);
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "max-w-xl mx-auto w-full"
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: BRAND.red,
+      letterSpacing: "0.22em",
+      fontSize: "0.7rem",
+      fontWeight: 700
+    }
+  }, "DISEÑA TU EXPERIENCIA"), /*#__PURE__*/React.createElement("h1", {
+    className: "mt-4",
+    style: {
+      fontWeight: 900,
+      fontSize: "2.5rem",
+      lineHeight: 1.05,
+      letterSpacing: "-0.02em"
+    }
+  }, "Tu experiencia ideal comienza conociéndonos mejor."), /*#__PURE__*/React.createElement("p", {
+    className: "mt-5",
+    style: {
+      color: BRAND.gray3,
+      fontSize: "1rem",
+      lineHeight: 1.55
+    }
+  }, "1 minuto de tu tiempo para comenzar una vida saludable."), /*#__PURE__*/React.createElement("button", {
+    onClick: onStart,
+    className: "mt-8 px-8 py-3 font-bold rounded",
+    style: {
+      background: BRAND.red,
+      color: BRAND.white,
+      fontSize: "0.95rem",
+      letterSpacing: "0.02em"
+    }
+  }, "Empezar")));
 }
 function ProgressBar({
   current,
   total
 }) {
   const pct = (current + 1) / total * 100;
-  return /*#__PURE__*/_jsxDEV("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "w-full",
     style: {
       background: BRAND.gray2,
       height: "3px"
-    },
-    children: /*#__PURE__*/_jsxDEV("div", {
-      style: {
-        background: BRAND.red,
-        height: "3px",
-        width: pct + "%",
-        transition: "width 0.3s"
-      }
-    }, void 0, false)
-  }, void 0, false);
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: BRAND.red,
+      height: "3px",
+      width: pct + "%",
+      transition: "width 0.3s"
+    }
+  }));
 }
 function QuestionRenderer({
   question,
@@ -2191,279 +2183,249 @@ function QuestionRenderer({
     const n = parseFloat(physVal[f.k]);
     return physVal[f.k] != null && physVal[f.k] !== "" && (isNaN(n) || n < f.min || n > f.max);
   });
-  return /*#__PURE__*/_jsxDEV("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "min-h-screen flex flex-col",
     style: {
       background: BRAND.white
-    },
-    children: /*#__PURE__*/_jsxDEV("div", {
-      className: "px-6 pt-6 pb-4 max-w-xl mx-auto w-full flex-1 flex flex-col",
-      children: [/*#__PURE__*/_jsxDEV("h2", {
-        className: "mt-6",
-        style: {
-          fontWeight: 900,
-          fontSize: "1.625rem",
-          lineHeight: 1.15,
-          letterSpacing: "-0.015em",
-          color: BRAND.black
-        },
-        children: question.label
-      }, void 0, false), question.helper && /*#__PURE__*/_jsxDEV("p", {
-        className: "mt-2",
-        style: {
-          color: BRAND.gray4,
-          fontSize: "0.875rem"
-        },
-        children: question.helper
-      }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-        className: "mt-6 flex-1",
-        children: [question.type === "text" && /*#__PURE__*/_jsxDEV("input", {
-          type: "text",
-          value: value || "",
-          onChange: e => onChange(e.target.value),
-          placeholder: question.placeholder,
-          className: "w-full px-4 py-3 rounded outline-none",
-          style: {
-            background: BRAND.gray1,
-            color: BRAND.black,
-            fontSize: "1rem",
-            border: "1px solid " + BRAND.gray2
-          }
-        }, void 0, false), question.type === "single" && /*#__PURE__*/_jsxDEV("div", {
-          className: "flex flex-col gap-2",
-          children: question.options.map(opt => /*#__PURE__*/_jsxDEV("button", {
-            onClick: () => onChange(opt),
-            className: "text-left px-4 py-3 rounded transition",
-            style: {
-              background: value === opt ? BRAND.black : BRAND.gray1,
-              color: value === opt ? BRAND.white : BRAND.black,
-              border: "1px solid " + (value === opt ? BRAND.black : BRAND.gray2),
-              fontSize: "0.9375rem",
-              fontWeight: value === opt ? 600 : 500
-            },
-            children: opt
-          }, opt, false))
-        }, void 0, false), question.type === "multi" && !question.chips && /*#__PURE__*/_jsxDEV("div", {
-          className: "flex flex-col gap-2",
-          children: [question.options.map(opt => {
-            const sel = cur.includes(opt);
-            const disabled = !sel && atMax;
-            return /*#__PURE__*/_jsxDEV("button", {
-              disabled: disabled,
-              onClick: () => {
-                if (disabled) return;
-                if (sel) onChange(cur.filter(v => v !== opt));else if (!question.max || cur.length < question.max) onChange([...cur, opt]);
-              },
-              className: "text-left px-4 py-3 rounded transition",
-              style: {
-                background: sel ? BRAND.black : BRAND.gray1,
-                color: sel ? BRAND.white : BRAND.black,
-                border: "1px solid " + (sel ? BRAND.black : BRAND.gray2),
-                fontSize: "0.9375rem",
-                fontWeight: sel ? 600 : 500,
-                opacity: disabled ? 0.4 : 1,
-                cursor: disabled ? "not-allowed" : "pointer"
-              },
-              children: [opt, sel ? question.max && cur[0] === opt ? "  ·  Objetivo principal" : "  ✓" : ""]
-            }, opt, true);
-          }), question.max && (cur.length === 0 ? /*#__PURE__*/_jsxDEV("p", {
-            className: "mt-2",
-            style: {
-              color: BRAND.gray4,
-              fontSize: "0.75rem"
-            },
-            children: "Selecciona al menos uno."
-          }, void 0, false) : cur.length >= question.max ? /*#__PURE__*/_jsxDEV("p", {
-            className: "mt-2",
-            style: {
-              color: BRAND.gray4,
-              fontSize: "0.75rem"
-            },
-            children: ["Has elegido tus ", question.max, " objetivos; toca uno seleccionado para cambiarlo."]
-          }, void 0, true) : null)]
-        }, void 0, true), question.type === "multi" && question.chips && /*#__PURE__*/_jsxDEV("div", {
-          className: "flex flex-wrap gap-2",
-          children: question.options.map(opt => {
-            const sel = Array.isArray(value) && value.includes(opt);
-            return /*#__PURE__*/_jsxDEV("button", {
-              onClick: () => {
-                const c = Array.isArray(value) ? value : [];
-                if (sel) onChange(c.filter(v => v !== opt));else onChange([...c, opt]);
-              },
-              className: "px-5 py-3 rounded font-bold transition",
-              style: {
-                background: sel ? BRAND.black : BRAND.gray1,
-                color: sel ? BRAND.white : BRAND.black,
-                border: "1px solid " + (sel ? BRAND.black : BRAND.gray2),
-                fontSize: "0.9375rem",
-                minWidth: "3rem"
-              },
-              children: opt
-            }, opt, false);
-          })
-        }, void 0, false), question.type === "location" && /*#__PURE__*/_jsxDEV("div", {
-          className: "flex flex-col gap-3",
-          children: [/*#__PURE__*/_jsxDEV("div", {
-            children: [/*#__PURE__*/_jsxDEV("label", {
-              style: {
-                fontSize: "0.75rem",
-                color: BRAND.gray4,
-                letterSpacing: "0.15em",
-                textTransform: "uppercase",
-                fontWeight: 600
-              },
-              children: "Código postal"
-            }, void 0, false), /*#__PURE__*/_jsxDEV("input", {
-              type: "text",
-              inputMode: "numeric",
-              maxLength: 5,
-              value: (value || {}).cp || "",
-              onChange: e => onChange({
-                ...(value || {}),
-                cp: e.target.value.replace(/\D/g, "")
-              }),
-              placeholder: "00000",
-              className: "w-full mt-1 px-4 py-3 rounded outline-none",
-              style: {
-                background: BRAND.gray1,
-                color: BRAND.black,
-                fontSize: "1rem",
-                border: "1px solid " + BRAND.gray2
-              }
-            }, void 0, false)]
-          }, void 0, true), /*#__PURE__*/_jsxDEV("p", {
-            style: {
-              color: BRAND.gray4,
-              fontSize: "0.75rem",
-              textAlign: "center"
-            },
-            children: "o"
-          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-            children: [/*#__PURE__*/_jsxDEV("label", {
-              style: {
-                fontSize: "0.75rem",
-                color: BRAND.gray4,
-                letterSpacing: "0.15em",
-                textTransform: "uppercase",
-                fontWeight: 600
-              },
-              children: "Colonia"
-            }, void 0, false), /*#__PURE__*/_jsxDEV("input", {
-              type: "text",
-              value: (value || {}).colonia || "",
-              onChange: e => onChange({
-                ...(value || {}),
-                colonia: e.target.value
-              }),
-              placeholder: "Ej. Polanco",
-              className: "w-full mt-1 px-4 py-3 rounded outline-none",
-              style: {
-                background: BRAND.gray1,
-                color: BRAND.black,
-                fontSize: "1rem",
-                border: "1px solid " + BRAND.gray2
-              }
-            }, void 0, false)]
-          }, void 0, true), /*#__PURE__*/_jsxDEV("p", {
-            style: {
-              color: BRAND.gray4,
-              fontSize: "0.7rem"
-            },
-            children: "Ingresa un código postal de 5 dígitos o una colonia de al menos 3 letras."
-          }, void 0, false)]
-        }, void 0, true), question.type === "physical" && /*#__PURE__*/_jsxDEV("div", {
-          children: [/*#__PURE__*/_jsxDEV("div", {
-            className: "grid grid-cols-3 gap-3",
-            children: physFields.map(f => /*#__PURE__*/_jsxDEV("div", {
-              children: [/*#__PURE__*/_jsxDEV("label", {
-                style: {
-                  fontSize: "0.7rem",
-                  color: BRAND.gray4,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  fontWeight: 600
-                },
-                children: f.l
-              }, void 0, false), /*#__PURE__*/_jsxDEV("input", {
-                type: "number",
-                min: f.min,
-                max: f.max,
-                value: physVal[f.k] || "",
-                onChange: e => onChange({
-                  ...physVal,
-                  [f.k]: e.target.value
-                }),
-                className: "w-full mt-1 px-3 py-3 rounded outline-none text-center",
-                style: {
-                  background: BRAND.gray1,
-                  color: BRAND.black,
-                  fontSize: "1rem",
-                  border: "1px solid " + (physOut.some(o => o.k === f.k) ? BRAND.red : BRAND.gray2)
-                }
-              }, void 0, false)]
-            }, f.k, true))
-          }, void 0, false), physOut.length > 0 && /*#__PURE__*/_jsxDEV("p", {
-            style: {
-              color: BRAND.red,
-              fontSize: "0.75rem",
-              marginTop: "0.5rem"
-            },
-            children: "Revisa los valores: peso 30–250 kg, estatura 100–230 cm, cintura 40–200 cm."
-          }, void 0, false)]
-        }, void 0, true)]
-      }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-        className: "flex gap-3 mt-8 pb-6",
-        children: [!isFirst && /*#__PURE__*/_jsxDEV("button", {
-          onClick: onBack,
-          className: "px-6 py-3 rounded font-semibold",
-          style: {
-            background: "transparent",
-            color: BRAND.gray4,
-            fontSize: "0.875rem"
-          },
-          children: "← Atrás"
-        }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
-          onClick: onNext,
-          disabled: !canAdvance(),
-          className: "flex-1 px-6 py-3 rounded font-bold",
-          style: {
-            background: canAdvance() ? BRAND.red : BRAND.gray2,
-            color: canAdvance() ? BRAND.white : BRAND.gray3,
-            fontSize: "0.95rem",
-            cursor: canAdvance() ? "pointer" : "not-allowed"
-          },
-          children: isLast ? "Ver mi experiencia ideal" : "Continuar"
-        }, void 0, false)]
-      }, void 0, true)]
-    }, void 0, true)
-  }, void 0, false);
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "px-6 pt-6 pb-4 max-w-xl mx-auto w-full flex-1 flex flex-col"
+  }, /*#__PURE__*/React.createElement("h2", {
+    className: "mt-6",
+    style: {
+      fontWeight: 900,
+      fontSize: "1.625rem",
+      lineHeight: 1.15,
+      letterSpacing: "-0.015em",
+      color: BRAND.black
+    }
+  }, question.label), question.helper && /*#__PURE__*/React.createElement("p", {
+    className: "mt-2",
+    style: {
+      color: BRAND.gray4,
+      fontSize: "0.875rem"
+    }
+  }, question.helper), /*#__PURE__*/React.createElement("div", {
+    className: "mt-6 flex-1"
+  }, question.type === "text" && /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    value: value || "",
+    onChange: e => onChange(e.target.value),
+    placeholder: question.placeholder,
+    className: "w-full px-4 py-3 rounded outline-none",
+    style: {
+      background: BRAND.gray1,
+      color: BRAND.black,
+      fontSize: "1rem",
+      border: "1px solid " + BRAND.gray2
+    }
+  }), question.type === "single" && /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-col gap-2"
+  }, question.options.map(opt => /*#__PURE__*/React.createElement("button", {
+    key: opt,
+    onClick: () => onChange(opt),
+    className: "text-left px-4 py-3 rounded transition",
+    style: {
+      background: value === opt ? BRAND.black : BRAND.gray1,
+      color: value === opt ? BRAND.white : BRAND.black,
+      border: "1px solid " + (value === opt ? BRAND.black : BRAND.gray2),
+      fontSize: "0.9375rem",
+      fontWeight: value === opt ? 600 : 500
+    }
+  }, opt))), question.type === "multi" && !question.chips && /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-col gap-2"
+  }, question.options.map(opt => {
+    const sel = cur.includes(opt);
+    const disabled = !sel && atMax;
+    return /*#__PURE__*/React.createElement("button", {
+      key: opt,
+      disabled: disabled,
+      onClick: () => {
+        if (disabled) return;
+        if (sel) onChange(cur.filter(v => v !== opt));else if (!question.max || cur.length < question.max) onChange([...cur, opt]);
+      },
+      className: "text-left px-4 py-3 rounded transition",
+      style: {
+        background: sel ? BRAND.black : BRAND.gray1,
+        color: sel ? BRAND.white : BRAND.black,
+        border: "1px solid " + (sel ? BRAND.black : BRAND.gray2),
+        fontSize: "0.9375rem",
+        fontWeight: sel ? 600 : 500,
+        opacity: disabled ? 0.4 : 1,
+        cursor: disabled ? "not-allowed" : "pointer"
+      }
+    }, opt, sel ? question.max && cur[0] === opt ? "  ·  Objetivo principal" : "  ✓" : "");
+  }), question.max && (cur.length === 0 ? /*#__PURE__*/React.createElement("p", {
+    className: "mt-2",
+    style: {
+      color: BRAND.gray4,
+      fontSize: "0.75rem"
+    }
+  }, "Selecciona al menos uno.") : cur.length >= question.max ? /*#__PURE__*/React.createElement("p", {
+    className: "mt-2",
+    style: {
+      color: BRAND.gray4,
+      fontSize: "0.75rem"
+    }
+  }, "Has elegido tus ", question.max, " objetivos; toca uno seleccionado para cambiarlo.") : null)), question.type === "multi" && question.chips && /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-2"
+  }, question.options.map(opt => {
+    const sel = Array.isArray(value) && value.includes(opt);
+    return /*#__PURE__*/React.createElement("button", {
+      key: opt,
+      onClick: () => {
+        const c = Array.isArray(value) ? value : [];
+        if (sel) onChange(c.filter(v => v !== opt));else onChange([...c, opt]);
+      },
+      className: "px-5 py-3 rounded font-bold transition",
+      style: {
+        background: sel ? BRAND.black : BRAND.gray1,
+        color: sel ? BRAND.white : BRAND.black,
+        border: "1px solid " + (sel ? BRAND.black : BRAND.gray2),
+        fontSize: "0.9375rem",
+        minWidth: "3rem"
+      }
+    }, opt);
+  })), question.type === "location" && /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-col gap-3"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
+    style: {
+      fontSize: "0.75rem",
+      color: BRAND.gray4,
+      letterSpacing: "0.15em",
+      textTransform: "uppercase",
+      fontWeight: 600
+    }
+  }, "Código postal"), /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    inputMode: "numeric",
+    maxLength: 5,
+    value: (value || {}).cp || "",
+    onChange: e => onChange({
+      ...(value || {}),
+      cp: e.target.value.replace(/\D/g, "")
+    }),
+    placeholder: "00000",
+    className: "w-full mt-1 px-4 py-3 rounded outline-none",
+    style: {
+      background: BRAND.gray1,
+      color: BRAND.black,
+      fontSize: "1rem",
+      border: "1px solid " + BRAND.gray2
+    }
+  })), /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: BRAND.gray4,
+      fontSize: "0.75rem",
+      textAlign: "center"
+    }
+  }, "o"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
+    style: {
+      fontSize: "0.75rem",
+      color: BRAND.gray4,
+      letterSpacing: "0.15em",
+      textTransform: "uppercase",
+      fontWeight: 600
+    }
+  }, "Colonia"), /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    value: (value || {}).colonia || "",
+    onChange: e => onChange({
+      ...(value || {}),
+      colonia: e.target.value
+    }),
+    placeholder: "Ej. Polanco",
+    className: "w-full mt-1 px-4 py-3 rounded outline-none",
+    style: {
+      background: BRAND.gray1,
+      color: BRAND.black,
+      fontSize: "1rem",
+      border: "1px solid " + BRAND.gray2
+    }
+  })), /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: BRAND.gray4,
+      fontSize: "0.7rem"
+    }
+  }, "Ingresa un código postal de 5 dígitos o una colonia de al menos 3 letras.")), question.type === "physical" && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-3 gap-3"
+  }, physFields.map(f => /*#__PURE__*/React.createElement("div", {
+    key: f.k
+  }, /*#__PURE__*/React.createElement("label", {
+    style: {
+      fontSize: "0.7rem",
+      color: BRAND.gray4,
+      letterSpacing: "0.1em",
+      textTransform: "uppercase",
+      fontWeight: 600
+    }
+  }, f.l), /*#__PURE__*/React.createElement("input", {
+    type: "number",
+    min: f.min,
+    max: f.max,
+    value: physVal[f.k] || "",
+    onChange: e => onChange({
+      ...physVal,
+      [f.k]: e.target.value
+    }),
+    className: "w-full mt-1 px-3 py-3 rounded outline-none text-center",
+    style: {
+      background: BRAND.gray1,
+      color: BRAND.black,
+      fontSize: "1rem",
+      border: "1px solid " + (physOut.some(o => o.k === f.k) ? BRAND.red : BRAND.gray2)
+    }
+  })))), physOut.length > 0 && /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: BRAND.red,
+      fontSize: "0.75rem",
+      marginTop: "0.5rem"
+    }
+  }, "Revisa los valores: peso 30–250 kg, estatura 100–230 cm, cintura 40–200 cm."))), /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-3 mt-8 pb-6"
+  }, !isFirst && /*#__PURE__*/React.createElement("button", {
+    onClick: onBack,
+    className: "px-6 py-3 rounded font-semibold",
+    style: {
+      background: "transparent",
+      color: BRAND.gray4,
+      fontSize: "0.875rem"
+    }
+  }, "← Atrás"), /*#__PURE__*/React.createElement("button", {
+    onClick: onNext,
+    disabled: !canAdvance(),
+    className: "flex-1 px-6 py-3 rounded font-bold",
+    style: {
+      background: canAdvance() ? BRAND.red : BRAND.gray2,
+      color: canAdvance() ? BRAND.white : BRAND.gray3,
+      fontSize: "0.95rem",
+      cursor: canAdvance() ? "pointer" : "not-allowed"
+    }
+  }, isLast ? "Ver mi experiencia ideal" : "Continuar"))));
 }
 function Loading({
   msg
 }) {
-  return /*#__PURE__*/_jsxDEV("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "min-h-screen flex flex-col items-center justify-center px-6",
     style: {
       background: BRAND.white
-    },
-    children: /*#__PURE__*/_jsxDEV("div", {
-      className: "flex flex-col items-center max-w-xs text-center",
-      children: [/*#__PURE__*/_jsxDEV("div", {
-        className: "w-12 h-12 rounded-full border-4 animate-spin",
-        style: {
-          borderColor: BRAND.gray2,
-          borderTopColor: BRAND.red
-        }
-      }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-        className: "mt-6 font-bold",
-        style: {
-          color: BRAND.black,
-          fontSize: "1.125rem"
-        },
-        children: msg
-      }, void 0, false)]
-    }, void 0, true)
-  }, void 0, false);
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-col items-center max-w-xs text-center"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "w-12 h-12 rounded-full border-4 animate-spin",
+    style: {
+      borderColor: BRAND.gray2,
+      borderTopColor: BRAND.red
+    }
+  }), /*#__PURE__*/React.createElement("p", {
+    className: "mt-6 font-bold",
+    style: {
+      color: BRAND.black,
+      fontSize: "1.125rem"
+    }
+  }, msg)));
 }
 function ResultPage({
   data,
@@ -2635,1317 +2597,1168 @@ function ResultPage({
   } else {
     safetyBody = "Con base en lo que compartiste, esta recomendación se ajusta a tu nivel y disponibilidad. Si tienes alguna indicación médica antes de comenzar, coméntala con tu Advisor en la visita guiada.";
   }
-  return /*#__PURE__*/_jsxDEV("div", {
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       background: BRAND.white,
       color: BRAND.black,
       minHeight: "100vh"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      height: "4px",
+      background: BRAND.red
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: "1080px",
+      margin: "0 auto",
+      padding: "1.75rem 1.5rem 2rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "page page-1"
+  }, /*#__PURE__*/React.createElement("header", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "1fr auto",
+      gap: "2.5rem",
+      alignItems: "start"
     },
-    children: [/*#__PURE__*/_jsxDEV("div", {
+    className: "result-header"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.6875rem",
+      letterSpacing: "0.22em",
+      textTransform: "uppercase",
+      color: BRAND.red,
+      fontWeight: 800,
+      marginBottom: "0.625rem"
+    }
+  }, "Tu experiencia ideal personalizada"), /*#__PURE__*/React.createElement("h1", {
+    style: {
+      fontSize: "2.25rem",
+      fontWeight: 900,
+      lineHeight: 1.05,
+      letterSpacing: "-0.02em",
+      marginBottom: "0.625rem"
+    }
+  }, firstName, ", esta es tu experiencia ideal."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "1rem",
+      lineHeight: 1.45,
+      marginBottom: "0.625rem",
+      maxWidth: "720px"
+    }
+  }, llm.hook), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.875rem",
+      color: BRAND.gray4,
+      lineHeight: 1.55,
+      maxWidth: "720px"
+    }
+  }, llm.plan_argument)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: "right",
+      paddingTop: "0.25rem"
+    },
+    className: "brand-box"
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.95rem",
+      fontWeight: 800,
+      letterSpacing: "0.05em",
+      color: BRAND.black
+    }
+  }, "SPORTS WORLD"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.6875rem",
+      color: BRAND.gray4,
+      marginTop: "0.25rem"
+    }
+  }, "Tu experiencia, a tu medida"))), /*#__PURE__*/React.createElement("section", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: showFitkidz ? "1.12fr 0.88fr" : "1fr",
+      gap: "1rem"
+    },
+    className: "two-col"
+  }, /*#__PURE__*/React.createElement("article", {
+    style: {
+      background: BRAND.black,
+      color: BRAND.white,
+      borderRadius: "6px",
+      padding: "1.5rem",
+      minHeight: "200px"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.6875rem",
+      letterSpacing: "0.2em",
+      textTransform: "uppercase",
+      color: BRAND.red,
+      fontWeight: 800,
+      marginBottom: "0.5rem"
+    }
+  }, "Tu club recomendado"), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontSize: "1.5rem",
+      fontWeight: 900,
+      lineHeight: 1.1,
+      marginBottom: "0.375rem"
+    }
+  }, club.nombre), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.8125rem",
+      color: "#D3D3D3",
+      marginBottom: "0.875rem"
+    }
+  }, "A ", club.distancia_min, " min de tu ubicación · ", club.direccion), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
+      gap: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.75rem",
+      color: "#DEDEDE",
+      lineHeight: 1.45,
+      marginBottom: "0.75rem"
+    }
+  }, /*#__PURE__*/React.createElement("strong", null, "Por qué lo recomendamos:"), " ", whyRecommendCopy), experienceNote && /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.7rem",
+      color: "#FFD9A0",
+      lineHeight: 1.4,
+      marginBottom: "0.75rem",
+      borderLeft: "3px solid #F0BC54",
+      paddingLeft: "0.625rem"
+    }
+  }, experienceNote), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.75rem",
+      fontStyle: "italic",
+      borderLeft: "3px solid " + BRAND.red,
+      paddingLeft: "0.625rem",
+      lineHeight: 1.4,
+      color: "#FFFFFF"
+    }
+  }, llm.intent_line), /*#__PURE__*/React.createElement("button", {
+    onClick: () => setShowOtros(!showOtros),
+    style: {
+      display: "inline-block",
+      marginTop: "0.875rem",
+      fontSize: "0.7rem",
+      color: BRAND.white,
+      fontWeight: 600,
+      borderBottom: "1px solid " + BRAND.red,
+      background: "none",
+      border: "none",
+      borderBottomColor: BRAND.red,
+      cursor: "pointer",
+      padding: 0,
+      paddingBottom: "2px"
+    }
+  }, showOtros ? "Ocultar otros clubes" : "Ver otros clubes cerca de ti →")), /*#__PURE__*/React.createElement("ul", {
+    style: {
+      listStyle: "none",
+      padding: 0,
+      margin: 0
+    }
+  }, club.amenidades.map((a, i) => /*#__PURE__*/React.createElement("li", {
+    key: i,
+    style: {
+      fontSize: "0.75rem",
+      color: "#EFEFEF",
+      padding: "0.25rem 0 0.25rem 1.125rem",
+      position: "relative",
+      lineHeight: 1.45
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      position: "absolute",
+      left: 0,
+      top: "0.5rem",
+      width: "0.375rem",
+      height: "0.375rem",
+      background: BRAND.red,
+      borderRadius: "50%"
+    }
+  }), a))))), showFitkidz && club.tiene_fitkidz && /*#__PURE__*/React.createElement("article", {
+    style: {
+      background: "#EDF8F1",
+      border: "1px solid #CDE6D6",
+      borderRadius: "6px",
+      padding: "1.5rem",
+      minHeight: "200px"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.6875rem",
+      letterSpacing: "0.18em",
+      textTransform: "uppercase",
+      color: "#215F3F",
+      fontWeight: 800,
+      marginBottom: "0.5rem"
+    }
+  }, "Beneficio familiar"), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontSize: "1.25rem",
+      fontWeight: 900,
+      lineHeight: 1.15,
+      marginBottom: "0.5rem"
+    }
+  }, "Entrena mientras tus hijos se divierten"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.8125rem",
+      color: "#3D4B43",
+      lineHeight: 1.45,
+      marginBottom: "0.875rem"
+    }
+  }, club.kids_classes && club.kids_classes.length > 0 ? `Este club ofrece ${club.kids_classes.length} actividades para niños dentro del club, para que puedas entrenar con tranquilidad.` : "Este club ofrece FitKidz. Tu Advisor compartirá el detalle de actividades y horarios en tu visita guiada."), club.kids_classes && club.kids_classes.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexWrap: "wrap",
+      gap: "0.375rem"
+    }
+  }, club.kids_classes.slice(0, 6).map(k => /*#__PURE__*/React.createElement("span", {
+    key: k,
+    style: {
+      fontSize: "0.6875rem",
+      background: BRAND.white,
+      border: "1px solid #CFE2D5",
+      borderRadius: "10mm",
+      padding: "0.1875rem 0.5rem",
+      color: "#355844",
+      fontWeight: 700
+    }
+  }, displayKidsClass(k))))), showFitkidz && !club.tiene_fitkidz && /*#__PURE__*/React.createElement("article", {
+    style: {
+      background: BRAND.gray1,
+      border: "1px solid " + BRAND.gray2,
+      borderRadius: "6px",
+      padding: "1.5rem",
+      minHeight: "200px"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.6875rem",
+      letterSpacing: "0.18em",
+      textTransform: "uppercase",
+      color: BRAND.gray4,
+      fontWeight: 800,
+      marginBottom: "0.5rem"
+    }
+  }, "FitKidz no disponible aquí"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.8125rem",
+      color: BRAND.gray4,
+      lineHeight: 1.5
+    }
+  }, "Este club no ofrece FitKidz. Otros clubes cerca sí lo tienen — revisa la lista de otros clubes."))), showOtros && otrosClubes && otrosClubes.length > 0 && /*#__PURE__*/React.createElement("section", {
+    style: {
+      background: BRAND.gray1,
+      borderRadius: "4px",
+      padding: "1.125rem 1.25rem",
+      marginTop: "0.875rem"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.6875rem",
+      letterSpacing: "0.18em",
+      textTransform: "uppercase",
+      color: BRAND.gray4,
+      marginBottom: "0.625rem",
+      fontWeight: 600
+    }
+  }, "Otros clubes cerca de ti — toca uno para cambiar"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column"
+    }
+  }, otrosClubes.map((c, i) => /*#__PURE__*/React.createElement("button", {
+    key: c.tag,
+    onClick: () => handleSelectClub(c.tag),
+    style: {
+      padding: "0.75rem 0",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "flex-start",
+      gap: "1rem",
+      background: "none",
+      border: "none",
+      borderTop: i === 0 ? "none" : "1px solid " + BRAND.gray2,
+      cursor: "pointer",
+      textAlign: "left",
+      width: "100%",
+      fontFamily: "inherit"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.875rem",
+      fontWeight: 700,
+      marginBottom: "0.125rem",
+      color: BRAND.black
+    }
+  }, c.nombre), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.75rem",
+      color: BRAND.gray4,
+      lineHeight: 1.4
+    }
+  }, c.direccion), c.meetsExperience === false && /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.7rem",
+      color: "#9A6B00",
+      lineHeight: 1.4,
+      marginTop: "0.25rem"
+    }
+  }, "No incluye todas las clases ideales para tu objetivo")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-end",
+      gap: "0.25rem"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.75rem",
+      color: BRAND.gray4,
+      fontWeight: 600,
+      whiteSpace: "nowrap"
+    }
+  }, c.distancia_min, " min"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.7rem",
+      color: BRAND.red,
+      fontWeight: 700
+    }
+  }, "Elegir →"))))), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.7rem",
+      color: BRAND.gray4,
+      marginTop: "0.625rem",
+      fontStyle: "italic"
+    }
+  }, "Al elegir otro club, tu experiencia ideal se recalcula con su catálogo y amenidades.")), club.tooFar && /*#__PURE__*/React.createElement("section", {
+    style: {
+      background: BRAND.gray1,
+      border: "1px solid " + BRAND.gray2,
+      borderRadius: "4px",
+      padding: "0.875rem 1.125rem",
+      marginTop: "0.75rem"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.8125rem",
+      color: BRAND.gray4,
+      lineHeight: 1.5
+    }
+  }, "El club más cercano está a más de ", club.distancia_min, " minutos de tu zona. Si la distancia te resulta lejos, considera la lista de otros clubes y elige el que te quede mejor.")), /*#__PURE__*/React.createElement("section", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "repeat(4, 1fr)",
+      gap: "0.75rem",
+      marginTop: "1.5rem"
+    },
+    className: "summary-grid"
+  }, [{
+    label: "Tu objetivo",
+    value: objetivoLabel
+  }, {
+    label: "Tu nivel",
+    value: nivelLabel
+  }, {
+    label: "Tu horario",
+    value: horarioLabel || "—"
+  }, {
+    label: "Entrenas con",
+    value: entrenasConLabel
+  }].map((card, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      border: "1px solid " + BRAND.gray2,
+      borderRadius: "4px",
+      padding: "0.875rem 0.9375rem",
+      background: BRAND.white,
+      minHeight: "70px"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.6875rem",
+      letterSpacing: "0.14em",
+      textTransform: "uppercase",
+      color: BRAND.gray4,
+      fontWeight: 700,
+      marginBottom: "0.4375rem"
+    }
+  }, card.label), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.9375rem",
+      fontWeight: 800,
+      color: BRAND.black,
+      lineHeight: 1.25
+    }
+  }, card.value)))), /*#__PURE__*/React.createElement("section", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      gap: "1.5rem",
+      marginTop: "1.25rem",
+      padding: "1rem 1.375rem",
+      borderRadius: "4px",
+      background: "#FFF4F4",
+      border: "1px solid #F3B9BC"
+    },
+    className: "cta-row"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.9375rem",
+      fontWeight: 800,
+      marginBottom: "0.1875rem",
+      color: BRAND.black
+    }
+  }, "Conoce el club y valida tu experiencia con un Advisor."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.8125rem",
+      color: BRAND.gray4
+    }
+  }, "La visita guiada permite ajustar horarios, actividades y nivel de acompañamiento.")), /*#__PURE__*/React.createElement("button", {
+    onClick: onSchedule,
+    style: {
+      background: BRAND.red,
+      color: BRAND.white,
+      padding: "0.75rem 1.75rem",
+      borderRadius: "3px",
+      fontSize: "0.8125rem",
+      fontWeight: 800,
+      letterSpacing: "0.05em",
+      border: "none",
+      cursor: "pointer",
+      fontFamily: "inherit",
+      whiteSpace: "nowrap"
+    }
+  }, "AGENDAR VISITA GUIADA"))), /*#__PURE__*/React.createElement("div", {
+    className: "page-separator",
+    style: {
+      marginTop: "2.5rem",
+      paddingTop: "1rem",
+      borderTop: "1px dashed " + BRAND.gray3,
+      display: "flex",
+      justifyContent: "center"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      background: BRAND.white,
+      padding: "0 0.875rem",
+      marginTop: "-1.625rem",
+      fontSize: "0.6875rem",
+      letterSpacing: "0.22em",
+      textTransform: "uppercase",
+      color: BRAND.gray4,
+      fontWeight: 700
+    }
+  }, "Página 2")), /*#__PURE__*/React.createElement("div", {
+    className: "page page-2",
+    style: {
+      marginTop: "1.5rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: "2rem"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.6875rem",
+      letterSpacing: "0.14em",
+      textTransform: "uppercase",
+      color: BRAND.gray4,
+      fontWeight: 800
+    }
+  }, "Tu combinación recomendada"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: "0.625rem",
+      marginTop: "0.5rem",
+      marginBottom: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: "1.75rem",
+      height: "1.75rem",
+      borderRadius: "50%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      background: BRAND.black,
+      color: BRAND.white,
+      fontWeight: 800,
+      fontSize: "0.75rem"
+    }
+  }, "1"), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontSize: "1.25rem",
+      fontWeight: 900,
+      letterSpacing: "-0.01em",
+      margin: 0
+    }
+  }, "Tres componentes para una experiencia equilibrada"))), /*#__PURE__*/React.createElement("section", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr 1fr",
+      gap: "0.875rem"
+    },
+    className: "plan-grid"
+  }, /*#__PURE__*/React.createElement("article", {
+    style: {
+      background: "#EEF5FF",
+      border: "1px solid #CDDFF5",
+      borderRadius: "4px",
+      padding: "1.125rem 1.25rem",
+      display: "flex",
+      flexDirection: "column"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: "0.5rem",
+      marginBottom: "0.625rem"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: "1.75rem",
+      height: "1.75rem",
+      borderRadius: "3px",
+      background: BRAND.white,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontWeight: 800,
+      fontSize: "0.8125rem",
+      border: "1px solid rgba(0,0,0,0.08)"
+    }
+  }, "01"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.6875rem",
+      letterSpacing: "0.1em",
+      textTransform: "uppercase",
+      fontWeight: 800,
+      color: BRAND.gray4
+    }
+  }, resolveTrainingMode(answers) === "aquatic" ? "Acuático" : "Fuerza")), /*#__PURE__*/React.createElement("h3", {
+    style: {
+      fontSize: "1.125rem",
+      fontWeight: 900,
+      lineHeight: 1.15,
+      marginBottom: "0.5rem"
+    }
+  }, block1.subgrupo), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.8125rem",
+      color: "#39414A",
+      marginBottom: "0.625rem",
+      flex: 1,
+      lineHeight: 1.45
+    }
+  }, block1.why_template), /*#__PURE__*/React.createElement("a", {
+    href: "#",
+    style: {
+      fontSize: "0.75rem",
+      color: BRAND.red,
+      fontWeight: 700,
+      borderBottom: "1px solid " + BRAND.red,
+      paddingBottom: "2px",
+      alignSelf: "flex-start",
+      textDecoration: "none"
+    }
+  }, "Ver más →")), /*#__PURE__*/React.createElement("article", {
+    style: {
+      background: "#EDF8F1",
+      border: "1px solid #CDE6D6",
+      borderRadius: "4px",
+      padding: "1.125rem 1.25rem",
+      display: "flex",
+      flexDirection: "column"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: "0.5rem",
+      marginBottom: "0.625rem"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: "1.75rem",
+      height: "1.75rem",
+      borderRadius: "3px",
+      background: BRAND.white,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontWeight: 800,
+      fontSize: "0.8125rem",
+      border: "1px solid rgba(0,0,0,0.08)"
+    }
+  }, "02"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.6875rem",
+      letterSpacing: "0.1em",
+      textTransform: "uppercase",
+      fontWeight: 800,
+      color: BRAND.gray4
+    }
+  }, "Cardio")), /*#__PURE__*/React.createElement("h3", {
+    style: {
+      fontSize: "1.125rem",
+      fontWeight: 900,
+      lineHeight: 1.15,
+      marginBottom: "0.5rem"
+    }
+  }, block2.subgrupo || block2.maquina), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.75rem",
+      color: BRAND.black,
+      fontWeight: 600,
+      marginBottom: "0.5rem",
+      lineHeight: 1.4
+    }
+  }, block2.maquina, " · ", block2.duracion, " · ", block2.cuando), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.8125rem",
+      color: "#39414A",
+      marginBottom: block2.alternativa_acuatica ? "0.5rem" : "0.625rem",
+      flex: block2.alternativa_acuatica ? "none" : 1,
+      lineHeight: 1.45
+    }
+  }, block2.why), block2.alternativa_acuatica && /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.75rem",
+      color: BRAND.red,
+      fontWeight: 600,
+      marginBottom: "0.625rem",
+      flex: 1,
+      lineHeight: 1.4,
+      borderLeft: "2px solid " + BRAND.red,
+      paddingLeft: "0.5rem"
+    }
+  }, block2.alternativa_acuatica), /*#__PURE__*/React.createElement("a", {
+    href: "#",
+    style: {
+      fontSize: "0.75rem",
+      color: BRAND.red,
+      fontWeight: 700,
+      borderBottom: "1px solid " + BRAND.red,
+      paddingBottom: "2px",
+      alignSelf: "flex-start",
+      textDecoration: "none"
+    }
+  }, "Ver más →")), showBlock3 ? /*#__PURE__*/React.createElement("article", {
+    style: {
+      background: "#F3F4F6",
+      border: "1px solid #DEDFE3",
+      borderRadius: "4px",
+      padding: "1.125rem 1.25rem",
+      display: "flex",
+      flexDirection: "column"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: "0.5rem",
+      marginBottom: "0.625rem"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: "1.75rem",
+      height: "1.75rem",
+      borderRadius: "3px",
+      background: BRAND.white,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontWeight: 800,
+      fontSize: "0.8125rem",
+      border: "1px solid rgba(0,0,0,0.08)"
+    }
+  }, "03"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.6875rem",
+      letterSpacing: "0.1em",
+      textTransform: "uppercase",
+      fontWeight: 800,
+      color: BRAND.gray4
+    }
+  }, "Clases en grupo")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      marginBottom: "0.625rem"
+    }
+  }, top2.length === 0 ? /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.8125rem",
+      color: BRAND.gray4,
+      lineHeight: 1.45,
+      fontStyle: "italic"
+    }
+  }, "No encontramos clases en este club que encajen con tu objetivo y nivel. Considera Personal Training o explora otros clubes cerca.") : /*#__PURE__*/React.createElement(React.Fragment, null, top2[0] && /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: "0.5rem"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.875rem",
+      fontWeight: 800,
+      marginBottom: "0.125rem"
+    }
+  }, top2[0].display), llm.class_1_connector && /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.7rem",
+      color: BRAND.gray4,
+      fontStyle: "italic",
+      marginBottom: "0.2rem"
+    }
+  }, llm.class_1_connector), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.75rem",
+      color: "#39414A",
+      lineHeight: 1.4
+    }
+  }, top2[0].why)), top2[1] && /*#__PURE__*/React.createElement("div", {
+    style: {
+      paddingTop: "0.4375rem",
+      borderTop: "1px solid #DEDFE3"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.875rem",
+      fontWeight: 800,
+      marginBottom: "0.125rem"
+    }
+  }, top2[1].display), llm.class_2_connector && /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.7rem",
+      color: BRAND.gray4,
+      fontStyle: "italic",
+      marginBottom: "0.2rem"
+    }
+  }, llm.class_2_connector), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.75rem",
+      color: "#39414A",
+      lineHeight: 1.4
+    }
+  }, top2[1].why)))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "0.5rem",
+      alignItems: "flex-start"
+    }
+  }, top2.length > 0 ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("button", {
+    onClick: openChangePanel,
+    style: {
+      fontSize: "0.75rem",
+      color: BRAND.red,
+      fontWeight: 700,
+      background: "none",
+      border: "none",
+      borderBottom: "1px solid " + BRAND.red,
+      cursor: "pointer",
+      padding: 0,
+      paddingBottom: "2px",
+      fontFamily: "inherit",
+      textAlign: "left"
+    }
+  }, "Cambiar mis clases →"), /*#__PURE__*/React.createElement("button", {
+    onClick: () => {
+      setShowAllClasses(s => !s);
+      setShowChangeClasses(false);
+    },
+    style: {
+      fontSize: "0.75rem",
+      color: BRAND.red,
+      fontWeight: 700,
+      background: "none",
+      border: "none",
+      borderBottom: "1px solid " + BRAND.red,
+      cursor: "pointer",
+      padding: 0,
+      paddingBottom: "2px",
+      fontFamily: "inherit",
+      textAlign: "left"
+    }
+  }, showAllClasses ? "Ocultar lista" : "Ver todas las del club →")) : /*#__PURE__*/React.createElement("a", {
+    href: "#",
+    style: {
+      fontSize: "0.8125rem",
+      color: BRAND.white,
+      fontWeight: 700,
+      background: BRAND.red,
+      padding: "0.5rem 1rem",
+      borderRadius: "3px",
+      textDecoration: "none"
+    }
+  }, "Conoce Personal Training →"))) : /*#__PURE__*/React.createElement("article", {
+    style: {
+      background: BRAND.black,
+      color: BRAND.white,
+      borderRadius: "4px",
+      padding: "1.125rem 1.25rem",
+      display: "flex",
+      flexDirection: "column"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: "0.5rem",
+      marginBottom: "0.625rem"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: "1.75rem",
+      height: "1.75rem",
+      borderRadius: "3px",
+      background: BRAND.white,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontWeight: 800,
+      fontSize: "0.8125rem",
+      color: BRAND.black
+    }
+  }, "03"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.6875rem",
+      letterSpacing: "0.1em",
+      textTransform: "uppercase",
+      fontWeight: 800,
+      color: BRAND.red
+    }
+  }, "Tu rutina individual")), /*#__PURE__*/React.createElement("h3", {
+    style: {
+      fontSize: "1.125rem",
+      fontWeight: 900,
+      lineHeight: 1.15,
+      marginBottom: "0.5rem",
+      color: BRAND.white
+    }
+  }, "Personal Training"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.8125rem",
+      color: BRAND.gray3,
+      marginBottom: "0.625rem",
+      flex: 1,
+      lineHeight: 1.45
+    }
+  }, "Decidiste entrenar a tu ritmo, sin clases grupales. Personal Training te asigna un entrenador dedicado en tus horarios."), /*#__PURE__*/React.createElement("a", {
+    href: "#",
+    style: {
+      display: "inline-block",
+      fontSize: "0.8125rem",
+      color: BRAND.white,
+      fontWeight: 700,
+      background: BRAND.red,
+      padding: "0.5rem 1rem",
+      borderRadius: "3px",
+      alignSelf: "flex-start",
+      textDecoration: "none"
+    }
+  }, "Conoce Personal Training →"))), showChangeClasses && /*#__PURE__*/React.createElement("section", {
+    style: {
+      background: BRAND.gray1,
+      borderRadius: "4px",
+      padding: "1.25rem 1.5rem",
+      marginTop: "0.875rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "flex-start",
+      marginBottom: "0.875rem",
+      gap: "1rem",
+      flexWrap: "wrap"
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.6875rem",
+      letterSpacing: "0.18em",
+      textTransform: "uppercase",
+      color: BRAND.red,
+      fontWeight: 700,
+      marginBottom: "0.25rem"
+    }
+  }, "Cambiar mis clases"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.8125rem",
+      color: BRAND.gray4,
+      lineHeight: 1.4
+    }
+  }, "Selecciona hasta 2 clases que encajen con tu objetivo y nivel en este club.")), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.75rem",
+      color: BRAND.gray4,
+      fontWeight: 600
+    }
+  }, pickedNames.length, " / 2 seleccionadas")), allCompatibleClassesForPicker.length === 0 ? /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.8125rem",
+      color: BRAND.gray4,
+      fontStyle: "italic"
+    }
+  }, "No hay otras clases en este club que encajen con tu objetivo y nivel. Considera Personal Training o cambia de club.") : /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "0.375rem"
+    }
+  }, allCompatibleClassesForPicker.map(c => {
+    const isPicked = pickedNames.includes(c.nombre);
+    return /*#__PURE__*/React.createElement("button", {
+      key: c.nombre,
+      onClick: () => togglePick(c.nombre),
       style: {
-        height: "4px",
-        background: BRAND.red
+        padding: "0.625rem 0.875rem",
+        border: isPicked ? "2px solid " + BRAND.red : "1px solid " + BRAND.gray2,
+        background: isPicked ? "#FFF5F5" : BRAND.white,
+        borderRadius: "4px",
+        cursor: "pointer",
+        textAlign: "left",
+        fontFamily: "inherit",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
+        gap: "0.75rem"
       }
-    }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
+    }, /*#__PURE__*/React.createElement("div", {
       style: {
-        maxWidth: "1080px",
-        margin: "0 auto",
-        padding: "1.75rem 1.5rem 2rem"
-      },
-      children: [/*#__PURE__*/_jsxDEV("div", {
-        className: "page page-1",
-        children: [/*#__PURE__*/_jsxDEV("header", {
-          style: {
-            display: "grid",
-            gridTemplateColumns: "1fr auto",
-            gap: "2.5rem",
-            alignItems: "start"
-          },
-          className: "result-header",
-          children: [/*#__PURE__*/_jsxDEV("div", {
-            children: [/*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.6875rem",
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
-                color: BRAND.red,
-                fontWeight: 800,
-                marginBottom: "0.625rem"
-              },
-              children: "Tu experiencia ideal personalizada"
-            }, void 0, false), /*#__PURE__*/_jsxDEV("h1", {
-              style: {
-                fontSize: "2.25rem",
-                fontWeight: 900,
-                lineHeight: 1.05,
-                letterSpacing: "-0.02em",
-                marginBottom: "0.625rem"
-              },
-              children: [firstName, ", esta es tu experiencia ideal."]
-            }, void 0, true), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "1rem",
-                lineHeight: 1.45,
-                marginBottom: "0.625rem",
-                maxWidth: "720px"
-              },
-              children: llm.hook
-            }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.875rem",
-                color: BRAND.gray4,
-                lineHeight: 1.55,
-                maxWidth: "720px"
-              },
-              children: llm.plan_argument
-            }, void 0, false)]
-          }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-            style: {
-              textAlign: "right",
-              paddingTop: "0.25rem"
-            },
-            className: "brand-box",
-            children: [/*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.95rem",
-                fontWeight: 800,
-                letterSpacing: "0.05em",
-                color: BRAND.black
-              },
-              children: "SPORTS WORLD"
-            }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.6875rem",
-                color: BRAND.gray4,
-                marginTop: "0.25rem"
-              },
-              children: "Tu experiencia, a tu medida"
-            }, void 0, false)]
-          }, void 0, true)]
-        }, void 0, true), /*#__PURE__*/_jsxDEV("section", {
-          style: {
-            display: "grid",
-            gridTemplateColumns: showFitkidz ? "1.12fr 0.88fr" : "1fr",
-            gap: "1rem"
-          },
-          className: "two-col",
-          children: [/*#__PURE__*/_jsxDEV("article", {
-            style: {
-              background: BRAND.black,
-              color: BRAND.white,
-              borderRadius: "6px",
-              padding: "1.5rem",
-              minHeight: "200px"
-            },
-            children: [/*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.6875rem",
-                letterSpacing: "0.2em",
-                textTransform: "uppercase",
-                color: BRAND.red,
-                fontWeight: 800,
-                marginBottom: "0.5rem"
-              },
-              children: "Tu club recomendado"
-            }, void 0, false), /*#__PURE__*/_jsxDEV("h2", {
-              style: {
-                fontSize: "1.5rem",
-                fontWeight: 900,
-                lineHeight: 1.1,
-                marginBottom: "0.375rem"
-              },
-              children: club.nombre
-            }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.8125rem",
-                color: "#D3D3D3",
-                marginBottom: "0.875rem"
-              },
-              children: ["A ", club.distancia_min, " min de tu ubicación · ", club.direccion]
-            }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-              style: {
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "1rem"
-              },
-              children: [/*#__PURE__*/_jsxDEV("div", {
-                children: [/*#__PURE__*/_jsxDEV("p", {
-                  style: {
-                    fontSize: "0.75rem",
-                    color: "#DEDEDE",
-                    lineHeight: 1.45,
-                    marginBottom: "0.75rem"
-                  },
-                  children: [/*#__PURE__*/_jsxDEV("strong", {
-                    children: "Por qué lo recomendamos:"
-                  }, void 0, false), " ", whyRecommendCopy]
-                }, void 0, true), experienceNote && /*#__PURE__*/_jsxDEV("p", {
-                  style: {
-                    fontSize: "0.7rem",
-                    color: "#FFD9A0",
-                    lineHeight: 1.4,
-                    marginBottom: "0.75rem",
-                    borderLeft: "3px solid #F0BC54",
-                    paddingLeft: "0.625rem"
-                  },
-                  children: experienceNote
-                }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-                  style: {
-                    fontSize: "0.75rem",
-                    fontStyle: "italic",
-                    borderLeft: "3px solid " + BRAND.red,
-                    paddingLeft: "0.625rem",
-                    lineHeight: 1.4,
-                    color: "#FFFFFF"
-                  },
-                  children: llm.intent_line
-                }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
-                  onClick: () => setShowOtros(!showOtros),
-                  style: {
-                    display: "inline-block",
-                    marginTop: "0.875rem",
-                    fontSize: "0.7rem",
-                    color: BRAND.white,
-                    fontWeight: 600,
-                    borderBottom: "1px solid " + BRAND.red,
-                    background: "none",
-                    border: "none",
-                    borderBottomColor: BRAND.red,
-                    cursor: "pointer",
-                    padding: 0,
-                    paddingBottom: "2px"
-                  },
-                  children: showOtros ? "Ocultar otros clubes" : "Ver otros clubes cerca de ti →"
-                }, void 0, false)]
-              }, void 0, true), /*#__PURE__*/_jsxDEV("ul", {
-                style: {
-                  listStyle: "none",
-                  padding: 0,
-                  margin: 0
-                },
-                children: club.amenidades.map((a, i) => /*#__PURE__*/_jsxDEV("li", {
-                  style: {
-                    fontSize: "0.75rem",
-                    color: "#EFEFEF",
-                    padding: "0.25rem 0 0.25rem 1.125rem",
-                    position: "relative",
-                    lineHeight: 1.45
-                  },
-                  children: [/*#__PURE__*/_jsxDEV("span", {
-                    style: {
-                      position: "absolute",
-                      left: 0,
-                      top: "0.5rem",
-                      width: "0.375rem",
-                      height: "0.375rem",
-                      background: BRAND.red,
-                      borderRadius: "50%"
-                    }
-                  }, void 0, false), a]
-                }, i, true))
-              }, void 0, false)]
-            }, void 0, true)]
-          }, void 0, true), showFitkidz && club.tiene_fitkidz && /*#__PURE__*/_jsxDEV("article", {
-            style: {
-              background: "#EDF8F1",
-              border: "1px solid #CDE6D6",
-              borderRadius: "6px",
-              padding: "1.5rem",
-              minHeight: "200px"
-            },
-            children: [/*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.6875rem",
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: "#215F3F",
-                fontWeight: 800,
-                marginBottom: "0.5rem"
-              },
-              children: "Beneficio familiar"
-            }, void 0, false), /*#__PURE__*/_jsxDEV("h2", {
-              style: {
-                fontSize: "1.25rem",
-                fontWeight: 900,
-                lineHeight: 1.15,
-                marginBottom: "0.5rem"
-              },
-              children: "Entrena mientras tus hijos se divierten"
-            }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.8125rem",
-                color: "#3D4B43",
-                lineHeight: 1.45,
-                marginBottom: "0.875rem"
-              },
-              children: club.kids_classes && club.kids_classes.length > 0 ? `Este club ofrece ${club.kids_classes.length} actividades para niños dentro del club, para que puedas entrenar con tranquilidad.` : "Este club ofrece FitKidz. Tu Advisor compartirá el detalle de actividades y horarios en tu visita guiada."
-            }, void 0, false), club.kids_classes && club.kids_classes.length > 0 && /*#__PURE__*/_jsxDEV("div", {
-              style: {
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "0.375rem"
-              },
-              children: club.kids_classes.slice(0, 6).map(k => /*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  fontSize: "0.6875rem",
-                  background: BRAND.white,
-                  border: "1px solid #CFE2D5",
-                  borderRadius: "10mm",
-                  padding: "0.1875rem 0.5rem",
-                  color: "#355844",
-                  fontWeight: 700
-                },
-                children: displayKidsClass(k)
-              }, k, false))
-            }, void 0, false)]
-          }, void 0, true), showFitkidz && !club.tiene_fitkidz && /*#__PURE__*/_jsxDEV("article", {
-            style: {
-              background: BRAND.gray1,
-              border: "1px solid " + BRAND.gray2,
-              borderRadius: "6px",
-              padding: "1.5rem",
-              minHeight: "200px"
-            },
-            children: [/*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.6875rem",
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: BRAND.gray4,
-                fontWeight: 800,
-                marginBottom: "0.5rem"
-              },
-              children: "FitKidz no disponible aquí"
-            }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.8125rem",
-                color: BRAND.gray4,
-                lineHeight: 1.5
-              },
-              children: "Este club no ofrece FitKidz. Otros clubes cerca sí lo tienen — revisa la lista de otros clubes."
-            }, void 0, false)]
-          }, void 0, true)]
-        }, void 0, true), showOtros && otrosClubes && otrosClubes.length > 0 && /*#__PURE__*/_jsxDEV("section", {
-          style: {
-            background: BRAND.gray1,
-            borderRadius: "4px",
-            padding: "1.125rem 1.25rem",
-            marginTop: "0.875rem"
-          },
-          children: [/*#__PURE__*/_jsxDEV("p", {
-            style: {
-              fontSize: "0.6875rem",
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-              color: BRAND.gray4,
-              marginBottom: "0.625rem",
-              fontWeight: 600
-            },
-            children: "Otros clubes cerca de ti — toca uno para cambiar"
-          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-            style: {
-              display: "flex",
-              flexDirection: "column"
-            },
-            children: otrosClubes.map((c, i) => /*#__PURE__*/_jsxDEV("button", {
-              onClick: () => handleSelectClub(c.tag),
-              style: {
-                padding: "0.75rem 0",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "flex-start",
-                gap: "1rem",
-                background: "none",
-                border: "none",
-                borderTop: i === 0 ? "none" : "1px solid " + BRAND.gray2,
-                cursor: "pointer",
-                textAlign: "left",
-                width: "100%",
-                fontFamily: "inherit"
-              },
-              children: [/*#__PURE__*/_jsxDEV("div", {
-                style: {
-                  flex: 1
-                },
-                children: [/*#__PURE__*/_jsxDEV("p", {
-                  style: {
-                    fontSize: "0.875rem",
-                    fontWeight: 700,
-                    marginBottom: "0.125rem",
-                    color: BRAND.black
-                  },
-                  children: c.nombre
-                }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-                  style: {
-                    fontSize: "0.75rem",
-                    color: BRAND.gray4,
-                    lineHeight: 1.4
-                  },
-                  children: c.direccion
-                }, void 0, false), c.meetsExperience === false && /*#__PURE__*/_jsxDEV("p", {
-                  style: {
-                    fontSize: "0.7rem",
-                    color: "#9A6B00",
-                    lineHeight: 1.4,
-                    marginTop: "0.25rem"
-                  },
-                  children: "No incluye todas las clases ideales para tu objetivo"
-                }, void 0, false)]
-              }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-                style: {
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-end",
-                  gap: "0.25rem"
-                },
-                children: [/*#__PURE__*/_jsxDEV("p", {
-                  style: {
-                    fontSize: "0.75rem",
-                    color: BRAND.gray4,
-                    fontWeight: 600,
-                    whiteSpace: "nowrap"
-                  },
-                  children: [c.distancia_min, " min"]
-                }, void 0, true), /*#__PURE__*/_jsxDEV("span", {
-                  style: {
-                    fontSize: "0.7rem",
-                    color: BRAND.red,
-                    fontWeight: 700
-                  },
-                  children: "Elegir →"
-                }, void 0, false)]
-              }, void 0, true)]
-            }, c.tag, true))
-          }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-            style: {
-              fontSize: "0.7rem",
-              color: BRAND.gray4,
-              marginTop: "0.625rem",
-              fontStyle: "italic"
-            },
-            children: "Al elegir otro club, tu experiencia ideal se recalcula con su catálogo y amenidades."
-          }, void 0, false)]
-        }, void 0, true), club.tooFar && /*#__PURE__*/_jsxDEV("section", {
-          style: {
-            background: BRAND.gray1,
-            border: "1px solid " + BRAND.gray2,
-            borderRadius: "4px",
-            padding: "0.875rem 1.125rem",
-            marginTop: "0.75rem"
-          },
-          children: /*#__PURE__*/_jsxDEV("p", {
-            style: {
-              fontSize: "0.8125rem",
-              color: BRAND.gray4,
-              lineHeight: 1.5
-            },
-            children: ["El club más cercano está a más de ", club.distancia_min, " minutos de tu zona. Si la distancia te resulta lejos, considera la lista de otros clubes y elige el que te quede mejor."]
-          }, void 0, true)
-        }, void 0, false), /*#__PURE__*/_jsxDEV("section", {
-          style: {
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "0.75rem",
-            marginTop: "1.5rem"
-          },
-          className: "summary-grid",
-          children: [{
-            label: "Tu objetivo",
-            value: objetivoLabel
-          }, {
-            label: "Tu nivel",
-            value: nivelLabel
-          }, {
-            label: "Tu horario",
-            value: horarioLabel || "—"
-          }, {
-            label: "Entrenas con",
-            value: entrenasConLabel
-          }].map((card, i) => /*#__PURE__*/_jsxDEV("div", {
-            style: {
-              border: "1px solid " + BRAND.gray2,
-              borderRadius: "4px",
-              padding: "0.875rem 0.9375rem",
-              background: BRAND.white,
-              minHeight: "70px"
-            },
-            children: [/*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.6875rem",
-                letterSpacing: "0.14em",
-                textTransform: "uppercase",
-                color: BRAND.gray4,
-                fontWeight: 700,
-                marginBottom: "0.4375rem"
-              },
-              children: card.label
-            }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.9375rem",
-                fontWeight: 800,
-                color: BRAND.black,
-                lineHeight: 1.25
-              },
-              children: card.value
-            }, void 0, false)]
-          }, i, true))
-        }, void 0, false), /*#__PURE__*/_jsxDEV("section", {
-          style: {
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: "1.5rem",
-            marginTop: "1.25rem",
-            padding: "1rem 1.375rem",
-            borderRadius: "4px",
-            background: "#FFF4F4",
-            border: "1px solid #F3B9BC"
-          },
-          className: "cta-row",
-          children: [/*#__PURE__*/_jsxDEV("div", {
-            children: [/*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.9375rem",
-                fontWeight: 800,
-                marginBottom: "0.1875rem",
-                color: BRAND.black
-              },
-              children: "Conoce el club y valida tu experiencia con un Advisor."
-            }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.8125rem",
-                color: BRAND.gray4
-              },
-              children: "La visita guiada permite ajustar horarios, actividades y nivel de acompañamiento."
-            }, void 0, false)]
-          }, void 0, true), /*#__PURE__*/_jsxDEV("button", {
-            onClick: onSchedule,
-            style: {
-              background: BRAND.red,
-              color: BRAND.white,
-              padding: "0.75rem 1.75rem",
-              borderRadius: "3px",
-              fontSize: "0.8125rem",
-              fontWeight: 800,
-              letterSpacing: "0.05em",
-              border: "none",
-              cursor: "pointer",
-              fontFamily: "inherit",
-              whiteSpace: "nowrap"
-            },
-            children: "AGENDAR VISITA GUIADA"
-          }, void 0, false)]
-        }, void 0, true)]
-      }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-        className: "page-separator",
-        style: {
-          marginTop: "2.5rem",
-          paddingTop: "1rem",
-          borderTop: "1px dashed " + BRAND.gray3,
-          display: "flex",
-          justifyContent: "center"
-        },
-        children: /*#__PURE__*/_jsxDEV("span", {
-          style: {
-            background: BRAND.white,
-            padding: "0 0.875rem",
-            marginTop: "-1.625rem",
-            fontSize: "0.6875rem",
-            letterSpacing: "0.22em",
-            textTransform: "uppercase",
-            color: BRAND.gray4,
-            fontWeight: 700
-          },
-          children: "Página 2"
-        }, void 0, false)
-      }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-        className: "page page-2",
-        style: {
-          marginTop: "1.5rem"
-        },
-        children: [/*#__PURE__*/_jsxDEV("div", {
-          style: {
-            marginTop: "2rem"
-          },
-          children: [/*#__PURE__*/_jsxDEV("p", {
-            style: {
-              fontSize: "0.6875rem",
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              color: BRAND.gray4,
-              fontWeight: 800
-            },
-            children: "Tu combinación recomendada"
-          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-            style: {
-              display: "flex",
-              alignItems: "center",
-              gap: "0.625rem",
-              marginTop: "0.5rem",
-              marginBottom: "1rem"
-            },
-            children: [/*#__PURE__*/_jsxDEV("span", {
-              style: {
-                width: "1.75rem",
-                height: "1.75rem",
-                borderRadius: "50%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: BRAND.black,
-                color: BRAND.white,
-                fontWeight: 800,
-                fontSize: "0.75rem"
-              },
-              children: "1"
-            }, void 0, false), /*#__PURE__*/_jsxDEV("h2", {
-              style: {
-                fontSize: "1.25rem",
-                fontWeight: 900,
-                letterSpacing: "-0.01em",
-                margin: 0
-              },
-              children: "Tres componentes para una experiencia equilibrada"
-            }, void 0, false)]
-          }, void 0, true)]
-        }, void 0, true), /*#__PURE__*/_jsxDEV("section", {
-          style: {
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
-            gap: "0.875rem"
-          },
-          className: "plan-grid",
-          children: [/*#__PURE__*/_jsxDEV("article", {
-            style: {
-              background: "#EEF5FF",
-              border: "1px solid #CDDFF5",
-              borderRadius: "4px",
-              padding: "1.125rem 1.25rem",
-              display: "flex",
-              flexDirection: "column"
-            },
-            children: [/*#__PURE__*/_jsxDEV("div", {
-              style: {
-                display: "flex",
-                alignItems: "center",
-                gap: "0.5rem",
-                marginBottom: "0.625rem"
-              },
-              children: [/*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  width: "1.75rem",
-                  height: "1.75rem",
-                  borderRadius: "3px",
-                  background: BRAND.white,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 800,
-                  fontSize: "0.8125rem",
-                  border: "1px solid rgba(0,0,0,0.08)"
-                },
-                children: "01"
-              }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  fontSize: "0.6875rem",
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  fontWeight: 800,
-                  color: BRAND.gray4
-                },
-                children: resolveTrainingMode(answers) === "aquatic" ? "Acuático" : "Fuerza"
-              }, void 0, false)]
-            }, void 0, true), /*#__PURE__*/_jsxDEV("h3", {
-              style: {
-                fontSize: "1.125rem",
-                fontWeight: 900,
-                lineHeight: 1.15,
-                marginBottom: "0.5rem"
-              },
-              children: block1.subgrupo
-            }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.8125rem",
-                color: "#39414A",
-                marginBottom: "0.625rem",
-                flex: 1,
-                lineHeight: 1.45
-              },
-              children: block1.why_template
-            }, void 0, false), /*#__PURE__*/_jsxDEV("a", {
-              href: "#",
-              style: {
-                fontSize: "0.75rem",
-                color: BRAND.red,
-                fontWeight: 700,
-                borderBottom: "1px solid " + BRAND.red,
-                paddingBottom: "2px",
-                alignSelf: "flex-start",
-                textDecoration: "none"
-              },
-              children: "Ver más →"
-            }, void 0, false)]
-          }, void 0, true), /*#__PURE__*/_jsxDEV("article", {
-            style: {
-              background: "#EDF8F1",
-              border: "1px solid #CDE6D6",
-              borderRadius: "4px",
-              padding: "1.125rem 1.25rem",
-              display: "flex",
-              flexDirection: "column"
-            },
-            children: [/*#__PURE__*/_jsxDEV("div", {
-              style: {
-                display: "flex",
-                alignItems: "center",
-                gap: "0.5rem",
-                marginBottom: "0.625rem"
-              },
-              children: [/*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  width: "1.75rem",
-                  height: "1.75rem",
-                  borderRadius: "3px",
-                  background: BRAND.white,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 800,
-                  fontSize: "0.8125rem",
-                  border: "1px solid rgba(0,0,0,0.08)"
-                },
-                children: "02"
-              }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  fontSize: "0.6875rem",
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  fontWeight: 800,
-                  color: BRAND.gray4
-                },
-                children: "Cardio"
-              }, void 0, false)]
-            }, void 0, true), /*#__PURE__*/_jsxDEV("h3", {
-              style: {
-                fontSize: "1.125rem",
-                fontWeight: 900,
-                lineHeight: 1.15,
-                marginBottom: "0.5rem"
-              },
-              children: block2.subgrupo || block2.maquina
-            }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.75rem",
-                color: BRAND.black,
-                fontWeight: 600,
-                marginBottom: "0.5rem",
-                lineHeight: 1.4
-              },
-              children: [block2.maquina, " · ", block2.duracion, " · ", block2.cuando]
-            }, void 0, true), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.8125rem",
-                color: "#39414A",
-                marginBottom: block2.alternativa_acuatica ? "0.5rem" : "0.625rem",
-                flex: block2.alternativa_acuatica ? "none" : 1,
-                lineHeight: 1.45
-              },
-              children: block2.why
-            }, void 0, false), block2.alternativa_acuatica && /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.75rem",
-                color: BRAND.red,
-                fontWeight: 600,
-                marginBottom: "0.625rem",
-                flex: 1,
-                lineHeight: 1.4,
-                borderLeft: "2px solid " + BRAND.red,
-                paddingLeft: "0.5rem"
-              },
-              children: block2.alternativa_acuatica
-            }, void 0, false), /*#__PURE__*/_jsxDEV("a", {
-              href: "#",
-              style: {
-                fontSize: "0.75rem",
-                color: BRAND.red,
-                fontWeight: 700,
-                borderBottom: "1px solid " + BRAND.red,
-                paddingBottom: "2px",
-                alignSelf: "flex-start",
-                textDecoration: "none"
-              },
-              children: "Ver más →"
-            }, void 0, false)]
-          }, void 0, true), showBlock3 ? /*#__PURE__*/_jsxDEV("article", {
-            style: {
-              background: "#F3F4F6",
-              border: "1px solid #DEDFE3",
-              borderRadius: "4px",
-              padding: "1.125rem 1.25rem",
-              display: "flex",
-              flexDirection: "column"
-            },
-            children: [/*#__PURE__*/_jsxDEV("div", {
-              style: {
-                display: "flex",
-                alignItems: "center",
-                gap: "0.5rem",
-                marginBottom: "0.625rem"
-              },
-              children: [/*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  width: "1.75rem",
-                  height: "1.75rem",
-                  borderRadius: "3px",
-                  background: BRAND.white,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 800,
-                  fontSize: "0.8125rem",
-                  border: "1px solid rgba(0,0,0,0.08)"
-                },
-                children: "03"
-              }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  fontSize: "0.6875rem",
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  fontWeight: 800,
-                  color: BRAND.gray4
-                },
-                children: "Clases en grupo"
-              }, void 0, false)]
-            }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-              style: {
-                flex: 1,
-                marginBottom: "0.625rem"
-              },
-              children: top2.length === 0 ? /*#__PURE__*/_jsxDEV("p", {
-                style: {
-                  fontSize: "0.8125rem",
-                  color: BRAND.gray4,
-                  lineHeight: 1.45,
-                  fontStyle: "italic"
-                },
-                children: "No encontramos clases en este club que encajen con tu objetivo y nivel. Considera Personal Training o explora otros clubes cerca."
-              }, void 0, false) : /*#__PURE__*/_jsxDEV(_Fragment, {
-                children: [top2[0] && /*#__PURE__*/_jsxDEV("div", {
-                  style: {
-                    marginBottom: "0.5rem"
-                  },
-                  children: [/*#__PURE__*/_jsxDEV("p", {
-                    style: {
-                      fontSize: "0.875rem",
-                      fontWeight: 800,
-                      marginBottom: "0.125rem"
-                    },
-                    children: top2[0].display
-                  }, void 0, false), llm.class_1_connector && /*#__PURE__*/_jsxDEV("p", {
-                    style: {
-                      fontSize: "0.7rem",
-                      color: BRAND.gray4,
-                      fontStyle: "italic",
-                      marginBottom: "0.2rem"
-                    },
-                    children: llm.class_1_connector
-                  }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-                    style: {
-                      fontSize: "0.75rem",
-                      color: "#39414A",
-                      lineHeight: 1.4
-                    },
-                    children: top2[0].why
-                  }, void 0, false)]
-                }, void 0, true), top2[1] && /*#__PURE__*/_jsxDEV("div", {
-                  style: {
-                    paddingTop: "0.4375rem",
-                    borderTop: "1px solid #DEDFE3"
-                  },
-                  children: [/*#__PURE__*/_jsxDEV("p", {
-                    style: {
-                      fontSize: "0.875rem",
-                      fontWeight: 800,
-                      marginBottom: "0.125rem"
-                    },
-                    children: top2[1].display
-                  }, void 0, false), llm.class_2_connector && /*#__PURE__*/_jsxDEV("p", {
-                    style: {
-                      fontSize: "0.7rem",
-                      color: BRAND.gray4,
-                      fontStyle: "italic",
-                      marginBottom: "0.2rem"
-                    },
-                    children: llm.class_2_connector
-                  }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-                    style: {
-                      fontSize: "0.75rem",
-                      color: "#39414A",
-                      lineHeight: 1.4
-                    },
-                    children: top2[1].why
-                  }, void 0, false)]
-                }, void 0, true)]
-              }, void 0, true)
-            }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-              style: {
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.5rem",
-                alignItems: "flex-start"
-              },
-              children: top2.length > 0 ? /*#__PURE__*/_jsxDEV(_Fragment, {
-                children: [/*#__PURE__*/_jsxDEV("button", {
-                  onClick: openChangePanel,
-                  style: {
-                    fontSize: "0.75rem",
-                    color: BRAND.red,
-                    fontWeight: 700,
-                    background: "none",
-                    border: "none",
-                    borderBottom: "1px solid " + BRAND.red,
-                    cursor: "pointer",
-                    padding: 0,
-                    paddingBottom: "2px",
-                    fontFamily: "inherit",
-                    textAlign: "left"
-                  },
-                  children: "Cambiar mis clases →"
-                }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
-                  onClick: () => {
-                    setShowAllClasses(s => !s);
-                    setShowChangeClasses(false);
-                  },
-                  style: {
-                    fontSize: "0.75rem",
-                    color: BRAND.red,
-                    fontWeight: 700,
-                    background: "none",
-                    border: "none",
-                    borderBottom: "1px solid " + BRAND.red,
-                    cursor: "pointer",
-                    padding: 0,
-                    paddingBottom: "2px",
-                    fontFamily: "inherit",
-                    textAlign: "left"
-                  },
-                  children: showAllClasses ? "Ocultar lista" : "Ver todas las del club →"
-                }, void 0, false)]
-              }, void 0, true) : /*#__PURE__*/_jsxDEV("a", {
-                href: "#",
-                style: {
-                  fontSize: "0.8125rem",
-                  color: BRAND.white,
-                  fontWeight: 700,
-                  background: BRAND.red,
-                  padding: "0.5rem 1rem",
-                  borderRadius: "3px",
-                  textDecoration: "none"
-                },
-                children: "Conoce Personal Training →"
-              }, void 0, false)
-            }, void 0, false)]
-          }, void 0, true) : /*#__PURE__*/_jsxDEV("article", {
-            style: {
-              background: BRAND.black,
-              color: BRAND.white,
-              borderRadius: "4px",
-              padding: "1.125rem 1.25rem",
-              display: "flex",
-              flexDirection: "column"
-            },
-            children: [/*#__PURE__*/_jsxDEV("div", {
-              style: {
-                display: "flex",
-                alignItems: "center",
-                gap: "0.5rem",
-                marginBottom: "0.625rem"
-              },
-              children: [/*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  width: "1.75rem",
-                  height: "1.75rem",
-                  borderRadius: "3px",
-                  background: BRAND.white,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 800,
-                  fontSize: "0.8125rem",
-                  color: BRAND.black
-                },
-                children: "03"
-              }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  fontSize: "0.6875rem",
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  fontWeight: 800,
-                  color: BRAND.red
-                },
-                children: "Tu rutina individual"
-              }, void 0, false)]
-            }, void 0, true), /*#__PURE__*/_jsxDEV("h3", {
-              style: {
-                fontSize: "1.125rem",
-                fontWeight: 900,
-                lineHeight: 1.15,
-                marginBottom: "0.5rem",
-                color: BRAND.white
-              },
-              children: "Personal Training"
-            }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.8125rem",
-                color: BRAND.gray3,
-                marginBottom: "0.625rem",
-                flex: 1,
-                lineHeight: 1.45
-              },
-              children: "Decidiste entrenar a tu ritmo, sin clases grupales. Personal Training te asigna un entrenador dedicado en tus horarios."
-            }, void 0, false), /*#__PURE__*/_jsxDEV("a", {
-              href: "#",
-              style: {
-                display: "inline-block",
-                fontSize: "0.8125rem",
-                color: BRAND.white,
-                fontWeight: 700,
-                background: BRAND.red,
-                padding: "0.5rem 1rem",
-                borderRadius: "3px",
-                alignSelf: "flex-start",
-                textDecoration: "none"
-              },
-              children: "Conoce Personal Training →"
-            }, void 0, false)]
-          }, void 0, true)]
-        }, void 0, true), showChangeClasses && /*#__PURE__*/_jsxDEV("section", {
-          style: {
-            background: BRAND.gray1,
-            borderRadius: "4px",
-            padding: "1.25rem 1.5rem",
-            marginTop: "0.875rem"
-          },
-          children: [/*#__PURE__*/_jsxDEV("div", {
-            style: {
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "flex-start",
-              marginBottom: "0.875rem",
-              gap: "1rem",
-              flexWrap: "wrap"
-            },
-            children: [/*#__PURE__*/_jsxDEV("div", {
-              children: [/*#__PURE__*/_jsxDEV("p", {
-                style: {
-                  fontSize: "0.6875rem",
-                  letterSpacing: "0.18em",
-                  textTransform: "uppercase",
-                  color: BRAND.red,
-                  fontWeight: 700,
-                  marginBottom: "0.25rem"
-                },
-                children: "Cambiar mis clases"
-              }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-                style: {
-                  fontSize: "0.8125rem",
-                  color: BRAND.gray4,
-                  lineHeight: 1.4
-                },
-                children: "Selecciona hasta 2 clases que encajen con tu objetivo y nivel en este club."
-              }, void 0, false)]
-            }, void 0, true), /*#__PURE__*/_jsxDEV("span", {
-              style: {
-                fontSize: "0.75rem",
-                color: BRAND.gray4,
-                fontWeight: 600
-              },
-              children: [pickedNames.length, " / 2 seleccionadas"]
-            }, void 0, true)]
-          }, void 0, true), allCompatibleClassesForPicker.length === 0 ? /*#__PURE__*/_jsxDEV("p", {
-            style: {
-              fontSize: "0.8125rem",
-              color: BRAND.gray4,
-              fontStyle: "italic"
-            },
-            children: "No hay otras clases en este club que encajen con tu objetivo y nivel. Considera Personal Training o cambia de club."
-          }, void 0, false) : /*#__PURE__*/_jsxDEV("div", {
-            style: {
-              display: "flex",
-              flexDirection: "column",
-              gap: "0.375rem"
-            },
-            children: allCompatibleClassesForPicker.map(c => {
-              const isPicked = pickedNames.includes(c.nombre);
-              return /*#__PURE__*/_jsxDEV("button", {
-                onClick: () => togglePick(c.nombre),
-                style: {
-                  padding: "0.625rem 0.875rem",
-                  border: isPicked ? "2px solid " + BRAND.red : "1px solid " + BRAND.gray2,
-                  background: isPicked ? "#FFF5F5" : BRAND.white,
-                  borderRadius: "4px",
-                  cursor: "pointer",
-                  textAlign: "left",
-                  fontFamily: "inherit",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "flex-start",
-                  gap: "0.75rem"
-                },
-                children: /*#__PURE__*/_jsxDEV("div", {
-                  style: {
-                    flex: 1
-                  },
-                  children: [/*#__PURE__*/_jsxDEV("p", {
-                    style: {
-                      fontSize: "0.875rem",
-                      fontWeight: 700,
-                      color: BRAND.black,
-                      marginBottom: "0.125rem"
-                    },
-                    children: [c.display, isPicked && /*#__PURE__*/_jsxDEV("span", {
-                      style: {
-                        color: BRAND.red,
-                        marginLeft: "0.5rem"
-                      },
-                      children: "✓"
-                    }, void 0, false)]
-                  }, void 0, true), /*#__PURE__*/_jsxDEV("p", {
-                    style: {
-                      fontSize: "0.75rem",
-                      color: BRAND.gray4,
-                      lineHeight: 1.4
-                    },
-                    children: c.why
-                  }, void 0, false)]
-                }, void 0, true)
-              }, c.nombre, false);
-            })
-          }, void 0, false), allCompatibleClassesForPicker.length > 0 && /*#__PURE__*/_jsxDEV("div", {
-            style: {
-              display: "flex",
-              justifyContent: "flex-end",
-              gap: "0.5rem",
-              marginTop: "1rem"
-            },
-            children: [/*#__PURE__*/_jsxDEV("button", {
-              onClick: () => setShowChangeClasses(false),
-              style: {
-                background: "none",
-                border: "none",
-                color: BRAND.gray4,
-                cursor: "pointer",
-                fontFamily: "inherit",
-                fontSize: "0.8125rem",
-                padding: "0.5rem 1rem"
-              },
-              children: "Cancelar"
-            }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
-              onClick: applyChangedClasses,
-              disabled: pickedNames.length === 0,
-              style: {
-                background: pickedNames.length === 0 ? BRAND.gray3 : BRAND.red,
-                color: BRAND.white,
-                border: "none",
-                borderRadius: "3px",
-                padding: "0.5rem 1.25rem",
-                fontWeight: 700,
-                fontSize: "0.8125rem",
-                cursor: pickedNames.length === 0 ? "not-allowed" : "pointer",
-                fontFamily: "inherit"
-              },
-              children: "Aplicar"
-            }, void 0, false)]
-          }, void 0, true)]
-        }, void 0, true), showAllClasses && fullClubCatalog.length > 0 && /*#__PURE__*/_jsxDEV("section", {
-          style: {
-            background: BRAND.gray1,
-            borderRadius: "4px",
-            padding: "1.25rem 1.5rem",
-            marginTop: "0.875rem"
-          },
-          children: [/*#__PURE__*/_jsxDEV("p", {
-            style: {
-              fontSize: "0.6875rem",
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-              color: BRAND.gray4,
-              fontWeight: 700,
-              marginBottom: "0.625rem"
-            },
-            children: ["Catálogo completo del club (", fullClubCatalog.length, " clases)"]
-          }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-            style: {
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
-              gap: "0.375rem"
-            },
-            children: fullClubCatalog.map(name => {
-              const ficha = CLASS_FICHAS.find(f => f.nombre === name);
-              const inTop = top2.some(t => t.nombre === name);
-              return /*#__PURE__*/_jsxDEV("div", {
-                style: {
-                  padding: "0.5rem 0.625rem",
-                  background: inTop ? "#FFF5F5" : BRAND.white,
-                  border: inTop ? "1px solid " + BRAND.red : "1px solid " + BRAND.gray2,
-                  borderRadius: "3px",
-                  fontSize: "0.8125rem"
-                },
-                children: [inTop && /*#__PURE__*/_jsxDEV("span", {
-                  style: {
-                    color: BRAND.red,
-                    fontWeight: 700,
-                    marginRight: "0.25rem"
-                  },
-                  children: "✓"
-                }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
-                  style: {
-                    fontWeight: ficha ? 700 : 500,
-                    color: BRAND.black
-                  },
-                  children: ficha ? ficha.display : name
-                }, void 0, false)]
-              }, name, true);
-            })
-          }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-            style: {
-              fontSize: "0.7rem",
-              color: BRAND.gray4,
-              marginTop: "0.875rem",
-              fontStyle: "italic"
-            },
-            children: "El catálogo refleja la oferta real registrada en la matriz operativa de SW."
-          }, void 0, false)]
-        }, void 0, true), /*#__PURE__*/_jsxDEV("section", {
-          style: {
-            marginTop: "1.5rem",
-            background: "#FFF6E7",
-            border: "1px solid #EED4A2",
-            borderRadius: "4px",
-            padding: "1.125rem 1.25rem",
-            display: "flex",
-            alignItems: "flex-start",
-            gap: "1rem"
-          },
-          children: [/*#__PURE__*/_jsxDEV("div", {
-            style: {
-              width: "2rem",
-              height: "2rem",
-              minWidth: "2rem",
-              borderRadius: "50%",
-              background: "#F0BC54",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontWeight: 900,
-              color: "#5F3D00",
-              fontSize: "1.0625rem"
-            },
-            children: "!"
-          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-            children: [/*#__PURE__*/_jsxDEV("h3", {
-              style: {
-                fontSize: "0.9375rem",
-                fontWeight: 800,
-                marginBottom: "0.3125rem",
-                color: "#5F3D00"
-              },
-              children: "Antes de comenzar"
-            }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.8125rem",
-                lineHeight: 1.45,
-                color: "#5D4A28",
-                margin: 0
-              },
-              children: safetyBody
-            }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.7rem",
-                color: "#71654E",
-                marginTop: "0.375rem"
-              },
-              children: "Esta recomendación orienta la selección de servicios disponibles y no sustituye una valoración médica."
-            }, void 0, false)]
-          }, void 0, true)]
-        }, void 0, true), /*#__PURE__*/_jsxDEV("p", {
-          style: {
-            fontSize: "0.875rem",
-            color: BRAND.gray4,
-            lineHeight: 1.55,
-            marginTop: "1.25rem",
-            marginBottom: "1.25rem",
-            maxWidth: "760px"
-          },
-          children: llm.infrastructure_argument
-        }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-          style: {
-            textAlign: "center",
-            paddingTop: "1rem",
-            borderTop: "1px solid " + BRAND.gray2
-          },
-          children: [/*#__PURE__*/_jsxDEV("button", {
-            onClick: onSchedule,
-            style: {
-              display: "inline-block",
-              background: BRAND.red,
-              color: BRAND.white,
-              fontSize: "0.95rem",
-              fontWeight: 700,
-              padding: "0.875rem 2.25rem",
-              borderRadius: "4px",
-              border: "none",
-              textDecoration: "none",
-              letterSpacing: "0.02em",
-              cursor: "pointer",
-              fontFamily: "inherit"
-            },
-            children: "Agendar visita guiada"
-          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-            style: {
-              marginTop: "1rem"
-            },
-            children: /*#__PURE__*/_jsxDEV("button", {
-              onClick: onRestart,
-              style: {
-                color: BRAND.gray4,
-                textDecoration: "none",
-                fontWeight: 500,
-                fontSize: "0.75rem",
-                background: "none",
-                border: "none",
-                cursor: "pointer"
-              },
-              children: "Reiniciar cuestionario"
-            }, void 0, false)
-          }, void 0, false)]
-        }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-          style: {
-            marginTop: "1.5rem",
-            paddingTop: "0.875rem",
-            borderTop: "1px solid " + BRAND.gray2,
-            display: "flex",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            gap: "0.5rem"
-          },
-          children: [/*#__PURE__*/_jsxDEV("span", {
-            style: {
-              fontSize: "0.65rem",
-              color: BRAND.gray4
-            },
-            children: "Recomendación generada con base en tus respuestas."
-          }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
-            style: {
-              fontSize: "0.65rem",
-              color: BRAND.gray4
-            },
-            children: "Sports World · Tu experiencia, a tu medida"
-          }, void 0, false)]
-        }, void 0, true)]
-      }, void 0, true)]
-    }, void 0, true), /*#__PURE__*/_jsxDEV("style", {
-      children: `
+        flex: 1
+      }
+    }, /*#__PURE__*/React.createElement("p", {
+      style: {
+        fontSize: "0.875rem",
+        fontWeight: 700,
+        color: BRAND.black,
+        marginBottom: "0.125rem"
+      }
+    }, c.display, isPicked && /*#__PURE__*/React.createElement("span", {
+      style: {
+        color: BRAND.red,
+        marginLeft: "0.5rem"
+      }
+    }, "✓")), /*#__PURE__*/React.createElement("p", {
+      style: {
+        fontSize: "0.75rem",
+        color: BRAND.gray4,
+        lineHeight: 1.4
+      }
+    }, c.why)));
+  })), allCompatibleClassesForPicker.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "flex-end",
+      gap: "0.5rem",
+      marginTop: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: () => setShowChangeClasses(false),
+    style: {
+      background: "none",
+      border: "none",
+      color: BRAND.gray4,
+      cursor: "pointer",
+      fontFamily: "inherit",
+      fontSize: "0.8125rem",
+      padding: "0.5rem 1rem"
+    }
+  }, "Cancelar"), /*#__PURE__*/React.createElement("button", {
+    onClick: applyChangedClasses,
+    disabled: pickedNames.length === 0,
+    style: {
+      background: pickedNames.length === 0 ? BRAND.gray3 : BRAND.red,
+      color: BRAND.white,
+      border: "none",
+      borderRadius: "3px",
+      padding: "0.5rem 1.25rem",
+      fontWeight: 700,
+      fontSize: "0.8125rem",
+      cursor: pickedNames.length === 0 ? "not-allowed" : "pointer",
+      fontFamily: "inherit"
+    }
+  }, "Aplicar"))), showAllClasses && fullClubCatalog.length > 0 && /*#__PURE__*/React.createElement("section", {
+    style: {
+      background: BRAND.gray1,
+      borderRadius: "4px",
+      padding: "1.25rem 1.5rem",
+      marginTop: "0.875rem"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.6875rem",
+      letterSpacing: "0.18em",
+      textTransform: "uppercase",
+      color: BRAND.gray4,
+      fontWeight: 700,
+      marginBottom: "0.625rem"
+    }
+  }, "Catálogo completo del club (", fullClubCatalog.length, " clases)"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
+      gap: "0.375rem"
+    }
+  }, fullClubCatalog.map(name => {
+    const ficha = CLASS_FICHAS.find(f => f.nombre === name);
+    const inTop = top2.some(t => t.nombre === name);
+    return /*#__PURE__*/React.createElement("div", {
+      key: name,
+      style: {
+        padding: "0.5rem 0.625rem",
+        background: inTop ? "#FFF5F5" : BRAND.white,
+        border: inTop ? "1px solid " + BRAND.red : "1px solid " + BRAND.gray2,
+        borderRadius: "3px",
+        fontSize: "0.8125rem"
+      }
+    }, inTop && /*#__PURE__*/React.createElement("span", {
+      style: {
+        color: BRAND.red,
+        fontWeight: 700,
+        marginRight: "0.25rem"
+      }
+    }, "✓"), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontWeight: ficha ? 700 : 500,
+        color: BRAND.black
+      }
+    }, ficha ? ficha.display : name));
+  })), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.7rem",
+      color: BRAND.gray4,
+      marginTop: "0.875rem",
+      fontStyle: "italic"
+    }
+  }, "El catálogo refleja la oferta real registrada en la matriz operativa de SW.")), /*#__PURE__*/React.createElement("section", {
+    style: {
+      marginTop: "1.5rem",
+      background: "#FFF6E7",
+      border: "1px solid #EED4A2",
+      borderRadius: "4px",
+      padding: "1.125rem 1.25rem",
+      display: "flex",
+      alignItems: "flex-start",
+      gap: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: "2rem",
+      height: "2rem",
+      minWidth: "2rem",
+      borderRadius: "50%",
+      background: "#F0BC54",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontWeight: 900,
+      color: "#5F3D00",
+      fontSize: "1.0625rem"
+    }
+  }, "!"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", {
+    style: {
+      fontSize: "0.9375rem",
+      fontWeight: 800,
+      marginBottom: "0.3125rem",
+      color: "#5F3D00"
+    }
+  }, "Antes de comenzar"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.8125rem",
+      lineHeight: 1.45,
+      color: "#5D4A28",
+      margin: 0
+    }
+  }, safetyBody), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.7rem",
+      color: "#71654E",
+      marginTop: "0.375rem"
+    }
+  }, "Esta recomendación orienta la selección de servicios disponibles y no sustituye una valoración médica."))), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.875rem",
+      color: BRAND.gray4,
+      lineHeight: 1.55,
+      marginTop: "1.25rem",
+      marginBottom: "1.25rem",
+      maxWidth: "760px"
+    }
+  }, llm.infrastructure_argument), /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: "center",
+      paddingTop: "1rem",
+      borderTop: "1px solid " + BRAND.gray2
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: onSchedule,
+    style: {
+      display: "inline-block",
+      background: BRAND.red,
+      color: BRAND.white,
+      fontSize: "0.95rem",
+      fontWeight: 700,
+      padding: "0.875rem 2.25rem",
+      borderRadius: "4px",
+      border: "none",
+      textDecoration: "none",
+      letterSpacing: "0.02em",
+      cursor: "pointer",
+      fontFamily: "inherit"
+    }
+  }, "Agendar visita guiada"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: "1rem"
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: onRestart,
+    style: {
+      color: BRAND.gray4,
+      textDecoration: "none",
+      fontWeight: 500,
+      fontSize: "0.75rem",
+      background: "none",
+      border: "none",
+      cursor: "pointer"
+    }
+  }, "Reiniciar cuestionario"))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: "1.5rem",
+      paddingTop: "0.875rem",
+      borderTop: "1px solid " + BRAND.gray2,
+      display: "flex",
+      justifyContent: "space-between",
+      flexWrap: "wrap",
+      gap: "0.5rem"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.65rem",
+      color: BRAND.gray4
+    }
+  }, "Recomendación generada con base en tus respuestas."), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.65rem",
+      color: BRAND.gray4
+    }
+  }, "Sports World · Tu experiencia, a tu medida")))), /*#__PURE__*/React.createElement("style", null, `
         @media (max-width: 720px) {
           .result-header { grid-template-columns: 1fr !important; }
           .brand-box { text-align: left !important; }
@@ -3958,70 +3771,60 @@ function ResultPage({
           .page-separator { display: none !important; }
           .page-2 { page-break-before: always; }
         }
-      `
-    }, void 0, false)]
-  }, void 0, true);
+      `));
 }
 function ErrorScreen({
   msg,
   onRetry,
   onRestart
 }) {
-  return /*#__PURE__*/_jsxDEV("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "min-h-screen flex flex-col items-center justify-center px-6",
     style: {
       background: BRAND.white
-    },
-    children: /*#__PURE__*/_jsxDEV("div", {
-      className: "max-w-md text-center",
-      children: [/*#__PURE__*/_jsxDEV("p", {
-        style: {
-          color: BRAND.red,
-          fontSize: "0.7rem",
-          letterSpacing: "0.22em",
-          textTransform: "uppercase",
-          fontWeight: 700
-        },
-        children: "Algo no funcionó"
-      }, void 0, false), /*#__PURE__*/_jsxDEV("h2", {
-        className: "mt-4",
-        style: {
-          fontSize: "1.5rem",
-          fontWeight: 900,
-          lineHeight: 1.15
-        },
-        children: "No pudimos armar tu experiencia ideal en este momento."
-      }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-        className: "mt-3",
-        style: {
-          color: BRAND.gray4,
-          fontSize: "0.875rem"
-        },
-        children: msg
-      }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-        className: "mt-6 flex gap-3 justify-center",
-        children: [/*#__PURE__*/_jsxDEV("button", {
-          onClick: onRetry,
-          className: "px-6 py-3 rounded font-bold",
-          style: {
-            background: BRAND.red,
-            color: BRAND.white,
-            fontSize: "0.875rem"
-          },
-          children: "Reintentar"
-        }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
-          onClick: onRestart,
-          className: "px-6 py-3 rounded font-semibold",
-          style: {
-            background: "transparent",
-            color: BRAND.gray4,
-            fontSize: "0.875rem"
-          },
-          children: "Empezar de nuevo"
-        }, void 0, false)]
-      }, void 0, true)]
-    }, void 0, true)
-  }, void 0, false);
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "max-w-md text-center"
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: BRAND.red,
+      fontSize: "0.7rem",
+      letterSpacing: "0.22em",
+      textTransform: "uppercase",
+      fontWeight: 700
+    }
+  }, "Algo no funcionó"), /*#__PURE__*/React.createElement("h2", {
+    className: "mt-4",
+    style: {
+      fontSize: "1.5rem",
+      fontWeight: 900,
+      lineHeight: 1.15
+    }
+  }, "No pudimos armar tu experiencia ideal en este momento."), /*#__PURE__*/React.createElement("p", {
+    className: "mt-3",
+    style: {
+      color: BRAND.gray4,
+      fontSize: "0.875rem"
+    }
+  }, msg), /*#__PURE__*/React.createElement("div", {
+    className: "mt-6 flex gap-3 justify-center"
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: onRetry,
+    className: "px-6 py-3 rounded font-bold",
+    style: {
+      background: BRAND.red,
+      color: BRAND.white,
+      fontSize: "0.875rem"
+    }
+  }, "Reintentar"), /*#__PURE__*/React.createElement("button", {
+    onClick: onRestart,
+    className: "px-6 py-3 rounded font-semibold",
+    style: {
+      background: "transparent",
+      color: BRAND.gray4,
+      fontSize: "0.875rem"
+    }
+  }, "Empezar de nuevo"))));
 }
 
 // ─── Hour slot generation per Q7 franja (keys must match Q7 options EXACTLY) ───
@@ -4074,216 +3877,190 @@ function ScheduleScreen({
       hour: selectedHour
     });
   };
-  return /*#__PURE__*/_jsxDEV("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "min-h-screen flex flex-col",
     style: {
       background: BRAND.white
-    },
-    children: /*#__PURE__*/_jsxDEV("div", {
-      className: "max-w-3xl mx-auto w-full px-6 py-10",
-      children: [/*#__PURE__*/_jsxDEV("button", {
-        onClick: onBack,
-        style: {
-          background: "none",
-          border: "none",
-          color: BRAND.gray4,
-          fontSize: "0.8125rem",
-          cursor: "pointer",
-          padding: 0,
-          marginBottom: "1.25rem"
-        },
-        children: "← Volver"
-      }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-        style: {
-          color: BRAND.red,
-          letterSpacing: "0.22em",
-          fontSize: "0.7rem",
-          fontWeight: 700,
-          textTransform: "uppercase"
-        },
-        children: "Agenda tu visita guiada"
-      }, void 0, false), /*#__PURE__*/_jsxDEV("h1", {
-        className: "mt-3",
-        style: {
-          fontWeight: 900,
-          fontSize: "2rem",
-          lineHeight: 1.1,
-          letterSpacing: "-0.02em",
-          marginBottom: "0.5rem"
-        },
-        children: "Elige día y hora."
-      }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-        style: {
-          color: BRAND.gray4,
-          fontSize: "0.9375rem",
-          lineHeight: 1.5
-        },
-        children: ["Tu asesor en ", /*#__PURE__*/_jsxDEV("strong", {
-          children: club.nombre
-        }, void 0, false), " te recibe el día que tú elijas. Los días marcados son los que mencionaste como preferidos."]
-      }, void 0, true), /*#__PURE__*/_jsxDEV("section", {
-        style: {
-          marginTop: "2rem"
-        },
-        children: [/*#__PURE__*/_jsxDEV("p", {
-          style: {
-            fontSize: "0.6875rem",
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            color: BRAND.gray4,
-            fontWeight: 700,
-            marginBottom: "0.75rem"
-          },
-          children: "Día"
-        }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-          style: {
-            display: "grid",
-            gridTemplateColumns: "repeat(7, 1fr)",
-            gap: "0.5rem"
-          },
-          children: days.map((d, i) => {
-            const isPreferred = preferredDayIndices.has(d.getDay());
-            const isSelected = selectedDay && selectedDay.toDateString() === d.toDateString();
-            return /*#__PURE__*/_jsxDEV("button", {
-              onClick: () => setSelectedDay(d),
-              style: {
-                padding: "0.625rem 0.25rem",
-                borderRadius: "4px",
-                border: isSelected ? "2px solid " + BRAND.red : "1px solid " + (isPreferred ? BRAND.red : BRAND.gray2),
-                background: isSelected ? BRAND.red : isPreferred ? "#FFF5F5" : BRAND.white,
-                color: isSelected ? BRAND.white : BRAND.black,
-                cursor: "pointer",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                fontFamily: "inherit",
-                gap: "0.125rem"
-              },
-              children: [/*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  fontSize: "0.65rem",
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  fontWeight: 700,
-                  opacity: 0.7
-                },
-                children: DAY_LABEL_SHORT[d.getDay()]
-              }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  fontSize: "1.125rem",
-                  fontWeight: 900
-                },
-                children: d.getDate()
-              }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  fontSize: "0.625rem",
-                  opacity: 0.6,
-                  textTransform: "uppercase"
-                },
-                children: MONTH_SHORT[d.getMonth()]
-              }, void 0, false)]
-            }, i, true);
-          })
-        }, void 0, false), preferredDayIndices.size > 0 && /*#__PURE__*/_jsxDEV("p", {
-          style: {
-            fontSize: "0.7rem",
-            color: BRAND.gray4,
-            marginTop: "0.5rem",
-            fontStyle: "italic"
-          },
-          children: "Los días con borde rojo son los que indicaste como preferidos. Puedes elegir cualquier otro."
-        }, void 0, false)]
-      }, void 0, true), /*#__PURE__*/_jsxDEV("section", {
-        style: {
-          marginTop: "2rem"
-        },
-        children: [/*#__PURE__*/_jsxDEV("p", {
-          style: {
-            fontSize: "0.6875rem",
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            color: BRAND.gray4,
-            fontWeight: 700,
-            marginBottom: "0.75rem"
-          },
-          children: "Hora"
-        }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-          style: {
-            fontSize: "0.75rem",
-            color: BRAND.gray4,
-            marginBottom: "0.625rem"
-          },
-          children: ["Franjas según tu preferencia: ", franjas.join(" · ")]
-        }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-          style: {
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(80px, 1fr))",
-            gap: "0.5rem"
-          },
-          children: hourSlots.map(h => /*#__PURE__*/_jsxDEV("button", {
-            onClick: () => setSelectedHour(h),
-            style: {
-              padding: "0.625rem 0.5rem",
-              borderRadius: "4px",
-              border: selectedHour === h ? "2px solid " + BRAND.red : "1px solid " + BRAND.gray2,
-              background: selectedHour === h ? BRAND.red : BRAND.white,
-              color: selectedHour === h ? BRAND.white : BRAND.black,
-              cursor: "pointer",
-              fontFamily: "inherit",
-              fontWeight: 700,
-              fontSize: "0.875rem"
-            },
-            children: h
-          }, h, false))
-        }, void 0, false)]
-      }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-        style: {
-          marginTop: "2.5rem",
-          paddingTop: "1.5rem",
-          borderTop: "1px solid " + BRAND.gray2,
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          gap: "1rem",
-          flexWrap: "wrap"
-        },
-        children: [/*#__PURE__*/_jsxDEV("div", {
-          style: {
-            fontSize: "0.875rem",
-            color: BRAND.gray4
-          },
-          children: canConfirm ? /*#__PURE__*/_jsxDEV(_Fragment, {
-            children: [/*#__PURE__*/_jsxDEV("strong", {
-              style: {
-                color: BRAND.black
-              },
-              children: [DAY_LABEL_FULL[selectedDay.getDay()], " ", selectedDay.getDate(), " ", MONTH_SHORT[selectedDay.getMonth()]]
-            }, void 0, true), " · ", /*#__PURE__*/_jsxDEV("strong", {
-              style: {
-                color: BRAND.black
-              },
-              children: selectedHour
-            }, void 0, false)]
-          }, void 0, true) : "Elige un día y una hora para continuar."
-        }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
-          onClick: handleConfirm,
-          disabled: !canConfirm,
-          style: {
-            background: canConfirm ? BRAND.red : BRAND.gray2,
-            color: canConfirm ? BRAND.white : BRAND.gray3,
-            fontSize: "0.9375rem",
-            fontWeight: 700,
-            padding: "0.875rem 2rem",
-            borderRadius: "4px",
-            border: "none",
-            cursor: canConfirm ? "pointer" : "not-allowed",
-            fontFamily: "inherit"
-          },
-          children: "Confirmar visita"
-        }, void 0, false)]
-      }, void 0, true)]
-    }, void 0, true)
-  }, void 0, false);
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "max-w-3xl mx-auto w-full px-6 py-10"
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: onBack,
+    style: {
+      background: "none",
+      border: "none",
+      color: BRAND.gray4,
+      fontSize: "0.8125rem",
+      cursor: "pointer",
+      padding: 0,
+      marginBottom: "1.25rem"
+    }
+  }, "← Volver"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: BRAND.red,
+      letterSpacing: "0.22em",
+      fontSize: "0.7rem",
+      fontWeight: 700,
+      textTransform: "uppercase"
+    }
+  }, "Agenda tu visita guiada"), /*#__PURE__*/React.createElement("h1", {
+    className: "mt-3",
+    style: {
+      fontWeight: 900,
+      fontSize: "2rem",
+      lineHeight: 1.1,
+      letterSpacing: "-0.02em",
+      marginBottom: "0.5rem"
+    }
+  }, "Elige día y hora."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: BRAND.gray4,
+      fontSize: "0.9375rem",
+      lineHeight: 1.5
+    }
+  }, "Tu asesor en ", /*#__PURE__*/React.createElement("strong", null, club.nombre), " te recibe el día que tú elijas. Los días marcados son los que mencionaste como preferidos."), /*#__PURE__*/React.createElement("section", {
+    style: {
+      marginTop: "2rem"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.6875rem",
+      letterSpacing: "0.18em",
+      textTransform: "uppercase",
+      color: BRAND.gray4,
+      fontWeight: 700,
+      marginBottom: "0.75rem"
+    }
+  }, "Día"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "repeat(7, 1fr)",
+      gap: "0.5rem"
+    }
+  }, days.map((d, i) => {
+    const isPreferred = preferredDayIndices.has(d.getDay());
+    const isSelected = selectedDay && selectedDay.toDateString() === d.toDateString();
+    return /*#__PURE__*/React.createElement("button", {
+      key: i,
+      onClick: () => setSelectedDay(d),
+      style: {
+        padding: "0.625rem 0.25rem",
+        borderRadius: "4px",
+        border: isSelected ? "2px solid " + BRAND.red : "1px solid " + (isPreferred ? BRAND.red : BRAND.gray2),
+        background: isSelected ? BRAND.red : isPreferred ? "#FFF5F5" : BRAND.white,
+        color: isSelected ? BRAND.white : BRAND.black,
+        cursor: "pointer",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        fontFamily: "inherit",
+        gap: "0.125rem"
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.65rem",
+        letterSpacing: "0.1em",
+        textTransform: "uppercase",
+        fontWeight: 700,
+        opacity: 0.7
+      }
+    }, DAY_LABEL_SHORT[d.getDay()]), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "1.125rem",
+        fontWeight: 900
+      }
+    }, d.getDate()), /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontSize: "0.625rem",
+        opacity: 0.6,
+        textTransform: "uppercase"
+      }
+    }, MONTH_SHORT[d.getMonth()]));
+  })), preferredDayIndices.size > 0 && /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.7rem",
+      color: BRAND.gray4,
+      marginTop: "0.5rem",
+      fontStyle: "italic"
+    }
+  }, "Los días con borde rojo son los que indicaste como preferidos. Puedes elegir cualquier otro.")), /*#__PURE__*/React.createElement("section", {
+    style: {
+      marginTop: "2rem"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.6875rem",
+      letterSpacing: "0.18em",
+      textTransform: "uppercase",
+      color: BRAND.gray4,
+      fontWeight: 700,
+      marginBottom: "0.75rem"
+    }
+  }, "Hora"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.75rem",
+      color: BRAND.gray4,
+      marginBottom: "0.625rem"
+    }
+  }, "Franjas según tu preferencia: ", franjas.join(" · ")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fill, minmax(80px, 1fr))",
+      gap: "0.5rem"
+    }
+  }, hourSlots.map(h => /*#__PURE__*/React.createElement("button", {
+    key: h,
+    onClick: () => setSelectedHour(h),
+    style: {
+      padding: "0.625rem 0.5rem",
+      borderRadius: "4px",
+      border: selectedHour === h ? "2px solid " + BRAND.red : "1px solid " + BRAND.gray2,
+      background: selectedHour === h ? BRAND.red : BRAND.white,
+      color: selectedHour === h ? BRAND.white : BRAND.black,
+      cursor: "pointer",
+      fontFamily: "inherit",
+      fontWeight: 700,
+      fontSize: "0.875rem"
+    }
+  }, h)))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: "2.5rem",
+      paddingTop: "1.5rem",
+      borderTop: "1px solid " + BRAND.gray2,
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      gap: "1rem",
+      flexWrap: "wrap"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: "0.875rem",
+      color: BRAND.gray4
+    }
+  }, canConfirm ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("strong", {
+    style: {
+      color: BRAND.black
+    }
+  }, DAY_LABEL_FULL[selectedDay.getDay()], " ", selectedDay.getDate(), " ", MONTH_SHORT[selectedDay.getMonth()]), " · ", /*#__PURE__*/React.createElement("strong", {
+    style: {
+      color: BRAND.black
+    }
+  }, selectedHour)) : "Elige un día y una hora para continuar."), /*#__PURE__*/React.createElement("button", {
+    onClick: handleConfirm,
+    disabled: !canConfirm,
+    style: {
+      background: canConfirm ? BRAND.red : BRAND.gray2,
+      color: canConfirm ? BRAND.white : BRAND.gray3,
+      fontSize: "0.9375rem",
+      fontWeight: 700,
+      padding: "0.875rem 2rem",
+      borderRadius: "4px",
+      border: "none",
+      cursor: canConfirm ? "pointer" : "not-allowed",
+      fontFamily: "inherit"
+    }
+  }, "Confirmar visita"))));
 }
 function ContactCaptureScreen({
   data,
@@ -4333,180 +4110,157 @@ function ContactCaptureScreen({
     outline: "none",
     transition: "border-color 0.15s"
   });
-  return /*#__PURE__*/_jsxDEV("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "min-h-screen flex flex-col",
     style: {
       background: BRAND.white
-    },
-    children: [/*#__PURE__*/_jsxDEV("div", {
-      className: "px-6 pt-6 pb-4 max-w-xl mx-auto w-full flex-1 flex flex-col",
-      children: [/*#__PURE__*/_jsxDEV("p", {
-        style: {
-          color: BRAND.red,
-          letterSpacing: "0.22em",
-          fontSize: "0.7rem",
-          fontWeight: 700,
-          textTransform: "uppercase"
-        },
-        children: "Antes de agendar"
-      }, void 0, false), /*#__PURE__*/_jsxDEV("h2", {
-        className: "mt-4",
-        style: {
-          fontWeight: 900,
-          fontSize: "1.625rem",
-          lineHeight: 1.15,
-          letterSpacing: "-0.015em",
-          color: BRAND.black
-        },
-        children: [firstName, ", necesitamos un par de datos para confirmar tu visita."]
-      }, void 0, true), /*#__PURE__*/_jsxDEV("p", {
-        className: "mt-2",
-        style: {
-          color: BRAND.gray4,
-          fontSize: "0.875rem",
-          lineHeight: 1.5
-        },
-        children: "Tu Advisor te contactará para coordinar el horario y enviarte los detalles del club."
-      }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-        className: "mt-8 flex flex-col gap-4",
-        children: [/*#__PURE__*/_jsxDEV("div", {
-          children: [/*#__PURE__*/_jsxDEV("label", {
-            style: {
-              display: "block",
-              fontSize: "0.75rem",
-              fontWeight: 700,
-              color: BRAND.black,
-              marginBottom: "0.375rem",
-              letterSpacing: "0.02em"
-            },
-            children: "Apellido"
-          }, void 0, false), /*#__PURE__*/_jsxDEV("input", {
-            type: "text",
-            value: lastName,
-            onChange: e => setLastName(e.target.value),
-            onBlur: () => setTouched(t => ({
-              ...t,
-              lastName: true
-            })),
-            placeholder: "Tu apellido",
-            style: inputStyle(!!lastNameError)
-          }, void 0, false), lastNameError && /*#__PURE__*/_jsxDEV("p", {
-            style: {
-              color: BRAND.red,
-              fontSize: "0.75rem",
-              marginTop: "0.25rem"
-            },
-            children: lastNameError
-          }, void 0, false)]
-        }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-          children: [/*#__PURE__*/_jsxDEV("label", {
-            style: {
-              display: "block",
-              fontSize: "0.75rem",
-              fontWeight: 700,
-              color: BRAND.black,
-              marginBottom: "0.375rem",
-              letterSpacing: "0.02em"
-            },
-            children: "Número de celular"
-          }, void 0, false), /*#__PURE__*/_jsxDEV("input", {
-            type: "tel",
-            value: phone,
-            onChange: e => setPhone(e.target.value),
-            onBlur: () => setTouched(t => ({
-              ...t,
-              phone: true
-            })),
-            placeholder: "10 dígitos · ejemplo: 5512345678",
-            style: inputStyle(!!phoneError),
-            maxLength: 15
-          }, void 0, false), phoneError && /*#__PURE__*/_jsxDEV("p", {
-            style: {
-              color: BRAND.red,
-              fontSize: "0.75rem",
-              marginTop: "0.25rem"
-            },
-            children: phoneError
-          }, void 0, false)]
-        }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-          children: [/*#__PURE__*/_jsxDEV("label", {
-            style: {
-              display: "block",
-              fontSize: "0.75rem",
-              fontWeight: 700,
-              color: BRAND.black,
-              marginBottom: "0.375rem",
-              letterSpacing: "0.02em"
-            },
-            children: "Correo electrónico"
-          }, void 0, false), /*#__PURE__*/_jsxDEV("input", {
-            type: "email",
-            value: email,
-            onChange: e => setEmail(e.target.value),
-            onBlur: () => setTouched(t => ({
-              ...t,
-              email: true
-            })),
-            placeholder: "tu@correo.com",
-            style: inputStyle(!!emailError)
-          }, void 0, false), emailError && /*#__PURE__*/_jsxDEV("p", {
-            style: {
-              color: BRAND.red,
-              fontSize: "0.75rem",
-              marginTop: "0.25rem"
-            },
-            children: emailError
-          }, void 0, false)]
-        }, void 0, true)]
-      }, void 0, true), /*#__PURE__*/_jsxDEV("p", {
-        className: "mt-6",
-        style: {
-          fontSize: "0.6875rem",
-          color: BRAND.gray4,
-          lineHeight: 1.5
-        },
-        children: "Tus datos se usan únicamente para coordinar tu visita guiada. No los compartimos con terceros."
-      }, void 0, false)]
-    }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-      className: "px-6 py-5",
-      style: {
-        background: BRAND.gray1,
-        borderTop: "1px solid " + BRAND.gray2
-      },
-      children: /*#__PURE__*/_jsxDEV("div", {
-        className: "max-w-xl mx-auto w-full flex items-center justify-between gap-3",
-        children: [/*#__PURE__*/_jsxDEV("button", {
-          onClick: onBack,
-          style: {
-            background: "none",
-            border: "none",
-            color: BRAND.gray4,
-            fontSize: "0.875rem",
-            cursor: "pointer",
-            padding: "0.5rem 0",
-            fontFamily: "inherit"
-          },
-          children: "← Volver"
-        }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
-          onClick: handleSubmit,
-          disabled: !allValid && (touched.lastName || touched.phone || touched.email),
-          style: {
-            background: allValid ? BRAND.red : BRAND.gray3,
-            color: BRAND.white,
-            fontSize: "0.9375rem",
-            fontWeight: 700,
-            padding: "0.875rem 2rem",
-            borderRadius: "4px",
-            border: "none",
-            cursor: allValid ? "pointer" : "not-allowed",
-            fontFamily: "inherit",
-            transition: "background 0.15s"
-          },
-          children: "Continuar"
-        }, void 0, false)]
-      }, void 0, true)
-    }, void 0, false)]
-  }, void 0, true);
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "px-6 pt-6 pb-4 max-w-xl mx-auto w-full flex-1 flex flex-col"
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: BRAND.red,
+      letterSpacing: "0.22em",
+      fontSize: "0.7rem",
+      fontWeight: 700,
+      textTransform: "uppercase"
+    }
+  }, "Antes de agendar"), /*#__PURE__*/React.createElement("h2", {
+    className: "mt-4",
+    style: {
+      fontWeight: 900,
+      fontSize: "1.625rem",
+      lineHeight: 1.15,
+      letterSpacing: "-0.015em",
+      color: BRAND.black
+    }
+  }, firstName, ", necesitamos un par de datos para confirmar tu visita."), /*#__PURE__*/React.createElement("p", {
+    className: "mt-2",
+    style: {
+      color: BRAND.gray4,
+      fontSize: "0.875rem",
+      lineHeight: 1.5
+    }
+  }, "Tu Advisor te contactará para coordinar el horario y enviarte los detalles del club."), /*#__PURE__*/React.createElement("div", {
+    className: "mt-8 flex flex-col gap-4"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
+    style: {
+      display: "block",
+      fontSize: "0.75rem",
+      fontWeight: 700,
+      color: BRAND.black,
+      marginBottom: "0.375rem",
+      letterSpacing: "0.02em"
+    }
+  }, "Apellido"), /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    value: lastName,
+    onChange: e => setLastName(e.target.value),
+    onBlur: () => setTouched(t => ({
+      ...t,
+      lastName: true
+    })),
+    placeholder: "Tu apellido",
+    style: inputStyle(!!lastNameError)
+  }), lastNameError && /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: BRAND.red,
+      fontSize: "0.75rem",
+      marginTop: "0.25rem"
+    }
+  }, lastNameError)), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
+    style: {
+      display: "block",
+      fontSize: "0.75rem",
+      fontWeight: 700,
+      color: BRAND.black,
+      marginBottom: "0.375rem",
+      letterSpacing: "0.02em"
+    }
+  }, "Número de celular"), /*#__PURE__*/React.createElement("input", {
+    type: "tel",
+    value: phone,
+    onChange: e => setPhone(e.target.value),
+    onBlur: () => setTouched(t => ({
+      ...t,
+      phone: true
+    })),
+    placeholder: "10 dígitos · ejemplo: 5512345678",
+    style: inputStyle(!!phoneError),
+    maxLength: 15
+  }), phoneError && /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: BRAND.red,
+      fontSize: "0.75rem",
+      marginTop: "0.25rem"
+    }
+  }, phoneError)), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
+    style: {
+      display: "block",
+      fontSize: "0.75rem",
+      fontWeight: 700,
+      color: BRAND.black,
+      marginBottom: "0.375rem",
+      letterSpacing: "0.02em"
+    }
+  }, "Correo electrónico"), /*#__PURE__*/React.createElement("input", {
+    type: "email",
+    value: email,
+    onChange: e => setEmail(e.target.value),
+    onBlur: () => setTouched(t => ({
+      ...t,
+      email: true
+    })),
+    placeholder: "tu@correo.com",
+    style: inputStyle(!!emailError)
+  }), emailError && /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: BRAND.red,
+      fontSize: "0.75rem",
+      marginTop: "0.25rem"
+    }
+  }, emailError))), /*#__PURE__*/React.createElement("p", {
+    className: "mt-6",
+    style: {
+      fontSize: "0.6875rem",
+      color: BRAND.gray4,
+      lineHeight: 1.5
+    }
+  }, "Tus datos se usan únicamente para coordinar tu visita guiada. No los compartimos con terceros.")), /*#__PURE__*/React.createElement("div", {
+    className: "px-6 py-5",
+    style: {
+      background: BRAND.gray1,
+      borderTop: "1px solid " + BRAND.gray2
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "max-w-xl mx-auto w-full flex items-center justify-between gap-3"
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: onBack,
+    style: {
+      background: "none",
+      border: "none",
+      color: BRAND.gray4,
+      fontSize: "0.875rem",
+      cursor: "pointer",
+      padding: "0.5rem 0",
+      fontFamily: "inherit"
+    }
+  }, "← Volver"), /*#__PURE__*/React.createElement("button", {
+    onClick: handleSubmit,
+    disabled: !allValid && (touched.lastName || touched.phone || touched.email),
+    style: {
+      background: allValid ? BRAND.red : BRAND.gray3,
+      color: BRAND.white,
+      fontSize: "0.9375rem",
+      fontWeight: 700,
+      padding: "0.875rem 2rem",
+      borderRadius: "4px",
+      border: "none",
+      cursor: allValid ? "pointer" : "not-allowed",
+      fontFamily: "inherit",
+      transition: "background 0.15s"
+    }
+  }, "Continuar"))));
 }
 function BriefingScreen({
   data,
@@ -4563,45 +4317,41 @@ function BriefingScreen({
     label,
     value,
     sub
-  }) => /*#__PURE__*/_jsxDEV("div", {
+  }) => /*#__PURE__*/React.createElement("div", {
     style: {
       border: "1px solid " + BRAND.gray2,
       borderRadius: "4px",
       padding: "0.75rem 0.875rem",
       background: BRAND.white
-    },
-    children: [/*#__PURE__*/_jsxDEV("p", {
-      style: {
-        fontSize: "0.625rem",
-        letterSpacing: "0.18em",
-        textTransform: "uppercase",
-        fontWeight: 700,
-        color: BRAND.gray4,
-        marginBottom: "0.375rem"
-      },
-      children: label
-    }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-      style: {
-        fontSize: "0.9375rem",
-        fontWeight: 700,
-        color: BRAND.black,
-        lineHeight: 1.3
-      },
-      children: value || "—"
-    }, void 0, false), sub && /*#__PURE__*/_jsxDEV("p", {
-      style: {
-        fontSize: "0.75rem",
-        color: BRAND.gray4,
-        marginTop: "0.25rem",
-        lineHeight: 1.35
-      },
-      children: sub
-    }, void 0, false)]
-  }, void 0, true);
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.625rem",
+      letterSpacing: "0.18em",
+      textTransform: "uppercase",
+      fontWeight: 700,
+      color: BRAND.gray4,
+      marginBottom: "0.375rem"
+    }
+  }, label), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.9375rem",
+      fontWeight: 700,
+      color: BRAND.black,
+      lineHeight: 1.3
+    }
+  }, value || "—"), sub && /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.75rem",
+      color: BRAND.gray4,
+      marginTop: "0.25rem",
+      lineHeight: 1.35
+    }
+  }, sub));
   const SectionTitle = ({
     num,
     label
-  }) => /*#__PURE__*/_jsxDEV("p", {
+  }) => /*#__PURE__*/React.createElement("p", {
     style: {
       fontSize: "0.7rem",
       letterSpacing: "0.22em",
@@ -4609,12 +4359,11 @@ function BriefingScreen({
       fontWeight: 700,
       color: BRAND.black,
       marginBottom: "1rem"
-    },
-    children: [num ? `${num} · ` : "", label]
-  }, void 0, true);
+    }
+  }, num ? `${num} · ` : "", label);
   const NumCircle = ({
     n
-  }) => /*#__PURE__*/_jsxDEV("span", {
+  }) => /*#__PURE__*/React.createElement("span", {
     style: {
       display: "inline-flex",
       alignItems: "center",
@@ -4627,9 +4376,8 @@ function BriefingScreen({
       fontSize: "0.75rem",
       fontWeight: 700,
       flexShrink: 0
-    },
-    children: n
-  }, void 0, false);
+    }
+  }, n);
   const sectionDividerStyle = {
     borderTop: "2px solid " + BRAND.black,
     paddingTop: "1.25rem",
@@ -4693,589 +4441,526 @@ function BriefingScreen({
     severity: "info",
     text: blockSummary
   });
-  return /*#__PURE__*/_jsxDEV("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "min-h-screen",
     style: {
       background: BRAND.gray1,
       paddingTop: "2.5rem",
       paddingBottom: "3rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "max-w-3xl mx-auto px-6"
+  }, /*#__PURE__*/React.createElement("section", {
+    style: {
+      background: BRAND.black,
+      color: BRAND.white,
+      borderRadius: "6px",
+      padding: "1.5rem 1.75rem",
+      marginBottom: "1.5rem"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      color: BRAND.red,
+      letterSpacing: "0.22em",
+      fontSize: "0.7rem",
+      fontWeight: 700,
+      textTransform: "uppercase",
+      marginBottom: "0.5rem"
+    }
+  }, "Visita confirmada"), /*#__PURE__*/React.createElement("h1", {
+    style: {
+      fontSize: "1.75rem",
+      fontWeight: 900,
+      lineHeight: 1.15,
+      letterSpacing: "-0.01em",
+      marginBottom: "0.625rem"
+    }
+  }, firstName, ", te esperamos en ", club.nombre, "."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.9375rem",
+      color: "#D4D4D4",
+      lineHeight: 1.5
+    }
+  }, dayStr, " · ", appointment.hour, " · ", club.direccion)), /*#__PURE__*/React.createElement("section", {
+    style: {
+      background: BRAND.white,
+      border: "1px solid " + BRAND.gray2,
+      borderRadius: "6px",
+      padding: "1.75rem"
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "flex-start",
+      paddingBottom: "1rem",
+      borderBottom: "2px solid " + BRAND.black
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.65rem",
+      letterSpacing: "0.2em",
+      textTransform: "uppercase",
+      color: BRAND.gray4,
+      fontWeight: 700,
+      marginBottom: "0.25rem"
+    }
+  }, "Brief de visita guiada · confidencial"), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontSize: "1.375rem",
+      fontWeight: 900,
+      lineHeight: 1.2,
+      marginBottom: "0.5rem"
+    }
+  }, fullName, " · Nivel ", answers.Q9 ? answers.Q9.toLowerCase() : "—"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexWrap: "wrap",
+      gap: "0.5rem"
+    }
+  }, headerChips.map((c, i) => /*#__PURE__*/React.createElement("span", {
+    key: i,
+    style: {
+      fontSize: "0.7rem",
+      padding: "0.25rem 0.625rem",
+      background: BRAND.gray1,
+      border: "1px solid " + BRAND.gray2,
+      borderRadius: "2px",
+      fontWeight: 600,
+      color: BRAND.black
+    }
+  }, c)))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: "right",
+      fontSize: "0.75rem",
+      color: BRAND.gray4
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontWeight: 700,
+      color: BRAND.black,
+      marginBottom: "0.125rem"
+    }
+  }, DAY_LABEL_FULL[appointment.day.getDay()]), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontWeight: 700,
+      color: BRAND.black,
+      marginBottom: "0.125rem"
+    }
+  }, appointment.day.getDate(), " ", MONTH_SHORT[appointment.day.getMonth()], " ", appointment.day.getFullYear()), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontWeight: 700,
+      color: BRAND.black
+    }
+  }, appointment.hour))), /*#__PURE__*/React.createElement("div", {
+    style: sectionDividerStyle
+  }, /*#__PURE__*/React.createElement(SectionTitle, {
+    num: "1",
+    label: "Perfil del lead"
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
+      gap: "0.75rem",
+      marginBottom: "0.75rem"
     },
-    children: /*#__PURE__*/_jsxDEV("div", {
-      className: "max-w-3xl mx-auto px-6",
-      children: [/*#__PURE__*/_jsxDEV("section", {
-        style: {
-          background: BRAND.black,
-          color: BRAND.white,
-          borderRadius: "6px",
-          padding: "1.5rem 1.75rem",
-          marginBottom: "1.5rem"
-        },
-        children: [/*#__PURE__*/_jsxDEV("p", {
-          style: {
-            color: BRAND.red,
-            letterSpacing: "0.22em",
-            fontSize: "0.7rem",
-            fontWeight: 700,
-            textTransform: "uppercase",
-            marginBottom: "0.5rem"
-          },
-          children: "Visita confirmada"
-        }, void 0, false), /*#__PURE__*/_jsxDEV("h1", {
-          style: {
-            fontSize: "1.75rem",
-            fontWeight: 900,
-            lineHeight: 1.15,
-            letterSpacing: "-0.01em",
-            marginBottom: "0.625rem"
-          },
-          children: [firstName, ", te esperamos en ", club.nombre, "."]
-        }, void 0, true), /*#__PURE__*/_jsxDEV("p", {
-          style: {
-            fontSize: "0.9375rem",
-            color: "#D4D4D4",
-            lineHeight: 1.5
-          },
-          children: [dayStr, " · ", appointment.hour, " · ", club.direccion]
-        }, void 0, true)]
-      }, void 0, true), /*#__PURE__*/_jsxDEV("section", {
-        style: {
-          background: BRAND.white,
-          border: "1px solid " + BRAND.gray2,
-          borderRadius: "6px",
-          padding: "1.75rem"
-        },
-        children: [/*#__PURE__*/_jsxDEV("div", {
-          style: {
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-start",
-            paddingBottom: "1rem",
-            borderBottom: "2px solid " + BRAND.black
-          },
-          children: [/*#__PURE__*/_jsxDEV("div", {
-            children: [/*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.65rem",
-                letterSpacing: "0.2em",
-                textTransform: "uppercase",
-                color: BRAND.gray4,
-                fontWeight: 700,
-                marginBottom: "0.25rem"
-              },
-              children: "Brief de visita guiada · confidencial"
-            }, void 0, false), /*#__PURE__*/_jsxDEV("h2", {
-              style: {
-                fontSize: "1.375rem",
-                fontWeight: 900,
-                lineHeight: 1.2,
-                marginBottom: "0.5rem"
-              },
-              children: [fullName, " · Nivel ", answers.Q9 ? answers.Q9.toLowerCase() : "—"]
-            }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-              style: {
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "0.5rem"
-              },
-              children: headerChips.map((c, i) => /*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  fontSize: "0.7rem",
-                  padding: "0.25rem 0.625rem",
-                  background: BRAND.gray1,
-                  border: "1px solid " + BRAND.gray2,
-                  borderRadius: "2px",
-                  fontWeight: 600,
-                  color: BRAND.black
-                },
-                children: c
-              }, i, false))
-            }, void 0, false)]
-          }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-            style: {
-              textAlign: "right",
-              fontSize: "0.75rem",
-              color: BRAND.gray4
-            },
-            children: [/*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontWeight: 700,
-                color: BRAND.black,
-                marginBottom: "0.125rem"
-              },
-              children: DAY_LABEL_FULL[appointment.day.getDay()]
-            }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontWeight: 700,
-                color: BRAND.black,
-                marginBottom: "0.125rem"
-              },
-              children: [appointment.day.getDate(), " ", MONTH_SHORT[appointment.day.getMonth()], " ", appointment.day.getFullYear()]
-            }, void 0, true), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontWeight: 700,
-                color: BRAND.black
-              },
-              children: appointment.hour
-            }, void 0, false)]
-          }, void 0, true)]
-        }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-          style: sectionDividerStyle,
-          children: [/*#__PURE__*/_jsxDEV(SectionTitle, {
-            num: "1",
-            label: "Perfil del lead"
-          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-            style: {
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "0.75rem",
-              marginBottom: "0.75rem"
-            },
-            className: "brief-grid",
-            children: [/*#__PURE__*/_jsxDEV(FieldBox, {
-              label: "Objetivo",
-              value: (answers.Q4 || [])[0],
-              sub: answers.Q4 && answers.Q4.length > 1 ? "+ " + (answers.Q4.length - 1) + " objetivo" + (answers.Q4.length > 2 ? "s" : "") + " secundario" + (answers.Q4.length > 2 ? "s" : "") : null
-            }, void 0, false), /*#__PURE__*/_jsxDEV(FieldBox, {
-              label: "Motivación",
-              value: answers.Q3
-            }, void 0, false), /*#__PURE__*/_jsxDEV(FieldBox, {
-              label: "Experiencia deseada",
-              value: answers.Q6 + (answers.Q13 ? " · " + answers.Q13.split(",")[0] : "")
-            }, void 0, false), /*#__PURE__*/_jsxDEV(FieldBox, {
-              label: "Disponibilidad",
-              value: (answers.Q8 || []).join(" · "),
-              sub: (answers.Q7 || []).join(" · ")
-            }, void 0, false), /*#__PURE__*/_jsxDEV(FieldBox, {
-              label: "Historial",
-              value: answers.Q10,
-              sub: answers.Q11 ? "Pausa: " + answers.Q11 : null
-            }, void 0, false), /*#__PURE__*/_jsxDEV(FieldBox, {
-              label: "Ritmo",
-              value: answers.Q5
-            }, void 0, false), /*#__PURE__*/_jsxDEV(FieldBox, {
-              label: "Formato",
-              value: answers.Q13
-            }, void 0, false), /*#__PURE__*/_jsxDEV(FieldBox, {
-              label: "Salud",
-              value: conditions.length > 0 ? conditions.join(", ") : hasUnrevealed ? "Condición no especificada (validar)" : "Sin condiciones declaradas",
-              sub: isPregnant ? "⚠ Embarazada" : isPostpartum ? "⚠ Posparto <6 meses" : wlTreatments.length > 0 ? "Tratamientos: " + wlTreatments.join(", ") : null
-            }, void 0, false)]
-          }, void 0, true), /*#__PURE__*/_jsxDEV("p", {
-            style: {
-              fontSize: "0.75rem",
-              color: BRAND.gray4,
-              fontStyle: "italic"
-            },
-            children: "Validar nivel e intensidad antes de recomendar una actividad."
-          }, void 0, false)]
-        }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-          style: sectionDividerStyle,
-          children: [/*#__PURE__*/_jsxDEV(SectionTitle, {
-            num: "2",
-            label: "Logística y contacto"
-          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-            style: {
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "0.75rem"
-            },
-            className: "brief-grid",
-            children: [/*#__PURE__*/_jsxDEV("div", {
-              style: {
-                gridColumn: "span 2 / span 2",
-                border: "1px solid " + BRAND.gray2,
-                borderRadius: "4px",
-                padding: "0.75rem 0.875rem",
-                background: BRAND.white
-              },
-              children: [/*#__PURE__*/_jsxDEV("p", {
-                style: {
-                  fontSize: "0.625rem",
-                  letterSpacing: "0.18em",
-                  textTransform: "uppercase",
-                  fontWeight: 700,
-                  color: BRAND.gray4,
-                  marginBottom: "0.375rem"
-                },
-                children: "Club"
-              }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-                style: {
-                  fontSize: "1.0625rem",
-                  fontWeight: 900,
-                  color: BRAND.black,
-                  lineHeight: 1.2
-                },
-                children: club.nombre
-              }, void 0, false)]
-            }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-              style: {
-                border: "1px solid " + BRAND.gray2,
-                borderRadius: "4px",
-                padding: "0.75rem 0.875rem",
-                background: BRAND.white
-              },
-              children: [/*#__PURE__*/_jsxDEV("p", {
-                style: {
-                  fontSize: "0.625rem",
-                  letterSpacing: "0.18em",
-                  textTransform: "uppercase",
-                  fontWeight: 700,
-                  color: BRAND.gray4,
-                  marginBottom: "0.375rem"
-                },
-                children: "Ubicación"
-              }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-                style: {
-                  fontSize: "0.8125rem",
-                  color: BRAND.black,
-                  lineHeight: 1.4
-                },
-                children: club.direccion
-              }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-                style: {
-                  fontSize: "0.75rem",
-                  color: BRAND.gray4,
-                  marginTop: "0.25rem"
-                },
-                children: ["Aprox. ", club.distancia_min, " min desde la ubicación del lead"]
-              }, void 0, true)]
-            }, void 0, true), /*#__PURE__*/_jsxDEV(FieldBox, {
-              label: "Acompañantes",
-              value: isFamily && hasKidsUnder12 ? "Hijos <12 años" : isFamily ? "Familia" : "Visita individual"
-            }, void 0, false), /*#__PURE__*/_jsxDEV(FieldBox, {
-              label: "Teléfono",
-              value: formatPhone(contact && contact.phone)
-            }, void 0, false), /*#__PURE__*/_jsxDEV(FieldBox, {
-              label: "Email",
-              value: contact && contact.email || "—"
-            }, void 0, false)]
-          }, void 0, true)]
-        }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-          className: "brief-page-separator",
-          style: {
-            marginTop: "1.5rem",
-            paddingTop: "1rem",
-            borderTop: "1px dashed " + BRAND.gray3,
-            display: "flex",
-            justifyContent: "center"
-          },
-          children: /*#__PURE__*/_jsxDEV("span", {
-            style: {
-              background: BRAND.white,
-              padding: "0 0.875rem",
-              marginTop: "-1.625rem",
-              fontSize: "0.6875rem",
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
-              color: BRAND.gray4,
-              fontWeight: 700
-            },
-            children: "Página 2"
-          }, void 0, false)
-        }, void 0, false), validationQuestions.length > 0 && /*#__PURE__*/_jsxDEV("div", {
-          style: sectionDividerStyle,
-          children: [/*#__PURE__*/_jsxDEV(SectionTitle, {
-            num: "3",
-            label: "Qué validar"
-          }, void 0, false), /*#__PURE__*/_jsxDEV("ol", {
-            style: {
-              display: "flex",
-              flexDirection: "column",
-              gap: "0.625rem",
-              paddingLeft: 0,
-              margin: 0,
-              listStyle: "none"
-            },
-            children: validationQuestions.map((q, i) => /*#__PURE__*/_jsxDEV("li", {
-              style: {
-                display: "flex",
-                gap: "0.75rem",
-                alignItems: "flex-start"
-              },
-              children: [/*#__PURE__*/_jsxDEV(NumCircle, {
-                n: i + 1
-              }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  fontSize: "0.9375rem",
-                  lineHeight: 1.4,
-                  paddingTop: "0.125rem",
-                  color: BRAND.black
-                },
-                children: q
-              }, void 0, false)]
-            }, i, true))
-          }, void 0, false)]
-        }, void 0, true), visitRoute.length > 0 && /*#__PURE__*/_jsxDEV("div", {
-          style: sectionDividerStyle,
-          children: [/*#__PURE__*/_jsxDEV(SectionTitle, {
-            num: "4",
-            label: "Ruta recomendada para la visita"
-          }, void 0, false), /*#__PURE__*/_jsxDEV("ol", {
-            style: {
-              display: "flex",
-              flexDirection: "column",
-              gap: "0.875rem",
-              paddingLeft: 0,
-              margin: 0,
-              listStyle: "none"
-            },
-            children: visitRoute.map((step, i) => /*#__PURE__*/_jsxDEV("li", {
-              style: {
-                display: "flex",
-                gap: "0.75rem",
-                alignItems: "flex-start"
-              },
-              children: [/*#__PURE__*/_jsxDEV(NumCircle, {
-                n: i + 1
-              }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-                children: [/*#__PURE__*/_jsxDEV("p", {
-                  style: {
-                    fontSize: "0.9375rem",
-                    fontWeight: 700,
-                    lineHeight: 1.3,
-                    color: BRAND.black
-                  },
-                  children: step.title
-                }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-                  style: {
-                    fontSize: "0.8125rem",
-                    color: BRAND.gray4,
-                    lineHeight: 1.4,
-                    marginTop: "0.125rem"
-                  },
-                  children: step.description
-                }, void 0, false)]
-              }, void 0, true)]
-            }, i, true))
-          }, void 0, false)]
-        }, void 0, true), (proposal.main || proposal.complement) && /*#__PURE__*/_jsxDEV("div", {
-          style: sectionDividerStyle,
-          children: [/*#__PURE__*/_jsxDEV(SectionTitle, {
-            num: "5",
-            label: "Propuesta recomendada"
-          }, void 0, false), proposal.main && /*#__PURE__*/_jsxDEV("div", {
-            style: {
-              border: "1px solid " + BRAND.gray2,
-              borderLeft: "3px solid " + BRAND.red,
-              borderRadius: "4px",
-              padding: "0.875rem 1rem",
-              background: BRAND.white,
-              marginBottom: "0.625rem"
-            },
-            children: [/*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.625rem",
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                fontWeight: 700,
-                color: BRAND.red,
-                marginBottom: "0.375rem"
-              },
-              children: "Oferta principal"
-            }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.9375rem",
-                color: BRAND.black,
-                lineHeight: 1.5
-              },
-              children: proposal.main
-            }, void 0, false)]
-          }, void 0, true), proposal.complement && /*#__PURE__*/_jsxDEV("div", {
-            style: {
-              border: "1px solid " + BRAND.gray2,
-              borderRadius: "4px",
-              padding: "0.875rem 1rem",
-              background: BRAND.white
-            },
-            children: [/*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.625rem",
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                fontWeight: 700,
-                color: BRAND.gray4,
-                marginBottom: "0.375rem"
-              },
-              children: "Complemento y alternativa"
-            }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
-              style: {
-                fontSize: "0.875rem",
-                color: BRAND.gray4,
-                lineHeight: 1.5
-              },
-              children: proposal.complement
-            }, void 0, false)]
-          }, void 0, true)]
-        }, void 0, true), closingPriorities.length > 0 && /*#__PURE__*/_jsxDEV("div", {
-          style: sectionDividerStyle,
-          children: [/*#__PURE__*/_jsxDEV(SectionTitle, {
-            num: "6",
-            label: "Prioridades de cierre"
-          }, void 0, false), /*#__PURE__*/_jsxDEV("ul", {
-            style: {
-              display: "flex",
-              flexDirection: "column",
-              gap: "0.5rem",
-              paddingLeft: 0,
-              margin: 0,
-              listStyle: "none"
-            },
-            children: closingPriorities.map((p, i) => /*#__PURE__*/_jsxDEV("li", {
-              style: {
-                display: "flex",
-                gap: "0.5rem",
-                alignItems: "flex-start"
-              },
-              children: [/*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  color: BRAND.red,
-                  fontWeight: 900,
-                  flexShrink: 0
-                },
-                children: "·"
-              }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  fontSize: "0.9375rem",
-                  lineHeight: 1.4,
-                  color: BRAND.black
-                },
-                children: p
-              }, void 0, false)]
-            }, i, true))
-          }, void 0, false)]
-        }, void 0, true), flags.length > 0 && /*#__PURE__*/_jsxDEV("div", {
-          style: sectionDividerStyle,
-          children: [/*#__PURE__*/_jsxDEV(SectionTitle, {
-            num: "7",
-            label: "Notas y banderas"
-          }, void 0, false), /*#__PURE__*/_jsxDEV("ul", {
-            style: {
-              display: "flex",
-              flexDirection: "column",
-              gap: "0.5rem",
-              paddingLeft: 0,
-              margin: 0,
-              listStyle: "none"
-            },
-            children: flags.map((f, i) => /*#__PURE__*/_jsxDEV("li", {
-              style: {
-                display: "flex",
-                gap: "0.5rem",
-                alignItems: "flex-start"
-              },
-              children: [/*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  color: f.severity === "warn" ? BRAND.red : BRAND.gray4,
-                  fontWeight: 900,
-                  flexShrink: 0
-                },
-                children: f.severity === "warn" ? "⚠" : "·"
-              }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
-                style: {
-                  fontSize: "0.875rem",
-                  lineHeight: 1.4,
-                  color: f.severity === "warn" ? BRAND.black : BRAND.gray4
-                },
-                children: f.text
-              }, void 0, false)]
-            }, i, true))
-          }, void 0, false)]
-        }, void 0, true), closingScript && /*#__PURE__*/_jsxDEV("div", {
-          style: sectionDividerStyle,
-          children: [/*#__PURE__*/_jsxDEV(SectionTitle, {
-            label: "Guion de cierre sugerido"
-          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-            style: {
-              background: BRAND.gray1,
-              borderLeft: "3px solid " + BRAND.red,
-              padding: "1rem 1.125rem",
-              fontStyle: "italic",
-              fontSize: "0.9375rem",
-              lineHeight: 1.5,
-              color: BRAND.black
-            },
-            children: ["\"", closingScript, "\""]
-          }, void 0, true)]
-        }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-          style: sectionDividerStyle,
-          children: [/*#__PURE__*/_jsxDEV(SectionTitle, {
-            label: "Registro del asesor"
-          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-            style: {
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "0.75rem"
-            },
-            className: "brief-grid",
-            children: ["Interés principal", "Objeción principal", "Siguiente paso", "Fecha de seguimiento"].map((lbl, i) => /*#__PURE__*/_jsxDEV("div", {
-              style: {
-                border: "1px dashed " + BRAND.gray3,
-                borderRadius: "4px",
-                padding: "0.75rem 1rem",
-                minHeight: "3.5rem"
-              },
-              children: /*#__PURE__*/_jsxDEV("p", {
-                style: {
-                  fontSize: "0.625rem",
-                  letterSpacing: "0.18em",
-                  textTransform: "uppercase",
-                  fontWeight: 700,
-                  color: BRAND.gray4
-                },
-                children: lbl
-              }, void 0, false)
-            }, i, false))
-          }, void 0, false)]
-        }, void 0, true), /*#__PURE__*/_jsxDEV("p", {
-          style: {
-            fontSize: "0.65rem",
-            color: BRAND.gray4,
-            textAlign: "center",
-            paddingTop: "1rem",
-            borderTop: "1px solid " + BRAND.gray2,
-            marginTop: "2rem",
-            letterSpacing: "0.05em"
-          },
-          children: "USO INTERNO · Datos declarados por el lead; validar antes de formular recomendaciones."
-        }, void 0, false)]
-      }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
-        style: {
-          marginTop: "1.5rem",
-          display: "flex",
-          gap: "0.75rem",
-          justifyContent: "space-between",
-          alignItems: "center",
-          flexWrap: "wrap"
-        },
-        children: [/*#__PURE__*/_jsxDEV("button", {
-          onClick: onBack,
-          style: {
-            background: "none",
-            border: "none",
-            color: BRAND.gray4,
-            fontSize: "0.8125rem",
-            cursor: "pointer",
-            padding: 0,
-            fontFamily: "inherit"
-          },
-          children: "← Cambiar fecha u hora"
-        }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
-          onClick: onRestart,
-          style: {
-            background: BRAND.black,
-            color: BRAND.white,
-            fontSize: "0.875rem",
-            fontWeight: 700,
-            padding: "0.75rem 1.75rem",
-            borderRadius: "4px",
-            border: "none",
-            cursor: "pointer",
-            fontFamily: "inherit"
-          },
-          children: "Terminar"
-        }, void 0, false)]
-      }, void 0, true), /*#__PURE__*/_jsxDEV("style", {
-        children: `
+    className: "brief-grid"
+  }, /*#__PURE__*/React.createElement(FieldBox, {
+    label: "Objetivo",
+    value: (answers.Q4 || [])[0],
+    sub: answers.Q4 && answers.Q4.length > 1 ? "+ " + (answers.Q4.length - 1) + " objetivo" + (answers.Q4.length > 2 ? "s" : "") + " secundario" + (answers.Q4.length > 2 ? "s" : "") : null
+  }), /*#__PURE__*/React.createElement(FieldBox, {
+    label: "Motivación",
+    value: answers.Q3
+  }), /*#__PURE__*/React.createElement(FieldBox, {
+    label: "Experiencia deseada",
+    value: answers.Q6 + (answers.Q13 ? " · " + answers.Q13.split(",")[0] : "")
+  }), /*#__PURE__*/React.createElement(FieldBox, {
+    label: "Disponibilidad",
+    value: (answers.Q8 || []).join(" · "),
+    sub: (answers.Q7 || []).join(" · ")
+  }), /*#__PURE__*/React.createElement(FieldBox, {
+    label: "Historial",
+    value: answers.Q10,
+    sub: answers.Q11 ? "Pausa: " + answers.Q11 : null
+  }), /*#__PURE__*/React.createElement(FieldBox, {
+    label: "Ritmo",
+    value: answers.Q5
+  }), /*#__PURE__*/React.createElement(FieldBox, {
+    label: "Formato",
+    value: answers.Q13
+  }), /*#__PURE__*/React.createElement(FieldBox, {
+    label: "Salud",
+    value: conditions.length > 0 ? conditions.join(", ") : hasUnrevealed ? "Condición no especificada (validar)" : "Sin condiciones declaradas",
+    sub: isPregnant ? "⚠ Embarazada" : isPostpartum ? "⚠ Posparto <6 meses" : wlTreatments.length > 0 ? "Tratamientos: " + wlTreatments.join(", ") : null
+  })), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.75rem",
+      color: BRAND.gray4,
+      fontStyle: "italic"
+    }
+  }, "Validar nivel e intensidad antes de recomendar una actividad.")), /*#__PURE__*/React.createElement("div", {
+    style: sectionDividerStyle
+  }, /*#__PURE__*/React.createElement(SectionTitle, {
+    num: "2",
+    label: "Logística y contacto"
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
+      gap: "0.75rem"
+    },
+    className: "brief-grid"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      gridColumn: "span 2 / span 2",
+      border: "1px solid " + BRAND.gray2,
+      borderRadius: "4px",
+      padding: "0.75rem 0.875rem",
+      background: BRAND.white
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.625rem",
+      letterSpacing: "0.18em",
+      textTransform: "uppercase",
+      fontWeight: 700,
+      color: BRAND.gray4,
+      marginBottom: "0.375rem"
+    }
+  }, "Club"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "1.0625rem",
+      fontWeight: 900,
+      color: BRAND.black,
+      lineHeight: 1.2
+    }
+  }, club.nombre)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      border: "1px solid " + BRAND.gray2,
+      borderRadius: "4px",
+      padding: "0.75rem 0.875rem",
+      background: BRAND.white
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.625rem",
+      letterSpacing: "0.18em",
+      textTransform: "uppercase",
+      fontWeight: 700,
+      color: BRAND.gray4,
+      marginBottom: "0.375rem"
+    }
+  }, "Ubicación"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.8125rem",
+      color: BRAND.black,
+      lineHeight: 1.4
+    }
+  }, club.direccion), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.75rem",
+      color: BRAND.gray4,
+      marginTop: "0.25rem"
+    }
+  }, "Aprox. ", club.distancia_min, " min desde la ubicación del lead")), /*#__PURE__*/React.createElement(FieldBox, {
+    label: "Acompañantes",
+    value: isFamily && hasKidsUnder12 ? "Hijos <12 años" : isFamily ? "Familia" : "Visita individual"
+  }), /*#__PURE__*/React.createElement(FieldBox, {
+    label: "Teléfono",
+    value: formatPhone(contact && contact.phone)
+  }), /*#__PURE__*/React.createElement(FieldBox, {
+    label: "Email",
+    value: contact && contact.email || "—"
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "brief-page-separator",
+    style: {
+      marginTop: "1.5rem",
+      paddingTop: "1rem",
+      borderTop: "1px dashed " + BRAND.gray3,
+      display: "flex",
+      justifyContent: "center"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      background: BRAND.white,
+      padding: "0 0.875rem",
+      marginTop: "-1.625rem",
+      fontSize: "0.6875rem",
+      letterSpacing: "0.22em",
+      textTransform: "uppercase",
+      color: BRAND.gray4,
+      fontWeight: 700
+    }
+  }, "Página 2")), validationQuestions.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: sectionDividerStyle
+  }, /*#__PURE__*/React.createElement(SectionTitle, {
+    num: "3",
+    label: "Qué validar"
+  }), /*#__PURE__*/React.createElement("ol", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "0.625rem",
+      paddingLeft: 0,
+      margin: 0,
+      listStyle: "none"
+    }
+  }, validationQuestions.map((q, i) => /*#__PURE__*/React.createElement("li", {
+    key: i,
+    style: {
+      display: "flex",
+      gap: "0.75rem",
+      alignItems: "flex-start"
+    }
+  }, /*#__PURE__*/React.createElement(NumCircle, {
+    n: i + 1
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.9375rem",
+      lineHeight: 1.4,
+      paddingTop: "0.125rem",
+      color: BRAND.black
+    }
+  }, q))))), visitRoute.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: sectionDividerStyle
+  }, /*#__PURE__*/React.createElement(SectionTitle, {
+    num: "4",
+    label: "Ruta recomendada para la visita"
+  }), /*#__PURE__*/React.createElement("ol", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "0.875rem",
+      paddingLeft: 0,
+      margin: 0,
+      listStyle: "none"
+    }
+  }, visitRoute.map((step, i) => /*#__PURE__*/React.createElement("li", {
+    key: i,
+    style: {
+      display: "flex",
+      gap: "0.75rem",
+      alignItems: "flex-start"
+    }
+  }, /*#__PURE__*/React.createElement(NumCircle, {
+    n: i + 1
+  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.9375rem",
+      fontWeight: 700,
+      lineHeight: 1.3,
+      color: BRAND.black
+    }
+  }, step.title), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.8125rem",
+      color: BRAND.gray4,
+      lineHeight: 1.4,
+      marginTop: "0.125rem"
+    }
+  }, step.description)))))), (proposal.main || proposal.complement) && /*#__PURE__*/React.createElement("div", {
+    style: sectionDividerStyle
+  }, /*#__PURE__*/React.createElement(SectionTitle, {
+    num: "5",
+    label: "Propuesta recomendada"
+  }), proposal.main && /*#__PURE__*/React.createElement("div", {
+    style: {
+      border: "1px solid " + BRAND.gray2,
+      borderLeft: "3px solid " + BRAND.red,
+      borderRadius: "4px",
+      padding: "0.875rem 1rem",
+      background: BRAND.white,
+      marginBottom: "0.625rem"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.625rem",
+      letterSpacing: "0.18em",
+      textTransform: "uppercase",
+      fontWeight: 700,
+      color: BRAND.red,
+      marginBottom: "0.375rem"
+    }
+  }, "Oferta principal"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.9375rem",
+      color: BRAND.black,
+      lineHeight: 1.5
+    }
+  }, proposal.main)), proposal.complement && /*#__PURE__*/React.createElement("div", {
+    style: {
+      border: "1px solid " + BRAND.gray2,
+      borderRadius: "4px",
+      padding: "0.875rem 1rem",
+      background: BRAND.white
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.625rem",
+      letterSpacing: "0.18em",
+      textTransform: "uppercase",
+      fontWeight: 700,
+      color: BRAND.gray4,
+      marginBottom: "0.375rem"
+    }
+  }, "Complemento y alternativa"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.875rem",
+      color: BRAND.gray4,
+      lineHeight: 1.5
+    }
+  }, proposal.complement))), closingPriorities.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: sectionDividerStyle
+  }, /*#__PURE__*/React.createElement(SectionTitle, {
+    num: "6",
+    label: "Prioridades de cierre"
+  }), /*#__PURE__*/React.createElement("ul", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "0.5rem",
+      paddingLeft: 0,
+      margin: 0,
+      listStyle: "none"
+    }
+  }, closingPriorities.map((p, i) => /*#__PURE__*/React.createElement("li", {
+    key: i,
+    style: {
+      display: "flex",
+      gap: "0.5rem",
+      alignItems: "flex-start"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: BRAND.red,
+      fontWeight: 900,
+      flexShrink: 0
+    }
+  }, "·"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.9375rem",
+      lineHeight: 1.4,
+      color: BRAND.black
+    }
+  }, p))))), flags.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: sectionDividerStyle
+  }, /*#__PURE__*/React.createElement(SectionTitle, {
+    num: "7",
+    label: "Notas y banderas"
+  }), /*#__PURE__*/React.createElement("ul", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "0.5rem",
+      paddingLeft: 0,
+      margin: 0,
+      listStyle: "none"
+    }
+  }, flags.map((f, i) => /*#__PURE__*/React.createElement("li", {
+    key: i,
+    style: {
+      display: "flex",
+      gap: "0.5rem",
+      alignItems: "flex-start"
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: f.severity === "warn" ? BRAND.red : BRAND.gray4,
+      fontWeight: 900,
+      flexShrink: 0
+    }
+  }, f.severity === "warn" ? "⚠" : "·"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: "0.875rem",
+      lineHeight: 1.4,
+      color: f.severity === "warn" ? BRAND.black : BRAND.gray4
+    }
+  }, f.text))))), closingScript && /*#__PURE__*/React.createElement("div", {
+    style: sectionDividerStyle
+  }, /*#__PURE__*/React.createElement(SectionTitle, {
+    label: "Guion de cierre sugerido"
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      background: BRAND.gray1,
+      borderLeft: "3px solid " + BRAND.red,
+      padding: "1rem 1.125rem",
+      fontStyle: "italic",
+      fontSize: "0.9375rem",
+      lineHeight: 1.5,
+      color: BRAND.black
+    }
+  }, "\"", closingScript, "\"")), /*#__PURE__*/React.createElement("div", {
+    style: sectionDividerStyle
+  }, /*#__PURE__*/React.createElement(SectionTitle, {
+    label: "Registro del asesor"
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
+      gap: "0.75rem"
+    },
+    className: "brief-grid"
+  }, ["Interés principal", "Objeción principal", "Siguiente paso", "Fecha de seguimiento"].map((lbl, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      border: "1px dashed " + BRAND.gray3,
+      borderRadius: "4px",
+      padding: "0.75rem 1rem",
+      minHeight: "3.5rem"
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.625rem",
+      letterSpacing: "0.18em",
+      textTransform: "uppercase",
+      fontWeight: 700,
+      color: BRAND.gray4
+    }
+  }, lbl))))), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.65rem",
+      color: BRAND.gray4,
+      textAlign: "center",
+      paddingTop: "1rem",
+      borderTop: "1px solid " + BRAND.gray2,
+      marginTop: "2rem",
+      letterSpacing: "0.05em"
+    }
+  }, "USO INTERNO · Datos declarados por el lead; validar antes de formular recomendaciones.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: "1.5rem",
+      display: "flex",
+      gap: "0.75rem",
+      justifyContent: "space-between",
+      alignItems: "center",
+      flexWrap: "wrap"
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: onBack,
+    style: {
+      background: "none",
+      border: "none",
+      color: BRAND.gray4,
+      fontSize: "0.8125rem",
+      cursor: "pointer",
+      padding: 0,
+      fontFamily: "inherit"
+    }
+  }, "← Cambiar fecha u hora"), /*#__PURE__*/React.createElement("button", {
+    onClick: onRestart,
+    style: {
+      background: BRAND.black,
+      color: BRAND.white,
+      fontSize: "0.875rem",
+      fontWeight: 700,
+      padding: "0.75rem 1.75rem",
+      borderRadius: "4px",
+      border: "none",
+      cursor: "pointer",
+      fontFamily: "inherit"
+    }
+  }, "Terminar")), /*#__PURE__*/React.createElement("style", null, `
           @media (max-width: 720px) {
             .brief-grid { grid-template-columns: 1fr !important; }
           }
@@ -5283,10 +4968,7 @@ function BriefingScreen({
             .brief-page-separator { display: none !important; }
             .brief-page-separator + * { page-break-before: always; }
           }
-        `
-      }, void 0, false)]
-    }, void 0, true)
-  }, void 0, false);
+        `)));
 }
 function App() {
   const [phase, setPhase] = useState("welcome");
@@ -5383,29 +5065,29 @@ function App() {
   const goBack = () => {
     if (step > 0) setStep(step - 1);
   };
-  if (phase === "welcome") return /*#__PURE__*/_jsxDEV(Welcome, {
+  if (phase === "welcome") return /*#__PURE__*/React.createElement(Welcome, {
     onStart: () => {
       setPhase("questionnaire");
       setStep(0);
     }
-  }, void 0, false);
-  if (phase === "loading") return /*#__PURE__*/_jsxDEV(Loading, {
+  });
+  if (phase === "loading") return /*#__PURE__*/React.createElement(Loading, {
     msg: loadingMsg
-  }, void 0, false);
-  if (phase === "error") return /*#__PURE__*/_jsxDEV(ErrorScreen, {
+  });
+  if (phase === "error") return /*#__PURE__*/React.createElement(ErrorScreen, {
     msg: error,
     onRetry: () => {
       setPhase("questionnaire");
       setStep(questions.length - 1);
     },
     onRestart: reset
-  }, void 0, false);
-  if (phase === "result" && result) return /*#__PURE__*/_jsxDEV(ResultPage, {
+  });
+  if (phase === "result" && result) return /*#__PURE__*/React.createElement(ResultPage, {
     data: result,
     onRestart: reset,
     onSchedule: () => setPhase("contact_capture")
-  }, void 0, false);
-  if (phase === "contact_capture" && result) return /*#__PURE__*/_jsxDEV(ContactCaptureScreen, {
+  });
+  if (phase === "contact_capture" && result) return /*#__PURE__*/React.createElement(ContactCaptureScreen, {
     data: result,
     onContinue: contact => {
       setResult({
@@ -5415,50 +5097,47 @@ function App() {
       setPhase("schedule");
     },
     onBack: () => setPhase("result")
-  }, void 0, false);
-  if (phase === "schedule" && result) return /*#__PURE__*/_jsxDEV(ScheduleScreen, {
+  });
+  if (phase === "schedule" && result) return /*#__PURE__*/React.createElement(ScheduleScreen, {
     data: result,
     onConfirm: appt => {
       setAppointment(appt);
       setPhase("briefing");
     },
     onBack: () => setPhase("contact_capture")
-  }, void 0, false);
-  if (phase === "briefing" && result && appointment) return /*#__PURE__*/_jsxDEV(BriefingScreen, {
+  });
+  if (phase === "briefing" && result && appointment) return /*#__PURE__*/React.createElement(BriefingScreen, {
     data: result,
     appointment: appointment,
     onRestart: reset,
     onBack: () => setPhase("schedule")
-  }, void 0, false);
-  return /*#__PURE__*/_jsxDEV("div", {
+  });
+  return /*#__PURE__*/React.createElement("div", {
     className: "min-h-screen flex flex-col",
     style: {
       background: BRAND.white
-    },
-    children: [/*#__PURE__*/_jsxDEV(ProgressBar, {
-      current: step,
-      total: questions.length
-    }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
-      className: "px-6 pt-3 max-w-xl mx-auto w-full",
-      children: /*#__PURE__*/_jsxDEV("p", {
-        style: {
-          fontSize: "0.6875rem",
-          letterSpacing: "0.2em",
-          textTransform: "uppercase",
-          color: BRAND.gray4,
-          fontWeight: 600
-        },
-        children: ["Pregunta ", step + 1, " de ", questions.length]
-      }, void 0, true)
-    }, void 0, false), /*#__PURE__*/_jsxDEV(QuestionRenderer, {
-      question: currentQ,
-      value: answers[currentQ.id],
-      onChange: setAnswer,
-      onNext: advance,
-      onBack: goBack,
-      isFirst: step === 0,
-      isLast: step === questions.length - 1
-    }, void 0, false)]
-  }, void 0, true);
+    }
+  }, /*#__PURE__*/React.createElement(ProgressBar, {
+    current: step,
+    total: questions.length
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "px-6 pt-3 max-w-xl mx-auto w-full"
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: "0.6875rem",
+      letterSpacing: "0.2em",
+      textTransform: "uppercase",
+      color: BRAND.gray4,
+      fontWeight: 600
+    }
+  }, "Pregunta ", step + 1, " de ", questions.length)), /*#__PURE__*/React.createElement(QuestionRenderer, {
+    question: currentQ,
+    value: answers[currentQ.id],
+    onChange: setAnswer,
+    onNext: advance,
+    onBack: goBack,
+    isFirst: step === 0,
+    isLast: step === questions.length - 1
+  }));
 }
 ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App));
