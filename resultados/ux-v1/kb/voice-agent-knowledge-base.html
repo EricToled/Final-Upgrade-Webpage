@@ -36,7 +36,7 @@
 <tr><td><code>experience</code></td><td>Experience Architecture</td><td>Arquitectura de Experiencia</td><td>Navegación, máquina de 7 fases, cuestionario (Q1–Q19), menús dinámicos, reglas de negocio (§4.1–§4.15), integración de datos (§5).</td></tr>
 <tr><td><code>technical</code></td><td>Technical Strategy</td><td>Estrategia Técnica</td><td>Stack, datos, SEO/datos estructurados, app de contenido visual, agente BES, método de desarrollo, controles de calidad, integraciones y seguridad.</td></tr>
 <tr><td><code>execution</code></td><td>Execution Plan</td><td>Plan de Ejecución</td><td>Equipo (4 equipos + líder), calendario de 8 semanas, dependencias de Sports World, especificación del servidor.</td></tr>
-<tr><td><code>site</code></td><td>Site Architecture</td><td>Arquitectura del Sitio</td><td>Las 148 páginas en 11 niveles, versión móvil/escritorio, objetivos de calidad, CMS sin código.</td></tr>
+<tr><td><code>site</code></td><td>Site Map</td><td>Mapa del Sitio</td><td>Las 148 páginas en 11 niveles, versión móvil/escritorio, objetivos de calidad, CMS sin código.</td></tr>
 <tr><td><code>deliverables</code></td><td>Deliverables, Support &amp; Operations</td><td>Entregables, Soporte y Operación</td><td>Entregables, migración segura de DNS/correo, soporte 24/7 y SLA, bolsa de horas, estabilización.</td></tr>
 </table>
 <p class="kw">Palabras clave: cuántos documentos, qué documento, lista de documentos, secciones.</p>
@@ -57,8 +57,8 @@
 <tr><td>Número telefónico y WhatsApp para BES</td><td>Execution Plan</td><td>§4.5</td></tr>
 <tr><td>Stack y versiones (Next.js 16, React 19, Node 20.9…)</td><td>Technical · Site</td><td>§1 · (stack)</td></tr>
 <tr><td>Core Web Vitals y accesibilidad (WCAG 2.2 AA)</td><td>Site · Technical</td><td>(calidad) · §7</td></tr>
-<tr><td>CMS para editar textos/imágenes sin programar</td><td>Site Architecture</td><td>(CMS)</td></tr>
-<tr><td>Las 148 páginas / niveles del sitio</td><td>Site Architecture</td><td>(inventario)</td></tr>
+<tr><td>CMS para editar textos/imágenes sin programar</td><td>Site Map</td><td>(CMS)</td></tr>
+<tr><td>Las 148 páginas / niveles del sitio</td><td>Site Map</td><td>(inventario)</td></tr>
 <tr><td>Cuestionario y sus preguntas (Q1–Q19)</td><td>Experience</td><td>§2.2</td></tr>
 <tr><td>Resolución del club (árbol por radio de 10 km)</td><td>Experience</td><td>§4.1</td></tr>
 <tr><td>Bloques de entrenamiento 01/02/03</td><td>Experience</td><td>§4.2–§4.6</td></tr>
@@ -106,10 +106,10 @@
 <p>Es una <b>carga de trabajo separada</b> del sitio, con su propio perfil de recursos. Si comparte el mismo servidor, hay que <b>aumentar CPU y memoria</b>. La decisión de alojamiento está <b>por definir</b>. Nota en <i>Execution Plan</i>, §5. <span class="kw">(BES hosting, servidor BES, recursos)</span></p>
 
 <h3>¿Cuántas páginas tiene el sitio y cómo se organizan?</h3>
-<p><b>148 páginas</b> en <b>11 niveles</b>: home (1), clubes (49), hubs de amenidades (10), clases premium (7), clases individuales (47), hub FitKidz (1), hubs de perfil (5), hub bajar de peso (1), hub personal training (1), membresías (6), blog SEO (20). Inventario completo en <i>Site Architecture</i>. <span class="kw">(148 páginas, niveles, arquitectura del sitio, inventario)</span></p>
+<p><b>148 páginas</b> en <b>11 niveles</b>: home (1), clubes (49), hubs de amenidades (10), clases premium (7), clases individuales (47), hub FitKidz (1), hubs de perfil (5), hub bajar de peso (1), hub personal training (1), membresías (6), blog SEO (20). Inventario completo en <i>Site Map</i>. <span class="kw">(148 páginas, niveles, arquitectura del sitio, inventario)</span></p>
 
 <h3>¿Cómo se edita el contenido sin programar?</h3>
-<p>Con un <b>CMS sin código</b>, recomendado headless y auto-alojado en el servidor de Sports World (por ejemplo Payload o Strapi). Permite editar textos y reemplazar imágenes desde una interfaz visual. Detalle en <i>Site Architecture</i> (sección del CMS). <span class="kw">(CMS, editar, sin código, Payload, Strapi)</span></p>
+<p>Con un <b>CMS sin código</b>, recomendado headless y auto-alojado en el servidor de Sports World (por ejemplo Payload o Strapi). Permite editar textos y reemplazar imágenes desde una interfaz visual. Detalle en <i>Site Map</i> (sección del CMS). <span class="kw">(CMS, editar, sin código, Payload, Strapi)</span></p>
 
 <h3>¿Con qué tecnología está construido el sitio?</h3>
 <p><b>Next.js 16</b> (App Router) con <b>SSR e ISR</b>, <b>React 19</b> con React Compiler, <b>TypeScript</b> estricto, <b>Tailwind CSS v4</b>, fuentes variables auto-alojadas, <b>Node.js 20.9+</b> y caché agresiva. El renderizado en servidor es el requisito técnico más importante (corrige que el sitio anterior no fuera legible por Google). Detalle en <i>Technical Strategy</i>, §1. <span class="kw">(stack, Next.js, React, Node, SSR, tecnología)</span></p>

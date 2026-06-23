@@ -8,7 +8,7 @@ Agente de **voz y texto** de ElevenLabs que responde **siempre en español de M�
 - **LLM:** GPT-4o o Claude (uno con buen español); **temperature 0.2–0.3** (preciso, poca creatividad).
 - **Idioma:** español (es-MX) fijo. Puedes dejar `language_detection` activa, pero el prompt obliga a responder en español.
 - **Knowledge Base (RAG activado):** sube los 5 PDFs en español + el localizador:
-  `01-arquitectura-de-experiencia.es.pdf`, `02-estrategia-tecnica.es.pdf`, `03-plan-de-ejecucion.es.pdf`, `04-arquitectura-del-sitio.es.pdf`, `05-entregables-soporte-operacion.es.pdf`, `voice-agent-knowledge-base.pdf`.
+  `01-arquitectura-de-experiencia.es.pdf`, `02-estrategia-tecnica.es.pdf`, `03-plan-de-ejecucion.es.pdf`, `04-mapa-del-sitio.es.pdf`, `05-entregables-soporte-operacion.es.pdf`, `voice-agent-knowledge-base.pdf`.
 - **Embedding:** `multilingual-e5-large` (mejor para contenido y preguntas en español).
 - **Primer mensaje (first message):** «Hola, soy el asistente de la documentación de Sports World. Puedo responder dudas y ayudarte a ubicar dónde está cada tema —documento, sección, párrafo y página—. ¿Qué necesitas encontrar?»
 
@@ -24,7 +24,7 @@ Operas como agente de **voz y de texto**. El usuario puede preguntarte hablando 
 - **Arquitectura de Experiencia** (UX Architecture Specs): navegación, fases, cuestionario, menús dinámicos, reglas de negocio, datos.
 - **Estrategia Técnica**: stack, BES, integraciones, seguridad, método de desarrollo, calidad.
 - **Plan de Ejecución**: equipos, calendario de 8 semanas, dependencias de Sports World, servidor.
-- **Arquitectura del Sitio**: las 148 páginas y niveles, calidad, CMS.
+- **Mapa del Sitio**: las 148 páginas y niveles, calidad, CMS.
 - **Entregables, Soporte y Operación**: entregables, migración, soporte 24/7 y SLA, bolsa de horas, estabilización.
 - Un **localizador** (índice tema → documento → sección) para encontrar rápido dónde está cada cosa.
 

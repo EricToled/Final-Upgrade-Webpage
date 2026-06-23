@@ -8,7 +8,7 @@ Static web app (no build, no dependencies) to browse the Sports World México UX
 - **Arquitectura de Experiencia / Experience Architecture** (`experience`)
 - **Estrategia Técnica / Technical Strategy** (`technical`)
 - **Plan de Ejecución / Execution Plan** (`execution`)
-- **Arquitectura del Sitio (148 páginas) / Site Architecture** (`site`)
+- **Mapa del Sitio (148 páginas) / Site Architecture** (`site`)
 - **Entregables, Soporte y Operación / Deliverables, Support & Operations** (`deliverables`)
 
 Cada documento está en `docs/<id>.es.md` y `docs/<id>.en.md`. El toggle **ES / EN** (arriba a la derecha) cambia el idioma; la preferencia se recuerda.

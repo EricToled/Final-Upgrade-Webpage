@@ -11,7 +11,7 @@ const DOCS = [
   { src: SRC + "/experience.es.md", kind: "md", title: "UX Architecture Specs — Arquitectura de Experiencia", out: "01-arquitectura-de-experiencia.es.pdf" },
   { src: SRC + "/technical.es.md", kind: "md", title: "Estrategia Técnica", out: "02-estrategia-tecnica.es.pdf" },
   { src: SRC + "/execution.es.md", kind: "md", title: "Plan de Ejecución", out: "03-plan-de-ejecucion.es.pdf" },
-  { src: SRC + "/site.es.md", kind: "md", title: "Arquitectura del Sitio (148 páginas)", out: "04-arquitectura-del-sitio.es.pdf" },
+  { src: SRC + "/site.es.md", kind: "md", title: "Mapa del Sitio (148 páginas)", out: "04-mapa-del-sitio.es.pdf" },
   { src: SRC + "/deliverables.es.md", kind: "md", title: "Entregables, Soporte y Operación", out: "05-entregables-soporte-operacion.es.pdf" },
   { src: KB + "/voice-agent-knowledge-base.html", kind: "html", title: "Base de Conocimiento — Localizador para Agente de Voz", out: "voice-agent-knowledge-base.pdf" },
 ];

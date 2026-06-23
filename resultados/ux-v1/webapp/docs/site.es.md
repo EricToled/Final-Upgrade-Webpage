@@ -1,4 +1,4 @@
-# Sports World México · Arquitectura del Sitio · V1.0
+# Sports World México · Mapa del Sitio · V1.0
 ## Las 148 páginas, entrega móvil + escritorio y el CMS sin código
 
 Documento fundacional. Define la arquitectura de información del sitio: los tipos de página, su organización en niveles y el inventario completo de las 148 páginas con sus direcciones. Se lee por sí solo y es un pilar del conjunto de UX specs.
