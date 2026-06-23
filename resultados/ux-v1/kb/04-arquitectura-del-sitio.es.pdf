@@ -1,0 +1,536 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Pages /Count 6 /Kids [11 0 R 12 0 R 13 0 R 14 0 R 15 0 R 16 0 R] >>
+endobj
+5 0 obj
+<< /Length 4505 >>
+stream
+BT
+/F2 17.00 Tf
+1 0 0 1 54.00 701.00 Tm (Sports World México · Arquitectura del Sitio · V1.0) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 662.06 Tm (Las 148 páginas, entrega móvil + escritorio y el CMS sin código) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 640.24 Tm ([§— ¶1 p.1] Documento fundacional. Define la arquitectura de información del sitio: los tipos de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 626.38 Tm (página, su organización en niveles y el inventario completo de las 148 páginas con sus) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 612.52 Tm (direcciones. Se lee por sí solo y es un pilar del conjunto de UX specs.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 578.66 Tm (Cómo se relaciona esto con la experiencia ideal) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 556.84 Tm ([§— ¶2 p.1] El sitio tiene dos capas que conviven. La primera es el sitio de contenido y SEO:) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 542.98 Tm (las 148 páginas que hacen que Sports World aparezca en búsquedas y le dan a cada club, clase y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 529.12 Tm (amenidad su propio lugar en Google. La segunda es el flujo de experiencia ideal: el recorrido) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 515.26 Tm (personalizado que convierte a un visitante anónimo en un prospecto agendado, cuya navegación,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 501.40 Tm (cuestionario y reglas de negocio se especifican en 01-experience-architecture.md. Ambas capas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 487.54 Tm (comparten los mismos datos de clubes y clases y la misma captación de leads, de modo que cuentan) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 473.68 Tm (una sola historia.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 453.82 Tm ([§— ¶3 p.1] Una aclaración, para no confundir las capas: el flujo de experiencia ideal usa solo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 439.96 Tm (dos amenidades para resolver el club —la alberca y FitKidz— porque son las únicas por las que) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 426.10 Tm (pregunta. Las amenidades listadas abajo como hubs \(alberca, INTENZ, ring de box, etc.\) son) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 412.24 Tm (páginas de SEO, no criterios de resolución de club. Son cosas distintas que cumplen propósitos) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 398.38 Tm (distintos.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 364.52 Tm (Las dos versiones: móvil y escritorio) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 342.70 Tm ([§— ¶4 p.1] El sitio se entrega en dos versiones, móvil y escritorio, con un enfoque) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 328.84 Tm (mobile-first: está diseñado primero para el teléfono y se expande a escritorio, nunca al revés.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 314.98 Tm (Es un único sitio responsivo —una sola base de código— que se adapta a ambos y se ve y funciona) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 301.12 Tm (bien como una experiencia móvil pulida y como una experiencia de escritorio pulida. La razón es) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 287.26 Tm (simple: la audiencia llega abrumadoramente desde el teléfono, así que diseñar primero para ese) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 273.40 Tm (caso garantiza la mejor experiencia para la mayoría.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 253.54 Tm ([§— ¶5 p.1] Objetivos de calidad, medibles y verificados en cada cambio:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 235.68 Tm ([§— ¶6 p.1] •  Core Web Vitals: LCP < 2.5s en móvil \(percentil 75\), INP < 200ms, CLS < 0.1.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 219.82 Tm ([§— ¶7 p.1] •  Imágenes: formatos AVIF y WebP con sharp, tamaños responsivos y carga diferida) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 205.96 Tm (\(lazy loading\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 190.10 Tm ([§— ¶8 p.1] •  Accesibilidad: WCAG 2.2 AA, verificada con axe-core y Lighthouse en) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 176.24 Tm (integración continua.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 144.38 Tm (El panel de actualización sin código \(CMS\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 122.56 Tm ([§— ¶9 p.1] Sports World recibe un panel de administración de contenido que permite actualizar) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 108.70 Tm (texto e imágenes sin programar. El personal de Sports World edita el texto del sitio y reemplaza) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 94.84 Tm (imágenes desde una interfaz visual, y lo que guarda se refleja en el sitio publicado.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 74.98 Tm ([§— ¶10 p.1] Recomendación técnica \(una propuesta, no una decisión cerrada\): dado el requisito) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 61.12 Tm (de que todo viva en la infraestructura de Sports World, se sugiere un CMS headless con edición) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Arquitectura del Sitio \(148 páginas\)  ·  pág. 1 de 6) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Length 3968 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm (visual, alojado en el propio servidor de Sports World —por ejemplo Payload o Strapi, ambos) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm (autoalojables en Node.js junto al sitio. El sitio consume el contenido del CMS a través de su) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 695.78 Tm (API; al guardar un cambio, la página se revalida mediante cacheTag e ISR. Esto mantiene tanto el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 681.92 Tm (sitio como su panel dentro de la infraestructura de Sports World, sin dependencia de un servicio) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 668.06 Tm (externo. La elección final del CMS se confirma al inicio del proyecto.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 634.20 Tm (Las 148 páginas, por nivel) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 612.38 Tm ([§— ¶11 p.2] El sitio está organizado en 11 niveles de arquitectura. A continuación, el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 598.52 Tm (inventario completo con cada dirección \(slug\).) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 571.66 Tm (Nivel 01 — Home \(1 página\)) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 553.48 Tm ([§— ¶12 p.2] •  Home — /) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 528.62 Tm (Nivel 02 — Páginas de club \(49 páginas\)) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 510.44 Tm ([§— ¶13 p.2] •  Amores \(Av. Coyoacán\) — /clubes/amores/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 494.58 Tm ([§— ¶14 p.2] •  Antara — /clubes/antara/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 478.72 Tm ([§— ¶15 p.2] •  Anzures — /clubes/anzures/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 462.86 Tm ([§— ¶16 p.2] •  Cumbres — /clubes/cumbres/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 447.00 Tm ([§— ¶17 p.2] •  Hermosillo — /clubes/hermosillo/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 431.14 Tm ([§— ¶18 p.2] •  La Rioja — /clubes/la-rioja/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 415.28 Tm ([§— ¶19 p.2] •  Plaza Mayor \(León\) — /clubes/leon/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 399.42 Tm ([§— ¶20 p.2] •  Pabellón Bosques — /clubes/pabellon-bosques/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 383.56 Tm ([§— ¶21 p.2] •  Las Ánimas \(Puebla\) — /clubes/puebla/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 367.70 Tm ([§— ¶22 p.2] •  Reforma Rhin — /clubes/reforma/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 351.84 Tm ([§— ¶23 p.2] •  Roma — /clubes/roma/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 335.98 Tm ([§— ¶24 p.2] •  Sonata — /clubes/sonata/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 320.12 Tm ([§— ¶25 p.2] •  Triángulo Tecamachalco — /clubes/triangulo-tecamachalco/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 304.26 Tm ([§— ¶26 p.2] •  Plaza Sol \(Veracruz\) — /clubes/veracruz/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 288.40 Tm ([§— ¶27 p.2] •  Condesa — /clubes/condesa/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 272.54 Tm ([§— ¶28 p.2] •  Félix Cuevas — /clubes/felix-cuevas/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 256.68 Tm ([§— ¶29 p.2] •  Altavista — /clubes/altavista/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 240.82 Tm ([§— ¶30 p.2] •  Satélite — /clubes/satelite/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 224.96 Tm ([§— ¶31 p.2] •  Patriotismo — /clubes/patriotismo/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 209.10 Tm ([§— ¶32 p.2] •  Espacio Interlomas — /clubes/interlomas/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 193.24 Tm ([§— ¶33 p.2] •  Metepec — /clubes/metepec/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 177.38 Tm ([§— ¶34 p.2] •  Oasis Coyoacán \(Miguel Ángel de Quevedo\) — /clubes/miguel-angel-de-quevedo/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 161.52 Tm ([§— ¶35 p.2] •  Obrero Mundial — /clubes/obrero-mundial/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 145.66 Tm ([§— ¶36 p.2] •  Palmas — /clubes/palmas/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 129.80 Tm ([§— ¶37 p.2] •  Acora Pedregal — /clubes/pedregal/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 113.94 Tm ([§— ¶38 p.2] •  San Jerónimo — /clubes/san-jeronimo/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 98.08 Tm ([§— ¶39 p.2] •  Santa Fe — /clubes/santa-fe/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 82.22 Tm ([§— ¶40 p.2] •  Patio Universidad — /clubes/universidad/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 66.36 Tm ([§— ¶41 p.2] •  Xola — /clubes/xola/) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Arquitectura del Sitio \(148 páginas\)  ·  pág. 2 de 6) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Length 4099 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 68.00 723.50 Tm ([§— ¶42 p.3] •  Zona Esmeralda — /clubes/zona-esmeralda/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 707.64 Tm ([§— ¶43 p.3] •  Torre Manacar — /clubes/manacar/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 691.78 Tm ([§— ¶44 p.3] •  Lindavista — /clubes/lindavista/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 675.92 Tm ([§— ¶45 p.3] •  Cabo Norte — /clubes/cabo-norte/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 660.06 Tm ([§— ¶46 p.3] •  Portal San Ángel \(Barranca\) — /clubes/barranca/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 644.20 Tm ([§— ¶47 p.3] •  Juriquilla — /clubes/juriquilla/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 628.34 Tm ([§— ¶48 p.3] •  Bernardo Quintana — /clubes/bernardo-quintana/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 612.48 Tm ([§— ¶49 p.3] •  Cráter — /clubes/crater/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 596.62 Tm ([§— ¶50 p.3] •  Patio Tlalpan — /clubes/patio-tlalpan/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 580.76 Tm ([§— ¶51 p.3] •  Paseo Interlomas — /clubes/paseo-interlomas/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 564.90 Tm ([§— ¶52 p.3] •  Plaza Tlalne \(Tlalnepantla\) — /clubes/tlalnepantla/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 549.04 Tm ([§— ¶53 p.3] •  Saltillo — /clubes/saltillo/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 533.18 Tm ([§— ¶54 p.3] •  Esfera \(Querétaro\) — /clubes/esfera-queretaro/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 517.32 Tm ([§— ¶55 p.3] •  Plaza Almanara \(Torreón\) — /clubes/torreon/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 501.46 Tm ([§— ¶56 p.3] •  Altaria \(Aguascalientes\) — /clubes/aguascalientes/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 485.60 Tm ([§— ¶57 p.3] •  Punto MAQ \(Parque San Andrés\) — /clubes/parque-san-andres/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 469.74 Tm ([§— ¶58 p.3] •  Nave 01 Apodaca — /clubes/apodaca/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 453.88 Tm ([§— ¶59 p.3] •  Coapa \(Terraza Coapa\) — /clubes/terraza-coapa/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 438.02 Tm ([§— ¶60 p.3] •  Plaza Cinépolis \(Culiacán\) — /clubes/culiacan/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 422.16 Tm ([§— ¶61 p.3] •  San Pedro — /clubes/san-pedro/) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 397.30 Tm (Nivel 03 — Hubs de amenidades \(10 páginas\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 377.12 Tm ([§— ¶62 p.3] Hubs nacionales por amenidad; cada uno lista los clubes que la ofrecen. Patrón:) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 363.26 Tm (/amenidades/[amenidad]/.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 345.40 Tm ([§— ¶63 p.3] •  Pool — /amenidades/alberca/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 329.54 Tm ([§— ¶64 p.3] •  INTENZ \(functional zone\) — /amenidades/intenz/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 313.68 Tm ([§— ¶65 p.3] •  Boxing ring — /amenidades/ring-box/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 297.82 Tm ([§— ¶66 p.3] •  Cardio — /amenidades/cardiovascular/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 281.96 Tm ([§— ¶67 p.3] •  Free weights — /amenidades/peso-libre/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 266.10 Tm ([§— ¶68 p.3] •  IndBike \(indoor cycling\) — /amenidades/indbike/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 250.24 Tm ([§— ¶69 p.3] •  Court — /amenidades/cancha/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 234.38 Tm ([§— ¶70 p.3] •  Padel — /amenidades/padel/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 218.52 Tm ([§— ¶71 p.3] •  Squash — /amenidades/squash/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 202.66 Tm ([§— ¶72 p.3] •  Climbing wall — /amenidades/muro-escalar/) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 177.80 Tm (Nivel 04 — Clases premium \(7 páginas\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 157.62 Tm ([§— ¶73 p.3] Clases premium con tratamiento visual destacado. Patrón:) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 143.76 Tm (/clases/signature/[clase]/.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 125.90 Tm ([§— ¶74 p.3] •  Body Pump — /clases/signature/body-pump/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 110.04 Tm ([§— ¶75 p.3] •  Body Combat — /clases/signature/body-combat/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 94.18 Tm ([§— ¶76 p.3] •  Body Attack — /clases/signature/body-attack/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 78.32 Tm ([§— ¶77 p.3] •  Body Step — /clases/signature/body-step/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 62.46 Tm ([§— ¶78 p.3] •  Body Balance — /clases/signature/body-balance/) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Arquitectura del Sitio \(148 páginas\)  ·  pág. 3 de 6) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Length 3679 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 68.00 723.50 Tm ([§— ¶79 p.4] •  Body Jam — /clases/signature/body-jam/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 707.64 Tm ([§— ¶80 p.4] •  CX Worx — /clases/signature/cx-worx/) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 682.78 Tm (Nivel 05 — Clases individuales \(47 páginas\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 662.60 Tm ([§— ¶81 p.4] Las 44 clases del catálogo de adultos más las 3 modalidades de entrenamiento) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 648.74 Tm (individual. Patrón: /clases/[clase]/.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 628.88 Tm ([§— ¶82 p.4] Indoor cycling) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 611.02 Tm ([§— ¶83 p.4] •  INDBIKE — /clases/indbike/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 595.16 Tm ([§— ¶84 p.4] •  RPM — /clases/rpm/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 579.30 Tm ([§— ¶85 p.4] •  Power Cycling — /clases/power-cycling/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 563.44 Tm ([§— ¶86 p.4] •  Cycling — /clases/cycling/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 547.58 Tm ([§— ¶87 p.4] •  Beat'n Bike — /clases/beat-n-bike/) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 529.72 Tm ([§— ¶88 p.4] Pilates) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 511.86 Tm ([§— ¶89 p.4] •  Reformer Pilates — /clases/reformer-pilates/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 496.00 Tm ([§— ¶90 p.4] •  Mat Pilates — /clases/mat-pilates/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 480.14 Tm ([§— ¶91 p.4] •  Ball Pilates — /clases/ball-pilates/) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 462.28 Tm ([§— ¶92 p.4] Barre) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 444.42 Tm ([§— ¶93 p.4] •  Total Barre — /clases/total-barre/) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 426.56 Tm ([§— ¶94 p.4] Yoga) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 408.70 Tm ([§— ¶95 p.4] •  Hatha Yoga — /clases/hatha-yoga/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 392.84 Tm ([§— ¶96 p.4] •  Vinyasa Yoga — /clases/vinyasa-yoga/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 376.98 Tm ([§— ¶97 p.4] •  Ashtanga Yoga — /clases/ashtanga-yoga/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 361.12 Tm ([§— ¶98 p.4] •  Restorative Yoga — /clases/yoga-restaurativa/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 345.26 Tm ([§— ¶99 p.4] •  AE Yoga \(aerial yoga\) — /clases/ae-yoga/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 329.40 Tm ([§— ¶100 p.4] •  Intrinity — /clases/intrinity/) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 311.54 Tm ([§— ¶101 p.4] Dance / Zumba) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 293.68 Tm ([§— ¶102 p.4] •  Zumba Fitness — /clases/zumba-fitness/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 277.82 Tm ([§— ¶103 p.4] •  Zumba Toning — /clases/zumba-toning/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 261.96 Tm ([§— ¶104 p.4] •  Zumba Step — /clases/zumba-step/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 246.10 Tm ([§— ¶105 p.4] •  Belly Dance — /clases/belly-dance/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 230.24 Tm ([§— ¶106 p.4] •  Urban Dance — /clases/urban-dance/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 214.38 Tm ([§— ¶107 p.4] •  Fit y Dance — /clases/fit-y-dance/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 198.52 Tm ([§— ¶108 p.4] •  Aerial Dance — /clases/danza-aerea/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 182.66 Tm ([§— ¶109 p.4] •  Ballroom Dance — /clases/baile-de-salon/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 166.80 Tm ([§— ¶110 p.4] •  Hawaiian — /clases/hawaiano/) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 148.94 Tm ([§— ¶111 p.4] Functional and strength) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 131.08 Tm ([§— ¶112 p.4] •  Full Body — /clases/full-body/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 115.22 Tm ([§— ¶113 p.4] •  Core — /clases/core/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 99.36 Tm ([§— ¶114 p.4] •  Stretch — /clases/stretch/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 83.50 Tm ([§— ¶115 p.4] •  Power Jump — /clases/power-jump/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 67.64 Tm ([§— ¶116 p.4] •  Fun Trac — /clases/fun-trac/) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Arquitectura del Sitio \(148 páginas\)  ·  pág. 4 de 6) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Length 3816 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 68.00 723.50 Tm ([§— ¶117 p.5] •  Interval — /clases/interval/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 707.64 Tm ([§— ¶118 p.5] •  Pound — /clases/pound/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 691.78 Tm ([§— ¶119 p.5] •  Step — /clases/step/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 675.92 Tm ([§— ¶120 p.5] •  Kinetic Chain — /clases/kinetic-chain/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 660.06 Tm ([§— ¶121 p.5] •  Kinetics Ball — /clases/kinetics-ball/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 644.20 Tm ([§— ¶122 p.5] •  Kinetic Pump — /clases/kinetic-pump/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 628.34 Tm ([§— ¶123 p.5] •  Natural Motion — /clases/natural-motion/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 612.48 Tm ([§— ¶124 p.5] •  Strong Nation — /clases/strong-nation/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 596.62 Tm ([§— ¶125 p.5] •  Race Walker — /clases/race-walker/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 580.76 Tm ([§— ¶126 p.5] •  Group Gymnastics — /clases/gimnasia-de-grupos/) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 562.90 Tm ([§— ¶127 p.5] Martial arts) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 545.04 Tm ([§— ¶128 p.5] •  Boxing — /clases/box/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 529.18 Tm ([§— ¶129 p.5] •  TKD Intro — /clases/iniciacion-tkd/) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 511.32 Tm ([§— ¶130 p.5] Aquatic) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 493.46 Tm ([§— ¶131 p.5] •  Aqua Aerobics — /clases/acuaerobics/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 477.60 Tm ([§— ¶132 p.5] •  Aqua Zumba — /clases/acuazumba/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 461.74 Tm ([§— ¶133 p.5] •  Flyboard — /clases/flyboard/) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 443.88 Tm ([§— ¶134 p.5] Individual-training modalities) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 426.02 Tm ([§— ¶135 p.5] •  Individual weight training — /clases/pesas-individual/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 410.16 Tm ([§— ¶136 p.5] •  Individual cardio — /clases/aerobico-individual/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 394.30 Tm ([§— ¶137 p.5] •  Individual aquatic — /clases/acuaticos-individual/) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 369.44 Tm (Nivel 06 — Hub de FitKidz \(1 página\)) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 351.26 Tm ([§— ¶138 p.5] •  Hub de FitKidz — /fitkidz/. Un único hub que agrupa, con anclas internas,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 337.40 Tm (las clases infantiles por edad \(FitKidz, Junior, Teens\), por disciplina \(acuáticas, deportes) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 323.54 Tm (de equipo, artes marciales, danza, acondicionamiento funcional\) y por club.) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 298.68 Tm (Nivel 07 — Hubs de perfil de usuario \(5 páginas\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 278.50 Tm ([§— ¶139 p.5] Patrón: /perfiles/[perfil]/.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 260.64 Tm ([§— ¶140 p.5] •  First Steps — /perfiles/primeros-pasos/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 244.78 Tm ([§— ¶141 p.5] •  Health and Wellbeing — /perfiles/salud-y-bienestar/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 228.92 Tm ([§— ¶142 p.5] •  Toning — /perfiles/tonificar/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 213.06 Tm ([§— ¶143 p.5] •  Build Strength — /perfiles/ganar-fuerza/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 197.20 Tm ([§— ¶144 p.5] •  Rehabilitation — /perfiles/rehabilitacion/) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 172.34 Tm (Nivel 08 — Hub de bajar de peso \(1 página\)) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 154.16 Tm ([§— ¶145 p.5] •  Hub de bajar de peso — /bajar-de-peso/. Contenido dedicado al objetivo de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 140.30 Tm (bajar de peso, con respaldo profesional.) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 115.44 Tm (Nivel 09 — Hub de entrenamiento personal \(1 página\)) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 97.26 Tm ([§— ¶146 p.5] •  Hub de entrenamiento personal — /personal-training/. Entrenamiento) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 83.40 Tm (personalizado, conectado a los cinco perfiles de usuario.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Arquitectura del Sitio \(148 páginas\)  ·  pág. 5 de 6) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Length 1420 >>
+stream
+BT
+/F2 11.50 Tf
+1 0 0 1 54.00 722.50 Tm (Nivel 10 — Membresías \(6 páginas\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 702.32 Tm ([§— ¶147 p.6] Un hub más 5 planes. Patrón: /membresias/ y /membresias/[plan]/.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 684.46 Tm ([§— ¶148 p.6] •  Hub de membresías — /membresias/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 668.60 Tm ([§— ¶149 p.6] •  Uniclub — /membresias/uniclub/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 652.74 Tm ([§— ¶150 p.6] •  Allclub — /membresias/allclub/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 636.88 Tm ([§— ¶151 p.6] •  Black Pass — /membresias/black-pass/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 621.02 Tm ([§— ¶152 p.6] •  Pink Plan — /membresias/pink-plan/) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 605.16 Tm ([§— ¶153 p.6] •  Promo 21 días — /membresias/promo-21-dias/) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 580.30 Tm (Nivel 11 — Blog de SEO \(20 páginas\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 560.12 Tm ([§— ¶154 p.6] 20 artículos optimizados para SEO. Patrón: /blog/[articulo]/. 129 a 148. Artículos) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 546.26 Tm (de blog 1 al 20.) Tj
+/F3 10.00 Tf
+1 0 0 1 54.00 523.90 Tm (Total: 148 páginas distribuidas en 11 niveles. El detalle de cada plantilla, sus componentes y su) Tj
+/F3 10.00 Tf
+1 0 0 1 54.00 510.70 Tm (comportamiento se desarrolla en los pilares de diseño y comportamiento del conjunto de UX specs.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Arquitectura del Sitio \(148 páginas\)  ·  pág. 6 de 6) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 5 0 R >>
+endobj
+12 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+13 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 7 0 R >>
+endobj
+14 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+15 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 9 0 R >>
+endobj
+16 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+17 0 obj
+<< /Title (Arquitectura del Sitio [148 páginas]) /Author (Final Upgrade AI) /Subject (Documentacion UX Sports World - KB es-MX para agente de voz) /Keywords (Sports World, UX, documentacion, KB, ElevenLabs) >>
+endobj
+18 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 19
+0000000000 65535 f 
+0000000015 00000 n 
+0000000112 00000 n 
+0000000214 00000 n 
+0000000319 00000 n 
+0000000412 00000 n 
+0000004969 00000 n 
+0000008989 00000 n 
+0000013140 00000 n 
+0000016871 00000 n 
+0000020739 00000 n 
+0000022212 00000 n 
+0000022359 00000 n 
+0000022506 00000 n 
+0000022653 00000 n 
+0000022800 00000 n 
+0000022947 00000 n 
+0000023095 00000 n 
+0000023321 00000 n 
+trailer
+<< /Size 19 /Root 18 0 R /Info 17 0 R >>
+startxref
+23371
+%%EOF

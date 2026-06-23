@@ -1,0 +1,2686 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Pages /Count 27 /Kids [32 0 R 33 0 R 34 0 R 35 0 R 36 0 R 37 0 R 38 0 R 39 0 R 40 0 R 41 0 R 42 0 R 43 0 R 44 0 R 45 0 R 46 0 R 47 0 R 48 0 R 49 0 R 50 0 R 51 0 R 52 0 R 53 0 R 54 0 R 55 0 R 56 0 R 57 0 R 58 0 R] >>
+endobj
+5 0 obj
+<< /Length 4391 >>
+stream
+BT
+/F2 17.00 Tf
+1 0 0 1 54.00 701.00 Tm (Sports World México · Arquitectura de la Experiencia) Tj
+/F2 17.00 Tf
+1 0 0 1 54.00 678.56 Tm (· V1.0) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 639.62 Tm (Navegación, Cuestionario, Menús Dinámicos y Reglas de Negocio) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 617.80 Tm ([§— ¶1 p.1] Documento fundacional. Define, por sí mismo y en términos normativos, por qué existe) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 603.94 Tm (la experiencia ideal, cómo se navega, el rol del cuestionario como única fuente de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 590.08 Tm (personalización, cómo funcionan los menús dinámicos y cada regla de negocio que rige la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 576.22 Tm (experiencia de principio a fin. Está redactado para leerse de forma autónoma: un lector —ya sea) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 562.36 Tm (del lado de Sports World o un proveedor externo— no necesita ningún otro documento para) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 548.50 Tm (comprender y construir la experiencia que aquí se describe. Es la especificación autoritativa de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 534.64 Tm (esa experiencia.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 514.78 Tm ([§— ¶2 p.1] Terminología. A lo largo de este documento, prospecto es la persona que avanza por) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 500.92 Tm (la experiencia \(primero visitante anónimo, después persona identificada\). Lead es el registro) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 487.06 Tm (capturado y cualificado que se escribe en el sistema de clientes \(CRM\). Los dos términos nunca) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 473.20 Tm (se usan de manera intercambiable.) Tj
+/F2 17.00 Tf
+1 0 0 1 54.00 433.84 Tm (0 · Objetivos) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 394.90 Tm (0.0 Por qué existe este proyecto) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 373.08 Tm ([§0.0 ¶3 p.1] Sports World opera una red física premium —49 clubes en todo México— pero su) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 359.22 Tm (presencia digital no refleja la escala de esa infraestructura. La marca es encontrada por) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 345.36 Tm (personas que ya la conocen, y pasa desapercibida para quienes no. Las personas que buscan una) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 331.50 Tm (solución fitness genérica que Sports World sí ofrece rara vez la descubren, porque Sports World) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 317.64 Tm (no aparece en esas búsquedas. El resultado es una pérdida constante de nuevos clientes justo en) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 303.78 Tm (el momento en que están buscando inscribirse.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 283.92 Tm ([§0.0 ¶4 p.1] Esta página —la experiencia ideal— existe para cerrar esa brecha en el punto de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 270.06 Tm (decisión. Su propósito es convertir la demanda que sí llega a Sports World en visitas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 256.20 Tm (cualificadas y agendadas: tomar a un prospecto que llega buscando una solución, entender lo que) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 242.34 Tm (realmente quiere, ubicarlo en el club correcto con la combinación de entrenamiento correcta, y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 228.48 Tm (entregar un brief completo al asesor que cerrará la visita. La página es la superficie de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 214.62 Tm (conversión que transforma la visibilidad de búsqueda recuperada en visitas agendadas.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 180.76 Tm (0.1 Los tres bloqueadores clave de leads) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 158.94 Tm ([§0.1 ¶5 p.1] La primera auditoría de SEO identificó tres formas concretas en las que Sports) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 145.08 Tm (World pierde a un prospecto listo para inscribirse hoy. Cada una es una intención real que) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 131.22 Tm (Sports World puede satisfacer físicamente, pero no logra capturar de forma digital. La) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 117.36 Tm (experiencia ideal está diseñada como la respuesta directa a las tres.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 97.50 Tm ([§0.1 ¶6 p.1] Bloqueador 1 — El vertical ignorado \(pérdida de peso\). Un prospecto busca) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 83.64 Tm ("gimnasio para perder peso" —932,300 búsquedas por mes, la intención de mayor volumen en la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 69.78 Tm (industria fitness de México. Sports World aparece en aproximadamente el 0.02% de estas) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 1 de 27) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Length 5570 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm (búsquedas. El prospecto se va con un competidor porque, digitalmente, nada le indicó que Sports) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm (World podía ayudarle. La experiencia ideal responde a esto de manera directa: la pérdida de peso) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 695.78 Tm (es un objetivo funcional de primera clase \(Q4\) con su propia rama dedicada del cuestionario, un) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 681.92 Tm (manejo consciente del tratamiento y una recomendación a la medida —de modo que un prospecto con) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 668.06 Tm (esta intención recibe una ruta concreta y personalizada en lugar de silencio.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 648.20 Tm ([§0.1 ¶7 p.2] Bloqueador 2 — La demanda desatendida \(amenidades y disciplinas\). Un prospecto) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 634.34 Tm (busca "yoga cerca de mí" —14,800 búsquedas por mes— y aunque Sports World cuenta con) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 620.48 Tm (instructores y estudios de yoga premium, queda fuera del Top 100 de resultados, por lo que el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 606.62 Tm (prospecto termina en un estudio boutique. El mismo patrón se repite en functional/HIIT, artes) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 592.76 Tm (marciales y otras disciplinas que Sports World ofrece pero no hace visibles. La experiencia) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 578.90 Tm (ideal responde a esto cruzando el objetivo declarado del prospecto con el catálogo real de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 565.04 Tm (clases de cada club, de modo que una disciplina que Sports World efectivamente ofrece se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 551.18 Tm (convierte en una parte visible y recomendada de la experiencia ideal del prospecto, en lugar de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 537.32 Tm (una capacidad invisible.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 517.46 Tm ([§0.1 ¶8 p.2] Bloqueador 3 — El laberinto de clics adicionales \(intención geográfica\). Un) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 503.60 Tm (prospecto busca "gimnasio cerca de mí" —751,000 búsquedas por mes— y en lugar de ser llevado a) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 489.74 Tm (su club más cercano, aterriza en una página de inicio genérica. Cada clic adicional cuesta entre) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 475.88 Tm (20% y 40% en retención, y Sports World gana el clic pero pierde la visita por agotamiento. La) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 462.02 Tm (experiencia ideal responde a esto resolviendo al prospecto directamente hacia un club) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 448.16 Tm (recomendado específico con base en su ubicación, y enrutándolo de inmediato a un siguiente paso) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 434.30 Tm (concreto \(la visita guiada\) —colapsando el laberinto en una única ruta personalizada.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 400.44 Tm (0.2 Objetivos del prospecto) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 378.62 Tm ([§0.2 ¶9 p.2] La experiencia ideal personaliza en torno a los objetivos propios del prospecto.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 364.76 Tm (Estos objetivos no son abiertos: están completamente acotados por las opciones de respuesta de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 350.90 Tm (dos preguntas del cuestionario. El prospecto tiene exactamente cinco objetivos emocionales) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 337.04 Tm (posibles \(las opciones de Q3\) y exactamente seis objetivos funcionales posibles \(las opciones de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 323.18 Tm (Q4\). Nada de lo que el prospecto quiere queda fuera de estas once opciones —el cuestionario está) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 309.32 Tm (deliberadamente restringido para que cada recomendación mapee a un objetivo conocido.) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 282.46 Tm (0.2.1 Objetivos emocionales \(Q3 — "¿Qué quieres sentir al salir del club?"\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 262.28 Tm ([§0.2 ¶10 p.2] El objetivo emocional es lo que el prospecto quiere sentir después de entrenar.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 248.42 Tm (Se captura mediante Q3, una pregunta de selección única con una línea de apoyo —"Esto define el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 234.56 Tm (tono de tu experiencia ideal."— y exactamente cinco opciones. El prospecto elige una. La opción) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 220.70 Tm (elegida fija el tono emocional del copy personalizado \(el hook y el argumento del plan\).) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 200.84 Tm ([§0.2 ¶11 p.2] Los cinco objetivos emocionales, textuales \(mostrados aquí en el masculino por) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 186.98 Tm (defecto; cada uno se conjuga por género a partir de Q2\):) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 169.12 Tm ([§0.2 ¶12 p.2] •  Desconectado / Desconectada del trabajo y la rutina — el prospecto entrena) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 155.26 Tm (para desconectarse del trabajo y la rutina. La experiencia debe leerse como un escape y un) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 141.40 Tm (reinicio mental.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 125.54 Tm ([§0.2 ¶13 p.2] •  Renovado / Renovada y de buen ánimo — el prospecto entrena para sentirse) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 111.68 Tm (renovado y de buen ánimo. La experiencia debe leerse como energizante y motivadora del estado) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 97.82 Tm (de ánimo.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 81.96 Tm ([§0.2 ¶14 p.2] •  Parte de una comunidad saludable — el prospecto entrena para pertenecer a) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 68.10 Tm (una comunidad saludable. La experiencia debe enfatizar las clases grupales, los espacios) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 2 de 27) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Length 4926 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 68.00 723.50 Tm (compartidos y la pertenencia.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 707.64 Tm ([§0.2 ¶15 p.3] •  Confiado / Confiada en que mi cuerpo no me va a fallar — el prospecto) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 693.78 Tm (entrena por confianza y fiabilidad corporal. La experiencia debe enfatizar la resistencia, la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 679.92 Tm (capacidad y el no ser defraudado por el propio cuerpo.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 664.06 Tm ([§0.2 ¶16 p.3] •  Más a gusto conmigo mismo / conmigo misma — el prospecto entrena para) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 650.20 Tm (sentirse más a gusto consigo mismo. La experiencia debe leerse como autoaceptación y) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 636.34 Tm (bienestar personal, más que como validación externa.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 618.48 Tm ([§0.2 ¶17 p.3] Esta única respuesta no cambia qué club, qué bloques ni qué clases se recomiendan) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 604.62 Tm (—eso lo determinan los objetivos funcionales y el resto del cuestionario. El objetivo emocional) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 590.76 Tm (moldea el tono con el que se redacta la recomendación, asegurando que el copy personalizado) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 576.90 Tm (resuene con la razón real por la que el prospecto está ahí.) Tj
+/F2 11.50 Tf
+1 0 0 1 54.00 550.04 Tm (0.2.2 Objetivos funcionales \(Q4 — "¿Qué buscas?"\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 529.86 Tm ([§0.2 ¶18 p.3] El objetivo funcional es lo que el prospecto quiere lograr físicamente. Se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 516.00 Tm (captura mediante Q4, una pregunta de selección múltiple —línea de apoyo "Puedes elegir hasta) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 502.14 Tm (dos."— con exactamente seis opciones y un límite estricto de dos selecciones. El prospecto elige) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 488.28 Tm (una o dos. La primera selección \(Q4[0]\) es el objetivo funcional principal y dirige toda) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 474.42 Tm (resolución determinista del sistema; la segunda \(Q4[1]\), si está presente, es un objetivo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 460.56 Tm (funcional secundario usado para diversificar el ranking de clases.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 440.70 Tm ([§0.2 ¶19 p.3] Los seis objetivos funcionales, textuales:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 422.84 Tm ([§0.2 ¶20 p.3] •  Bajar de peso — pérdida de peso. Este objetivo además habilita la rama de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 408.98 Tm (pérdida de peso del cuestionario \(tratamientos, datos físicos, meta de cambio —Q17, Q18, Q19\)) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 395.12 Tm (y el manejo YMYL de pérdida de peso.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 379.26 Tm ([§0.2 ¶21 p.3] •  Mejorar mi estética corporal y definición muscular — estética corporal y) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 365.40 Tm (definición muscular.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 349.54 Tm ([§0.2 ¶22 p.3] •  Aumentar masa muscular — ganancia de masa muscular.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 333.68 Tm ([§0.2 ¶23 p.3] •  Mejorar mi desempeño atlético — desempeño atlético.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 317.82 Tm ([§0.2 ¶24 p.3] •  Mejorar mi salud cardiovascular — salud cardiovascular.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 301.96 Tm ([§0.2 ¶25 p.3] •  Recuperarme de una lesión o dolor crónico — recuperación de una lesión o) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 288.10 Tm (dolor crónico.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 270.24 Tm ([§0.2 ¶26 p.3] El objetivo funcional principal Q4[0] selecciona de forma determinista:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 252.38 Tm ([§0.2 ¶27 p.3] •  el subgrupo de entrenamiento del Bloque 01 \(fuerza en piso seco o fuerza) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 238.52 Tm (acuática\),) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 222.66 Tm ([§0.2 ¶28 p.3] •  el subgrupo de entrenamiento del Bloque 02 \(cardio en piso seco o cardio) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 208.80 Tm (acuático\),) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 192.94 Tm ([§0.2 ¶29 p.3] •  los pesos de ranking de las clases grupales del Bloque 03,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 177.08 Tm ([§0.2 ¶30 p.3] •  el conjunto de clases ideales \(preferClasses\) usado en la resolución del) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 163.22 Tm (club,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 147.36 Tm ([§0.2 ¶31 p.3] •  y el arco narrativo del copy personalizado.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 129.50 Tm ([§0.2 ¶32 p.3] Los dos ejes de objetivos son independientes y complementarios: Q3 dice por qué) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 115.64 Tm (el prospecto está aquí \(la sensación que persigue\) y Q4 dice qué quiere que logre su cuerpo.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 101.78 Tm (Juntos acotan todo el espacio de aquello en torno a lo cual la experiencia debe personalizar.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 87.92 Tm (Cada regla aguas abajo en este documento opera sobre objetivos derivados de estas dos preguntas.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 3 de 27) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Length 5076 >>
+stream
+BT
+/F2 17.00 Tf
+1 0 0 1 54.00 717.00 Tm (1 · Principios de navegación) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 678.06 Tm (1.1 Experiencia de página única con máquina de estados de fases) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 656.24 Tm ([§1.1 ¶33 p.4] La experiencia ideal de Sports World es una aplicación de página única que avanza) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 642.38 Tm (a través de una secuencia fija de fases. El prospecto nunca navega a una URL diferente durante) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 628.52 Tm (el flujo de cuestionario a brief. Todo el avance se rige por una única variable de estado) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 614.66 Tm (llamada phase. El renderizador despacha la pantalla correcta según el valor actual de phase. No) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 600.80 Tm (hay router, ni deep linking, ni historial del botón de retroceso del navegador —la navegación) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 586.94 Tm (hacia atrás es explícita y se maneja con botones dentro de cada fase.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 567.08 Tm ([§1.1 ¶34 p.4] Esta decisión deliberada asegura que:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 549.22 Tm ([§1.1 ¶35 p.4] •  El prospecto no puede aterrizar accidentalmente en la pantalla de resultado) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 535.36 Tm (sin completar el cuestionario.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 519.50 Tm ([§1.1 ¶36 p.4] •  El prospecto no puede guardar como favorito ni compartir un estado) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 505.64 Tm (intermedio.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 489.78 Tm ([§1.1 ¶37 p.4] •  El brief del asesor no puede alcanzarse sin antes pasar por la compuerta de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 475.92 Tm (captura de contacto y el agendador de citas.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 460.06 Tm ([§1.1 ¶38 p.4] •  Todos los datos capturados durante la sesión viven únicamente en memoria;) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 446.20 Tm (cerrar la pestaña los descarta.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 414.34 Tm (1.2 Las siete fases) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 392.52 Tm ([§1.2 ¶39 p.4] La máquina de estados de fases tiene exactamente siete valores, ejecutados en el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 378.66 Tm (siguiente orden en condiciones normales:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 360.80 Tm ([§1.2 ¶40 p.4] •  welcome — Pantalla de introducción estática con el wordmark de Sports) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 346.94 Tm (World, una propuesta de valor de una línea y una única acción primaria \("Comenzar"\). Sin) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 333.08 Tm (entrada más allá del botón de inicio.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 317.22 Tm ([§1.2 ¶41 p.4] •  questionnaire — Se renderiza cuando el prospecto hace clic en "Comenzar".) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 303.36 Tm (El motor del cuestionario presenta una pregunta a la vez, avanzando el índice step. Cada) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 289.50 Tm (pregunta es una pantalla autocontenida con su propio encabezado, entrada, texto de apoyo y) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 275.64 Tm (botones Siguiente/Atrás. El cuestionario es no lineal en el orden de las opciones pero lineal) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 261.78 Tm (en la secuencia de preguntas \(sujeto a ramificación condicional —ver §3\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 245.92 Tm ([§1.2 ¶42 p.4] •  loading — Se dispara cuando el prospecto envía la pregunta final. Una) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 232.06 Tm (animación de spinner corre mientras el resolver computa la recomendación \(recuperando los) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 218.20 Tm (datos de club y clases descritos en §5\) y la llamada a la API del modelo de lenguaje se) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 204.34 Tm (completa de forma asíncrona. El prospecto no puede interactuar durante esta fase. Duración) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 190.48 Tm (promedio: 4–8 segundos según la latencia de red.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 174.62 Tm ([§1.2 ¶43 p.4] •  result — La página de la experiencia ideal. El prospecto aterriza aquí una) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 160.76 Tm (vez que el resolver retorna exitosamente. \(El modelo de lenguaje normalmente también retorna;) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 146.90 Tm (si falla repetidamente, el prospecto igual llega a result en el modo de respaldo descrito en) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 133.04 Tm (§4.14.\) Es la pantalla más larga por volumen de contenido y el entregable principal para el) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 119.18 Tm (prospecto. Contiene dos páginas de contenido separadas visualmente \(ver §4.13\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 103.32 Tm ([§1.2 ¶44 p.4] •  contact_capture — Se dispara cuando el prospecto hace clic en "AGENDAR) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 89.46 Tm (VISITA GUIADA" en la pantalla de resultado. Un formulario obligatorio de tres campos) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 75.60 Tm (\(apellido, teléfono celular, correo\) bloquea el avance hasta que los tres pasen la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 61.74 Tm (validación. El prospecto puede regresar a result mediante una flecha de retroceso. \(Ver) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 4 de 27) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Length 5516 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 68.00 723.50 Tm (§4.11.\)) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 707.64 Tm ([§1.2 ¶45 p.5] •  schedule — Se dispara cuando el prospecto envía datos de contacto válidos.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 693.78 Tm (Un widget de calendario expone los días disponibles para los próximos 14 días, con franjas) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 679.92 Tm (horarias predefinidas. El prospecto elige una combinación, confirma y avanza.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 664.06 Tm ([§1.2 ¶46 p.5] •  briefing — Fase terminal. Muestra dos páginas separadas visualmente: la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 650.20 Tm (página 1 es la confirmación de la cita \(pensada para que el prospecto tome una captura de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 636.34 Tm (pantalla y la recuerde\), la página 2 es el brief del asesor \(pensado para que el asesor de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 622.48 Tm (ventas de Sports World lo lea antes de la visita\). El prospecto puede reiniciar el) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 608.62 Tm (cuestionario o regresar a schedule para modificar la cita.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 590.76 Tm ([§1.2 ¶47 p.5] Existe una fase auxiliar fuera de la secuencia principal:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 572.90 Tm ([§1.2 ¶48 p.5] •  error — Se dispara si la llamada a la API del modelo de lenguaje falla.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 559.04 Tm (Muestra un botón de reintentar y un enlace de reinicio. Un reintento exitoso regresa al) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 545.18 Tm (prospecto a result; si los reintentos siguen fallando, el prospecto avanza a result en el) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 531.32 Tm (respaldo de §4.14. La fase de error nunca es un callejón sin salida.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 513.46 Tm ([§1.2 ¶49 p.5] Las fases son exclusivas: solo una se renderiza en cualquier momento. La pantalla) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 499.60 Tm (se desmonta por completo en la transición; no hay transiciones de desvanecimiento ni estados) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 485.74 Tm (superpuestos.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 451.88 Tm (1.3 Navegación hacia adelante, retroceso condicional) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 430.06 Tm ([§1.3 ¶50 p.5] La navegación hacia adelante es universal: cada fase tiene una acción primaria) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 416.20 Tm (que avanza a la siguiente fase. La navegación hacia atrás es selectiva y sigue estas reglas:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 398.34 Tm ([§1.3 ¶51 p.5] •  Desde welcome -> sin retroceso \(es el punto de entrada\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 382.48 Tm ([§1.3 ¶52 p.5] •  Desde questionnaire -> "Atrás" regresa a la pregunta anterior. Si la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 368.62 Tm (pregunta anterior era condicional y ya no aplica \(p. ej., el prospecto cambió Q10 de "pausa") Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 354.76 Tm (a "vengo de otro gimnasio"\), el motor omite Q11 y aterriza directamente en Q10.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 338.90 Tm ([§1.3 ¶53 p.5] •  Desde loading -> sin retroceso \(la carga no es interrumpible\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 323.04 Tm ([§1.3 ¶54 p.5] •  Desde result -> sin retroceso. El prospecto no puede regresar a modificar) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 309.18 Tm (las respuestas del cuestionario. El único "reinicio" es el reinicio completo del cuestionario) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 295.32 Tm (mediante el enlace "Reiniciar cuestionario" al final de la página de resultado, que descarta) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 281.46 Tm (todo el estado y regresa a welcome.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 265.60 Tm ([§1.3 ¶55 p.5] •  Desde contact_capture -> "? Volver" regresa a result. Los datos de contacto) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 251.74 Tm (capturados se preservan si el prospecto navega de nuevo hacia adelante.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 235.88 Tm ([§1.3 ¶56 p.5] •  Desde schedule -> "? Cambiar datos de contacto" regresa a contact_capture.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 220.02 Tm ([§1.3 ¶57 p.5] •  Desde briefing -> "? Cambiar fecha u hora" regresa a schedule. "Terminar") Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 206.16 Tm (cierra la sesión \(regresa a welcome tras una confirmación\). Si el prospecto cambia la cita y) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 192.30 Tm (vuelve a confirmar, el registro del lead se actualiza en su lugar en vez de duplicarse \(ver) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 178.44 Tm (§5.2\).) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 160.58 Tm ([§1.3 ¶58 p.5] Bloquear la navegación hacia atrás desde result es intencional, por dos razones.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 146.72 Tm (Primera, el copy generado por el modelo se computa una sola vez y de forma determinista; cambiar) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 132.86 Tm (las entradas tras ver la salida forzaría ya sea un recómputo \(una llamada costosa al modelo de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 119.00 Tm (lenguaje\) o una pantalla obsoleta y engañosa. Cambiar de club desde el panel de alternativas es) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 105.14 Tm (distinto: recomputa los tres bloques y vuelve a correr el ranker, pero eso es un recómputo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 91.28 Tm (acotado al club, no una reapertura de las respuestas del cuestionario \(ver §4.1\). Segunda, el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 77.42 Tm (contrato mental del prospecto es simple —responder las preguntas, ver la recomendación— y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 63.56 Tm (reabrir las respuestas socavaría la autoridad de esa recomendación.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 5 de 27) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Length 4778 >>
+stream
+BT
+/F2 13.50 Tf
+1 0 0 1 54.00 720.50 Tm (1.4 Sin autenticación, sin persistencia) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 698.68 Tm ([§1.4 ¶59 p.6] La experiencia ideal no requiere autenticación. No hay inicio de sesión, ni) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 684.82 Tm (creación de cuenta, ni seguimiento del prospecto mediante identificadores persistentes. Toda la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 670.96 Tm (sesión vive únicamente en la memoria del navegador:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 653.10 Tm ([§1.4 ¶60 p.6] •  No se usan localStorage, sessionStorage, IndexedDB ni cookies del) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 639.24 Tm (navegador.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 623.38 Tm ([§1.4 ¶61 p.6] •  Ningún pixel de analítica se dispara hasta la fase de captura de contacto.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 609.52 Tm (Los datos de contacto ingresados ahí se mantienen en el estado de sesión; la escritura al CRM) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 595.66 Tm (\(un único HTTPS POST, idempotente —ver §5.2\) ocurre después, en la confirmación de la cita) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 581.80 Tm (\(la transición schedule -> briefing\), una vez que el registro completo del lead —datos de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 567.94 Tm (contacto más la fecha y hora de visita elegidas más el brief del asesor— está completo.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 552.08 Tm ([§1.4 ¶62 p.6] •  Cerrar la pestaña del navegador descarta todas las respuestas del) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 538.22 Tm (cuestionario, todos los bloques computados, el copy generado por el modelo de lenguaje, el) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 524.36 Tm (brief del asesor y la selección de cita. El prospecto debe reiniciar desde welcome.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 508.50 Tm ([§1.4 ¶63 p.6] •  El registro del lead, escrito en el CRM al confirmar la cita, es la única) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 494.64 Tm (información que persiste más allá de la sesión —y persiste únicamente del lado del servidor,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 480.78 Tm (nunca en el navegador. Los campos de contacto ingresados antes en contact_capture se) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 466.92 Tm (mantienen solo en el estado de sesión hasta esa escritura.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 449.06 Tm ([§1.4 ¶64 p.6] Este diseño es intencional. El producto es una herramienta de recomendación de un) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 435.20 Tm (solo uso con un fuerte momento de acción \(agendar la visita\). La persistencia arriesgaría) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 421.34 Tm (mostrar recomendaciones obsoletas a un prospecto que regresa y cuyas preferencias o contexto) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 407.48 Tm (médico han cambiado, y requeriría una infraestructura de gestión de consentimiento más allá de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 393.62 Tm (lo que justifica el caso de uso de agendar visitas.) Tj
+/F2 17.00 Tf
+1 0 0 1 54.00 354.26 Tm (2 · El cuestionario como única fuente de) Tj
+/F2 17.00 Tf
+1 0 0 1 54.00 331.82 Tm (personalización) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 292.88 Tm (2.1 Rol y propósito) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 271.06 Tm ([§2.1 ¶65 p.6] El cuestionario es el único mecanismo mediante el cual el prospecto provee) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 257.20 Tm (entradas al motor de personalización. Cada componente aguas abajo —el resolver \(que elige el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 243.34 Tm (club\), el selector de bloques \(que elige los subgrupos de entrenamiento\), el ranker de clases) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 229.48 Tm (\(que elige las mejores clases grupales\), el modelo de lenguaje \(que redacta el copy) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 215.62 Tm (personalizado\) y el generador del brief del asesor \(que redacta la guía del asesor\)— consume las) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 201.76 Tm (respuestas del cuestionario como única fuente de verdad sobre el prospecto.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 181.90 Tm ([§2.1 ¶66 p.6] El cuestionario no es un formulario de marketing. Es un instrumento de captación) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 168.04 Tm (de grado clínico. Cada pregunta tiene un rol específico en el algoritmo de recomendación.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 154.18 Tm (Eliminar u omitir una pregunta degradaría la recomendación; agregar una pregunta opcional que no) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 140.32 Tm (alimente el algoritmo diluiría la sensación de que cada pregunta importa.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 106.46 Tm (2.2 Taxonomía de preguntas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 84.64 Tm ([§2.2 ¶67 p.6] El cuestionario se compone de tres categorías de preguntas:) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 64.78 Tm ([§2.2 ¶68 p.6] Preguntas base \(15\) — siempre se preguntan, en el mismo orden, a todo prospecto) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 6 de 27) Tj
+ET
+endstream
+endobj
+11 0 obj
+<< /Length 7222 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm (sin importar las respuestas previas:) Tj
+/F2 9.00 Tf
+1 0 0 1 54.00 706.14 Tm (ID   Tema   Tipo   Determina) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 694.26 Tm (Q1   Nombre   text   Trato en primera persona en todo el copy. La primera palabra se trata como el nombre de) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 682.38 Tm (pila; la cadena completa se trata como el saludo.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 670.50 Tm (Q2   Género   single-select   Concordancia gramatical de todo el copy con género \(opciones de Q3, opciones de) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 658.62 Tm (Q13, tarjetas de resumen\). También habilita Q12b.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 646.74 Tm (Q3   Sentir al salir   single-select   Ancla emocional principal para el hook del modelo de lenguaje y el) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 634.86 Tm (argumento del plan.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 622.98 Tm (Q4   Objetivos   multi-select \(máx 2\)   Selecciona el subgrupo del Bloque 01, el subgrupo del Bloque 02, los) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 611.10 Tm (pesos de ranking de clases del Bloque 03 y el arco narrativo de la experiencia ideal. La primera selección) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 599.22 Tm (\(Q4[0]\) es el objetivo principal y dirige todas las resoluciones de elección única. La segunda selección es un) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 587.34 Tm (objetivo secundario usado solo para diversificar el ranking de clases. También habilita Q17, Q18, Q19.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 575.46 Tm (Q5   Ritmo   single-select   Capturada para el brief del asesor como la intensidad de entrenamiento preferida) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 563.58 Tm (del prospecto. Al igual que Q7/Q8, no filtra de forma estricta el catálogo ni cambia la selección determinista) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 551.70 Tm (de bloques; el asesor concilia la preferencia de intensidad durante la visita.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 539.82 Tm (Q6   Modo   single-select   Interruptor de nivel superior entre los catálogos de piso seco y acuático. "En la) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 527.94 Tm (alberca" activa los bloques acuáticos 01 y 02; "Ambas" mantiene los bloques secos pero agrega una nota acuática;) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 516.06 Tm ("Lo que mi entrenador recomiende" cede al valor por defecto del resolver según el objetivo principal.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 504.18 Tm (Q7   Franjas horarias   multi-select   Capturada para el brief del asesor \(Disponibilidad\) y pasada al modelo de) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 492.30 Tm (lenguaje para la línea de intención y la ruta de visita. No filtra de forma estricta el catálogo de clases —la) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 480.42 Tm (conciliación de horarios ocurre con el asesor en la visita.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 468.54 Tm (Q8   Días de la semana   multi-select   Igual que Q7: capturada para el brief y el modelo de lenguaje, surgida) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 456.66 Tm (como la disponibilidad declarada del prospecto. El filtrado de clases a nivel de horario se difiere al asesor.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 444.78 Tm (Q9   Nivel   single-select   Filtra las clases candidatas por nivel permitido: una clase sobrevive solo si su) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 432.90 Tm (conjunto de niveles permitidos incluye el nivel Q9 del prospecto \(el mismo modelo usado en §4.4 Paso 3\). Un) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 421.02 Tm (prospecto "Principiante" no verá una clase restringida a intermedio/avanzado. Determina la bandera del brief del) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 409.14 Tm (asesor para "tour obligatorio antes de la sesión".) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 397.26 Tm (Q10   Historial   single-select   Determina la bandera del brief del asesor para primera vez en el gym,) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 385.38 Tm (antecedente sedentario o regreso después de una pausa. También habilita Q11.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 373.50 Tm (Q12   Condiciones médicas   multi-select   Filtra de forma estricta el catálogo de clases mediante la matriz de) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 361.62 Tm (contraindicaciones. \(Ver §4.8.\)) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 349.74 Tm (Q13   Acompañamiento   single-select   Alterna el Bloque 03 entre "Clases en grupo" \(acompañado\) y "Personal) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 337.86 Tm (Training" \(solo\). Determina la bandera del asesor "no presionar pack de clases grupales".) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 325.98 Tm (Q14   Visita   single-select   Determina los mensajes de FitKidz en el reporte y, cuando dispara Q14b, hace de) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 314.10 Tm (FitKidz una amenidad de experiencia requerida en la selección de club \(§4.1\). También habilita Q14b.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 302.22 Tm (Q15   Cerca de qué   single-select   Ancla geográfica del resolver: casa / trabajo / ambas / sin preferencia.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 290.34 Tm (Q16   Dónde queda   location   Entrada geográfica del resolver: código postal o nombre de colonia. Texto libre) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 278.46 Tm (con validación ligera.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 259.08 Tm ([§2.2 ¶69 p.7] Preguntas condicionales \(6\) — se preguntan solo si una respuesta específica aguas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 245.22 Tm (arriba las dispara:) Tj
+/F2 9.00 Tf
+1 0 0 1 54.00 227.86 Tm (ID   Disparador   Propósito) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 215.98 Tm (Q11   Q10 === "Regreso después de una pausa"   Duración de la pausa. Determina la bandera del asesor "primera) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 204.10 Tm (sesión conservadora".) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 192.22 Tm (Q12b   Q2 !== "Hombre" \(es decir, "Mujer" o "Prefiero no mencionarlo"\)   Estado de embarazo y posparto. Filtra) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 180.34 Tm (de forma estricta clases con impacto, trabajo abdominal o posicionamiento supino. Se pregunta a todos excepto a) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 168.46 Tm (quienes seleccionaron "Hombre", de modo que una persona embarazada o en posparto que prefirió no declarar su) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 156.58 Tm (género igual es evaluada; para "Prefiero no mencionarlo" la pregunta se muestra con un encuadre neutro \(p. ej.,) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 144.70 Tm ("¿Aplica para ti embarazo o posparto reciente?"\).) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 132.82 Tm (Q14b   Q14 ? {"Yo y mis hijos", "La familia completa"}   Presencia de hijos menores de 12 años. Determina los) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 120.94 Tm (mensajes familiares de FitKidz en el reporte y hace de FitKidz una amenidad de experiencia requerida en la) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 109.06 Tm (selección de club \(§4.1\).) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 97.18 Tm (Q17   Q4 includes "Bajar de peso"   Tratamientos activos de pérdida de peso \(GLP-1, cirugía bariátrica,) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 85.30 Tm (acompañamiento nutricional, otro, ninguno\). Determina la regla de prioridad GLP-1, el filtro estricto bariátrico) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 73.42 Tm (y el mensaje abierto de revisión por el asesor.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 61.54 Tm (Q18   Q4 includes "Bajar de peso"   Datos físicos actuales \(peso, estatura, cintura\). Capturados para el brief) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 7 de 27) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Length 5180 >>
+stream
+BT
+/F1 9.00 Tf
+1 0 0 1 54.00 725.00 Tm (del asesor; no usados por el resolver.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 713.12 Tm (Q19   Q4 includes "Bajar de peso"   Meta de cambio de peso \(rango numérico\). Capturada para el brief del asesor;) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 701.24 Tm (no usada por el resolver.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 681.86 Tm ([§2.2 ¶70 p.8] Captación posterior al cuestionario \(3 campos, una pantalla\) — capturada después) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 668.00 Tm (de mostrar la recomendación, antes del calendario:) Tj
+/F2 9.00 Tf
+1 0 0 1 54.00 650.64 Tm (Campo   Validación   Propósito) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 638.76 Tm (lastName   trim\(\).length >= 2   Concatenado con Q1 para renderizar el nombre completo en el brief del asesor.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 626.88 Tm (phone   replace\(/\\D/g, ""\).length === 10 \(MX\)   Canal de contacto para el asesor; renderizado con formato XX) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 615.00 Tm (XXXX XXXX.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 603.12 Tm (email   /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/   Canal de contacto secundario y el identificador usado por la integración) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 591.24 Tm (con el CRM.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 571.86 Tm ([§2.2 ¶71 p.8] Estos tres campos no forman parte del cuestionario porque no influyen en la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 558.00 Tm (recomendación. Se solicitan en el momento exacto en que el prospecto expresa la intención de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 544.14 Tm (agendar una visita, que es el momento preciso en que tiene una razón para compartir datos de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 530.28 Tm (contacto.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 496.42 Tm (2.3 Tipos de preguntas y reglas de validación) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 474.60 Tm ([§2.3 ¶72 p.8] El motor del cuestionario soporta seis tipos de entrada:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 456.74 Tm ([§2.3 ¶73 p.8] •  text — texto libre de una sola línea. Usado para Q1 \(nombre\) y la parte de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 442.88 Tm (colonia de Q16. Validación: trim\(\).length >= 1. Autoenfoque al renderizar. Envío con Enter.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 427.02 Tm ([§2.3 ¶74 p.8] •  single-select — botones de radio renderizados como tarjetas grandes) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 413.16 Tm (táctiles. Usado para Q2, Q3, Q5, Q6, Q9, Q10, Q11, Q12b, Q13, Q14, Q14b, Q15, Q19.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 399.30 Tm (Validación: una opción seleccionada. El avance automático al seleccionar está deshabilitado) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 385.44 Tm (—el prospecto debe tocar explícitamente "Siguiente". Esto es intencional: evita el avance) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 371.58 Tm (accidental por toques erróneos en preguntas médicas y mantiene el ritmo consistente a lo) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 357.72 Tm (largo del cuestionario.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 341.86 Tm ([§2.3 ¶75 p.8] •  multi-select — tarjetas estilo casilla de verificación. Usado para Q4, Q7,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 328.00 Tm (Q8, Q12, Q17. Q4 tiene un límite estricto de 2 selecciones \(el tercer toque deselecciona la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 314.14 Tm (primera\); el límite se aplica visualmente \(una tercera opción se deshabilita cuando hay 2) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 300.28 Tm (elegidas\) y al enviar. Validación: al menos una opción seleccionada. "Siguiente" se habilita) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 286.42 Tm (una vez alcanzado el mínimo.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 270.56 Tm ([§2.3 ¶76 p.8] •  days — un multi-select personalizado estilo chip para los días de la semana) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 256.70 Tm (\(Q8\). Misma semántica que multi-select pero renderizado como pastillas compactas con la letra) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 242.84 Tm (del día.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 226.98 Tm ([§2.3 ¶77 p.8] •  location — solo Q16. Dos modos de entrada: código postal \(5 dígitos) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 213.12 Tm (numéricos\) o colonia \(texto libre con al menos 3 caracteres\). El prospecto llena uno; el) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 199.26 Tm (resolver tolera cualquiera. Validación: al menos uno de los dos tiene un valor que pasa su) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 185.40 Tm (verificación de longitud mínima.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 169.54 Tm ([§2.3 ¶78 p.8] •  physical — solo Q18. Tres entradas numéricas \(peso en kg, estatura en cm,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 155.68 Tm (cintura en cm\). Validación: las tres son numéricas y están dentro de rangos plausibles \(peso) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 141.82 Tm (30–250 kg; estatura 100–230 cm; cintura 40–200 cm\). Las entradas fuera de rango renderizan un) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 127.96 Tm (error en línea y bloquean el envío.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 110.10 Tm ([§2.3 ¶79 p.8] Los mensajes de error son siempre específicos y accionables. El cuestionario) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 96.24 Tm (nunca muestra un mensaje genérico de "campo requerido"; muestra qué está mal y qué hacer.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 62.38 Tm (2.4 Las dos preguntas de control: Q4 y Q6) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 8 de 27) Tj
+ET
+endstream
+endobj
+13 0 obj
+<< /Length 5618 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm ([§2.4 ¶80 p.9] Dos preguntas tienen una influencia desmesurada sobre la resolución: Q4) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm (\(objetivos\) y Q6 \(modo\). Son las únicas preguntas que cambian la estructura de la recomendación) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 695.78 Tm (en lugar de sus parámetros.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 675.92 Tm ([§2.4 ¶81 p.9] Q4 es la pregunta de control principal. El primer objetivo seleccionado \(Q4[0]\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 662.06 Tm (dirige:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 644.20 Tm ([§2.4 ¶82 p.9] •  Cuál subgrupo del Bloque 01 se selecciona \(1 de 6 opciones por modo\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 628.34 Tm ([§2.4 ¶83 p.9] •  Cuál subgrupo del Bloque 02, máquina y perfil de intensidad se selecciona.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 612.48 Tm ([§2.4 ¶84 p.9] •  Los pesos de ranking de las clases del Bloque 03.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 596.62 Tm ([§2.4 ¶85 p.9] •  El arco narrativo del copy del modelo de lenguaje \(hook, argumento del) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 582.76 Tm (plan, línea de intención\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 566.90 Tm ([§2.4 ¶86 p.9] •  Si Q17, Q18 y Q19 se habilitan \(disparadas solo cuando se selecciona "Bajar) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 553.04 Tm (de peso"\).) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 535.18 Tm ([§2.4 ¶87 p.9] La matriz de contraindicaciones no está modulada por el objetivo: según §4.8, los) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 521.32 Tm (filtros de condición \(clase × condición, independientes del objetivo\) y el objetivo solo puntúan) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 507.46 Tm (las clases sobrevivientes \(§4.4\). El objetivo principal, por tanto, gobierna la selección y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 493.60 Tm (puntuación de bloques y clases, nunca el filtro clínico.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 473.74 Tm ([§2.4 ¶88 p.9] La segunda selección \(Q4[1]\), si está presente, tiene un rol más limitado: actúa) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 459.88 Tm (como criterio de desempate en el ranking de clases y se menciona en el copy del modelo de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 446.02 Tm (lenguaje como un motivador secundario. No cambia el subgrupo del Bloque 01 ni del Bloque 02) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 432.16 Tm (—estos se eligen de forma determinista a partir de Q4[0].) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 412.30 Tm ([§2.4 ¶89 p.9] Q6 es el interruptor estructural. Determina si el prospecto recibe el catálogo de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 398.44 Tm (piso seco \(Bloque 01 con pesas, Bloque 02 con máquinas de cardio\) o el catálogo acuático \(Bloque) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 384.58 Tm (01 con resistencia del agua, Bloque 02 con cardio en alberca\). Las cuatro opciones de Q6 se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 370.72 Tm (resuelven así:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 352.86 Tm ([§2.4 ¶90 p.9] •  "En piso / área seca" — exclusivamente catálogo seco. Los bloques acuáticos) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 339.00 Tm (no se muestran.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 323.14 Tm ([§2.4 ¶91 p.9] •  "En la alberca" — exclusivamente catálogo acuático. Los bloques secos no se) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 309.28 Tm (muestran. El caso especial "Aumentar masa muscular" + "En la alberca" fuerza una) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 295.42 Tm (recomendación híbrida: el Bloque 01 acuático muestra "Fuerza combinada: agua y gimnasio" con) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 281.56 Tm (una nota explícita de que el grueso del crecimiento muscular ocurre en piso seco; el resolver) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 267.70 Tm (además agrega una bandera dry_floor_required al brief del asesor.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 251.84 Tm ([§2.4 ¶92 p.9] •  "Ambas" — catálogo seco con una nota agregada en el copy del modelo de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 237.98 Tm (lenguaje que menciona las opciones acuáticas como complemento. El prospecto ve los bloques) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 224.12 Tm (secos 01 y 02 más una línea de alternativa acuática en el Bloque 02.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 208.26 Tm ([§2.4 ¶93 p.9] •  "Lo que mi entrenador recomiende" — cede al valor por defecto del resolver) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 194.40 Tm (según el objetivo principal. Para "Recuperarme de una lesión o dolor crónico" y "Mejorar mi) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 180.54 Tm (salud cardiovascular", el resolver elige acuático; para todos los demás objetivos elige seco.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 166.68 Tm (El prospecto ve un único catálogo y no se le informa de la postergación en el copy de cara al) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 152.82 Tm (usuario; el brief del asesor anota "Modo de entrenamiento decidido por el sistema: {mode}".) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 134.96 Tm ([§2.4 ¶94 p.9] Modo de entrenamiento resuelto \(el valor del que depende toda regla aguas abajo\).) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 121.10 Tm (El modo es acuático cuando Q6 = "En la alberca", o cuando Q6 = "Lo que mi entrenador recomiende") Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 107.24 Tm (y Q4[0] ? {"Recuperarme de una lesión o dolor crónico", "Mejorar mi salud cardiovascular"}. Es) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 93.38 Tm (seco en los demás casos \("En piso / área seca", "Ambas" y los objetivos secos postergados al) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 79.52 Tm (entrenador\). Toda regla depende de este modo resuelto, no de la cadena Q6 en bruto: el cambio de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 65.66 Tm (catálogo del Bloque 01/02, el filtro de modo de clases, el override acuático y el marcado de la) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 9 de 27) Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Length 5282 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm (alberca como amenidad de experiencia requerida. Como resultado, la ruta acuática postergada al) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm (entrenador se comporta exactamente como una elección explícita de "En la alberca", incluyendo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 695.78 Tm (hacer de la alberca una amenidad requerida en la selección de club. \("Ambas" permanece seco con) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 681.92 Tm (una nota acuática y no hace que la alberca sea requerida.\)) Tj
+/F2 17.00 Tf
+1 0 0 1 54.00 642.56 Tm (3 · Menús dinámicos y ramificación condicional) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 603.62 Tm (3.1 Reglas de ramificación) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 581.80 Tm ([§3.1 ¶95 p.10] El motor del cuestionario evalúa la condición de habilitación de cada pregunta) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 567.94 Tm (en el momento de renderizar. Si la condición es falsa, la pregunta se omite por completo y el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 554.08 Tm (motor avanza a la siguiente pregunta. Este no es un patrón de "oculta pero enviada" —la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 540.22 Tm (respuesta de la pregunta omitida es undefined, y el código aguas abajo debe tratarla como tal.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 520.36 Tm ([§3.1 ¶96 p.10] Las seis condiciones de habilitación se evalúan así:) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 502.00 Tm (Q11  shows when answers.Q10 === "Regreso después de una pausa") Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 491.44 Tm (Q12b shows when answers.Q2 !== "Hombre"      // Mujer or "Prefiero no mencionarlo") Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 480.88 Tm (Q14b shows when answers.Q14 === "Yo y mis hijos" || answers.Q14 === "La familia completa") Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 470.32 Tm (Q17  shows when \(answers.Q4 || []\).includes\("Bajar de peso"\)) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 459.76 Tm (Q18  shows when \(answers.Q4 || []\).includes\("Bajar de peso"\)) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 449.20 Tm (Q19  shows when \(answers.Q4 || []\).includes\("Bajar de peso"\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 428.14 Tm ([§3.1 ¶97 p.10] Cuando el prospecto navega hacia atrás y cambia una respuesta aguas arriba que) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 414.28 Tm (ya no dispara una condicional aguas abajo, la respuesta aguas abajo se preserva en el estado) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 400.42 Tm (pero se ignora al enviar. Ejemplo: el prospecto responde Q10 = "pausa", avanza a Q11, responde) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 386.56 Tm ("Más de un año", luego regresa a Q10 y cambia a "vengo de otro gimnasio". La respuesta de Q11) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 372.70 Tm (\("Más de un año"\) se preserva en el estado pero no se transmite al resolver ni se muestra en el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 358.84 Tm (brief del asesor. Si Q10 se cambia de nuevo a "pausa", Q11 se vuelve a preguntar con el valor) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 344.98 Tm (previo preseleccionado.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 311.12 Tm (3.2 Conjugación dinámica del copy por género \(Q2\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 289.30 Tm ([§3.2 ¶98 p.10] La concordancia gramatical en español se aplica a lo largo del cuestionario y de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 275.44 Tm (las pantallas de resultado. El género del prospecto \(Q2\) dirige la conjugación de varias cadenas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 261.58 Tm (de opción y el saludo en las pantallas posteriores:) Tj
+/F2 9.00 Tf
+1 0 0 1 54.00 244.22 Tm (Origen   Hombre   Mujer   Prefiero no mencionarlo) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 232.34 Tm (Q3 option 1   Desconectado del trabajo y la rutina   Desconectada del trabajo y la rutina   Desconectado/a del) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 220.46 Tm (trabajo y la rutina) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 208.58 Tm (Q3 option 2   Renovado y de buen ánimo   Renovada y de buen ánimo   Renovado/a y de buen ánimo) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 196.70 Tm (Q3 option 4   Confiado en que mi cuerpo no me va a fallar   Confiada en que mi cuerpo no me va a fallar  ) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 184.82 Tm (Confiado/a en que mi cuerpo no me va a fallar) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 172.94 Tm (Q3 option 5   Más a gusto conmigo mismo   Más a gusto conmigo misma   Más a gusto conmigo mismo/a) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 161.06 Tm (Q13 option 1   Solo, a mi ritmo   Sola, a mi ritmo   Solo/a, a mi ritmo) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 149.18 Tm (Q13 option 2   Acompañado, en clases o grupo   Acompañada, en clases o grupo   Acompañado/a, en clases o grupo) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 137.30 Tm (Q14 option 1   Solo   Sola   Solo/a) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 117.92 Tm ([§3.2 ¶99 p.10] Cuando el prospecto selecciona "Prefiero no mencionarlo", cada palabra declinada) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 104.06 Tm (por género usa la terminación dual o/a \(p. ej., "bienvenido/a", "desconectado/a"\). Esto mantiene) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 90.20 Tm (el copy inclusivo sin asumir un género, y es visible para el prospecto mediante las opciones) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 76.34 Tm (renderizadas. La lógica de enrutamiento nunca hace coincidencias sobre la cadena conjugada —se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 62.48 Tm (basa en una clave de opción neutra en género \(ver §4.4 y §4.6\).) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 10 de 27) Tj
+ET
+endstream
+endobj
+15 0 obj
+<< /Length 4840 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm ([§3.2 ¶100 p.11] Más allá del cuestionario, la pantalla de resultado y el brief del asesor usan) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm (el nombre de pila extraído de Q1 \(Q1.split\(" "\)[0]\) para el saludo y el anclaje emocional. El) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 695.78 Tm (brief del asesor usa el nombre completo concatenado \(Q1 + " " + contact.lastName\) para el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 681.92 Tm (encabezado formal.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 648.06 Tm (3.3 Límite dinámico de opciones de Q4) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 626.24 Tm ([§3.3 ¶101 p.11] Q4 permite hasta dos selecciones. La UI aplica este límite de forma reactiva:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 608.38 Tm ([§3.3 ¶102 p.11] •  Con 0 selecciones: todas las opciones habilitadas, "Siguiente") Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 594.52 Tm (deshabilitado con la ayuda "Selecciona al menos uno".) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 578.66 Tm ([§3.3 ¶103 p.11] •  Con 1 selección: todas las opciones habilitadas, "Siguiente" habilitado,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 564.80 Tm (ayuda oculta, la opción seleccionada marcada visualmente como "Objetivo principal".) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 548.94 Tm ([§3.3 ¶104 p.11] •  Con 2 selecciones: las opciones no seleccionadas se deshabilitan) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 535.08 Tm (\(atenuadas, no táctiles\), "Siguiente" habilitado, ayuda mostrada "Has elegido tus 2) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 521.22 Tm (objetivos; toca uno seleccionado para cambiarlo".) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 505.36 Tm ([§3.3 ¶105 p.11] •  Al tocar una tercera opción \(que está deshabilitada\): sin acción; la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 491.50 Tm (ayuda se enfatiza brevemente.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 475.64 Tm ([§3.3 ¶106 p.11] •  Al tocar una opción ya seleccionada: esa opción se deselecciona,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 461.78 Tm (liberando capacidad.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 443.92 Tm ([§3.3 ¶107 p.11] El orden de selección se preserva: el primer toque se convierte en Q4[0]) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 430.06 Tm (\(principal\), el segundo en Q4[1] \(secundario\). El prospecto puede intercambiar deseleccionando y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 416.20 Tm (volviendo a seleccionar.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 382.34 Tm (3.4 Resolver dinámico a partir de Q15 + Q16 + experiencia ideal) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 360.52 Tm ([§3.4 ¶108 p.11] El resolver de club es determinista y computa su resultado sin ninguna latencia) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 346.66 Tm (de cara al usuario más allá de la recuperación de datos. Toma la ubicación del prospecto más una) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 332.80 Tm (descripción computada de la experiencia ideal, y aplica un árbol de decisión basado en radio) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 318.94 Tm (cuya prioridad es entregar la experiencia ideal por encima de minimizar la distancia. El) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 305.08 Tm (resolver opera sobre la instantánea de datos de club y clases descrita en §5 —en vivo para las) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 291.22 Tm (porciones volátiles \(estado operativo, disponibilidad y horario de clases\), periódica para las) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 277.36 Tm (porciones estables \(línea base del directorio, banderas de amenidades\).) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 257.50 Tm ([§3.4 ¶109 p.11] La experiencia ideal tiene dos partes computadas:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 239.64 Tm ([§3.4 ¶110 p.11] •  Clases ideales \(preferClasses\) — el conjunto de clases alineadas con los) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 225.78 Tm (objetivos Q4 del prospecto, computado antes de elegir el club \(ver §4.4\). Un club "cumple" el) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 211.92 Tm (lado de clases de la experiencia cuando ofrece al menos una de estas.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 196.06 Tm ([§3.4 ¶111 p.11] •  Amenidades de experiencia — a lo sumo dos, cada una requerida solo bajo) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 182.20 Tm (su disparador: alberca \(cuando el modo de entrenamiento resuelto es acuático, §2.4\) y FitKidz) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 168.34 Tm (\(cuando Q14 ? {familia} y Q14b = "Sí"\). El cuestionario no pregunta por ninguna otra cosa) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 154.48 Tm (relacionada con amenidades, por lo que ninguna otra amenidad puede ser jamás un requisito.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 136.62 Tm ([§3.4 ¶112 p.11] La prueba completa de "cumple la experiencia", el árbol de decisión por radio,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 122.76 Tm (sus cuatro modos de resolución, el comportamiento de override y el copy resultante se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 108.90 Tm (especifican en §4.1.) Tj
+/F2 17.00 Tf
+1 0 0 1 54.00 69.54 Tm (4 · Reglas de negocio) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 11 de 27) Tj
+ET
+endstream
+endobj
+16 0 obj
+<< /Length 5120 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm ([§4 ¶113 p.12] Esta sección enumera cada regla de negocio que afecta la recomendación, el copy) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm (de cara al usuario, el brief del asesor o la máquina de estados. Las reglas se agrupan por la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 695.78 Tm (capa en la que aplican. Cada regla se describe con su disparador, su mecanismo y su efecto) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 681.92 Tm (observable.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 648.06 Tm (4.1 Regla de resolución de club — árbol de decisión por radio con) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 630.24 Tm (prioridad en la experiencia) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 608.42 Tm ([§4.1 ¶114 p.12] Disparador: el prospecto envía la pregunta final del cuestionario. La fase de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 594.56 Tm (carga inicia con el mensaje "Buscando tu club ideal".) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 574.70 Tm ([§4.1 ¶115 p.12] Principio de prioridad: la experiencia ideal gana sobre la proximidad. El) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 560.84 Tm (sistema no simplemente elige el club más cercano. Elige el club que entrega la experiencia ideal) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 546.98 Tm (del prospecto, y usa la distancia solo para desempatar o cuando ningún club cercano califica.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 527.12 Tm ([§4.1 ¶116 p.12] Qué significa "cumple la experiencia". Un club cumple la experiencia ideal del) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 513.26 Tm (prospecto cuando satisface ambos:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 495.40 Tm ([§4.1 ¶117 p.12] •  Lado de clases: ofrece al menos una de las clases ideales del prospecto) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 481.54 Tm (\(preferClasses, el conjunto computado a partir de Q4 —ver §4.4\). Cuando el prospecto entrena) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 467.68 Tm (solo \(sin clases grupales\), esta condición se satisface de forma vacua.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 451.82 Tm ([§4.1 ¶118 p.12] •  Lado de amenidades: tiene todas las amenidades de experiencia requeridas.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 437.96 Tm (Solo hay dos, cada una requerida únicamente bajo su disparador: alberca \(requerida cuando el) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 424.10 Tm (modo de entrenamiento resuelto es acuático, §2.4\) y FitKidz \(requerida cuando Q14 ? {familia}) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 410.24 Tm (y Q14b = "Sí"\).) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 392.38 Tm ([§4.1 ¶119 p.12] Estas dos amenidades no son filtros ciegos que descartan clubes en silencio.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 378.52 Tm (Son parte de la prueba de "cumple la experiencia" dentro del árbol de radio, que está diseñado) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 364.66 Tm (para hacer explícita la disyuntiva al prospecto: ofrecer el club calificado, explicar la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 350.80 Tm (distancia y aun así mostrar clubes cercanos no calificados como alternativas. Ninguna otra) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 336.94 Tm (amenidad es jamás un requisito.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 317.08 Tm ([§4.1 ¶120 p.12] Paso 0 — Computar la experiencia ideal. Antes de tocar el catálogo, el sistema) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 303.22 Tm (computa preferClasses \(las clases ideales, §4.4\) y las amenidades de experiencia requeridas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 289.36 Tm (\(alberca y/o FitKidz, según los disparadores anteriores\).) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 269.50 Tm ([§4.1 ¶121 p.12] Paso 1 — Geocodificar la ubicación \(Q16\) hacia coordenadas ancla mediante la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 255.64 Tm (búsqueda de cuatro niveles \(código postal directo -> sinónimo de colonia -> colonia difusa ->) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 241.78 Tm (respaldo por centroide\).) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 221.92 Tm ([§4.1 ¶122 p.12] Paso 2 — Puntuar todos los clubes por distancia desde el ancla, y etiquetar) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 208.06 Tm (cada club con si cumple la experiencia.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 188.20 Tm ([§4.1 ¶123 p.12] Paso 3 — Aplicar el árbol de decisión por radio. El radio base es 10 km.) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 169.84 Tm (inRadius      = clubs within 10 km, sorted by distance) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 159.28 Tm (meetingInRadius = inRadius clubs that meet the experience) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 148.72 Tm () Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 138.16 Tm (CASE \(a\) — two or more clubs in 10 km meet the experience:) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 127.60 Tm (-> distance decides among them. Pick the closest qualifying club.) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 117.04 Tm (-> mode = "multiple_meet") Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 106.48 Tm () Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 95.92 Tm (CASE \(b\) — exactly one club in 10 km meets the experience:) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 85.36 Tm (-> offer that club, even if it is not the closest club overall.) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 74.80 Tm (-> the prospect may still switch to another club from the alternatives,) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 64.24 Tm (but switching to a non-qualifying club shows a note that it does) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 12 de 27) Tj
+ET
+endstream
+endobj
+17 0 obj
+<< /Length 5370 >>
+stream
+BT
+/F1 8.00 Tf
+1 0 0 1 60.00 726.00 Tm (not include all the ideal classes \(the switch is allowed\).) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 715.44 Tm (-> mode = "single_meets") Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 704.88 Tm () Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 694.32 Tm (CASE \(c\) — no club in 10 km meets the experience:) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 683.76 Tm (-> expand the radius \(20 km, 30 km, … unbounded\) until a club meets it.) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 673.20 Tm (-> offer that farther qualifying club FIRST, and flag the distance.) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 662.64 Tm (-> also append up to the 3 closest clubs within the original 10 km as) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 652.08 Tm (alternatives, each flagged as NOT including the ideal classes/amenities.) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 641.52 Tm (If fewer than 3 \(including zero\) exist within the original radius,) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 630.96 Tm (append however many do exist; the panel may therefore show 0–3 alternatives.) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 620.40 Tm (-> mode = "expanded_radius") Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 609.84 Tm () Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 599.28 Tm (CASE \(d\) — no club anywhere meets the experience \(e.g., a required amenity) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 588.72 Tm (does not exist at any reachable club, or the ideal class exists) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 578.16 Tm (nowhere\):) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 567.60 Tm (-> fall back to the closest club overall and flag partial fit.) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 557.04 Tm (-> mode = "none_meet") Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 535.98 Tm ([§4.1 ¶124 p.13] Efecto en el reporte. El copy de "Por qué lo recomendamos" de la tarjeta de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 522.12 Tm (club y una nota ámbar opcional de experiencia se adaptan al modo resuelto:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 504.26 Tm ([§4.1 ¶125 p.13] •  multiple_meet — "tiene las clases ideales para tu objetivo y es el más) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 490.40 Tm (cercano de los que las ofrecen." Sin nota.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 474.54 Tm ([§4.1 ¶126 p.13] •  single_meets — "es el club cerca de ti que reúne las clases ideales para) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 460.68 Tm (tu objetivo." Sin nota.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 444.82 Tm ([§4.1 ¶127 p.13] •  expanded_radius — "es el club que sí reúne las clases ideales para tu) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 430.96 Tm (objetivo." Nota ámbar: "Está un poco más lejos que otras opciones, pero es el más cercano que) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 417.10 Tm (ofrece las clases ideales para tu objetivo. Abajo te dejamos también los clubes más cercanos) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 403.24 Tm (a ti.") Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 387.38 Tm ([§4.1 ¶128 p.13] •  none_meet — "es el club más cercano a tu ubicación." Nota ámbar: "Ningún) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 373.52 Tm (club cercano reúne todas las clases ideales para tu objetivo. Tu Advisor te ayuda a armar la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 359.66 Tm (mejor experiencia posible aquí en la visita guiada.") Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 341.80 Tm ([§4.1 ¶129 p.13] El panel de alternativas. Cada club en "Ver otros clubes cerca de ti" lleva una) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 327.94 Tm (bandera meetsExperience. Los clubes que no cumplen la experiencia renderizan una pequeña) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 314.08 Tm (sublínea ámbar: "No incluye todas las clases ideales para tu objetivo." Esto hace explícita la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 300.22 Tm (disyuntiva en el momento de elegir.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 280.36 Tm ([§4.1 ¶130 p.13] Override del usuario y re-resolución. Cuando el prospecto elige un club) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 266.50 Tm (alternativo, el sistema recomputa los tres bloques de entrenamiento contra el catálogo del club) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 252.64 Tm (elegido y vuelve a correr el ranker de clases. También reevalúa si el club elegido cumple la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 238.78 Tm (experiencia:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 220.92 Tm ([§4.1 ¶131 p.13] •  override_meets — el club elegido sí cumple la experiencia; el copy del) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 207.06 Tm (porqué se convierte en "lo elegiste y reúne las clases ideales para tu objetivo.") Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 191.20 Tm ([§4.1 ¶132 p.13] •  override_partial — el club elegido no cumple la experiencia; aparece una) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 177.34 Tm (nota ámbar: "Este club no incluye todas las clases ideales para tu objetivo. Aun así puedes) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 163.48 Tm (entrenar aquí; tu Advisor te ayuda a ajustar tu experiencia en la visita." El cambio siempre) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 149.62 Tm (está permitido.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 131.76 Tm ([§4.1 ¶133 p.13] El modelo de lenguaje no se vuelve a llamar en el override —su copy no depende) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 117.90 Tm (del club específico más allá del nombre y la dirección del club.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 98.04 Tm ([§4.1 ¶134 p.13] Marcado de distancia. Independientemente del modo, si el club resuelto supera) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 84.18 Tm (los 50 km, se establece una bandera tooFar y una nota invita al prospecto a reconsiderar las) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 70.32 Tm (alternativas.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 13 de 27) Tj
+ET
+endstream
+endobj
+18 0 obj
+<< /Length 4975 >>
+stream
+BT
+/F2 13.50 Tf
+1 0 0 1 54.00 720.50 Tm (4.2 Regla de selección del Bloque 01) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 698.68 Tm ([§4.2 ¶135 p.14] Disparador: el cuestionario está completo.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 678.82 Tm ([§4.2 ¶136 p.14] Mecanismo: el selector de bloques toma Q4[0] y el modo de entrenamiento) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 664.96 Tm (resuelto \(§2.4\). Elige una de 12 entradas del catálogo —seis subgrupos de piso seco para) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 651.10 Tm (entrenamiento con pesas, seis subgrupos acuáticos para entrenamiento de resistencia en agua.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 631.24 Tm ([§4.2 ¶137 p.14] Subgrupos de piso seco \(cuando el modo de entrenamiento resuelto es seco) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 617.38 Tm (—§2.4\):) Tj
+/F2 9.00 Tf
+1 0 0 1 54.00 600.02 Tm (Q4[0]   Subgroup name) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 588.14 Tm (Bajar de peso   Fuerza integral con pesas) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 576.26 Tm (Mejorar mi estética corporal y definición muscular   Rutina por grupos musculares) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 564.38 Tm (Aumentar masa muscular   Desarrollo muscular progresivo) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 552.50 Tm (Mejorar mi desempeño atlético   Potencia y velocidad) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 540.62 Tm (Mejorar mi salud cardiovascular   Fuerza de mantenimiento) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 528.74 Tm (Recuperarme de una lesión o dolor crónico   Fuerza guiada en máquinas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 509.36 Tm ([§4.2 ¶138 p.14] Subgrupos acuáticos \(cuando el modo de entrenamiento resuelto es acuático) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 495.50 Tm (—§2.4\):) Tj
+/F2 9.00 Tf
+1 0 0 1 54.00 478.14 Tm (Q4[0]   Subgroup name) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 466.26 Tm (Bajar de peso   Trote acuático por intervalos) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 454.38 Tm (Mejorar mi estética corporal y definición muscular   Fuerza acuática con equipo) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 442.50 Tm (Aumentar masa muscular   Fuerza combinada: agua y gimnasio) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 430.62 Tm (Mejorar mi desempeño atlético   Potencia y velocidad acuática) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 418.74 Tm (Mejorar mi salud cardiovascular   Nado continuo moderado) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 406.86 Tm (Recuperarme de una lesión o dolor crónico   Movilidad y recuperación acuática) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 387.48 Tm ([§4.2 ¶139 p.14] Efecto: el nombre del subgrupo seleccionado se renderiza como el h3 de la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 373.62 Tm (tarjeta-plan del Bloque 01 en la pantalla de resultado \(página 2\). Un why_template acompaña al) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 359.76 Tm (subgrupo, redactado en español llano y sin contener jamás jerga técnica como "hipertrofia",) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 345.90 Tm ("Zone 2", "HIIT", "VO2max", "plyometría", "RPE", "1RM" o "FCmax". La tarjeta también expone un) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 332.04 Tm (enlace "Ver más ->" reservado para expansión futura \(actualmente inerte\).) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 312.18 Tm ([§4.2 ¶140 p.14] Caso límite "Aumentar masa muscular" + modo acuático: el subgrupo "Fuerza) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 298.32 Tm (combinada: agua y gimnasio" es el único subgrupo del Bloque 01 que explícitamente requiere una) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 284.46 Tm (sesión complementaria en piso seco. El why_template para este caso indica: "El agua no permite) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 270.60 Tm (cargar suficiente peso para hacer crecer músculo de forma significativa. Si tu objetivo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 256.74 Tm (principal es ganar músculo, tu rutina combina alberca con días en piso. Tu entrenador define el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 242.88 Tm (balance." El brief del asesor lo hace visible como una bandera: "Combo Aumentar masa + Alberca:) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 229.02 Tm (requerirá sesiones híbridas; validar disposición a usar piso seco.") Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 195.16 Tm (4.3 Regla de selección del Bloque 02) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 173.34 Tm ([§4.3 ¶141 p.14] Disparador: el cuestionario está completo.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 153.48 Tm ([§4.3 ¶142 p.14] Mecanismo: estructura idéntica a la del Bloque 01 —6 subgrupos secos, 6) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 139.62 Tm (subgrupos acuáticos, seleccionados por Q4[0] y el modo de entrenamiento resuelto \(§2.4\).) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 119.76 Tm ([§4.3 ¶143 p.14] Subgrupos de cardio en piso seco:) Tj
+/F2 9.00 Tf
+1 0 0 1 54.00 102.40 Tm (Q4[0]   Subgroup name   Machines   Duration) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 90.52 Tm (Bajar de peso   Cardio continuo moderado   Caminadora, bicicleta o elíptica   35 a 45 min) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 78.64 Tm (Mejorar mi estética corporal y definición muscular   Cardio moderado con intervalos   Caminadora, bicicleta o) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 66.76 Tm (elíptica   25 a 35 min) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 14 de 27) Tj
+ET
+endstream
+endobj
+19 0 obj
+<< /Length 5120 >>
+stream
+BT
+/F1 9.00 Tf
+1 0 0 1 54.00 725.00 Tm (Aumentar masa muscular   Cardio ligero de mantenimiento   Caminadora suave o bicicleta   15 a 25 min) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 713.12 Tm (Mejorar mi desempeño atlético   Intervalos de alta intensidad   Bicicleta, remo o caminadora   30 a 40 min) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 701.24 Tm (Mejorar mi salud cardiovascular   Base aeróbica de ritmo sostenido   Caminadora, bicicleta, elíptica o remo   35) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 689.36 Tm (a 45 min) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 677.48 Tm (Recuperarme de una lesión o dolor crónico   Recuperación activa de bajo impacto   Bicicleta reclinada, elíptica) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 665.60 Tm (o caminadora muy suave   15 a 25 min) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 646.22 Tm ([§4.3 ¶144 p.15] Los subgrupos de cardio acuático se determinan por el mismo eje Q4[0] pero usan) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 632.36 Tm (modalidades y duraciones basadas en alberca. Cuando el modo de entrenamiento resuelto es) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 618.50 Tm (acuático y Q4[0] = "Aumentar masa muscular", la tarjeta del Bloque 02 incluye una línea) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 604.64 Tm (alternativa_acuatica con borde rojo: "Sesión acuática corta para recuperación activa y no) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 590.78 Tm (comprometer el trabajo de fuerza", y el h3 refleja un protocolo acuático más corto.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 570.92 Tm ([§4.3 ¶145 p.15] Efecto: la tarjeta-plan del Bloque 02 en la página 2 de la pantalla de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 557.06 Tm (resultado renderiza el nombre del subgrupo como h3, la máquina + duración + cuando como la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 543.20 Tm (sublínea, el why como el párrafo del cuerpo y \(si está presente\) la alternativa_acuatica como la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 529.34 Tm (línea de énfasis con borde rojo. El prospecto nunca ve metas numéricas crudas de entrenamiento) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 515.48 Tm (como porcentajes de frecuencia cardíaca o máximos de repeticiones.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 481.62 Tm (4.4 Regla de selección de clases \(clases grupales\) — árbol de) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 463.80 Tm (decisión) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 441.98 Tm ([§4.4 ¶146 p.15] Disparador: el cuestionario está completo y el prospecto quiere clases grupales) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 428.12 Tm (—es decir, Q13 se resuelve a la opción grupal \(opción 2\) sin importar su conjugación de género) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 414.26 Tm (\(Acompañado / Acompañada / Acompañado/a, en clases o grupo\), o Q13 = "Me da igual". El) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 400.40 Tm (enrutamiento compara la clave de opción neutra en género, no la cadena conjugada mostrada. Si el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 386.54 Tm (prospecto eligió la opción solo, esta regla no se ejecuta y el Bloque 03 se convierte en) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 372.68 Tm (Personal Training \(§4.6\).) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 352.82 Tm ([§4.4 ¶147 p.15] El ranker de clases corre dos veces en el ciclo de vida, con propósitos) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 338.96 Tm (distintos:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 321.10 Tm ([§4.4 ¶148 p.15] •  Primera corrida — durante la resolución de club \(verificación previa de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 307.24 Tm (clases preferidas, §4.1 Paso 0\). Aquí la lógica del ranker computa el conjunto de clases que) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 293.38 Tm (el prospecto idealmente recibiría, a través de todo el catálogo, para sesgar la selección de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 279.52 Tm (club hacia un club que efectivamente las ofrezca. Esta es la verificación de que las clases) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 265.66 Tm (ideales están disponibles antes de fijar el club.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 249.80 Tm ([§4.4 ¶149 p.15] •  Segunda corrida — después de elegir el club \(ranking final, esta) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 235.94 Tm (sección\). Aquí el ranker computa las 2 mejores clases reales a partir del catálogo real del) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 222.08 Tm (club elegido.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 204.22 Tm ([§4.4 ¶150 p.15] El árbol de decisión para el ranking final tiene cinco filtros secuenciales) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 190.36 Tm (seguidos de un paso de puntuación:) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 170.50 Tm ([§4.4 ¶151 p.15] Paso 1 — Intersección con el catálogo \(disponibilidad\).) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 152.14 Tm (inCatalog = every class in the master class catalog) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 141.58 Tm (that is actually offered at the resolved primary club) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 120.52 Tm ([§4.4 ¶152 p.15] Solo sobreviven las clases que el club genuinamente ofrece. Esta es la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 106.66 Tm (compuerta estricta de disponibilidad.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 86.80 Tm ([§4.4 ¶153 p.15] Paso 2 — Filtro de modo \(modo resuelto, §2.4\).) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 68.44 Tm (if resolved mode == aquatic:   keep only aquatic classes) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 15 de 27) Tj
+ET
+endstream
+endobj
+20 0 obj
+<< /Length 4938 >>
+stream
+BT
+/F1 8.00 Tf
+1 0 0 1 60.00 726.00 Tm (if resolved mode == dry:       keep only dry classes) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 715.44 Tm (\(Ambas keeps dry classes plus the aquatic note; see §2.4\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 694.38 Tm ([§4.4 ¶154 p.16] Paso 3 — Filtro de nivel \(Q9\).) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 676.02 Tm (keep only classes whose permitted levels include the prospect's Q9 level) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 654.96 Tm ([§4.4 ¶155 p.16] Un prospecto "Principiante" nunca ve una clase restringida a) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 641.10 Tm (intermedio/avanzado.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 621.24 Tm ([§4.4 ¶156 p.16] Paso 4 — Filtro de contraindicaciones \(Q12, Q12b, Q17\).) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 602.88 Tm (activeContra = active contraindication keys derived from the medical answers) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 592.32 Tm (keep only classes that are NOT contraindicated under any active key) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 571.26 Tm ([§4.4 ¶157 p.16] Este es el filtro estricto YMYL. Las clases removidas nunca aparecen y nunca se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 557.40 Tm (nombran al prospecto.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 537.54 Tm ([§4.4 ¶158 p.16] Paso 5 — Puntuar contra la matriz de objetivos \(Q4\) y descartar las) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 523.68 Tm (descalificadas.) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 505.32 Tm (for each surviving class:) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 494.76 Tm (score = 0) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 484.20 Tm (disqualified = false) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 473.64 Tm (for each selected objective in Q4:) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 463.08 Tm (rating = class.profiles[objective]      // "top3" | "apto" | "no apto" | undefined) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 452.52 Tm (if rating == "top3":  score += 3) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 441.96 Tm (if rating == "apto":  score += 1) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 431.40 Tm (if rating == "no apto": disqualified = true   // veto against this class) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 420.84 Tm (keep the class only if \(NOT disqualified\) AND \(score > 0\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 399.78 Tm ([§4.4 ¶159 p.16] Una sola calificación "no apto" contra cualquier objetivo seleccionado veta la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 385.92 Tm (clase por completo, sin importar qué tan bien puntúe para el otro objetivo. Esto garantiza que) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 372.06 Tm (al prospecto nunca se le muestre una clase que entre en conflicto activo con una de sus metas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 358.20 Tm (declaradas.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 338.34 Tm ([§4.4 ¶160 p.16] Paso 5b — Aplicar el ajuste de puntuación GLP-1 \(solo si está activo\). Cuando) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 324.48 Tm (el prospecto está en tratamiento GLP-1 \(Q17\), la puntuación computada en el Paso 5 recibe el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 310.62 Tm (ajuste de prioridad de fuerza definido en §4.9 \(un bono a las clases orientadas a fuerza y una) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 296.76 Tm (penalización a las clases de resistencia de alta intensidad\), de modo que las 2 mejores que se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 282.90 Tm (muestran reflejen la guía clínica de preservar la masa muscular. Este es el único ajuste de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 269.04 Tm (puntuación fuera de la matriz de objetivos, y su especificación completa —incluidas las listas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 255.18 Tm (exactas de clases y los valores de puntos— vive en §4.9 para mantener la justificación clínica) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 241.32 Tm (en un solo lugar. Cuando el prospecto no está en tratamiento GLP-1, este paso es una operación) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 227.46 Tm (nula.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 207.60 Tm ([§4.4 ¶161 p.16] Paso 6 — Ordenar y seccionar.) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 189.24 Tm (sort surviving classes by score descending, then alphabetically by display name) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 178.68 Tm (top2     = the first 2) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 168.12 Tm (tambien  = the next 3 \(positions 3–5\), used in the "Ver todas" / alternatives panel) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 147.06 Tm ([§4.4 ¶162 p.16] Efecto: la tarjeta-plan del Bloque 03 en la página 2 de la pantalla de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 133.20 Tm (resultado renderiza el resultado:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 115.34 Tm ([§4.4 ¶163 p.16] •  top2.length === 2 — ambas clases mostradas con nombre de despliegue, el) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 101.48 Tm (conector del modelo de lenguaje \("Porque buscas…"\) y una descripción why. Abajo: "Cambiar mis) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 87.62 Tm (clases ->" \(abre el selector de alternativas, poblado a partir de tambien más el resto del) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 73.76 Tm (conjunto compatible\) y "Ver todas las del club ->" \(abre el navegador del catálogo completo\).) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 16 de 27) Tj
+ET
+endstream
+endobj
+21 0 obj
+<< /Length 5234 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 68.00 723.50 Tm ([§4.4 ¶164 p.17] •  top2.length === 1 — la única clase mostrada, el selector de alternativas) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 709.64 Tm (sigue disponible.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 693.78 Tm ([§4.4 ¶165 p.17] •  top2.length === 0 — el respaldo: "No encontramos clases en este club que) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 679.92 Tm (encajen con tu objetivo y nivel. Considera Personal Training o explora otros clubes cerca.") Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 666.06 Tm (con un botón rojo "Conoce Personal Training ->". Este estado ocurre cuando el catálogo del) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 652.20 Tm (club, tras todos los filtros, no contiene ninguna clase que a la vez evite el veto "no apto") Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 638.34 Tm (y puntúe por encima de cero para los objetivos del prospecto.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 620.48 Tm ([§4.4 ¶166 p.17] Por qué importa el diseño de dos corridas. Dado que la verificación previa de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 606.62 Tm (clases preferidas \(§4.1\) sesga la selección de club hacia clubes que ofrecen clases alineadas,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 592.76 Tm (el ranking final usualmente encuentra al menos dos coincidencias fuertes. El respaldo vacío es,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 578.90 Tm (por tanto, raro en la práctica —aparece principalmente cuando el club más cercano dentro de la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 565.04 Tm (tolerancia de distancia tiene un catálogo escaso para el objetivo específico del prospecto, o) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 551.18 Tm (cuando el filtro de contraindicaciones removió todo lo compatible. En ambos casos, enrutar al) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 537.32 Tm (prospecto a Personal Training es el resultado correcto y seguro.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 503.46 Tm (4.5 Regla de override del modo acuático \(Q6\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 481.64 Tm ([§4.5 ¶167 p.17] Disparador: el modo de entrenamiento resuelto es acuático \(§2.4\) —es decir, Q6) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 467.78 Tm (=== "En la alberca", o Q6 === "Lo que mi entrenador recomiende" con Q4[0] ? {lesión, salud) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 453.92 Tm (cardiovascular}.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 434.06 Tm ([§4.5 ¶168 p.17] Mecanismo: el Bloque 01 cambia de seco a acuático \(§4.2\), el Bloque 02 cambia) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 420.20 Tm (de máquinas de cardio a cardio en alberca \(§4.3\), y el ranker de clases conserva solo las clases) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 406.34 Tm (acuáticas del catálogo del club elegido. La alberca no es un filtro ciego: como amenidad de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 392.48 Tm (experiencia requerida sesga la selección de club hacia un club con alberca \(§4.1\), mientras que) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 378.62 Tm (los clubes sin una permanecen visibles como alternativas marcadas. El resolver de bloques) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 364.76 Tm (entonces verifica si el club resuelto efectivamente tiene alberca:) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 346.40 Tm (if resolved mode == aquatic:) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 335.84 Tm (if the resolved club has a pool:) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 325.28 Tm (block1 = aquatic Block 01 for the primary objective) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 314.72 Tm (block2 = aquatic Block 02 for the primary objective) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 304.16 Tm (else:) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 293.60 Tm (block1 = dry Block 01 for the primary objective) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 283.04 Tm (block2 = dry Block 02 for the primary objective) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 272.48 Tm (alberca_note = "Este club no tiene alberca. Revisa otros clubes cerca de ti) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 261.92 Tm (— varios sí ofrecen entrenamiento acuático.") Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 240.86 Tm ([§4.5 ¶169 p.17] Efecto: cuando el club resuelto tiene alberca, el prospecto ve una) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 227.00 Tm (recomendación totalmente acuática y el encabezado del brief del asesor incluye el chip) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 213.14 Tm ("Preferencia: alberca". Cuando el club resuelto no tiene alberca, el prospecto ve bloques de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 199.28 Tm (piso seco más la alberca_note invitándolo a considerar clubes cercanos con alberca. La híbrida) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 185.42 Tm ("Aumentar masa muscular" + acuática aplica solo cuando el club tiene alberca.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 151.56 Tm (4.6 Regla de override del modo individual \(Q13\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 129.74 Tm ([§4.6 ¶170 p.17] Disparador: Q13 se resuelve a la opción solo \(opción 1\) sin importar su) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 115.88 Tm (conjugación de género \(Solo / Sola / Solo/a, a mi ritmo\). El enrutamiento compara la clave de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 102.02 Tm (opción neutra en género, no la cadena conjugada mostrada.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 82.16 Tm ([§4.6 ¶171 p.17] Mecanismo: el Bloque 03 \(clases grupales\) se reemplaza por una tarjeta de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 68.30 Tm (Personal Training. El ranker de clases se omite por completo; top2 = [] y showBlock3 = false.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 17 de 27) Tj
+ET
+endstream
+endobj
+22 0 obj
+<< /Length 5094 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm ([§4.6 ¶172 p.18] Efecto: el espacio del Bloque 03 se renderiza como una tarjeta oscura titulada) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm ("Personal Training" con el copy "Decidiste entrenar a tu ritmo, sin clases grupales. Personal) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 695.78 Tm (Training te asigna un entrenador dedicado en tus horarios." y un botón rojo "Conoce Personal) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 681.92 Tm (Training ->". El brief del asesor recibe la bandera "Lead busca formato individual. No presionar) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 668.06 Tm (venta de pack de clases grupales.") Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 648.20 Tm ([§4.6 ¶173 p.18] Cuando Q13 === "Me da igual", el motor usa por defecto las clases grupales) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 634.34 Tm (\(showBlock3 = true\). El brief del asesor anota "Acompañamiento abierto; explorar ambos formatos) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 620.48 Tm (en la visita.") Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 586.62 Tm (4.7 Regla de disponibilidad de FitKidz) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 564.80 Tm ([§4.7 ¶174 p.18] Disparador: Q14 ? {"Yo y mis hijos", "La familia completa"} y Q14b === "Sí".) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 544.94 Tm ([§4.7 ¶175 p.18] Mecanismo: el disparador determina los mensajes de FitKidz en el reporte y hace) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 531.08 Tm (de FitKidz una amenidad de experiencia requerida que sesga la selección de club hacia un club) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 517.22 Tm (que la ofrezca \(§4.1\). Al igual que con la alberca, esto no es un filtro ciego —los clubes sin) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 503.36 Tm (FitKidz permanecen visibles como alternativas marcadas, y el prospecto aún puede elegir uno. La) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 489.50 Tm (sección de dos columnas de la pantalla de resultado renderiza la tarjeta de Beneficio familiar) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 475.64 Tm (según si el club resuelto ofrece FitKidz.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 455.78 Tm ([§4.7 ¶176 p.18] Efecto, tres estados:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 437.92 Tm ([§4.7 ¶177 p.18] •  Estado A — el club resuelto ofrece FitKidz y tiene clases infantiles) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 424.06 Tm (documentadas \(30 clubes\): la tarjeta de Beneficio familiar renderiza el conteo de actividades) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 410.20 Tm (infantiles y hasta 6 chips con los nombres de las actividades \("Iniciación deportiva",) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 396.34 Tm ("Danza", "Arte", etc.\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 380.48 Tm ([§4.7 ¶178 p.18] •  Estado B — el club resuelto ofrece FitKidz pero el catálogo de clases) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 366.62 Tm (infantiles está vacío o incompleto \(10 clubes: pedregal, felix-cuevas,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 352.76 Tm (miguel-angel-de-quevedo, san-jeronimo, zona-esmeralda, san-pedro, puebla, bernardo-quintana,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 338.90 Tm (esfera-queretaro, culiacan\): la tarjeta de Beneficio familiar renderiza copy genérico "Este) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 325.04 Tm (club ofrece FitKidz. Tu Advisor te compartirá el detalle de actividades y horarios) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 311.18 Tm (disponibles para tus hijos en tu visita guiada." Sin chips.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 295.32 Tm ([§4.7 ¶179 p.18] •  Estado C — el club resuelto no ofrece FitKidz: la tarjeta de Beneficio) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 281.46 Tm (familiar renderiza un respaldo gris "Este club no ofrece FitKidz. Otros clubes cerca de ti sí) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 267.60 Tm (lo tienen — revisa la lista de otros clubes.") Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 249.74 Tm ([§4.7 ¶180 p.18] Cuando el disparador no se cumple \(prospecto individual, pareja o familia sin) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 235.88 Tm (hijos menores de 12 años\), la tarjeta de Beneficio familiar no se renderiza. La tarjeta de Club) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 222.02 Tm (ocupa todo el ancho de la sección de dos columnas.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 188.16 Tm (4.8 Regla del filtro estricto de contraindicaciones) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 166.34 Tm ([§4.8 ¶181 p.18] Disparador: el prospecto ha declarado una o más condiciones médicas o) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 152.48 Tm (tratamientos activos mediante Q12, Q12b o Q17.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 132.62 Tm ([§4.8 ¶182 p.18] Mecanismo: la matriz de contraindicaciones es una tabla determinista de 51) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 118.76 Tm (clases × 5 condiciones. La matriz retorna verdadero \("contraindicada"\) para un par) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 104.90 Tm (clase-condición si está presente cualquiera de estos indicadores dominantes:) Tj
+/F2 9.00 Tf
+1 0 0 1 54.00 87.54 Tm (Condition key   Triggered by   Filter behavior) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 75.66 Tm (lesion   Q12 includes "Lesión o dolor articular/muscular"   Filtra clases con alto impacto, carga pliométrica o) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 63.78 Tm (superficies inestables. 17 clases removidas.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 18 de 27) Tj
+ET
+endstream
+endobj
+23 0 obj
+<< /Length 5631 >>
+stream
+BT
+/F1 9.00 Tf
+1 0 0 1 54.00 725.00 Tm (cardiovascular   Q12 includes "Condición cardiovascular o de presión"   Filtra clases con intervalos sostenidos) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 713.12 Tm (de alta intensidad, posicionamiento supino en altura o patrones de fuerza propensos a Valsalva. 14 clases) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 701.24 Tm (removidas.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 689.36 Tm (embarazo   Q12b === "Sí, embarazada"   Filtra clases con impacto, patadas, supino después del primer trimestre y) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 677.48 Tm (trabajo abdominal intenso. 21 clases removidas.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 665.60 Tm (posparto   Q12b === "Sí, posparto reciente \(últimos 6 meses\)"   Aplica el mismo filtro de clases que embarazo) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 653.72 Tm (\(impacto, patadas, supino después del primer trimestre, trabajo abdominal intenso\). Las mismas 21 clases) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 641.84 Tm (removidas. La precaución adicional de posparto sobre fuerza de alta carga hasta la evaluación del piso pélvico) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 629.96 Tm (se lleva como bandera del brief del asesor, no como cambio en el conteo de clases.) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 618.08 Tm (bariatrica   Q17 includes "Cirugía bariátrica"   Filtra clases de alto impacto y carga pesada durante el primer) Tj
+/F1 9.00 Tf
+1 0 0 1 54.00 606.20 Tm (año posoperatorio. 16 clases removidas.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 586.82 Tm ([§4.8 ¶183 p.19] Efecto: las clases filtradas no aparecen en el Bloque 03 de cara al usuario, ni) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 572.96 Tm (en el selector de clases alternativas. El copy de cara al usuario nunca menciona qué clases se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 559.10 Tm (filtraron ni por qué —hacer esto visible ya sea alarmaría al prospecto \(encuadre clínico en una) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 545.24 Tm (superficie de ventas\) o lo invitaría a cuestionar el filtro \(frustrando el propósito del) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 531.38 Tm (cumplimiento YMYL\). La bandera del brief del asesor captura las condiciones activas y anota que) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 517.52 Tm (las clases contraindicadas están prefiltradas.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 497.66 Tm ([§4.8 ¶184 p.19] La matriz se construye a partir de fuentes profesionales \(American College of) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 483.80 Tm (Obstetricians and Gynecologists, Les Mills International, American Society for Metabolic and) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 469.94 Tm (Bariatric Surgery, American College of Sports Medicine, Cleveland Clinic, National Academy of) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 456.08 Tm (Sports Medicine, Mount Sinai, Heart Foundation New Zealand, Obesity Action Coalition\). Cada par) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 442.22 Tm (clase-condición se etiqueta internamente con una etiqueta epistémica:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 424.36 Tm ([§4.8 ¶185 p.19] •  [QUOTED] — recomendación explícita en el material fuente.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 408.50 Tm ([§4.8 ¶186 p.19] •  [DERIVED] — inferida de la categoría de movimiento dominante alineada con) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 394.64 Tm (material fuente sobre clases similares.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 378.78 Tm ([§4.8 ¶187 p.19] •  [INFERRED] — aplicada a partir de principios fisiológicos fundamentales) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 364.92 Tm (cuando ninguna fuente directa aborda la clase.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 347.06 Tm ([§4.8 ¶188 p.19] La matriz nunca se expone al prospecto en forma alguna. Se usa internamente) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 333.20 Tm (para filtrar y viaja como metadata del brief del asesor para la validación clínica aguas abajo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 319.34 Tm (por parte de un profesional de medicina del deporte.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 285.48 Tm (4.9 Regla de priorización GLP-1 \(sin filtro, mensaje informativo\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 263.66 Tm ([§4.9 ¶189 p.19] Disparador: Q17 includes "GLP-1 \(Ozempic, Wegovy, Mounjaro\)".) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 243.80 Tm ([§4.9 ¶190 p.19] Mecanismo: a diferencia de los disparadores bariátrico o de embarazo, GLP-1 no) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 229.94 Tm (filtra clases. La guía clínica de las fuentes profesionales es priorizar el entrenamiento de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 216.08 Tm (fuerza para preservar la masa muscular durante el estado catabólico inducido por los agonistas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 202.22 Tm (GLP-1, no restringir las modalidades de ejercicio.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 182.36 Tm ([§4.9 ¶191 p.19] Efecto: la sección de seguridad de la pantalla de resultado \("Antes de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 168.50 Tm (comenzar"\) usa copy específico de GLP-1:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 150.64 Tm ([§4.9 ¶192 p.19] •  Si GLP-1 solo: "Durante tu tratamiento con GLP-1, priorizamos clases de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 136.78 Tm (fuerza para preservar tu masa muscular mientras bajas grasa. Tu Advisor confirma el detalle) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 122.92 Tm (clínico en la visita guiada.") Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 107.06 Tm ([§4.9 ¶193 p.19] •  Si GLP-1 más otra condición médica: "Tu experiencia incluye prioridad en) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 93.20 Tm (clases de fuerza para preservar tu masa muscular durante tu tratamiento. Las clases con) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 79.34 Tm (impacto o restricciones específicas ya están filtradas. Tu Advisor confirma el detalle en la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 65.48 Tm (visita guiada.") Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 19 de 27) Tj
+ET
+endstream
+endobj
+24 0 obj
+<< /Length 5026 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm ([§4.9 ¶194 p.20] El ranker de clases aplica un bono de +2 a las clases orientadas a fuerza \(BODY) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm (PUMP, KINETIC PUMP, CX WORX, CORE\) y una penalización de ?1 a las clases de resistencia de alta) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 695.78 Tm (intensidad \(GRIT, BODY ATTACK\) para que las 2 mejores que se muestran reflejen la prioridad de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 681.92 Tm (fuerza. Este ajuste se aplica como Paso 5b del pipeline de selección de clases \(§4.4\); es la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 668.06 Tm (única fuente de verdad de los valores de puntuación GLP-1. El brief del asesor lleva la bandera) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 654.20 Tm (de severidad info "En tratamiento GLP-1. Priorizar fuerza para preservar masa muscular.") Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 620.34 Tm (4.10 Regla de revisión por el asesor de respuesta abierta) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 602.52 Tm ("Otra/Otro") Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 580.70 Tm ([§4.10 ¶195 p.20] Disparador: Q12 includes "Otra, la comento en el club" o Q17 includes "Otro) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 566.84 Tm (tratamiento médico para peso".) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 546.98 Tm ([§4.10 ¶196 p.20] Mecanismo: dado que el prospecto ha señalado una condición o tratamiento no) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 533.12 Tm (revelado, el sistema no puede aplicar un filtro determinista \(la condición específica se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 519.26 Tm (desconoce\). En su lugar, produce un mensaje suave de revisión por el asesor y hace visible lo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 505.40 Tm (desconocido en el brief.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 485.54 Tm ([§4.10 ¶197 p.20] Efecto: el copy de la sección de seguridad cambia a: "Mencionaste una) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 471.68 Tm (condición o tratamiento médico. Tu experiencia ideal ya excluye las clases contraindicadas por) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 457.82 Tm (las condiciones declaradas, y tu Advisor ajusta los protocolos de pesas y cardio individual en) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 443.96 Tm (la visita guiada según tu criterio clínico." El brief del asesor lleva una bandera de severidad) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 430.10 Tm (warn "Condición no especificada declarada por el lead; capturar el detalle y validar) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 416.24 Tm (contraindicaciones específicas antes de recomendar." Esta bandera se dispara siempre que) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 402.38 Tm ("Otra/Otro" esté presente, independientemente de qué copy de la sección de seguridad se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 388.52 Tm (renderice finalmente \(ver §4.12\), de modo que el asesor nunca pierde la señal de condición no) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 374.66 Tm (revelada incluso cuando un caso de copy de mayor precedencia gana el mensaje visible.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 340.80 Tm (4.11 Regla de la compuerta de captura de contacto) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 318.98 Tm ([§4.11 ¶198 p.20] Disparador: el prospecto hace clic en "AGENDAR VISITA GUIADA" en la pantalla) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 305.12 Tm (de resultado.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 285.26 Tm ([§4.11 ¶199 p.20] Mecanismo: la fase transiciona de result a contact_capture. Al prospecto se le) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 271.40 Tm (presenta un formulario de tres campos: apellido, número de celular, correo electrónico. El botón) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 257.54 Tm ("Continuar" está deshabilitado hasta que los tres pasen la validación.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 237.68 Tm ([§4.11 ¶200 p.20] Validación por campo:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 219.82 Tm ([§4.11 ¶201 p.20] •  Apellido: trim\(\).length >= 2. Mensaje de error: "Ingresa tu apellido) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 205.96 Tm (\(mínimo 2 letras\)".) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 190.10 Tm ([§4.11 ¶202 p.20] •  Número de celular: replace\(/\\D/g, ""\).length === 10. Mensaje de error:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 176.24 Tm ("Ingresa un número de 10 dígitos".) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 160.38 Tm ([§4.11 ¶203 p.20] •  Correo electrónico: /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/. Mensaje de error:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 146.52 Tm ("Ingresa un correo electrónico válido".) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 128.66 Tm ([§4.11 ¶204 p.20] Los errores se renderizan debajo del campo correspondiente al perder el foco) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 114.80 Tm (\(no en cada pulsación de tecla\), evitando el despliegue prematuro de errores.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 94.94 Tm ([§4.11 ¶205 p.20] Efecto: al enviar exitosamente, el objeto de contacto { lastName, phone, email) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 81.08 Tm (} se almacena en el estado del resultado y la fase avanza a schedule. \(La escritura al CRM misma) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 67.22 Tm (ocurre una fase después, en la confirmación de la cita —ver §5.2.\) Los datos capturados se) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 20 de 27) Tj
+ET
+endstream
+endobj
+25 0 obj
+<< /Length 5200 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm (renderizan en el brief del asesor en §2 "Logística y contacto". El nombre completo \(Q1 + " " +) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm (contact.lastName\) se renderiza en el encabezado del brief.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 689.78 Tm ([§4.11 ¶206 p.21] Aviso de privacidad en la pantalla: "Tus datos se usan únicamente para) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 675.92 Tm (coordinar tu visita guiada. No los compartimos con terceros." Este texto no es legalmente) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 662.06 Tm (vinculante por sí mismo —el aviso de privacidad integral se referencia en otra parte del sitio—) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 648.20 Tm (pero es el primer momento de consentimiento del prospecto.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 614.34 Tm (4.12 Regla de copy contextual de la sección de seguridad) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 592.52 Tm ([§4.12 ¶207 p.21] Disparador: siempre —la sección de seguridad \("Antes de comenzar"\) se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 578.66 Tm (renderiza en cada pantalla de resultado, en la página 2.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 558.80 Tm ([§4.12 ¶208 p.21] Mecanismo: el copy del cuerpo de seguridad se adapta al contexto médico del) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 544.94 Tm (prospecto, evaluando cinco casos mutuamente excluyentes en orden \(gana la primera coincidencia\):) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 527.08 Tm ([§4.12 ¶209 p.21] •  GLP-1 + otra condición — mensaje combinado \(ver §4.9\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 511.22 Tm ([§4.12 ¶210 p.21] •  GLP-1 solo — mensaje específico de GLP-1 \(ver §4.9\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 495.36 Tm ([§4.12 ¶211 p.21] •  Condición/tratamiento no revelado \("Otra/Otro"\) — cuando Q12 includes) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 481.50 Tm ("Otra, la comento en el club" o Q17 includes "Otro tratamiento médico para peso", el copy de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 467.64 Tm (revisión por el asesor de §4.10 gobierna y tiene precedencia sobre el caso 4 \(verificado) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 453.78 Tm (primero porque la condición se desconoce y no puede filtrarse de forma determinista\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 437.92 Tm ([§4.12 ¶212 p.21] •  Otra condición médica declarada \(sin GLP-1, no "Otra"\) — "Con base en lo) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 424.06 Tm (que compartiste, esta recomendación prioriza opciones controladas y evita actividades) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 410.20 Tm (contraindicadas. Las clases con impacto o restricciones específicas ya están filtradas.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 396.34 Tm (Informa al personal del club sobre cualquier indicación de tu profesional de salud.") Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 380.48 Tm ([§4.12 ¶213 p.21] •  Sin condición médica declarada \(por defecto\) — "Con base en lo que) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 366.62 Tm (compartiste, esta recomendación se ajusta a tu nivel y disponibilidad. Si tienes alguna) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 352.76 Tm (indicación médica antes de comenzar, coméntala con tu Advisor en la visita guiada.") Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 334.90 Tm ([§4.12 ¶214 p.21] Este ordenamiento gobierna únicamente el único mensaje de seguridad visible.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 321.04 Tm (Las banderas del brief del asesor por condición son independientes y aditivas —la bandera warn) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 307.18 Tm (de "Otra/Otro" de §4.10 y la bandera info de GLP-1 de §4.9 ambas se disparan cuando ambas están) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 293.32 Tm (presentes, aunque solo un caso de copy gane el mensaje visible.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 273.46 Tm ([§4.12 ¶215 p.21] Efecto: la sección se renderiza con fondo amarillo \(#FFF6E7\), un ícono) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 259.60 Tm (circular "!", el título de sección "Antes de comenzar", el cuerpo contextual y una línea fija de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 245.74 Tm (descargo debajo: "Esta recomendación orienta la selección de servicios disponibles y no) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 231.88 Tm (sustituye una valoración médica." La prominencia visual de la sección está calibrada para ser) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 218.02 Tm (notada pero no alarmar.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 184.16 Tm (4.13 Regla de división en dos páginas \(vistas de cliente y de) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 166.34 Tm (asesor\)) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 144.52 Tm ([§4.13 ¶216 p.21] Disparador: siempre —tanto la pantalla de resultado como la pantalla de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 130.66 Tm (briefing se renderizan en dos páginas separadas visualmente.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 110.80 Tm ([§4.13 ¶217 p.21] Mecanismo: dentro de un único componente React desplazable, el contenido se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 96.94 Tm (divide mediante un separador de borde punteado etiquetado "Página 2". En vista digital, el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 83.08 Tm (separador es visible. En vista de impresión \(@media print\), el separador se oculta y se aplica) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 69.22 Tm (una directiva CSS page-break-before: always al contenedor de la segunda página, produciendo dos) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 21 de 27) Tj
+ET
+endstream
+endobj
+26 0 obj
+<< /Length 5353 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm (hojas A4.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 703.64 Tm ([§4.13 ¶218 p.22] División de página de la pantalla de resultado del cliente:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 685.78 Tm ([§4.13 ¶219 p.22] •  Página 1: barra superior, encabezado \(eyebrow + h1 + hook +) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 671.92 Tm (plan_argument + caja de marca a la derecha\), club + beneficio familiar a dos columnas, panel) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 658.06 Tm (de otros clubes \(cuando se expande\), tarjetas de resumen \(4 cajas\), fila de CTA con "AGENDAR) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 644.20 Tm (VISITA GUIADA".) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 628.34 Tm ([§4.13 ¶220 p.22] •  Página 2: kicker de sección "Tu combinación recomendada", tres) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 614.48 Tm (tarjetas-plan \(Bloque 01 + Bloque 02 + Bloque 03 con colores\), paneles de cambiar-clases /) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 600.62 Tm (todas-las-clases \(cuando se expanden\), sección de seguridad ámbar, párrafo del argumento de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 586.76 Tm (infraestructura, CTA inferior + reinicio, pie de página con letra fina.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 568.90 Tm ([§4.13 ¶221 p.22] División de página del brief del asesor:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 551.04 Tm ([§4.13 ¶222 p.22] •  Página 1: banner de confirmación para el prospecto, encabezado del brief) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 537.18 Tm (\(nombre completo + nivel + chips + fecha\), §1 Perfil del lead \(8 campos\), §2 Logística y) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 523.32 Tm (contacto \(club + ubicación + acompañantes + teléfono + email\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 507.46 Tm ([§4.13 ¶223 p.22] •  Página 2: §3 Qué validar \(5 preguntas del modelo de lenguaje\), §4 Ruta) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 493.60 Tm (recomendada \(4 pasos\), §5 Propuesta recomendada \(oferta + complemento\), §6 Prioridades de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 479.74 Tm (cierre \(3 viñetas\), §7 Notas y banderas \(banderas codificadas\), Guion de cierre \(script del) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 465.88 Tm (modelo de lenguaje\), Registro del asesor \(4 cajas vacías\), Footer USO INTERNO.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 448.02 Tm ([§4.13 ¶224 p.22] Justificación del orden de división del cliente \(Página 1 = Club primero\): la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 434.16 Tm (primera pregunta del prospecto tras completar el cuestionario \(15–21 preguntas\) es "¿dónde voy a) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 420.30 Tm (entrenar?" —por lo tanto el Club aparece de inmediato después del encabezado personalizado,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 406.44 Tm (antes del resumen de perfil o cualquier detalle de la combinación.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 372.58 Tm (4.14 Regla de única llamada al LLM) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 350.76 Tm ([§4.14 ¶225 p.22] Disparador: el cuestionario está completo y el resolver ha terminado.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 330.90 Tm ([§4.14 ¶226 p.22] Mecanismo: se hace exactamente una llamada al modelo de lenguaje. La llamada) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 317.04 Tm (retorna un único objeto JSON que contiene tanto el copy de cara al cliente como el contenido del) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 303.18 Tm (brief del asesor. La llamada se dispara una y solo una vez por sesión; la respuesta se cachea en) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 289.32 Tm (el estado del resultado y se reutiliza entre la pantalla de resultado y la pantalla de briefing.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 269.46 Tm ([§4.14 ¶227 p.22] El esquema completo de salida JSON:) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 251.10 Tm ({) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 240.54 Tm ("hook": "string \(max 30 words, 1-2 sentences\)",) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 229.98 Tm ("plan_argument": "string \(max 45 words, why the combination fits\)",) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 219.42 Tm ("intent_line": "string \(max 18 words, accompaniment + visit context\)",) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 208.86 Tm ("infrastructure_argument": "string \(max 55 words, SW as 49-club network + specific club\)",) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 198.30 Tm ("class_1_connector": "string \(max 15 words, 'Porque mencionaste que...'\) — omitted when no group classes",) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 187.74 Tm ("class_2_connector": "string \(max 15 words, different from class_1\) — omitted when no group classes",) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 177.18 Tm ("validation_questions": ["array of exactly 5 strings, each max 18 words"],) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 166.62 Tm ("visit_route": [{"title": "string", "description": "string \(max 18 words\)"}, ... × 4],) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 156.06 Tm ("proposal": {) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 145.50 Tm ("main": "string \(max 35 words\)",) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 134.94 Tm ("complement": "string \(max 30 words\)") Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 124.38 Tm (},) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 113.82 Tm ("closing_priorities": ["array of exactly 3 strings, each max 12 words"],) Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 103.26 Tm ("closing_script": "string \(max 60 words, advisor first-person to the prospect\)") Tj
+/F1 8.00 Tf
+1 0 0 1 60.00 92.70 Tm (}) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 71.64 Tm ([§4.14 ¶228 p.22] Contexto adaptativo por prospecto: antes de componer el prompt, el sistema) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 22 de 27) Tj
+ET
+endstream
+endobj
+27 0 obj
+<< /Length 5141 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm (computa un conjunto de banderas a partir de las respuestas del cuestionario:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 705.64 Tm ([§4.14 ¶229 p.23] •  hasMedical — verdadero si se declara cualquier condición o tratamiento.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 689.78 Tm ([§4.14 ¶230 p.23] •  isPregnant / isPostpartum — derivadas de Q12b.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 673.92 Tm ([§4.14 ¶231 p.23] •  onGLP1 / onBariatric — derivadas de Q17.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 658.06 Tm ([§4.14 ¶232 p.23] •  isFamily / hasKids — derivadas de Q14 + Q14b.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 642.20 Tm ([§4.14 ¶233 p.23] •  isSolo — derivada de Q13 \(clave de opción neutra en género\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 626.34 Tm ([§4.14 ¶234 p.23] •  isPrincipiante — derivada de Q9.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 610.48 Tm ([§4.14 ¶235 p.23] •  fromOtherGym / fromPause / fromSedentary — derivadas de Q10.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 594.62 Tm ([§4.14 ¶236 p.23] •  wantsAquatic / wantsDry — derivadas del modo de entrenamiento resuelto) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 580.76 Tm (\(§2.4\), de modo que la ruta acuática postergada al entrenador se etiquete correctamente en) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 566.90 Tm (lugar de a partir de la cadena Q6 en bruto.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 549.04 Tm ([§4.14 ¶237 p.23] Cuando hasMedical es verdadero, el prompt incluye un bloque "! CONDICIONES) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 535.18 Tm (MÉDICAS / TRATAMIENTOS DECLARADOS" que lista las condiciones específicas, con un recordatorio) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 521.32 Tm (explícito de que las clases contraindicadas están prefiltradas y de que el asesor maneja el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 507.46 Tm (ajuste de protocolo de bloques individual con criterio clínico.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 487.60 Tm ([§4.14 ¶238 p.23] Efecto: el mismo JSON es consumido por dos pantallas. La pantalla de resultado) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 473.74 Tm (lee hook, plan_argument, intent_line, infrastructure_argument, class_1_connector,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 459.88 Tm (class_2_connector. La pantalla de briefing lee validation_questions, visit_route, proposal,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 446.02 Tm (closing_priorities, closing_script. No ocurre ninguna llamada adicional al modelo de lenguaje) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 432.16 Tm (después de la inicial —la selección de cita, la captura de contacto y el renderizado del brief) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 418.30 Tm (usan todas la salida cacheada.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 398.44 Tm ([§4.14 ¶239 p.23] Respaldo ante falla del modelo de lenguaje: si la llamada a la API falla) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 384.58 Tm (\(error de red, respuesta malformada, falla de validación\), el sistema transiciona a la fase) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 370.72 Tm (error con un botón de reintentar. Un reintento exitoso permite al prospecto continuar) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 356.86 Tm (normalmente. Si los reintentos fallan repetidamente, el prospecto aún puede continuar: la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 343.00 Tm (pantalla de resultado renderiza el contenido determinista \(bloques, club, clases, seguridad\) y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 329.14 Tm (la pantalla de briefing renderiza solo las secciones codificadas \(encabezado, §1, §2, §7,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 315.28 Tm (registro, footer\). Las secciones generadas por el modelo de lenguaje \(§3–§6 y el guion de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 301.42 Tm (cierre\) simplemente se omiten, sin mostrar mensaje de error alguno.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 267.56 Tm (4.15 Restricciones YMYL del LLM y saneamiento) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 245.74 Tm ([§4.15 ¶240 p.23] Disparador: cada llamada al modelo de lenguaje.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 225.88 Tm ([§4.15 ¶241 p.23] Mecanismo: el system prompt al modelo de lenguaje impone tres capas de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 212.02 Tm (restricción:) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 192.16 Tm ([§4.15 ¶242 p.23] Capa 1 — Vocabulario prohibido. El modelo no debe producir ninguno de:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 174.30 Tm ([§4.15 ¶243 p.23] •  La palabra "plan" en cualquier forma \(plan, planes, planear\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 158.44 Tm ([§4.15 ¶244 p.23] •  Códigos de pregunta \(Q1, Q2, ..., Q19, Q12b, Q14b\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 142.58 Tm ([§4.15 ¶245 p.23] •  Jerga técnica: hipertrofia, Zone 2, HIIT, VO2max, plyometría,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 128.72 Tm (pliométrica, RPE, 1RM, FCmax, déficit calórico, canibalizar \(el músculo\), sustrato,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 114.86 Tm (concéntrica, control motor, rate of force, propiocepción, isométrica, sobrecarga progresiva,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 101.00 Tm (modalidades aeróbicas.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 85.14 Tm ([§4.15 ¶246 p.23] •  Clichés de marketing: show up, aparecer, journey, lifestyle, mindset,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 71.28 Tm (transformación, mejor versión de ti, atrévete, quema X calorías.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 23 de 27) Tj
+ET
+endstream
+endobj
+28 0 obj
+<< /Length 5194 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm ([§4.15 ¶247 p.24] Capa 2 — Restricciones YMYL. Cuando el prospecto tiene cualquier condición) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm (médica, embarazo, estado de posparto o tratamiento activo:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 691.78 Tm ([§4.15 ¶248 p.24] •  El modelo no debe diagnosticar.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 675.92 Tm ([§4.15 ¶249 p.24] •  El modelo no debe recomendar intensidades específicas.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 660.06 Tm ([§4.15 ¶250 p.24] •  El modelo no debe sugerir que el prospecto "puede hacer de todo".) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 644.20 Tm ([§4.15 ¶251 p.24] •  El modelo debe declarar explícitamente que el asesor valida con criterio) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 630.34 Tm (clínico en la visita.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 612.48 Tm ([§4.15 ¶252 p.24] Capa 3 — Saneamiento de la salida. Incluso con las restricciones a nivel de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 598.62 Tm (prompt, el modelo ocasionalmente filtra códigos de pregunta hacia la prosa \(p. ej., "según) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 584.76 Tm (mencionaste en Q4"\). Un saneador recursivo de posprocesamiento recorre el objeto de respuesta,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 570.90 Tm (elimina cualquier patrón residual Q1–Q19/Q12b/Q14b y las palabras puente circundantes \("según) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 557.04 Tm (Q4", "en Q4", "para Q4 -> tu objetivo"\), normaliza los dobles espacios y elimina la puntuación) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 543.18 Tm (colgante. El saneador opera sobre cadenas, arreglos y objetos anidados de modo que ningún campo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 529.32 Tm (de la salida JSON escape a la limpieza.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 509.46 Tm ([§4.15 ¶253 p.24] Vocabulario aprobado \(instrucciones positivas en el prompt\): construir,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 495.60 Tm (sostener, consolidar, mantener, recuperar, ajustar, ritmo, constancia, forma, figura, fuerza,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 481.74 Tm (aguante, base, experiencia, rutina, combinación, crecimiento muscular, ritmo conversacional,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 467.88 Tm (intervalos al máximo, técnica controlada, fuerza sostenida en posturas, conciencia corporal,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 454.02 Tm (saltos explosivos, cuerpo completo, centro del cuerpo, patrones de movimiento, pérdida de grasa.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 434.16 Tm ([§4.15 ¶254 p.24] Efecto: el prospecto recibe copy que es cálido, profesional y libre de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 420.30 Tm (terminología de sonido clínico que confundiría a un lector no especialista o erosionaría la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 406.44 Tm (confianza. El asesor recibe contenido que es preciso, libre de relleno de marketing y que) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 392.58 Tm (explícitamente cede al criterio clínico cuando hay contexto médico presente.) Tj
+/F2 17.00 Tf
+1 0 0 1 54.00 353.22 Tm (5 · Integración de datos y fuentes de verdad) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 328.28 Tm ([§5 ¶255 p.24] La experiencia es tan precisa como los datos que la respaldan. La recomendación) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 314.42 Tm (cruza el perfil del prospecto con dos cuerpos de datos operativos —la red de clubes y el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 300.56 Tm (catálogo de clases— y escribe el lead capturado en el sistema comercial. Esta sección especifica) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 286.70 Tm (qué datos consume el sistema, dónde se origina cada cuerpo de datos, y cuáles datos deben estar) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 272.84 Tm (en vivo \(leídos o escritos en tiempo real\) versus cuáles pueden sincronizarse de forma) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 258.98 Tm (periódica.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 239.12 Tm ([§5 ¶256 p.24] El sistema nunca es dueño de los datos operativos. La información de clubes, la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 225.26 Tm (información de clases y los registros de leads viven todos en los sistemas de registro de Sports) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 211.40 Tm (World. La experiencia lee de y escribe en esos sistemas; no mantiene una copia maestra paralela) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 197.54 Tm (que pudiera desincronizarse de la realidad.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 163.68 Tm (5.1 Categorías de datos) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 141.86 Tm ([§5.1 ¶257 p.24] Hay tres categorías de datos, con distintos requisitos de propiedad y frescura.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 122.00 Tm ([§5.1 ¶258 p.24] Categoría A — Datos de lead / contacto \(escritos en el CRM\). Esto es lo que la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 108.14 Tm (experiencia produce: el lead capturado. Incluye el nombre completo \(Q1 más el apellido) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 94.28 Tm (capturado\), teléfono celular, correo, el perfil completo derivado del cuestionario \(objetivos,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 80.42 Tm (nivel, modo de entrenamiento resuelto, horario, banderas de contexto médico\), el club resuelto,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 66.56 Tm (la combinación de entrenamiento recomendada, el brief del asesor generado y la visita agendada) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 24 de 27) Tj
+ET
+endstream
+endobj
+29 0 obj
+<< /Length 5697 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm (\(fecha y hora\). Este registro fluye hacia fuera de la experiencia y hacia el CRM de Sports World) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm (como un nuevo lead cualificado.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 689.78 Tm ([§5.1 ¶259 p.25] Categoría B — Datos de club \(leídos del directorio de clubes / sistema de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 675.92 Tm (registro\). Esta es la red de 49 clubes. Incluye, por club: nombre comercial, dirección completa,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 662.06 Tm (coordenadas geográficas, las amenidades que el club ofrece \(específicamente si tiene alberca y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 648.20 Tm (si tiene FitKidz, las dos amenidades que participan en la experiencia\), el catálogo de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 634.34 Tm (actividades infantiles de FitKidz donde aplique, el estado operativo \(abierto / temporalmente) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 620.48 Tm (cerrado / próximamente\) y los datos de contacto del club usados en la pantalla de confirmación.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 600.62 Tm ([§5.1 ¶260 p.25] Categoría C — Datos de clases \(leídos del sistema de programación de clases /) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 586.76 Tm (sistema de registro\). Este es el catálogo de clases. Incluye la lista maestra de disciplinas de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 572.90 Tm (clase, y por club: qué clases ofrece ese club, el nivel que requiere cada clase y el horario) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 559.04 Tm (\(días y franjas\) en que se ofrece cada clase. La disponibilidad de clases —si una clase dada aún) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 545.18 Tm (se imparte, en qué horarios y en qué clubes— es el dato más volátil del sistema.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 511.32 Tm (5.2 Tiempo real vs periódico) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 489.50 Tm ([§5.2 ¶261 p.25] No todos los datos necesitan la misma frescura. Forzar todo a tiempo real) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 475.64 Tm (agregaría costo y fragilidad sin beneficio; dejar que los datos volátiles se vuelvan obsoletos) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 461.78 Tm (produciría recomendaciones que envían al prospecto a un club por una clase que ya no existe. La) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 447.92 Tm (división:) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 428.06 Tm ([§5.2 ¶262 p.25] Debe ser en tiempo real \(lectura o escritura en vivo en el momento de uso\):) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 410.20 Tm ([§5.2 ¶263 p.25] •  Escritura de lead / contacto \(Categoría A\). El lead se escribe en el CRM) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 396.34 Tm (en tiempo real en el momento en que se confirma la visita \(la transición schedule ->) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 382.48 Tm (briefing\), y esa escritura incluye la fecha y hora de cita elegidas. Los campos de contacto) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 368.62 Tm (se recolectan una fase antes \(contact_capture\) y se mantienen en el estado de sesión hasta) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 354.76 Tm (entonces; la escritura se difiere a la confirmación precisamente porque la cita es parte del) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 340.90 Tm (registro. La escritura es idempotente \(crear-o-actualizar\) indexada por un id de lead por) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 327.04 Tm (sesión: si el prospecto regresa de briefing a schedule y vuelve a confirmar una fecha/hora) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 313.18 Tm (distinta, el registro existente se actualiza en su lugar, nunca se duplica, de modo que hay) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 299.32 Tm (exactamente un lead en el CRM por sesión sin importar cuántas veces cambie la cita. Una) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 285.46 Tm (escritura diferida o por lotes arriesgaría perder el lead o dejar al asesor sin un brief.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 269.60 Tm ([§5.2 ¶264 p.25] •  Estado operativo del club \(Categoría B\). Si un club está abierto,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 255.74 Tm (temporalmente cerrado o aún no operando debe estar en vivo. Recomendar un club cerrado es una) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 241.88 Tm (falla grave visible para el prospecto. El resolver no debe ofrecer un club que no esté) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 228.02 Tm (operando actualmente.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 212.16 Tm ([§5.2 ¶265 p.25] •  Disponibilidad y horario de clases \(Categoría C\). Si una clase aún se) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 198.30 Tm (imparte, en qué días, en qué franjas y en qué clubes debe estar en vivo en el momento en que) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 184.44 Tm (corre el ranker de clases. Una recomendación construida sobre un horario obsoleto envía al) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 170.58 Tm (prospecto a una clase que pudo haber sido cancelada o reprogramada —la falla de datos) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 156.72 Tm (obsoletos más dañina, porque se manifiesta como una promesa rota durante la visita.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 138.86 Tm ([§5.2 ¶266 p.25] Puede ser periódico \(sincronizado en un calendario, no por solicitud\):) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 121.00 Tm ([§5.2 ¶267 p.25] •  Línea base del directorio de clubes \(Categoría B\). Nombres comerciales,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 107.14 Tm (direcciones, coordenadas y las banderas de amenidades \(alberca, FitKidz\) cambian rara vez. Un) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 93.28 Tm (club no gana ni pierde una alberca entre dos sesiones.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 77.42 Tm ([§5.2 ¶268 p.25] •  Catálogo de actividades infantiles de FitKidz \(Categoría B\). La lista) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 63.56 Tm (específica de actividades infantiles por club cambia con poca frecuencia y puede) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 25 de 27) Tj
+ET
+endstream
+endobj
+30 0 obj
+<< /Length 5309 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 68.00 723.50 Tm (sincronizarse de forma periódica. \(Donde este catálogo está incompleto para un club, la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 709.64 Tm (experiencia ya degrada con gracia a un mensaje genérico de FitKidz y difiere el detalle al) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 695.78 Tm (asesor.\)) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 679.92 Tm ([§5.2 ¶269 p.26] •  Catálogo maestro de clases y metadata por clase \(Categoría C\). La lista) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 666.06 Tm (de disciplinas y el nivel que requiere cada una son estables. Lo que cambia a menudo es dónde) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 652.20 Tm (y cuándo se imparte cada una —y esa porción volátil \(disponibilidad y horario\) es la porción) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 638.34 Tm (en tiempo real anterior.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 606.48 Tm (5.3 Implicaciones para el flujo de recomendación) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 584.66 Tm ([§5.3 ¶270 p.26] El resolver y el ranker de clases operan sobre una instantánea consistente de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 570.80 Tm (datos de club y clases ensamblada en el momento en que el prospecto completa el cuestionario.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 556.94 Tm (Las porciones en tiempo real \(estado operativo, disponibilidad de clases, horario\) deben) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 543.08 Tm (reflejar el estado en vivo en ese momento; las porciones periódicas \(línea base del directorio,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 529.22 Tm (banderas de amenidades, metadata de clases\) pueden provenir de la sincronización más reciente.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 509.36 Tm ([§5.3 ¶271 p.26] Concretamente, esto significa:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 491.50 Tm ([§5.3 ¶272 p.26] •  El árbol de decisión de resolución de club \(§4.1\) debe excluir clubes que) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 477.64 Tm (no estén operando actualmente, usando datos de estado operativo en vivo.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 461.78 Tm ([§5.3 ¶273 p.26] •  El filtro de intersección de catálogo del ranker de clases \(§4.4, Paso 1\)) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 447.92 Tm (debe reflejar la disponibilidad de clases en vivo para el club resuelto. Una clase que ha) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 434.06 Tm (sido cancelada o que ya no se ofrece no debe surgir como ideal. Este filtro en vivo trata) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 420.20 Tm (sobre el propio estado operativo de la clase \(cancelada, descontinuada, no programada) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 406.34 Tm (actualmente\) —no sobre si el horario de la clase coincide con la disponibilidad declarada del) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 392.48 Tm (prospecto \(Q7/Q8\). Según §2.2 y §4.4, Q7/Q8 se capturan para el brief del asesor y nunca) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 378.62 Tm (filtran de forma estricta el catálogo; la conciliación de horarios contra la disponibilidad) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 364.76 Tm (del prospecto ocurre con el asesor durante la visita.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 348.90 Tm ([§5.3 ¶274 p.26] •  La escritura del lead debe completarse en la confirmación de la cita \(la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 335.04 Tm (transición schedule -> briefing\), antes de mostrar la pantalla de confirmación, de modo que) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 321.18 Tm (el registro completo del lead esté en el CRM en el instante en que se agenda la visita. Si la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 307.32 Tm (cita se modifica después en la misma sesión, el mismo registro se actualiza \(§5.2\).) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 275.46 Tm (5.4 Dependencias abiertas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 253.64 Tm ([§5.4 ¶275 p.26] Los sistemas de registro precisos, sus métodos de acceso y sus contratos de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 239.78 Tm (datos son propiedad de Sports World y no están definidos en este documento. Para hacer) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 225.92 Tm (operativas las porciones en tiempo real de esta especificación, el equipo técnico de Sports) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 212.06 Tm (World debe proveer:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 194.20 Tm ([§5.4 ¶276 p.26] •  El sistema CRM y el contrato de escritura para crear \(o actualizar\) un) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 180.34 Tm (lead cualificado —qué campos, en qué formato, hacia qué destino— donde la ruta de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 166.48 Tm (actualización soporte la reconfirmación idempotente descrita en §5.2.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 150.62 Tm ([§5.4 ¶277 p.26] •  El sistema de registro del directorio de clubes y cómo se expone el) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 136.76 Tm (estado operativo en vivo.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 120.90 Tm ([§5.4 ¶278 p.26] •  El sistema de registro de programación de clases y cómo se exponen la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 107.04 Tm (disponibilidad y el horario de clases en vivo.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 89.18 Tm ([§5.4 ¶279 p.26] Hasta que esos contratos estén definidos, la experiencia opera contra una) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 75.32 Tm (instantánea sincronizada de datos de club y clases. La arquitectura está diseñada de modo que) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 61.46 Tm (reemplazar la instantánea con lecturas en vivo requiera cambiar solo la capa de datos, no la) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 26 de 27) Tj
+ET
+endstream
+endobj
+31 0 obj
+<< /Length 1288 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm (lógica de recomendación: el resolver, el selector de bloques y el ranker de clases consumen la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm (misma forma de datos sin importar si llegó en vivo o vía sincronización periódica.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 689.78 Tm ([§5.4 ¶280 p.27] Este documento define el modelo de navegación completo, el rol del cuestionario) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 675.92 Tm (como única fuente de personalización, las reglas de menús dinámicos y ramificación condicional,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 662.06 Tm (y las reglas de negocio que rigen la experiencia desde welcome hasta briefing. Cada regla es) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 648.20 Tm (observable en el producto renderizado. Cada regla tiene un disparador determinista y un efecto) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 634.34 Tm (determinista. No hay estados ocultos, ni valores por defecto implícitos que contradigan el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 620.48 Tm (comportamiento documentado, ni overrides fuera de las reglas aquí descritas. Este documento es) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 606.62 Tm (la especificación autoritativa de la experiencia.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (UX Architecture Specs — Arquitectura de Experiencia  ·  pág. 27 de 27) Tj
+ET
+endstream
+endobj
+32 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 5 0 R >>
+endobj
+33 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+34 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 7 0 R >>
+endobj
+35 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+36 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 9 0 R >>
+endobj
+37 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 10 0 R >>
+endobj
+38 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 11 0 R >>
+endobj
+39 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 12 0 R >>
+endobj
+40 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 13 0 R >>
+endobj
+41 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 14 0 R >>
+endobj
+42 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 15 0 R >>
+endobj
+43 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 16 0 R >>
+endobj
+44 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 17 0 R >>
+endobj
+45 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 18 0 R >>
+endobj
+46 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 19 0 R >>
+endobj
+47 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 20 0 R >>
+endobj
+48 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 21 0 R >>
+endobj
+49 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 22 0 R >>
+endobj
+50 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 23 0 R >>
+endobj
+51 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 24 0 R >>
+endobj
+52 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 25 0 R >>
+endobj
+53 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 26 0 R >>
+endobj
+54 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 27 0 R >>
+endobj
+55 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 28 0 R >>
+endobj
+56 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 29 0 R >>
+endobj
+57 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 30 0 R >>
+endobj
+58 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 31 0 R >>
+endobj
+59 0 obj
+<< /Title (UX Architecture Specs — Arquitectura de Experiencia) /Author (Final Upgrade AI) /Subject (Documentacion UX Sports World - KB es-MX para agente de voz) /Keywords (Sports World, UX, documentacion, KB, ElevenLabs) >>
+endobj
+60 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 61
+0000000000 65535 f 
+0000000015 00000 n 
+0000000112 00000 n 
+0000000214 00000 n 
+0000000319 00000 n 
+0000000560 00000 n 
+0000005003 00000 n 
+0000010625 00000 n 
+0000015603 00000 n 
+0000020731 00000 n 
+0000026299 00000 n 
+0000031130 00000 n 
+0000038405 00000 n 
+0000043638 00000 n 
+0000049309 00000 n 
+0000054644 00000 n 
+0000059537 00000 n 
+0000064710 00000 n 
+0000070133 00000 n 
+0000075161 00000 n 
+0000080334 00000 n 
+0000085325 00000 n 
+0000090612 00000 n 
+0000095759 00000 n 
+0000101443 00000 n 
+0000106522 00000 n 
+0000111775 00000 n 
+0000117181 00000 n 
+0000122375 00000 n 
+0000127622 00000 n 
+0000133372 00000 n 
+0000138734 00000 n 
+0000140075 00000 n 
+0000140222 00000 n 
+0000140369 00000 n 
+0000140516 00000 n 
+0000140663 00000 n 
+0000140810 00000 n 
+0000140958 00000 n 
+0000141106 00000 n 
+0000141254 00000 n 
+0000141402 00000 n 
+0000141550 00000 n 
+0000141698 00000 n 
+0000141846 00000 n 
+0000141994 00000 n 
+0000142142 00000 n 
+0000142290 00000 n 
+0000142438 00000 n 
+0000142586 00000 n 
+0000142734 00000 n 
+0000142882 00000 n 
+0000143030 00000 n 
+0000143178 00000 n 
+0000143326 00000 n 
+0000143474 00000 n 
+0000143622 00000 n 
+0000143770 00000 n 
+0000143918 00000 n 
+0000144066 00000 n 
+0000144307 00000 n 
+trailer
+<< /Size 61 /Root 60 0 R /Info 59 0 R >>
+startxref
+144357
+%%EOF

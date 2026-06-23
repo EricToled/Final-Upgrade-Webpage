@@ -1,0 +1,412 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Pages /Count 4 /Kids [9 0 R 10 0 R 11 0 R 12 0 R] >>
+endobj
+5 0 obj
+<< /Length 4390 >>
+stream
+BT
+/F2 17.00 Tf
+1 0 0 1 54.00 701.00 Tm (Sports World México · Estrategia Técnica · V1.0) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 662.06 Tm (Stack, desarrollo asistido por IA, controles de seguridad, el) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 644.24 Tm (agente BES e integraciones) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 622.42 Tm ([§— ¶1 p.1] Documento fundacional. Explica, en términos claros y con las herramientas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 608.56 Tm (específicas nombradas, qué tecnología se usa para construir la experiencia, cómo se construye) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 594.70 Tm (—el método de trabajo y los controles de calidad— y cómo se conecta con los sistemas de Sports) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 580.84 Tm (World. Está redactado para que el equipo directivo, el equipo de sistemas/TI y cualquier) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 566.98 Tm (proveedor externo lo comprendan sin ambigüedades. Donde una decisión es relevante para Sports) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 553.12 Tm (World, se expone la razón.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 533.26 Tm ([§— ¶2 p.1] Un único supuesto sustenta la integración: Sports World expone una API para su) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 519.40 Tm (sistema de clientes \(CRM\). Todo lo demás que el proyecto requiere lo aporta el equipo de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 505.54 Tm (entrega.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 471.68 Tm (1 · El sitio web) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 449.86 Tm ([§1 ¶3 p.1] El sitio se construye sobre la generación actual del framework profesional más) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 436.00 Tm (utilizado para sitios orientados a contenido y optimizados para búsqueda:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 418.14 Tm ([§1 ¶4 p.1] •  Next.js 16 \(App Router\) como framework, con renderizado del lado del servidor) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 404.28 Tm (\(SSR\) y Regeneración Estática Incremental \(ISR\). El renderizado en servidor es el requisito) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 390.42 Tm (técnico más importante del proyecto: corrige, de raíz, el problema del sitio anterior con) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 376.56 Tm (páginas que Google no podía leer.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 360.70 Tm ([§1 ¶5 p.1] •  React 19 con el React Compiler habilitado \(memoización automática, sin ajustes) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 346.84 Tm (manuales\), para mantener el sitio rápido.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 330.98 Tm ([§1 ¶6 p.1] •  TypeScript en modo estricto para todo el código, lo que detecta una amplia) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 317.12 Tm (clase de errores antes de producción.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 301.26 Tm ([§1 ¶7 p.1] •  Tailwind CSS v4 sobre un conjunto reducido de tokens de diseño de marca) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 287.40 Tm (\(color, tipografía, espaciado\), de modo que cada página sea consistente y fiel a la marca por) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 273.54 Tm (construcción.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 257.68 Tm ([§1 ¶8 p.1] •  Fuentes web variables, autoalojadas \(con next/font\), para una tipografía) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 243.82 Tm (rápida y fiel a la marca.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 227.96 Tm ([§1 ¶9 p.1] •  Node.js 20.9 o posterior como runtime \(requerido por Next.js 16\).) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 212.10 Tm ([§1 ¶10 p.1] •  Caché agresivo \('use cache', cacheLife, cacheTag\) para servir la mayoría de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 198.24 Tm (las vistas desde caché y reservar el cómputo para el trabajo dinámico.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 182.38 Tm ([§1 ¶11 p.1] •  Alojamiento en el servidor propio de Sports World, no en una plataforma de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 168.52 Tm (terceros, para que el sitio permanezca por completo bajo el control y la propiedad de Sports) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 154.66 Tm (World. El equipo configura el servidor para una entrega rápida y segura: páginas optimizadas,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 140.80 Tm (caché agresivo y una vista previa de cada cambio antes de salir a producción.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 122.94 Tm ([§1 ¶12 p.1] El estándar de calidad es concreto y medible —Core Web Vitals, optimización de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 109.08 Tm (imágenes y accesibilidad WCAG 2.2 AA— y se verifica automáticamente en cada cambio \(§7\).) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 75.22 Tm (2 · Los datos detrás de la experiencia) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Estrategia Técnica  ·  pág. 1 de 4) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Length 5245 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm ([§2 ¶13 p.2] La experiencia personalizada cruza lo que el usuario quiere con dos cuerpos de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm (datos operativos —la red de clubes y el catálogo de clases— y escribe el lead capturado en el) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 695.78 Tm (sistema de clientes de Sports World.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 677.92 Tm ([§2 ¶14 p.2] •  Los datos de clubes y clases \(nombres, direcciones, amenidades, qué clases) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 664.06 Tm (ofrece cada club, niveles, horarios\) se leen de los sistemas de registro de Sports World. Las) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 650.20 Tm (partes volátiles \(si un club está abierto, si una clase sigue impartiéndose y a qué hora\)) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 636.34 Tm (deben estar actualizadas; las partes estables \(direcciones, la lista de disciplinas\) pueden) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 622.48 Tm (sincronizarse de forma programada.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 606.62 Tm ([§2 ¶15 p.2] •  El lead capturado \(nombre, teléfono, correo, el perfil completo, el club) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 592.76 Tm (elegido, la visita agendada\) se escribe en el sistema de clientes a través de su API en el) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 578.90 Tm (momento en que se reserva la visita.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 561.04 Tm ([§2 ¶16 p.2] La arquitectura está construida para que la lógica de recomendación no dependa de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 547.18 Tm (si el dato llegó en vivo o de una sincronización reciente —lo que significa que la integración) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 533.32 Tm (puede comenzar simple y robustecerse después sin reescribir el núcleo. Las necesidades de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 519.46 Tm (actualización propias del flujo de recomendación se especifican en 01-experience-architecture.md) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 505.60 Tm (\(§5\).) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 471.74 Tm (3 · La capa de SEO y datos estructurados) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 451.92 Tm ([§3 ¶17 p.2] •  Datos estructurados \(schema markup\) en JSON-LD por tipo de página: HealthClub) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 438.06 Tm (y LocalBusiness para las páginas de club —con coordenadas GPS verificadas, horarios y) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 424.20 Tm (teléfono—, BreadcrumbList para la navegación y los tipos correspondientes para hubs y) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 410.34 Tm (artículos. Esto es lo que le indica a Google que Sports World genuinamente ofrece cada) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 396.48 Tm (servicio en cada ubicación. La generación de schema está integrada en el render de cada) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 382.62 Tm (página y es validable contra los Rich Results de Google.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 366.76 Tm ([§3 ¶18 p.2] •  Las 49 fichas de Google Business se crean y optimizan mediante la herramienta) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 352.90 Tm (oficial \(la Google Business Profile API, con OAuth 2.0\). Para las más de 10 ubicaciones se) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 339.04 Tm (usa la verificación masiva por hoja de cálculo que Google ofrece a las cadenas. Una) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 325.18 Tm (restricción honesta, documentada en el plan: la API gestiona y optimiza fichas existentes,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 311.32 Tm (pero no crea nuevas; una ficha nueva requiere la verificación propia de Google, que Google) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 297.46 Tm (controla y que toma tiempo, más la aprobación del acceso a la API, que Google otorga a lo) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 283.60 Tm (largo de semanas.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 267.74 Tm ([§3 ¶19 p.2] •  El contenido escrito se produce con asistencia de IA y lo revisan) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 253.88 Tm (especialistas en SEO antes de publicar, de modo que el volumen no se logre a costa de la) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 240.02 Tm (precisión o la voz de marca.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 208.16 Tm (4 · La aplicación de contenido visual) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 186.34 Tm ([§4 ¶20 p.2] El contenido visual a gran escala lo produce una aplicación a la medida construida) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 172.48 Tm (para este proyecto, que toma imágenes de referencia y aplica automáticamente dos cosas: un) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 158.62 Tm (estilo artístico consistente en todo el resultado, para que los 49 clubes y los cientos de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 144.76 Tm (páginas compartan una sola identidad visual, y la resolución correcta para cada uso \(hero,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 130.90 Tm (cards, thumbnails\), de modo que las imágenes sean nítidas donde lo necesitan y ligeras donde la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 117.04 Tm (velocidad importa. Esto es lo que hace viable producir el contenido visual de 49 clubes y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 103.18 Tm (cientos de páginas en el tiempo disponible: reemplaza miles de ediciones manuales con un) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 89.32 Tm (pipeline automatizado y supervisado. El motor interno de la aplicación se confirma al inicio del) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 75.46 Tm (proyecto; aquí se describe por su función.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Estrategia Técnica  ·  pág. 2 de 4) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Length 5332 >>
+stream
+BT
+/F2 13.50 Tf
+1 0 0 1 54.00 720.50 Tm (5 · BES, el agente de voz y texto) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 698.68 Tm ([§5 ¶21 p.3] BES es un agente conversacional de IA que opera en dos modos: llamadas telefónicas) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 684.82 Tm (habladas y chat escrito \(chat web y WhatsApp\). Atiende a los prospectos en lenguaje natural,) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 670.96 Tm (resuelve preguntas comunes, los guía hacia el club correcto y la visita guiada, y captura leads) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 657.10 Tm (cualificados —el mismo resultado que produce el sitio, pero a través de la conversación. BES) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 643.24 Tm (extiende la conversión del sitio hacia el teléfono y el chat, los canales por donde muchos) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 629.38 Tm (prospectos realmente se acercan.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 609.52 Tm ([§5 ¶22 p.3] Por debajo, el agente se ensambla a partir de cuatro capas, y el modo texto) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 595.66 Tm (reutiliza la mayor parte del mismo cerebro que el modo voz:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 577.80 Tm ([§5 ¶23 p.3] •  Reconocimiento de voz \(ASR\): convierte el habla de quien llama en texto en) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 563.94 Tm (tiempo real \(por ejemplo, Deepgram\). Solo modo voz.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 548.08 Tm ([§5 ¶24 p.3] •  Razonamiento \(un modelo de lenguaje\): entiende lo que el prospecto quiere,) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 534.22 Tm (decide cómo responder y, fundamentalmente, usa la misma lógica de clubes, clases y leads que) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 520.36 Tm (impulsa el sitio \(por ejemplo, Claude o GPT-4o\), de modo que la respuesta sea consistente por) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 506.50 Tm (cualquiera de los canales. Esta es la capa compartida entre voz y texto.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 490.64 Tm ([§5 ¶25 p.3] •  Síntesis de voz \(TTS\): convierte la respuesta en voz natural en) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 476.78 Tm (español-México, con una calidad que no suena robótica \(por ejemplo, ElevenLabs\). Solo modo) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 462.92 Tm (voz.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 447.06 Tm ([§5 ¶26 p.3] •  Capa de canal y orquestación: se conecta a la red telefónica \(llamadas\) y a) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 433.20 Tm (WhatsApp y al chat web \(texto\), y gestiona el flujo de cada conversación, incluido el) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 419.34 Tm (traspaso a un humano cuando se requiere \(por ejemplo, Vapi, Retell o Twilio\).) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 401.48 Tm ([§5 ¶27 p.3] Los componentes exactos se eligen al inicio del proyecto frente a tres requisitos:) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 387.62 Tm (voz natural en español-México, una respuesta lo bastante rápida para que la conversación se) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 373.76 Tm (sienta humana \(el estándar reconocido es por debajo de aproximadamente 900 ms\) y un traspaso) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 359.90 Tm (limpio a un asesor humano cuando el prospecto lo necesita.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 340.04 Tm ([§5 ¶28 p.3] BES no inventa sus respuestas sobre clubes, clases o disponibilidad: lee los mismos) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 326.18 Tm (datos que lee el sitio y escribe los leads en el mismo sistema de clientes a través de la misma) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 312.32 Tm (API de CRM. Esto garantiza que BES y el sitio nunca se contradigan, y que un lead capturado por) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 298.46 Tm (BES llegue al pipeline de Sports World exactamente igual que uno capturado en el sitio.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 264.60 Tm (6 · Cómo se construye: desarrollo asistido por IA con supervisión) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 246.78 Tm (humana) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 224.96 Tm ([§6 ¶29 p.3] El proyecto se construye con agentes de IA de programación bajo supervisión humana) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 211.10 Tm (continua. Este es el método que permite un cronograma comprimido de ocho semanas sin sacrificar) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 197.24 Tm (la calidad. No es "la IA escribe el sitio sin vigilancia": un ingeniero senior define cada) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 183.38 Tm (objetivo, los agentes hacen el trabajo pesado y un humano revisa y aprueba cada resultado antes) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 169.52 Tm (de que salga a producción.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 149.66 Tm ([§6 ¶30 p.3] Se usan dos agentes complementarios. Claude Code para la implementación —escribir y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 135.80 Tm (modificar el código del proyecto, ejecutar pruebas y corregir fallos, en el propio entorno del) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 121.94 Tm (proyecto bajo el control directo del ingeniero. Codex como revisor independiente —un segundo) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 108.08 Tm (agente, distinto, que revisa el plan y la implementación, en busca de huecos, errores y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 94.22 Tm (debilidades que el agente que implementa podría pasar por alto. Usar dos agentes distintos es) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 80.36 Tm (deliberado: el que escribe el código no es el que lo califica, igual que un segundo ingeniero) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 66.50 Tm (revisando el trabajo de un colega, pero a velocidad de IA.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Estrategia Técnica  ·  pág. 3 de 4) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Length 4355 >>
+stream
+BT
+/F1 10.50 Tf
+1 0 0 1 54.00 723.50 Tm ([§6 ¶31 p.4] Cada pieza de trabajo significativa sigue el mismo ciclo de cinco pasos, con un) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 709.64 Tm (humano en los puntos de decisión: investigar y planear \(el plan se escribe antes de cualquier) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 695.78 Tm (código, y el humano lo aprueba\), implementar \(Claude Code escribe el código en piezas pequeñas y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 681.92 Tm (revisables\), revisar \(Codex revisa de forma independiente contra el plan y los requisitos y) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 668.06 Tm (reporta huecos\), verificar con evidencia \(el trabajo debe mostrar prueba de que funciona —la) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 654.20 Tm (salida de las pruebas, el resultado renderizado, una puntuación de rendimiento medida— no una) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 640.34 Tm (mera afirmación\) y publicar \(solo tras la aprobación humana, a través de los controles de) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 626.48 Tm (calidad automatizados\). La supervisión nunca es opcional, y es más estricta para todo lo que) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 612.62 Tm (toca datos de usuario, captura de leads o contenido relacionado con la salud.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 578.76 Tm (7 · Controles de calidad en cada cambio) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 556.94 Tm ([§7 ¶32 p.4] La calidad se aplica automáticamente, no se deja a la memoria. Cada cambio al sitio) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 543.08 Tm (pasa por un conjunto de controles antes de poder salir a producción:) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 525.22 Tm ([§7 ¶33 p.4] •  Pruebas automatizadas que confirman que la funcionalidad existente sigue) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 511.36 Tm (operando.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 495.50 Tm ([§7 ¶34 p.4] •  Verificaciones de rendimiento \(Core Web Vitals\) en cada cambio.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 479.64 Tm ([§7 ¶35 p.4] •  Verificaciones de accesibilidad \(axe-core\), conforme a estándares) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 465.78 Tm (reconocidos.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 449.92 Tm ([§7 ¶36 p.4] •  Enlaces de vista previa para que cualquier revisor —incluido Sports World—) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 436.06 Tm (vea exactamente cómo luce un cambio antes de publicarse.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 420.20 Tm ([§7 ¶37 p.4] •  Verificaciones de preparación para búsqueda que confirman que los datos) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 406.34 Tm (estructurados y la estructura de página de las que dependen los motores de búsqueda siguen) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 392.48 Tm (siendo correctos.) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 374.62 Tm ([§7 ¶38 p.4] Si algún control falla, el cambio no se publica hasta corregirse. Esto es lo que) Tj
+/F1 10.50 Tf
+1 0 0 1 54.00 360.76 Tm (evita que un ritmo de ocho semanas acumule defectos ocultos.) Tj
+/F2 13.50 Tf
+1 0 0 1 54.00 326.90 Tm (8 · Integraciones, entornos y seguridad) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 307.08 Tm ([§8 ¶39 p.4] •  CRM: el sitio y BES escriben el lead cualificado en el CRM de Sports World a) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 293.22 Tm (través de su API \(una operación: crear un lead\). Esta es la única escritura en tiempo real) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 279.36 Tm (del sistema.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 263.50 Tm ([§8 ¶40 p.4] •  Datos de clubes y clases: se leen de los sistemas de Sports World; las partes) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 249.64 Tm (volátiles actualizadas, las partes estables por sincronización periódica.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 233.78 Tm ([§8 ¶41 p.4] •  Webhooks y seguridad de integración: las integraciones entrantes se protegen) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 219.92 Tm (con verificación de firma \(por ejemplo, HMAC en webhooks\), HTTPS con HSTS y rotación de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 206.06 Tm (secretos. Las credenciales se entregan por un canal seguro \(un gestor de contraseñas\), nunca) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 192.20 Tm (por correo en texto plano.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 176.34 Tm ([§8 ¶42 p.4] •  Entrega continua \(CI/CD\): cada cambio pasa los controles del §7 antes de) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 162.48 Tm (publicarse.) Tj
+/F1 10.50 Tf
+1 0 0 1 68.00 146.62 Tm ([§8 ¶43 p.4] •  Entornos: local, staging y producción, con feature flags donde aplique.) Tj
+/F3 8.00 Tf
+1 0 0 1 54.00 34.00 Tm (Estrategia Técnica  ·  pág. 4 de 4) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 5 0 R >>
+endobj
+10 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 6 0 R >>
+endobj
+11 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 7 0 R >>
+endobj
+12 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 8 0 R >>
+endobj
+13 0 obj
+<< /Title (Estrategia Técnica) /Author (Final Upgrade AI) /Subject (Documentacion UX Sports World - KB es-MX para agente de voz) /Keywords (Sports World, UX, documentacion, KB, ElevenLabs) >>
+endobj
+14 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000015 00000 n 
+0000000112 00000 n 
+0000000214 00000 n 
+0000000319 00000 n 
+0000000397 00000 n 
+0000004839 00000 n 
+0000010136 00000 n 
+0000015520 00000 n 
+0000019927 00000 n 
+0000020073 00000 n 
+0000020220 00000 n 
+0000020367 00000 n 
+0000020514 00000 n 
+0000020722 00000 n 
+trailer
+<< /Size 15 /Root 14 0 R /Info 13 0 R >>
+startxref
+20772
+%%EOF
