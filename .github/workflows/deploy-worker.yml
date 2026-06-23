@@ -1,0 +1,32 @@
+name: Deploy Claude proxy Worker
+
+# Despliega el proxy (Cloudflare Worker) que guarda la API key de Anthropic server-side,
+# para que el demo funcione de forma autónoma para cualquier visitante.
+#
+# Requiere 3 secrets en el repo (Settings → Secrets and variables → Actions):
+#   - CF_API_TOKEN       : token de Cloudflare con permiso "Edit Cloudflare Workers"
+#   - CF_ACCOUNT_ID      : Account ID de Cloudflare
+#   - ANTHROPIC_API_KEY  : tu API key de Anthropic (sk-ant-...)
+#
+# Manual a propósito (workflow_dispatch): no corre —ni falla— hasta que existan los secrets.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy Worker + upload secret
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          workingDirectory: resultados/ux-v1/webapp/demo
+          secrets: |
+            ANTHROPIC_API_KEY
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
