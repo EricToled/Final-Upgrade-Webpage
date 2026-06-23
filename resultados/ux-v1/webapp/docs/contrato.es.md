@@ -7,7 +7,7 @@ Este documento reúne, en un solo lugar, el marco contractual del proyecto: el o
 
 > **Pendiente.** Esta sección se completa con el texto del contrato que proporciona Sports World. Aquí va el objeto del contrato, las partes, la vigencia, las condiciones comerciales y las cláusulas legales acordadas. Una vez recibido el documento, se integra de forma íntegra en esta subsección.
 
-## 2 · Entregables
+## 2 · Entregables y KPIs
 
 Esta subsección enumera, a detalle, todo lo que recibe Sports World —el sitio web, el contenido, las fichas de Google, el contenido visual, el agente BES— además de la migración del sitio y los servicios que continúan después del lanzamiento: estabilización, soporte 24/7 y la bolsa de horas de mejora.
 
@@ -76,6 +76,36 @@ Una vez liberado el proyecto (lanzado el sitio), se contempla una etapa de estab
 **Duración propuesta.** Siguiendo el estándar de la industria, se propone una etapa de estabilización de **2 a 4 semanas** después del lanzamiento. **Esta duración es una propuesta a acordar** con Sports World.
 
 **Qué incluye.** Atención reforzada (monitoreo proactivo y priorización de cualquier incidencia derivada del lanzamiento); corrección de ajustes de lanzamiento (los que surjan de la exposición al tráfico y dispositivos reales se corrigen como parte de la estabilización, sin consumir la bolsa de horas de mejora); confirmación de las integraciones en vivo (la captura de leads al CRM, los datos de clubes y clases, las 49 fichas de Google, y BES operando correctamente); y cierre (al final del periodo, el sitio pasa a operación normal bajo el modelo de soporte mensual y la bolsa de horas).
+
+### 2.6 KPIs técnicos de corrección (comprometidos)
+
+Estos KPIs dependen **solo de nosotros** y son 100% verificables con herramientas externas. La línea base proviene de la auditoría inicial (Semrush, marzo 2026 — ver la sección Auditoría inicial del sitio). Nos comprometemos con estas correcciones.
+
+| KPI técnico | Línea base (auditoría) | Meta | Verificación |
+|---|---|---|---|
+| Páginas de club crawleables (SSR) | 0 de 49+ | 49+ de 49+ | Google Search Console |
+| Broken internal links | 116 | 0 | Semrush Site Audit |
+| URLs con backslash rotas (/\\blog, /\\clases, /\\clubes) | 20 | 0 | Semrush Site Audit |
+| Páginas sin H1 | 11 | 0 | Semrush Site Audit |
+| Schema markup JSON-LD por club | 0 | 49+ | Google Rich Results Test |
+| Redirects 301 para enlaces rotos | — | 116 generados | Entregable documentado |
+| Código de fixes entregado | — | 100% | Entregable verificable |
+
+### 2.7 Objetivos comerciales (alcanzables, no comprometidos)
+
+Estos son **objetivos alcanzables**, benchmarkeados contra un caso comparable (David Lloyd Clubs: cobertura 31% → 74%), pero **no compromisos contractuales**: el posicionamiento depende de Google y la conversión final depende del embudo interno de Sports World. Los señalamos como meta, no como garantía.
+
+| Objetivo | Línea base | Meta alcanzable | Referencia |
+|---|---|---|---|
+| Cobertura de keywords unbranded | 31.1% | 55–65% | David Lloyd 31% → 74% |
+| Keywords en top 10 ("perder peso" + amenidades) | ~0–180 | 50–500 | Semrush Position Tracking |
+| Tráfico mensual promedio | 80,000 | 160,000 | Google Analytics 4 (duplicar) |
+
+### 2.8 Calculadora de ROI
+
+El impacto en ingresos depende de tasas internas de Sports World, por lo que se entrega como un modelo paramétrico con el que SW puede simular escenarios: **Revenue incremental anual = A × 12 × B × C × D**, donde A es el tráfico incremental mensual (objetivo del proyecto), B la tasa visita→consulta, C la tasa consulta→asociado y D el ingreso anual por asociado. Ajusta las variables abajo.
+
+[[ROI]]
 
 ## 3 · Pre-requisitos del sistema
 

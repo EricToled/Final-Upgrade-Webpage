@@ -161,7 +161,9 @@ function build(doc, blocks) {
 }
 
 function make(d) {
-  const raw = fs.readFileSync(d.src, "utf8");
+  let raw = fs.readFileSync(d.src, "utf8");
+  // Interactive-only markers render as a static note in the PDF.
+  raw = raw.replace(/\[\[ROI\]\]/g, "_(Calculadora de ROI interactiva — disponible en el web app: Contrato › Entregables y KPIs.)_");
   const blocks = d.kind === "md" ? mdBlocks(raw) : htmlBlocks(raw);
   const doc = new PDFDocument({ size: "LETTER", margins: { top: M, bottom: M, left: M, right: M }, bufferPages: true, autoFirstPage: true });
   doc.info.Title = d.title; doc.info.Author = "Final Upgrade AI"; doc.info.Subject = "Documentación UX Sports World (es-MX) — KB para agente de voz";
