@@ -22,7 +22,11 @@
   </style>
 </head>
 <body>
-  <!-- Bring-your-own-key: la llave se guarda SOLO en este navegador (localStorage), nunca se sube al repo. -->
+  <!-- Proxy autónomo en Vercel: el demo llama aquí y la API key vive como env var en Vercel.
+       El navegador nunca ve la llave; ningún visitante necesita pegar nada. -->
+  <script>window.DEMO_PROXY_URL = "https://final-upgrade-webpage.vercel.app/api/claude";</script>
+
+  <!-- Bring-your-own-key: solo se usa si NO hay proxy configurado arriba. -->
   <div id="keybar">
     <strong>🔑 Demo en vivo:</strong>
     <input id="keyinput" type="password" placeholder="Pega tu API key de Anthropic (sk-ant-...)" autocomplete="off" spellcheck="false" />
@@ -39,6 +43,8 @@
       var chip = document.getElementById("keychip");
       var input = document.getElementById("keyinput");
       var save = document.getElementById("keysave");
+      // Modo autónomo: si hay proxy, no se pide key en el navegador.
+      if (window.DEMO_PROXY_URL) { bar.style.display = "none"; chip.style.display = "none"; return; }
       function refresh() {
         var has = !!localStorage.getItem("ANTHROPIC_API_KEY");
         bar.style.display = has ? "none" : "flex";
