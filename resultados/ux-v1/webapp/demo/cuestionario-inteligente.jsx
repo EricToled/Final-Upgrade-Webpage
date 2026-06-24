@@ -727,16 +727,21 @@ function QuestionRenderer({ question, value, onChange, onNext, onBack, isFirst, 
   const physFields = [{ k: "peso", l: "Peso (kg)", min: 30, max: 250 }, { k: "estatura", l: "Estatura (cm)", min: 100, max: 230 }, { k: "cintura", l: "Cintura (cm)", min: 40, max: 200 }];
   const physVal = value || {};
   const physOut = physFields.filter(f => { const n = parseFloat(physVal[f.k]); return physVal[f.k] != null && physVal[f.k] !== "" && (isNaN(n) || n < f.min || n > f.max); });
+  // Preguntas con teclado (texto/cp/colonia/físicos): el layout debe poder
+  // desplazarse para que el botón "Continuar" siga siendo accesible cuando el
+  // teclado del móvil cubre la parte baja. Enter cierra el teclado (blur).
+  const hasInput = question.type === "text" || question.type === "location" || question.type === "physical";
+  const onEnterBlur = (e) => { if (e.key === "Enter") { e.preventDefault(); e.target.blur(); } };
 
   return (
-    <div className="h-[100dvh] flex flex-col overflow-hidden" style={{ background: BRAND.white }}>
+    <div className={"flex flex-col " + (hasInput ? "min-h-[100dvh]" : "h-[100dvh] overflow-hidden")} style={{ background: BRAND.white }}>
       <div className="px-6 pt-4 pb-3 max-w-xl mx-auto w-full flex-1 flex flex-col min-h-0">
         <h2 className="mt-1" style={{ fontWeight: 900, fontSize: "1.375rem", lineHeight: 1.15, letterSpacing: "-0.015em", color: BRAND.black }}>{question.label}</h2>
         {question.helper && <p className="mt-1" style={{ color: BRAND.gray4, fontSize: "0.875rem" }}>{question.helper}</p>}
 
-        <div className="mt-3 flex-1 overflow-y-auto min-h-0">
+        <div className={"mt-3 flex-1 " + (hasInput ? "" : "overflow-y-auto min-h-0")}>
           {question.type === "text" && (
-            <input type="text" value={value || ""} onChange={(e) => onChange(e.target.value)} placeholder={question.placeholder} className="w-full px-4 py-3 rounded outline-none" style={{ background: BRAND.gray1, color: BRAND.black, fontSize: "1rem", border: "1px solid " + BRAND.gray2 }} />
+            <input type="text" value={value || ""} onChange={(e) => onChange(e.target.value)} onKeyDown={onEnterBlur} placeholder={question.placeholder} className="w-full px-4 py-3 rounded outline-none" style={{ background: BRAND.gray1, color: BRAND.black, fontSize: "1rem", border: "1px solid " + BRAND.gray2 }} />
           )}
 
           {question.type === "single" && (
@@ -789,12 +794,12 @@ function QuestionRenderer({ question, value, onChange, onNext, onBack, isFirst, 
             <div className="flex flex-col gap-3">
               <div>
                 <label style={{ fontSize: "0.75rem", color: BRAND.gray4, letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 600 }}>Código postal</label>
-                <input type="text" inputMode="numeric" maxLength={5} value={(value || {}).cp || ""} onChange={(e) => onChange({ ...(value || {}), cp: e.target.value.replace(/\D/g, "") })} placeholder="00000" className="w-full mt-1 px-4 py-3 rounded outline-none" style={{ background: BRAND.gray1, color: BRAND.black, fontSize: "1rem", border: "1px solid " + BRAND.gray2 }} />
+                <input type="text" inputMode="numeric" maxLength={5} value={(value || {}).cp || ""} onChange={(e) => onChange({ ...(value || {}), cp: e.target.value.replace(/\D/g, "") })} onKeyDown={onEnterBlur} placeholder="00000" className="w-full mt-1 px-4 py-3 rounded outline-none" style={{ background: BRAND.gray1, color: BRAND.black, fontSize: "1rem", border: "1px solid " + BRAND.gray2 }} />
               </div>
               <p style={{ color: BRAND.gray4, fontSize: "0.75rem", textAlign: "center" }}>o</p>
               <div>
                 <label style={{ fontSize: "0.75rem", color: BRAND.gray4, letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 600 }}>Colonia</label>
-                <input type="text" value={(value || {}).colonia || ""} onChange={(e) => onChange({ ...(value || {}), colonia: e.target.value })} placeholder="Ej. Polanco" className="w-full mt-1 px-4 py-3 rounded outline-none" style={{ background: BRAND.gray1, color: BRAND.black, fontSize: "1rem", border: "1px solid " + BRAND.gray2 }} />
+                <input type="text" value={(value || {}).colonia || ""} onChange={(e) => onChange({ ...(value || {}), colonia: e.target.value })} onKeyDown={onEnterBlur} placeholder="Ej. Polanco" className="w-full mt-1 px-4 py-3 rounded outline-none" style={{ background: BRAND.gray1, color: BRAND.black, fontSize: "1rem", border: "1px solid " + BRAND.gray2 }} />
               </div>
               <p style={{ color: BRAND.gray4, fontSize: "0.7rem" }}>Ingresa un código postal de 5 dígitos o una colonia de al menos 3 letras.</p>
             </div>
@@ -806,7 +811,7 @@ function QuestionRenderer({ question, value, onChange, onNext, onBack, isFirst, 
                 {physFields.map(f => (
                   <div key={f.k}>
                     <label style={{ fontSize: "0.7rem", color: BRAND.gray4, letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600 }}>{f.l}</label>
-                    <input type="number" min={f.min} max={f.max} value={physVal[f.k] || ""} onChange={(e) => onChange({ ...physVal, [f.k]: e.target.value })} className="w-full mt-1 px-3 py-3 rounded outline-none text-center" style={{ background: BRAND.gray1, color: BRAND.black, fontSize: "1rem", border: "1px solid " + (physOut.some(o => o.k === f.k) ? BRAND.red : BRAND.gray2) }} />
+                    <input type="number" min={f.min} max={f.max} value={physVal[f.k] || ""} onChange={(e) => onChange({ ...physVal, [f.k]: e.target.value })} onKeyDown={onEnterBlur} className="w-full mt-1 px-3 py-3 rounded outline-none text-center" style={{ background: BRAND.gray1, color: BRAND.black, fontSize: "1rem", border: "1px solid " + (physOut.some(o => o.k === f.k) ? BRAND.red : BRAND.gray2) }} />
                   </div>
                 ))}
               </div>
@@ -1432,10 +1437,15 @@ function ContactCaptureScreen({ data, onContinue, onBack }) {
     width: "100%", padding: "0.875rem 1rem", fontSize: "1rem", fontFamily: "inherit", color: BRAND.black, background: BRAND.white,
     border: "1px solid " + (hasError ? BRAND.red : BRAND.gray2), borderRadius: "4px", outline: "none", transition: "border-color 0.15s",
   });
+  // Enter cierra el teclado; en el último campo, además intenta continuar.
+  const onKey = (e) => { if (e.key === "Enter") { e.preventDefault(); e.target.blur(); } };
+  const onKeyLast = (e) => { if (e.key === "Enter") { e.preventDefault(); e.target.blur(); handleSubmit(); } };
 
+  // Layout desplazable (min-h, sin overflow-hidden) para que el botón "Continuar"
+  // siga siendo accesible cuando el teclado del móvil cubre la parte baja.
   return (
-    <div className="h-[100dvh] flex flex-col overflow-hidden" style={{ background: BRAND.white }}>
-      <div className="px-6 pt-6 pb-4 max-w-xl mx-auto w-full flex-1 flex flex-col overflow-y-auto min-h-0">
+    <div className="min-h-[100dvh] flex flex-col" style={{ background: BRAND.white }}>
+      <div className="px-6 pt-6 pb-4 max-w-xl mx-auto w-full flex-1 flex flex-col">
         <p style={{ color: BRAND.red, letterSpacing: "0.22em", fontSize: "0.7rem", fontWeight: 700, textTransform: "uppercase" }}>Antes de agendar</p>
         <h2 className="mt-4" style={{ fontWeight: 900, fontSize: "1.625rem", lineHeight: 1.15, letterSpacing: "-0.015em", color: BRAND.black }}>{firstName}, necesitamos un par de datos para confirmar tu visita.</h2>
         <p className="mt-2" style={{ color: BRAND.gray4, fontSize: "0.875rem", lineHeight: 1.5 }}>Tu Advisor te contactará para coordinar el horario y enviarte los detalles del club.</p>
@@ -1443,17 +1453,17 @@ function ContactCaptureScreen({ data, onContinue, onBack }) {
         <div className="mt-8 flex flex-col gap-4">
           <div>
             <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 700, color: BRAND.black, marginBottom: "0.375rem", letterSpacing: "0.02em" }}>Apellido</label>
-            <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} onBlur={() => setTouched(t => ({ ...t, lastName: true }))} placeholder="Tu apellido" style={inputStyle(!!lastNameError)} />
+            <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} onBlur={() => setTouched(t => ({ ...t, lastName: true }))} onKeyDown={onKey} placeholder="Tu apellido" style={inputStyle(!!lastNameError)} />
             {lastNameError && <p style={{ color: BRAND.red, fontSize: "0.75rem", marginTop: "0.25rem" }}>{lastNameError}</p>}
           </div>
           <div>
             <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 700, color: BRAND.black, marginBottom: "0.375rem", letterSpacing: "0.02em" }}>Número de celular</label>
-            <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} onBlur={() => setTouched(t => ({ ...t, phone: true }))} placeholder="10 dígitos · ejemplo: 5512345678" style={inputStyle(!!phoneError)} maxLength={15} />
+            <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} onBlur={() => setTouched(t => ({ ...t, phone: true }))} onKeyDown={onKey} placeholder="10 dígitos · ejemplo: 5512345678" style={inputStyle(!!phoneError)} maxLength={15} />
             {phoneError && <p style={{ color: BRAND.red, fontSize: "0.75rem", marginTop: "0.25rem" }}>{phoneError}</p>}
           </div>
           <div>
             <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 700, color: BRAND.black, marginBottom: "0.375rem", letterSpacing: "0.02em" }}>Correo electrónico</label>
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} onBlur={() => setTouched(t => ({ ...t, email: true }))} placeholder="tu@correo.com" style={inputStyle(!!emailError)} />
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} onBlur={() => setTouched(t => ({ ...t, email: true }))} onKeyDown={onKeyLast} placeholder="tu@correo.com" style={inputStyle(!!emailError)} />
             {emailError && <p style={{ color: BRAND.red, fontSize: "0.75rem", marginTop: "0.25rem" }}>{emailError}</p>}
           </div>
         </div>

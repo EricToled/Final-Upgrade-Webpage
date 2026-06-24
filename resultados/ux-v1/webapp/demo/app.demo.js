@@ -2186,8 +2186,18 @@ function QuestionRenderer({
     const n = parseFloat(physVal[f.k]);
     return physVal[f.k] != null && physVal[f.k] !== "" && (isNaN(n) || n < f.min || n > f.max);
   });
+  // Preguntas con teclado (texto/cp/colonia/físicos): el layout debe poder
+  // desplazarse para que el botón "Continuar" siga siendo accesible cuando el
+  // teclado del móvil cubre la parte baja. Enter cierra el teclado (blur).
+  const hasInput = question.type === "text" || question.type === "location" || question.type === "physical";
+  const onEnterBlur = e => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      e.target.blur();
+    }
+  };
   return /*#__PURE__*/React.createElement("div", {
-    className: "h-[100dvh] flex flex-col overflow-hidden",
+    className: "flex flex-col " + (hasInput ? "min-h-[100dvh]" : "h-[100dvh] overflow-hidden"),
     style: {
       background: BRAND.white
     }
@@ -2209,11 +2219,12 @@ function QuestionRenderer({
       fontSize: "0.875rem"
     }
   }, question.helper), /*#__PURE__*/React.createElement("div", {
-    className: "mt-3 flex-1 overflow-y-auto min-h-0"
+    className: "mt-3 flex-1 " + (hasInput ? "" : "overflow-y-auto min-h-0")
   }, question.type === "text" && /*#__PURE__*/React.createElement("input", {
     type: "text",
     value: value || "",
     onChange: e => onChange(e.target.value),
+    onKeyDown: onEnterBlur,
     placeholder: question.placeholder,
     className: "w-full px-4 py-3 rounded outline-none",
     style: {
@@ -2308,6 +2319,7 @@ function QuestionRenderer({
       ...(value || {}),
       cp: e.target.value.replace(/\D/g, "")
     }),
+    onKeyDown: onEnterBlur,
     placeholder: "00000",
     className: "w-full mt-1 px-4 py-3 rounded outline-none",
     style: {
@@ -2337,6 +2349,7 @@ function QuestionRenderer({
       ...(value || {}),
       colonia: e.target.value
     }),
+    onKeyDown: onEnterBlur,
     placeholder: "Ej. Polanco",
     className: "w-full mt-1 px-4 py-3 rounded outline-none",
     style: {
@@ -2371,6 +2384,7 @@ function QuestionRenderer({
       ...physVal,
       [f.k]: e.target.value
     }),
+    onKeyDown: onEnterBlur,
     className: "w-full mt-1 px-3 py-3 rounded outline-none text-center",
     style: {
       background: BRAND.gray1,
@@ -4118,13 +4132,30 @@ function ContactCaptureScreen({
     outline: "none",
     transition: "border-color 0.15s"
   });
+  // Enter cierra el teclado; en el último campo, además intenta continuar.
+  const onKey = e => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      e.target.blur();
+    }
+  };
+  const onKeyLast = e => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      e.target.blur();
+      handleSubmit();
+    }
+  };
+
+  // Layout desplazable (min-h, sin overflow-hidden) para que el botón "Continuar"
+  // siga siendo accesible cuando el teclado del móvil cubre la parte baja.
   return /*#__PURE__*/React.createElement("div", {
-    className: "h-[100dvh] flex flex-col overflow-hidden",
+    className: "min-h-[100dvh] flex flex-col",
     style: {
       background: BRAND.white
     }
   }, /*#__PURE__*/React.createElement("div", {
-    className: "px-6 pt-6 pb-4 max-w-xl mx-auto w-full flex-1 flex flex-col overflow-y-auto min-h-0"
+    className: "px-6 pt-6 pb-4 max-w-xl mx-auto w-full flex-1 flex flex-col"
   }, /*#__PURE__*/React.createElement("p", {
     style: {
       color: BRAND.red,
@@ -4168,6 +4199,7 @@ function ContactCaptureScreen({
       ...t,
       lastName: true
     })),
+    onKeyDown: onKey,
     placeholder: "Tu apellido",
     style: inputStyle(!!lastNameError)
   }), lastNameError && /*#__PURE__*/React.createElement("p", {
@@ -4193,6 +4225,7 @@ function ContactCaptureScreen({
       ...t,
       phone: true
     })),
+    onKeyDown: onKey,
     placeholder: "10 dígitos · ejemplo: 5512345678",
     style: inputStyle(!!phoneError),
     maxLength: 15
@@ -4219,6 +4252,7 @@ function ContactCaptureScreen({
       ...t,
       email: true
     })),
+    onKeyDown: onKeyLast,
     placeholder: "tu@correo.com",
     style: inputStyle(!!emailError)
   }), emailError && /*#__PURE__*/React.createElement("p", {

@@ -48,6 +48,10 @@ a{color:var(--brand-text)}
 .nav-item.nav-red:hover{background:rgba(192,57,43,.08)}
 .nav-item.nav-red.active{background:var(--red);color:#fff}
 
+/* En el demo (iframe), ocultar por completo el widget de BES para que no tape
+   el botón. !important porque el widget fija su propio estilo inline en el host. */
+html.demo-active elevenlabs-convai{display:none!important;visibility:hidden!important;pointer-events:none!important}
+
 /* TOC */
 .toc h5{margin:.1rem 0 .6rem;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
 .toc a{display:block;padding:.18rem 0;color:var(--muted);text-decoration:none;
