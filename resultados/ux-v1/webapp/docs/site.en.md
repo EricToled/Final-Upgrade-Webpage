@@ -1,34 +1,34 @@
-# Sports World México · Site Architecture · V1.0
+# Sports World México · Site Map · V1.0
 ## The 148 pages, mobile + desktop delivery, and the no-code CMS
 
-Foundational document. It defines the information architecture of the site: the page types, their organization into levels, and the complete inventory of the 148 pages with their addresses. It reads on its own and is a pillar of the UX specs set.
+Foundational document. It defines the site's information architecture: the page types, their organization into levels, and the complete inventory of the 148 pages with their addresses. It is a self-contained document and constitutes one of the pillars of the UX specs set.
 
 ## How this relates to the ideal experience
 
-The site has two layers that coexist. The first is the **content and SEO site**: the 148 pages that make Sports World show up in search and give every club, class, and amenity its own place on Google. The second is the **ideal-experience flow**: the personalized journey that turns an anonymous visitor into a scheduled prospect, whose navigation, questionnaire, and business rules are specified in the **Experience Architecture (UX)** document. Both layers share the same club and class data and the same lead capture, so they tell one story.
+The site is made up of two complementary layers. The first is the **content and SEO site**: the 148 pages that position Sports World in search and give each club, class, and amenity its own place on Google. The second is the **ideal experience flow**: the personalized journey that turns an anonymous visitor into a booked prospect, whose navigation, questionnaire, and business rules are specified in the **Experience Architecture (UX)** document. Both layers share the same club and class data and the same lead capture, so that they communicate a unified message.
 
-One clarification, to avoid confusing the layers: the ideal-experience flow uses only **two amenities** to resolve the club — the pool and FitKidz — because they are the only ones it asks about. The amenities listed below as hubs (pool, INTENZ, boxing ring, etc.) are **SEO pages**, not club-resolution criteria. They are different things serving different purposes.
+It is worth clarifying the distinction between the two layers: the ideal experience flow uses only **two amenities** to resolve the club —the pool and FitKidz—, as they are the only ones it asks about. The amenities listed further on as hubs (pool, INTENZ, boxing ring, etc.) are **SEO pages**, not club-resolution criteria. They serve different purposes.
 
 ## The two versions: mobile and desktop
 
-The site is delivered in **two versions, mobile and desktop**, with a **mobile-first** approach: it is designed for the phone first and expanded to desktop, never the other way around. It is a single responsive site — one codebase — that adapts to both and looks and works well as a polished mobile experience and a polished desktop experience. The reason is simple: the audience arrives overwhelmingly from the phone, so designing for that case first guarantees the best experience for the majority.
+The site is delivered in **two versions, mobile and desktop**, with a **mobile-first** approach: it is designed first for the phone and then expanded to desktop, never the other way around. It is a single responsive site —a single codebase— that adapts to both formats and offers a polished experience on both mobile and desktop. The reason is clear: the audience accesses predominantly from the phone, so designing first for that case ensures the best experience for the majority of users.
 
-**Quality targets, measurable and verified on every change:**
-- **Core Web Vitals:** LCP under 2.5 s on mobile (75th percentile), INP under 200 ms, CLS under 0.1.
+**Quality objectives, measurable and verified on every change:**
+- **Core Web Vitals:** LCP < 2.5s on mobile (75th percentile), INP < 200ms, CLS < 0.1.
 - **Images:** AVIF and WebP formats with `sharp`, responsive sizes, and lazy loading.
 - **Accessibility:** WCAG 2.2 AA, verified with axe-core and Lighthouse in continuous integration.
 
-## The no-code update panel (CMS)
+## The no-code content update panel (CMS)
 
-Sports World receives a **content administration panel that allows updating text and images without programming**. Sports World staff edit the site's text and replace images from a visual interface, and what they save is reflected on the published site.
+Sports World receives a **content administration panel that allows text and images to be updated without programming**. Sports World staff edit the site's text and replace images from a visual interface, and each saved change is reflected on the published site.
 
-Technical recommendation (a proposal, not a closed decision): given the requirement that everything live on Sports World's infrastructure, a **headless CMS with visual editing, hosted on Sports World's own server** is suggested — for example Payload or Strapi, both self-hostable on Node.js alongside the site. The site consumes the CMS content through its API; on saving a change, the page is revalidated via `cacheTag` and ISR. This keeps both the site and its panel inside Sports World's infrastructure, with no dependency on an external service. The final CMS choice is confirmed at the start of the project.
+Technical recommendation (a proposal, not a final decision): given the requirement that everything reside within Sports World's infrastructure, we suggest a **headless CMS with visual editing, hosted on Sports World's own server** —for example Payload or Strapi, both self-hostable in Node.js alongside the site—. The site consumes the CMS content through its API; when a change is saved, the page is revalidated via `cacheTag` and ISR. In this way, both the site and its panel remain within Sports World's infrastructure, with no dependence on an external service. The final choice of CMS is confirmed at the start of the project.
 
 ---
 
 ## The 148 pages, by level
 
-The site is organized into **11 architecture levels**. Below is the complete inventory with each address (slug).
+The site is organized into **11 architecture levels**. The complete inventory is presented below, with each address (slug).
 
 ### Level 01 — Home (1 page)
 1. **Home** — `/`
@@ -85,7 +85,7 @@ The site is organized into **11 architecture levels**. Below is the complete inv
 50. San Pedro — `/clubes/san-pedro/`
 
 ### Level 03 — Amenity hubs (10 pages)
-National hubs by amenity; each lists the clubs that offer it. Pattern: `/amenidades/[amenidad]/`.
+National hubs by amenity; each one lists the clubs that offer it. Pattern: `/amenidades/[amenidad]/`.
 51. Pool — `/amenidades/alberca/`
 52. INTENZ (functional zone) — `/amenidades/intenz/`
 53. Boxing ring — `/amenidades/ring-box/`
@@ -98,7 +98,7 @@ National hubs by amenity; each lists the clubs that offer it. Pattern: `/amenida
 60. Climbing wall — `/amenidades/muro-escalar/`
 
 ### Level 04 — Premium classes (7 pages)
-Premium classes with featured visual treatment. Pattern: `/clases/signature/[clase]/`.
+Premium classes with prominent visual treatment. Pattern: `/clases/signature/[clase]/`.
 61. Body Pump — `/clases/signature/body-pump/`
 62. Body Combat — `/clases/signature/body-combat/`
 63. Body Attack — `/clases/signature/body-attack/`
@@ -108,7 +108,7 @@ Premium classes with featured visual treatment. Pattern: `/clases/signature/[cla
 67. CX Worx — `/clases/signature/cx-worx/`
 
 ### Level 05 — Individual classes (47 pages)
-The 44 adult-catalog classes plus the 3 individual-training modalities. Pattern: `/clases/[clase]/`.
+**44 group classes + 3 personal-training modalities (47 total); with the 7 premium (Level 04), the adult catalog totals 54 classes**. Pattern: `/clases/[clase]/`.
 
 **Indoor cycling**
 68. INDBIKE — `/clases/indbike/`
@@ -176,9 +176,9 @@ The 44 adult-catalog classes plus the 3 individual-training modalities. Pattern:
 114. Individual aquatic — `/clases/acuaticos-individual/`
 
 ### Level 06 — FitKidz hub (1 page)
-115. **FitKidz hub** — `/fitkidz/`. A single hub that groups, with internal anchors, the kids' classes by age (FitKidz, Junior, Teens), by discipline (aquatic, team sports, martial arts, dance, functional fitness), and by club.
+115. **FitKidz hub** — `/fitkidz/`. A single hub that groups, through internal anchors, children's classes by age (FitKidz, Junior, Teens), by discipline (aquatic, team sports, martial arts, dance, functional conditioning), and by club.
 
-### Level 07 — User-profile hubs (5 pages)
+### Level 07 — User profile hubs (5 pages)
 Pattern: `/perfiles/[perfil]/`.
 116. First Steps — `/perfiles/primeros-pasos/`
 117. Health and Wellbeing — `/perfiles/salud-y-bienestar/`
@@ -187,7 +187,7 @@ Pattern: `/perfiles/[perfil]/`.
 120. Rehabilitation — `/perfiles/rehabilitacion/`
 
 ### Level 08 — Weight-loss hub (1 page)
-121. **Weight-loss hub** — `/bajar-de-peso/`. Content dedicated to the weight-loss objective, with professional backing.
+121. **Weight-loss hub** — `/bajar-de-peso/`. Content dedicated to the goal of losing weight, with professional support.
 
 ### Level 09 — Personal training hub (1 page)
 122. **Personal training hub** — `/personal-training/`. Personalized training, connected to the five user profiles.
@@ -199,12 +199,12 @@ One hub plus 5 plans. Pattern: `/membresias/` and `/membresias/[plan]/`.
 125. Allclub — `/membresias/allclub/`
 126. Black Pass — `/membresias/black-pass/`
 127. Pink Plan — `/membresias/pink-plan/`
-128. 21-day Promo — `/membresias/promo-21-dias/`
+128. Promo 21 días — `/membresias/promo-21-dias/`
 
 ### Level 11 — SEO blog (20 pages)
 20 SEO-optimized articles. Pattern: `/blog/[articulo]/`.
-129 to 148. Blog articles 1 through 20.
+129 through 148. Blog articles 1 through 20.
 
 ---
 
-> Total: **148 pages** across 11 levels. The detail of each template, its components, and its behavior is developed in the design and behavior pillars of the UX specs set.
+> Total: **148 pages** distributed across 11 levels. The detail of each template, its components, and its behavior is developed in the design and behavior pillars of the UX specs set.
