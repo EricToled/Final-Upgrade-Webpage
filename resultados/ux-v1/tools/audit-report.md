@@ -38,7 +38,7 @@ _Sin hallazgos._
 - **experience.es**: 0.02%, 14,800, 20%, 40%, 751,000, 932,300
 - **experience.en**: 0.02%, 14,800, 40%, 751,000, 932,300
 - **technical.es**: 31.1%, 65%
-- **execution.es**: 160,000, 80,000
+- **execution.es**: $350, 100%, 160,000, 50%, 80,000
 - **execution.en**: 160,000, 80,000
 - **deliverables.es**: $35,000, $55,000
 - **deliverables.en**: $35,000, $55,000

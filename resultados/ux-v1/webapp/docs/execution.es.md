@@ -1,83 +1,102 @@
-# Sports World México · Plan de Ejecución · V1.0
-## Estructura del equipo, el cronograma de ocho semanas, las dependencias con Sports World y el servidor
+# Sports World México · Plan de Ejecución · V2.0
+## Equipos, gobierno, el cronograma de ocho semanas con criterios de salida, hitos, riesgos y criterios de aceptación
 
-Documento fundacional. Describe cómo se construye la experiencia, desde el primer día hasta el lanzamiento, en ocho semanas: qué se construye, la estructura del equipo, el cronograma semana a semana, los puntos precisos en los que se requiere al equipo de sistemas de Sports World —reducidos deliberadamente al mínimo— y el servidor en el que opera. Se lee por sí solo.
+Documento fundacional. Describe **cómo se entrega** el proyecto en ocho semanas: los cuatro frentes de trabajo en paralelo, la estructura del equipo y el modelo de gobierno, el cronograma semana a semana **con criterios de salida verificables**, los hitos de aprobación a cargo de Sports World, el servidor, los KPIs técnicos comprometidos, el registro de riesgos y el control de cambios. Las aportaciones que se requieren del equipo de sistemas de Sports World —deliberadamente reducidas al mínimo— se detallan en **[Aportaciones de Sports World](#aportaciones:1-aportaciones-de-sistemas)**. Se lee por sí solo.
+
+**Principio rector.** El cómputo de las 8 semanas corre a partir de la entrega del 100% de los requerimientos del Anexo Uno; los atrasos imputables a Sports World extienden el plazo día por día (y activan el stand-by de la Cláusula Novena). Por eso el plan **adelanta (front-load)** todas las dependencias a la Semana 1.
 
 ## 1 · Qué se está construyendo, en paralelo
 
-El proyecto entrega cuatro cosas a la vez, ejecutadas por cuatro equipos coordinados a lo largo de las mismas ocho semanas:
+El proyecto entrega cuatro frentes a la vez, ejecutados por cuatro equipos coordinados a lo largo de las mismas ocho semanas:
 
-- **El sitio web** — un sitio rápido y optimizado para búsqueda, construido a partir de plantillas de diseño aprobadas: el home, una página para cada uno de los 49 clubes, los hubs de amenidades y objetivos, y el flujo de experiencia ideal que convierte a un visitante anónimo en un lead calificado y agendado. El inventario completo de páginas está en el documento **Mapa del Sitio**.
-- **La base de SEO y el contenido escrito** — la estrategia de búsqueda y todo el contenido escrito optimizado que el sitio necesita para posicionar, además de la creación y optimización de las 49 fichas de Google Business (una por club).
-- **El contenido visual a escala** — todas las imágenes de cada club y página, producidas en masa a través de la aplicación a la medida (Estrategia Técnica, §4).
-- **BES, el agente de voz y texto con IA** — el agente conversacional en teléfono y chat/WhatsApp, conectado a la misma lógica de club/clase y a la misma captación de leads que el sitio web (Estrategia Técnica, §5).
+- **El sitio web** — un sitio rápido y optimizado para búsqueda, construido a partir de plantillas de diseño aprobadas: el home, una página para cada uno de los 49 clubes, los hubs de amenidades y objetivos, y el flujo de experiencia ideal que convierte a un visitante anónimo en un lead calificado y agendado. Inventario completo en **[Mapa del Sitio](#site)** (148 páginas).
+- **La base de SEO y el contenido escrito** — la estrategia de búsqueda y todo el contenido optimizado, más la creación y optimización de las 49 fichas de Google Business (una por club).
+- **El contenido visual a escala** — el tratamiento de ~650 fotografías del banco del cliente, ~150 imágenes nuevas por IA, 12 animaciones y 1 video institucional, vía la aplicación a la medida (**[Estrategia Técnica · §4](#technical:4-contenido-visual-a-escala)**).
+- **BES, el agente de voz y texto con IA** — el agente conversacional **integrado al sitio web (canal web)**, conectado a la misma lógica de club/clase y a la misma captación de leads que el sitio, que además envía 2 recordatorios automatizados por WhatsApp (**[Estrategia Técnica · §5](#technical:5-bes-el-agente-de-voz-y-texto)**).
 
-Estas cuatro áreas son interdependientes: el sitio necesita el contenido y las imágenes; el contenido necesita la estructura del sitio; las imágenes necesitan los diseños (layouts); y BES necesita la misma lógica que usa el sitio para que un prospecto obtenga la misma respuesta por cualquier vía. Se ejecutan en paralelo, con puntos de control compartidos, bajo un único coordinador general.
+Estas cuatro áreas son interdependientes: el sitio necesita el contenido y las imágenes; el contenido necesita la estructura del sitio; las imágenes necesitan los layouts; y BES necesita la misma lógica que usa el sitio para dar la misma respuesta por cualquier vía. Se ejecutan en paralelo, con puntos de control compartidos, bajo un único coordinador general.
 
-## 2 · Estructura del equipo
+## 2 · Estructura del equipo y modelo de gobierno
 
-El proyecto se ejecuta con cuatro equipos, cada uno con un líder, todos coordinados por un único líder general del proyecto.
+El proyecto se ejecuta con cuatro equipos, cada uno con un líder, todos coordinados por un único líder general del proyecto, que es el punto único de contacto con la dirección de Sports World.
 
-- **Líder general del proyecto.** Coordina los cuatro equipos, es responsable del cronograma maestro, ejecuta los puntos de control, gestiona las dependencias con Sports World y es el punto único de contacto con la dirección de Sports World. Asegura que el contenido, el código, las imágenes y BES converjan en un mismo lanzamiento y le cuenten a los prospectos una sola historia coherente en cada canal.
-- **Equipo 1 — Diseño y desarrollo web (a partir de plantillas).** Es responsable de la construcción del sitio web y de su estándar de calidad. Construye el home, las 49 páginas de club, los hubs y el flujo de experiencia ideal, utilizando la tecnología, el flujo de trabajo asistido por IA y las compuertas de seguridad de Estrategia Técnica. Integra la API del CRM y los datos de club/clase.
-- **Equipo 2 — Estrategia de SEO y contenido escrito.** Es responsable de la estrategia de búsqueda y de la calidad del contenido. Define la estrategia de palabras clave y de contenido, produce y revisa todo el contenido optimizado, genera el marcado de datos estructurados y crea y optimiza las 49 fichas de Google Business.
-- **Equipo 3 — Contenido visual a escala.** Es responsable de la identidad visual y del pipeline de producción. Construye y opera la aplicación a la medida que aplica un estilo artístico consistente y la resolución correcta, produciendo el contenido visual en masa para los 49 clubes y las páginas de apoyo.
-- **Equipo 4 — BES, el agente de voz y texto.** Es responsable del agente conversacional en voz y texto. Construye, configura y prueba BES, conectándolo a la misma lógica de club/clase y a la misma captación de leads en el CRM que el sitio web, afinándolo para una conversación natural en español de México y estableciendo un traspaso limpio al personal humano. Conecta BES al número telefónico y al número de WhatsApp que Sports World proporciona.
+| Frente | Responsable | Alcance principal |
+|---|---|---|
+| Coordinación general | Líder general | Cronograma maestro, puntos de control, dependencias con SW, control de cambios, reporte ejecutivo. Punto único de contacto. |
+| Equipo 1 — Web | Líder web | Home, 49 páginas de club, hubs, flujo de experiencia ideal; integración de la API del CRM y de los datos de club/clase; migración y cutover. |
+| Equipo 2 — SEO y contenido | Líder SEO | Estrategia de palabras clave, contenido optimizado de las 148 páginas, datos estructurados, 49 fichas de Google Business. |
+| Equipo 3 — Contenido visual | Líder visual | Aplicación a la medida; tratamiento de ~650 fotos, ~150 imágenes IA, 12 animaciones, 1 video; identidad visual consistente. |
+| Equipo 4 — BES | Líder BES | Agente de voz y texto en el canal web; base de conocimiento; captura de leads al CRM; recordatorios por WhatsApp; escalación a humano. |
 
-Los equipos no son silos. El líder general del proyecto ejecuta puntos de control breves y periódicos donde los cuatro líderes se sincronizan sobre las dependencias compartidas, y el cronograma de la §3 secuencia el trabajo para que estos traspasos ocurran en el orden correcto.
+**Matriz de responsabilidad (RACI) por entregable.** R = ejecuta · A = rinde cuentas · C = consultado · I = informado.
+
+| Entregable | Líder gral. | E1 Web | E2 SEO | E3 Visual | E4 BES | Sports World |
+|---|---|---|---|---|---|---|
+| Plantillas y sistema de diseño | A | R | C | C | I | C (aprueba) |
+| 148 páginas (build) | A | R | R | C | I | C (aprueba) |
+| Datos estructurados / schema | A | C | R | I | I | I |
+| 49 fichas de Google Business | A | I | R | I | I | R (titularidad) |
+| Contenido visual a escala | A | C | I | R | I | C (marca) |
+| Integración CRM / datos / reservas | A | R | I | I | C | R (API/datos) |
+| Agente BES | A | C | C | I | R | R (base de conocimiento) |
+| Migración y cutover | R/A | R | C | I | I | C (accesos) |
+| Aprobaciones de hito | A | C | C | C | C | R (decide) |
+
+El líder general ejecuta puntos de control breves y periódicos donde los cuatro líderes se sincronizan sobre las dependencias compartidas; el cronograma de la §3 los secuencia en el orden correcto.
 
 ## 3 · El cronograma de ocho semanas
 
-El cronograma corre de la Semana 1 a la Semana 8. Los cuatro equipos trabajan en paralelo, con las dependencias de Sports World adelantadas (front-loaded) para que nada quede esperándolas más adelante.
+Corre de la Semana 1 a la Semana 8, con los cuatro equipos en paralelo y las dependencias de Sports World adelantadas a la Semana 1 (detalle en **[Aportaciones de Sports World](#aportaciones:1-aportaciones-de-sistemas)**). Cada semana cierra con un **criterio de salida** verificable: si no se cumple, no se avanza a la siguiente fase.
 
-**Semana 1 — Cimientos y arranque de dependencias.** Líder del proyecto: confirmar los detalles de la API del CRM, la fuente de datos de club/clase y el acceso a teléfono/WhatsApp para BES y —de manera crítica— **iniciar de inmediato la titularidad y verificación de la cuenta de Google Business**, porque es el camino más largo. Equipo web: levantar el proyecto, el framework, los tokens de diseño de marca y las plantillas base; establecer las compuertas de seguridad. Equipo SEO: finalizar la estrategia de palabras clave y de contenido, definir las estructuras de página y comenzar la preparación de las fichas de Google Business. Equipo visual: construir la aplicación a la medida, fijar el estilo artístico contra la marca, ejecutar el primer lote de prueba. Equipo BES: seleccionar los componentes de voz y texto frente a los requisitos de español de México y de latencia, levantar un primer esqueleto funcional del agente y diseñar la conversación (qué pregunta, responde y cuándo traspasa BES).
+**Semana 1 — Cimientos y arranque de dependencias.**
+- *Líder:* confirmar API del CRM, fuente de datos de club/clase y WhatsApp Business para los recordatorios de BES; **iniciar de inmediato la titularidad y verificación de Google Business** (el camino más largo).
+- *Web:* levantar proyecto, framework, tokens de diseño de marca, plantillas base y compuertas de calidad (CI).
+- *SEO:* estrategia de palabras clave y de contenido; estructuras de página; preparación de fichas.
+- *Visual:* construir la aplicación a la medida; fijar el estilo artístico contra la marca; primer lote de prueba.
+- *BES:* seleccionar componentes de voz/texto frente a los requisitos de español-México y latencia; esqueleto funcional en el sitio; diseño de la conversación.
+- **Criterio de salida:** entorno productivo y de staging en pie; plantillas base renderizando; verificación de Google Business iniciada; dependencias del Anexo Uno recibidas o con fecha comprometida.
 
-**Semana 2 — Primeras páginas pilar y pipelines en marcha.** Equipo web: construir el home, una página de club y un hub como los "pilares" aprobados que fijan el patrón. Equipo SEO: producir la primera ola de contenido optimizado para los pilares; enviar las fichas de Google Business a verificación. Equipo visual: producir el primer set completo de imágenes para los pilares. Equipo BES: lograr que BES sostenga una conversación básica de extremo a extremo en voz y texto, usando la misma lógica de club/clase; primeras llamadas y chats de prueba internos. Punto de control: Sports World revisa y aprueba las páginas pilar —apariencia, contenido, imágenes— y una primera conversación de BES, antes de replicar los patrones.
+**Semana 2 — Páginas pilar y pipelines en marcha.**
+- *Web:* home + una página de club + un hub como "pilares" que fijan el patrón.
+- *SEO:* primera ola de contenido optimizado para los pilares; fichas enviadas a verificación.
+- *Visual:* primer set completo de imágenes de los pilares.
+- *BES:* conversación básica de extremo a extremo (voz y texto en el sitio); primeras pruebas internas.
+- **🚦 Aprobación 1 (fin S2):** Sports World aprueba diseño / página pilar (look, contenido, imágenes) y una primera conversación de BES. **Ventana de respuesta: 48 horas hábiles.**
+- **Criterio de salida:** patrón pilar aprobado, listo para replicar.
 
-**Semanas 3–4 — Escalar la construcción.** Equipo web: replicar los patrones aprobados a las 49 páginas de club y a los hubs; integrar la API del CRM para la captación de leads y los datos de club/clase para la recomendación. Equipo SEO: producir el grueso del contenido por club y de hub; seguir optimizando las fichas conforme superan la verificación. Equipo visual: producir las imágenes para los 49 clubes a escala. Equipo BES: conectar BES a la captación de leads (la misma API del CRM que el sitio) y a los canales de teléfono y WhatsApp; ampliar su cobertura de preguntas comunes; refinar el traspaso a humano. Punto de control (fin de la Semana 4): aproximadamente la mitad de las páginas de producción completas y revisadas; el flujo de captación de leads funcionando de extremo a extremo contra la API del CRM —tanto desde el sitio web como desde BES.
+**Semanas 3–4 — Escalar la construcción.**
+- *Web:* replicar el patrón aprobado a las 49 páginas de club y a los hubs; integrar la API del CRM (captación de leads) y los datos de club/clase (recomendación).
+- *SEO:* grueso del contenido por club y de hub; optimización de fichas conforme superan verificación.
+- *Visual:* imágenes de los 49 clubes a escala.
+- *BES:* conectar a la captación de leads (misma API del CRM), integrarlo al sitio y configurar los recordatorios por WhatsApp; ampliar cobertura de preguntas; refinar el traspaso a humano.
+- **🚦 Aprobación 2 (fin S4):** Sports World aprueba ~50% del sitio construido. **Ventana: 48 horas hábiles.**
+- **Criterio de salida:** ~50% de las páginas completas y revisadas; lead-capture funcionando de extremo a extremo contra el CRM real, desde el sitio y desde BES.
 
-**Semanas 5–6 — Completar la producción e integrar.** Equipo web: terminar las páginas restantes y el flujo completo de experiencia ideal; completar la integración de datos; endurecer el rendimiento y la accesibilidad. Equipo SEO: completar los artículos de apoyo, finalizar los datos estructurados, completar la optimización de Google Business. Equipo visual: completar y colocar todas las imágenes restantes. Equipo BES: terminar la cobertura completa de conversación de BES; afinar la calidad de voz y la velocidad de respuesta; probar con distintos acentos y casos límite; confirmar que los leads de BES llegan al CRM de forma idéntica a los leads web. Punto de control (fin de la Semana 6): todas las páginas completas; sitio completo revisable en un enlace de vista previa; BES manejando conversaciones reales de extremo a extremo en ambos canales.
+**Semanas 5–6 — Completar la producción e integrar.**
+- *Web:* páginas restantes y flujo completo de experiencia ideal; integración de datos completa; endurecer rendimiento y accesibilidad.
+- *SEO:* artículos de apoyo, datos estructurados finalizados, optimización de Google Business completa.
+- *Visual:* colocar todas las imágenes restantes.
+- *BES:* cobertura conversacional completa; afinar calidad de voz y velocidad; pruebas con tráfico real (Sección II del contrato: 4 semanas de desarrollo + 2 de pruebas); confirmar que los leads de BES llegan al CRM idénticos a los del sitio.
+- **Criterio de salida (fin S6):** todas las páginas completas; sitio revisable en enlace de vista previa; BES manejando conversaciones reales en el sitio (voz y texto).
 
-**Semana 7 — Pase completo de calidad y congelamiento previo al lanzamiento.** Todos los equipos: un pase completo de calidad —rendimiento, accesibilidad, preparación para búsqueda, exactitud del contenido, consistencia visual, el flujo de captación de leads contra el CRM real y BES en voz y texto. Equipo web: preparar el lanzamiento —el plan de cambio de DNS y el plan de redirecciones para que no se pierda ningún posicionamiento de búsqueda existente. También es cuando se corre la prueba de carga del servidor (§5). Punto de control: Sports World da el visto bueno al sitio congelado y listo para lanzar y al agente BES.
+**Semana 7 — Pase de calidad y congelamiento previo al lanzamiento.**
+- *Todos:* pase completo de calidad —rendimiento, accesibilidad, preparación para búsqueda, exactitud de contenido, consistencia visual, lead-capture contra el CRM real y BES en voz y texto.
+- *Web:* preparar el lanzamiento —plan de cambio de DNS y plan de redirecciones 301 (los 136 enlaces) para no perder posicionamiento; **prueba de carga del servidor (§4)**.
+- **🚦 Aprobación 3 (S7):** Sports World da el visto bueno al sitio congelado y al agente BES. **Ventana: 48 horas hábiles.**
+- **Criterio de salida:** sitio congelado, listo para lanzar; checklist de aceptación (§6) en verde en staging.
 
-**Semana 8 — Lanzamiento.** Líder del proyecto y equipo web: ejecutar el lanzamiento con Sports World —apuntar el dominio al nuevo sitio, enviar las páginas a Google y confirmar que todo está en vivo y medido. Equipo BES: poner a BES en vivo en teléfono y WhatsApp junto con el sitio. Todos los equipos: monitorear los primeros días; confirmar que las fichas de Google Business y los datos estructurados son reconocidos; confirmar que los leads fluyen correctamente al CRM tanto desde el sitio como desde BES. Entrega: Sports World recibe un sitio funcional, medido y optimizado para búsqueda y un agente BES en vivo, con todo el contenido, el código y las imágenes entregados.
+**Semana 8 — Lanzamiento y handover.**
+- *Líder + Web:* ejecutar el cutover con Sports World —apuntar el dominio, enviar las páginas a Google, confirmar que todo está en vivo y medido, y que el correo/MX sigue intacto.
+- *BES:* poner a BES en vivo en el sitio (con los recordatorios por WhatsApp).
+- *Todos:* **monitoreo activo 48 horas**; confirmar reconocimiento de fichas y datos estructurados; confirmar flujo de leads al CRM desde el sitio y desde BES.
+- **🚦 Aprobación 4 (S8):** lanzamiento en firme. **Ventana: mismo día hábil.**
+- **Criterio de salida:** criterios de aceptación del lanzamiento (§6) cumplidos; inicia la etapa de estabilización de 2 a 4 semanas.
 
-**El único riesgo de cronograma a vigilar.** La verificación de las fichas de Google Business (§4.3) la controla Google, no el proyecto. Se inicia en la Semana 1 precisamente porque puede tardar semanas. Si la verificación de Google se alarga, las fichas podrían finalizarse cerca del lanzamiento —pero como todo el resto del proyecto es independiente de ella, esto no detiene el sitio web ni el contenido. Es la única dependencia que el líder del proyecto sigue más de cerca.
+**El riesgo de cronograma a vigilar.** La verificación de las fichas de Google Business la controla Google, no el proyecto (ver **[Aportaciones de Sports World](#aportaciones:titularidad-en-google-para-las-49-fichas)**). Se inicia en la Semana 1 porque puede tardar semanas; si se alarga, las fichas se finalizan cerca del lanzamiento, pero como el resto del proyecto es independiente de ellas, no detiene el sitio ni el contenido (ver el registro de riesgos, §7).
 
-## 4 · Dónde se requiere al equipo de sistemas de Sports World (reducido al mínimo)
+## 4 · El servidor donde corre el sitio
 
-El plan está diseñado para que la participación técnica interna de Sports World sea pequeña y concentrada. El equipo de entrega construye por su cuenta todo lo que puede. A continuación está la lista completa de lo que genuinamente se necesita —no hay nada requerido más allá de esto.
-
-### 4.1 La única dependencia central: la API del CRM
-El único supuesto sobre el que descansa el plan es que Sports World proporciona una API para su sistema de clientes (CRM). El equipo necesita la forma de conectarse (endpoint y credenciales, entregadas de manera segura —nunca por correo electrónico en texto plano) y la instrucción para una operación: **crear (o actualizar) un lead calificado**, con los campos que lleva (nombre, teléfono, email, el perfil, el club elegido, la visita agendada). La operación es idempotente por sesión: si el prospecto modifica la cita y la vuelve a confirmar, se actualiza el mismo registro en lugar de duplicarlo (ver el documento **Arquitectura de Experiencia (UX)**, §5.2). Esta es la única escritura en tiempo real que hace la experiencia; con ella disponible, todo el flujo de captación de leads se construye sin más participación interna.
-
-### 4.2 Acceso de lectura a los datos de clubes y clases
-Para recomendar el club y las clases correctas, la experiencia necesita información actual de clubes y clases. El equipo necesita una de las siguientes opciones, en orden de preferencia: (1) una API de lectura o feed de datos para detalles de clubes, amenidades y catálogo/horarios de clases —ideal, porque mantiene el sitio automáticamente al día; o (2) si no existe una API, una exportación estructurada (una hoja de cálculo bien formada o un archivo de datos) de la misma información, actualizada en un calendario acordado. En cualquier caso, el equipo se encarga de la integración; el rol de Sports World es exponer o proporcionar los datos, no construir nada.
-
-### 4.3 Titularidad en Google para las 49 fichas
-Esta es la dependencia con la restricción más honesta, señalada con anticipación porque tiene un tiempo de espera real. Google no permite que se creen automáticamente fichas completamente nuevas a través de sus herramientas. Crear y verificar 49 fichas requiere que Sports World sea titular (o conceda la administración) de la cuenta de Google Business de la marca, la verificación propia de Google de cada ubicación (que Google controla y que toma tiempo) y la aprobación de acceso programático (que Google otorga en su propio calendario, típicamente semanas). El equipo gestiona todo el proceso; la titularidad de la cuenta y la verificación de Google están fuera del control de cualquiera salvo de Google y de Sports World. **Esta es la dependencia más sensible al tiempo de todo el proyecto y debe iniciarse en la Semana 1.**
-
-### 4.4 Acceso al dominio y a la publicación
-Para poner el nuevo sitio en vivo, el equipo necesita, cerca del lanzamiento: acceso para apuntar la dirección del sitio web (DNS) al nuevo sitio, y acceso a las cuentas de búsqueda y analítica (Google Search Console, Google Analytics) para poder medir el rendimiento del nuevo sitio y enviar sus páginas a Google. Estos se necesitan una sola vez, cerca del lanzamiento, y el equipo guía a Sports World paso a paso a través de ellos.
-
-### 4.5 Número telefónico y WhatsApp para BES
-Para que BES conteste llamadas y chats, el equipo necesita un número telefónico que BES conteste (ya sea uno que Sports World proporcione para el agente, o permiso para enrutar hacia él las llamadas entrantes pertinentes) y el número oficial de WhatsApp Business de la marca. El equipo construye y configura el agente por sí mismo; el rol de Sports World es proporcionar el o los números y autorizar su uso. Si Sports World ya opera una línea telefónica de atención al cliente o WhatsApp, el plan es conectar BES a la configuración existente en lugar de reemplazarla, con un traspaso limpio al personal humano siempre que un prospecto lo necesite.
-
-### 4.6 El servidor (ver §5).
-
-### 4.7 Resumen de lo que se le pide a Sports World
-1. La API del CRM para crear un lead (dependencia central, usada tanto por el sitio web como por BES).
-2. Datos de clubes y clases, por API o exportación programada (usados por ambos).
-3. Titularidad de la cuenta de Google Business y cooperación con la verificación de Google (iniciar en la Semana 1).
-4. Acceso al dominio y a la analítica cerca del lanzamiento.
-5. Un número telefónico y el número oficial de WhatsApp Business para BES, con autorización para usarlos.
-6. Un servidor que cumpla la especificación de la §5, con acceso seguro para que el equipo lo configure.
-
-Todo lo demás lo entrega el equipo del proyecto.
-
-## 5 · El servidor donde corre el sitio
-
-El sitio web corre en el propio servidor de Sports World. La especificación está dimensionada a las condiciones reales del proyecto: el sitio actualmente recibe alrededor de 80,000 visitas al mes, la meta es duplicarlas a aproximadamente 160,000 visitas al mes, **y se espera que el tráfico alcance picos de hasta cinco veces el promedio por hora** durante periodos de alta demanda (por ejemplo, cuando las campañas pagadas generan un repunte). Dimensionar para ese pico —y no para el promedio mensual— es lo que mantiene el sitio rápido y en línea cuando más importa.
+El sitio web corre en el propio servidor de Sports World. La especificación está dimensionada a las condiciones reales del proyecto: el sitio actualmente recibe alrededor de 80,000 visitas al mes, la meta es duplicarlas a aproximadamente 160,000 visitas al mes, **y se espera que el tráfico alcance picos de hasta cinco veces el promedio** durante periodos de alta demanda (por ejemplo, cuando las campañas pagadas generan un repunte). Dimensionar para ese pico —y no para el promedio mensual— es lo que mantiene el sitio rápido y en línea cuando más importa.
 
 - **Sistema operativo:** Linux (cualquier distribución mainstream actual).
 - **Runtime:** Node.js 20.9 o posterior, que el framework requiere; el equipo lo instala y configura.
@@ -91,3 +110,59 @@ Un solo servidor de este tamaño maneja 160,000 visitas al mes con picos de cinc
 Estos números son una estimación de ingeniería sólida. La forma de convertir la estimación en una garantía es una breve prueba de carga antes del lanzamiento —simulando 160,000 visitas al mes con el pico de cinco veces y midiendo la CPU y la memoria realmente utilizadas. El equipo la ejecuta como parte de la calidad previa al lanzamiento (Semana 7) y ajusta la especificación al alza o a la baja según el resultado medido.
 
 > **Nota sobre BES:** la especificación anterior cubre **únicamente el sitio web**. BES es una carga de trabajo separada con su propio runtime y perfil de recursos. Si BES corre en este mismo servidor o en uno separado es una decisión pendiente; si comparte este servidor, el procesador y la memoria anteriores deben incrementarse para tomarlo en cuenta. Esto se confirma cuando se defina el enfoque de hosting de BES.
+
+## 5 · Hitos y aprobaciones a cargo de Sports World
+
+El proyecto avanza por cuatro compuertas de aprobación; cada una corresponde al cronograma del **[Contrato · Anexo Dos I.4](#contrato:i4-cronograma-de-8-semanas-y-aprobaciones-a-cargo-de-el-cliente)**. Las ventanas de respuesta son obligaciones del cliente: un atraso en una aprobación extiende, día por día, el plazo a cargo del proveedor (y activa el stand-by de la Cláusula Novena).
+
+| Aprobación | Hito | Momento | Ventana de respuesta | Criterio de salida (definición de "hecho") |
+|---|---|---|---|---|
+| 1 | Diseño / página pilar | Fin Semana 2 | 48 horas hábiles | Pilar (home + club + hub) aprobado en look, contenido e imágenes; primera conversación de BES validada. |
+| 2 | 50% del sitio construido | Fin Semana 4 | 48 horas hábiles | ~50% de páginas completas; lead-capture de extremo a extremo contra el CRM real (sitio y BES). |
+| 3 | Pre-lanzamiento | Semana 7 | 48 horas hábiles | Sitio congelado; checklist de aceptación (§6) en verde en staging; plan de cutover y redirecciones listo. |
+| 4 | Lanzamiento en firme | Semana 8 | Mismo día hábil | Criterios de aceptación del lanzamiento (§6) cumplidos en producción; correo/MX intacto. |
+
+## 6 · KPIs técnicos comprometidos y criterios de aceptación del lanzamiento
+
+Estos son los **KPIs técnicos comprometidos** del **[Contrato · Anexo Dos, Sección IV](#contrato:seccin-iv-kpis-y-calculadora-de-roi-estrategia-comercial)** —dependen solo del proveedor y son verificables—. No se confunden con los objetivos comerciales (tráfico, posiciones, conversión), que dependen de factores externos y no se garantizan.
+
+| KPI técnico (comprometido) | Línea base | Meta | Verificación |
+|---|---|---|---|
+| Páginas de club crawleables (SSR) | 0 de 49 | 49 de 49 | Google Search Console |
+| Enlaces rotos | 136 | 0 | Semrush Site Audit |
+| Schema markup JSON-LD por club | 0 | 49 | Google Rich Results Test |
+| Páginas sin H1 | 11 | 0 | Semrush Site Audit |
+
+**Checklist de aceptación del lanzamiento (Semana 8).** Todo debe estar en verde para dar por cumplido el lanzamiento:
+- Los cuatro KPIs técnicos anteriores en su meta.
+- **Core Web Vitals** dentro de umbral (LCP < 2.5 s, INP < 200 ms, CLS < 0.1) y **WCAG 2.2 AA** verificados.
+- Las 148 páginas publicadas y crawleables; las 49 fichas de Google Business enviadas y en optimización.
+- **Captación de leads de extremo a extremo** al CRM, desde el sitio y desde BES, sin duplicados (idempotencia).
+- **Migración:** mapa de 301 activo (136 enlaces), correo/MX y demás servicios del dominio confirmados sin interrupción.
+- **Monitoreo activo 48 horas** posterior al cutover; luego inicia la **estabilización de 2 a 4 semanas**.
+
+## 7 · Registro de riesgos
+
+| Riesgo | Prob. | Impacto | Mitigación | Dueño |
+|---|---|---|---|---|
+| Verificación de Google Business se alarga (la controla Google) | Alta | Medio | Iniciar en S1; el resto del proyecto es independiente; las fichas pueden finalizar cerca del lanzamiento sin frenar el sitio. | Líder gral. |
+| APIs de CRM/reservas no cumplen su SLA (p95 <500/<800 ms) | Media | Alto | SLA a cargo de SW (Anexo Uno D.7); arquitectura tolerante a sincronización; degradación elegante. | E4 / E1 |
+| Atrasos del cliente en el Anexo Uno o en aprobaciones | Media | Alto | Dependencias front-loaded a S1; ventanas de 48 h pactadas (I.4); el plazo se extiende día por día y aplica stand-by ($350 USD/día, Cláusula Novena). | Líder gral. / SW |
+| Calidad/disponibilidad de datos de clubes y clases | Media | Medio | API de lectura preferente; fallback a exportación estructurada con calendario acordado; validación automática. | E1 / SW |
+| Base de conocimiento de BES desactualizada | Media | Medio | Actualización semanal mínima (Anexo Uno D.8); reentrenamiento automático. | SW / E4 |
+| Cambios de alcance (scope creep) | Media | Medio | Control de cambios (§8): lo no pactado es convenio modificatorio; los cambios sobre secciones ya aprobadas se cotizan (Cláusula Tercera Bis). | Líder gral. |
+| Migración rompe correo u otro servicio del DNS | Baja | Alto | Inventario DNS previo; solo se tocan registros del sitio; TTL bajo 24 h antes; rollback rápido; verificación post-cutover. | E1 |
+
+## 8 · Gobierno: control de cambios, reporte y stand-by
+
+- **Reporte ejecutivo semanal** del avance, los KPIs y los riesgos (Anexo Dos, Secciones I.2 y IV).
+- **Puntos de control** breves y periódicos entre los cuatro líderes y con Sports World en cada hito.
+- **Control de cambios.** Todo entregable no comprendido expresamente es materia de convenio modificatorio. Un cambio solicitado por el cliente sobre una sección o ítem **ya aprobado**, o derivado de que el cliente entregue una sección por debajo de los estándares del contrato, se cotiza aparte (Cláusula Tercera Bis). Los cambios que **no** modifican algo ya aprobado y no incumplen estándares son **zona neutral** y no se imputan a ninguna parte.
+- **Stand-by por atrasos del cliente.** Si un atraso imputable a Sports World detiene al equipo, se cobran los días de stand-by a USD $350/día (Cláusula Novena), y el plazo se extiende día por día.
+- **Canales.** Coordinación e incidentes por los canales acordados (p. ej. Slack y correo), con responsable único del lado del cliente.
+
+## 9 · Supuestos y fuera de alcance
+
+- **Supuesto central:** Sports World expone una API para el CRM y para reservas, y entrega el 100% de los requerimientos del Anexo Uno; el cómputo de las 8 semanas corre a partir de esa entrega.
+- **Fuera de alcance (salvo convenio modificatorio):** cualquier página adicional a las 148 (Anexo Dos I.1); operación de BES por telefonía o como chat conversacional de WhatsApp (su operación se limita al canal web; ver Estrategia Técnica §5); presupuesto de medios; y cualquier servicio no enumerado en los Anexos.
+- **No se garantizan** posiciones de búsqueda, volúmenes de tráfico ni tasas de conversión: dependen de factores externos (algoritmos de buscadores, mercado). Lo comprometido son los KPIs técnicos de la §6.
