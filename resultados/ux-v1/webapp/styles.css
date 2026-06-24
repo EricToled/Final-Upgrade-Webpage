@@ -124,6 +124,23 @@ a{color:var(--brand-text)}
 .roi-disc{font-size:.72rem;color:var(--muted);margin:.7rem 0 0;font-style:italic}
 @media (max-width:640px){.roi-grid{grid-template-columns:1fr}.roi-out{grid-template-columns:1fr 1fr}}
 
+/* Aportaciones — tabla de seguimiento con semáforo */
+.apo-wrap{margin:1rem 0;overflow-x:auto}
+.apo-table{width:100%;border-collapse:collapse;font-size:.85rem}
+.apo-table th,.apo-table td{border:1px solid var(--border);padding:.5rem .6rem;text-align:left;vertical-align:top}
+.apo-table th{background:var(--bg-soft);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;color:var(--muted)}
+.apo-ent{max-width:30rem}
+.apo-resp{color:var(--muted);font-size:.8rem;white-space:nowrap}
+.apo-table input[type=date],.apo-table select{font:inherit;padding:.25rem .35rem;border:1px solid var(--border);border-radius:5px;background:#fff;color:var(--ink)}
+.apo-sem{font-weight:700;white-space:nowrap}
+.apo-red{background:rgba(225,29,72,.10)}
+.apo-red .apo-sem{color:#b3123a}
+.apo-yellow{background:rgba(217,160,0,.13)}
+.apo-yellow .apo-sem{color:#9a7400}
+.apo-green{background:rgba(22,140,80,.08)}
+.apo-green .apo-sem{color:#157347}
+.apo-legend{font-size:.75rem;color:var(--muted);margin:.6rem 0 0}
+
 /* states */
 .loading,.error{color:var(--muted);padding:2rem 0}
 .error{color:var(--brand-text)}

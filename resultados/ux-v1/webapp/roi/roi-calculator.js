@@ -9,10 +9,6 @@
 (function () {
   "use strict";
 
-  // Revenue de referencia GSW (dato de Sports World): supera los $24,000 millones MXN.
-  // Si tienes la cifra exacta, ajústala aquí.
-  const GSW_REVENUE_2025 = 24000000000;
-
   const I18N = {
     es: {
       title: "Calculadora de ROI",
@@ -23,7 +19,7 @@
       presets: "Escenarios de la tasa visita→consulta (B):",
       pPess: "Pesimista 1.0%", pCons: "Conservador 1.5%", pVoice: "Con agente IA 2.5%", pPaid: "Con paid + IA 4.0%",
       outMembers: "Nuevos asociados / año", outRevenue: "Revenue incremental anual",
-      outMonthly: "Revenue incremental mensual", outPct: "% del revenue GSW 2025",
+      outMonthly: "Revenue incremental mensual",
       churnTitle: "Efecto anti-churn (adicional)",
       churn: "Recuperar la visibilidad también protege a los socios actuales que buscan “gym cerca de mí” o actividades y hoy encuentran competidores. Cada punto de churn prevenido representa socios retenidos y su ingreso anual asociado (ajusta D para estimarlo).",
       disclaimer: "Estimación basada en el modelo paramétrico de la propuesta. Las tasas B y C las calibra Sports World con sus datos reales; los objetivos comerciales son alcanzables, no comprometidos contractualmente.",
@@ -38,7 +34,7 @@
       presets: "Visit→enquiry rate scenarios (B):",
       pPess: "Pessimistic 1.0%", pCons: "Conservative 1.5%", pVoice: "With AI agent 2.5%", pPaid: "With paid + AI 4.0%",
       outMembers: "New members / year", outRevenue: "Incremental annual revenue",
-      outMonthly: "Incremental monthly revenue", outPct: "% of GSW 2025 revenue",
+      outMonthly: "Incremental monthly revenue",
       churnTitle: "Anti-churn effect (additional)",
       churn: "Recovering visibility also protects current members who search “gym near me” or activities and today find competitors. Each churn point prevented represents retained members and their associated annual revenue (adjust D to estimate it).",
       disclaimer: "Estimate based on the proposal's parametric model. Rates B and C are calibrated by Sports World with real data; commercial objectives are achievable, not contractually committed.",
@@ -51,7 +47,7 @@
 
   window.mountROICalculator = function (container, lang) {
     const t = I18N[lang === "en" ? "en" : "es"];
-    const state = { A: 80000, B: 1.5, C: 30, D: 20900 };
+    const state = { A: 80000, B: 1.5, C: 30, D: 24000 };
 
     container.innerHTML =
       '<div class="roi">' +
@@ -67,7 +63,7 @@
         '</div>' +
         '<div class="roi-out">' +
           out("members", t.outMembers) + out("revenue", t.outRevenue) +
-          out("monthly", t.outMonthly) + out("pct", t.outPct) +
+          out("monthly", t.outMonthly) +
         '</div>' +
         '<div class="roi-formula"><code>' + t.formula + '</code></div>' +
         '<div class="roi-churn"><strong>' + t.churnTitle + '</strong><p>' + t.churn + '</p></div>' +
@@ -91,7 +87,6 @@
       container.querySelector('[data-out="members"]').textContent = fmtInt(members);
       container.querySelector('[data-out="revenue"]').textContent = fmtMXN(revenue);
       container.querySelector('[data-out="monthly"]').textContent = fmtMXN(revenue / 12);
-      container.querySelector('[data-out="pct"]').textContent = (revenue / GSW_REVENUE_2025 * 100).toFixed(1) + "%";
     }
 
     container.addEventListener("input", (e) => {
