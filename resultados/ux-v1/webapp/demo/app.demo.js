@@ -2187,29 +2187,29 @@ function QuestionRenderer({
     return physVal[f.k] != null && physVal[f.k] !== "" && (isNaN(n) || n < f.min || n > f.max);
   });
   return /*#__PURE__*/React.createElement("div", {
-    className: "min-h-screen flex flex-col",
+    className: "h-[100dvh] flex flex-col overflow-hidden",
     style: {
       background: BRAND.white
     }
   }, /*#__PURE__*/React.createElement("div", {
-    className: "px-6 pt-6 pb-4 max-w-xl mx-auto w-full flex-1 flex flex-col"
+    className: "px-6 pt-4 pb-3 max-w-xl mx-auto w-full flex-1 flex flex-col min-h-0"
   }, /*#__PURE__*/React.createElement("h2", {
-    className: "mt-6",
+    className: "mt-1",
     style: {
       fontWeight: 900,
-      fontSize: "1.625rem",
+      fontSize: "1.375rem",
       lineHeight: 1.15,
       letterSpacing: "-0.015em",
       color: BRAND.black
     }
   }, question.label), question.helper && /*#__PURE__*/React.createElement("p", {
-    className: "mt-2",
+    className: "mt-1",
     style: {
       color: BRAND.gray4,
       fontSize: "0.875rem"
     }
   }, question.helper), /*#__PURE__*/React.createElement("div", {
-    className: "mt-6 flex-1"
+    className: "mt-3 flex-1 overflow-y-auto min-h-0"
   }, question.type === "text" && /*#__PURE__*/React.createElement("input", {
     type: "text",
     value: value || "",
@@ -2385,7 +2385,7 @@ function QuestionRenderer({
       marginTop: "0.5rem"
     }
   }, "Revisa los valores: peso 30–250 kg, estatura 100–230 cm, cintura 40–200 cm."))), /*#__PURE__*/React.createElement("div", {
-    className: "flex gap-3 mt-8 pb-6"
+    className: "flex gap-3 mt-3 pt-2 pb-3 shrink-0"
   }, !isFirst && /*#__PURE__*/React.createElement("button", {
     onClick: onBack,
     className: "px-6 py-3 rounded font-semibold",

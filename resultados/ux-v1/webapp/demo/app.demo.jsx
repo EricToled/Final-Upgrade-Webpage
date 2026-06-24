@@ -729,12 +729,12 @@ function QuestionRenderer({ question, value, onChange, onNext, onBack, isFirst, 
   const physOut = physFields.filter(f => { const n = parseFloat(physVal[f.k]); return physVal[f.k] != null && physVal[f.k] !== "" && (isNaN(n) || n < f.min || n > f.max); });
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: BRAND.white }}>
-      <div className="px-6 pt-6 pb-4 max-w-xl mx-auto w-full flex-1 flex flex-col">
-        <h2 className="mt-6" style={{ fontWeight: 900, fontSize: "1.625rem", lineHeight: 1.15, letterSpacing: "-0.015em", color: BRAND.black }}>{question.label}</h2>
-        {question.helper && <p className="mt-2" style={{ color: BRAND.gray4, fontSize: "0.875rem" }}>{question.helper}</p>}
+    <div className="h-[100dvh] flex flex-col overflow-hidden" style={{ background: BRAND.white }}>
+      <div className="px-6 pt-4 pb-3 max-w-xl mx-auto w-full flex-1 flex flex-col min-h-0">
+        <h2 className="mt-1" style={{ fontWeight: 900, fontSize: "1.375rem", lineHeight: 1.15, letterSpacing: "-0.015em", color: BRAND.black }}>{question.label}</h2>
+        {question.helper && <p className="mt-1" style={{ color: BRAND.gray4, fontSize: "0.875rem" }}>{question.helper}</p>}
 
-        <div className="mt-6 flex-1">
+        <div className="mt-3 flex-1 overflow-y-auto min-h-0">
           {question.type === "text" && (
             <input type="text" value={value || ""} onChange={(e) => onChange(e.target.value)} placeholder={question.placeholder} className="w-full px-4 py-3 rounded outline-none" style={{ background: BRAND.gray1, color: BRAND.black, fontSize: "1rem", border: "1px solid " + BRAND.gray2 }} />
           )}
@@ -815,7 +815,7 @@ function QuestionRenderer({ question, value, onChange, onNext, onBack, isFirst, 
           )}
         </div>
 
-        <div className="flex gap-3 mt-8 pb-6">
+        <div className="flex gap-3 mt-3 pt-2 pb-3 shrink-0">
           {!isFirst && <button onClick={onBack} className="px-6 py-3 rounded font-semibold" style={{ background: "transparent", color: BRAND.gray4, fontSize: "0.875rem" }}>← Atrás</button>}
           <button onClick={onNext} disabled={!canAdvance()} className="flex-1 px-6 py-3 rounded font-bold" style={{ background: canAdvance() ? BRAND.red : BRAND.gray2, color: canAdvance() ? BRAND.white : BRAND.gray3, fontSize: "0.95rem", cursor: canAdvance() ? "pointer" : "not-allowed" }}>{isLast ? "Ver mi experiencia ideal" : "Continuar"}</button>
         </div>
