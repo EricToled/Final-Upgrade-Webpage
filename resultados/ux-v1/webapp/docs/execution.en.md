@@ -124,17 +124,18 @@ The project advances through four approval gates; each corresponds to the schedu
 
 ## 6 · Committed technical KPIs and launch acceptance criteria
 
-These are the **committed technical KPIs** of the **[Contract · Annex Two, Section IV](#contrato)** —they depend only on the provider and are verifiable—. They are not to be confused with the commercial objectives (traffic, rankings, conversion), which depend on external factors and are not guaranteed.
+These are the **committed KPIs** of the **[Contract · Annex Two, Section IV](#contrato)** —they depend on the provider and are verifiable—. What is not guaranteed are the specific per-keyword rankings and the traffic volumes, which depend on external factors.
 
-| Technical KPI (committed) | Baseline | Goal | Verification |
+| Committed KPI | Baseline | Goal | Verification |
 |---|---|---|---|
 | Crawlable club pages (SSR) | 0 of 49 | 49 of 49 | Google Search Console |
 | Broken links | 136 | 0 | Semrush Site Audit |
 | JSON-LD schema markup per club | 0 | 49 | Google Rich Results Test |
 | Pages without H1 | 11 | 0 | Semrush Site Audit |
+| Unbranded keyword coverage | 31.1% | 55–65% | Semrush |
 
 **Launch acceptance checklist (Week 8).** Everything must be green to consider the launch fulfilled:
-- The four technical KPIs above at their goal.
+- The committed KPIs above at their goal.
 - **Core Web Vitals** within threshold (LCP < 2.5 s, INP < 200 ms, CLS < 0.1) and **WCAG 2.2 AA** verified.
 - The 148 pages published and crawlable; the 49 Google Business listings submitted and in optimization.
 - **End-to-end lead capture** to the CRM, from the site and from BES, without duplicates (idempotency).

@@ -28,7 +28,7 @@ De conformidad con las Declaraciones que anteceden, las Partes están de acuerdo
 
 **PRIMERA. Objeto del Contrato.** EL PRESTADOR se obliga a prestar a EL CLIENTE los servicios profesionales que de manera limitativa se describen en los apartados I, II y III siguientes, conforme al detalle de entregables del **Anexo Dos** y contra los requerimientos a cargo de EL CLIENTE del **Anexo Uno**, ambos parte integrante e inseparable del Contrato. Cualquier servicio o entregable no comprendido expresamente se entenderá excluido y será materia de cotización por separado mediante convenio modificatorio. Para las cantidades en dólares se conviene el tipo de cambio fijo de **MXN $17.80 por USD $1.00**. Los plazos a cargo de EL PRESTADOR comienzan a correr a partir de la entrega, por EL CLIENTE, de la totalidad de los requerimientos del Anexo Uno; cualquier atraso de EL CLIENTE extiende, día por día, dichos plazos, sin responsabilidad para EL PRESTADOR.
 
-**I. Rediseño integral del sitio web sportsworld.com.mx con enfoque en posicionamiento orgánico.** Nuevo sitio institucional bajo el dominio sportsworld.com.mx, integrado por **148 (ciento cuarenta y ocho) páginas**, conforme al alcance, la arquitectura y los entregables del Anexo Dos, con diseño **Mobile First** (≈70% del tráfico es móvil). Plazo de entrega: **8 (ocho) semanas**, conforme al cómputo de esta Cláusula y a las aprobaciones del Anexo Dos. EL CLIENTE reconoce que el posicionamiento, los volúmenes de tráfico y las posiciones específicas dependen de factores ajenos a EL PRESTADOR (entre ellos los algoritmos de los buscadores); EL PRESTADOR **no garantiza** posiciones específicas, volúmenes de tráfico ni resultados numéricos de posicionamiento orgánico.
+**I. Rediseño integral del sitio web sportsworld.com.mx con enfoque en posicionamiento orgánico.** Nuevo sitio institucional bajo el dominio sportsworld.com.mx, integrado por **148 (ciento cuarenta y ocho) páginas**, conforme al alcance, la arquitectura y los entregables del Anexo Dos, con diseño **Mobile First** (≈70% del tráfico es móvil). Plazo de entrega: **8 (ocho) semanas**, conforme al cómputo de esta Cláusula y a las aprobaciones del Anexo Dos. EL CLIENTE reconoce que las posiciones específicas por palabra clave y los volúmenes de tráfico dependen de factores ajenos a EL PRESTADOR (entre ellos los algoritmos de los buscadores); EL PRESTADOR **no garantiza** posiciones específicas por palabra clave ni volúmenes de tráfico. Lo comprometido son los KPIs verificables del Anexo Dos, Sección IV (incluida la cobertura de keywords unbranded).
 
 **II. Desarrollo e integración del agente de voz conversacional "BES".** Agente "BES" integrado al sitio, con voz sintética natural en español de México e interacción bidireccional por voz y texto, entrenado con la base de conocimiento de EL CLIENTE. Su operación bajo este Contrato se limita al **canal web** del sitio y al envío automatizado, vía **WhatsApp**, de **2 (dos) mensajes recordatorios** (24 horas y 2 horas antes de la visita agendada). Quedan excluidas las interacciones de venta por WhatsApp como canal de entrada y cualquier canal distinto al sitio web. Los **costos de operación** de "BES" (plataforma de voz, interfaz del modelo de razonamiento y hospedaje de la lógica) los cubre directamente EL CLIENTE a los proveedores correspondientes y no constituyen ingreso de EL PRESTADOR (ver Cláusula Sexta Bis). EL PRESTADOR **no garantiza** tasas de conversión, cierres ni volúmenes de agendamiento.
 
@@ -304,27 +304,19 @@ Bajo la iguala mensual (Opción A elegida por EL CLIENTE; Cláusula Segunda): ho
 
 ## Sección IV — KPIs y calculadora de ROI (estrategia comercial)
 
-Se distinguen los **KPIs técnicos comprometidos** (dependen solo de EL PRESTADOR y son verificables) de los **objetivos comerciales alcanzables** (no garantizados, en congruencia con la Cláusula Primera).
+Los siguientes son los **KPIs comprometidos** del proyecto: dependen de EL PRESTADOR y son verificables. Línea base: auditoría inicial (Semrush, marzo 2026).
 
-**KPIs técnicos de corrección (comprometidos).** Línea base: auditoría inicial (Semrush, marzo 2026).
-
-| KPI técnico | Línea base | Meta | Verificación |
+| KPI comprometido | Línea base | Meta | Verificación |
 |---|---|---|---|
 | Páginas de club crawleables (SSR) | 0 de 49 | 49 de 49 | Google Search Console |
 | Enlaces rotos | 136 | 0 | Semrush Site Audit |
 | Schema markup JSON-LD por club | 0 | 49 | Google Rich Results Test |
 | Páginas sin H1 | 11 | 0 | Semrush Site Audit |
 | Core Web Vitals (LCP / INP / CLS) | fuera de umbral | < 2.5 s / < 200 ms / < 0.1 | PageSpeed Insights |
+| **Cobertura de keywords unbranded** | 31.1% | 55–65% | Semrush |
 | Código de fixes entregado | — | 100% | Entregable verificable |
 
-**Objetivos comerciales (alcanzables, no garantizados).** Benchmark: David Lloyd Clubs (31% → 74%).
-
-| Objetivo | Línea base | Meta alcanzable | Referencia |
-|---|---|---|---|
-| Cobertura de keywords unbranded | 31.1% | 55–65% | Semrush |
-| Tráfico mensual promedio | 80,000 | 160,000 | Google Analytics 4 |
-
-**Calculadora de ROI.** Modelo paramétrico: **Revenue incremental anual = A × 12 × B × C × D** (A: tráfico incremental mensual; B: tasa visita→consulta; C: tasa consulta→asociado; D: ingreso anual por asociado).
+**Calculadora de ROI (ilustrativa; no constituye garantía).** Modelo paramétrico: **Revenue incremental anual = A × 12 × B × C × D** (A: tráfico incremental mensual; B: tasa visita→consulta; C: tasa consulta→asociado; D: ingreso anual por asociado).
 
 [[ROI]]
 

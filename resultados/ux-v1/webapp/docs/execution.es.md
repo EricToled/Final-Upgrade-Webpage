@@ -124,14 +124,15 @@ El proyecto avanza por cuatro compuertas de aprobación; cada una corresponde al
 
 ## 6 · KPIs técnicos comprometidos y criterios de aceptación del lanzamiento
 
-Estos son los **KPIs técnicos comprometidos** del **[Contrato · Anexo Dos, Sección IV](#contrato:seccin-iv-kpis-y-calculadora-de-roi-estrategia-comercial)** —dependen solo del proveedor y son verificables—. No se confunden con los objetivos comerciales (tráfico, posiciones, conversión), que dependen de factores externos y no se garantizan.
+Estos son los **KPIs comprometidos** del **[Contrato · Anexo Dos, Sección IV](#contrato:seccin-iv-kpis-y-calculadora-de-roi-estrategia-comercial)** —dependen del proveedor y son verificables—. No se garantizan, en cambio, las posiciones específicas por palabra clave ni los volúmenes de tráfico, que dependen de factores externos.
 
-| KPI técnico (comprometido) | Línea base | Meta | Verificación |
+| KPI comprometido | Línea base | Meta | Verificación |
 |---|---|---|---|
 | Páginas de club crawleables (SSR) | 0 de 49 | 49 de 49 | Google Search Console |
 | Enlaces rotos | 136 | 0 | Semrush Site Audit |
 | Schema markup JSON-LD por club | 0 | 49 | Google Rich Results Test |
 | Páginas sin H1 | 11 | 0 | Semrush Site Audit |
+| Cobertura de keywords unbranded | 31.1% | 55–65% | Semrush |
 
 **Checklist de aceptación del lanzamiento (Semana 8).** Todo debe estar en verde para dar por cumplido el lanzamiento:
 - Los cuatro KPIs técnicos anteriores en su meta.
