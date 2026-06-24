@@ -34,7 +34,7 @@ De conformidad con las Declaraciones que anteceden, las Partes están de acuerdo
 
 **II. Desarrollo e integración del agente de voz conversacional "BES".** Agente "BES" integrado al sitio, con voz sintética natural en español de México e interacción bidireccional por voz y texto, entrenado con la base de conocimiento de EL CLIENTE. Su operación bajo este Contrato se limita al **canal web** del sitio y al envío automatizado, vía **WhatsApp**, de **2 (dos) mensajes recordatorios** (24 horas y 2 horas antes de la visita agendada). Quedan excluidas las interacciones de venta por WhatsApp como canal de entrada y cualquier canal distinto al sitio web. Los **costos de operación** de "BES" (plataforma de voz, interfaz del modelo de razonamiento y hospedaje de la lógica) los cubre directamente EL CLIENTE a los proveedores correspondientes y no constituyen ingreso de EL PRESTADOR (ver Cláusula Sexta Bis). EL PRESTADOR **no garantiza** tasas de conversión, cierres ni volúmenes de agendamiento.
 
-**III. Servicios recurrentes de hospedaje, mantenimiento y soporte técnico.** Mediante una **iguala mensual**, a elección de EL CLIENTE entre la Opción A o la Opción B de la Cláusula Segunda, que comprende hospedaje, mantenimiento técnico (seguridad, dependencias y desempeño), mantenimiento de "BES", operación de la sección de administración y del tablero, reporte mensual y soporte. La iguala incluye una **bolsa de mejora de hasta 8 (ocho) horas mensuales, no acumulables**; los excedentes se facturan conforme a tarifas. Plazo mínimo inicial **6 (seis) meses**; concluido éste, cualquiera de las Partes podrá darla por terminada con aviso por escrito de al menos **60 (sesenta) días naturales**.
+**III. Servicios recurrentes de hospedaje, mantenimiento y soporte técnico.** Mediante una **iguala mensual**, a elección de EL CLIENTE entre la Opción A o la Opción B de la Cláusula Segunda, que comprende hospedaje, mantenimiento técnico (seguridad, dependencias y desempeño), mantenimiento de "BES", operación de la sección de administración y del tablero, reporte mensual y **soporte con primer respondiente por agente de voz disponible 24/7 (veinticuatro horas, los siete días) y escalamiento a soporte humano en horario hábil**. La iguala incluye una **bolsa de mejora de hasta 8 (ocho) horas mensuales, no acumulables**; los excedentes se facturan conforme a tarifas. Plazo mínimo inicial **6 (seis) meses**; concluido éste, cualquiera de las Partes podrá darla por terminada con aviso por escrito de al menos **60 (sesenta) días naturales**.
 
 **SEGUNDA. Contraprestación.**
 
@@ -293,7 +293,16 @@ Agente integrado al sitio con voz natural en español de México e interacción 
 
 ## Sección III — Entregables del Servicio III (servicios recurrentes)
 
-Bajo la iguala mensual elegida (Opción A o B de la Cláusula Segunda): hospedaje del sitio; mantenimiento técnico (seguridad, dependencias, desempeño); mantenimiento de "BES" (base de conocimiento, instrucciones y optimización de costos); operación de la sección de administración y del tablero; reporte mensual ejecutivo; soporte por Slack y correo en horario hábil; y **bolsa de mejora de hasta 8 (ocho) horas mensuales, no acumulables**. En la Opción B, EL PRESTADOR ejecuta hasta 3 intervenciones simples o 1 compleja al mes. *Intervención simple:* cambio en una página (texto/imagen), precios de una membresía u horarios de un club. *Intervención compleja:* cambio de plantilla de club (cascada a 49 páginas), sustitución total de imágenes de ~10 clubes, o reestructuración de un hub. Los excedentes se facturan conforme a tarifas.
+Bajo la iguala mensual elegida (Opción A o B de la Cláusula Segunda): hospedaje del sitio; mantenimiento técnico (seguridad, dependencias, desempeño); mantenimiento de "BES" (base de conocimiento, instrucciones y optimización de costos); operación de la sección de administración y del tablero; reporte mensual ejecutivo; **soporte 24/7 con primer respondiente por agente de voz que recibe, clasifica y resuelve o escala cada incidencia (con ticket de ocurrencia), y escalamiento a soporte humano en horario hábil** (Slack y correo); y **bolsa de mejora de hasta 8 (ocho) horas mensuales, no acumulables**. En la Opción B, EL PRESTADOR ejecuta hasta 3 intervenciones simples o 1 compleja al mes. *Intervención simple:* cambio en una página (texto/imagen), precios de una membresía u horarios de un club. *Intervención compleja:* cambio de plantilla de club (cascada a 49 páginas), sustitución total de imágenes de ~10 clubes, o reestructuración de un hub. Los excedentes se facturan conforme a tarifas.
+
+**Niveles de servicio (SLA) — propuesta a acordar.** El primer respondiente por agente de voz opera 24/7; la intervención humana procede en horario hábil según severidad:
+
+| Severidad | Descripción | Primera respuesta | Resolución objetivo |
+|---|---|---|---|
+| Crítico | El sitio o una función esencial caído o inaccesible (no carga; captura de leads sin funcionar). | 15 a 30 minutos | 4 horas |
+| Alto | Función importante degradada, el sitio sigue operando (integración intermitente). | 1 hora | 8 horas hábiles |
+| Medio | Problema que afecta parte del sitio sin impedir su uso. | 4 horas hábiles | 2 días hábiles |
+| Bajo | Incidencia menor o consulta. | 1 día hábil | Según lo planeado |
 
 ## Sección IV — KPIs y calculadora de ROI (estrategia comercial)
 
