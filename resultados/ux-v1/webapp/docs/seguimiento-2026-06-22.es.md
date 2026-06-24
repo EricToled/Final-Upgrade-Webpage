@@ -46,7 +46,9 @@ Esta página da seguimiento a **cada duda y punto abierto** planteado en la reun
 - 🟡 Acordar la **tarifa de excedentes** de IA/voz y los límites incluidos. *(Punto 12)*
 - 🔴 Titularidad/administración de **Google Business** para iniciar la verificación de las 49 fichas en la Semana 1.
 
-## Pendiente comercial (Final Upgrade ↔ Sports World)
+## Cierre comercial (Final Upgrade ↔ Sports World)
 
-- La **cotización ya está integrada** en el Contrato (Cláusula Segunda): contraprestación única **$129,357 USD / $2,302,550 MXN** sin IVA (**$3,000,862 MXN** inversión total con IVA a 6 meses de iguala), e igualas **$25,400 + $22,000 MXN/mes**. Falta definir el **calendario de pagos** (anticipo y % por gate) en la Cláusula Tercera.
-- **Conciliar 145 vs 148 páginas y 9 vs 8 semanas:** el objeto y el Anexo Dos del contrato indican 145 páginas y 9 semanas; el Mapa del Sitio y el Resumen del web app indican 148 páginas y 8 semanas. Debe unificarse una sola cifra antes de firma.
+- ✅ **Cotización integrada** en el Contrato (Cláusula Segunda), web-only: contraprestación única **$81,000 USD / $1,441,800 MXN** sin IVA (**$1,672,488 MXN** con IVA); iguala mensual **Opción A $35,000 / Opción B $55,000 MXN**.
+- ✅ **Forma de pago definida** (Cláusula Tercera): 30% a la firma · 25% Aprobación 1 (fin S2) · 25% Aprobación 2 (fin S4) · 20% go-live (S8).
+- ✅ **Costos operativos recalculados** (Cláusula Sexta Bis), a cargo de SW: voz, LLM y hospedaje del agente; escenarios conservador/medio/optimista.
+- ✅ **Plazo y páginas unificados a la fuente de la verdad:** **8 semanas** y **148 páginas** en todo el web app (la cotización indicaba 6 semanas / 145 páginas; cede ante la fuente única de la verdad).

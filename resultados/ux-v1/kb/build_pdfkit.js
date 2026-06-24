@@ -18,6 +18,7 @@ const DOCS = [
   { src: SRC + "/auditoria.es.md", kind: "md", title: "Auditoría inicial del sitio — El Gigante Invisible", out: "07-auditoria-inicial.es.pdf" },
   { src: SRC + "/minuta-2026-06-22.es.md", kind: "md", title: "Minuta — Reunión 22 de junio de 2026", out: "08-minuta-2026-06-22.es.pdf" },
   { src: SRC + "/seguimiento-2026-06-22.es.md", kind: "md", title: "Seguimiento — Reunión 22 de junio de 2026", out: "09-seguimiento-2026-06-22.es.pdf" },
+  { src: SRC + "/seguridad.es.md", kind: "md", title: "Seguridad del sitio — Protección de datos personales", out: "10-seguridad-del-sitio.es.pdf" },
   { src: KB + "/voice-agent-knowledge-base.html", kind: "html", title: "Base de Conocimiento — Localizador para Agente de Voz", out: "voice-agent-knowledge-base.pdf" },
 ];
 
