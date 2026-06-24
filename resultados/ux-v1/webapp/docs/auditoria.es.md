@@ -38,7 +38,7 @@ Al no existir páginas que crucen cada amenidad con cada sucursal, SW deja sobre
 | Oportunidad | Vol mensual | Cobertura actual | Fix requerido |
 |---|---|---|---|
 | "Bajar de peso" (universo separado) | 932,300 | 0.02% | Landing + blog + contenido de transformación |
-| Geográfico ("en [ciudad/colonia]") | 193,370 | 36% | Páginas de club crawleables con SSR + contenido |
+| Geográfico ("en [ciudad/colonia]") | 193,370 | 36.2% | Páginas de club crawleables con SSR + contenido |
 | Actividades sin cobertura (yoga, funcional…) | 67,060 | 7–14% | Landing por actividad + club + schema |
 | Informacional (how-to, beneficios) | 19,530 | 4.3% | Blog con clusters + internal linking |
 | Equipamiento | 18,350 | 14.7% | Contenido descriptivo en páginas de club |
@@ -98,7 +98,7 @@ Misma paradoja (premium, famoso, incomprendido), resuelta con la estrategia "Gym
 
 David Lloyd partió de ~31% de cobertura (la misma línea base que SW) y llegó a ~74%. Lo logró en 7 años sin IA; con IA, la ejecución se comprime a meses.
 
-## 5 · Cobertura por categoría (Anexo Semrush A.2)
+## 5 · Cobertura por categoría (datos Semrush, marzo 2026)
 
 Universo de 6,912 keywords unbranded limpias (de 20,003 totales, tras remover branded y ruido):
 

@@ -27,7 +27,7 @@ The personalized experience crosses what the user wants with two bodies of opera
 - **Club and class data** (names, addresses, amenities, which classes each club offers, levels, schedules) is read from Sports World's systems of record. The volatile parts (whether a club is open, whether a class still runs and at what time) must be current; the stable parts (addresses, the list of disciplines) can be synchronized on a schedule.
 - **The captured lead** (name, phone, email, the full profile, the chosen club, the scheduled visit) is written to the customer system through its API at the moment the visit is booked.
 
-The architecture is built so the recommendation logic does not care whether the data arrived live or from a recent synchronization — which means the integration can start simple and tighten later without rewriting the core. The recommendation flow's own freshness needs are specified in `01-experience-architecture.md` (§5).
+The architecture is built so the recommendation logic does not care whether the data arrived live or from a recent synchronization — which means the integration can start simple and tighten later without rewriting the core. The recommendation flow's own freshness needs are specified in the **Experience Architecture (UX)** document, §5.
 
 ## 3 · The SEO and structured-data layer
 

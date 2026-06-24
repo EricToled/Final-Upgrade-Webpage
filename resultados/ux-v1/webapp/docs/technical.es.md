@@ -27,7 +27,7 @@ La experiencia personalizada cruza lo que el usuario quiere con dos cuerpos de d
 - **Los datos de clubes y clases** (nombres, direcciones, amenidades, qué clases ofrece cada club, niveles, horarios) se leen de los sistemas de registro de Sports World. Las partes volátiles (si un club está abierto, si una clase sigue impartiéndose y a qué hora) deben estar actualizadas; las partes estables (direcciones, la lista de disciplinas) pueden sincronizarse de forma programada.
 - **El lead capturado** (nombre, teléfono, correo, el perfil completo, el club elegido, la visita agendada) se escribe en el sistema de clientes a través de su API en el momento en que se reserva la visita.
 
-La arquitectura está construida para que la lógica de recomendación no dependa de si el dato llegó en vivo o de una sincronización reciente —lo que significa que la integración puede comenzar simple y robustecerse después sin reescribir el núcleo. Las necesidades de actualización propias del flujo de recomendación se especifican en `01-experience-architecture.md` (§5).
+La arquitectura está construida para que la lógica de recomendación no dependa de si el dato llegó en vivo o de una sincronización reciente —lo que significa que la integración puede comenzar simple y robustecerse después sin reescribir el núcleo. Las necesidades de actualización propias del flujo de recomendación se especifican en el documento **Arquitectura de Experiencia (UX)**, §5.
 
 ## 3 · La capa de SEO y datos estructurados
 

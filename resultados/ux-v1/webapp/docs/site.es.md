@@ -5,7 +5,7 @@ Documento fundacional. Define la arquitectura de información del sitio: los tip
 
 ## Cómo se relaciona esto con la experiencia ideal
 
-El sitio tiene dos capas que conviven. La primera es el **sitio de contenido y SEO**: las 148 páginas que hacen que Sports World aparezca en búsquedas y le dan a cada club, clase y amenidad su propio lugar en Google. La segunda es el **flujo de experiencia ideal**: el recorrido personalizado que convierte a un visitante anónimo en un prospecto agendado, cuya navegación, cuestionario y reglas de negocio se especifican en `01-experience-architecture.md`. Ambas capas comparten los mismos datos de clubes y clases y la misma captación de leads, de modo que cuentan una sola historia.
+El sitio tiene dos capas que conviven. La primera es el **sitio de contenido y SEO**: las 148 páginas que hacen que Sports World aparezca en búsquedas y le dan a cada club, clase y amenidad su propio lugar en Google. La segunda es el **flujo de experiencia ideal**: el recorrido personalizado que convierte a un visitante anónimo en un prospecto agendado, cuya navegación, cuestionario y reglas de negocio se especifican en el documento **Arquitectura de Experiencia (UX)**. Ambas capas comparten los mismos datos de clubes y clases y la misma captación de leads, de modo que cuentan una sola historia.
 
 Una aclaración, para no confundir las capas: el flujo de experiencia ideal usa solo **dos amenidades** para resolver el club —la alberca y FitKidz— porque son las únicas por las que pregunta. Las amenidades listadas abajo como hubs (alberca, INTENZ, ring de box, etc.) son **páginas de SEO**, no criterios de resolución de club. Son cosas distintas que cumplen propósitos distintos.
 

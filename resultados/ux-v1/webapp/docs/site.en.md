@@ -5,7 +5,7 @@ Foundational document. It defines the information architecture of the site: the 
 
 ## How this relates to the ideal experience
 
-The site has two layers that coexist. The first is the **content and SEO site**: the 148 pages that make Sports World show up in search and give every club, class, and amenity its own place on Google. The second is the **ideal-experience flow**: the personalized journey that turns an anonymous visitor into a scheduled prospect, whose navigation, questionnaire, and business rules are specified in `01-experience-architecture.md`. Both layers share the same club and class data and the same lead capture, so they tell one story.
+The site has two layers that coexist. The first is the **content and SEO site**: the 148 pages that make Sports World show up in search and give every club, class, and amenity its own place on Google. The second is the **ideal-experience flow**: the personalized journey that turns an anonymous visitor into a scheduled prospect, whose navigation, questionnaire, and business rules are specified in the **Experience Architecture (UX)** document. Both layers share the same club and class data and the same lead capture, so they tell one story.
 
 One clarification, to avoid confusing the layers: the ideal-experience flow uses only **two amenities** to resolve the club — the pool and FitKidz — because they are the only ones it asks about. The amenities listed below as hubs (pool, INTENZ, boxing ring, etc.) are **SEO pages**, not club-resolution criteria. They are different things serving different purposes.
 

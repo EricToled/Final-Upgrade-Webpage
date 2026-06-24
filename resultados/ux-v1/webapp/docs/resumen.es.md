@@ -92,6 +92,6 @@ La verificación de Google Business es el único elemento de ruta crítica y se 
 
 ## 8 · KPIs y próximos pasos
 
-Nos comprometemos con los **KPIs técnicos de corrección** —que dependen solo de nosotros y son 100% verificables: 49+ páginas de club rastreables (de 0), 116 enlaces rotos → 0, 20 URLs con backslash → 0, schema JSON-LD por club (de 0). Señalamos como **objetivos comerciales alcanzables —no comprometidos**, porque dependen de Google y del embudo interno de Sports World: cobertura unbranded 31.1% → 55–65% (benchmark David Lloyd Clubs: 31% → 74%) y tráfico mensual promedio 80,000 → 160,000. El detalle, junto con la **calculadora de ROI** interactiva, vive en el Contrato › Entregables y KPIs.
+Nos comprometemos con los **KPIs técnicos de corrección** —que dependen solo de nosotros y son 100% verificables: 49+ páginas de club rastreables (de 0), 116 enlaces rotos → 0, 20 URLs con backslash → 0, schema JSON-LD por club (de 0). Señalamos como **objetivos comerciales alcanzables —no comprometidos**, porque dependen de Google y del embudo interno de Sports World: cobertura unbranded 31.1% → 55–65% (benchmark David Lloyd Clubs: 31% → 74%) y tráfico mensual promedio 80,000 → 160,000. El detalle, junto con la **calculadora de ROI** interactiva, vive en el Contrato › Anexo Dos, Sección IV (KPIs y calculadora de ROI).
 
 **Próximo paso:** aprobar esta propuesta, cerrar el kickoff con la firma del checklist de dependencias y arrancar las ocho semanas. A partir de ahí, el calendario corre.
