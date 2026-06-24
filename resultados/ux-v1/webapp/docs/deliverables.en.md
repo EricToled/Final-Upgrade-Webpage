@@ -7,11 +7,11 @@ Foundational document. It lists, in detail, everything Sports World receives —
 
 At the close of the project, Sports World owns the following. All of it stays Sports World's property.
 
-- **The complete website** — fast and search-optimized, built from approved templates: the home, a page for each of the 49 clubs, the amenity and goal hubs, and the ideal-experience flow that turns an anonymous visitor into a scheduled, qualified lead. The full 148-page inventory is in `02-site-architecture.md`; the technology in `03-technical-strategy.md`. Delivered hosted on Sports World's own server.
+- **The complete website** — fast and search-optimized, built from approved templates: the home, a page for each of the 49 clubs, the amenity and goal hubs, and the ideal-experience flow that turns an anonymous visitor into a scheduled, qualified lead. The full 148-page inventory is in the **Site Map** document; the technology in **Technical Strategy**. Delivered hosted on Sports World's own server.
 - **The site in two versions, mobile and desktop** — a single mobile-first responsive codebase, with the measurable quality targets (Core Web Vitals, image optimization, WCAG 2.2 AA) verified on every change.
-- **The no-code content panel (CMS)** — to edit text and replace images without programming, recommended as a self-hosted headless CMS on Sports World's own server (`02-site-architecture.md`).
+- **The no-code content panel (CMS)** — to edit text and replace images without programming, recommended as a self-hosted headless CMS on Sports World's own server (see **Site Map**).
 - **All optimized written content and the structured data** — the per-club pages, the amenity and goal hubs, the supporting articles, and the JSON-LD schema markup that lets Google understand every service at every location.
-- **The 49 Google Business listings** — created and optimized, one per club, so each location is correctly represented on Google Search and Maps. (Honest dependency: Google does not allow new listings to be created automatically; their verification is Google-controlled and time-bound, which is why the process starts in Week 1 — see `04-execution-plan.md`, §4.3.)
+- **The 49 Google Business listings** — created and optimized, one per club, so each location is correctly represented on Google Search and Maps. (Honest dependency: Google does not allow new listings to be created automatically; their verification is Google-controlled and time-bound, which is why the process starts in Week 1 — see Execution Plan, §4.3.)
 - **The on-brand visual content** — a complete set across all 49 clubs and the supporting pages, produced through the custom application.
 - **BES, the voice and text agent** — live on phone and WhatsApp, capturing leads into the same CRM with the same answers as the website.
 - **The full site migration** — from the current site to the new one, protecting the corporate email and any other DNS-linked function (§2).

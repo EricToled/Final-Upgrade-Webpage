@@ -8,6 +8,7 @@ const SRC = BASE + "/webapp/docs";
 const KB = BASE + "/kb";
 
 const DOCS = [
+  { src: SRC + "/indice.es.md", kind: "md", title: "Índice de documentos — Mapa y localizador", out: "13-indice-de-documentos.es.pdf" },
   { src: SRC + "/resumen.es.md", kind: "md", title: "Resumen Ejecutivo — Una nueva arquitectura digital", out: "00-resumen-ejecutivo.es.pdf" },
   { src: SRC + "/experience.es.md", kind: "md", title: "UX Architecture Specs — Arquitectura de Experiencia", out: "01-arquitectura-de-experiencia.es.pdf" },
   { src: SRC + "/technical.es.md", kind: "md", title: "Estrategia Técnica", out: "02-estrategia-tecnica.es.pdf" },

@@ -7,11 +7,11 @@ Documento fundacional. Enumera, a detalle, todo lo que recibe Sports World — e
 
 Al cierre del proyecto, Sports World es propietario de lo siguiente. Todo ello queda como propiedad de Sports World.
 
-- **El sitio web completo** — rápido y optimizado para buscadores, construido a partir de plantillas aprobadas: el home, una página para cada uno de los 49 clubes, los hubs de amenidades y objetivos, y el flujo de experiencia ideal que convierte a un visitante anónimo en un lead agendado y cualificado. El inventario completo de 148 páginas está en `02-site-architecture.md`; la tecnología en `03-technical-strategy.md`. Se entrega alojado en el servidor propio de Sports World.
+- **El sitio web completo** — rápido y optimizado para buscadores, construido a partir de plantillas aprobadas: el home, una página para cada uno de los 49 clubes, los hubs de amenidades y objetivos, y el flujo de experiencia ideal que convierte a un visitante anónimo en un lead agendado y cualificado. El inventario completo de 148 páginas está en Mapa del Sitio; la tecnología en Estrategia Técnica. Se entrega alojado en el servidor propio de Sports World.
 - **El sitio en dos versiones, móvil y escritorio** — un único código responsivo mobile-first, con las metas de calidad medibles (Core Web Vitals, optimización de imágenes, WCAG 2.2 AA) verificadas en cada cambio.
-- **El panel de contenido no-code (CMS)** — para editar texto y reemplazar imágenes sin programar, recomendado como un CMS headless autoalojado en el servidor propio de Sports World (`02-site-architecture.md`).
+- **El panel de contenido no-code (CMS)** — para editar texto y reemplazar imágenes sin programar, recomendado como un CMS headless autoalojado en el servidor propio de Sports World (Mapa del Sitio).
 - **Todo el contenido escrito optimizado y los datos estructurados** — las páginas por club, los hubs de amenidades y objetivos, los artículos de apoyo, y el schema markup JSON-LD que permite a Google entender cada servicio en cada ubicación.
-- **Las 49 fichas de Google Business** — creadas y optimizadas, una por club, para que cada ubicación quede correctamente representada en Google Search y Maps. (Dependencia honesta: Google no permite crear nuevas fichas de forma automática; su verificación es controlada por Google y está sujeta a tiempos, razón por la cual el proceso inicia en la Semana 1 — ver `04-execution-plan.md`, §4.3.)
+- **Las 49 fichas de Google Business** — creadas y optimizadas, una por club, para que cada ubicación quede correctamente representada en Google Search y Maps. (Dependencia honesta: Google no permite crear nuevas fichas de forma automática; su verificación es controlada por Google y está sujeta a tiempos, razón por la cual el proceso inicia en la Semana 1 — ver Plan de Ejecución, §4.3.)
 - **El contenido visual alineado a la marca** — un conjunto completo en los 49 clubes y las páginas de apoyo, producido mediante la aplicación a la medida.
 - **BES, el agente de voz y texto** — activo en teléfono y WhatsApp, capturando leads en el mismo CRM con las mismas respuestas que el sitio web.
 - **La migración completa del sitio** — del sitio actual al nuevo, protegiendo el correo corporativo y cualquier otra función ligada al DNS (§2).
@@ -35,16 +35,16 @@ El proyecto incluye un sistema de soporte 24/7, provisto por el equipo de Final 
 
 **Horarios y niveles de servicio (SLA).** El soporte opera 24 horas al día, 7 días a la semana, 365 días al año. Los tiempos de respuesta se proponen por severidad, siguiendo el estándar típico de la industria para soporte de misión crítica. **Estos tiempos son una propuesta a acordar con Sports World**, ajustados a la criticidad que Sports World defina para el sitio:
 
-- **Crítico** — el sitio o una función esencial está caído o inaccesible (por ejemplo, el sitio no carga, o la captura de leads no funciona). Primera respuesta propuesta: **15 to 30 minutes**. Resolución objetivo propuesta: **4 hours**.
-- **Alto** — una función importante está degradada pero el sitio sigue operando (por ejemplo, una integración intermitente). Primera respuesta propuesta: **1 hour**. Resolución objetivo propuesta: **8 business hours**.
-- **Medio** — un problema que afecta parte del sitio sin impedir su uso (por ejemplo, un componente visual que se renderiza mal en algunos casos). Primera respuesta propuesta: **4 business hours**. Resolución objetivo propuesta: **2 business days**.
-- **Bajo** — una incidencia menor o una consulta (por ejemplo, una duda sobre cómo editar una página en el panel). Primera respuesta propuesta: **1 business day**. Resolución según lo planeado.
+- **Crítico** — el sitio o una función esencial está caído o inaccesible (por ejemplo, el sitio no carga, o la captura de leads no funciona). Primera respuesta propuesta: **15 a 30 minutos**. Resolución objetivo propuesta: **4 horas**.
+- **Alto** — una función importante está degradada pero el sitio sigue operando (por ejemplo, una integración intermitente). Primera respuesta propuesta: **1 hora**. Resolución objetivo propuesta: **8 horas hábiles**.
+- **Medio** — un problema que afecta parte del sitio sin impedir su uso (por ejemplo, un componente visual que se renderiza mal en algunos casos). Primera respuesta propuesta: **4 horas hábiles**. Resolución objetivo propuesta: **2 días hábiles**.
+- **Bajo** — una incidencia menor o una consulta (por ejemplo, una duda sobre cómo editar una página en el panel). Primera respuesta propuesta: **1 día hábil**. Resolución según lo planeado.
 
 Estos tiempos se miden desde que se abre el ticket de ocurrencia. Al cierre de cada mes, se entrega un reporte de los tickets atendidos — su severidad, tiempo de respuesta y resolución.
 
 **La cuota mensual.** El modelo de cuota mensual ya está en la propuesta firmada, con dos opciones según quién opere el sitio en el día a día:
-- **Opción A — $35,000 MXN/month (el cliente se autogestiona en el CMS).** Sports World edita su propio texto e imágenes a través del panel de administración, y Final Upgrade brinda soporte técnico para el sitio y el sistema bajo el modelo 24/7 anterior.
-- **Opción B — $55,000 MXN/month (Final Upgrade opera).** Además del soporte técnico 24/7, Final Upgrade también ejecuta las actualizaciones de contenido y los cambios operativos, de modo que Sports World no necesita operar el panel.
+- **Opción A — $35,000 MXN/mes (el cliente se autogestiona en el CMS).** Sports World edita su propio texto e imágenes a través del panel de administración, y Final Upgrade brinda soporte técnico para el sitio y el sistema bajo el modelo 24/7 anterior.
+- **Opción B — $55,000 MXN/mes (Final Upgrade opera).** Además del soporte técnico 24/7, Final Upgrade también ejecuta las actualizaciones de contenido y los cambios operativos, de modo que Sports World no necesita operar el panel.
 
 Sports World elige una de las dos. Ambas incluyen soporte técnico 24/7 con un primer respondiente de voz, escalamiento basado en severidad y tickets de ocurrencia.
 
@@ -64,7 +64,7 @@ Una vez liberado el proyecto (lanzado el sitio), se contempla una etapa de estab
 
 **Qué es y para qué sirve.** Por bien probado que esté un sitio antes del lanzamiento, la exposición al tráfico real, a los dispositivos reales de los usuarios y a las integraciones en vivo siempre revela ajustes finos. La etapa de estabilización es el periodo en el que esos ajustes se atienden de inmediato, antes de pasar a la operación normal de soporte mensual.
 
-**Duración propuesta.** Siguiendo el estándar de la industria, se propone una etapa de estabilización de **2 to 4 weeks** después del lanzamiento. **Esta duración es una propuesta a acordar** con Sports World.
+**Duración propuesta.** Siguiendo el estándar de la industria, se propone una etapa de estabilización de **2 a 4 semanas** después del lanzamiento. **Esta duración es una propuesta a acordar** con Sports World.
 
 **Qué incluye.** Atención reforzada (el equipo monitorea el sitio de forma proactiva y prioriza cualquier incidencia derivada del lanzamiento); corrección de ajustes de lanzamiento (los que surjan de la exposición al tráfico y dispositivos reales se corrigen como parte de la estabilización, sin consumir la bolsa de horas de mejora); confirmación de las integraciones en vivo (la captura de leads al CRM, los datos de clubes y clases, las 49 fichas de Google, y BES operando correctamente bajo condiciones reales); y cierre (al final del periodo, el sitio pasa a operación normal bajo el modelo de soporte mensual y la bolsa de horas). La distinción es clara: durante la estabilización, los ajustes derivados del lanzamiento se corrigen sin costo extra; después de la estabilización, las nuevas mejoras consumen la bolsa de horas y las fallas se atienden bajo el soporte 24/7.
 
@@ -72,6 +72,6 @@ Una vez liberado el proyecto (lanzado el sitio), se contempla una etapa de estab
 
 **Entrega única:** el sitio web completo (home, 49 clubes, hubs, experiencia ideal), en dos versiones (móvil y escritorio), mobile-first, alojado en el servidor de Sports World; el CMS no-code; todo el contenido escrito optimizado y los datos estructurados; 49 fichas de Google Business; el contenido visual alineado a la marca para todos los clubes y páginas; BES, el agente de voz y texto, operando; la migración completa desde el sitio anterior, protegiendo el correo corporativo y otras funciones del DNS; y todo el código, el contenido y los activos, propiedad de Sports World.
 
-**Lo que continúa después del lanzamiento (servicio mensual):** una etapa de estabilización de 2 a 4 semanas (propuesta a acordar); soporte técnico 24/7 con un primer respondiente de voz, escalamiento basado en severidad y tickets de ocurrencia, bajo la cuota mensual — Opción A $35,000 MXN/month (el cliente se autogestiona en el CMS) u Opción B $55,000 MXN/month (Final Upgrade opera); y la bolsa de horas de mejora (8 horas/mes), con un reporte mensual de las horas consumidas.
+**Lo que continúa después del lanzamiento (servicio mensual):** una etapa de estabilización de 2 a 4 semanas (propuesta a acordar); soporte técnico 24/7 con un primer respondiente de voz, escalamiento basado en severidad y tickets de ocurrencia, bajo la cuota mensual — Opción A $35,000 MXN/mes (el cliente se autogestiona en el CMS) u Opción B $55,000 MXN/mes (Final Upgrade opera); y la bolsa de horas de mejora (8 horas/mes), con un reporte mensual de las horas consumidas.
 
 El proyecto se completa en **8 semanas** desde el arranque hasta el lanzamiento, cubriendo las tres áreas de trabajo — diseño y desarrollo del sitio a partir de plantillas; estrategia SEO y contenido escrito optimizado incluyendo las 49 fichas de Google Business; y contenido visual a escala — además del agente BES, todo coordinado por un líder general de proyecto.
