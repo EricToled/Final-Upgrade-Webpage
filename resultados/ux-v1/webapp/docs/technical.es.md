@@ -58,14 +58,14 @@ Además del contenido de cara al público, el proyecto entrega un **tablero ejec
 
 ## 5 · BES, el agente de voz y texto
 
-BES es un agente conversacional de IA que opera en dos modos: **llamadas telefónicas habladas** y **chat escrito (chat web y WhatsApp)**. Atiende a los prospectos en lenguaje natural, resuelve preguntas comunes, los guía hacia el club correcto y la visita guiada, y captura leads cualificados —el mismo resultado que produce el sitio, pero a través de la conversación—. BES extiende la conversión del sitio hacia el teléfono y el chat, los canales por donde muchos prospectos realmente se acercan.
+BES es un agente conversacional de IA **de voz y texto, integrado al sitio web**: su operación se limita al **canal web** del sitio, con voz sintética natural en español de México e interacción bidireccional por voz y texto. Atiende a los prospectos en lenguaje natural dentro del sitio, resuelve preguntas comunes, los guía hacia el club correcto y la visita guiada, y captura leads cualificados —el mismo resultado que produce el formulario del sitio, pero a través de la conversación—. Además, envía **2 recordatorios automatizados por WhatsApp** (24 h y 2 h antes de la visita) y el **resumen del prospecto por correo al club**. **No opera por teléfono ni como chat conversacional de WhatsApp** (ese alcance está excluido en el Contrato, Cláusula Primera II).
 
-Por debajo, el agente se ensambla a partir de cuatro capas, y el modo texto reutiliza la mayor parte del mismo cerebro que el modo voz:
+Por debajo, el agente se ensambla a partir de cuatro capas, todas operando dentro del sitio:
 
-- **Reconocimiento de voz (ASR):** convierte el habla de quien llama en texto en tiempo real (por ejemplo, Deepgram). Solo modo voz.
-- **Razonamiento (un modelo de lenguaje):** entiende lo que el prospecto quiere, decide cómo responder y usa la **misma lógica de clubes, clases y leads que impulsa el sitio** (por ejemplo, Claude o un modelo equivalente de frontera), de modo que la respuesta sea consistente por cualquiera de los canales. Es la capa compartida entre voz y texto.
+- **Reconocimiento de voz (ASR):** convierte el habla del usuario en el sitio en texto en tiempo real (por ejemplo, Deepgram). Solo modo voz.
+- **Razonamiento (un modelo de lenguaje):** entiende lo que el prospecto quiere, decide cómo responder y usa la **misma lógica de clubes, clases y leads que impulsa el sitio** (por ejemplo, Claude o un modelo equivalente de frontera), de modo que la respuesta sea consistente con la del sitio. Es la capa compartida entre el modo voz y el modo texto.
 - **Síntesis de voz (TTS):** convierte la respuesta en voz natural en español-México, con una calidad que no suena robótica (por ejemplo, ElevenLabs). Solo modo voz.
-- **Capa de canal y orquestación:** se conecta a la red telefónica (llamadas), a WhatsApp y al chat web (texto), y gestiona el flujo de cada conversación, incluido el traspaso a un humano (por ejemplo, Vapi, Retell o Twilio).
+- **Capa de orquestación (en el sitio):** integra el agente al sitio web, gestiona el flujo de cada conversación de voz y texto, dispara los 2 recordatorios automatizados por WhatsApp y el resumen por correo al club, y ejecuta el traspaso a un humano cuando se requiere (por ejemplo, Vapi o Retell para la orquestación conversacional).
 
 **Base de conocimiento (RAG).** BES no inventa sus respuestas: además de leer los datos operativos en vivo, consulta una base de conocimiento —catálogo de membresías con precios y términos, clases con descripciones, políticas de cancelación y congelamiento, e información operativa por club— que Sports World mantiene con actualización semanal mínima durante el proyecto (Anexo Uno D.8). Escribe los leads y las reservaciones en los mismos sistemas y por las mismas APIs que el sitio (D.6, D.5), de modo que BES y el sitio nunca se contradigan y un lead capturado por BES llegue al pipeline exactamente igual que uno del sitio.
 

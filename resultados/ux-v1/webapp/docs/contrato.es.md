@@ -64,7 +64,7 @@ La Contraprestación es fija e incluye el valor de todos los Servicios y de los 
 | Pago parcial | Semana 4, contra la aprobación de la sección entregada (50% del sitio) | 50% | $720,900.00 |
 | Pago final | Después de la Semana 8, una vez obtenida la **aprobación total del proyecto** | 50% | $720,900.00 |
 
-(Los porcentajes son una propuesta a confirmar; el principio es: sin anticipo, un pago parcial en la Semana 4 y el pago final tras la aprobación total.) **Entrega condicionada al pago total:** EL CLIENTE acepta que **el código fuente y los repositorios finales no se entregarán hasta que haya liquidado el pago total del proyecto**; en tanto, EL PRESTADOR los conserva en garantía, sin perjuicio de la operación del sitio ya lanzado. El incumplimiento de pago de una parcialidad ya aprobada faculta a EL PRESTADOR a suspender las entregas subsecuentes hasta regularizarlo. La iguala mensual se factura por mes vencido.
+Sin anticipo: un pago parcial del 50% en la Semana 4 (contra la sección entregada y aprobada) y el pago final del 50% tras la aprobación total del proyecto. **Entrega condicionada al pago total:** EL CLIENTE acepta que **el código fuente y los repositorios finales no se entregarán hasta que haya liquidado el pago total del proyecto**; en tanto, EL PRESTADOR los conserva en garantía, sin perjuicio de la operación del sitio ya lanzado. El incumplimiento de pago de una parcialidad ya aprobada faculta a EL PRESTADOR a suspender las entregas subsecuentes hasta regularizarlo. La iguala mensual se factura por mes vencido.
 
 **TERCERA BIS. Proceso de aprobación de entregables.** Los entregables se someten a aprobación por etapas conforme al Anexo Dos; cada etapa requiere aprobación expresa y por escrito de EL CLIENTE antes de avanzar. Una vez aprobada una etapa, cualquier cambio sobre elementos ya aprobados tendrá un costo adicional equivalente al **50% (cincuenta por ciento)** del valor de dicha etapa; EL PRESTADOR informará en un plazo no mayor a 24 horas el impacto en las fechas. Si EL CLIENTE no presenta observaciones por escrito dentro de los **5 (cinco) días hábiles** siguientes a una entrega, ésta se tendrá por aceptada.
 
@@ -195,7 +195,7 @@ El presente Anexo Uno forma parte integrante e inseparable del Contrato y enumer
 - **C.3** Acceso a la **red de distribución de contenido** vigente, en su caso.
 - **C.4** Acceso de lectura al **repositorio** del sitio actual.
 - **C.5** Acceso administrador al **CMS** del sitio actual.
-- **C.6** Ventana de cambio de hospedaje (cutover) con TTL reducido a 5 minutos ≥48 horas antes.
+- **C.6** Ventana de cambio de hospedaje (cutover) con TTL reducido a 5 minutos al menos 24 horas antes.
 - **C.7** Política de rotación trimestral de claves y credenciales.
 - **C.8** Canal dedicado de comunicación de incidentes.
 
@@ -270,7 +270,7 @@ Cualquier desviación, adición o reducción requerirá cotización por separado
 
 ### I.2 Componente "Posicionamiento orgánico y contenido editorial"
 
-Auditoría técnica con diagnóstico; reconstrucción de la arquitectura de las 148 páginas con jerarquía, rutas y enlazado interno; **redirecciones 301** y corrección de los **136 enlaces rotos**; investigación de palabras clave; matriz de beneficios de las **54 clases para adultos** cruzada con los **5 perfiles**, validada contra literatura médica; **6 plantillas maestras** para contenido asistido por IA en español de México; producción de las 148 páginas con contenido único; **schema markup** en todas las páginas (HealthClub, Course, FAQPage); revisión humana editorial; coordinación con el médico designado por EL CLIENTE para la firma del hub "Bajar de Peso" (cédula vigente visible); configuración de Google Search Console y GA4; y reporte ejecutivo semanal.
+Auditoría técnica con diagnóstico; reconstrucción de la arquitectura de las 148 páginas con jerarquía, rutas y enlazado interno; **redirecciones 301** y corrección de los **136 enlaces rotos**; investigación de palabras clave; matriz de beneficios de las **54 clases para adultos** cruzada con los **5 perfiles**, validada contra literatura médica; **6 plantillas maestras** para contenido asistido por IA en español de México; producción de las 148 páginas con contenido único; **schema markup** en todas las páginas (HealthClub, LocalBusiness, Course, FAQPage, BreadcrumbList); revisión humana editorial; coordinación con el médico designado por EL CLIENTE para la firma del hub "Bajar de Peso" (cédula vigente visible); configuración de Google Search Console y GA4; y reporte ejecutivo semanal.
 
 ### I.3 Componente "Diseño, contenido visual y desarrollo"
 

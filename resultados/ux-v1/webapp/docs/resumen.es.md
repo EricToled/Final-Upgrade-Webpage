@@ -13,7 +13,7 @@ Ocho semanas para convertir sportsworld.com.mx en la plataforma de captación di
 
 ## 1 · El punto de partida
 
-Sports World es una marca fuerte que hoy es **invisible donde el cliente la busca**. La auditoría inicial (Semrush, marzo 2026; 6,912 keywords unbranded analizadas) lo resume así: el sitio gana donde habla —términos de marca en posiciones 2–6— y desaparece donde calla. Estos son los números que el nuevo sitio debe revertir desde el día uno.
+Sports World es una marca fuerte que hoy es **invisible donde el cliente la busca**. La auditoría inicial (Semrush, marzo 2026; 6,900 keywords unbranded analizadas) lo resume así: el sitio gana donde habla —términos de marca en posiciones 2–6— y desaparece donde calla. Estos son los números que el nuevo sitio debe revertir desde el día uno.
 
 | Dato actual | Qué significa |
 |---|---|
@@ -21,7 +21,7 @@ Sports World es una marca fuerte que hoy es **invisible donde el cliente la busc
 | **−28.18%** | Caída anual del tráfico orgánico no-branded. |
 | **~1.23M** | Búsquedas mensuales de alta intención que el sitio no captura. |
 | **136** | Enlaces rotos y URLs malformadas (116 enlaces internos rotos + 20 URLs con backslash). |
-| **31.1%** | Cobertura de keywords unbranded (2,148 de 6,912). |
+| **31.1%** | Cobertura de keywords unbranded (2,148 de 6,900). |
 | **95.23%** | Proporción del tráfico concentrada en apenas 2 URLs (home + /clubes). |
 
 ## 2 · Los objetivos del rediseño
@@ -43,7 +43,7 @@ Cinco metas que el nuevo sitio debe cumplir desde el día uno.
 | 1 | Home | Punto de entrada y distribución. |
 | 49 | Fichas de club | Una por club: dirección, horarios, amenidades, clases, teléfono y agendado, rastreable localmente. |
 | 10 | Hubs de amenidad | Alberca, INTENZ, ring de box, padel, squash, muro de escalada, etc. — captura por amenidad. |
-| 54 | Páginas de clase | 7 landings Signature premium + 47 clases individuales. |
+| 54 | Páginas de clase | 7 landings de clases premium (Les Mills) + 47 clases individuales. |
 | 1 | Hub Fit Kidz | La oferta para familias, agrupada. |
 | 5 | Perfiles de objetivo | Primeros pasos, salud y bienestar, tonificación, fuerza y rehabilitación. |
 | 1 | Hub de pérdida de peso | La vertical de mayor demanda no capturada. |
@@ -64,7 +64,7 @@ Ese recorrido existe para resolver tres bloqueos reales del sitio actual:
 
 ## 5 · BES · el asistente digital
 
-BES no vende: **agenda, califica e informa**. Resuelve preguntas frecuentes sobre horarios, precios, ubicaciones y amenidades con los datos reales del sistema —los mismos que muestra el sitio—, opera por **voz (llamada) y por texto (web y WhatsApp)**, transfiere a un humano cuando el usuario lo pide, y siempre entrega al asesor del club un dossier del prospecto antes de la cita. Calidad objetivo: voz natural en español de México y tiempo de respuesta por debajo de los 900 ms para que la conversación se sienta fluida.
+BES no vende: **agenda, califica e informa**. Resuelve preguntas frecuentes sobre horarios, precios, ubicaciones y amenidades con los datos reales del sistema —los mismos que muestra el sitio—, opera **por voz y texto dentro del sitio web (canal web)**, envía **2 recordatorios automatizados por WhatsApp** (24 h y 2 h antes de la visita), transfiere a un humano cuando el usuario lo pide, y siempre entrega al asesor del club un dossier del prospecto por correo antes de la cita. No opera por teléfono ni como chat conversacional de WhatsApp. Calidad objetivo: voz natural en español de México y tiempo de respuesta por debajo de los 900 ms para que la conversación se sienta fluida.
 
 ## 6 · Lo que cambia para el negocio
 

@@ -13,7 +13,7 @@ Sports World atrae a las masas por el peso de su marca, pero pierde al prospecto
 | Tráfico non-branded | 79,100 | −28.18% ↓↓ |
 | Traffic cost (valor económico) | $80,600 USD | −25.3% |
 | Concentración de tráfico | 95.23% en 2 URLs | Homepage + /clubes |
-| Cobertura unbranded | 31.1% (2,148/6,912) | 69% del mercado sin atender |
+| Cobertura unbranded | 31.1% (2,148/6,900) | 69% del mercado sin atender |
 
 **Lectura:** quien ya conoce la marca la sigue buscando; quien busca una solución genérica ("gym para bajar de peso", "yoga cerca de mí", "gimnasio con alberca") cada vez encuentra menos a Sports World.
 
@@ -100,7 +100,7 @@ David Lloyd partió de ~31% de cobertura (la misma línea base que SW) y llegó 
 
 ## 5 · Cobertura por categoría (datos Semrush, marzo 2026)
 
-Universo de 6,912 keywords unbranded limpias (de 20,003 totales, tras remover branded y ruido):
+Universo de 6,900 keywords unbranded limpias (la suma de la columna KWs; de 20,003 totales, tras remover branded y ruido):
 
 | Categoría | KWs | Vol/mes | SW rankea | Cobertura | Pos prom |
 |---|---|---|---|---|---|
@@ -121,7 +121,7 @@ Universo de 6,912 keywords unbranded limpias (de 20,003 totales, tras remover br
 | Equipamiento | 114 | 14,460 | 14 | 12.3% | 51.1 |
 | Informacional/How-to | 217 | 21,520 | 18 | 8.3% | 37.8 |
 | Otros | 5,044 | 2,949,220 | 1,455 | 28.8% | 17.8 |
-| **TOTAL** | **6,912** | **4,822,500** | **2,148** | **31.1%** | — |
+| **TOTAL** | **6,900** | **5,819,760** | **2,148** | **31.1%** | — |
 
 ## 6 · Conclusión
 

@@ -30,7 +30,7 @@ Cada ubicación es un enlace directo: lleva al documento y salta a la sección e
 |---|---|
 | Las 148 páginas y su desglose | [Mapa del Sitio · por nivel](#site:las-148-pginas-por-nivel) · [Contrato · Anexo Dos I.1](#contrato:i1-arquitectura-del-sitio-148-pginas) |
 | Cuestionario y flujo del prospecto | [Arquitectura de Experiencia · §2 Cuestionario](#experience:2-el-cuestionario-como-nica-fuente-de-personalizacin) |
-| Agente BES (capacidades, voz/texto, WhatsApp) | [Estrategia Técnica · §5 BES](#technical:5-bes-el-agente-de-voz-y-texto) · [Contrato · Cláusulas](#contrato:clusulas) · [Anexo Dos Sección II](#contrato:seccin-ii-entregables-del-servicio-ii-agente-bes) |
+| Agente BES (web; voz/texto, recordatorios WhatsApp) | [Estrategia Técnica · §5 BES](#technical:5-bes-el-agente-de-voz-y-texto) · [Contrato · Cláusulas](#contrato:clusulas) · [Anexo Dos Sección II](#contrato:seccin-ii-entregables-del-servicio-ii-agente-bes) |
 | Integración con CRM y reservas (APIs, webhooks) | [Estrategia Técnica · §2 Integraciones](#technical:2-los-cuatro-datos-y-las-integraciones-con-sports-world) · [Contrato · Anexo Uno Bloque A](#contrato:bloque-a-documentacin-ambiente-de-pruebas-y-responsable-nico-da-1) · [Bloque B](#contrato:bloque-b-credenciales-productivas-e-integraciones-fin-de-la-semana-2) · [Bloque D](#contrato:bloque-d-puntos-de-acceso-para-el-agente-bes-en-paralelo-a-a-b-y-c) |
 | Cronograma de 8 semanas y gates | [Plan de Ejecución · §3 Cronograma](#execution:3-el-cronograma-de-ocho-semanas) · [Contrato · Anexo Dos I.4](#contrato:i4-cronograma-de-8-semanas-y-aprobaciones-a-cargo-de-el-cliente) |
 | Precio, forma de pago y stand-by | [Contrato · Cláusulas (Segunda, Tercera y Novena)](#contrato:clusulas) |

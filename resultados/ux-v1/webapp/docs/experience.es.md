@@ -160,7 +160,7 @@ El cuestionario se compone de tres categorías de preguntas:
 | Q14b | `Q14 ∈ {"Yo y mis hijos", "La familia completa"}`                                              | Presencia de hijos menores de 12 años. Determina los mensajes familiares de FitKidz en el reporte y hace de FitKidz una amenidad de experiencia requerida en la selección de club (§4.1). |
 | Q17  | `Q4 includes "Bajar de peso"`                                                                 | Tratamientos activos de pérdida de peso (GLP-1, cirugía bariátrica, acompañamiento nutricional, otro, ninguno). Determina la regla de prioridad GLP-1, el filtro estricto bariátrico y el mensaje abierto de revisión por el asesor. |
 | Q18  | `Q4 includes "Bajar de peso"`                                                                 | Datos físicos actuales (peso, estatura, cintura). Capturados para el brief del asesor; no usados por el resolver. |
-| Q19  | `Q4 includes "Bajar de peso"`                                                                 | Meta de cambio de peso (rango numérico). Capturada para el brief del asesor; no usada por el resolver.          |
+| Q19  | `Q4 includes "Bajar de peso"`                                                                 | Meta de cambio de peso (rango, en opciones de selección única). Capturada para el brief del asesor; no usada por el resolver. |
 
 **Captación posterior al cuestionario (3 campos, una pantalla)** — capturada después de mostrar la recomendación, antes del calendario:
 
@@ -504,7 +504,7 @@ Cuando el disparador no se cumple (prospecto individual, pareja o familia sin hi
 
 **Disparador:** el prospecto ha declarado una o más condiciones médicas o tratamientos activos mediante Q12, Q12b o Q17.
 
-**Mecanismo:** la matriz de contraindicaciones es una tabla determinista de 51 clases × 5 condiciones. La matriz retorna verdadero ("contraindicada") para un par clase-condición si está presente cualquiera de estos indicadores dominantes:
+**Mecanismo:** la matriz de contraindicaciones es una tabla determinista de 51 clases grupales × 5 condiciones (las **54 clases para adultos** del catálogo menos las 3 modalidades de entrenamiento personal, que no son clases grupales). La matriz retorna verdadero ("contraindicada") para un par clase-condición si está presente cualquiera de estos indicadores dominantes:
 
 | Condition key      | Triggered by                                                                  | Filter behavior                                                                                                                              |
 |--------------------|-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|

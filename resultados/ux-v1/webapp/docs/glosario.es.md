@@ -9,7 +9,7 @@ Glosario único y compartido por toda la documentación del proyecto. Cada docum
 | **ARCO** | Derechos de Acceso, Rectificación, Cancelación y Oposición que la ley mexicana otorga al titular sobre sus datos personales. |
 | **ASR** | Reconocimiento automático de voz (Automatic Speech Recognition); convierte la voz del usuario en texto. |
 | **AVIF / WebP** | Formatos de imagen comprimidos que optimizan el desempeño del sitio sin pérdida significativa de calidad. |
-| **BES** | Agente conversacional de inteligencia artificial del proyecto, por voz y texto; en su rol de cara al prospecto califica, agenda y captura leads, y en su rol interno asiste con la documentación. |
+| **BES** | Agente conversacional de inteligencia artificial del proyecto, por voz y texto, **integrado al sitio web (canal web)**; de cara al prospecto califica, agenda y captura leads (y envía 2 recordatorios automatizados por WhatsApp), y en su rol interno asiste con la documentación. No opera por teléfono ni como chat conversacional de WhatsApp. |
 | **branded / unbranded / non-branded** | Búsquedas *con marca* (incluyen "Sports World") vs *sin marca* (genéricas, p. ej. "gimnasio cerca de mí"). La cobertura unbranded mide la presencia en búsquedas genéricas. |
 | **CDN (red de distribución de contenido)** | Red que entrega el sitio desde servidores cercanos al usuario para acelerar la carga (p. ej. Cloudflare). |
 | **CFDI** | Comprobante Fiscal Digital por Internet; la factura electrónica con validez fiscal ante el SAT en México. |
@@ -31,6 +31,7 @@ Glosario único y compartido por toda la documentación del proyecto. Cada docum
 | **ISR** | Regeneración incremental estática; técnica de Next.js que actualiza páginas generadas sin reconstruir todo el sitio. |
 | **JSON-LD** | Formato en que se inserta el schema markup en el código de la página. |
 | **KPI** | Indicador clave de desempeño; métrica con la que se mide el avance hacia un objetivo. |
+| **latencia (conversacional vs SLA de API)** | Dos métricas distintas que no deben confundirse: la *latencia conversacional* de BES —el tiempo total para que la conversación se sienta humana, objetivo < 900 ms— y el *SLA de latencia de las APIs de Sports World* —percentil 95 < 500 ms en lectura y < 800 ms en escritura (Anexo Uno D.7)—. La primera es responsabilidad del agente; la segunda, de las APIs del cliente. |
 | **lead / prospecto** | Persona que muestra interés y es capturada como contacto comercial. En este proyecto se usan como sinónimos. |
 | **LFPDPPP** | Ley Federal de Protección de Datos Personales en Posesión de los Particulares (México). |
 | **LLM (modelo de lenguaje)** | Sistema de IA entrenado para procesar y generar lenguaje natural; el "razonamiento" del agente. |

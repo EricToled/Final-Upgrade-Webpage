@@ -108,7 +108,7 @@ Clases premium con tratamiento visual destacado. Patrón: `/clases/signature/[cl
 67. CX Worx — `/clases/signature/cx-worx/`
 
 ### Nivel 05 — Clases individuales (47 páginas)
-Las 44 clases del catálogo de adultos más las 3 modalidades de entrenamiento individual. Patrón: `/clases/[clase]/`.
+Las 44 clases grupales individuales más las 3 modalidades de entrenamiento personal (47 en total). Con los 7 niveles premium (Nivel 04), el catálogo para adultos suma **54 clases**. Patrón: `/clases/[clase]/`.
 
 **Indoor cycling**
 68. INDBIKE — `/clases/indbike/`
