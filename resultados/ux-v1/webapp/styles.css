@@ -127,10 +127,20 @@ html.demo-active elevenlabs-convai{display:none!important;visibility:hidden!impo
 .roi-preset{border:1px solid var(--border);background:#fff;color:var(--ink);border-radius:999px;padding:.3rem .7rem;font-size:.76rem;font-weight:600;cursor:pointer}
 .roi-preset:hover{border-color:var(--red);color:var(--red)}
 .roi-preset.active{background:var(--red);color:#fff;border-color:var(--red)}
-.roi-out{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin:1.1rem 0 .4rem}
+.roi-out{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.6rem;margin:1.1rem 0 .4rem}
 .roi-card{background:#fff;border:1px solid var(--border);border-radius:9px;padding:.7rem .8rem;display:flex;flex-direction:column;gap:.3rem}
 .roi-card-label{font-size:.66rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:700}
 .roi-card-num{font-size:1.15rem;font-weight:800;color:var(--brand);font-variant-numeric:tabular-nums;line-height:1.1}
+/* tabla de construcción del valor mes a mes */
+.roi-table-wrap{margin:1.1rem 0 .4rem}
+.roi-table-title{font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 .4rem}
+.roi-table-scroll{overflow-x:auto}
+.roi-table{width:100%;border-collapse:collapse;font-size:.82rem;font-variant-numeric:tabular-nums}
+.roi-table th,.roi-table td{border:1px solid var(--border);padding:.4rem .55rem;text-align:right;white-space:nowrap}
+.roi-table th:first-child,.roi-table td:first-child{text-align:left}
+.roi-table th{background:var(--bg-soft);font-size:.68rem;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);font-weight:700}
+.roi-table tfoot td{font-weight:800;background:var(--bg-soft)}
+.roi-table tr.roi-reg td{background:rgba(192,57,43,.08);font-weight:700;color:var(--brand);border-top:2px solid var(--red)}
 .roi-formula{margin:.5rem 0}
 .roi-formula code{background:#fff;border:1px solid var(--border)}
 .roi-churn{margin-top:.8rem;padding:.7rem .9rem;background:var(--accent);border-radius:8px;font-size:.82rem}

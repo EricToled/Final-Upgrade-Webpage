@@ -31,12 +31,12 @@
       churnLabel: "Churn (baja del lote, una vez)",
       presets: "Escenarios de la tasa visita→consulta (B):",
       pPess: "Pesimista 1.0%", pCons: "Conservador 1.5%", pVoice: "Con agente IA 2.5%", pPaid: "Con paid + IA 4.0%",
-      outNew: "Nuevos asociados / mes", outActive: "Asociados activos (mes 12)",
-      outSteady: "Revenue mensual en régimen (mes 13+)", outYear1: "Revenue acumulado año 1",
-      tableTitle: "Construcción del valor mes a mes (primer año)",
+      outNew: "Nuevos asociados / mes", outActive: "Asociados acumulados (mes 13)",
+      outSteady: "Revenue mensual en régimen (mes 13+)", outRunRate: "Ingresos anuales (running rate)", outYear1: "Revenue acumulado año 1",
+      tableTitle: "Construcción del valor mes a mes (primer año + régimen)",
       thMonth: "Mes", thNew: "Nuevos", thActive: "Activos", thRev: "Revenue del mes",
-      tfYear: "Año 1 · acumulado",
-      formula: "Nuevos/mes = A × B × C · cada lote queda en (1 − churn) tras un mes · Revenue del mes = activos × (D ÷ 12)",
+      tfYear: "Año 1 · acumulado", reg: "régimen",
+      formula: "Nuevos/mes = A × B × C · cada lote queda en (1 − churn) tras un mes · Revenue del mes = activos × (D ÷ 12) · Running rate anual = asociados acumulados al mes 13 × D",
       churnTitle: "Cómo se aplica el churn",
       churn: "El churn se aplica una sola vez a cada lote de asociados nuevos, un mes después del inicio de su membresía. Ejemplo con 90 nuevos/mes y churn 20%: mes 1 = 90; mes 2 = 90×0.80 + 90 = 162; mes 3 = 162 + 72 = 234; y así hasta el mes 12. El revenue mensual se estabiliza a partir del mes 13.",
       disclaimer: "Estimación basada en un modelo paramétrico e ilustrativo. Las tasas B y C y el churn los calibra Sports World con sus datos reales; los objetivos comerciales son alcanzables, no comprometidos contractualmente.",
@@ -50,12 +50,12 @@
       churnLabel: "Churn (cohort drop, once)",
       presets: "Visit→enquiry rate scenarios (B):",
       pPess: "Pessimistic 1.0%", pCons: "Conservative 1.5%", pVoice: "With AI agent 2.5%", pPaid: "With paid + AI 4.0%",
-      outNew: "New members / month", outActive: "Active members (month 12)",
-      outSteady: "Steady monthly revenue (month 13+)", outYear1: "Year-1 cumulative revenue",
-      tableTitle: "Month-by-month value build-up (first year)",
+      outNew: "New members / month", outActive: "Accumulated members (month 13)",
+      outSteady: "Steady monthly revenue (month 13+)", outRunRate: "Annual revenue (running rate)", outYear1: "Year-1 cumulative revenue",
+      tableTitle: "Month-by-month value build-up (first year + run-rate)",
       thMonth: "Month", thNew: "New", thActive: "Active", thRev: "Revenue for the month",
-      tfYear: "Year 1 · cumulative",
-      formula: "New/mo = A × B × C · each cohort settles at (1 − churn) after one month · Revenue for the month = active × (D ÷ 12)",
+      tfYear: "Year 1 · cumulative", reg: "run-rate",
+      formula: "New/mo = A × B × C · each cohort settles at (1 − churn) after one month · Revenue for the month = active × (D ÷ 12) · Annual running rate = accumulated members at month 13 × D",
       churnTitle: "How churn is applied",
       churn: "Churn is applied once to each cohort of new members, one month after their membership starts. Example with 90 new/month and 20% churn: month 1 = 90; month 2 = 90×0.80 + 90 = 162; month 3 = 162 + 72 = 234; and so on through month 12. Monthly revenue stabilizes from month 13 onward.",
       disclaimer: "Estimate based on an illustrative parametric model. Rates B and C and churn are calibrated by Sports World with real data; commercial objectives are achievable, not contractually committed.",
@@ -84,7 +84,7 @@
         '</div>' +
         '<div class="roi-out">' +
           out("new", t.outNew) + out("active", t.outActive) +
-          out("steady", t.outSteady) + out("year1", t.outYear1) +
+          out("steady", t.outSteady) + out("runrate", t.outRunRate) + out("year1", t.outYear1) +
         '</div>' +
         '<div class="roi-table-wrap"><p class="roi-table-title">' + t.tableTitle + '</p>' +
           '<div class="roi-table-scroll" data-roi-table></div></div>' +
@@ -111,25 +111,27 @@
 
       let cumYear1 = 0;
       const rows = [];
-      for (let n = 1; n <= 12; n++) {
-        const active = m + retained * (n - 1); // lote n fresco + lotes previos ya con churn
+      for (let n = 1; n <= 13; n++) {           // 1–12 = construcción; 13 = régimen (running rate)
+        const active = m + retained * (n - 1);  // lote n fresco + lotes previos ya con churn
         const rev = active * valueMonthly;
-        cumYear1 += rev;
-        rows.push({ n, nuevos: m, active, rev });
+        if (n <= 12) cumYear1 += rev;           // el año 1 acumula solo los 12 primeros meses
+        rows.push({ n, nuevos: m, active, rev, reg: n === 13 });
       }
-      const active12 = rows[11].active;
-      const steadyMonthly = active12 * valueMonthly; // régimen sostenido del mes 13 en adelante
+      const accumulated13 = rows[12].active;                 // membresías acumuladas al mes 13
+      const steadyMonthly = accumulated13 * valueMonthly;    // régimen sostenido (mes 13+)
+      const runningRateAnnual = accumulated13 * state.D;     // ingresos anuales running rate
 
       container.querySelector('[data-out="new"]').textContent = fmtInt(m);
-      container.querySelector('[data-out="active"]').textContent = fmtInt(active12);
+      container.querySelector('[data-out="active"]').textContent = fmtInt(accumulated13);
       container.querySelector('[data-out="steady"]').textContent = fmtMXN(steadyMonthly);
+      container.querySelector('[data-out="runrate"]').textContent = fmtMXN(runningRateAnnual);
       container.querySelector('[data-out="year1"]').textContent = fmtMXN(cumYear1);
 
       let html = '<table class="roi-table"><thead><tr>' +
         '<th>' + t.thMonth + '</th><th>' + t.thNew + '</th><th>' + t.thActive + '</th><th>' + t.thRev + '</th>' +
         '</tr></thead><tbody>';
       for (const r of rows) {
-        html += '<tr><td>' + r.n + '</td><td>' + fmtInt(r.nuevos) + '</td><td>' + fmtInt(r.active) + '</td><td>' + fmtMXN(r.rev) + '</td></tr>';
+        html += '<tr' + (r.reg ? ' class="roi-reg"' : '') + '><td>' + r.n + (r.reg ? " ▸ " + t.reg : "") + '</td><td>' + fmtInt(r.nuevos) + '</td><td>' + fmtInt(r.active) + '</td><td>' + fmtMXN(r.rev) + '</td></tr>';
       }
       html += '</tbody><tfoot><tr><td colspan="3">' + t.tfYear + '</td><td>' + fmtMXN(cumYear1) + '</td></tr></tfoot></table>';
       container.querySelector('[data-roi-table]').innerHTML = html;
