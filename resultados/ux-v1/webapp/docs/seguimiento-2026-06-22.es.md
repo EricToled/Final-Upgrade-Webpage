@@ -52,4 +52,4 @@ Esta página da seguimiento a **cada duda y punto abierto** planteado en la reun
 - ✅ **Forma de pago** (Cláusula Tercera): **sin anticipo**; **50% en la Semana 4** (contra la sección entregada y aprobada) y **50% final tras la aprobación total** (Semana 8). El **código fuente y los repositorios finales se entregan solo tras el pago total** (Cláusula Séptima).
 - ✅ **Costos operativos** a cargo de SW (Cláusula Sexta Bis): voz, LLM y hospedaje del agente, con escenarios conservador/medio/optimista.
 - ✅ **Stand-by por retrasos del cliente:** USD $350/día (Cláusula Novena).
-- ✅ **Plazo y páginas unificados a la fuente de la verdad:** **8 semanas** y **148 páginas** en todo el web app (la cotización indicaba 6 semanas / 145 páginas; cede ante la fuente única de la verdad). <!-- audit-ignore: fuente-verdad -->
+- ✅ **Plazo y páginas confirmados:** **8 semanas** y **148 páginas** en todo el proyecto.

@@ -1,8 +1,6 @@
 # Sports World · Contrato de Prestación de Servicios Profesionales · V2.1
 ## Rediseño web + SEO · Agente de voz "BES" · Servicios recurrentes
 
-> **Nota de redacción.** Documento redactado conforme al derecho mercantil mexicano, sobre el clausulado y la estructura del contrato vigente entre las Partes (partes y domicilios reales). El **alcance, los entregables y el plazo (8 semanas, 148 páginas)** provienen de la fuente única de la verdad del proyecto (UX specs, entregables y estrategia comercial); los **precios, la forma de pago y los costos operativos** provienen de la cotización del proyecto. Cualquier cotización o documento auxiliar cede en autoridad frente a la fuente única de la verdad. Los datos entre corchetes `[…]` se completan al cierre.
-
 CONTRATO DE PRESTACIÓN DE SERVICIOS PROFESIONALES (**"CONTRATO"**) QUE CELEBRAN, POR UNA PARTE, **OPERADORA Y ADMINISTRADORA SW, S.A. DE C.V.** (EN LO SUCESIVO **"SPORTS WORLD"** o **"EL CLIENTE"**), REPRESENTADA EN ESTE ACTO POR **HADI MICHEL IBRAHIM IBRAHIM**; Y POR LA OTRA PARTE, **LIVE STREAMING SERVICES MEXICO, S.A. DE C.V.** (EN LO SUCESIVO EL **"PROVEEDOR"** o **"EL PRESTADOR"**, comercialmente *Final Upgrade AI*), REPRESENTADA POR **ERIC TOLEDANO DE JESÚS LOZANO**, DE CONFORMIDAD CON LAS SIGUIENTES DECLARACIONES Y CLÁUSULAS:
 
 ## Declaraciones
@@ -34,7 +32,7 @@ De conformidad con las Declaraciones que anteceden, las Partes están de acuerdo
 
 **II. Desarrollo e integración del agente de voz conversacional "BES".** Agente "BES" integrado al sitio, con voz sintética natural en español de México e interacción bidireccional por voz y texto, entrenado con la base de conocimiento de EL CLIENTE. Su operación bajo este Contrato se limita al **canal web** del sitio y al envío automatizado, vía **WhatsApp**, de **2 (dos) mensajes recordatorios** (24 horas y 2 horas antes de la visita agendada). Quedan excluidas las interacciones de venta por WhatsApp como canal de entrada y cualquier canal distinto al sitio web. Los **costos de operación** de "BES" (plataforma de voz, interfaz del modelo de razonamiento y hospedaje de la lógica) los cubre directamente EL CLIENTE a los proveedores correspondientes y no constituyen ingreso de EL PRESTADOR (ver Cláusula Sexta Bis). EL PRESTADOR **no garantiza** tasas de conversión, cierres ni volúmenes de agendamiento.
 
-**III. Servicios recurrentes de hospedaje, mantenimiento y soporte técnico.** Mediante una **iguala mensual**, a elección de EL CLIENTE entre la Opción A o la Opción B de la Cláusula Segunda, que comprende hospedaje, mantenimiento técnico (seguridad, dependencias y desempeño), mantenimiento de "BES", operación de la sección de administración y del tablero, reporte mensual y **soporte con primer respondiente por agente de voz disponible 24/7 (veinticuatro horas, los siete días) y escalamiento a soporte humano en horario hábil**. La iguala incluye una **bolsa de mejora de hasta 8 (ocho) horas mensuales, no acumulables**; los excedentes se facturan conforme a tarifas. Plazo mínimo inicial **6 (seis) meses**; concluido éste, cualquiera de las Partes podrá darla por terminada con aviso por escrito de al menos **60 (sesenta) días naturales**.
+**III. Servicios recurrentes de hospedaje, mantenimiento y soporte técnico.** Mediante una **iguala mensual** conforme a la **Opción A elegida por EL CLIENTE** (Cláusula Segunda), que comprende hospedaje, mantenimiento técnico (seguridad, dependencias y desempeño), mantenimiento de "BES", operación de la sección de administración y del tablero, reporte mensual y **soporte con primer respondiente por agente de voz disponible 24/7 (veinticuatro horas, los siete días) y escalamiento a soporte humano en horario hábil**. La iguala incluye una **bolsa de mejora de hasta 8 (ocho) horas mensuales, no acumulables**; los excedentes se facturan conforme a tarifas. Plazo mínimo inicial **6 (seis) meses**; concluido éste, cualquiera de las Partes podrá darla por terminada con aviso por escrito de al menos **60 (sesenta) días naturales**.
 
 **SEGUNDA. Contraprestación.**
 
@@ -48,14 +46,14 @@ De conformidad con las Declaraciones que anteceden, las Partes están de acuerdo
 | **Total one-time sin IVA** | **$81,000.00** | **$1,441,800.00** |
 | Total one-time con IVA 16% | — | **$1,672,488.00** |
 
-*Iguala mensual recurrente (elegir una):*
+*Iguala mensual recurrente. **EL CLIENTE elige la Opción A.***
 
 | Opción | Precio | Quién ejecuta los cambios |
 |---|---|---|
-| **A — Cliente autónomo** | $35,000 MXN/mes ($40,600 con IVA) | EL CLIENTE, directo en el CMS |
-| **B — FUPAI ejecuta** | $55,000 MXN/mes ($63,800 con IVA) | EL PRESTADOR, cupo de 3 intervenciones simples o 1 compleja al mes, más la bolsa de 8 horas |
+| **A — Cliente autónomo (elegida)** | **$35,000 MXN/mes ($40,600 con IVA)** | EL CLIENTE, directo en el CMS |
+| B — FUPAI ejecuta (no elegida) | $55,000 MXN/mes ($63,800 con IVA) | EL PRESTADOR, cupo de 3 intervenciones simples o 1 compleja al mes, más la bolsa de 8 horas |
 
-La Contraprestación es fija e incluye el valor de todos los Servicios y de los servicios relacionados necesarios para cumplir el objeto, sin ajustes salvo servicios adicionales pactados por escrito.
+Conforme a la **Opción A elegida**, la iguala mensual es de **$35,000 MXN ($40,600 con IVA)** y EL CLIENTE administra sus propios contenidos en el CMS; el soporte, el mantenimiento y la bolsa de 8 horas se prestan por igual. La Contraprestación es fija e incluye el valor de todos los Servicios y de los servicios relacionados necesarios para cumplir el objeto, sin ajustes salvo servicios adicionales pactados por escrito.
 
 **TERCERA. Forma de Pago.** **No habrá anticipos.** La contraprestación única se cubre en **dos pagos**, por secciones entregadas y aprobadas por escrito por EL CLIENTE, contra Comprobante Fiscal Digital por Internet (CFDI) con IVA desglosado y transferencia a la cuenta de la que EL PRESTADOR sea único titular:
 
@@ -293,7 +291,7 @@ Agente integrado al sitio con voz natural en español de México e interacción 
 
 ## Sección III — Entregables del Servicio III (servicios recurrentes)
 
-Bajo la iguala mensual elegida (Opción A o B de la Cláusula Segunda): hospedaje del sitio; mantenimiento técnico (seguridad, dependencias, desempeño); mantenimiento de "BES" (base de conocimiento, instrucciones y optimización de costos); operación de la sección de administración y del tablero; reporte mensual ejecutivo; **soporte 24/7 con primer respondiente por agente de voz que recibe, clasifica y resuelve o escala cada incidencia (con ticket de ocurrencia), y escalamiento a soporte humano en horario hábil** (Slack y correo); y **bolsa de mejora de hasta 8 (ocho) horas mensuales, no acumulables**. En la Opción B, EL PRESTADOR ejecuta hasta 3 intervenciones simples o 1 compleja al mes. *Intervención simple:* cambio en una página (texto/imagen), precios de una membresía u horarios de un club. *Intervención compleja:* cambio de plantilla de club (cascada a 49 páginas), sustitución total de imágenes de ~10 clubes, o reestructuración de un hub. Los excedentes se facturan conforme a tarifas.
+Bajo la iguala mensual (Opción A elegida por EL CLIENTE; Cláusula Segunda): hospedaje del sitio; mantenimiento técnico (seguridad, dependencias, desempeño); mantenimiento de "BES" (base de conocimiento, instrucciones y optimización de costos); operación de la sección de administración y del tablero; reporte mensual ejecutivo; **soporte 24/7 con primer respondiente por agente de voz que recibe, clasifica y resuelve o escala cada incidencia (con ticket de ocurrencia), y escalamiento a soporte humano en horario hábil** (Slack y correo); y **bolsa de mejora de hasta 8 (ocho) horas mensuales, no acumulables**. En la Opción B, EL PRESTADOR ejecuta hasta 3 intervenciones simples o 1 compleja al mes. *Intervención simple:* cambio en una página (texto/imagen), precios de una membresía u horarios de un club. *Intervención compleja:* cambio de plantilla de club (cascada a 49 páginas), sustitución total de imágenes de ~10 clubes, o reestructuración de un hub. Los excedentes se facturan conforme a tarifas.
 
 **Niveles de servicio (SLA) — propuesta a acordar.** El primer respondiente por agente de voz opera 24/7; la intervención humana procede en horario hábil según severidad:
 

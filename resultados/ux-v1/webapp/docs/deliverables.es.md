@@ -42,11 +42,9 @@ El proyecto incluye un sistema de soporte con **primer respondiente por agente d
 
 Estos tiempos se miden desde que se abre el ticket de ocurrencia. Al cierre de cada mes, se entrega un reporte de los tickets atendidos — su severidad, tiempo de respuesta y resolución.
 
-**La cuota mensual.** El modelo de cuota mensual ya está en la propuesta firmada, con dos opciones según quién opere el sitio en el día a día:
-- **Opción A — $35,000 MXN/mes ($40,600 con IVA; el cliente se autogestiona en el CMS).** Sports World edita su propio texto e imágenes a través del panel de administración, y Final Upgrade brinda soporte para el sitio y el sistema bajo el modelo anterior.
-- **Opción B — $55,000 MXN/mes ($63,800 con IVA; Final Upgrade opera).** Además del soporte anterior, Final Upgrade ejecuta las actualizaciones de contenido y los cambios operativos, **hasta 3 intervenciones simples o 1 compleja al mes** (las que excedan se facturan conforme a tarifas), de modo que Sports World no necesita operar el panel.
+**La cuota mensual.** Sports World ha elegido la **Opción A — $35,000 MXN/mes ($40,600 con IVA)**: Sports World administra su propio texto e imágenes a través del panel de administración (CMS), y Final Upgrade brinda el soporte para el sitio y el sistema. (La Opción B —$55,000 MXN/mes / $63,800 con IVA, en la que Final Upgrade ejecuta hasta 3 intervenciones simples o 1 compleja al mes— quedó definida en el contrato pero **no fue elegida**.)
 
-Sports World elige una de las dos. Ambas incluyen el mismo soporte: **primer respondiente por agente de voz 24/7, escalamiento a soporte humano en horario hábil**, severidad y tickets de ocurrencia.
+El soporte incluye, en cualquier caso: **primer respondiente por agente de voz 24/7, escalamiento a soporte humano en horario hábil**, severidad y tickets de ocurrencia.
 
 ## 4 · La bolsa de horas de mejora
 
@@ -72,6 +70,6 @@ Una vez liberado el proyecto (lanzado el sitio), se contempla una etapa de estab
 
 **Entrega única:** el sitio web completo (home, 49 clubes, hubs, experiencia ideal), en dos versiones (móvil y escritorio), mobile-first, alojado en el servidor de Sports World; el CMS no-code; todo el contenido escrito optimizado y los datos estructurados; 49 fichas de Google Business; el contenido visual alineado a la marca para todos los clubes y páginas; BES, el agente de voz y texto, operando; la migración completa desde el sitio anterior, protegiendo el correo corporativo y otras funciones del DNS; y todo el código, el contenido y los activos, propiedad de Sports World.
 
-**Lo que continúa después del lanzamiento (servicio mensual):** una etapa de estabilización de 2 a 4 semanas (propuesta a acordar); soporte con **primer respondiente por agente de voz 24/7 y escalamiento a soporte humano en horario hábil**, severidad y tickets de ocurrencia, bajo la cuota mensual — Opción A $35,000 MXN/mes ($40,600 con IVA; el cliente se autogestiona en el CMS) u Opción B $55,000 MXN/mes ($63,800 con IVA; Final Upgrade opera, hasta 3 intervenciones simples o 1 compleja al mes); y la bolsa de horas de mejora (8 horas/mes), con un reporte mensual de las horas consumidas.
+**Lo que continúa después del lanzamiento (servicio mensual):** una etapa de estabilización de 2 a 4 semanas (propuesta a acordar); soporte con **primer respondiente por agente de voz 24/7 y escalamiento a soporte humano en horario hábil**, severidad y tickets de ocurrencia, bajo la cuota mensual elegida — **Opción A: $35,000 MXN/mes ($40,600 con IVA), con el cliente autogestionando el CMS**; y la bolsa de horas de mejora (8 horas/mes), con un reporte mensual de las horas consumidas.
 
 El proyecto se completa en **8 semanas** desde el arranque hasta el lanzamiento, cubriendo las tres áreas de trabajo — diseño y desarrollo del sitio a partir de plantillas; estrategia SEO y contenido escrito optimizado incluyendo las 49 fichas de Google Business; y contenido visual a escala — además del agente BES, todo coordinado por un líder general de proyecto.
