@@ -75,6 +75,14 @@ a{color:var(--brand-text)}
 .doc th{background:var(--bg-soft);font-weight:700}
 .doc a{word-break:break-word}
 .doc :target{scroll-margin-top:4rem}
+/* enlaces internos (localizador → documento/sección) */
+.doc a.xref{text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px;cursor:pointer}
+.doc a.xref:hover{color:var(--ink)}
+/* offset para que el encabezado no quede bajo la barra superior al saltar */
+.doc h1,.doc h2,.doc h3,.doc h4,.doc h5,.doc h6{scroll-margin-top:4rem}
+/* resaltado breve de la sección destino */
+.xref-flash{animation:xrefFlash 1.6s ease-out}
+@keyframes xrefFlash{0%,30%{background:rgba(255,210,90,.35)}100%{background:transparent}}
 .doc-meta{color:var(--muted);font-size:.82rem;margin-bottom:1.4rem}
 
 /* Download PDF button */

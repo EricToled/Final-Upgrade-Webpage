@@ -27,6 +27,7 @@ Código de salida: `0` si no hay errores; `1` si hay al menos un error.
 | **trazabilidad** | Construye un "libro mayor" de montos por documento y marca cualquier monto fuera de la lista canónica (posible dato inventado). |
 | **marcadores** | Los marcadores `[[ROI]]` / `[[APORTACIONES:…]]` existen, los maneja `app.js` y los reemplaza el generador de PDF. |
 | **glosario** | Toda sigla técnica usada en los documentos está definida en el glosario maestro. |
+| **enlaces** | Cada enlace interno `#documento` / `#documento:sección` apunta a un documento real y a un anchor (encabezado) que existe — sin enlaces rotos. |
 
 ## Configuración (fuente única de la verdad)
 

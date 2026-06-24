@@ -79,7 +79,9 @@ function htmlBlocks(htmlStr) {
 }
 
 function inlineRuns(t) {
-  t = t.replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1 ($2)");
+  // enlaces internos (#doc/#sección) no navegan en PDF -> solo el texto;
+  // enlaces externos conservan la URL entre paréntesis.
+  t = t.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m, text, href) => href.charAt(0) === "#" ? text : text + " (" + href + ")");
   const runs = []; const re = /(`[^`]+`|\*\*[^*]+\*\*)/g; let last = 0, m;
   while ((m = re.exec(t))) {
     if (m.index > last) runs.push({ text: t.slice(last, m.index).replace(/\*/g, "") });

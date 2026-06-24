@@ -20,6 +20,8 @@
  *                                 definida en el glosario maestro.
  *   6. Integridad de marcadores — los marcadores [[...]] usados existen y están
  *                                 contemplados por la app y por el generador de PDF.
+ *   7. Enlaces internos         — cada enlace #documento / #documento:sección
+ *                                 apunta a un documento y anchor reales (sin rotos).
  *
  * Uso:
  *   node tools/audit-docs.js                 # reporte en consola + audit-report.md
@@ -163,6 +165,30 @@ function stripCode(text) {
     .replace(/`[^`]+`/g, (b) => " ".repeat(b.length));
 }
 
+// replica EXACTAMENTE la función slug() del renderizador de app.js, para
+// calcular los anchors (ids de encabezado) reales de cada documento.
+function headingIds(id) {
+  const md = readDoc(id, "es");
+  if (md == null) return new Set();
+  const clean = md.replace(/\r\n/g, "\n").replace(/<!--[\s\S]*?-->/g, "");
+  const used = {};
+  const slug = (t) => {
+    let base = t.toLowerCase().replace(/[^\w\s-]/g, "").trim().replace(/\s+/g, "-").slice(0, 80) || "s";
+    let s = base, n = 1; while (used[s]) s = base + "-" + (++n); used[s] = 1; return s;
+  };
+  const set = new Set();
+  let inCode = false;
+  for (const line of clean.split("\n")) {
+    if (/^```/.test(line)) { inCode = !inCode; continue; }
+    if (inCode) continue;
+    const h = line.match(/^(#{1,6})\s+(.*)$/);
+    if (h) set.add(slug(h[2].trim()));
+  }
+  return set;
+}
+const headingCache = {};
+const docIds = new Set(DOCS.map((d) => d.id));
+
 /* ──────────────────────────────────────────────────────────────────────────
  * 2) CHECK: integridad de archivos
  * ────────────────────────────────────────────────────────────────────────── */
@@ -304,6 +330,33 @@ function checkMarkers(id, lang, text, hasPdf) {
 }
 
 /* ──────────────────────────────────────────────────────────────────────────
+ * 8) CHECK: enlaces internos (#documento / #documento:sección) no rotos
+ * ────────────────────────────────────────────────────────────────────────── */
+function checkInternalLinks(id, lang, text) {
+  const re = /\]\(#([^)]+)\)/g;
+  let m;
+  while ((m = re.exec(text))) {
+    const raw = m[1];
+    const sep = raw.indexOf(":");
+    const targetDoc = sep >= 0 ? raw.slice(0, sep) : raw;
+    const anchor = sep >= 0 ? raw.slice(sep + 1) : "";
+    const line = lineOf(text, m.index);
+    // ¿enlace a otro documento, o ancla dentro del mismo?
+    if (docIds.has(targetDoc)) {
+      if (!anchor) continue;                       // enlace a documento (válido)
+      headingCache[targetDoc] = headingCache[targetDoc] || headingIds(targetDoc);
+      if (!headingCache[targetDoc].has(anchor))
+        add("ERROR", "enlaces", `${id}.${lang}`, `Enlace a sección inexistente: #${raw} (no hay ese anchor en "${targetDoc}")`, line);
+    } else {
+      // ancla suelta: debe existir como encabezado en ESTE documento
+      headingCache[id] = headingCache[id] || headingIds(id);
+      if (!headingCache[id].has(targetDoc))
+        add("ERROR", "enlaces", `${id}.${lang}`, `Enlace interno roto: #${raw} (ni documento ni anchor local)`, line);
+    }
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
  * Ejecución
  * ────────────────────────────────────────────────────────────────────────── */
 checkFileIntegrity();
@@ -318,6 +371,7 @@ for (const d of DOCS) {
     checkSourceOfTruth(d.id, lang, text);
     checkFigures(d.id, lang, text);
     checkMarkers(d.id, lang, text, !!d.pdf);
+    checkInternalLinks(d.id, lang, text);
     if (d.id !== "glosario") corpus[`${d.id}.${lang}`] = stripCode(text); // para cobertura de siglas
   }
 }
@@ -337,7 +391,7 @@ if (OUT_JSON) {
   const C = { red: "\x1b[31m", yel: "\x1b[33m", grn: "\x1b[32m", dim: "\x1b[2m", bold: "\x1b[1m", off: "\x1b[0m" };
   console.log(`\n${C.bold}Auditoría de documentación — Sports World México${C.off}`);
   console.log(`${C.dim}${DOCS.filter((d) => d.type !== "embed").length} documentos · ${glossary.count} términos en glosario${C.off}\n`);
-  const order = ["archivos", "referencias", "fuente-verdad", "trazabilidad", "marcadores", "glosario"];
+  const order = ["archivos", "referencias", "enlaces", "fuente-verdad", "trazabilidad", "marcadores", "glosario"];
   for (const check of order) {
     const list = byCheck[check] || [];
     const errs = list.filter((f) => f.level === "ERROR").length;
@@ -360,7 +414,7 @@ function mdReport() {
   let out = `# Reporte de auditoría de documentación\n\n`;
   out += `_Generado por \`tools/audit-docs.js\`._\n\n`;
   out += `**Resumen:** ${errors.length} errores · ${warns.length} avisos · ${DOCS.filter((d) => d.type !== "embed").length} documentos · ${glossary.count} términos de glosario.\n\n`;
-  const order = ["archivos", "referencias", "fuente-verdad", "trazabilidad", "marcadores", "glosario"];
+  const order = ["archivos", "referencias", "enlaces", "fuente-verdad", "trazabilidad", "marcadores", "glosario"];
   for (const check of order) {
     const list = byCheck[check] || [];
     out += `## ${check} (${list.filter((f) => f.level === "ERROR").length} errores, ${list.filter((f) => f.level === "WARN").length} avisos)\n\n`;
