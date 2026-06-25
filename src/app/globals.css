@@ -63,7 +63,7 @@ body {
 
 /* ---------- Tipografía utilidades ---------- */
 .eyebrow {
-  font-size: 0.75rem;
+  font-size: 0.875rem; /* 14px — piso de marca, nada por debajo */
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: var(--color-muted);
